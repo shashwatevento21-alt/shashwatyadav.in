@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Courses | Shashwat Yadav</title>
+  <meta name="description" content="Learn performance marketing, SEO, and web development from real-world experience with Shashwat Yadav's courses.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+            serif: ['"Playfair Display"', 'Georgia', 'serif'],
+            mono: ['"Space Mono"', 'monospace'],
+          },
+          colors: {
+            cosmic: {
+              bg: '#030307',
+              card: 'rgba(10, 11, 22, 0.65)',
+              glow: '#1e1b4b',
+            },
+            accent: {
+              gold: '#c8a96e',
+              amber: '#e2b96e',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body style="background-color: #030307; color: #f1f5f9;" class="bg-cosmic-bg text-slate-100 overflow-x-hidden selection:bg-indigo-500/30 selection:text-white">
+
+  <!-- Background sparkle details -->
+  <div class="absolute top-[8%] left-[10%] w-2 h-2 rounded-full bg-blue-400 animate-pulse opacity-40 pointer-events-none" id="sparkle-1"></div>
+  <div class="absolute top-[35%] right-[15%] w-1.5 h-1.5 rounded-full bg-purple-400 animate-ping opacity-30 pointer-events-none" id="sparkle-2"></div>
+  <div class="absolute top-[75%] left-[12%] w-2 h-2 rounded-full bg-amber-400 animate-pulse opacity-50 pointer-events-none" id="sparkle-3"></div>
+
+  <!-- Dynamic floating WhatsApp coordinate trigger -->
+  <a
+    href="https://wa.me/918871237388?text=Hi%20Shashwat!%20I%20visited%20your%20portfolio%20and%20would%20love%20to%20discuss%20performance%20marketing."
+    target="_blank"
+    referrerPolicy="no-referrer"
+    style="position: fixed; bottom: 24px; right: 24px; z-index: 100; transition: all 0.3s;"
+    id="whatsapp-widget"
+  >
+    <div class="absolute inset-0 rounded-full bg-emerald-500/20 animate-ping pointer-events-none"></div>
+    <div class="w-14 h-14 rounded-full bg-emerald-600 hover:bg-emerald-700 flex items-center justify-center text-white shadow-[0_8px_30px_rgba(22,163,74,0.4)] hover:scale-110 active:scale-95 transition-all">
+      <svg class="w-7 h-7 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+      </svg>
+    </div>
+  </a>
+
+  <!-- Elegant floating responsive header -->
+  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 px-4 md:px-8 pt-4 md:pt-6 pb-2">
+    <div class="max-w-7xl mx-auto flex items-center justify-between px-4 md:px-6 py-3 rounded-full border border-transparent transition-all duration-300" id="navbar-container">
+
+      <a href="index.html" class="flex items-center gap-2 group">
+        <div class="w-8 h-8 rounded-lg bg-gradient-to-tr from-blue-700 via-purple-600 to-indigo-500 flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform duration-300">
+          <svg class="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+          </svg>
+        </div>
+        <span class="font-serif text-lg md:text-xl font-semibold tracking-tight text-white hover:text-accent-amber transition-colors">
+          Shashwat<span class="text-accent-amber font-sans font-extrabold">.</span>Yadav
+        </span>
+      </a>
+
+      <div class="hidden md:flex items-center gap-6">
+        <a href="index.html" class="nav-link text-sm font-medium text-slate-300 hover:text-white transition-all">Home</a>
+        <a href="services.html" class="nav-link text-sm font-medium text-slate-300 hover:text-white transition-all">Services</a>
+        <a href="courses.html" class="nav-link active text-sm font-medium text-slate-300 hover:text-white transition-all">Courses</a>
+        <a href="expertise.html" class="nav-link text-sm font-medium text-slate-300 hover:text-white transition-all">Expertise / Clients</a>
+      </div>
+
+      <div class="hidden md:flex items-center gap-3">
+        <a href="contact.html" class="flex items-center gap-1.5 bg-white text-slate-950 font-semibold px-5 py-2 rounded-full hover:bg-accent-amber hover:text-slate-950 transition-all text-xs">
+          <span>Let's Connect</span>
+          <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+        </a>
+      </div>
+
+      <button onclick="toggleMobileMenu()" class="md:hidden flex flex-col gap-1 p-2" id="mobile-menu-btn">
+        <span class="w-5 h-0.5 bg-white rounded transition-all"></span>
+        <span class="w-5 h-0.5 bg-white rounded transition-all"></span>
+        <span class="w-5 h-0.5 bg-white rounded transition-all"></span>
+      </button>
+    </div>
+
+    <div id="mobile-menu" class="md:hidden fixed inset-0 bg-black/80 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-300 z-40">
+      <div class="absolute right-0 top-0 h-full w-64 bg-[#0a0b16] border-l border-white/10 transform translate-x-full transition-transform duration-300" id="mobile-menu-panel">
+        <div class="p-6 flex flex-col gap-6">
+          <button onclick="toggleMobileMenu()" class="self-end text-white">
+            <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+          </button>
+          <a href="index.html" class="text-sm font-medium text-slate-300 hover:text-white transition-all">Home</a>
+          <a href="services.html" class="text-sm font-medium text-slate-300 hover:text-white transition-all">Services</a>
+          <a href="courses.html" class="text-sm font-medium text-white transition-all">Courses</a>
+          <a href="expertise.html" class="text-sm font-medium text-slate-300 hover:text-white transition-all">Expertise / Clients</a>
+          <a href="contact.html" class="bg-white text-slate-950 font-semibold px-5 py-2 rounded-full text-xs text-center">Let's Connect</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page header -->
+  <section class="relative pt-40 pb-10 overflow-hidden cosmic-grid">
+    <div class="absolute top-[25%] left-[8%] w-80 h-80 radial-glow-purple opacity-30 pointer-events-none"></div>
+    <div class="max-w-6xl mx-auto px-4 md:px-8 relative z-10 text-center">
+      <div class="inline-block px-4 py-2 rounded-full bg-purple-500/10 border border-purple-500/20 mb-4">
+        <span class="text-xs font-mono text-purple-300">Knowledge Sharing</span>
+      </div>
+      <h1 class="font-serif text-4xl md:text-6xl font-bold text-white mb-4">
+        Courses & Training
+      </h1>
+      <p class="text-slate-400 max-w-2xl mx-auto">
+        Learn performance marketing, SEO, and digital strategy from real-world experience.
+      </p>
+    </div>
+  </section>
+
+  <!-- COURSES: Training offerings -->
+  <section class="relative py-20 md:py-28 overflow-hidden" id="courses">
+    <div class="max-w-6xl mx-auto px-4 md:px-8 relative z-10">
+
+      <div class="grid md:grid-cols-2 gap-8">
+
+        <!-- Google Ads Course -->
+        <div class="group p-8 rounded-2xl bg-gradient-to-br from-white/[0.03] to-white/[0.01] border border-white/10 hover:border-blue-500/30 transition-all duration-300">
+          <div class="flex items-center gap-3 mb-6">
+            <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center">
+              <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M12.48 10.92v3.28h7.84c-.24 1.84-.853 3.187-1.787 4.133-1.147 1.147-2.933 2.4-6.053 2.4-4.827 0-8.6-3.893-8.6-8.72s3.773-8.72 8.6-8.72c2.6 0 4.507 1.027 5.907 2.347l2.307-2.307C18.747 1.44 16.133 0 12.48 0 5.867 0 .307 5.387.307 12s5.56 12 12.173 12c3.573 0 6.267-1.173 8.373-3.36 2.16-2.16 2.84-5.213 2.84-7.667 0-.76-.053-1.467-.173-2.053H12.48z"/></svg>
+            </div>
+            <h3 class="font-semibold text-xl text-white">Google Ads Mastery</h3>
+          </div>
+          <p class="text-slate-400 mb-6">
+            Complete Google Ads training from account setup to advanced optimization strategies. Learn campaign structure, keyword research, bidding strategies, and conversion tracking.
+          </p>
+          <ul class="space-y-2 mb-6">
+            <li class="flex items-start gap-2 text-sm text-slate-300">
+              <svg class="w-4 h-4 text-blue-400 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              <span>Search, Display & Video campaigns</span>
+            </li>
+            <li class="flex items-start gap-2 text-sm text-slate-300">
+              <svg class="w-4 h-4 text-blue-400 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              <span>Conversion tracking with GTM</span>
+            </li>
+            <li class="flex items-start gap-2 text-sm text-slate-300">
+              <svg class="w-4 h-4 text-blue-400 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              <span>Real campaign case studies</span>
+            </li>
+          </ul>
+          <div class="flex items-center gap-2 text-xs text-slate-500">
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            <span>Based on ₹5.7L+ monthly spend experience</span>
+          </div>
+        </div>
+
+        <!-- Meta Ads Course -->
+        <div class="group p-8 rounded-2xl bg-gradient-to-br from-white/[0.03] to-white/[0.01] border border-white/10 hover:border-purple-500/30 transition-all duration-300">
+          <div class="flex items-center gap-3 mb-6">
+            <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-purple-500 to-purple-600 flex items-center justify-center">
+              <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            </div>
+            <h3 class="font-semibold text-xl text-white">Meta Ads Blueprint</h3>
+          </div>
+          <p class="text-slate-400 mb-6">
+            Master Facebook & Instagram advertising with proven strategies for lead generation, audience targeting, creative testing, and campaign scaling.
+          </p>
+          <ul class="space-y-2 mb-6">
+            <li class="flex items-start gap-2 text-sm text-slate-300">
+              <svg class="w-4 h-4 text-purple-400 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              <span>Lead gen & conversion campaigns</span>
+            </li>
+            <li class="flex items-start gap-2 text-sm text-slate-300">
+              <svg class="w-4 h-4 text-purple-400 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              <span>Advanced audience targeting</span>
+            </li>
+            <li class="flex items-start gap-2 text-sm text-slate-300">
+              <svg class="w-4 h-4 text-purple-400 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              <span>Creative strategy & A/B testing</span>
+            </li>
+          </ul>
+          <div class="flex items-center gap-2 text-xs text-slate-500">
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            <span>Real-world campaign frameworks</span>
+          </div>
+        </div>
+
+        <!-- SEO Course -->
+        <div class="group p-8 rounded-2xl bg-gradient-to-br from-white/[0.03] to-white/[0.01] border border-white/10 hover:border-emerald-500/30 transition-all duration-300">
+          <div class="flex items-center gap-3 mb-6">
+            <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-emerald-500 to-emerald-600 flex items-center justify-center">
+              <svg class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+            </div>
+            <h3 class="font-semibold text-xl text-white">SEO & AI Search Optimization</h3>
+          </div>
+          <p class="text-slate-400 mb-6">
+            Complete SEO training including traditional Google SEO plus emerging AI search platforms like ChatGPT and Gemini. Learn local SEO and GBP optimization.
+          </p>
+          <ul class="space-y-2 mb-6">
+            <li class="flex items-start gap-2 text-sm text-slate-300">
+              <svg class="w-4 h-4 text-emerald-400 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              <span>On-page & technical SEO</span>
+            </li>
+            <li class="flex items-start gap-2 text-sm text-slate-300">
+              <svg class="w-4 h-4 text-emerald-400 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              <span>AI search optimization strategies</span>
+            </li>
+            <li class="flex items-start gap-2 text-sm text-slate-300">
+              <svg class="w-4 h-4 text-emerald-400 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              <span>Local SEO & GBP mastery</span>
+            </li>
+          </ul>
+          <div class="flex items-center gap-2 text-xs text-slate-500">
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            <span>Multi-platform ranking strategies</span>
+          </div>
+        </div>
+
+        <!-- WordPress Development Course -->
+        <div class="group p-8 rounded-2xl bg-gradient-to-br from-white/[0.03] to-white/[0.01] border border-white/10 hover:border-amber-500/30 transition-all duration-300">
+          <div class="flex items-center gap-3 mb-6">
+            <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-amber-500 to-amber-600 flex items-center justify-center">
+              <svg class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
+            </div>
+            <h3 class="font-semibold text-xl text-white">WordPress & Web Development</h3>
+          </div>
+          <p class="text-slate-400 mb-6">
+            Build professional, conversion-optimized websites with WordPress, Elementor, and custom code. Perfect for marketers who want technical skills.
+          </p>
+          <ul class="space-y-2 mb-6">
+            <li class="flex items-start gap-2 text-sm text-slate-300">
+              <svg class="w-4 h-4 text-amber-400 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              <span>WordPress setup & Elementor design</span>
+            </li>
+            <li class="flex items-start gap-2 text-sm text-slate-300">
+              <svg class="w-4 h-4 text-amber-400 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              <span>HTML, CSS, JavaScript basics</span>
+            </li>
+            <li class="flex items-start gap-2 text-sm text-slate-300">
+              <svg class="w-4 h-4 text-amber-400 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              <span>Landing page optimization</span>
+            </li>
+          </ul>
+          <div class="flex items-center gap-2 text-xs text-slate-500">
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            <span>From beginner to advanced</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- CTA for courses -->
+      <div class="mt-12 text-center">
+        <p class="text-slate-400 mb-4">Interested in learning performance marketing from real-world experience?</p>
+        <a href="contact.html" class="inline-flex items-center gap-2 px-6 py-3 bg-white/10 border border-white/20 text-white font-semibold rounded-full hover:bg-white/20 transition-all">
+          <span>Get Course Details</span>
+          <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="relative py-12 border-t border-white/10">
+    <div class="max-w-6xl mx-auto px-4 md:px-8">
+      <div class="grid md:grid-cols-3 gap-8 mb-8">
+        <div>
+          <a href="index.html" class="flex items-center gap-2 mb-4">
+            <div class="w-8 h-8 rounded-lg bg-gradient-to-tr from-blue-700 via-purple-600 to-indigo-500 flex items-center justify-center">
+              <svg class="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+              </svg>
+            </div>
+            <span class="font-serif text-lg font-semibold text-white">Shashwat<span class="text-accent-amber font-sans font-extrabold">.</span>Yadav</span>
+          </a>
+          <p class="text-sm text-slate-400">Performance Marketing Expert & SEO Specialist driving measurable growth through data-driven strategy.</p>
+        </div>
+
+        <div>
+          <h4 class="text-sm font-semibold text-white mb-4">Quick Links</h4>
+          <ul class="space-y-2 text-sm text-slate-400">
+            <li><a href="index.html" class="hover:text-white transition-colors">Home</a></li>
+            <li><a href="services.html" class="hover:text-white transition-colors">Services</a></li>
+            <li><a href="courses.html" class="hover:text-white transition-colors">Courses</a></li>
+            <li><a href="expertise.html" class="hover:text-white transition-colors">Expertise / Clients</a></li>
+            <li><a href="contact.html" class="hover:text-white transition-colors">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-sm font-semibold text-white mb-4">Services</h4>
+          <ul class="space-y-2 text-sm text-slate-400">
+            <li>Google Ads Management</li>
+            <li>Meta Ads Management</li>
+            <li>SEO Optimization</li>
+            <li>Website Development</li>
+            <li>Performance Marketing</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-slate-500">
+        <div>© 2026 Shashwat Yadav. All rights reserved.</div>
+        <div class="flex items-center gap-1">
+          <span>Built with</span>
+          <svg class="w-4 h-4 text-red-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd"/></svg>
+          <span>& Data</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
