@@ -64,6 +64,7 @@ body {
 /* Additional dark theme enforcement */
 html {
   background-color: #030307 !important;
+  color-scheme: dark;
 }
 
 * {
@@ -74,4 +75,17 @@ html {
 .nav-link.active {
   color: #ffffff;
   font-weight: 600;
+}
+
+/* Force dark, high-contrast styling on native select dropdowns and their
+   option lists (browsers otherwise render the open option list with the
+   OS-default white background, making light text invisible) */
+select {
+  background-color: #0a0b16;
+  color: #f1f5f9;
+  color-scheme: dark;
+}
+select option {
+  background-color: #0a0b16;
+  color: #f1f5f9;
 }
