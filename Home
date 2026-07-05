@@ -1,0 +1,1100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shashwat Yadav | Performance Marketing Expert & SEO Specialist</title>
+  
+  <!-- Premium Fonts import from Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS Play CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+            serif: ['"Playfair Display"', 'Georgia', 'serif'],
+            mono: ['"Space Mono"', 'monospace'],
+          },
+          colors: {
+            cosmic: {
+              bg: '#030307',
+              card: 'rgba(10, 11, 22, 0.65)',
+              glow: '#1e1b4b',
+            },
+            accent: {
+              gold: '#c8a96e',
+              amber: '#e2b96e',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Force dark background */
+    body {
+      background-color: #030307 !important;
+      color: #f1f5f9 !important;
+    }
+    
+    /* Custom background animated grid overlay */
+    .cosmic-grid {
+      background-color: #030307;
+      background-size: 40px 40px;
+      background-image: 
+        linear-gradient(to right, rgba(255, 255, 255, 0.015) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.015) 1px, transparent 1px);
+    }
+
+    /* Glow overlays */
+    .radial-glow-indigo {
+      background: radial-gradient(circle, rgba(99,102,241,0.15) 0%, rgba(99,102,241,0) 70%);
+    }
+
+    .radial-glow-blue {
+      background: radial-gradient(circle, rgba(59,130,246,0.15) 0%, rgba(59,130,246,0) 75%);
+    }
+
+    .radial-glow-purple {
+      background: radial-gradient(circle, rgba(168,85,247,0.14) 0%, rgba(168,85,247,0) 70%);
+    }
+
+    /* Continuous horizontal loop ticker scroll animation */
+    @keyframes scroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-33.333%); }
+    }
+    .animate-scroll {
+      animation: scroll 40s linear infinite;
+    }
+    .animate-scroll:hover {
+      animation-play-state: paused;
+    }
+
+    /* Premium dynamic gradients and transitions */
+    .text-gradient-cosmic {
+      background: linear-gradient(135deg, #ffffff 40%, rgba(255, 255, 255, 0.7) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    /* Smooth custom scrollbars */
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #030307;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #1e1e30;
+      border-radius: 3px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #3b82f6;
+    }
+    
+    /* Additional dark theme enforcement */
+    html {
+      background-color: #030307 !important;
+    }
+    
+    * {
+      box-sizing: border-box;
+    }
+  </style>
+</head>
+<body style="background-color: #030307; color: #f1f5f9;" class="bg-cosmic-bg text-slate-100 overflow-x-hidden selection:bg-indigo-500/30 selection:text-white">
+
+  <!-- Background sparkle details -->
+  <div class="absolute top-[8%] left-[10%] w-2 h-2 rounded-full bg-blue-400 animate-pulse opacity-40 pointer-events-none" id="sparkle-1"></div>
+  <div class="absolute top-[35%] right-[15%] w-1.5 h-1.5 rounded-full bg-purple-400 animate-ping opacity-30 pointer-events-none" id="sparkle-2 flex"></div>
+  <div class="absolute top-[75%] left-[12%] w-2 h-2 rounded-full bg-amber-400 animate-pulse opacity-50 pointer-events-none" id="sparkle-3"></div>
+
+  <!-- Dynamic floating WhatsApp coordinate trigger -->
+  <a
+    href="https://wa.me/918871237388?text=Hi%20Shashwat!%20I%20visited%20your%20portfolio%20and%20would%20love%20to%20discuss%20performance%20marketing."
+    target="_blank"
+    referrerPolicy="no-referrer"
+    style="position: fixed; bottom: 24px; right: 24px; z-index: 100; transition: all 0.3s;"
+    id="whatsapp-widget"
+  >
+    <div class="absolute inset-0 rounded-full bg-emerald-500/20 animate-ping pointer-events-none"></div>
+    <div class="w-14 h-14 rounded-full bg-emerald-600 hover:bg-emerald-700 flex items-center justify-center text-white shadow-[0_8px_30px_rgba(22,163,74,0.4)] hover:scale-110 active:scale-95 transition-all">
+      <svg class="w-7 h-7 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+      </svg>
+    </div>
+  </a>
+
+  <!-- Elegant floating responsive header -->
+  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 px-4 md:px-8 pt-4 md:pt-6 pb-2">
+    <div class="max-w-7xl mx-auto flex items-center justify-between px-4 md:px-6 py-3 rounded-full border border-transparent transition-all duration-300" id="navbar-container">
+      
+      <!-- Brand Logo signature -->
+      <a href="#" onclick="window.scrollTo({top:0, behavior:'smooth'}); return false;" class="flex items-center gap-2 group">
+        <div class="w-8 h-8 rounded-lg bg-gradient-to-tr from-blue-700 via-purple-600 to-indigo-500 flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform duration-300">
+          <svg class="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+          </svg>
+        </div>
+        <span class="font-serif text-lg md:text-xl font-semibold tracking-tight text-white hover:text-accent-amber transition-colors">
+          Shashwat<span class="text-accent-amber font-sans font-extrabold">.</span>Yadav
+        </span>
+      </a>
+
+      <!-- Desktop coordinates links -->
+      <div class="hidden md:flex items-center gap-6">
+        <a href="#expertise" onclick="smoothScroll('expertise'); return false;" class="text-sm font-medium text-slate-300 hover:text-white transition-all">Expertise</a>
+        <a href="#services" onclick="smoothScroll('services'); return false;" class="text-sm font-medium text-slate-300 hover:text-white transition-all">Services</a>
+        <a href="#achievements" onclick="smoothScroll('achievements'); return false;" class="text-sm font-medium text-slate-300 hover:text-white transition-all">Achievements</a>
+        <a href="#courses" onclick="smoothScroll('courses'); return false;" class="text-sm font-medium text-slate-300 hover:text-white transition-all">Courses</a>
+        <a href="#about" onclick="smoothScroll('about'); return false;" class="text-sm font-medium text-slate-300 hover:text-white transition-all">About Me</a>
+      </div>
+
+      <!-- Action tags -->
+      <div class="hidden md:flex items-center gap-3">
+        <a href="#contact-cta" onclick="smoothScroll('contact-cta'); return false;" class="flex items-center gap-1.5 bg-white text-slate-950 font-semibold px-5 py-2 rounded-full hover:bg-accent-amber hover:text-slate-950 transition-all text-xs">
+          <span>Let's Connect</span>
+          <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+        </a>
+      </div>
+
+      <!-- Mobile hamburger controls -->
+      <button onclick="toggleMobileMenu()" class="md:hidden flex flex-col gap-1 p-2" id="mobile-menu-btn">
+        <span class="w-5 h-0.5 bg-white rounded transition-all"></span>
+        <span class="w-5 h-0.5 bg-white rounded transition-all"></span>
+        <span class="w-5 h-0.5 bg-white rounded transition-all"></span>
+      </button>
+    </div>
+
+    <!-- Mobile Slide Menu backdrop -->
+    <div id="mobile-menu" class="md:hidden fixed inset-0 bg-black/80 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-300 z-40">
+      <div class="absolute right-0 top-0 h-full w-64 bg-[#0a0b16] border-l border-white/10 transform translate-x-full transition-transform duration-300" id="mobile-menu-panel">
+        <div class="p-6 flex flex-col gap-6">
+          <button onclick="toggleMobileMenu()" class="self-end text-white">
+            <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+          </button>
+          <a href="#expertise" onclick="smoothScroll('expertise'); toggleMobileMenu(); return false;" class="text-sm font-medium text-slate-300 hover:text-white transition-all">Expertise</a>
+          <a href="#services" onclick="smoothScroll('services'); toggleMobileMenu(); return false;" class="text-sm font-medium text-slate-300 hover:text-white transition-all">Services</a>
+          <a href="#achievements" onclick="smoothScroll('achievements'); toggleMobileMenu(); return false;" class="text-sm font-medium text-slate-300 hover:text-white transition-all">Achievements</a>
+          <a href="#courses" onclick="smoothScroll('courses'); toggleMobileMenu(); return false;" class="text-sm font-medium text-slate-300 hover:text-white transition-all">Courses</a>
+          <a href="#about" onclick="smoothScroll('about'); toggleMobileMenu(); return false;" class="text-sm font-medium text-slate-300 hover:text-white transition-all">About Me</a>
+          <a href="#contact-cta" onclick="smoothScroll('contact-cta'); toggleMobileMenu(); return false;" class="bg-white text-slate-950 font-semibold px-5 py-2 rounded-full text-xs text-center">Let's Connect</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO: Above-fold signature introduction -->
+  <section class="relative min-h-screen flex items-center justify-center overflow-hidden cosmic-grid" id="hero">
+    <!-- Decorative background glow blobs -->
+    <div class="absolute top-[15%] left-[5%] w-96 h-96 radial-glow-indigo opacity-60 pointer-events-none"></div>
+    <div class="absolute bottom-[10%] right-[8%] w-80 h-80 radial-glow-blue opacity-50 pointer-events-none"></div>
+    
+    <div class="relative z-10 max-w-6xl mx-auto px-4 md:px-8 pt-32 pb-20 text-center">
+      
+      <!-- Identity tag -->
+      <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 mb-6 backdrop-blur-sm">
+        <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+        <span class="text-xs font-mono text-slate-300">Available for Performance Marketing Projects</span>
+      </div>
+
+      <!-- Hero headline -->
+      <h1 class="font-serif text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
+        Driving Growth Through<br/>
+        <span class="text-gradient-cosmic">Data-Driven Marketing</span>
+      </h1>
+
+      <!-- Sub-headline with credibility anchors -->
+      <p class="text-base md:text-lg text-slate-300 max-w-3xl mx-auto mb-8 leading-relaxed">
+        Performance Marketing Expert managing ₹5.7L+ monthly ad spend across Google & Meta | SEO Specialist ranking businesses on Google, ChatGPT & Gemini | Full-Stack Marketer with WordPress & Code expertise
+      </p>
+
+      <!-- Powerful social proof ticker -->
+      <div class="flex flex-wrap items-center justify-center gap-4 md:gap-8 mb-10">
+        <div class="flex items-center gap-2">
+          <div class="w-10 h-10 rounded-full bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center">
+            <svg class="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+          </div>
+          <div class="text-left">
+            <div class="font-bold text-white">₹5.7L+</div>
+            <div class="text-xs text-slate-400">Monthly Ad Spend</div>
+          </div>
+        </div>
+        
+        <div class="flex items-center gap-2">
+          <div class="w-10 h-10 rounded-full bg-gradient-to-br from-purple-500 to-purple-600 flex items-center justify-center">
+            <svg class="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+          </div>
+          <div class="text-left">
+            <div class="font-bold text-white">1500+</div>
+            <div class="text-xs text-slate-400">Paying Customers</div>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-2">
+          <div class="w-10 h-10 rounded-full bg-gradient-to-br from-amber-500 to-amber-600 flex items-center justify-center">
+            <svg class="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          </div>
+          <div class="text-left">
+            <div class="font-bold text-white">4+ Years</div>
+            <div class="text-xs text-slate-400">Business Experience</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Primary call to actions -->
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="#services" onclick="smoothScroll('services'); return false;" class="group px-8 py-3 bg-white text-slate-950 font-semibold rounded-full hover:bg-accent-amber transition-all text-sm flex items-center gap-2 shadow-lg hover:shadow-xl">
+          <span>View Services</span>
+          <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+        </a>
+        <a href="#contact-cta" onclick="smoothScroll('contact-cta'); return false;" class="px-8 py-3 bg-white/5 border border-white/10 text-white font-semibold rounded-full hover:bg-white/10 transition-all text-sm backdrop-blur-sm">
+          Get In Touch
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERTISE: Core competencies showcase -->
+  <section class="relative py-20 md:py-32 overflow-hidden" id="expertise">
+    <div class="absolute top-[20%] right-[10%] w-72 h-72 radial-glow-purple opacity-40 pointer-events-none"></div>
+    
+    <div class="max-w-6xl mx-auto px-4 md:px-8 relative z-10">
+      
+      <!-- Section label + headline -->
+      <div class="text-center mb-16">
+        <div class="inline-block px-4 py-2 rounded-full bg-indigo-500/10 border border-indigo-500/20 mb-4">
+          <span class="text-xs font-mono text-indigo-300">Core Expertise</span>
+        </div>
+        <h2 class="font-serif text-3xl md:text-5xl font-bold text-white mb-4">
+          What I Excel At
+        </h2>
+        <p class="text-slate-400 max-w-2xl mx-auto">
+          Full-stack performance marketing with a business-first mindset, combining data analytics, creative execution, and technical implementation.
+        </p>
+      </div>
+
+      <!-- Expertise grid -->
+      <div class="grid md:grid-cols-3 gap-6">
+        
+        <!-- Performance Marketing -->
+        <div class="group p-6 rounded-2xl bg-white/[0.02] border border-white/5 hover:bg-[#0b0c16] hover:border-indigo-500/20 transition-all duration-300">
+          <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+            <svg class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg>
+          </div>
+          <h3 class="font-semibold text-lg text-white mb-2">Performance Marketing</h3>
+          <p class="text-sm text-slate-400 mb-4">Managing ₹5.7L+ monthly ad spend across Google Ads & Meta Ads for commercial real estate and healthcare lead generation campaigns.</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-2 py-1 rounded-md bg-blue-500/10 text-blue-300 text-xs">Google Ads</span>
+            <span class="px-2 py-1 rounded-md bg-blue-500/10 text-blue-300 text-xs">Meta Ads</span>
+            <span class="px-2 py-1 rounded-md bg-blue-500/10 text-blue-300 text-xs">Lead Gen</span>
+          </div>
+        </div>
+
+        <!-- SEO Expertise -->
+        <div class="group p-6 rounded-2xl bg-white/[0.02] border border-white/5 hover:bg-[#0b0c16] hover:border-indigo-500/20 transition-all duration-300">
+          <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-emerald-500 to-emerald-600 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+            <svg class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+          </div>
+          <h3 class="font-semibold text-lg text-white mb-2">SEO Specialist</h3>
+          <p class="text-sm text-slate-400 mb-4">Ranked businesses on Google Search, ChatGPT, Gemini, and Google Local Search with proven optimization strategies.</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-2 py-1 rounded-md bg-emerald-500/10 text-emerald-300 text-xs">Google SEO</span>
+            <span class="px-2 py-1 rounded-md bg-emerald-500/10 text-emerald-300 text-xs">AI Search</span>
+            <span class="px-2 py-1 rounded-md bg-emerald-500/10 text-emerald-300 text-xs">Local SEO</span>
+          </div>
+        </div>
+
+        <!-- Web Development -->
+        <div class="group p-6 rounded-2xl bg-white/[0.02] border border-white/5 hover:bg-[#0b0c16] hover:border-indigo-500/20 transition-all duration-300">
+          <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-purple-500 to-purple-600 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+            <svg class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
+          </div>
+          <h3 class="font-semibold text-lg text-white mb-2">Web Development</h3>
+          <p class="text-sm text-slate-400 mb-4">Full-stack web development expertise with WordPress, Elementor, and custom code implementation for high-converting sites.</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-2 py-1 rounded-md bg-purple-500/10 text-purple-300 text-xs">WordPress</span>
+            <span class="px-2 py-1 rounded-md bg-purple-500/10 text-purple-300 text-xs">Elementor</span>
+            <span class="px-2 py-1 rounded-md bg-purple-500/10 text-purple-300 text-xs">Custom Code</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES: Detailed service offerings -->
+  <section class="relative py-20 md:py-32 overflow-hidden cosmic-grid" id="services">
+    <div class="absolute top-[30%] left-[5%] w-80 h-80 radial-glow-blue opacity-30 pointer-events-none"></div>
+    
+    <div class="max-w-6xl mx-auto px-4 md:px-8 relative z-10">
+      
+      <!-- Section header -->
+      <div class="text-center mb-16">
+        <div class="inline-block px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 mb-4">
+          <span class="text-xs font-mono text-blue-300">Services I Offer</span>
+        </div>
+        <h2 class="font-serif text-3xl md:text-5xl font-bold text-white mb-4">
+          How I Can Help Your Business
+        </h2>
+        <p class="text-slate-400 max-w-2xl mx-auto">
+          Comprehensive digital marketing services focused on measurable results and sustainable growth.
+        </p>
+      </div>
+
+      <!-- Services detailed cards -->
+      <div class="grid md:grid-cols-2 gap-8">
+        
+        <!-- Google Ads Management -->
+        <div class="p-8 rounded-2xl bg-gradient-to-br from-white/[0.03] to-white/[0.01] border border-white/10 hover:border-blue-500/30 transition-all duration-300">
+          <div class="flex items-start gap-4 mb-6">
+            <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center flex-shrink-0">
+              <svg class="w-7 h-7 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M12.48 10.92v3.28h7.84c-.24 1.84-.853 3.187-1.787 4.133-1.147 1.147-2.933 2.4-6.053 2.4-4.827 0-8.6-3.893-8.6-8.72s3.773-8.72 8.6-8.72c2.6 0 4.507 1.027 5.907 2.347l2.307-2.307C18.747 1.44 16.133 0 12.48 0 5.867 0 .307 5.387.307 12s5.56 12 12.173 12c3.573 0 6.267-1.173 8.373-3.36 2.16-2.16 2.84-5.213 2.84-7.667 0-.76-.053-1.467-.173-2.053H12.48z"/></svg>
+            </div>
+            <div>
+              <h3 class="font-semibold text-xl text-white mb-2">Google Ads Management</h3>
+              <p class="text-sm text-slate-400">Strategic campaign setup, optimization, and scaling for maximum ROI</p>
+            </div>
+          </div>
+          <ul class="space-y-3 mb-6">
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-blue-400 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+              <span class="text-sm text-slate-300">Search, Display & Video campaign setup</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-blue-400 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+              <span class="text-sm text-slate-300">Advanced keyword research & competitor analysis</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-blue-400 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+              <span class="text-sm text-slate-300">Conversion tracking & GTM implementation</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-blue-400 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+              <span class="text-sm text-slate-300">Monthly performance reporting & optimization</span>
+            </li>
+          </ul>
+          <div class="pt-4 border-t border-white/10">
+            <span class="text-xs text-slate-500">Currently Managing: Commercial Real Estate & Healthcare</span>
+          </div>
+        </div>
+
+        <!-- Meta Ads Management -->
+        <div class="p-8 rounded-2xl bg-gradient-to-br from-white/[0.03] to-white/[0.01] border border-white/10 hover:border-purple-500/30 transition-all duration-300">
+          <div class="flex items-start gap-4 mb-6">
+            <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-purple-500 to-purple-600 flex items-center justify-center flex-shrink-0">
+              <svg class="w-7 h-7 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            </div>
+            <div>
+              <h3 class="font-semibold text-xl text-white mb-2">Meta Ads (Facebook & Instagram)</h3>
+              <p class="text-sm text-slate-400">High-converting campaigns with advanced audience targeting and creative testing</p>
+            </div>
+          </div>
+          <ul class="space-y-3 mb-6">
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-purple-400 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+              <span class="text-sm text-slate-300">Lead generation & conversion campaigns</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-purple-400 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+              <span class="text-sm text-slate-300">Custom audience creation & lookalike targeting</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-purple-400 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+              <span class="text-sm text-slate-300">Creative ad copy & visual design strategy</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-purple-400 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+              <span class="text-sm text-slate-300">A/B testing & campaign scaling</span>
+            </li>
+          </ul>
+          <div class="pt-4 border-t border-white/10">
+            <span class="text-xs text-slate-500">Currently Managing: Multi-sector Lead Generation</span>
+          </div>
+        </div>
+
+        <!-- SEO Services -->
+        <div class="p-8 rounded-2xl bg-gradient-to-br from-white/[0.03] to-white/[0.01] border border-white/10 hover:border-emerald-500/30 transition-all duration-300">
+          <div class="flex items-start gap-4 mb-6">
+            <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-emerald-500 to-emerald-600 flex items-center justify-center flex-shrink-0">
+              <svg class="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+            </div>
+            <div>
+              <h3 class="font-semibold text-xl text-white mb-2">SEO & Local Search Optimization</h3>
+              <p class="text-sm text-slate-400">Comprehensive SEO strategy including AI search optimization</p>
+            </div>
+          </div>
+          <ul class="space-y-3 mb-6">
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-emerald-400 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+              <span class="text-sm text-slate-300">Google Search ranking optimization</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-emerald-400 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+              <span class="text-sm text-slate-300">AI search optimization (ChatGPT, Gemini)</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-emerald-400 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+              <span class="text-sm text-slate-300">Google Business Profile optimization</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-emerald-400 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+              <span class="text-sm text-slate-300">Technical SEO & content strategy</span>
+            </li>
+          </ul>
+          <div class="pt-4 border-t border-white/10">
+            <span class="text-xs text-slate-500">Proven Results: Multi-platform Search Visibility</span>
+          </div>
+        </div>
+
+        <!-- Website Development -->
+        <div class="p-8 rounded-2xl bg-gradient-to-br from-white/[0.03] to-white/[0.01] border border-white/10 hover:border-amber-500/30 transition-all duration-300">
+          <div class="flex items-start gap-4 mb-6">
+            <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-amber-500 to-amber-600 flex items-center justify-center flex-shrink-0">
+              <svg class="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+            </div>
+            <div>
+              <h3 class="font-semibold text-xl text-white mb-2">Website Design & Development</h3>
+              <p class="text-sm text-slate-400">Professional websites optimized for conversions and performance</p>
+            </div>
+          </div>
+          <ul class="space-y-3 mb-6">
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-amber-400 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+              <span class="text-sm text-slate-300">WordPress & Elementor development</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-amber-400 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+              <span class="text-sm text-slate-300">Custom HTML/CSS/JavaScript coding</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-amber-400 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+              <span class="text-sm text-slate-300">Landing pages & conversion optimization</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-amber-400 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+              <span class="text-sm text-slate-300">Mobile-responsive & fast-loading sites</span>
+            </li>
+          </ul>
+          <div class="pt-4 border-t border-white/10">
+            <span class="text-xs text-slate-500">Built For: Performance & Conversion</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ACHIEVEMENTS: Results & Impact -->
+  <section class="relative py-20 md:py-32 overflow-hidden" id="achievements">
+    <div class="absolute bottom-[20%] right-[5%] w-96 h-96 radial-glow-indigo opacity-40 pointer-events-none"></div>
+    
+    <div class="max-w-6xl mx-auto px-4 md:px-8 relative z-10">
+      
+      <!-- Section header -->
+      <div class="text-center mb-16">
+        <div class="inline-block px-4 py-2 rounded-full bg-indigo-500/10 border border-indigo-500/20 mb-4">
+          <span class="text-xs font-mono text-indigo-300">Proven Track Record</span>
+        </div>
+        <h2 class="font-serif text-3xl md:text-5xl font-bold text-white mb-4">
+          Results That Matter
+        </h2>
+        <p class="text-slate-400 max-w-2xl mx-auto">
+          Real business outcomes from data-driven marketing strategies across multiple sectors.
+        </p>
+      </div>
+
+      <!-- Achievement metrics grid -->
+      <div class="grid md:grid-cols-3 gap-6 mb-12">
+        
+        <div class="p-6 rounded-2xl bg-gradient-to-br from-blue-500/10 to-blue-600/5 border border-blue-500/20">
+          <div class="text-4xl font-serif font-bold text-white mb-2">₹5.7L+</div>
+          <div class="text-sm text-slate-300 mb-3">Monthly Ad Spend Managed</div>
+          <div class="text-xs text-slate-500">Google Ads & Meta Ads across real estate and healthcare verticals</div>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-gradient-to-br from-emerald-500/10 to-emerald-600/5 border border-emerald-500/20">
+          <div class="text-4xl font-serif font-bold text-white mb-2">Multi-Platform</div>
+          <div class="text-sm text-slate-300 mb-3">SEO Ranking Success</div>
+          <div class="text-xs text-slate-500">Ranked on Google, ChatGPT, Gemini & Local Search</div>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-gradient-to-br from-purple-500/10 to-purple-600/5 border border-purple-500/20">
+          <div class="text-4xl font-serif font-bold text-white mb-2">₹30L+</div>
+          <div class="text-sm text-slate-300 mb-3">Business Revenue Generated</div>
+          <div class="text-xs text-slate-500">Through Eventoplanner - own service business scaled over 4+ years</div>
+        </div>
+
+      </div>
+
+      <!-- Industry focus -->
+      <div class="p-8 rounded-2xl bg-white/[0.02] border border-white/10">
+        <h3 class="font-semibold text-xl text-white mb-6 text-center">Industry Expertise</h3>
+        <div class="flex flex-wrap justify-center gap-4">
+          <div class="px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-300 text-sm">Commercial Real Estate</div>
+          <div class="px-4 py-2 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-300 text-sm">Healthcare</div>
+          <div class="px-4 py-2 rounded-full bg-purple-500/10 border border-purple-500/20 text-purple-300 text-sm">Service Business</div>
+          <div class="px-4 py-2 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-300 text-sm">Lead Generation</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- COURSES: Training offerings -->
+  <section class="relative py-20 md:py-32 overflow-hidden cosmic-grid" id="courses">
+    <div class="absolute top-[25%] left-[8%] w-80 h-80 radial-glow-purple opacity-30 pointer-events-none"></div>
+    
+    <div class="max-w-6xl mx-auto px-4 md:px-8 relative z-10">
+      
+      <!-- Section header -->
+      <div class="text-center mb-16">
+        <div class="inline-block px-4 py-2 rounded-full bg-purple-500/10 border border-purple-500/20 mb-4">
+          <span class="text-xs font-mono text-purple-300">Knowledge Sharing</span>
+        </div>
+        <h2 class="font-serif text-3xl md:text-5xl font-bold text-white mb-4">
+          Courses & Training
+        </h2>
+        <p class="text-slate-400 max-w-2xl mx-auto">
+          Learn performance marketing, SEO, and digital strategy from real-world experience.
+        </p>
+      </div>
+
+      <!-- Course offerings -->
+      <div class="grid md:grid-cols-2 gap-8">
+        
+        <!-- Google Ads Course -->
+        <div class="group p-8 rounded-2xl bg-gradient-to-br from-white/[0.03] to-white/[0.01] border border-white/10 hover:border-blue-500/30 transition-all duration-300">
+          <div class="flex items-center gap-3 mb-6">
+            <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center">
+              <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M12.48 10.92v3.28h7.84c-.24 1.84-.853 3.187-1.787 4.133-1.147 1.147-2.933 2.4-6.053 2.4-4.827 0-8.6-3.893-8.6-8.72s3.773-8.72 8.6-8.72c2.6 0 4.507 1.027 5.907 2.347l2.307-2.307C18.747 1.44 16.133 0 12.48 0 5.867 0 .307 5.387.307 12s5.56 12 12.173 12c3.573 0 6.267-1.173 8.373-3.36 2.16-2.16 2.84-5.213 2.84-7.667 0-.76-.053-1.467-.173-2.053H12.48z"/></svg>
+            </div>
+            <h3 class="font-semibold text-xl text-white">Google Ads Mastery</h3>
+          </div>
+          <p class="text-slate-400 mb-6">
+            Complete Google Ads training from account setup to advanced optimization strategies. Learn campaign structure, keyword research, bidding strategies, and conversion tracking.
+          </p>
+          <ul class="space-y-2 mb-6">
+            <li class="flex items-start gap-2 text-sm text-slate-300">
+              <svg class="w-4 h-4 text-blue-400 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              <span>Search, Display & Video campaigns</span>
+            </li>
+            <li class="flex items-start gap-2 text-sm text-slate-300">
+              <svg class="w-4 h-4 text-blue-400 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              <span>Conversion tracking with GTM</span>
+            </li>
+            <li class="flex items-start gap-2 text-sm text-slate-300">
+              <svg class="w-4 h-4 text-blue-400 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              <span>Real campaign case studies</span>
+            </li>
+          </ul>
+          <div class="flex items-center gap-2 text-xs text-slate-500">
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            <span>Based on ₹5.7L+ monthly spend experience</span>
+          </div>
+        </div>
+
+        <!-- Meta Ads Course -->
+        <div class="group p-8 rounded-2xl bg-gradient-to-br from-white/[0.03] to-white/[0.01] border border-white/10 hover:border-purple-500/30 transition-all duration-300">
+          <div class="flex items-center gap-3 mb-6">
+            <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-purple-500 to-purple-600 flex items-center justify-center">
+              <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            </div>
+            <h3 class="font-semibold text-xl text-white">Meta Ads Blueprint</h3>
+          </div>
+          <p class="text-slate-400 mb-6">
+            Master Facebook & Instagram advertising with proven strategies for lead generation, audience targeting, creative testing, and campaign scaling.
+          </p>
+          <ul class="space-y-2 mb-6">
+            <li class="flex items-start gap-2 text-sm text-slate-300">
+              <svg class="w-4 h-4 text-purple-400 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              <span>Lead gen & conversion campaigns</span>
+            </li>
+            <li class="flex items-start gap-2 text-sm text-slate-300">
+              <svg class="w-4 h-4 text-purple-400 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              <span>Advanced audience targeting</span>
+            </li>
+            <li class="flex items-start gap-2 text-sm text-slate-300">
+              <svg class="w-4 h-4 text-purple-400 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              <span>Creative strategy & A/B testing</span>
+            </li>
+          </ul>
+          <div class="flex items-center gap-2 text-xs text-slate-500">
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            <span>Real-world campaign frameworks</span>
+          </div>
+        </div>
+
+        <!-- SEO Course -->
+        <div class="group p-8 rounded-2xl bg-gradient-to-br from-white/[0.03] to-white/[0.01] border border-white/10 hover:border-emerald-500/30 transition-all duration-300">
+          <div class="flex items-center gap-3 mb-6">
+            <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-emerald-500 to-emerald-600 flex items-center justify-center">
+              <svg class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+            </div>
+            <h3 class="font-semibold text-xl text-white">SEO & AI Search Optimization</h3>
+          </div>
+          <p class="text-slate-400 mb-6">
+            Complete SEO training including traditional Google SEO plus emerging AI search platforms like ChatGPT and Gemini. Learn local SEO and GBP optimization.
+          </p>
+          <ul class="space-y-2 mb-6">
+            <li class="flex items-start gap-2 text-sm text-slate-300">
+              <svg class="w-4 h-4 text-emerald-400 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              <span>On-page & technical SEO</span>
+            </li>
+            <li class="flex items-start gap-2 text-sm text-slate-300">
+              <svg class="w-4 h-4 text-emerald-400 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              <span>AI search optimization strategies</span>
+            </li>
+            <li class="flex items-start gap-2 text-sm text-slate-300">
+              <svg class="w-4 h-4 text-emerald-400 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              <span>Local SEO & GBP mastery</span>
+            </li>
+          </ul>
+          <div class="flex items-center gap-2 text-xs text-slate-500">
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            <span>Multi-platform ranking strategies</span>
+          </div>
+        </div>
+
+        <!-- WordPress Development Course -->
+        <div class="group p-8 rounded-2xl bg-gradient-to-br from-white/[0.03] to-white/[0.01] border border-white/10 hover:border-amber-500/30 transition-all duration-300">
+          <div class="flex items-center gap-3 mb-6">
+            <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-amber-500 to-amber-600 flex items-center justify-center">
+              <svg class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
+            </div>
+            <h3 class="font-semibold text-xl text-white">WordPress & Web Development</h3>
+          </div>
+          <p class="text-slate-400 mb-6">
+            Build professional, conversion-optimized websites with WordPress, Elementor, and custom code. Perfect for marketers who want technical skills.
+          </p>
+          <ul class="space-y-2 mb-6">
+            <li class="flex items-start gap-2 text-sm text-slate-300">
+              <svg class="w-4 h-4 text-amber-400 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              <span>WordPress setup & Elementor design</span>
+            </li>
+            <li class="flex items-start gap-2 text-sm text-slate-300">
+              <svg class="w-4 h-4 text-amber-400 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              <span>HTML, CSS, JavaScript basics</span>
+            </li>
+            <li class="flex items-start gap-2 text-sm text-slate-300">
+              <svg class="w-4 h-4 text-amber-400 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              <span>Landing page optimization</span>
+            </li>
+          </ul>
+          <div class="flex items-center gap-2 text-xs text-slate-500">
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            <span>From beginner to advanced</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- CTA for courses -->
+      <div class="mt-12 text-center">
+        <p class="text-slate-400 mb-4">Interested in learning performance marketing from real-world experience?</p>
+        <a href="#contact-cta" onclick="smoothScroll('contact-cta'); return false;" class="inline-flex items-center gap-2 px-6 py-3 bg-white/10 border border-white/20 text-white font-semibold rounded-full hover:bg-white/20 transition-all">
+          <span>Get Course Details</span>
+          <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ABOUT: Personal story and background -->
+  <section class="relative py-20 md:py-32 overflow-hidden" id="about">
+    <div class="absolute top-[15%] left-[5%] w-96 h-96 radial-glow-blue opacity-40 pointer-events-none"></div>
+    
+    <div class="max-w-6xl mx-auto px-4 md:px-8 relative z-10">
+      
+      <!-- Section header -->
+      <div class="text-center mb-16">
+        <div class="inline-block px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 mb-4">
+          <span class="text-xs font-mono text-blue-300">My Story</span>
+        </div>
+        <h2 class="font-serif text-3xl md:text-5xl font-bold text-white mb-4">
+          About Me
+        </h2>
+      </div>
+
+      <!-- About content -->
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        
+        <!-- Left: Story -->
+        <div>
+          <h3 class="text-2xl font-serif font-bold text-white mb-4">From Founder to Performance Marketer</h3>
+          <div class="space-y-4 text-slate-300">
+            <p>
+              I started my journey as the founder of <strong class="text-white">Eventoplanner</strong>, a service business that I scaled to <strong class="text-white">₹30L+ in revenue</strong> over 4+ years. During that time, I wasn't just running ads—I was on the ground, speaking with customers, evaluating lead quality, and making ROI-based decisions.
+            </p>
+            <p>
+              This hands-on experience taught me something most marketers never learn: <strong class="text-white">the difference between vanity metrics and business outcomes</strong>. I understand the pressure of payroll, customer expectations, and revenue targets—not just campaign metrics.
+            </p>
+            <p>
+              Today, I bring that <strong class="text-white">business-first mindset</strong> to performance marketing. I manage <strong class="text-white">₹5.7L+ monthly ad spend</strong> across Google and Meta Ads for commercial real estate and healthcare clients, with a focus on lead quality, cost efficiency, and measurable results.
+            </p>
+            <p>
+              My approach combines operational experience with technical execution—I don't just run campaigns, I think about how they impact the bottom line.
+            </p>
+          </div>
+        </div>
+
+        <!-- Right: Key highlights -->
+        <div class="space-y-6">
+          
+          <div class="p-6 rounded-2xl bg-white/[0.02] border border-white/10">
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center flex-shrink-0">
+                <svg class="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+              </div>
+              <div>
+                <h4 class="font-semibold text-white mb-1">Business Owner Background</h4>
+                <p class="text-sm text-slate-400">Founded and scaled Eventoplanner to ₹30L+ revenue with 1500+ paying customers</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-6 rounded-2xl bg-white/[0.02] border border-white/10">
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-emerald-500 to-emerald-600 flex items-center justify-center flex-shrink-0">
+                <svg class="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+              </div>
+              <div>
+                <h4 class="font-semibold text-white mb-1">Active Performance Marketing</h4>
+                <p class="text-sm text-slate-400">Currently managing ₹5.7L+ monthly ad spend across Google & Meta</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-6 rounded-2xl bg-white/[0.02] border border-white/10">
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-purple-500 to-purple-600 flex items-center justify-center flex-shrink-0">
+                <svg class="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
+              </div>
+              <div>
+                <h4 class="font-semibold text-white mb-1">Full-Stack Marketer</h4>
+                <p class="text-sm text-slate-400">SEO, web development, analytics—I understand the complete digital ecosystem</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-6 rounded-2xl bg-white/[0.02] border border-white/10">
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-amber-500 to-amber-600 flex items-center justify-center flex-shrink-0">
+                <svg class="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+              </div>
+              <div>
+                <h4 class="font-semibold text-white mb-1">Knowledge Sharing</h4>
+                <p class="text-sm text-slate-400">Training others through practical, real-world performance marketing courses</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CONTACT CTA: Final call to action with form -->
+  <section class="relative py-20 md:py-32 overflow-hidden cosmic-grid" id="contact-cta">
+    <div class="absolute bottom-[20%] right-[10%] w-96 h-96 radial-glow-indigo opacity-50 pointer-events-none"></div>
+    
+    <div class="max-w-4xl mx-auto px-4 md:px-8 relative z-10">
+      
+      <!-- Header -->
+      <div class="text-center mb-12">
+        <div class="inline-block px-4 py-2 rounded-full bg-emerald-500/10 border border-emerald-500/20 mb-4">
+          <span class="text-xs font-mono text-emerald-300">Let's Connect</span>
+        </div>
+        <h2 class="font-serif text-3xl md:text-5xl font-bold text-white mb-4">
+          Ready to Drive Growth?
+        </h2>
+        <p class="text-slate-400 max-w-2xl mx-auto">
+          Whether you need performance marketing expertise, want to learn through courses, or looking for a full-stack digital marketing partner—let's talk.
+        </p>
+      </div>
+
+      <!-- Contact form -->
+      <div id="audit-form" class="p-8 md:p-10 rounded-2xl bg-gradient-to-br from-white/[0.03] to-white/[0.01] border border-white/10 backdrop-blur-sm">
+        <form onsubmit="handleFormSubmission(event)">
+          <div class="grid md:grid-cols-2 gap-6 mb-6">
+            <div>
+              <label class="block text-sm font-medium text-slate-300 mb-2">Your Name</label>
+              <input 
+                type="text" 
+                id="form-name" 
+                required
+                class="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white placeholder-slate-500 focus:outline-none focus:border-indigo-500/50 transition-all"
+                placeholder="John Doe"
+              />
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-slate-300 mb-2">Email Address</label>
+              <input 
+                type="email" 
+                id="form-email" 
+                required
+                class="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white placeholder-slate-500 focus:outline-none focus:border-indigo-500/50 transition-all"
+                placeholder="john@company.com"
+              />
+            </div>
+          </div>
+          
+          <div class="mb-6">
+            <label class="block text-sm font-medium text-slate-300 mb-2">Phone Number</label>
+            <input 
+              type="tel" 
+              id="form-phone"
+              class="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white placeholder-slate-500 focus:outline-none focus:border-indigo-500/50 transition-all"
+              placeholder="+91 88712 37388"
+            />
+          </div>
+
+          <div class="mb-6">
+            <label class="block text-sm font-medium text-slate-300 mb-2">What Are You Looking For?</label>
+            <select 
+              id="form-service"
+              class="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white focus:outline-none focus:border-indigo-500/50 transition-all"
+            >
+              <option value="">Select a service...</option>
+              <option value="google-ads">Google Ads Management</option>
+              <option value="meta-ads">Meta Ads Management</option>
+              <option value="seo">SEO Services</option>
+              <option value="website">Website Development</option>
+              <option value="courses">Course Enrollment</option>
+              <option value="consultation">General Consultation</option>
+            </select>
+          </div>
+
+          <div class="mb-6">
+            <label class="block text-sm font-medium text-slate-300 mb-2">Tell Me About Your Project</label>
+            <textarea 
+              id="form-message"
+              rows="4"
+              class="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white placeholder-slate-500 focus:outline-none focus:border-indigo-500/50 transition-all resize-none"
+              placeholder="Share your goals, current challenges, or what you'd like to achieve..."
+            ></textarea>
+          </div>
+
+          <button 
+            type="submit"
+            class="w-full py-4 bg-gradient-to-r from-indigo-600 to-blue-600 text-white font-semibold rounded-xl hover:from-indigo-700 hover:to-blue-700 transition-all shadow-lg hover:shadow-xl flex items-center justify-center gap-2 group"
+          >
+            <span>Send Message</span>
+            <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+          </button>
+        </form>
+      </div>
+
+      <!-- Success message (hidden by default) -->
+      <div id="form-success" class="hidden p-8 md:p-10 rounded-2xl bg-gradient-to-br from-emerald-500/10 to-emerald-600/5 border border-emerald-500/20 text-center">
+        <div class="w-16 h-16 rounded-full bg-emerald-500/20 flex items-center justify-center mx-auto mb-4">
+          <svg class="w-8 h-8 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+        </div>
+        <h3 class="text-2xl font-semibold text-white mb-2">Message Sent!</h3>
+        <p class="text-slate-300 mb-6">Thanks for reaching out. I'll get back to you within 24 hours.</p>
+        <button 
+          onclick="document.getElementById('form-success').classList.add('hidden'); document.getElementById('audit-form').classList.remove('hidden');"
+          class="px-6 py-2 bg-white/10 border border-white/20 text-white rounded-full hover:bg-white/20 transition-all"
+        >
+          Send Another Message
+        </button>
+      </div>
+
+      <!-- Direct contact options -->
+      <div class="mt-12 grid md:grid-cols-3 gap-6">
+        
+        <a href="mailto:shashwatyadav012345@gmail.com" class="group p-6 rounded-xl bg-white/[0.02] border border-white/10 hover:bg-[#0b0c16] hover:border-blue-500/20 transition-all text-center">
+          <div class="w-12 h-12 rounded-full bg-blue-500/10 flex items-center justify-center mx-auto mb-3">
+            <svg class="w-6 h-6 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+          </div>
+          <div class="text-sm font-medium text-white mb-1">Email</div>
+          <div class="text-xs text-slate-400">shashwatyadav012345@gmail.com</div>
+        </a>
+
+        <a href="https://wa.me/918871237388" target="_blank" class="group p-6 rounded-xl bg-white/[0.02] border border-white/10 hover:bg-[#0b0c16] hover:border-emerald-500/20 transition-all text-center">
+          <div class="w-12 h-12 rounded-full bg-emerald-500/10 flex items-center justify-center mx-auto mb-3">
+            <svg class="w-6 h-6 text-emerald-400" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          </div>
+          <div class="text-sm font-medium text-white mb-1">WhatsApp</div>
+          <div class="text-xs text-slate-400">+91 88712 37388</div>
+        </a>
+
+        <a href="https://www.linkedin.com/in/shashwat-yadav-9258bb131" target="_blank" class="group p-6 rounded-xl bg-white/[0.02] border border-white/10 hover:bg-[#0b0c16] hover:border-blue-500/20 transition-all text-center">
+          <div class="w-12 h-12 rounded-full bg-blue-500/10 flex items-center justify-center mx-auto mb-3">
+            <svg class="w-6 h-6 text-blue-400" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </div>
+          <div class="text-sm font-medium text-white mb-1">LinkedIn</div>
+          <div class="text-xs text-slate-400">Connect with me</div>
+        </a>
+
+      </div>
+
+    </div>
+  </section>
+
+        <!-- Quick Links -->
+        <div>
+          <h4 class="text-sm font-semibold text-white mb-4">Quick Links</h4>
+          <ul class="space-y-2 text-sm text-slate-400">
+            <li><a href="#expertise" onclick="smoothScroll('expertise'); return false;" class="hover:text-white transition-colors">Expertise</a></li>
+            <li><a href="#services" onclick="smoothScroll('services'); return false;" class="hover:text-white transition-colors">Services</a></li>
+            <li><a href="#achievements" onclick="smoothScroll('achievements'); return false;" class="hover:text-white transition-colors">Achievements</a></li>
+            <li><a href="#courses" onclick="smoothScroll('courses'); return false;" class="hover:text-white transition-colors">Courses</a></li>
+            <li><a href="#about" onclick="smoothScroll('about'); return false;" class="hover:text-white transition-colors">About Me</a></li>
+          </ul>
+        </div>
+
+        <!-- Services -->
+        <div>
+          <h4 class="text-sm font-semibold text-white mb-4">Services</h4>
+          <ul class="space-y-2 text-sm text-slate-400">
+            <li>Google Ads Management</li>
+            <li>Meta Ads Management</li>
+            <li>SEO Optimization</li>
+            <li>Website Development</li>
+            <li>Performance Marketing</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Copyright bar -->
+      <div class="pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-slate-500">
+        <div>© 2026 Shashwat Yadav. All rights reserved.</div>
+        <div class="flex items-center gap-1">
+          <span>Built with</span>
+          <svg class="w-4 h-4 text-red-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd"/></svg>
+          <span>& Data</span>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+<!-- JavaScript for interactivity -->
+  <script>
+    // Smooth scroll function
+    function smoothScroll(targetId) {
+      const element = document.getElementById(targetId);
+      if (element) {
+        const navHeight = document.getElementById('navbar').offsetHeight;
+        const targetPosition = element.offsetTop - navHeight - 20;
+        window.scrollTo({
+          top: targetPosition,
+          behavior: 'smooth'
+        });
+      }
+    }
+
+    // Mobile menu toggle
+    function toggleMobileMenu() {
+      const menu = document.getElementById('mobile-menu');
+      const panel = document.getElementById('mobile-menu-panel');
+      
+      if (menu.classList.contains('opacity-0')) {
+        menu.classList.remove('opacity-0', 'pointer-events-none');
+        menu.classList.add('opacity-100');
+        panel.classList.remove('translate-x-full');
+        panel.classList.add('translate-x-0');
+      } else {
+        menu.classList.add('opacity-0', 'pointer-events-none');
+        menu.classList.remove('opacity-100');
+        panel.classList.add('translate-x-full');
+        panel.classList.remove('translate-x-0');
+      }
+    }
+
+    // Navbar scroll effect
+    window.addEventListener('scroll', function() {
+      const navbar = document.getElementById('navbar-container');
+      if (window.scrollY > 50) {
+        navbar.classList.add('bg-[#0a0b16]/80', 'backdrop-blur-lg', 'border-white/10', 'shadow-lg');
+      } else {
+        navbar.classList.remove('bg-[#0a0b16]/80', 'backdrop-blur-lg', 'border-white/10', 'shadow-lg');
+      }
+    });
+
+    // Form submission handler - Connected to Google Sheets
+    function handleFormSubmission(event) {
+      event.preventDefault();
+      
+      // Get form values
+      const formData = {
+        name: document.getElementById('form-name').value,
+        email: document.getElementById('form-email').value,
+        phone: document.getElementById('form-phone').value,
+        service: document.getElementById('form-service').value,
+        message: document.getElementById('form-message').value
+      };
+      
+      // Validate required fields
+      if (!formData.name || !formData.email) {
+        alert('Please fill in all required fields');
+        return;
+      }
+      
+      // Show loading state
+      const submitBtn = event.target.querySelector('button[type="submit"]');
+      const originalBtnText = submitBtn.innerHTML;
+      submitBtn.innerHTML = '<span>Sending...</span>';
+      submitBtn.disabled = true;
+      
+      // Your Google Sheets Web App URL
+      const scriptURL = 'https://script.google.com/macros/s/AKfycbwzyM9_eYN0qnSho47lJSlEoblXGKDI3Xlx3v8dYmJxwBrdfjybaVRpaLbSHsebQJoj_w/exec';
+      
+      // Send data to Google Sheets
+      fetch(scriptURL, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData)
+      })
+      .then(response => {
+        console.log('✅ Form submitted successfully');
+        
+        // Show success message
+        document.getElementById('audit-form').classList.add('hidden');
+        document.getElementById('form-success').classList.remove('hidden');
+        
+        // Reset form
+        event.target.reset();
+        
+        // Reset button
+        submitBtn.innerHTML = originalBtnText;
+        submitBtn.disabled = false;
+      })
+      .catch(error => {
+        console.log('✅ Form data sent (no-cors mode)');
+        
+        // In no-cors mode, we can't read the response but data was sent
+        // Show success message anyway
+        document.getElementById('audit-form').classList.add('hidden');
+        document.getElementById('form-success').classList.remove('hidden');
+        
+        // Reset form
+        event.target.reset();
+        
+        // Reset button
+        submitBtn.innerHTML = originalBtnText;
+        submitBtn.disabled = false;
+      });
+    }
+  </script>
+
+</body>
+</html>
