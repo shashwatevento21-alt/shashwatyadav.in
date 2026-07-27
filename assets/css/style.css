@@ -1,48 +1,52 @@
-/* Force dark background */
+/* ==========================================================================
+   Design tokens — premium indigo / violet / gold system
+   ========================================================================== */
+:root {
+  --color-primary:    #161A3E; /* Midnight indigo */
+  --color-accent:     #6C3AC9; /* Royal violet */
+  --color-accent-light: #A88CE0; /* Lighter violet tint, for hover on dark bg */
+  --color-success:    #C9A24B; /* Champagne gold — reserved for achievement moments */
+  --color-bg:         #F7F5F0; /* Warm off-white */
+  --color-bg-dark:    #161A3E; /* Same as primary, for dark sections */
+  --color-card-bg:    #FBFAF7; /* Slightly lighter tint of bg, for card layering */
+  --color-text:       #1E1E1E; /* Charcoal */
+  --color-text-muted: #5C5C66; /* Muted charcoal-gray for secondary text */
+  --color-text-light: #F7F5F0; /* Off-white text on dark backgrounds */
+  --color-border:     #E4E1D8; /* Soft neutral border */
+}
+
+html {
+  background-color: var(--color-bg);
+  color-scheme: light;
+}
+
 body {
-  background-color: #030307 !important;
-  color: #f1f5f9 !important;
+  background-color: var(--color-bg);
+  color: var(--color-text);
 }
 
-/* Custom background animated grid overlay */
-.cosmic-grid {
-  background-color: #030307;
-  background-size: 40px 40px;
-  background-image:
-    linear-gradient(to right, rgba(255, 255, 255, 0.015) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(255, 255, 255, 0.015) 1px, transparent 1px);
+* {
+  box-sizing: border-box;
 }
 
-/* Glow overlays */
-.radial-glow-indigo {
-  background: radial-gradient(circle, rgba(99,102,241,0.15) 0%, rgba(99,102,241,0) 70%);
+/* Subtle indigo-to-violet gradient reserved for the Home hero background only */
+.hero-gradient {
+  background:
+    radial-gradient(circle at 15% 20%, rgba(108, 58, 201, 0.35) 0%, rgba(108, 58, 201, 0) 55%),
+    radial-gradient(circle at 85% 80%, rgba(108, 58, 201, 0.2) 0%, rgba(108, 58, 201, 0) 60%),
+    var(--color-primary);
 }
 
-.radial-glow-blue {
-  background: radial-gradient(circle, rgba(59,130,246,0.15) 0%, rgba(59,130,246,0) 75%);
-}
-
-.radial-glow-purple {
-  background: radial-gradient(circle, rgba(168,85,247,0.14) 0%, rgba(168,85,247,0) 70%);
-}
-
-/* Continuous horizontal loop ticker scroll animation */
-@keyframes scroll {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-33.333%); }
-}
-.animate-scroll {
-  animation: scroll 40s linear infinite;
-}
-.animate-scroll:hover {
-  animation-play-state: paused;
-}
-
-/* Premium dynamic gradients and transitions */
-.text-gradient-cosmic {
-  background: linear-gradient(135deg, #ffffff 40%, rgba(255, 255, 255, 0.7) 100%);
+/* Two-tone hero headline emphasis — subtle, not a loud rainbow gradient */
+.text-gradient-hero {
+  background: linear-gradient(135deg, var(--color-text-light) 35%, var(--color-accent-light) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+/* Recolors a dark-ink logo mark to read as light on dark (primary) backgrounds */
+.logo-on-dark {
+  filter: brightness(0) invert(1);
 }
 
 /* Smooth custom scrollbars */
@@ -51,41 +55,37 @@ body {
   height: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: #030307;
+  background: var(--color-bg);
 }
 ::-webkit-scrollbar-thumb {
-  background: #1e1e30;
+  background: var(--color-border);
   border-radius: 3px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #3b82f6;
+  background: var(--color-accent);
 }
 
-/* Additional dark theme enforcement */
-html {
-  background-color: #030307 !important;
-  color-scheme: dark;
-}
-
-* {
-  box-sizing: border-box;
+::selection {
+  background: rgba(108, 58, 201, 0.25);
+  color: var(--color-text);
 }
 
 /* Active nav link state */
 .nav-link.active {
-  color: #ffffff;
+  color: var(--color-text-light);
   font-weight: 600;
 }
+.nav-link.active::after {
+  content: '';
+}
 
-/* Force dark, high-contrast styling on native select dropdowns and their
-   option lists (browsers otherwise render the open option list with the
-   OS-default white background, making light text invisible) */
+/* Native select dropdowns — light theme, matches the rest of the form */
 select {
-  background-color: #0a0b16;
-  color: #f1f5f9;
-  color-scheme: dark;
+  background-color: #ffffff;
+  color: var(--color-text);
+  color-scheme: light;
 }
 select option {
-  background-color: #0a0b16;
-  color: #f1f5f9;
+  background-color: #ffffff;
+  color: var(--color-text);
 }

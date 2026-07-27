@@ -29,14 +29,14 @@ function toggleMobileMenu() {
   }
 }
 
-// Navbar scroll effect
+// Navbar scroll effect — subtle shadow for depth once the page scrolls
 window.addEventListener('scroll', function() {
-  const navbar = document.getElementById('navbar-container');
+  const navbar = document.getElementById('navbar');
   if (!navbar) return;
   if (window.scrollY > 50) {
-    navbar.classList.add('bg-[#0a0b16]/80', 'backdrop-blur-lg', 'border-white/10', 'shadow-lg');
+    navbar.classList.add('shadow-lg');
   } else {
-    navbar.classList.remove('bg-[#0a0b16]/80', 'backdrop-blur-lg', 'border-white/10', 'shadow-lg');
+    navbar.classList.remove('shadow-lg');
   }
 });
 
