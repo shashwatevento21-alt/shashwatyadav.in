@@ -13,7 +13,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Deploy to Hostinger via FTP
+      - name: Deploy main site to Hostinger via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: ${{ secrets.FTP_SERVER }}
@@ -26,3 +26,18 @@ jobs:
             **/.git*/**
             **/.github/**
             **/CNAME
+            **/deploy-creators-subfolder
+            **/deploy-creators-subfolder/**
+
+      # Front controller for the separately-deployed Laravel app at
+      # shashwatyadav.in/creators — see creator-platform/deploy/DEPLOYMENT.md.
+      # The actual Laravel app (app/, vendor/, storage/, etc.) is uploaded
+      # manually outside public_html and is NOT managed by this workflow.
+      - name: Deploy /creators front controller to Hostinger via FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: ./deploy-creators-subfolder/
+          server-dir: /public_html/creators/
