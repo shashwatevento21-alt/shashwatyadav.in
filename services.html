@@ -5,321 +5,355 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Services | Shashwat Yadav</title>
   <meta name="description" content="Google Ads, Meta Ads, SEO & Local Search Optimization, and Website Development services by Shashwat Yadav.">
+  <link rel="icon" type="image/png" href="/assets/images/favicon.png">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 
   <script src="https://cdn.tailwindcss.com"></script>
+  <script src="/assets/js/tailwind-config.js"></script>
 
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: {
-            sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
-            serif: ['"Playfair Display"', 'Georgia', 'serif'],
-            mono: ['"Space Mono"', 'monospace'],
-          },
-          colors: {
-            primary: '#161A3E',
-            accent: '#6C3AC9',
-            accentLight: '#A88CE0',
-            success: '#C9A24B',
-            bg: '#F7F5F0',
-            bgDark: '#161A3E',
-            cardBg: '#FBFAF7',
-            text: '#1E1E1E',
-            textMuted: '#5C5C66',
-            textLight: '#F7F5F0',
-            border: '#E4E1D8',
-          }
-        }
-      }
-    }
-  </script>
-
-  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="/assets/css/style.css">
 </head>
-<body class="bg-bg text-text overflow-x-hidden">
+<body class="bg-background text-text-body overflow-x-hidden">
 
-  <!-- Dynamic floating WhatsApp coordinate trigger -->
-  <a
-    href="https://wa.me/918871237388?text=Hi%20Shashwat!%20I%20visited%20your%20portfolio%20and%20would%20love%20to%20discuss%20performance%20marketing."
-    target="_blank"
-    referrerPolicy="no-referrer"
-    style="position: fixed; bottom: 24px; right: 24px; z-index: 100; transition: all 0.3s;"
-    id="whatsapp-widget"
-  >
-    <div class="absolute inset-0 rounded-full bg-emerald-500/20 animate-ping pointer-events-none"></div>
-    <div class="w-14 h-14 rounded-full bg-emerald-600 hover:bg-emerald-700 flex items-center justify-center text-white shadow-[0_8px_30px_rgba(22,163,74,0.4)] hover:scale-110 active:scale-95 transition-all">
-      <svg class="w-7 h-7 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
-      </svg>
-    </div>
-  </a>
+  <!-- Floating action bar: WhatsApp + Call -->
+  <div style="position: fixed; bottom: 24px; right: 24px; z-index: 100; display: flex; flex-direction: column; gap: 12px;">
+    <a href="https://wa.me/917000198366?text=Hi%20Shashwat!%20I%20visited%20your%20portfolio%20and%20would%20love%20to%20discuss%20performance%20marketing." target="_blank" referrerPolicy="no-referrer" class="relative" id="whatsapp-widget">
+      <div class="absolute inset-0 rounded-full bg-cta-accent/25 animate-ping pointer-events-none"></div>
+      <div class="w-14 h-14 rounded-full bg-cta-accent hover:brightness-95 flex items-center justify-center text-white shadow-[0_8px_30px_rgba(245,158,11,0.4)] hover:scale-110 active:scale-95 transition-all">
+        <svg class="w-7 h-7 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      </div>
+    </a>
+    <a href="tel:+917000198366" class="w-14 h-14 rounded-full bg-primary hover:bg-primary-dark flex items-center justify-center text-white shadow-[0_8px_30px_rgba(21,96,168,0.4)] hover:scale-110 active:scale-95 transition-all">
+      <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 011 .684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684 1v3.28a2 2 0 01-2 2H19C10.163 21 3 13.837 3 5z"/></svg>
+    </a>
+  </div>
 
   <!-- Header / navbar -->
   <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 bg-primary transition-shadow duration-300">
     <div class="max-w-7xl mx-auto flex items-center justify-between px-4 md:px-8 py-4" id="navbar-container">
-
       <a href="/" class="flex items-center gap-2 group">
         <img src="/assets/images/logo.png" alt="Shashwat Yadav" class="logo-on-dark h-10 md:h-11 w-auto group-hover:scale-105 transition-transform duration-300">
       </a>
-
-      <div class="hidden md:flex items-center gap-8">
-        <a href="/" class="nav-link text-sm font-medium text-textLight/70 hover:text-accentLight transition-all">Home</a>
-        <a href="/services" class="nav-link active text-sm font-medium text-textLight/70 hover:text-accentLight transition-all">Services</a>
-        <a href="/courses" class="nav-link text-sm font-medium text-textLight/70 hover:text-accentLight transition-all">Courses</a>
-        <a href="/expertise" class="nav-link text-sm font-medium text-textLight/70 hover:text-accentLight transition-all">Expertise / Clients</a>
+      <div class="hidden lg:flex items-center gap-6">
+        <a href="/" class="nav-link text-sm font-medium text-white/70 hover:text-white transition-all">Home</a>
+        <a href="/about" class="nav-link text-sm font-medium text-white/70 hover:text-white transition-all">About</a>
+        <a href="/services" class="nav-link active text-sm font-medium text-white/70 hover:text-white transition-all">Services</a>
+        <a href="/portfolio" class="nav-link text-sm font-medium text-white/70 hover:text-white transition-all">Portfolio</a>
+        <a href="/skills" class="nav-link text-sm font-medium text-white/70 hover:text-white transition-all">Skills</a>
+        <a href="/certifications" class="nav-link text-sm font-medium text-white/70 hover:text-white transition-all">Certifications</a>
+        <a href="/courses" class="nav-link text-sm font-medium text-white/70 hover:text-white transition-all">Courses</a>
+        <a href="/blog" class="nav-link text-sm font-medium text-white/70 hover:text-white transition-all">Blog</a>
+        <a href="/contact" class="nav-link text-sm font-medium text-white/70 hover:text-white transition-all">Contact</a>
       </div>
-
-      <div class="hidden md:flex items-center gap-3">
-        <a href="/contact" class="flex items-center gap-1.5 bg-accent text-white font-semibold px-5 py-2 rounded-full hover:bg-accentLight transition-all text-xs">
+      <div class="hidden lg:flex items-center gap-3">
+        <a href="/creators-platform" class="flex items-center gap-1.5 border border-white/30 text-white/90 font-semibold px-4 py-2 rounded-full hover:bg-white/10 hover:text-white transition-all text-xs">
+          <span>Creators Platform</span>
+        </a>
+        <a href="/contact" class="flex items-center gap-1.5 bg-cta-accent text-white font-semibold px-5 py-2 rounded-full hover:brightness-95 transition-all text-xs">
           <span>Let's Connect</span>
           <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
         </a>
       </div>
-
-      <button onclick="toggleMobileMenu()" class="md:hidden flex flex-col gap-1 p-2" id="mobile-menu-btn">
-        <span class="w-5 h-0.5 bg-textLight rounded transition-all"></span>
-        <span class="w-5 h-0.5 bg-textLight rounded transition-all"></span>
-        <span class="w-5 h-0.5 bg-textLight rounded transition-all"></span>
+      <button onclick="toggleMobileMenu()" class="lg:hidden flex flex-col gap-1 p-2" id="mobile-menu-btn">
+        <span class="w-5 h-0.5 bg-white rounded transition-all"></span>
+        <span class="w-5 h-0.5 bg-white rounded transition-all"></span>
+        <span class="w-5 h-0.5 bg-white rounded transition-all"></span>
       </button>
     </div>
-
-    <div id="mobile-menu" class="md:hidden fixed inset-0 bg-primary/90 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-300 z-40">
-      <div class="absolute right-0 top-0 h-full w-64 bg-primary border-l border-textLight/10 transform translate-x-full transition-transform duration-300" id="mobile-menu-panel">
-        <div class="p-6 flex flex-col gap-6">
-          <button onclick="toggleMobileMenu()" class="self-end text-textLight">
+    <div id="mobile-menu" class="lg:hidden fixed inset-0 bg-primary/95 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-300 z-40">
+      <div class="absolute right-0 top-0 h-full w-64 bg-primary border-l border-white/10 transform translate-x-full transition-transform duration-300 overflow-y-auto" id="mobile-menu-panel">
+        <div class="p-6 flex flex-col gap-5">
+          <button onclick="toggleMobileMenu()" class="self-end text-white">
             <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
           </button>
-          <a href="/" class="text-sm font-medium text-textLight/70 hover:text-accentLight transition-all">Home</a>
-          <a href="/services" class="text-sm font-medium text-textLight transition-all">Services</a>
-          <a href="/courses" class="text-sm font-medium text-textLight/70 hover:text-accentLight transition-all">Courses</a>
-          <a href="/expertise" class="text-sm font-medium text-textLight/70 hover:text-accentLight transition-all">Expertise / Clients</a>
-          <a href="/contact" class="bg-accent text-white font-semibold px-5 py-2 rounded-full text-xs text-center">Let's Connect</a>
+          <a href="/" class="text-sm font-medium text-white/70 hover:text-white transition-all">Home</a>
+          <a href="/about" class="text-sm font-medium text-white/70 hover:text-white transition-all">About</a>
+          <a href="/services" class="text-sm font-medium text-white transition-all">Services</a>
+          <a href="/portfolio" class="text-sm font-medium text-white/70 hover:text-white transition-all">Portfolio</a>
+          <a href="/skills" class="text-sm font-medium text-white/70 hover:text-white transition-all">Skills</a>
+          <a href="/certifications" class="text-sm font-medium text-white/70 hover:text-white transition-all">Certifications</a>
+          <a href="/courses" class="text-sm font-medium text-white/70 hover:text-white transition-all">Courses</a>
+          <a href="/blog" class="text-sm font-medium text-white/70 hover:text-white transition-all">Blog</a>
+          <a href="/contact" class="text-sm font-medium text-white/70 hover:text-white transition-all">Contact</a>
+          <a href="/creators-platform" class="text-sm font-medium text-white/70 hover:text-white transition-all mt-2">Creators Platform</a>
+          <a href="/contact" class="bg-cta-accent text-white font-semibold px-5 py-2 rounded-full text-xs text-center mt-2">Let's Connect</a>
         </div>
       </div>
     </div>
   </nav>
 
-  <!-- Page header -->
-  <section class="relative pt-40 pb-10 overflow-hidden bg-bg">
+  <!-- SERVICES INTRO -->
+  <section class="relative pt-40 pb-10 overflow-hidden bg-background">
     <div class="max-w-6xl mx-auto px-4 md:px-8 relative z-10 text-center">
-      <div class="inline-block px-4 py-2 rounded-full bg-accent/10 border border-accent/20 mb-4">
-        <span class="text-xs font-mono text-accent">Services I Offer</span>
+      <div class="inline-block px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-4">
+        <span class="text-xs font-mono text-primary">Services I Offer</span>
       </div>
-      <h1 class="font-serif text-4xl md:text-6xl font-bold text-primary mb-4">
+      <h1 class="font-serif text-4xl md:text-6xl font-bold text-text-heading mb-4">
         How I Can Help Your Business
       </h1>
-      <p class="text-textMuted max-w-2xl mx-auto">
+      <p class="text-text-body max-w-2xl mx-auto">
         Comprehensive digital marketing services focused on measurable results and sustainable growth.
       </p>
     </div>
   </section>
 
-  <!-- SERVICES: Detailed service offerings -->
-  <section class="relative py-20 md:py-28 overflow-hidden bg-bg" id="services">
-    <div class="max-w-6xl mx-auto px-4 md:px-8 relative z-10">
+  <!-- SERVICES DETAIL LIST: alternating left/right -->
+  <section class="relative py-16 md:py-24 overflow-hidden bg-background" id="services">
+    <div class="max-w-5xl mx-auto px-4 md:px-8 relative z-10 space-y-16">
 
-      <div class="grid md:grid-cols-2 gap-8">
-
-        <!-- Google Ads Management -->
-        <div class="p-8 rounded-2xl bg-cardBg border border-border hover:border-accent/40 transition-all duration-300">
-          <div class="flex items-start gap-4 mb-6">
-            <div class="w-14 h-14 rounded-xl bg-primary flex items-center justify-center flex-shrink-0">
-              <svg class="w-7 h-7 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M12.48 10.92v3.28h7.84c-.24 1.84-.853 3.187-1.787 4.133-1.147 1.147-2.933 2.4-6.053 2.4-4.827 0-8.6-3.893-8.6-8.72s3.773-8.72 8.6-8.72c2.6 0 4.507 1.027 5.907 2.347l2.307-2.307C18.747 1.44 16.133 0 12.48 0 5.867 0 .307 5.387.307 12s5.56 12 12.173 12c3.573 0 6.267-1.173 8.373-3.36 2.16-2.16 2.84-5.213 2.84-7.667 0-.76-.053-1.467-.173-2.053H12.48z"/></svg>
-            </div>
-            <div>
-              <h3 class="font-semibold text-xl text-primary mb-2">Google Ads Management</h3>
-              <p class="text-sm text-textMuted">Strategic campaign setup, optimization, and scaling for maximum ROI</p>
-            </div>
-          </div>
-          <ul class="space-y-3 mb-6">
-            <li class="flex items-start gap-3">
-              <svg class="w-5 h-5 text-primary flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-              <span class="text-sm text-text">Search, Display & Video campaign setup</span>
-            </li>
-            <li class="flex items-start gap-3">
-              <svg class="w-5 h-5 text-primary flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-              <span class="text-sm text-text">Advanced keyword research & competitor analysis</span>
-            </li>
-            <li class="flex items-start gap-3">
-              <svg class="w-5 h-5 text-primary flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-              <span class="text-sm text-text">Conversion tracking & GTM implementation</span>
-            </li>
-            <li class="flex items-start gap-3">
-              <svg class="w-5 h-5 text-primary flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-              <span class="text-sm text-text">Monthly performance reporting & optimization</span>
-            </li>
-          </ul>
-          <div class="pt-4 border-t border-border">
-            <span class="text-xs text-textMuted">Currently Managing: Commercial Real Estate & Healthcare</span>
-          </div>
+      <!-- Google Ads -->
+      <div class="flex flex-col md:flex-row items-center gap-10">
+        <div class="w-20 h-20 rounded-2xl bg-primary flex items-center justify-center flex-shrink-0">
+          <svg class="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M12.48 10.92v3.28h7.84c-.24 1.84-.853 3.187-1.787 4.133-1.147 1.147-2.933 2.4-6.053 2.4-4.827 0-8.6-3.893-8.6-8.72s3.773-8.72 8.6-8.72c2.6 0 4.507 1.027 5.907 2.347l2.307-2.307C18.747 1.44 16.133 0 12.48 0 5.867 0 .307 5.387.307 12s5.56 12 12.173 12c3.573 0 6.267-1.173 8.373-3.36 2.16-2.16 2.84-5.213 2.84-7.667 0-.76-.053-1.467-.173-2.053H12.48z"/></svg>
         </div>
-
-        <!-- Meta Ads Management -->
-        <div class="p-8 rounded-2xl bg-cardBg border border-border hover:border-accent/40 transition-all duration-300">
-          <div class="flex items-start gap-4 mb-6">
-            <div class="w-14 h-14 rounded-xl bg-accent flex items-center justify-center flex-shrink-0">
-              <svg class="w-7 h-7 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-            </div>
-            <div>
-              <h3 class="font-semibold text-xl text-primary mb-2">Meta Ads (Facebook & Instagram)</h3>
-              <p class="text-sm text-textMuted">High-converting campaigns with advanced audience targeting and creative testing</p>
-            </div>
-          </div>
-          <ul class="space-y-3 mb-6">
-            <li class="flex items-start gap-3">
-              <svg class="w-5 h-5 text-accent flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-              <span class="text-sm text-text">Lead generation & conversion campaigns</span>
-            </li>
-            <li class="flex items-start gap-3">
-              <svg class="w-5 h-5 text-accent flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-              <span class="text-sm text-text">Custom audience creation & lookalike targeting</span>
-            </li>
-            <li class="flex items-start gap-3">
-              <svg class="w-5 h-5 text-accent flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-              <span class="text-sm text-text">Creative ad copy & visual design strategy</span>
-            </li>
-            <li class="flex items-start gap-3">
-              <svg class="w-5 h-5 text-accent flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-              <span class="text-sm text-text">A/B testing & campaign scaling</span>
-            </li>
+        <div>
+          <h3 class="font-semibold text-2xl text-text-heading mb-2">Google Ads Management</h3>
+          <p class="text-text-body mb-4">Strategic campaign setup, optimization, and scaling for maximum ROI.</p>
+          <ul class="grid sm:grid-cols-2 gap-x-6 gap-y-2">
+            <li class="flex items-start gap-2 text-sm text-text-body"><svg class="w-4 h-4 text-primary flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span>Search, Display & Video campaign setup</span></li>
+            <li class="flex items-start gap-2 text-sm text-text-body"><svg class="w-4 h-4 text-primary flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span>Advanced keyword research & competitor analysis</span></li>
+            <li class="flex items-start gap-2 text-sm text-text-body"><svg class="w-4 h-4 text-primary flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span>Conversion tracking & GTM implementation</span></li>
+            <li class="flex items-start gap-2 text-sm text-text-body"><svg class="w-4 h-4 text-primary flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span>Monthly performance reporting & optimization</span></li>
           </ul>
-          <div class="pt-4 border-t border-border">
-            <span class="text-xs text-textMuted">Currently Managing: Multi-sector Lead Generation</span>
-          </div>
+          <div class="mt-4 text-xs text-text-body/70">Currently Managing: Commercial Real Estate & Healthcare</div>
         </div>
-
-        <!-- SEO Services -->
-        <div class="p-8 rounded-2xl bg-cardBg border border-border hover:border-accent/40 transition-all duration-300">
-          <div class="flex items-start gap-4 mb-6">
-            <div class="w-14 h-14 rounded-xl bg-primary flex items-center justify-center flex-shrink-0">
-              <svg class="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
-            </div>
-            <div>
-              <h3 class="font-semibold text-xl text-primary mb-2">SEO & Local Search Optimization</h3>
-              <p class="text-sm text-textMuted">Comprehensive SEO strategy including AI search optimization</p>
-            </div>
-          </div>
-          <ul class="space-y-3 mb-6">
-            <li class="flex items-start gap-3">
-              <svg class="w-5 h-5 text-primary flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-              <span class="text-sm text-text">Google Search ranking optimization</span>
-            </li>
-            <li class="flex items-start gap-3">
-              <svg class="w-5 h-5 text-primary flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-              <span class="text-sm text-text">AI search optimization (ChatGPT, Gemini)</span>
-            </li>
-            <li class="flex items-start gap-3">
-              <svg class="w-5 h-5 text-primary flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-              <span class="text-sm text-text">Google Business Profile optimization</span>
-            </li>
-            <li class="flex items-start gap-3">
-              <svg class="w-5 h-5 text-primary flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-              <span class="text-sm text-text">Technical SEO & content strategy</span>
-            </li>
-          </ul>
-          <div class="pt-4 border-t border-border">
-            <span class="text-xs text-textMuted">Proven Results: Multi-platform Search Visibility</span>
-          </div>
-        </div>
-
-        <!-- Website Development -->
-        <div class="p-8 rounded-2xl bg-cardBg border border-border hover:border-accent/40 transition-all duration-300">
-          <div class="flex items-start gap-4 mb-6">
-            <div class="w-14 h-14 rounded-xl bg-accent flex items-center justify-center flex-shrink-0">
-              <svg class="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
-            </div>
-            <div>
-              <h3 class="font-semibold text-xl text-primary mb-2">Website Design & Development</h3>
-              <p class="text-sm text-textMuted">Professional websites optimized for conversions and performance</p>
-            </div>
-          </div>
-          <ul class="space-y-3 mb-6">
-            <li class="flex items-start gap-3">
-              <svg class="w-5 h-5 text-accent flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-              <span class="text-sm text-text">WordPress & Elementor development</span>
-            </li>
-            <li class="flex items-start gap-3">
-              <svg class="w-5 h-5 text-accent flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-              <span class="text-sm text-text">Custom HTML/CSS/JavaScript coding</span>
-            </li>
-            <li class="flex items-start gap-3">
-              <svg class="w-5 h-5 text-accent flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-              <span class="text-sm text-text">Landing pages & conversion optimization</span>
-            </li>
-            <li class="flex items-start gap-3">
-              <svg class="w-5 h-5 text-accent flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-              <span class="text-sm text-text">Mobile-responsive & fast-loading sites</span>
-            </li>
-          </ul>
-          <div class="pt-4 border-t border-border">
-            <span class="text-xs text-textMuted">Built For: Performance & Conversion</span>
-          </div>
-        </div>
-
       </div>
 
-      <!-- CTA -->
-      <div class="mt-16 text-center">
-        <p class="text-textMuted mb-4">Ready to discuss which service fits your business?</p>
-        <a href="/contact" class="inline-flex items-center gap-2 px-6 py-3 bg-primary text-textLight font-semibold rounded-full hover:bg-accent transition-all">
-          <span>Get In Touch</span>
-          <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
-        </a>
+      <!-- Meta Ads -->
+      <div class="flex flex-col md:flex-row-reverse items-center gap-10">
+        <div class="w-20 h-20 rounded-2xl bg-primary flex items-center justify-center flex-shrink-0">
+          <svg class="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+        </div>
+        <div>
+          <h3 class="font-semibold text-2xl text-text-heading mb-2">Meta Ads (Facebook & Instagram)</h3>
+          <p class="text-text-body mb-4">High-converting campaigns with advanced audience targeting and creative testing.</p>
+          <ul class="grid sm:grid-cols-2 gap-x-6 gap-y-2">
+            <li class="flex items-start gap-2 text-sm text-text-body"><svg class="w-4 h-4 text-primary flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span>Lead generation & conversion campaigns</span></li>
+            <li class="flex items-start gap-2 text-sm text-text-body"><svg class="w-4 h-4 text-primary flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span>Custom audience creation & lookalike targeting</span></li>
+            <li class="flex items-start gap-2 text-sm text-text-body"><svg class="w-4 h-4 text-primary flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span>Creative ad copy & visual design strategy</span></li>
+            <li class="flex items-start gap-2 text-sm text-text-body"><svg class="w-4 h-4 text-primary flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span>A/B testing & campaign scaling</span></li>
+          </ul>
+          <div class="mt-4 text-xs text-text-body/70">Currently Managing: Multi-sector Lead Generation</div>
+        </div>
+      </div>
+
+      <!-- SEO -->
+      <div class="flex flex-col md:flex-row items-center gap-10">
+        <div class="w-20 h-20 rounded-2xl bg-primary flex items-center justify-center flex-shrink-0">
+          <svg class="w-10 h-10 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+        </div>
+        <div>
+          <h3 class="font-semibold text-2xl text-text-heading mb-2">SEO & Local Search Optimization</h3>
+          <p class="text-text-body mb-4">Comprehensive SEO strategy including AI search optimization.</p>
+          <ul class="grid sm:grid-cols-2 gap-x-6 gap-y-2">
+            <li class="flex items-start gap-2 text-sm text-text-body"><svg class="w-4 h-4 text-primary flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span>Google Search ranking optimization</span></li>
+            <li class="flex items-start gap-2 text-sm text-text-body"><svg class="w-4 h-4 text-primary flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span>AI search optimization (ChatGPT, Gemini)</span></li>
+            <li class="flex items-start gap-2 text-sm text-text-body"><svg class="w-4 h-4 text-primary flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span>Google Business Profile optimization</span></li>
+            <li class="flex items-start gap-2 text-sm text-text-body"><svg class="w-4 h-4 text-primary flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span>Technical SEO & content strategy</span></li>
+          </ul>
+          <div class="mt-4 text-xs text-text-body/70">Proven Results: Multi-platform Search Visibility</div>
+        </div>
+      </div>
+
+      <!-- Website Development -->
+      <div class="flex flex-col md:flex-row-reverse items-center gap-10">
+        <div class="w-20 h-20 rounded-2xl bg-primary flex items-center justify-center flex-shrink-0">
+          <svg class="w-10 h-10 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+        </div>
+        <div>
+          <h3 class="font-semibold text-2xl text-text-heading mb-2">Website Design & Development</h3>
+          <p class="text-text-body mb-4">Professional websites optimized for conversions and performance.</p>
+          <ul class="grid sm:grid-cols-2 gap-x-6 gap-y-2">
+            <li class="flex items-start gap-2 text-sm text-text-body"><svg class="w-4 h-4 text-primary flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span>WordPress & Elementor development</span></li>
+            <li class="flex items-start gap-2 text-sm text-text-body"><svg class="w-4 h-4 text-primary flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span>Custom HTML/CSS/JavaScript coding</span></li>
+            <li class="flex items-start gap-2 text-sm text-text-body"><svg class="w-4 h-4 text-primary flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span>Landing pages & conversion optimization</span></li>
+            <li class="flex items-start gap-2 text-sm text-text-body"><svg class="w-4 h-4 text-primary flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span>Mobile-responsive & fast-loading sites</span></li>
+          </ul>
+          <div class="mt-4 text-xs text-text-body/70">Built For: Performance & Conversion</div>
+        </div>
+      </div>
+
+      <!-- AI & Marketing Automation Setup -->
+      <div class="flex flex-col md:flex-row items-center gap-10">
+        <div class="w-20 h-20 rounded-2xl bg-growth-accent flex items-center justify-center flex-shrink-0">
+          <svg class="w-10 h-10 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+        </div>
+        <div>
+          <h3 class="font-semibold text-2xl text-text-heading mb-2">AI & Marketing Automation Setup</h3>
+          <p class="text-text-body mb-4">Custom AI agents and automated workflows that take repetitive marketing work off your plate, built with Claude Code and n8n.</p>
+          <ul class="grid sm:grid-cols-2 gap-x-6 gap-y-2">
+            <li class="flex items-start gap-2 text-sm text-text-body"><svg class="w-4 h-4 text-growth-accent flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span>AI-assisted website & landing page development</span></li>
+            <li class="flex items-start gap-2 text-sm text-text-body"><svg class="w-4 h-4 text-growth-accent flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span>Custom AI agent building for lead handling</span></li>
+            <li class="flex items-start gap-2 text-sm text-text-body"><svg class="w-4 h-4 text-growth-accent flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span>Automated lead-routing & reporting pipelines</span></li>
+            <li class="flex items-start gap-2 text-sm text-text-body"><svg class="w-4 h-4 text-growth-accent flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span>AI creative production workflows</span></li>
+          </ul>
+          <div class="mt-4 text-xs text-text-body/70">Built With: Claude Code, n8n</div>
+        </div>
       </div>
 
     </div>
   </section>
 
-  <!-- FOOTER -->
-  <footer class="relative py-12 bg-primary">
+  <!-- INDUSTRIES SERVED -->
+  <section class="relative py-16 md:py-20 bg-surface-card border-y border-border">
     <div class="max-w-6xl mx-auto px-4 md:px-8">
-      <div class="grid md:grid-cols-3 gap-8 mb-8">
-        <div>
-          <a href="/" class="flex items-center gap-2 mb-4">
-            <img src="/assets/images/logo.png" alt="Shashwat Yadav" class="logo-on-dark h-9 w-auto">
-          </a>
-          <p class="text-sm text-textLight/70">Performance Marketing Expert & SEO Specialist driving measurable growth through data-driven strategy.</p>
+      <h2 class="font-serif text-2xl md:text-3xl font-bold text-text-heading mb-10 text-center">Industries Served</h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <div class="p-6 rounded-2xl bg-background border border-border hover:border-growth-accent/40 transition-all">
+          <div class="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center mb-3">
+            <svg class="w-5 h-5 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
+          </div>
+          <h3 class="text-sm font-semibold text-text-heading mb-1">Healthcare</h3>
+          <p class="text-xs text-text-body">Marketing for hospitals offering services like IVF, IUI, Gynecology, Cosmetic Gynecology, LASIK, Cataract Surgery, and Painless (Epidural) Labour.</p>
         </div>
 
-        <div>
-          <h4 class="text-sm font-semibold text-textLight mb-4">Quick Links</h4>
-          <ul class="space-y-2 text-sm text-textLight/70">
-            <li><a href="/" class="hover:text-accentLight transition-colors">Home</a></li>
-            <li><a href="/services" class="hover:text-accentLight transition-colors">Services</a></li>
-            <li><a href="/courses" class="hover:text-accentLight transition-colors">Courses</a></li>
-            <li><a href="/expertise" class="hover:text-accentLight transition-colors">Expertise / Clients</a></li>
-            <li><a href="/contact" class="hover:text-accentLight transition-colors">Contact</a></li>
-          </ul>
+        <div class="p-6 rounded-2xl bg-background border border-border hover:border-growth-accent/40 transition-all">
+          <div class="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center mb-3">
+            <svg class="w-5 h-5 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 21h18M5 21V7l8-4v18M19 21V11l-6-4M9 9h1m-1 4h1m-1 4h1"/></svg>
+          </div>
+          <h3 class="text-sm font-semibold text-text-heading mb-1">Commercial Real Estate</h3>
+          <p class="text-xs text-text-body">Premium & luxury commercial property developers, including business park development.</p>
         </div>
 
-        <div>
-          <h4 class="text-sm font-semibold text-textLight mb-4">Services</h4>
-          <ul class="space-y-2 text-sm text-textLight/70">
-            <li>Google Ads Management</li>
-            <li>Meta Ads Management</li>
-            <li>SEO Optimization</li>
-            <li>Website Development</li>
-            <li>Performance Marketing</li>
-          </ul>
+        <div class="p-6 rounded-2xl bg-background border border-border hover:border-growth-accent/40 transition-all">
+          <div class="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center mb-3">
+            <svg class="w-5 h-5 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 21h18M6 21V10l6-4 6 4v11M9 21v-6h6v6"/></svg>
+          </div>
+          <h3 class="text-sm font-semibold text-text-heading mb-1">Residential Real Estate</h3>
+          <p class="text-xs text-text-body">Residential flat developers across 2BHK & 3BHK — affordable through premium/luxury segments.</p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-background border border-border hover:border-growth-accent/40 transition-all">
+          <div class="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center mb-3">
+            <svg class="w-5 h-5 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-6.857 2.286L12 21l-2.286-6.857L3 12l6.857-2.286L12 3z"/></svg>
+          </div>
+          <h3 class="text-sm font-semibold text-text-heading mb-1">Salon & Wellness</h3>
+          <p class="text-xs text-text-body">Premium unisex salons.</p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-background border border-border hover:border-growth-accent/40 transition-all">
+          <div class="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center mb-3">
+            <svg class="w-5 h-5 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422A12.083 12.083 0 0112 21.5a12.083 12.083 0 01-6.16-10.922L12 14z"/></svg>
+          </div>
+          <h3 class="text-sm font-semibold text-text-heading mb-1">Education</h3>
+          <p class="text-xs text-text-body">Education industry service providers.</p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-background border border-border hover:border-growth-accent/40 transition-all">
+          <div class="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center mb-3">
+            <svg class="w-5 h-5 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 11H4L5 9z"/></svg>
+          </div>
+          <h3 class="text-sm font-semibold text-text-heading mb-1">Retail & Malls</h3>
+          <p class="text-xs text-text-body">Shopping malls.</p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-background border border-border hover:border-growth-accent/40 transition-all">
+          <div class="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center mb-3">
+            <svg class="w-5 h-5 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 18v-6a2 2 0 012-2h14a2 2 0 012 2v6M3 18h18M3 18v2h18v-2M5 10V6a2 2 0 012-2h2a2 2 0 012 2v4"/></svg>
+          </div>
+          <h3 class="text-sm font-semibold text-text-heading mb-1">Hospitality</h3>
+          <p class="text-xs text-text-body">Hotels.</p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-background border border-border hover:border-growth-accent/40 transition-all">
+          <div class="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center mb-3">
+            <svg class="w-5 h-5 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 3v6m0 0a2 2 0 11-4 0m4 0a2 2 0 104 0M7 9v12m4-12v12m4-12a2 2 0 002-2V3l-2 3-2-3v4a2 2 0 002 2zm0 0v12"/></svg>
+          </div>
+          <h3 class="text-sm font-semibold text-text-heading mb-1">Food & Beverage</h3>
+          <p class="text-xs text-text-body">Premium restaurants.</p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-background border border-border hover:border-growth-accent/40 transition-all">
+          <div class="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center mb-3">
+            <svg class="w-5 h-5 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5zm0 0v7m-9-7v5c0 1.657 4.03 3 9 3s9-1.343 9-3v-5"/></svg>
+          </div>
+          <h3 class="text-sm font-semibold text-text-heading mb-1">Schools (K-12)</h3>
+          <p class="text-xs text-text-body">K-12 schools.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA GET QUOTE -->
+  <section class="relative py-20 md:py-24 bg-background overflow-hidden">
+    <div class="max-w-3xl mx-auto px-4 md:px-8">
+      <div class="relative overflow-hidden rounded-3xl bg-gradient-to-br from-primary to-primary-dark px-6 py-16 md:px-16 md:py-20 text-center shadow-2xl">
+        <div class="absolute -top-16 -right-16 w-64 h-64 rounded-full bg-cta-accent/20 blur-3xl pointer-events-none"></div>
+        <div class="absolute -bottom-20 -left-20 w-64 h-64 rounded-full bg-growth-accent/20 blur-3xl pointer-events-none"></div>
+        <div class="relative z-10">
+          <h2 class="font-serif text-3xl md:text-4xl font-bold text-white mb-4">Ready to discuss which service fits your business?</h2>
+          <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8">
+            <a href="tel:+917000198366" class="flex items-center gap-2 px-8 py-3 bg-cta-accent text-white font-semibold rounded-full hover:brightness-95 transition-all text-sm">
+              <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 011 .684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684 1v3.28a2 2 0 01-2 2H19C10.163 21 3 13.837 3 5z"/></svg>
+              <span>Call Now</span>
+            </a>
+            <a href="https://wa.me/917000198366" target="_blank" class="flex items-center gap-2 px-8 py-3 bg-cta-accent text-white font-semibold rounded-full hover:brightness-95 transition-all text-sm">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              <span>WhatsApp Me</span>
+            </a>
+            <a href="/contact" class="px-8 py-3 bg-transparent border border-white/30 text-white font-semibold rounded-full hover:bg-white hover:text-primary transition-all text-sm">
+              Send a Message
+            </a>
+          </div>
         </div>
       </div>
+    </div>
+  </section>
 
-      <div class="pt-8 border-t border-textLight/10 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-textLight/60">
-        <div>© 2026 Shashwat Yadav. All rights reserved.</div>
-        <div class="flex items-center gap-1">
-          <span>Built with</span>
-          <svg class="w-4 h-4 text-accentLight" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd"/></svg>
-          <span>& Data</span>
+  <!-- FOOTER -->
+  <footer class="relative pt-12 pb-24 sm:pb-12 bg-primary">
+    <div class="max-w-6xl mx-auto px-4 md:px-8">
+      <div class="mb-8">
+        <a href="/" class="flex items-center gap-2 mb-4 w-fit">
+          <img src="/assets/images/logo.png" alt="Shashwat Yadav" class="logo-on-dark h-9 w-auto">
+        </a>
+        <p class="text-sm text-white/70 max-w-xl">Performance Marketing Expert & SEO Specialist driving measurable growth through data-driven strategy.</p>
+      </div>
+      <div class="grid grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-8 mb-8">
+        <div>
+          <h4 class="text-sm font-semibold text-white mb-4">Quick Links</h4>
+          <ul class="space-y-2 text-sm text-white/70">
+            <li><a href="/" class="hover:text-white transition-colors">Home</a></li>
+            <li><a href="/about" class="hover:text-white transition-colors">About</a></li>
+            <li><a href="/services" class="hover:text-white transition-colors">Services</a></li>
+            <li><a href="/portfolio" class="hover:text-white transition-colors">Portfolio</a></li>
+            <li><a href="/skills" class="hover:text-white transition-colors">Skills</a></li>
+            <li><a href="/certifications" class="hover:text-white transition-colors">Certifications</a></li>
+            <li><a href="/courses" class="hover:text-white transition-colors">Courses</a></li>
+            <li><a href="/blog" class="hover:text-white transition-colors">Blog</a></li>
+            <li><a href="/contact" class="hover:text-white transition-colors">Contact</a></li>
+          </ul>
         </div>
+        <div class="space-y-8 lg:space-y-0 lg:contents">
+          <div>
+            <h4 class="text-sm font-semibold text-white mb-4">Connect</h4>
+            <ul class="space-y-2 text-sm text-white/70">
+              <li><a href="https://www.linkedin.com/in/shashwat-yadav-9258bb131" target="_blank" class="hover:text-white transition-colors">LinkedIn</a></li>
+              <li><a href="#" class="hover:text-white transition-colors">Instagram</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-sm font-semibold text-white mb-4">Contact</h4>
+            <ul class="space-y-2 text-sm text-white/70">
+              <li><a href="tel:+917000198366" class="hover:text-white transition-colors">+91 70001 98366</a></li>
+              <li><a href="https://wa.me/917000198366" target="_blank" class="hover:text-white transition-colors">WhatsApp</a></li>
+              <li><a href="mailto:shashwatyadav012345@gmail.com" class="hover:text-white transition-colors break-all">shashwatyadav012345@gmail.com</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-white/60">
+        <div>© 2026 Shashwat Yadav. All rights reserved.</div>
+        <div><a href="/creators-platform" class="hover:text-white/90 transition-colors">Creators Platform (side project)</a></div>
       </div>
     </div>
   </footer>
 
-  <script src="assets/js/main.js"></script>
+  <script src="/assets/js/main.js"></script>
 </body>
 </html>

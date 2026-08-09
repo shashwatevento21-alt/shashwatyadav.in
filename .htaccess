@@ -1,5 +1,9 @@
 RewriteEngine On
 
+# Old page retirement (site rebuild): preserve any existing inbound links/bookmarks
+RewriteRule ^training/?$ /courses [R=301,L]
+RewriteRule ^expertise/?$ /skills [R=301,L]
+
 # If someone requests a URL with .html directly, redirect to the clean URL (avoids duplicate content)
 RewriteCond %{THE_REQUEST} \s/+(.+)\.html[\s?] [NC]
 RewriteRule ^ /%1 [R=301,L]

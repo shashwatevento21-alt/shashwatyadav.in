@@ -40,6 +40,123 @@ window.addEventListener('scroll', function() {
   }
 });
 
+// Portfolio filter bar (Portfolio listing page only — no-op elsewhere)
+function initPortfolioFilter() {
+  const bar = document.getElementById('portfolio-filter-bar');
+  const grid = document.getElementById('portfolio-grid');
+  if (!bar || !grid) return;
+
+  const buttons = bar.querySelectorAll('.filter-tag');
+  const cards = grid.querySelectorAll('.portfolio-card');
+
+  buttons.forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      buttons.forEach(function(b) { b.classList.remove('active'); });
+      btn.classList.add('active');
+
+      const filter = btn.getAttribute('data-filter');
+      cards.forEach(function(card) {
+        const show = filter === 'all' || card.getAttribute('data-industry') === filter;
+        card.classList.toggle('hidden', !show);
+      });
+    });
+  });
+}
+
+document.addEventListener('DOMContentLoaded', initPortfolioFilter);
+
+// Certifications filter bar (Certifications page only — no-op elsewhere)
+function initCertificationsFilter() {
+  const bar = document.getElementById('certifications-filter-bar');
+  const grid = document.getElementById('certifications-grid');
+  if (!bar || !grid) return;
+
+  const buttons = bar.querySelectorAll('.filter-tag');
+  const cards = grid.querySelectorAll('[data-category]');
+
+  buttons.forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      buttons.forEach(function(b) { b.classList.remove('active'); });
+      btn.classList.add('active');
+
+      const filter = btn.getAttribute('data-filter');
+      cards.forEach(function(card) {
+        const show = filter === 'all' || card.getAttribute('data-category') === filter;
+        card.classList.toggle('hidden', !show);
+      });
+    });
+  });
+}
+
+document.addEventListener('DOMContentLoaded', initCertificationsFilter);
+
+// Certificate lightbox (Certifications page only — no-op elsewhere)
+function initCertificateLightbox() {
+  const modal = document.getElementById('certificate-lightbox');
+  if (!modal) return;
+
+  const modalImg = document.getElementById('certificate-lightbox-img');
+  const closeBtn = document.getElementById('certificate-lightbox-close');
+
+  function closeLightbox() {
+    modal.classList.add('hidden');
+    modalImg.src = '';
+  }
+
+  document.querySelectorAll('.certificate-card').forEach(function(card) {
+    card.addEventListener('click', function() {
+      const src = card.getAttribute('data-image');
+      if (!src) return;
+      modalImg.src = src;
+      modal.classList.remove('hidden');
+    });
+  });
+
+  if (closeBtn) closeBtn.addEventListener('click', closeLightbox);
+  modal.addEventListener('click', function(e) {
+    if (e.target === modal) closeLightbox();
+  });
+}
+
+document.addEventListener('DOMContentLoaded', initCertificateLightbox);
+
+// Count-up stats: animate from 0 when scrolled into view (Home page stats band only — no-op elsewhere)
+function initStatCircles() {
+  const items = document.querySelectorAll('.count-up');
+  if (!items.length) return;
+
+  function animateItem(el) {
+    const target = parseFloat(el.getAttribute('data-count-target')) || 0;
+    const decimals = parseInt(el.getAttribute('data-count-decimals') || '0', 10);
+    const prefix = el.getAttribute('data-count-prefix') || '';
+    const suffix = el.getAttribute('data-count-suffix') || '';
+    const duration = 1500;
+    const start = performance.now();
+
+    function tick(now) {
+      const progress = Math.min((now - start) / duration, 1);
+      const eased = 1 - Math.pow(1 - progress, 3);
+      const current = target * eased;
+      el.textContent = prefix + current.toFixed(decimals) + suffix;
+      if (progress < 1) requestAnimationFrame(tick);
+    }
+    requestAnimationFrame(tick);
+  }
+
+  const observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        animateItem(entry.target);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.4 });
+
+  items.forEach(function(el) { observer.observe(el); });
+}
+
+document.addEventListener('DOMContentLoaded', initStatCircles);
+
 // Country dial codes with expected national mobile number length (Contact page only)
 const COUNTRY_CODES = [
   { code: '+91', name: 'India', digits: 10 },

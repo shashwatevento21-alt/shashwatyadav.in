@@ -1,45 +1,35 @@
 /* ==========================================================================
-   Design tokens — premium indigo / violet / gold system
+   Design tokens — blue / green-growth / amber-CTA system
    ========================================================================== */
 :root {
-  --color-primary:    #161A3E; /* Midnight indigo */
-  --color-accent:     #6C3AC9; /* Royal violet */
-  --color-accent-light: #A88CE0; /* Lighter violet tint, for hover on dark bg */
-  --color-success:    #C9A24B; /* Champagne gold — reserved for achievement moments */
-  --color-bg:         #F7F5F0; /* Warm off-white */
-  --color-bg-dark:    #161A3E; /* Same as primary, for dark sections */
-  --color-card-bg:    #FBFAF7; /* Slightly lighter tint of bg, for card layering */
-  --color-text:       #1E1E1E; /* Charcoal */
-  --color-text-muted: #5C5C66; /* Muted charcoal-gray for secondary text */
-  --color-text-light: #F7F5F0; /* Off-white text on dark backgrounds */
-  --color-border:     #E4E1D8; /* Soft neutral border */
+  --color-primary:        #1560A8; /* Primary blue — header, nav, headings, links */
+  --color-primary-dark:   #0C447C; /* Darker blue — hover states on primary elements */
+  --color-growth-accent:  #1E8449; /* Green — stat badges, results/metrics, success states */
+  --color-cta-accent:     #F59E0B; /* Amber — Call/WhatsApp/submit buttons ONLY */
+  --color-text-heading:   #1F2937;
+  --color-text-body:      #3F3F46;
+  --color-background:     #F8FAFC;
+  --color-surface-card:   #FFFFFF;
+  --color-border:         #E2E8F0;
 }
 
 html {
-  background-color: var(--color-bg);
+  background-color: var(--color-background);
   color-scheme: light;
 }
 
 body {
-  background-color: var(--color-bg);
-  color: var(--color-text);
+  background-color: var(--color-background);
+  color: var(--color-text-body);
 }
 
 * {
   box-sizing: border-box;
 }
 
-/* Subtle indigo-to-violet gradient reserved for the Home hero background only */
-.hero-gradient {
-  background:
-    radial-gradient(circle at 15% 20%, rgba(108, 58, 201, 0.35) 0%, rgba(108, 58, 201, 0) 55%),
-    radial-gradient(circle at 85% 80%, rgba(108, 58, 201, 0.2) 0%, rgba(108, 58, 201, 0) 60%),
-    var(--color-primary);
-}
-
-/* Two-tone hero headline emphasis — subtle, not a loud rainbow gradient */
+/* Subtle two-tone headline emphasis — light hero, primary-blue to primary-dark */
 .text-gradient-hero {
-  background: linear-gradient(135deg, var(--color-text-light) 35%, var(--color-accent-light) 100%);
+  background: linear-gradient(135deg, var(--color-primary) 35%, var(--color-primary-dark) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -55,37 +45,41 @@ body {
   height: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: var(--color-bg);
+  background: var(--color-background);
 }
 ::-webkit-scrollbar-thumb {
   background: var(--color-border);
   border-radius: 3px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--color-accent);
+  background: var(--color-primary);
 }
 
 ::selection {
-  background: rgba(108, 58, 201, 0.25);
-  color: var(--color-text);
+  background: rgba(21, 96, 168, 0.2);
+  color: var(--color-text-heading);
 }
 
 /* Active nav link state */
 .nav-link.active {
-  color: var(--color-text-light);
+  color: #ffffff;
   font-weight: 600;
 }
-.nav-link.active::after {
-  content: '';
+
+/* Active filter-tag state (portfolio filter bar) */
+.filter-tag.active {
+  background: var(--color-primary);
+  color: #ffffff;
+  border-color: var(--color-primary);
 }
 
 /* Native select dropdowns — light theme, matches the rest of the form */
 select {
   background-color: #ffffff;
-  color: var(--color-text);
+  color: var(--color-text-body);
   color-scheme: light;
 }
 select option {
   background-color: #ffffff;
-  color: var(--color-text);
+  color: var(--color-text-body);
 }
