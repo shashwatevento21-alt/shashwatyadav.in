@@ -1,0 +1,5 @@
+# /creators is the Laravel Creator Marketplace app, deployed and managed
+# entirely outside this repo. It must never be tracked, uploaded, or
+# considered "extra"/removable by any git or deploy tooling that operates
+# on this working tree.
+creators/
