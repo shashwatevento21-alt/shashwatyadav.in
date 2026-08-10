@@ -13,28 +13,39 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      # Deploys only the static site. /public_html/creators/ (the Laravel
-      # Creator Marketplace app) is managed entirely outside this pipeline
-      # and must never be touched here — excluded below, and no step in
-      # this workflow ever targets server-dir /public_html/creators/.
-      - name: Deploy main site to Hostinger via FTP
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
-        with:
-          server: ${{ secrets.FTP_SERVER }}
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: ./
-          # The FTP account's own root is already public_html/ (confirmed via
-          # hPanel: Directory = /home/u322722500/domains/shashwatyadav.in/public_html)
-          # — do NOT set this to /public_html/, that creates a duplicate nested
-          # public_html/public_html/ folder and can corrupt the delete-sync logic.
-          server-dir: /
-          exclude: |
-            **/.git*
-            **/.git*/**
-            **/.github/**
-            **/CNAME
-            **/deploy-creators-subfolder
-            **/deploy-creators-subfolder/**
-            creators
-            creators/**
+      - name: Install lftp
+        run: sudo apt-get update && sudo apt-get install -y lftp
+
+      # Deploys only the static site, upload-only (no --delete flag passed to
+      # mirror, ever). This tool is structurally incapable of removing remote
+      # files — it only uploads new/changed ones. That's deliberate: an
+      # earlier diff-and-delete based deploy tool (FTP-Deploy-Action) wiped
+      # /public_html/creators/ (the Laravel Creator Marketplace app, managed
+      # entirely outside this pipeline) twice, despite exclude rules meant to
+      # protect it. Files removed from the repo will linger on the server as
+      # harmless orphaned files instead of being auto-deleted — acceptable,
+      # since the alternative (any deploy tool with delete capability near
+      # this folder) has already caused real damage twice.
+      #
+      # The FTP account's own root is already public_html/ (confirmed via
+      # hPanel: Directory = /home/u322722500/domains/shashwatyadav.in/public_html),
+      # so we mirror to "/", not "/public_html/".
+      - name: Deploy main site to Hostinger via lftp (upload-only, never deletes)
+        env:
+          FTP_SERVER: ${{ secrets.FTP_SERVER }}
+          FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
+          FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+        run: |
+          lftp -c "
+          set ftp:ssl-allow no;
+          set mirror:use-pget-n 1;
+          open -u \"$FTP_USERNAME\",\"$FTP_PASSWORD\" \"$FTP_SERVER\";
+          mirror -R --verbose=1 --parallel=4 \
+            --exclude-glob .git* \
+            --exclude-glob .git*/ \
+            --exclude-glob .github/ \
+            --exclude-glob CNAME \
+            --exclude-glob deploy-creators-subfolder/ \
+            --exclude-glob creators/ \
+            ./ /;
+          "
