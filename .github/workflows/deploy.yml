@@ -24,7 +24,11 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./
-          server-dir: /public_html/
+          # The FTP account's own root is already public_html/ (confirmed via
+          # hPanel: Directory = /home/u322722500/domains/shashwatyadav.in/public_html)
+          # — do NOT set this to /public_html/, that creates a duplicate nested
+          # public_html/public_html/ folder and can corrupt the delete-sync logic.
+          server-dir: /
           exclude: |
             **/.git*
             **/.git*/**
