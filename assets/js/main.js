@@ -224,11 +224,12 @@ function validatePhone() {
 
   const digitsOnly = input.value.replace(/\D/g, '');
 
-  // Phone is optional; only validate if the user typed something
+  // Phone is required
   if (!digitsOnly) {
-    error.classList.add('hidden');
-    input.classList.remove('border-red-500');
-    return true;
+    error.textContent = 'Phone number is required';
+    error.classList.remove('hidden');
+    input.classList.add('border-red-500');
+    return false;
   }
 
   const range = getExpectedDigitRange(select);
@@ -253,6 +254,13 @@ function validateEmail() {
   const error = document.getElementById('email-error');
   if (!input || !error) return true;
 
+  // Email is optional; only validate format if the user typed something
+  if (!input.value.trim()) {
+    error.classList.add('hidden');
+    input.classList.remove('border-red-500');
+    return true;
+  }
+
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   const valid = emailRegex.test(input.value.trim());
 
@@ -267,8 +275,16 @@ function validateEmail() {
   return true;
 }
 
+// Fills the hidden source_page field with the current page's path + title
+function populateSourcePage() {
+  const input = document.getElementById('form-source-page');
+  if (!input) return;
+  input.value = document.title + ' (' + window.location.pathname + ')';
+}
+
 document.addEventListener('DOMContentLoaded', function() {
   populateCountryCodeSelect();
+  populateSourcePage();
 
   const emailInput = document.getElementById('form-email');
   const phoneInput = document.getElementById('form-phone');
@@ -284,9 +300,21 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 });
 
-// Form submission handler - Connected to Google Sheets (Contact page only)
+// Form submission handler - connected to the "Website Leads" Apps Script (Contact page only)
+//
+// PASTE THE DEPLOYED WEB APP URL HERE once you've completed the manual deploy step
+// (Deploy > New deployment > Web app, execute as me, accessible to Anyone > copy the URL).
+// Until this is filled in, the form will show the error/WhatsApp-fallback state on every submit.
+const LEADS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbz1kckQ5vIQnR2mNQ7ChucD6Qry5yTe_GowfBl3qK8ox6IUqwYaimijc8NW7JLZ3V8D/exec';
+
 function handleFormSubmission(event) {
   event.preventDefault();
+
+  const submitBtn = document.getElementById('contact-submit-btn');
+  const submitBtnText = document.getElementById('contact-submit-btn-text');
+
+  // Guard against rapid double-clicks / double form submission
+  if (submitBtn.disabled) return;
 
   const nameInput = document.getElementById('form-name');
 
@@ -296,15 +324,29 @@ function handleFormSubmission(event) {
     return;
   }
 
+  const phoneValid = validatePhone();
+  if (!phoneValid) {
+    document.getElementById('form-phone').focus();
+    return;
+  }
+
   const emailValid = validateEmail();
   if (!emailValid) {
     document.getElementById('form-email').focus();
     return;
   }
 
-  const phoneValid = validatePhone();
-  if (!phoneValid) {
-    document.getElementById('form-phone').focus();
+  const serviceInput = document.getElementById('form-service');
+  if (!serviceInput.value) {
+    alert('Please select what you need help with');
+    serviceInput.focus();
+    return;
+  }
+
+  const messageInput = document.getElementById('form-message');
+  if (!messageInput.value.trim()) {
+    alert('Please tell me a little about your business');
+    messageInput.focus();
     return;
   }
 
@@ -313,39 +355,53 @@ function handleFormSubmission(event) {
 
   const formData = {
     name: nameInput.value.trim(),
+    phone: countryCode + ' ' + phoneDigits,
     email: document.getElementById('form-email').value.trim(),
-    phone: phoneDigits ? (countryCode + ' ' + phoneDigits) : '',
-    service: document.getElementById('form-service').value,
-    message: document.getElementById('form-message').value
+    service: serviceInput.value,
+    budget: document.getElementById('form-budget').value,
+    message: messageInput.value.trim(),
+    source_page: document.getElementById('form-source-page').value,
+    // Real users never fill this in; a filled value means a bot
+    website: document.getElementById('form-website').value
   };
 
-  const submitBtn = event.target.querySelector('button[type="submit"]');
-  const originalBtnText = submitBtn.innerHTML;
-  submitBtn.innerHTML = '<span>Sending...</span>';
   submitBtn.disabled = true;
+  submitBtnText.textContent = 'Sending...';
 
-  const scriptURL = 'https://script.google.com/macros/s/AKfycbwzyM9_eYN0qnSho47lJSlEoblXGKDI3Xlx3v8dYmJxwBrdfjybaVRpaLbSHsebQJoj_w/exec';
+  function showSuccess() {
+    document.getElementById('audit-form').classList.add('hidden');
+    document.getElementById('form-error').classList.add('hidden');
+    document.getElementById('form-success').classList.remove('hidden');
+    event.target.reset();
+    populateSourcePage();
+    submitBtnText.textContent = 'Send Message';
+    submitBtn.disabled = false;
+  }
 
-  fetch(scriptURL, {
+  function showError() {
+    document.getElementById('audit-form').classList.add('hidden');
+    document.getElementById('form-success').classList.add('hidden');
+    document.getElementById('form-error').classList.remove('hidden');
+    submitBtnText.textContent = 'Send Message';
+    submitBtn.disabled = false;
+  }
+
+  // Sent as text/plain (not application/json) so this stays a CORS "simple request" —
+  // Apps Script Web Apps don't handle CORS preflight (OPTIONS) requests, so avoiding
+  // the preflight is what lets us actually read the response and show real success/error
+  // states below, instead of firing blind with mode: 'no-cors'.
+  fetch(LEADS_SCRIPT_URL, {
     method: 'POST',
-    mode: 'no-cors',
-    headers: {
-      'Content-Type': 'application/json',
-    },
+    headers: { 'Content-Type': 'text/plain;charset=utf-8' },
     body: JSON.stringify(formData)
   })
-  .then(() => {
-    document.getElementById('audit-form').classList.add('hidden');
-    document.getElementById('form-success').classList.remove('hidden');
-    event.target.reset();
-    submitBtn.innerHTML = originalBtnText;
-    submitBtn.disabled = false;
-  })
-  .catch(() => {
-    document.getElementById('audit-form').classList.add('hidden');
-    document.getElementById('form-success').classList.remove('hidden');
-    event.target.reset();
-    submitBtn.innerHTML = originalBtnText;
-    submitBtn.disabled = false;
-  });
+    .then(function(res) { return res.json(); })
+    .then(function(data) {
+      if (data && data.success) {
+        showSuccess();
+      } else {
+        showError();
+      }
+    })
+    .catch(showError);
 }

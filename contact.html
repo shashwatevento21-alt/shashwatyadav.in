@@ -120,7 +120,7 @@
         <!-- Contact form (left, wider) -->
         <div class="md:col-span-3">
           <div id="audit-form" class="p-8 md:p-10 rounded-2xl bg-surface-card border border-border">
-            <form onsubmit="handleFormSubmission(event)">
+            <form id="contact-form" onsubmit="handleFormSubmission(event)">
               <div class="grid md:grid-cols-2 gap-6 mb-6">
                 <div>
                   <label class="block text-sm font-medium text-text-heading mb-2">Your Name</label>
@@ -133,67 +133,93 @@
                   />
                 </div>
                 <div>
-                  <label class="block text-sm font-medium text-text-heading mb-2">Email Address</label>
-                  <input
-                    type="email"
-                    id="form-email"
-                    required
-                    class="w-full px-4 py-3 rounded-xl bg-white border border-border text-text-body placeholder-text-body/50 focus:outline-none focus:border-primary transition-all"
-                    placeholder="john@company.com"
-                  />
-                  <p id="email-error" class="hidden mt-2 text-xs text-red-600">Please enter a valid email address</p>
+                  <label class="block text-sm font-medium text-text-heading mb-2">Phone / WhatsApp</label>
+                  <div class="flex flex-col sm:flex-row gap-3">
+                    <select
+                      id="form-country-code"
+                      class="sm:w-32 px-3 py-3 rounded-xl bg-white border border-border text-text-body focus:outline-none focus:border-primary transition-all"
+                    ></select>
+                    <input
+                      type="tel"
+                      id="form-phone"
+                      required
+                      inputmode="numeric"
+                      class="flex-1 px-4 py-3 rounded-xl bg-white border border-border text-text-body placeholder-text-body/50 focus:outline-none focus:border-primary transition-all"
+                      placeholder="10-digit mobile number"
+                    />
+                  </div>
+                  <p id="phone-error" class="hidden mt-2 text-xs text-red-600">Please enter a valid mobile number</p>
                 </div>
               </div>
 
               <div class="mb-6">
-                <label class="block text-sm font-medium text-text-heading mb-2">Phone Number</label>
-                <div class="flex flex-col sm:flex-row gap-3">
+                <label class="block text-sm font-medium text-text-heading mb-2">Email Address <span class="text-text-body/50 font-normal">(optional)</span></label>
+                <input
+                  type="email"
+                  id="form-email"
+                  class="w-full px-4 py-3 rounded-xl bg-white border border-border text-text-body placeholder-text-body/50 focus:outline-none focus:border-primary transition-all"
+                  placeholder="john@company.com"
+                />
+                <p id="email-error" class="hidden mt-2 text-xs text-red-600">Please enter a valid email address</p>
+              </div>
+
+              <div class="grid md:grid-cols-2 gap-6 mb-6">
+                <div>
+                  <label class="block text-sm font-medium text-text-heading mb-2">What Do You Need Help With?</label>
                   <select
-                    id="form-country-code"
-                    class="sm:w-56 px-4 py-3 rounded-xl bg-white border border-border text-text-body focus:outline-none focus:border-primary transition-all"
-                  ></select>
-                  <input
-                    type="tel"
-                    id="form-phone"
-                    inputmode="numeric"
-                    class="flex-1 px-4 py-3 rounded-xl bg-white border border-border text-text-body placeholder-text-body/50 focus:outline-none focus:border-primary transition-all"
-                    placeholder="10-digit mobile number"
-                  />
+                    id="form-service"
+                    required
+                    class="w-full px-4 py-3 rounded-xl bg-white border border-border text-text-body focus:outline-none focus:border-primary transition-all"
+                  >
+                    <option value="" disabled selected>Select one...</option>
+                    <option value="Performance Marketing (Google/Meta Ads)">Performance Marketing (Google/Meta Ads)</option>
+                    <option value="SEO / GEO">SEO / GEO</option>
+                    <option value="Website Development">Website Development</option>
+                    <option value="AI & Marketing Automation">AI & Marketing Automation</option>
+                    <option value="Something else">Something else</option>
+                  </select>
                 </div>
-                <p id="phone-error" class="hidden mt-2 text-xs text-red-600">Please enter a valid mobile number</p>
+                <div>
+                  <label class="block text-sm font-medium text-text-heading mb-2">Budget Range <span class="text-text-body/50 font-normal">(optional)</span></label>
+                  <select
+                    id="form-budget"
+                    class="w-full px-4 py-3 rounded-xl bg-white border border-border text-text-body focus:outline-none focus:border-primary transition-all"
+                  >
+                    <option value="" selected>Prefer not to say</option>
+                    <option value="Just exploring">Just exploring</option>
+                    <option value="Under ₹50K/month">Under ₹50K/month</option>
+                    <option value="₹50K–2L/month">₹50K–2L/month</option>
+                    <option value="₹2L+/month">₹2L+/month</option>
+                  </select>
+                </div>
               </div>
 
               <div class="mb-6">
-                <label class="block text-sm font-medium text-text-heading mb-2">What Are You Looking For?</label>
-                <select
-                  id="form-service"
-                  class="w-full px-4 py-3 rounded-xl bg-white border border-border text-text-body focus:outline-none focus:border-primary transition-all"
-                >
-                  <option value="">Select a service...</option>
-                  <option value="google-ads">Google Ads Management</option>
-                  <option value="meta-ads">Meta Ads Management</option>
-                  <option value="seo">SEO Services</option>
-                  <option value="website">Website Development</option>
-                  <option value="courses">Course Enrollment</option>
-                  <option value="consultation">General Consultation</option>
-                </select>
-              </div>
-
-              <div class="mb-6">
-                <label class="block text-sm font-medium text-text-heading mb-2">Tell Me About Your Project</label>
+                <label class="block text-sm font-medium text-text-heading mb-2">Tell Me About Your Business</label>
                 <textarea
                   id="form-message"
+                  required
                   rows="4"
                   class="w-full px-4 py-3 rounded-xl bg-white border border-border text-text-body placeholder-text-body/50 focus:outline-none focus:border-primary transition-all resize-none"
-                  placeholder="Share your goals, current challenges, or what you'd like to achieve..."
+                  placeholder="2-3 sentences is perfect"
                 ></textarea>
               </div>
 
+              <!-- Honeypot: real users never see or reach this field. Any value here = bot. -->
+              <div style="position:absolute; left:-9999px; top:-9999px;" aria-hidden="true">
+                <label for="form-website">Website</label>
+                <input type="text" id="form-website" name="website" tabindex="-1" autocomplete="off" />
+              </div>
+
+              <!-- Auto-populated by JS on load: which page this submission came from -->
+              <input type="hidden" id="form-source-page" />
+
               <button
                 type="submit"
-                class="w-full py-4 bg-cta-accent text-white font-semibold rounded-xl hover:brightness-95 transition-all shadow-lg hover:shadow-xl flex items-center justify-center gap-2 group"
+                id="contact-submit-btn"
+                class="w-full py-4 bg-cta-accent text-white font-semibold rounded-xl hover:brightness-95 transition-all shadow-lg hover:shadow-xl flex items-center justify-center gap-2 group disabled:opacity-60 disabled:cursor-not-allowed"
               >
-                <span>Send Message</span>
+                <span id="contact-submit-btn-text">Send Message</span>
                 <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
               </button>
             </form>
@@ -212,6 +238,30 @@
             >
               Send Another Message
             </button>
+          </div>
+
+          <!-- Error message (hidden by default) -->
+          <div id="form-error" class="hidden p-8 md:p-10 rounded-2xl bg-surface-card border border-red-200 text-center">
+            <div class="w-16 h-16 rounded-full bg-red-50 flex items-center justify-center mx-auto mb-4">
+              <svg class="w-8 h-8 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01M5.07 19h13.86c1.54 0 2.5-1.67 1.73-3L13.73 4c-.77-1.33-2.69-1.33-3.46 0L3.34 16c-.77 1.33.19 3 1.73 3z"/></svg>
+            </div>
+            <h3 class="text-2xl font-semibold text-text-heading mb-2">Something Went Wrong</h3>
+            <p class="text-text-body mb-6">Your message didn't go through. Please try again, or reach out directly on WhatsApp — I respond quickly there.</p>
+            <div class="flex flex-col sm:flex-row gap-3 justify-center">
+              <button
+                onclick="document.getElementById('form-error').classList.add('hidden'); document.getElementById('audit-form').classList.remove('hidden');"
+                class="px-6 py-2 border border-primary text-primary rounded-full hover:bg-primary hover:text-white transition-all"
+              >
+                Try Again
+              </button>
+              <a
+                href="https://wa.me/917000198366?text=Hi%20Shashwat!%20I%20tried%20to%20submit%20the%20contact%20form%20but%20it%20didn't%20work%2C%20so%20I'm%20reaching%20out%20here%20instead."
+                target="_blank"
+                class="px-6 py-2 bg-cta-accent text-white rounded-full hover:brightness-95 transition-all"
+              >
+                WhatsApp Me Instead
+              </a>
+            </div>
           </div>
         </div>
 
