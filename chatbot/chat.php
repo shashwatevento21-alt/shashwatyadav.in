@@ -99,13 +99,16 @@ $messages = array_merge(
 );
 
 $payload = json_encode([
-    // nvidia/nemotron-3.5-lightning:free (originally specified) was found to be
-    // severely queued upstream during testing — no response after 2.5 minutes,
-    // just keep-alive padding. Switched to this model after testing several
-    // free-tier alternatives: it responds in 2-6s, correctly stays in the
-    // Shashwat persona (some candidates broke character entirely), and
-    // correctly declines off-topic questions. See DEPLOY.md for the full
-    // comparison if this ever needs revisiting.
+    // nvidia/nemotron-3.5-lightning:free (originally specified) was severely
+    // queued upstream during testing (2.5 min, no response). Also tried
+    // inclusionai/ling-3.0-flash-fin:free on request — reverted after
+    // testing showed it burning unpredictable amounts of hidden reasoning
+    // (400-900+ tokens per request, sometimes more), occasionally returning
+    // an empty/cut-off reply even at 3x this model's token budget, with no
+    // way to disable the reasoning (OpenRouter's reasoning.exclude only
+    // hides the reasoning text, doesn't stop it consuming budget). Settled
+    // back on liquid/lfm-2.5-2.6b:free: fast (2-6s), consistent, never
+    // returned an empty reply in testing.
     'model' => 'liquid/lfm-2.5-2.6b:free',
     'messages' => $messages,
     'temperature' => 0.7,
