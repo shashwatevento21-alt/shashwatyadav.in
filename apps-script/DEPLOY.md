@@ -30,6 +30,40 @@ Give me that URL. I'll paste it into `LEADS_SCRIPT_URL` at the top of
 `assets/js/main.js` (currently a placeholder: `PASTE_YOUR_DEPLOYED_WEB_APP_URL_HERE`),
 then we'll run through the test checklist together.
 
+## 4. Send emails from support@shashwatyadav.in instead of the raw Gmail address
+
+Both emails (the lead notification to you and the confirmation to the
+visitor) are set up to send from `support@shashwatyadav.in`. Gmail won't
+let a script send *as* an address it hasn't verified you control, so this
+needs a one-time setup:
+
+1. **Make sure the mailbox exists on Hostinger first** — hPanel → Emails →
+   confirm `support@shashwatyadav.in` exists (create it if not, with a
+   password you'll use below)
+2. Get that mailbox's **outgoing (SMTP) server details** — hPanel → Emails →
+   your email account → "Connect Devices" or "Configure Email Client" — note
+   the SMTP host (commonly `smtp.hostinger.com` or `smtp.titan.email`
+   depending on your plan), port (465 or 587), and that the login is the
+   full email address + its password
+3. Log into **shashwatyadav012345@gmail.com** in Gmail (the account the
+   script runs as)
+4. **Settings (gear icon) → See all settings → Accounts and Import** tab
+5. Under "Send mail as" → **Add another email address**
+6. Name: `Shashwat Yadav`, Email: `support@shashwatyadav.in` → Next Step
+7. Enter the SMTP details from step 2 → **Add Account**
+8. Gmail sends a verification email to `support@shashwatyadav.in` — log
+   into that mailbox (Hostinger webmail) to find it, then click the
+   confirmation link (or paste the code back into the Gmail dialog)
+
+Once verified, `GmailApp.sendEmail(..., {from: SENDER_EMAIL, ...})` in the
+code actually sends as that address. **Until it's verified, Gmail silently
+sends from the script's own address instead of failing** — so nothing
+breaks in the meantime, emails just won't look branded yet.
+
+After verifying, if the code changed since your last deploy, push a new
+version (see below) — the alias itself doesn't need a redeploy, only code
+changes do.
+
 ## Note for future updates
 
 If you ever need to change the script's code later, edit it in the Apps

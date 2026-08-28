@@ -104,6 +104,15 @@ function checkDuplicate(sheet, email, phone, now) {
   return 'No';
 }
 
+// Both emails send FROM this address instead of the script's raw Gmail account.
+// Requires support@shashwatyadav.in to be verified as a "Send As" alias in
+// shashwatyadav012345@gmail.com's Gmail settings first (Settings > Accounts and
+// Import > Send mail as) — see ../apps-script/DEPLOY.md for the exact steps.
+// If it's not verified yet, GmailApp.sendEmail silently falls back to the
+// account's own address rather than failing, so emails will still go out either way.
+var SENDER_EMAIL = 'support@shashwatyadav.in';
+var SENDER_NAME = 'Shashwat Yadav';
+
 function sendOwnerNotification(ownerEmail, submissionId, data) {
   var subject = 'New Website Lead: ' + (data.name || 'Unknown') + ' — ' + (data.service || 'General');
   var body =
@@ -117,7 +126,7 @@ function sendOwnerNotification(ownerEmail, submissionId, data) {
     'Source Page: ' + (data.source_page || '-') + '\n\n' +
     'Message:\n' + (data.message || '-');
 
-  GmailApp.sendEmail(ownerEmail, subject, body);
+  GmailApp.sendEmail(ownerEmail, subject, body, { from: SENDER_EMAIL, name: SENDER_NAME });
 }
 
 function sendVisitorConfirmation(visitorEmail, visitorName) {
@@ -131,7 +140,7 @@ function sendVisitorConfirmation(visitorEmail, visitorName) {
     'https://wa.me/917000198366\n\n' +
     'Talk soon,\nShashwat';
 
-  GmailApp.sendEmail(visitorEmail, subject, body);
+  GmailApp.sendEmail(visitorEmail, subject, body, { from: SENDER_EMAIL, name: SENDER_NAME });
 }
 
 function logError(err) {
