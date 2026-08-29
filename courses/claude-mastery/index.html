@@ -1,20 +1,227 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Claude Mastery: AI-Assisted Development & Automation | Courses | Shashwat Yadav</title>
-  <meta name="description" content="Go from typing prompts to directing an AI agent that builds, ships, and automates like an in-house dev team">
+  <title>Claude AI Mastery — Basic to Advanced | Courses | Shashwat Yadav</title>
+  <meta name="description" content="A complete 9-module learning path: from your first prompt to building AI-powered apps with the Claude API. Every module includes a real hands-on project.">
   <link rel="icon" type="image/png" href="/assets/images/favicon.png">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Poppins:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="/assets/js/tailwind-config.js"></script>
 
   <link rel="stylesheet" href="/assets/css/style.css">
+
+  <style>
+    :root{
+      --navy:#1560A8;
+      --navy-dark:#0f4a82;
+      --green:#1E8449;
+      --amber:#F59E0B;
+      --amber-dark:#d9860a;
+      --charcoal:#1F2937;
+      --off-white:#F8FAFC;
+      --grey:#6B7280;
+      --line:#E2E8F0;
+      --white:#FFFFFF;
+      --radius:14px;
+    }
+    #course-content{font-family:'Inter',sans-serif;color:var(--charcoal);line-height:1.6;-webkit-font-smoothing:antialiased;}
+    #course-content h1,#course-content h2,#course-content h3,#course-content h4,#course-content .display{font-family:'Poppins',sans-serif;}
+    #course-content a{color:inherit;}
+    #course-content .wrap{max-width:1180px;margin:0 auto;padding:0 24px;}
+
+    /* ---------- SUB TOPBAR (sits below the site's fixed nav) ---------- */
+    #course-content .topbar{
+      position:sticky;top:72px;z-index:40;
+      background:rgba(248,250,252,0.92);
+      backdrop-filter:blur(10px);
+      border-bottom:1px solid var(--line);
+    }
+    #course-content .topbar-inner{
+      max-width:1180px;margin:0 auto;padding:14px 24px;
+      display:flex;align-items:center;justify-content:space-between;gap:16px;
+    }
+    #course-content .brand{display:flex;align-items:center;gap:10px;font-family:'Poppins',sans-serif;font-weight:700;font-size:17px;color:var(--navy);}
+    #course-content .brand-mark{width:10px;height:10px;border-radius:3px;background:linear-gradient(135deg,var(--navy),var(--green));flex-shrink:0;}
+    #course-content .progress-pill{
+      display:flex;align-items:center;gap:8px;
+      font-size:13px;color:var(--grey);font-weight:600;
+    }
+    #course-content .progress-track{width:90px;height:6px;background:var(--line);border-radius:99px;overflow:hidden;}
+    #course-content .progress-fill{height:100%;background:linear-gradient(90deg,var(--green),var(--navy));width:0%;transition:width .4s ease;}
+    #course-content .btn-pdf{
+      display:inline-flex;align-items:center;gap:8px;
+      background:var(--amber);color:#fff;font-weight:700;font-size:14px;
+      padding:10px 18px;border-radius:99px;border:none;cursor:pointer;
+      text-decoration:none;white-space:nowrap;
+      transition:transform .15s ease, background .15s ease;
+    }
+    #course-content .btn-pdf:hover{background:var(--amber-dark);transform:translateY(-1px);}
+    #course-content .btn-pdf svg{width:16px;height:16px;flex-shrink:0;}
+
+    /* ---------- HERO ---------- */
+    #course-content .hero{padding:64px 0 40px;}
+    #course-content .hero-eyebrow{
+      display:inline-block;font-size:13px;font-weight:700;letter-spacing:.06em;
+      color:var(--green);text-transform:uppercase;margin-bottom:14px;
+    }
+    #course-content .hero h1{font-size:44px;font-weight:800;color:var(--charcoal);line-height:1.15;max-width:760px;}
+    #course-content .hero h1 span{color:var(--navy);}
+    #course-content .hero p.lead{margin-top:16px;font-size:17px;color:var(--grey);max-width:600px;}
+    #course-content .hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px;}
+    #course-content .btn-ghost{
+      display:inline-flex;align-items:center;gap:8px;
+      background:transparent;color:var(--navy);font-weight:700;font-size:14px;
+      padding:10px 20px;border-radius:99px;border:1.5px solid var(--navy);cursor:pointer;
+      text-decoration:none;
+    }
+    #course-content .btn-ghost:hover{background:var(--navy);color:#fff;}
+
+    #course-content .stat-row{
+      display:grid;grid-template-columns:repeat(4,1fr);gap:1px;
+      background:var(--line);border:1px solid var(--line);border-radius:var(--radius);
+      overflow:hidden;margin-top:44px;
+    }
+    #course-content .stat{background:var(--white);padding:20px 18px;}
+    #course-content .stat-num{font-family:'Poppins',sans-serif;font-weight:800;font-size:26px;color:var(--navy);}
+    #course-content .stat-label{font-size:12.5px;color:var(--grey);margin-top:4px;font-weight:500;}
+
+    /* ---------- LAYOUT ---------- */
+    #course-content .course-layout{display:grid;grid-template-columns:250px 1fr;gap:40px;padding:50px 0 100px;align-items:start;}
+    #course-content .side-nav{position:sticky;top:160px;}
+    #course-content .side-nav-title{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--grey);margin-bottom:14px;}
+    #course-content .nav-item{
+      display:flex;align-items:center;gap:10px;padding:9px 10px;border-radius:9px;
+      font-size:13.5px;font-weight:600;color:var(--charcoal);cursor:pointer;
+      transition:background .15s ease;
+    }
+    #course-content .nav-item:hover{background:var(--white);}
+    #course-content .nav-item.active{background:var(--navy);color:#fff;}
+    #course-content .nav-dot{
+      width:20px;height:20px;border-radius:50%;flex-shrink:0;
+      display:flex;align-items:center;justify-content:center;
+      font-size:10.5px;font-weight:700;border:2px solid var(--line);color:var(--grey);
+      background:#fff;
+    }
+    #course-content .nav-item.active .nav-dot{border-color:#fff;color:#fff;}
+    #course-content .nav-item.done .nav-dot{background:var(--green);border-color:var(--green);color:#fff;}
+    #course-content .nav-item.done .nav-dot::after{content:"✓";}
+    #course-content .nav-item.done .nav-dot span{display:none;}
+
+    /* ---------- TIMELINE ---------- */
+    #course-content .timeline{position:relative;}
+    #course-content .timeline::before{
+      content:"";position:absolute;left:23px;top:14px;bottom:14px;width:2px;
+      background:linear-gradient(var(--navy),var(--green));opacity:.25;
+    }
+    #course-content .module-card{
+      position:relative;padding-left:64px;margin-bottom:16px;
+    }
+    #course-content .module-marker{
+      position:absolute;left:0;top:2px;width:48px;height:48px;border-radius:50%;
+      background:var(--white);border:2px solid var(--line);
+      display:flex;align-items:center;justify-content:center;
+      font-family:'Poppins',sans-serif;font-weight:800;font-size:17px;color:var(--navy);
+      z-index:2;transition:all .2s ease;
+    }
+    #course-content .module-card.complete .module-marker{background:var(--green);border-color:var(--green);color:#fff;}
+    #course-content .module-card.complete .module-marker::after{content:"✓";}
+    #course-content .module-card.complete .module-marker span{display:none;}
+
+    #course-content .module-head{
+      background:var(--white);border:1px solid var(--line);border-radius:var(--radius);
+      padding:18px 20px;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:14px;
+      transition:box-shadow .15s ease, border-color .15s ease;
+    }
+    #course-content .module-head:hover{box-shadow:0 4px 16px rgba(21,96,168,.08);border-color:#c9dcef;}
+    #course-content .module-head-left{display:flex;flex-direction:column;gap:5px;}
+    #course-content .module-eyebrow{font-size:11.5px;font-weight:700;color:var(--green);text-transform:uppercase;letter-spacing:.04em;}
+    #course-content .module-title{font-family:'Poppins',sans-serif;font-weight:700;font-size:17px;color:var(--charcoal);}
+    #course-content .module-meta{font-size:12.5px;color:var(--grey);}
+    #course-content .chevron{
+      width:26px;height:26px;flex-shrink:0;border-radius:50%;background:var(--off-white);
+      display:flex;align-items:center;justify-content:center;transition:transform .25s ease;
+    }
+    #course-content .module-card.open .chevron{transform:rotate(180deg);background:var(--navy);}
+    #course-content .module-card.open .chevron svg path{stroke:#fff;}
+
+    #course-content .module-body{
+      max-height:0;overflow:hidden;transition:max-height .35s ease;
+      background:var(--white);border:1px solid var(--line);border-top:none;
+      border-radius:0 0 var(--radius) var(--radius);margin-top:-1px;
+    }
+    #course-content .module-card.open .module-body{max-height:2400px;}
+    #course-content .module-body-inner{padding:4px 22px 24px;}
+
+    #course-content .obj-box{
+      background:var(--off-white);border-left:3px solid var(--navy);border-radius:8px;
+      padding:12px 16px;margin:14px 0 18px;font-size:13.5px;color:var(--charcoal);
+    }
+    #course-content .obj-box b{color:var(--navy);}
+
+    #course-content .lesson-block{margin-bottom:16px;}
+    #course-content .lesson-title{font-weight:700;font-size:13.5px;color:var(--charcoal);margin-bottom:6px;}
+    #course-content ul.lesson-list{list-style:none;padding-left:0;}
+    #course-content ul.lesson-list li{
+      position:relative;padding-left:18px;font-size:13.5px;color:#4B5563;margin-bottom:5px;
+    }
+    #course-content ul.lesson-list li::before{
+      content:"";position:absolute;left:0;top:8px;width:5px;height:5px;border-radius:50%;background:var(--green);
+    }
+
+    #course-content .project-box{
+      margin-top:18px;background:linear-gradient(135deg,#FFF8EC,#FFF3E0);
+      border:1px solid #FBD9A5;border-radius:12px;padding:16px 18px;
+    }
+    #course-content .project-label{
+      display:inline-flex;align-items:center;gap:6px;
+      font-size:11.5px;font-weight:800;color:var(--amber-dark);text-transform:uppercase;letter-spacing:.04em;
+      margin-bottom:8px;
+    }
+    #course-content .project-title{font-family:'Poppins',sans-serif;font-weight:700;font-size:14.5px;color:var(--charcoal);margin-bottom:8px;}
+    #course-content .project-row{font-size:13px;margin-bottom:6px;color:#374151;}
+    #course-content .project-row b{color:var(--charcoal);}
+    #course-content ol.steps{margin:8px 0 8px 18px;font-size:13px;color:#374151;}
+    #course-content ol.steps li{margin-bottom:4px;}
+    #course-content .deliverable{
+      margin-top:8px;font-size:12.5px;background:#fff;border-radius:7px;padding:8px 12px;
+      border:1px dashed #FBD9A5;color:var(--green);font-weight:600;
+    }
+
+    #course-content .mark-done-row{display:flex;justify-content:flex-end;margin-top:14px;}
+    #course-content .mark-done{
+      display:inline-flex;align-items:center;gap:7px;
+      background:var(--off-white);border:1.5px solid var(--line);color:var(--charcoal);
+      font-size:12.5px;font-weight:700;padding:8px 14px;border-radius:99px;cursor:pointer;
+      transition:all .15s ease;
+    }
+    #course-content .mark-done:hover{border-color:var(--green);color:var(--green);}
+    #course-content .module-card.complete .mark-done{background:var(--green);border-color:var(--green);color:#fff;}
+
+    /* ---------- BOTTOM CTA ---------- */
+    #course-content .bottom-cta{
+      background:linear-gradient(135deg,var(--navy),var(--navy-dark));
+      border-radius:20px;padding:44px 36px;text-align:center;margin-top:20px;color:#fff;
+    }
+    #course-content .bottom-cta h3{font-size:24px;margin-bottom:8px;}
+    #course-content .bottom-cta p{color:#D6E6F5;font-size:14.5px;max-width:480px;margin:0 auto 22px;}
+    #course-content .bottom-cta .btn-pdf{background:var(--amber);}
+
+    @media (max-width:900px){
+      #course-content .course-layout{grid-template-columns:1fr;}
+      #course-content .side-nav{position:static;display:flex;overflow-x:auto;gap:6px;padding-bottom:10px;margin-bottom:10px;}
+      #course-content .side-nav-title{display:none;}
+      #course-content .nav-item{flex-shrink:0;white-space:nowrap;}
+      #course-content .hero h1{font-size:32px;}
+      #course-content .stat-row{grid-template-columns:repeat(2,1fr);}
+      #course-content .progress-pill{display:none;}
+    }
+  </style>
 </head>
 <body class="bg-background text-text-body overflow-x-hidden">
 
@@ -110,114 +317,75 @@
     </div>
   </nav>
 
-  <!-- COURSE HERO -->
-  <section class="relative pt-40 pb-16 overflow-hidden bg-background">
-    <div class="max-w-3xl mx-auto px-4 md:px-8 text-center">
-      <a href="/courses" class="inline-flex items-center gap-1 text-xs font-mono text-primary/70 hover:text-primary mb-4">
-        <svg class="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18"/></svg>
-        <span>All Courses</span>
-      </a>
-      <div class="inline-block px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-4">
-        <span class="text-xs font-mono text-primary">The Digital School</span>
-      </div>
-      <h1 class="font-serif text-3xl md:text-5xl font-bold text-text-heading mb-4">Claude Mastery: AI-Assisted Development & Automation</h1>
-      <p class="text-text-body max-w-xl mx-auto mb-8">Go from typing prompts to directing an AI agent that builds, ships, and automates like an in-house dev team</p>
-      <a href="/contact" class="inline-flex items-center gap-2 px-8 py-3 bg-primary text-white font-semibold rounded-full hover:bg-primary-dark transition-all text-sm">
-        <span>Get Course Details</span>
-        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
-      </a>
-    </div>
-  </section>
+  <!-- COURSE CONTENT (scoped styles above, all under #course-content) -->
+  <div id="course-content" style="padding-top:72px;">
 
-  <!-- CURRICULUM -->
-  <section class="relative py-16 md:py-24 bg-background">
-    <div class="max-w-3xl mx-auto px-4 md:px-8">
-      <h2 class="font-serif text-2xl md:text-3xl font-bold text-text-heading mb-8 text-center">Curriculum</h2>
-      <div class="space-y-4">
-        <div class="flex items-start gap-4 p-5 rounded-xl bg-surface-card border border-border">
-          <div class="w-8 h-8 rounded-full bg-primary/10 text-primary font-mono text-sm flex items-center justify-center flex-shrink-0">1</div>
-          <p class="text-text-body text-sm pt-1">Understanding Claude models and where each fits (chat vs agentic coding vs API workflows)</p>
+    <div class="topbar">
+      <div class="topbar-inner">
+        <div class="brand"><span class="brand-mark"></span>Shashwat Yadav</div>
+        <div class="progress-pill">
+          <span id="progressLabel">0 / 9 modules</span>
+          <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
         </div>
-        <div class="flex items-start gap-4 p-5 rounded-xl bg-surface-card border border-border">
-          <div class="w-8 h-8 rounded-full bg-primary/10 text-primary font-mono text-sm flex items-center justify-center flex-shrink-0">2</div>
-          <p class="text-text-body text-sm pt-1">Claude Code fundamentals: setup, project context, working with a real codebase</p>
-        </div>
-        <div class="flex items-start gap-4 p-5 rounded-xl bg-surface-card border border-border">
-          <div class="w-8 h-8 rounded-full bg-primary/10 text-primary font-mono text-sm flex items-center justify-center flex-shrink-0">3</div>
-          <p class="text-text-body text-sm pt-1">Prompting for code: writing specs Claude can execute reliably, not just chat prompts</p>
-        </div>
-        <div class="flex items-start gap-4 p-5 rounded-xl bg-surface-card border border-border">
-          <div class="w-8 h-8 rounded-full bg-primary/10 text-primary font-mono text-sm flex items-center justify-center flex-shrink-0">4</div>
-          <p class="text-text-body text-sm pt-1">Building a full website with Claude Code: from wireframe/JSON spec to deployed site</p>
-        </div>
-        <div class="flex items-start gap-4 p-5 rounded-xl bg-surface-card border border-border">
-          <div class="w-8 h-8 rounded-full bg-primary/10 text-primary font-mono text-sm flex items-center justify-center flex-shrink-0">5</div>
-          <p class="text-text-body text-sm pt-1">Debugging and iterating with an AI coding agent - reading its output, correcting course</p>
-        </div>
-        <div class="flex items-start gap-4 p-5 rounded-xl bg-surface-card border border-border">
-          <div class="w-8 h-8 rounded-full bg-primary/10 text-primary font-mono text-sm flex items-center justify-center flex-shrink-0">6</div>
-          <p class="text-text-body text-sm pt-1">Connecting Claude to real tools: MCP connectors, file systems, deployment pipelines (GitHub to hosting)</p>
-        </div>
-        <div class="flex items-start gap-4 p-5 rounded-xl bg-surface-card border border-border">
-          <div class="w-8 h-8 rounded-full bg-primary/10 text-primary font-mono text-sm flex items-center justify-center flex-shrink-0">7</div>
-          <p class="text-text-body text-sm pt-1">Building autonomous/agentic workflows: multi-step tasks Claude can run with minimal supervision</p>
-        </div>
-        <div class="flex items-start gap-4 p-5 rounded-xl bg-surface-card border border-border">
-          <div class="w-8 h-8 rounded-full bg-primary/10 text-primary font-mono text-sm flex items-center justify-center flex-shrink-0">8</div>
-          <p class="text-text-body text-sm pt-1">Industry use cases: content generation pipelines, reporting automation, client deliverable generation</p>
-        </div>
-        <div class="flex items-start gap-4 p-5 rounded-xl bg-surface-card border border-border">
-          <div class="w-8 h-8 rounded-full bg-primary/10 text-primary font-mono text-sm flex items-center justify-center flex-shrink-0">9</div>
-          <p class="text-text-body text-sm pt-1">Where Claude fits alongside n8n and other automation tools - not competing, complementary</p>
-        </div>
-
+        <a class="btn-pdf" href="claude-ai-mastery-course-syllabus.pdf" download>
+          <svg viewBox="0 0 24 24" fill="none"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 19h14" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Download PDF
+        </a>
       </div>
     </div>
-  </section>
 
-  <!-- TOOLS COVERED -->
-  <section class="relative py-12 bg-surface-card border-y border-border">
-    <div class="max-w-3xl mx-auto px-4 md:px-8 text-center">
-      <h3 class="text-sm font-semibold text-text-heading mb-4">Tools Covered</h3>
-      <div class="flex flex-wrap justify-center gap-3">
-        <span class="px-4 py-2 rounded-full bg-background border border-border text-text-body text-sm">Claude Code</span>
-        <span class="px-4 py-2 rounded-full bg-background border border-border text-text-body text-sm">Claude API</span>
-        <span class="px-4 py-2 rounded-full bg-background border border-border text-text-body text-sm">GitHub</span>
-        <span class="px-4 py-2 rounded-full bg-background border border-border text-text-body text-sm">Hostinger/Hosting Deployment</span>
+    <div class="wrap">
+      <section class="hero">
+        <a href="/courses" class="inline-flex items-center gap-1 text-xs font-mono text-primary/70 hover:text-primary mb-4">
+          <svg class="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18"/></svg>
+          <span>All Courses</span>
+        </a>
+        <span class="hero-eyebrow">Free Course Syllabus</span>
+        <h1>Claude AI Mastery — <span>Basic to Advanced</span></h1>
+        <p class="lead">A complete 9-module learning path: from your first prompt to building AI-powered apps with the Claude API. Every module includes a real hands-on project.</p>
+        <div class="hero-actions">
+          <a class="btn-pdf" href="claude-ai-mastery-course-syllabus.pdf" download>
+            <svg viewBox="0 0 24 24" fill="none"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 19h14" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Download Full Syllabus (PDF)
+          </a>
+          <a class="btn-ghost" href="#module-1">Start with Module 1 →</a>
+        </div>
+        <div class="stat-row">
+          <div class="stat"><div class="stat-num">9</div><div class="stat-label">Modules, beginner → developer</div></div>
+          <div class="stat"><div class="stat-num">9</div><div class="stat-label">Hands-on projects</div></div>
+          <div class="stat"><div class="stat-num">7–8</div><div class="stat-label">Weeks, self-paced</div></div>
+          <div class="stat"><div class="stat-num">₹0</div><div class="stat-label">Cost for Modules 1–6</div></div>
+        </div>
+      </section>
 
-      </div>
-    </div>
-  </section>
+      <section class="course-layout">
+        <nav class="side-nav" id="sideNav">
+          <div class="side-nav-title">Course Modules</div>
+          <!-- nav items injected by JS -->
+        </nav>
 
-  <!-- FORMAT / PRICING NOTE (placeholder) -->
-  <section class="relative py-10 bg-background">
-    <div class="max-w-3xl mx-auto px-4 md:px-8 text-center">
-      <div class="inline-block px-4 py-2 rounded-full bg-surface-card border border-border border-dashed text-text-body/60 text-xs">[Placeholder - duration, format & pricing to be added]</div>
-    </div>
-  </section>
+        <div class="timeline" id="timeline">
+          <!-- module cards injected by JS -->
+        </div>
+      </section>
 
-  <!-- CTA ENROLL BANNER -->
-  <section class="relative py-20 md:py-24 bg-background overflow-hidden">
-    <div class="max-w-3xl mx-auto px-4 md:px-8">
-      <div class="relative overflow-hidden rounded-3xl bg-gradient-to-br from-primary to-primary-dark px-6 py-16 md:px-16 md:py-20 text-center shadow-2xl">
-        <div class="absolute -top-16 -right-16 w-64 h-64 rounded-full bg-cta-accent/20 blur-3xl pointer-events-none"></div>
-        <div class="absolute -bottom-20 -left-20 w-64 h-64 rounded-full bg-growth-accent/20 blur-3xl pointer-events-none"></div>
-        <div class="relative z-10">
-          <h2 class="font-serif text-3xl md:text-4xl font-bold text-white mb-8">Interested in this course?</h2>
-          <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a href="https://wa.me/917000198366" target="_blank" class="flex items-center gap-2 px-8 py-3 bg-cta-accent text-white font-semibold rounded-full hover:brightness-95 transition-all text-sm">
-              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-              <span>WhatsApp Me</span>
+      <section style="padding-bottom:80px;">
+        <div class="bottom-cta">
+          <h3>Interested in this course?</h3>
+          <p>Download the complete syllabus as a print-ready PDF, or reach out directly to discuss cohorts and pricing.</p>
+          <div style="display:flex; flex-wrap:wrap; gap:12px; justify-content:center;">
+            <a class="btn-pdf" href="claude-ai-mastery-course-syllabus.pdf" download>
+              <svg viewBox="0 0 24 24" fill="none"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 19h14" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Download PDF
             </a>
-            <a href="tel:+917000198366" class="flex items-center gap-2 px-8 py-3 bg-cta-accent text-white font-semibold rounded-full hover:brightness-95 transition-all text-sm">
-              <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 011 .684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684 1v3.28a2 2 0 01-2 2H19C10.163 21 3 13.837 3 5z"/></svg>
-              <span>Call Now</span>
+            <a class="btn-pdf" style="background:transparent;border:1.5px solid rgba(255,255,255,0.4);" href="https://wa.me/917000198366" target="_blank">
+              WhatsApp Me
             </a>
           </div>
         </div>
-      </div>
+      </section>
     </div>
-  </section>
+  </div>
 
   <!-- FOOTER -->
   <footer class="relative pt-12 pb-24 sm:pb-12 bg-primary">
@@ -270,5 +438,253 @@
 
   <script src="/assets/js/main.js"></script>
   <script src="/assets/js/chatbot-widget.js"></script>
+
+  <script>
+  const MODULES = [
+    {
+      n:1, title:"Foundations", meta:"Week 1 · 90 min",
+      objective:"Learner can explain what Claude is, navigate the interface confidently, and knows which model to pick for a given task.",
+      lessons:[
+        {h:"What is Claude & Anthropic", points:["Anthropic's mission and why it shapes how Claude behaves","Model family explained: Haiku → Sonnet → Opus → Mythos","Live demo: model picker inside claude.ai"]},
+        {h:"What LLMs are (non-technical)", points:["Claude predicts the next useful piece of text from learned patterns","Knowledge cutoff and why Claude searches the web for recent info"]},
+        {h:"Claude vs ChatGPT vs Gemini", points:["Differentiators: writing quality, Artifacts, Projects, Claude Code","Keep it factual — a comparison table, not a sales pitch"]},
+        {h:"Interface Walkthrough", points:["Sidebar, chat box, file attach, web search toggle","Settings: preferences, memory, connected apps","Mobile app: voice mode, camera input, sync"]},
+      ],
+      project:{
+        title:"Claude Setup + First Prompt Log",
+        useCase:"Every learner needs a working environment before touching prompting.",
+        tools:"claude.ai account, a notes doc",
+        steps:["Create a free claude.ai account and verify email/phone","Ask Claude to explain its own model family in 3 lines","Try one prompt with web search ON and OFF — compare","Write a 5-line personal note in your own words about what Claude is"],
+        deliverable:"Screenshot of the chat + the 5-line personal note"
+      }
+    },
+    {
+      n:2, title:"Prompting Basics", meta:"Week 1–2 · 90 min",
+      objective:"Learner can write a clear, specific prompt on the first try and knows how to fix a bad response with a follow-up.",
+      lessons:[
+        {h:"Writing Clear, Specific Prompts", points:["4-part formula: Task + Context + Format + Constraints","Before/after demo: vague vs specific prompt"]},
+        {h:"Role / Context Setting", points:["Opening with a role: 'You are a senior copywriter for...'","When role-setting actually changes output vs flavor text"]},
+        {h:"Iterative Refinement", points:["Treat the first response as a draft, not final","3 refinement patterns: shorten, change tone, give alternates"]},
+        {h:"Common Beginner Mistakes", points:["Being too vague and blaming Claude","Not specifying format/length/tone","Treating one response as final","Asking multiple unrelated things at once"]},
+      ],
+      project:{
+        title:"Prompt Rewrite Challenge",
+        useCase:"A small business owner only knows how to write vague requests — the learner fixes this.",
+        tools:"claude.ai",
+        steps:["Take 3 deliberately vague prompts","Rewrite each with Task + Context + Format + Constraints","Run both versions side by side","Refine the best output twice with follow-ups"],
+        deliverable:"A doc showing vague → rewritten → before/after output → 2 refinement rounds"
+      }
+    },
+    {
+      n:3, title:"Core Features", meta:"Week 2 · 120 min",
+      objective:"Learner can organize work using Projects, generate a document/code via Artifacts, upload and analyze a file, and use memory correctly.",
+      lessons:[
+        {h:"Projects", points:["Create a Project, add custom instructions, upload a knowledge base","Persistent context across every chat in the project"]},
+        {h:"Artifacts", points:["Generate a document, then a code snippet — live preview & edit","When Artifacts trigger automatically vs on request"]},
+        {h:"File Uploads", points:["Summarize a PDF","Analyze a CSV/XLSX and generate a chart","Describe/extract text from an image"]},
+        {h:"Memory & Search Past Chats", points:["Memory settings — what's remembered vs not","Recall something from an earlier conversation"]},
+      ],
+      project:{
+        title:"Mini Business Knowledge Hub",
+        useCase:"A freelancer wants Claude to always know their brand voice without re-explaining every chat.",
+        tools:"claude.ai Projects, 1 brand doc, 1 CSV",
+        steps:["Create a Project for a business","Add custom instructions for tone & audience","Upload one reference doc as project knowledge","Draft one piece of content and check brand match","Upload a CSV separately and get 3 insights + a chart"],
+        deliverable:"Project screenshot + generated content + CSV insight output"
+      }
+    },
+    {
+      n:4, title:"Intermediate Prompting", meta:"Week 3 · 120 min",
+      objective:"Learner can build a reusable prompt template using few-shot examples, structured reasoning, and XML tags.",
+      lessons:[
+        {h:"Few-Shot Examples", points:["2–3 examples often beat describing rules","Demo: match an exact writing style from examples"]},
+        {h:"Chain-of-Thought Reasoning", points:["'Think step by step' and why it improves accuracy","Compare direct vs step-by-step answers"]},
+        {h:"XML Tags for Structuring Prompts", points:["<instructions>, <example>, <data> tags for reliability","Tagged vs untagged prompt on a multi-part task"]},
+        {h:"Prompt Templates for Repeatable Tasks", points:["Building a 'master prompt' — variables vs fixed rules"]},
+        {h:"Style Customization", points:["claude.ai's Style feature — build once, reuse everywhere"]},
+      ],
+      project:{
+        title:"Build Your Own Reusable Content Template",
+        useCase:"A learner runs a recurring content task and wants consistent output every time.",
+        tools:"claude.ai, a text file",
+        steps:["Pick one recurring content type","Write 2 example outputs in your exact style","Build a template with <role>, <rules>, <examples>, <input>","Add a step-by-step quality-check instruction","Test on 3 inputs for consistency","Save as a reusable Style or Project instruction"],
+        deliverable:"Final template prompt + 3 test outputs"
+      }
+    },
+    {
+      n:5, title:"Practical Use Cases", meta:"Week 3–4 · 150 min",
+      objective:"Learner can apply Claude to 5 real work categories and produce one finished deliverable in each.",
+      lessons:[
+        {h:"Writing & Content", points:["Same product → blog post, captions, ad copy"]},
+        {h:"Research & Summarization", points:["Long PDF → structured summary with key takeaways","Web-search-backed research on current events"]},
+        {h:"Data Analysis", points:["Upload a sales CSV → trends, chart, plain-English explanation"]},
+        {h:"Image/Visual Tasks", points:["Analyze an uploaded image","Generate a simple diagram via Artifacts"]},
+        {h:"Coding Help for Non-Developers", points:["Build one small tool (e.g. tip calculator) as an Artifact"]},
+      ],
+      project:{
+        title:"5-in-1 Use Case Portfolio",
+        useCase:"A portfolio proving cross-category skill — usable later as freelance proof-of-work.",
+        tools:"claude.ai, 1 CSV, 1 image, 1 article/PDF",
+        steps:["Writing: blog post + 2 captions","Research: 5-bullet summary of a real article","Data: 3 insights + chart from a CSV","Visual: image description + a generated diagram","Coding: one small interactive Artifact tool"],
+        deliverable:"One folder/doc with all 5 outputs labeled by category"
+      }
+    },
+    {
+      n:6, title:"Claude for Work", meta:"Week 4 · 120 min",
+      objective:"Learner understands the full ecosystem of Claude products beyond chat and can pick the right tool for the task.",
+      lessons:[
+        {h:"Claude in Chrome / Excel / PowerPoint", points:["Chrome: a browsing agent that acts on webpages","Excel: a spreadsheet agent for formulas/analysis","PowerPoint: a slide-building agent","Verify current availability on docs.claude.com before teaching"]},
+        {h:"Claude Cowork", points:["Agentic desktop app for multi-step, real work — not just chat","Point it at a folder: reads AND writes files directly","Connectors (Gmail, Slack, Drive) vs computer-use fallback","Shows its plan first, asks before risky actions, memory shared with Chat","Safety: dedicate a working folder, avoid sensitive files, keep backups"]},
+        {h:"Claude Tag (Slack)", points:["Tag @Claude in a channel to delegate a task"]},
+        {h:"Skills", points:["Packaged, reusable instructions for a recurring task","Connects directly to the templates built in Module 4"]},
+      ],
+      project:{
+        title:"Tool-Fit Map for a Real Workflow",
+        useCase:"A marketing team needs to know which Claude product fits which weekly task.",
+        tools:"claude.ai, docs.claude.com",
+        steps:["List 5 real recurring work tasks","Research the best-fit Claude product for each on docs.claude.com","Build a Task → Best Tool table","Attempt ONE task end-to-end in the matched tool"],
+        deliverable:"The Task→Tool table + proof of the one completed task"
+      }
+    },
+    {
+      n:7, title:"Developer Track (Advanced)", meta:"Week 5–6 · 180 min",
+      objective:"Learner can make a working Claude API call, understand tool use/MCP conceptually, and run one command in Claude Code.",
+      lessons:[
+        {h:"Claude API Basics", points:["Create an API key at console.anthropic.com","/v1/messages endpoint: model, max_tokens, messages array","Tokens & pricing — always verify current numbers on docs.claude.com"]},
+        {h:"System vs User Prompts", points:["System sets persistent behavior; user messages are the turns"]},
+        {h:"Tool Use / Function Calling", points:["Claude can call a defined function instead of just replying","Walk through a simple tool schema"]},
+        {h:"MCP (Model Context Protocol)", points:["A standard way to connect Claude to external data/tools"]},
+        {h:"Claude Code", points:["Install it, run in a sample folder, fix a small piece of code"]},
+      ],
+      project:{
+        title:"First API Call + Mini Tool-Use Demo",
+        useCase:"Moving from 'using Claude' to 'building with Claude' — the foundational automation step.",
+        tools:"Node.js or Python, console.anthropic.com API key, terminal",
+        steps:["Create an API key","Send one prompt to /v1/messages and print the response","Add a system prompt and re-run","Define one simple tool and get Claude to call it","Install Claude Code and ask it to explain the script"],
+        deliverable:"The working script + a screenshot of each step's output"
+      }
+    },
+    {
+      n:8, title:"Best Practices & Safety", meta:"Week 6–7 · 90 min",
+      objective:"Learner can identify hallucination risk, apply verification habits, and follow responsible-use principles for client work.",
+      lessons:[
+        {h:"Prompt Engineering Principles", points:["Be clear & direct, use examples, let Claude think, use structure"]},
+        {h:"Hallucination & Verification", points:["Confident-sounding ≠ correct, especially facts/citations/numbers","Cross-check before publishing client-facing content"]},
+        {h:"Data Privacy", points:["Never paste passwords, financial numbers, third-party personal data","Client consent and data-handling policy matter, not just tool settings"]},
+        {h:"Responsible / Ethical Use", points:["Disclosing AI-assisted content, avoiding deceptive content, respecting copyright"]},
+      ],
+      project:{
+        title:"Fact-Check & Privacy Audit",
+        useCase:"An agency needs a pre-publish safety/accuracy pass on a Claude-drafted client blog post.",
+        tools:"claude.ai with web search",
+        steps:["Take content generated earlier in the course","List every factual claim, date, statistic, named entity","Verify each with web search — verified / incorrect / unverifiable","Rewrite or remove unverifiable claims","Write a 5-point personal data-privacy checklist"],
+        deliverable:"The claim-verification table + the 5-point privacy checklist"
+      }
+    },
+    {
+      n:9, title:"Capstone Project", meta:"Week 7–8 · Self-paced",
+      objective:"Learner builds one complete, real workflow end-to-end combining skills from every prior module.",
+      lessons:[
+        {h:"Track A — Content Engine (non-developer)", points:["A reusable template inside a Project, verified for accuracy"]},
+        {h:"Track B — Simple Automation (light technical)", points:["An input → API → AI-generated output pipeline (e.g. auto review replies)"]},
+        {h:"Track C — AI-Powered Mini App (developer)", points:["A small app: user input → Claude API call → useful result"]},
+      ],
+      project:{
+        title:"Capstone: End-to-End Claude Workflow",
+        useCase:"Solve one real business problem completely using Claude, demonstrating the full course.",
+        tools:"Depends on track — Projects/Artifacts, or Claude + Sheets/n8n, or API + code editor",
+        steps:["Define the problem in one sentence","Choose Track A, B, or C","Design the workflow on paper: inputs → Claude's role → output","Build the working version","Test with 3 different real inputs and fix inconsistencies","Run the Module 8 verification/privacy checklist","Record a 3–5 min walkthrough demoing it live"],
+        deliverable:"Working workflow/file + 3 test outputs + walkthrough recording + one paragraph on what's next"
+      }
+    },
+  ];
+
+  const sideNav = document.getElementById('sideNav');
+  const timeline = document.getElementById('timeline');
+  const completed = new Set();
+
+  function renderNav(){
+    sideNav.querySelectorAll('.nav-item').forEach(n=>n.remove());
+    MODULES.forEach(m=>{
+      const item = document.createElement('div');
+      item.className = 'nav-item' + (completed.has(m.n) ? ' done' : '');
+      item.id = 'nav-'+m.n;
+      item.innerHTML = `<span class="nav-dot"><span>${m.n}</span></span> Module ${m.n}: ${m.title}`;
+      item.onclick = ()=>{ toggleModule(m.n, true); document.getElementById('module-'+m.n).scrollIntoView({behavior:'smooth', block:'start'}); };
+      sideNav.appendChild(item);
+    });
+  }
+
+  function renderTimeline(){
+    timeline.innerHTML = MODULES.map(m => `
+      <div class="module-card" id="module-${m.n}">
+        <div class="module-marker"><span>${m.n}</span></div>
+        <div class="module-head" onclick="toggleModule(${m.n})">
+          <div class="module-head-left">
+            <span class="module-eyebrow">Module ${m.n}</span>
+            <span class="module-title">${m.title}</span>
+            <span class="module-meta">${m.meta}</span>
+          </div>
+          <div class="chevron"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="${'#1F2937'}" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        </div>
+        <div class="module-body">
+          <div class="module-body-inner">
+            <div class="obj-box"><b>Objective:</b> ${m.objective}</div>
+            ${m.lessons.map(l => `
+              <div class="lesson-block">
+                <div class="lesson-title">${l.h}</div>
+                <ul class="lesson-list">${l.points.map(p=>`<li>${p}</li>`).join('')}</ul>
+              </div>
+            `).join('')}
+            <div class="project-box">
+              <div class="project-label">🛠 Hands-on Project</div>
+              <div class="project-title">${m.project.title}</div>
+              <div class="project-row"><b>Use case:</b> ${m.project.useCase}</div>
+              <div class="project-row"><b>Tools:</b> ${m.project.tools}</div>
+              <div class="project-row"><b>Build steps:</b></div>
+              <ol class="steps">${m.project.steps.map(s=>`<li>${s}</li>`).join('')}</ol>
+              <div class="deliverable">✓ Deliverable: ${m.project.deliverable}</div>
+            </div>
+            <div class="mark-done-row">
+              <button class="mark-done" onclick="event.stopPropagation(); toggleComplete(${m.n})">
+                ${completed.has(m.n) ? '✓ Marked complete' : 'Mark module complete'}
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    `).join('');
+  }
+
+  function toggleModule(n, forceOpen){
+    const card = document.getElementById('module-'+n);
+    const isOpen = card.classList.contains('open');
+    if(forceOpen){ card.classList.add('open'); return; }
+    card.classList.toggle('open', !isOpen);
+  }
+
+  function toggleComplete(n){
+    if(completed.has(n)) completed.delete(n); else completed.add(n);
+    renderNav();
+    renderTimeline();
+    document.getElementById('module-'+n).classList.add('open');
+    updateProgress();
+  }
+
+  function updateProgress(){
+    const pct = Math.round((completed.size / MODULES.length) * 100);
+    document.getElementById('progressFill').style.width = pct + '%';
+    document.getElementById('progressLabel').textContent = completed.size + ' / ' + MODULES.length + ' modules';
+    MODULES.forEach(m=>{
+      document.getElementById('module-'+m.n).classList.toggle('complete', completed.has(m.n));
+    });
+  }
+
+  renderNav();
+  renderTimeline();
+  updateProgress();
+  // open module 1 by default
+  document.getElementById('module-1').classList.add('open');
+  document.getElementById('nav-1').classList.add('active');
+  </script>
 </body>
 </html>

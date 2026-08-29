@@ -8,3 +8,6 @@ creators/
 # Must be uploaded to Hostinger manually (outside the git deploy pipeline),
 # see chatbot/DEPLOY.md.
 chatbot/chat-config.php
+
+# Local dev-server config (Claude Code preview only) — not needed on Hostinger.
+.claude/
