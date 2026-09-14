@@ -12,27 +12,39 @@
 return <<<KB
 # About Shashwat Yadav
 
-**Role:** Digital Marketing Head. Self-described as a "Performance Marketing
-Expert & SEO Specialist" driving measurable growth through data-driven
-strategy.
+**Role:** Ad Performance Marketing Head at The Digital Agency (Raipur).
+Self-described as a "Performance Marketing Expert & SEO Specialist" driving
+measurable growth through data-driven strategy.
 
-**Headline positioning:** Digital Marketing Head managing ₹5.7L+ monthly ad
-spend across Google & Meta | SEO & GEO Specialist ranking businesses on
-Google, ChatGPT & Gemini | Full-Stack Marketer building on WordPress &
-Elementor | AI & Automation-driven workflows with Claude Code & n8n.
+**Headline positioning:** Ad Performance Marketing Head managing ₹5.7L+
+monthly ad spend across Google & Meta | SEO & GEO Specialist ranking
+businesses on Google, ChatGPT & Gemini | Full-Stack Marketer building on
+WordPress & Elementor | AI & Automation-driven workflows with Claude Code
+& n8n.
 
-**Background story:** Started his career as Digital Marketing Head at
-Evento Planner, a service business, spending over 4 years there — not just
-running ads, but on the ground speaking with customers, evaluating lead
-quality, and making ROI-based decisions. Helped grow the business to
-4500+ customers over that time. That hands-on experience shaped a
-revenue-first mindset: understanding the difference between vanity metrics
-and business outcomes, and the pressure of real customer expectations and
-revenue targets, not just campaign metrics. Then transitioned to agency
-performance marketing, applying that same ROI-driven approach to running
-paid campaigns for other companies. Today he's Digital Marketing Head
-managing ₹5.7L+ monthly ad spend across Google & Meta Ads for commercial
-real estate and healthcare clients.
+**Background story:** Started his career in business development — a
+3-month Business Development Trainee stint at Byju's (Nov 2020), then
+Business Development Associate at Lido Learning, Noida (Jul–Sep 2021). In
+November 2021, co-founded Evento Balloon Decoration Pvt Ltd (then
+Eventoplanner) with two partners; ran it solo from Nov 2022 and
+incorporated it as a private limited company in March 2023. Scaled it to
+₹30L in annual revenue with a 4-member core team and 7 gig workers —
+without spending a rupee on ads, ranking #1 organically for "balloon
+decoration Raipur" across Google Business Profile, ChatGPT, Gemini, and
+Google AI Mode, and building a payment-integrated e-commerce site
+(Razorpay + GoDaddy + WordPress) himself. That hands-on experience —
+building demand from zero, reading lead quality, living or dying by ROI —
+shaped a revenue-first mindset: understanding the difference between
+vanity metrics and business outcomes. From Feb–Mar 2026 he did WordPress
+design and SEO consultancy for MyFemily by Nutritionist Saloni (Delhi,
+remote). In March 2026, he joined The Digital Agency in Raipur as Ad
+Performance Marketing Head, where he now leads a 15-person team (4 social
+media managers, 4 video editors, 1 website designer, 2 graphic designers)
+across 30+ clients, managing ₹3L+ monthly ad spend on Meta and Google Ads
+for real estate, healthcare, and education clients.
+
+**Education:** B.Tech, Mechanical Engineering — Shankar Charya Technical
+Campus (CSVTU), 2016–2020.
 
 **What makes his approach different:** Most agencies hand off the ad, the
 tracking, and the landing page to three different people. He builds the
@@ -44,8 +56,10 @@ system fast.
 **Personal brand statement:** "I don't just run campaigns — I think about
 how they impact the bottom line."
 
-**Headline stats:** ₹5.7L+ monthly ad spend managed | 4+ years experience |
-9 industries served | 7 certifications.
+**Headline stats:** ₹5.7L+ monthly ad spend managed | 6+ years experience |
+9 industries served | 7 certifications. Note: the ₹5.7L+ figure is his
+total managed spend across all current accounts; the ₹3L+ figure above is
+specifically what he manages at The Digital Agency.
 
 ---
 
@@ -172,15 +186,32 @@ Nano Banana, Google Flow, Kling AI.
 # Case Studies / Portfolio
 
 1. **2BHK/3BHK Residential Launch — Meta Ads Lead Generation**
-   (Residential Real Estate): 516 qualified leads, 128 site visits, over
-   5 months.
+   (Residential Real Estate, client kept confidential): 516 qualified
+   leads, 128 site visits, over 5 months.
 2. **Commercial Showroom, Office & Retail Space — Multi-Platform Lead
-   Generation** (Commercial Real Estate): 152 qualified leads, via Meta +
-   Google, over 5 months.
+   Generation** (Commercial Real Estate, client: Chaitanya Business Park):
+   152 qualified leads, via Meta + Google, over 5 months (historical).
+   Currently running at ₹36K/month, generating 45+ qualified leads/month
+   for ₹67L–1.5Cr commercial properties.
 3. **Multi-Treatment Hospital Campaign — IVF, Cataract, Painless Labour,
-   LASIK & OPD** (Healthcare): 7,598 patient interactions, via Meta +
-   Google, over 5 months. (No medical claims are made — this describes
-   marketing/lead-generation results only, not treatment outcomes.)
+   LASIK & OPD** (Healthcare, client: SBH Hospital): 7,598 patient
+   interactions, via Meta + Google, over 5 months (historical, Mar–Aug
+   2026). Currently running at ₹2.5L/month, generating ~700 qualified
+   leads/month plus ~500 call leads/month. (No medical claims are made —
+   this describes marketing/lead-generation results only, not treatment
+   outcomes.)
+4. **Chaitanya Greens — Residential Lead Generation** (Residential Real
+   Estate): 300+ qualified leads/month on ₹45K/month Meta Ads spend, for
+   2BHK/3BHK units priced ₹35L–85L.
+5. **Vasarsha Reality — Residential Lead Generation** (Residential Real
+   Estate): 100+ qualified leads/month on ₹36K/month Meta Ads spend, for
+   2BHK/3BHK units priced ₹90L–1.2Cr.
+6. **LIFE Educare — School Setup & Consultancy Lead Generation**
+   (Education): 50 leads/month on ₹26K/month ad spend, for school setup
+   and consultancy services.
+7. **Premium Salon & Academy — Admission Lead Generation** (Salon &
+   Wellness / Education, client kept confidential): 700+ admission leads
+   generated in 4 months.
 
 ---
 
