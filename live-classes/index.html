@@ -150,7 +150,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </li>
         <li class="flex items-start gap-3 p-4 rounded-2xl bg-surface-card border border-border">
           <span class="w-8 h-8 rounded-full bg-primary text-white text-sm font-bold flex items-center justify-center flex-shrink-0">2</span>
-          <div><h3 class="text-sm font-semibold text-text-heading">Sign in &amp; verify</h3><p class="text-xs text-text-body mt-1">Use Google or your email, and confirm your mobile number with an OTP.</p></div>
+          <div><h3 class="text-sm font-semibold text-text-heading">Sign in &amp; verify</h3><p class="text-xs text-text-body mt-1">Sign in with Google and add your mobile number.</p></div>
         </li>
         <li class="flex items-start gap-3 p-4 rounded-2xl bg-surface-card border border-border">
           <span class="w-8 h-8 rounded-full bg-primary text-white text-sm font-bold flex items-center justify-center flex-shrink-0">3</span>
@@ -256,8 +256,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </button>
       </div>
 
-      <div data-preview-note class="hidden mx-6 mb-3 px-3 py-2 rounded-lg bg-cta-accent/10 border border-cta-accent/30 text-xs text-amber-800">Layout preview: nothing is saved yet, and any 6-digit code works as the OTP.</div>
-
       <div class="mx-6 mb-4 px-4 py-3 rounded-xl bg-primary/5 border border-primary/15">
         <p data-class-topic class="text-sm font-semibold text-text-heading"></p>
         <p data-class-when class="text-xs text-text-body mt-0.5"></p>
@@ -266,87 +264,56 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div data-steps class="flex gap-1.5 mx-6 mb-5" aria-hidden="true">
         <span data-dot class="h-1 flex-1 rounded-full bg-primary"></span>
         <span data-dot class="h-1 flex-1 rounded-full bg-border"></span>
-        <span data-dot class="h-1 flex-1 rounded-full bg-border"></span>
       </div>
 
       <div class="px-6 pb-6">
 
-        <!-- Step 1: account -->
+        <!-- Step 1: sign in with Google -->
         <div data-step-panel="account">
+          <p class="text-sm text-text-body mb-4">Sign in with your Google account to join. We only use your name and email.</p>
           <button type="button" data-google-btn data-autofocus class="w-full flex items-center justify-center gap-3 px-4 py-2.5 rounded-full border border-border bg-white text-sm font-semibold text-text-heading hover:bg-background transition-colors">
             <svg class="w-5 h-5" viewBox="0 0 48 48" aria-hidden="true"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg>
             Continue with Google
           </button>
-          <div class="flex items-center gap-3 my-4">
-            <span class="flex-1 h-px bg-border"></span>
-            <span class="text-xs text-text-body/60">or create an account</span>
-            <span class="flex-1 h-px bg-border"></span>
-          </div>
-          <form data-form="account" novalidate class="space-y-3">
-            <div>
-              <label for="enroll-name" class="block text-xs font-semibold text-text-heading mb-1">Full name</label>
-              <input id="enroll-name" name="name" type="text" autocomplete="name" class="w-full px-4 py-2.5 rounded-xl border border-border bg-white text-sm text-text-body focus:outline-none focus:border-primary">
-              <p data-error="name" class="hidden text-xs text-red-600 mt-1"></p>
-            </div>
-            <div>
-              <label for="enroll-email" class="block text-xs font-semibold text-text-heading mb-1">Email</label>
-              <input id="enroll-email" name="email" type="email" autocomplete="email" class="w-full px-4 py-2.5 rounded-xl border border-border bg-white text-sm text-text-body focus:outline-none focus:border-primary">
-              <p data-error="email" class="hidden text-xs text-red-600 mt-1"></p>
-            </div>
-            <button type="submit" class="w-full px-5 py-2.5 rounded-full bg-primary text-white text-sm font-semibold hover:bg-primary-dark transition-all">Continue</button>
-          </form>
+          <p data-error="account" class="hidden text-xs text-red-600 mt-3"></p>
         </div>
 
-        <!-- Step 2: mobile number -->
-        <div data-step-panel="mobile" class="hidden">
+        <!-- Step 2: mobile number + enrol -->
+        <div data-step-panel="details" class="hidden">
           <div class="flex items-center gap-3 mb-4 px-3 py-2.5 rounded-xl bg-background border border-border">
             <span data-user-initial class="w-8 h-8 rounded-full bg-primary text-white text-sm font-bold flex items-center justify-center flex-shrink-0"></span>
-            <div class="min-w-0">
+            <div class="min-w-0 flex-1">
               <p data-user-name class="text-sm font-semibold text-text-heading truncate"></p>
               <p data-user-email class="text-xs text-text-body truncate"></p>
             </div>
+            <button type="button" data-signout class="text-xs font-semibold text-primary hover:underline flex-shrink-0">Not you?</button>
           </div>
-          <form data-form="mobile" novalidate class="space-y-3">
+          <form data-form="details" novalidate class="space-y-3">
             <div>
               <label for="enroll-mobile" class="block text-xs font-semibold text-text-heading mb-1">Mobile number <span class="text-red-600">*</span></label>
               <div class="flex gap-2">
-                <span class="px-3 py-2.5 rounded-xl border border-border bg-background text-sm text-text-body">+91</span>
-                <input id="enroll-mobile" name="mobile" type="tel" inputmode="numeric" maxlength="10" autocomplete="tel-national" placeholder="10-digit number" data-autofocus class="flex-1 min-w-0 px-4 py-2.5 rounded-xl border border-border bg-white text-sm text-text-body focus:outline-none focus:border-primary">
+                <select data-country aria-label="Country code" class="w-[9.5rem] flex-shrink-0 px-2 py-2.5 rounded-xl border border-border bg-white text-sm text-text-body focus:outline-none focus:border-primary"></select>
+                <input id="enroll-mobile" name="mobile" type="tel" inputmode="numeric" maxlength="15" autocomplete="tel-national" placeholder="Mobile number" data-autofocus class="flex-1 min-w-0 px-4 py-2.5 rounded-xl border border-border bg-white text-sm text-text-body focus:outline-none focus:border-primary">
               </div>
               <p data-error="mobile" class="hidden text-xs text-red-600 mt-1"></p>
-              <p class="text-xs text-text-body/70 mt-1.5">Required to join. We'll text a 6-digit OTP to verify it.</p>
+              <p data-mobile-hint class="text-xs text-text-body/70 mt-1.5"></p>
             </div>
-            <button type="submit" class="w-full px-5 py-2.5 rounded-full bg-primary text-white text-sm font-semibold hover:bg-primary-dark transition-all">Send OTP</button>
+            <button type="submit" class="w-full px-5 py-2.5 rounded-full bg-primary text-white text-sm font-semibold hover:bg-primary-dark transition-all">Enrol in this class</button>
           </form>
         </div>
 
-        <!-- Step 3: OTP -->
-        <div data-step-panel="otp" class="hidden">
-          <p class="text-sm text-text-body mb-4">Enter the 6-digit code sent to <strong data-user-mobile class="text-text-heading"></strong>. <button type="button" data-change-number class="text-primary font-semibold hover:underline">Change number</button></p>
-          <form data-form="otp" novalidate>
-            <div class="flex justify-between gap-2 mb-1">
-              <input data-otp data-autofocus type="text" inputmode="numeric" maxlength="1" autocomplete="one-time-code" aria-label="OTP digit 1" class="flex-1 min-w-0 h-12 text-center text-lg font-semibold rounded-lg border border-border bg-white focus:outline-none focus:border-primary">
-              <input data-otp type="text" inputmode="numeric" maxlength="1" aria-label="OTP digit 2" class="flex-1 min-w-0 h-12 text-center text-lg font-semibold rounded-lg border border-border bg-white focus:outline-none focus:border-primary">
-              <input data-otp type="text" inputmode="numeric" maxlength="1" aria-label="OTP digit 3" class="flex-1 min-w-0 h-12 text-center text-lg font-semibold rounded-lg border border-border bg-white focus:outline-none focus:border-primary">
-              <input data-otp type="text" inputmode="numeric" maxlength="1" aria-label="OTP digit 4" class="flex-1 min-w-0 h-12 text-center text-lg font-semibold rounded-lg border border-border bg-white focus:outline-none focus:border-primary">
-              <input data-otp type="text" inputmode="numeric" maxlength="1" aria-label="OTP digit 5" class="flex-1 min-w-0 h-12 text-center text-lg font-semibold rounded-lg border border-border bg-white focus:outline-none focus:border-primary">
-              <input data-otp type="text" inputmode="numeric" maxlength="1" aria-label="OTP digit 6" class="flex-1 min-w-0 h-12 text-center text-lg font-semibold rounded-lg border border-border bg-white focus:outline-none focus:border-primary">
-            </div>
-            <p data-error="otp" class="hidden text-xs text-red-600 mb-1"></p>
-            <button type="submit" class="w-full mt-4 px-5 py-2.5 rounded-full bg-primary text-white text-sm font-semibold hover:bg-primary-dark transition-all">Verify &amp; enrol</button>
-            <button type="button" data-resend disabled class="w-full mt-2 px-5 py-2 text-xs font-semibold text-primary disabled:text-text-body/50">Resend OTP</button>
-          </form>
-        </div>
-
-        <!-- Returning, already-verified student -->
+        <!-- Returning student with a saved number -->
         <div data-step-panel="confirm" class="hidden">
-          <div class="flex items-center gap-3 mb-4 px-3 py-2.5 rounded-xl bg-background border border-border">
+          <div class="flex items-center gap-3 mb-3 px-3 py-2.5 rounded-xl bg-background border border-border">
             <span data-user-initial class="w-8 h-8 rounded-full bg-primary text-white text-sm font-bold flex items-center justify-center flex-shrink-0"></span>
-            <div class="min-w-0">
+            <div class="min-w-0 flex-1">
               <p data-user-name class="text-sm font-semibold text-text-heading truncate"></p>
-              <p class="text-xs text-text-body truncate"><span data-user-email></span> &middot; <span data-user-mobile></span> (verified)</p>
+              <p data-user-email class="text-xs text-text-body truncate"></p>
             </div>
+            <button type="button" data-signout class="text-xs font-semibold text-primary hover:underline flex-shrink-0">Not you?</button>
           </div>
+          <p class="text-sm text-text-body mb-4">Mobile: <strong data-user-mobile class="text-text-heading"></strong> <button type="button" data-change-number class="text-primary font-semibold hover:underline">Change</button></p>
+          <p data-error="confirm" class="hidden text-xs text-red-600 mb-3"></p>
           <button type="button" data-confirm-btn data-autofocus class="w-full px-5 py-2.5 rounded-full bg-primary text-white text-sm font-semibold hover:bg-primary-dark transition-all">Confirm enrolment</button>
         </div>
 

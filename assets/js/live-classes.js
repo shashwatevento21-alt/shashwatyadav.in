@@ -1,9 +1,10 @@
 (function () {
   'use strict';
 
-  // Layout preview: while true, sign-in / OTP / enrolment are simulated in the browser and nothing is saved.
-  var PREVIEW_MODE = true;
   var TZ = 'Asia/Kolkata';
+  var isLocal = /^(localhost|127\.0\.0\.1)$/.test(location.hostname);
+  // Live: the Laravel app is served from the /creators folder of the same domain.
+  var API_ORIGIN = isLocal ? location.protocol + '//' + location.hostname + ':8000' : '/creators';
 
   var listEl = document.getElementById('classes-list');
   var emptyEl = document.getElementById('classes-empty');
@@ -11,19 +12,46 @@
   var modal = document.getElementById('enroll-modal');
   if (!listEl || !modal) return;
 
-  var state = { cls: null, user: null, mobile: '', verified: false, enrolled: {} };
+  var state = { cls: null, csrf: '', countries: [], user: null, mobile: null, enrolled: {}, apiOk: false };
 
-  function wait(value) {
-    return new Promise(function (resolve) { setTimeout(function () { resolve(value); }, 600); });
+  /* ---------- API ---------- */
+
+  function request(path, method, body) {
+    var headers = { 'Accept': 'application/json' };
+    if (body) headers['Content-Type'] = 'application/json';
+    if (method === 'POST') headers['X-CSRF-TOKEN'] = state.csrf;
+    return fetch(API_ORIGIN + '/live-classes/api/' + path, {
+      method: method || 'GET',
+      credentials: 'include',
+      headers: headers,
+      body: body ? JSON.stringify(body) : undefined
+    }).then(function (res) {
+      return res.json().catch(function () { return {}; }).then(function (data) {
+        if (!res.ok) {
+          var err = new Error(data.message || 'Request failed');
+          err.status = res.status;
+          err.data = data;
+          throw err;
+        }
+        return data;
+      });
+    });
   }
 
-  // Backend hooks: replace these four with real calls (Google OAuth, SMS OTP, save enrolment).
-  var api = {
-    googleSignIn: function () { return wait({ name: 'Sample Student', email: 'sample.student@gmail.com', via: 'google' }); },
-    sendOtp: function () { return wait({ ok: true }); },
-    verifyOtp: function () { return wait({ ok: true }); },
-    enrol: function () { return wait({ ok: true }); }
-  };
+  function applySession(data) {
+    state.apiOk = true;
+    state.csrf = data.csrfToken;
+    state.countries = data.countries || [];
+    state.user = data.authenticated ? data.user : null;
+    state.mobile = data.authenticated ? data.mobile : null;
+    state.enrolled = {};
+    (data.enrolled || []).forEach(function (id) { state.enrolled[id] = true; });
+    fillCountries();
+  }
+
+  function loadSession() {
+    return request('me').then(applySession).catch(function () { state.apiOk = false; });
+  }
 
   /* ---------- formatting ---------- */
 
@@ -71,7 +99,9 @@
   }
 
   function maskMobile(m) {
-    return '+91 ' + m.slice(0, 2) + '••••••' + m.slice(-2);
+    if (!m) return '';
+    var n = m.number;
+    return m.countryCode + ' ' + (n.length > 4 ? n.slice(0, 2) + '••••' + n.slice(-2) : n);
   }
 
   /* ---------- class list ---------- */
@@ -178,13 +208,43 @@
     if (card) card.querySelector('[data-join-slot]').innerHTML = enrolledButton();
   }
 
+  /* ---------- mobile number ---------- */
+
+  function normaliseMobile(raw) {
+    var digits = String(raw).replace(/\D+/g, '');
+    return digits.charAt(0) === '0' ? digits.slice(1) : digits;
+  }
+
+  function currentCountry() {
+    var code = q('[data-country]').value;
+    for (var i = 0; i < state.countries.length; i++) if (state.countries[i].code === code) return state.countries[i];
+    return null;
+  }
+
+  function updateMobileHint() {
+    var c = currentCountry();
+    q('[data-mobile-hint]').textContent = c ? c.name + ': ' + c.digits + ', without the country code.' : '';
+  }
+
+  function fillCountries() {
+    var select = q('[data-country]');
+    select.innerHTML = state.countries.map(function (c) {
+      return '<option value="' + esc(c.code) + '">' + esc(c.name) + ' (' + esc(c.code) + ')</option>';
+    }).join('');
+    updateMobileHint();
+  }
+
+  q('[data-country]').addEventListener('change', function () {
+    setError('mobile', '');
+    updateMobileHint();
+  });
+
   /* ---------- enrol modal ---------- */
 
-  var STEPS = ['account', 'mobile', 'otp'];
+  var STEP_INDEX = { account: 0, details: 1, confirm: 1 };
   var panels = modal.querySelectorAll('[data-step-panel]');
   var dots = modal.querySelectorAll('[data-dot]');
   var steps = modal.querySelector('[data-steps]');
-  var resendTimer = null;
 
   function q(sel) { return modal.querySelector(sel); }
 
@@ -213,43 +273,51 @@
   function showStep(name) {
     clearErrors();
     panels.forEach(function (p) { p.classList.toggle('hidden', p.getAttribute('data-step-panel') !== name); });
-    var idx = STEPS.indexOf(name);
-    steps.classList.toggle('hidden', idx === -1);
+    var idx = STEP_INDEX[name];
+    steps.classList.toggle('hidden', idx === undefined);
     dots.forEach(function (d, i) {
-      d.classList.toggle('bg-primary', i <= idx);
-      d.classList.toggle('bg-border', i > idx);
+      d.classList.toggle('bg-primary', idx !== undefined && i <= idx);
+      d.classList.toggle('bg-border', idx === undefined || i > idx);
     });
     var target = q('[data-step-panel="' + name + '"] [data-autofocus]');
     if (target) setTimeout(function () { target.focus(); }, 50);
   }
 
-  function fillClassSummary() {
-    q('[data-class-topic]').textContent = state.cls.topic;
-    q('[data-class-when]').textContent = whenText(state.cls);
-  }
-
   function fillUser() {
+    if (!state.user) return;
     modal.querySelectorAll('[data-user-name]').forEach(function (el) { el.textContent = state.user.name; });
     modal.querySelectorAll('[data-user-email]').forEach(function (el) { el.textContent = state.user.email; });
     modal.querySelectorAll('[data-user-initial]').forEach(function (el) { el.textContent = state.user.name.charAt(0).toUpperCase(); });
-    modal.querySelectorAll('[data-user-mobile]').forEach(function (el) { el.textContent = state.mobile ? maskMobile(state.mobile) : ''; });
+    modal.querySelectorAll('[data-user-mobile]').forEach(function (el) { el.textContent = maskMobile(state.mobile); });
+  }
+
+  function prefillMobileForm() {
+    var form = q('[data-form="details"]');
+    if (state.mobile) {
+      q('[data-country]').value = state.mobile.countryCode;
+      form.elements.mobile.value = state.mobile.number;
+    } else {
+      form.elements.mobile.value = '';
+    }
+    updateMobileHint();
   }
 
   function openModal(cls) {
     if (!cls) return;
     state.cls = cls;
-    fillClassSummary();
+    q('[data-class-topic]').textContent = cls.topic;
+    q('[data-class-when]').textContent = whenText(cls);
     modal.classList.remove('hidden');
     modal.classList.add('flex');
     document.body.classList.add('overflow-hidden');
-    if (state.user && state.verified) {
-      fillUser();
-      showStep('confirm');
-    } else if (state.user) {
-      fillUser();
-      showStep('mobile');
-    } else {
+    fillUser();
+    if (!state.user) {
       showStep('account');
+    } else if (state.mobile) {
+      showStep('confirm');
+    } else {
+      prefillMobileForm();
+      showStep('details');
     }
   }
 
@@ -257,7 +325,6 @@
     modal.classList.add('hidden');
     modal.classList.remove('flex');
     document.body.classList.remove('overflow-hidden');
-    clearInterval(resendTimer);
   }
 
   modal.addEventListener('click', function (e) {
@@ -268,152 +335,127 @@
     if (e.key === 'Escape' && !modal.classList.contains('hidden')) closeModal();
   });
 
-  function afterSignIn(user) {
-    state.user = user;
-    fillUser();
-    showStep('mobile');
+  q('[data-google-btn]').addEventListener('click', function () {
+    if (!state.apiOk) {
+      setError('account', 'Sign-in is temporarily unavailable. Please try again later, or message me on WhatsApp.');
+      return;
+    }
+    window.location.href = API_ORIGIN + '/live-classes/google?class=' + encodeURIComponent(state.cls.id);
+  });
+
+  function backToSignIn(message) {
+    state.user = null;
+    state.mobile = null;
+    state.enrolled = {};
+    renderList();
+    showStep('account');
+    if (message) setError('account', message);
   }
 
-  q('[data-google-btn]').addEventListener('click', function () {
-    var btn = this;
-    setBusy(btn, true, 'Connecting to Google…');
-    api.googleSignIn().then(function (user) {
-      setBusy(btn, false);
-      afterSignIn(user);
-    });
-  });
+  function handleEnrolError(err, errorTarget) {
+    var data = err.data || {};
+    if (err.status === 401 || err.status === 419) {
+      loadSession().then(function () { backToSignIn('Your session expired. Please sign in again.'); });
+      return;
+    }
+    if (err.status === 422 && data.errors) {
+      var first = data.errors.mobile || data.errors.country_code || [];
+      setError(errorTarget, first[0] || data.message || 'Please check your details.');
+      return;
+    }
+    if (err.status === 403) {
+      setError(errorTarget, 'Please verify your email address first, or sign in with Google.');
+      return;
+    }
+    setError(errorTarget, 'Something went wrong. Please try again.');
+  }
 
-  q('[data-form="account"]').addEventListener('submit', function (e) {
-    e.preventDefault();
-    var name = this.elements.name.value.trim();
-    var email = this.elements.email.value.trim();
-    var ok = true;
-    setError('name', '');
-    setError('email', '');
-    if (name.length < 2) { setError('name', 'Please enter your full name.'); ok = false; }
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { setError('email', 'Please enter a valid email address.'); ok = false; }
-    if (ok) afterSignIn({ name: name, email: email, via: 'email' });
-  });
+  function enrol(extra, btn, errorTarget) {
+    setBusy(btn, true, 'Enrolling…');
+    var body = Object.assign({
+      class_id: state.cls.id,
+      course_slug: state.cls.courseSlug,
+      course_name: state.cls.course,
+      class_topic: state.cls.topic,
+      starts_at: state.cls.startsAt
+    }, extra || {});
+    request('enrol', 'POST', body)
+      .then(function (data) {
+        setBusy(btn, false);
+        state.mobile = data.mobile;
+        state.enrolled[state.cls.id] = true;
+        markEnrolled(state.cls.id);
+        fillUser();
+        q('[data-done-topic]').textContent = state.cls.topic;
+        q('[data-done-when]').textContent = whenText(state.cls);
+        showStep('done');
+      })
+      .catch(function (err) {
+        setBusy(btn, false);
+        handleEnrolError(err, errorTarget);
+      });
+  }
 
-  q('[data-form="mobile"]').addEventListener('submit', function (e) {
+  q('[data-form="details"]').addEventListener('submit', function (e) {
     e.preventDefault();
-    var btn = this.querySelector('button[type="submit"]');
-    var mobile = this.elements.mobile.value.replace(/\D/g, '');
-    if (!/^[6-9]\d{9}$/.test(mobile)) {
-      setError('mobile', 'Enter a valid 10-digit Indian mobile number.');
+    var country = currentCountry();
+    var number = normaliseMobile(this.elements.mobile.value);
+    if (!country || !new RegExp(country.pattern).test(number)) {
+      setError('mobile', 'Enter a valid ' + (country ? country.name : '') + ' mobile number (' + (country ? country.digits : '') + '), without the country code.');
       return;
     }
     setError('mobile', '');
-    state.mobile = mobile;
-    setBusy(btn, true, 'Sending OTP…');
-    api.sendOtp(mobile).then(function () {
-      setBusy(btn, false);
-      fillUser();
-      clearOtp();
-      showStep('otp');
-      startResendTimer();
-    });
-  });
-
-  q('[data-change-number]').addEventListener('click', function () {
-    clearInterval(resendTimer);
-    showStep('mobile');
-  });
-
-  var otpInputs = Array.prototype.slice.call(modal.querySelectorAll('[data-otp]'));
-
-  function clearOtp() {
-    otpInputs.forEach(function (i) { i.value = ''; });
-  }
-
-  otpInputs.forEach(function (input, i) {
-    input.addEventListener('input', function () {
-      input.value = input.value.replace(/\D/g, '').slice(-1);
-      if (input.value && otpInputs[i + 1]) otpInputs[i + 1].focus();
-    });
-    input.addEventListener('keydown', function (e) {
-      if (e.key === 'Backspace' && !input.value && otpInputs[i - 1]) otpInputs[i - 1].focus();
-    });
-    input.addEventListener('paste', function (e) {
-      var digits = (e.clipboardData || window.clipboardData).getData('text').replace(/\D/g, '').slice(0, otpInputs.length);
-      if (!digits) return;
-      e.preventDefault();
-      digits.split('').forEach(function (d, k) { otpInputs[k].value = d; });
-      otpInputs[Math.min(digits.length, otpInputs.length - 1)].focus();
-    });
-  });
-
-  function startResendTimer() {
-    var btn = q('[data-resend]');
-    var left = 30;
-    clearInterval(resendTimer);
-    btn.disabled = true;
-    btn.textContent = 'Resend OTP in ' + left + 's';
-    resendTimer = setInterval(function () {
-      left--;
-      if (left <= 0) {
-        clearInterval(resendTimer);
-        btn.disabled = false;
-        btn.textContent = 'Resend OTP';
-      } else {
-        btn.textContent = 'Resend OTP in ' + left + 's';
-      }
-    }, 1000);
-  }
-
-  q('[data-resend]').addEventListener('click', function () {
-    var btn = this;
-    btn.disabled = true;
-    btn.textContent = 'Sending…';
-    api.sendOtp(state.mobile).then(function () {
-      clearOtp();
-      otpInputs[0].focus();
-      startResendTimer();
-    });
-  });
-
-  function completeEnrolment() {
-    state.enrolled[state.cls.id] = true;
-    markEnrolled(state.cls.id);
-    fillUser();
-    q('[data-done-topic]').textContent = state.cls.topic;
-    q('[data-done-when]').textContent = whenText(state.cls);
-    showStep('done');
-  }
-
-  q('[data-form="otp"]').addEventListener('submit', function (e) {
-    e.preventDefault();
-    var btn = this.querySelector('button[type="submit"]');
-    var code = otpInputs.map(function (i) { return i.value; }).join('');
-    if (code.length !== otpInputs.length) {
-      setError('otp', 'Enter the 6-digit code we sent you.');
-      return;
-    }
-    setError('otp', '');
-    setBusy(btn, true, 'Verifying…');
-    api.verifyOtp(state.mobile, code)
-      .then(function () {
-        state.verified = true;
-        return api.enrol({ classId: state.cls.id, course: state.cls.course, name: state.user.name, email: state.user.email, mobile: state.mobile });
-      })
-      .then(function () {
-        setBusy(btn, false);
-        clearInterval(resendTimer);
-        completeEnrolment();
-      });
+    enrol({ country_code: country.code, mobile: number }, this.querySelector('button[type="submit"]'), 'mobile');
   });
 
   q('[data-confirm-btn]').addEventListener('click', function () {
-    var btn = this;
-    setBusy(btn, true, 'Enrolling…');
-    api.enrol({ classId: state.cls.id, course: state.cls.course, name: state.user.name, email: state.user.email, mobile: state.mobile })
-      .then(function () {
-        setBusy(btn, false);
-        completeEnrolment();
-      });
+    enrol({}, this, 'confirm');
   });
 
-  if (PREVIEW_MODE) q('[data-preview-note]').classList.remove('hidden');
+  q('[data-change-number]').addEventListener('click', function () {
+    prefillMobileForm();
+    showStep('details');
+  });
+
+  modal.querySelectorAll('[data-signout]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      request('logout', 'POST').then(function (data) {
+        state.csrf = data.csrfToken;
+        backToSignIn();
+      }).catch(function () {
+        backToSignIn('Could not sign out. Please refresh the page and try again.');
+      });
+    });
+  });
+
+  /* ---------- coming back from Google ---------- */
+
+  var SIGNIN_ERRORS = {
+    expired: 'Your Google sign-in session expired. Please try again.',
+    failed: 'Google sign-in was cancelled or did not complete. Please try again.',
+    'no-email': 'Google did not share an email address, so we could not sign you in.'
+  };
+
+  function handleReturn() {
+    var params = new URLSearchParams(location.search);
+    var id = params.get('class');
+    var error = params.get('signin');
+    if (!id && !error) return;
+    history.replaceState(null, '', location.pathname);
+    var cls = id ? findClass(id) : null;
+    if (!cls) return;
+    if (error) {
+      openModal(cls);
+      showStep('account');
+      setError('account', SIGNIN_ERRORS[error] || 'Sign-in did not complete. Please try again.');
+    } else if (state.user) {
+      openModal(cls);
+    }
+  }
 
   renderList();
+  loadSession().then(function () {
+    renderList();
+    handleReturn();
+  });
 })();
