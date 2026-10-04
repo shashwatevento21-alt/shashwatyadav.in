@@ -20,7 +20,7 @@ jobs:
       # mirror, ever). This tool is structurally incapable of removing remote
       # files — it only uploads new/changed ones. That's deliberate: an
       # earlier diff-and-delete based deploy tool (FTP-Deploy-Action) wiped
-      # /public_html/creators/ (the Laravel Creator Marketplace app, managed
+      # /public_html/creators/ (the Laravel Live Classes app, managed
       # entirely outside this pipeline) twice, despite exclude rules meant to
       # protect it. Files removed from the repo will linger on the server as
       # harmless orphaned files instead of being auto-deleted — acceptable,
@@ -47,5 +47,6 @@ jobs:
             --exclude-glob CNAME \
             --exclude-glob deploy-creators-subfolder/ \
             --exclude-glob creators/ \
+            --exclude-glob classes/ \
             ./ /;
           "

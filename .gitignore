@@ -1,8 +1,9 @@
-# /creators is the Laravel Creator Marketplace app, deployed and managed
-# entirely outside this repo. It must never be tracked, uploaded, or
-# considered "extra"/removable by any git or deploy tooling that operates
-# on this working tree.
+# /creators and /classes are the Laravel Live Classes app (/classes is its new home;
+# /creators will only hold a redirect), deployed and managed entirely outside this
+# repo. They must never be tracked, uploaded, or considered "extra"/removable by
+# any git or deploy tooling that operates on this working tree.
 creators/
+classes/
 
 # Chatbot OpenRouter API key — server-side secret, never committed.
 # Must be uploaded to Hostinger manually (outside the git deploy pipeline),

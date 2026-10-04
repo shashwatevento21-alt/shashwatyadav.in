@@ -4,6 +4,9 @@ RewriteEngine On
 RewriteRule ^training/?$ /courses [R=301,L]
 RewriteRule ^expertise/?$ /skills [R=301,L]
 
+# The retired Creators Platform page now points at the Live Classes page
+RewriteRule ^creators-platform/?$ /live-classes [R=301,L]
+
 # If someone requests a URL with .html directly, redirect to the clean URL (avoids duplicate content)
 RewriteCond %{THE_REQUEST} \s/+(.+)\.html[\s?] [NC]
 RewriteRule ^ /%1 [R=301,L]
