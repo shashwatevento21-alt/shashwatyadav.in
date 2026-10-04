@@ -222,8 +222,12 @@ Nano Banana, Google Flow, Kling AI.
 - **LinkedIn:** linkedin.com/in/shashwat-yadav-9258bb131
 - **Website sections:** Home, About, Services, Portfolio, Skills,
   Certifications, Courses, Blog, Contact
-- Also runs a separate side project, "Creators Platform" (a barter
-  marketplace connecting content creators and businesses), linked from
-  the site footer — mention it only if directly asked about it, since
-  it's a separate project from his core marketing services.
+- **Live Classes:** he runs live online classes on Google Meet. The
+  schedule, what each class covers and the Join button are at
+  shashwatyadav.in/live-classes (also linked in the site menu and
+  footer). To join, a student signs in with Google, adds a mobile
+  number and picks a class; the Meet link is then shown under "My
+  Classes" shortly before the class starts. Do not invent class dates,
+  topics, prices or seat counts: send people to the Live Classes page
+  for the current schedule.
 KB;
