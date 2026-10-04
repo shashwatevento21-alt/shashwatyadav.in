@@ -150,11 +150,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </li>
         <li class="flex items-start gap-3 p-4 rounded-2xl bg-surface-card border border-border">
           <span class="w-8 h-8 rounded-full bg-primary text-white text-sm font-bold flex items-center justify-center flex-shrink-0">2</span>
-          <div><h3 class="text-sm font-semibold text-text-heading">Sign in &amp; verify</h3><p class="text-xs text-text-body mt-1">Sign in with Google and add your mobile number.</p></div>
+          <div><h3 class="text-sm font-semibold text-text-heading">Sign in &amp; add your number</h3><p class="text-xs text-text-body mt-1">Sign in with Google and add your mobile number.</p></div>
         </li>
         <li class="flex items-start gap-3 p-4 rounded-2xl bg-surface-card border border-border">
           <span class="w-8 h-8 rounded-full bg-primary text-white text-sm font-bold flex items-center justify-center flex-shrink-0">3</span>
-          <div><h3 class="text-sm font-semibold text-text-heading">Join on Google Meet</h3><p class="text-xs text-text-body mt-1">Your Meet link is shared with you before the class starts.</p></div>
+          <div><h3 class="text-sm font-semibold text-text-heading">Join on Google Meet</h3><p class="text-xs text-text-body mt-1">Your Join button opens on My Classes 15 minutes before the class starts.</p></div>
         </li>
       </ol>
     </div>
@@ -168,7 +168,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <h2 class="font-serif text-2xl md:text-3xl font-bold text-text-heading">Upcoming classes</h2>
           <p id="classes-count" class="text-sm text-text-body mt-1"></p>
         </div>
-        <p class="text-xs font-mono text-text-body/70">All times in IST (India Standard Time)</p>
+        <div class="flex flex-col items-end gap-1">
+          <a id="my-classes-link" href="#" class="hidden text-sm font-semibold text-primary hover:underline">My classes &rarr;</a>
+          <p class="text-xs font-mono text-text-body/70">All times in IST (India Standard Time)</p>
+        </div>
       </div>
 
       <div id="classes-list" class="space-y-4"></div>
@@ -325,8 +328,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <h3 class="font-semibold text-xl text-text-heading mb-1">You're enrolled!</h3>
           <p data-done-topic class="text-sm font-semibold text-text-heading"></p>
           <p data-done-when class="text-sm text-text-body mb-4"></p>
-          <p class="text-xs text-text-body mb-5">We'll send your Google Meet link to <strong data-user-email class="text-text-heading"></strong> before the class starts.</p>
-          <button type="button" data-close data-autofocus class="px-8 py-2.5 rounded-full bg-primary text-white text-sm font-semibold hover:bg-primary-dark transition-all">Done</button>
+          <p data-done-email-note class="text-xs text-text-body mb-2">We've emailed a confirmation to <strong data-user-email class="text-text-heading"></strong>.</p>
+          <p data-done-no-email-note class="hidden text-xs text-text-body mb-2">You're enrolled, but we couldn't send the confirmation email just now.</p>
+          <p class="text-xs text-text-body mb-5">Your <strong>Join</strong> button appears on <strong>My Classes</strong> 15 minutes before the class starts.</p>
+          <div class="flex flex-col sm:flex-row gap-2.5 justify-center">
+            <a data-my-classes-btn href="#" class="px-6 py-2.5 rounded-full bg-primary text-white text-sm font-semibold hover:bg-primary-dark transition-all text-center">Open My Classes</a>
+            <button type="button" data-close data-autofocus class="px-6 py-2.5 rounded-full border border-border text-text-heading text-sm font-semibold hover:border-primary/40 transition-all">Done</button>
+          </div>
         </div>
 
       </div>
@@ -335,7 +343,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <script src="/assets/js/main.js"></script>
   <script src="/assets/js/chatbot-widget.js"></script>
-  <script src="/assets/js/live-classes-data.js?v=20261005"></script>
-  <script src="/assets/js/live-classes.js?v=20261005"></script>
+  <script src="/assets/js/live-classes.js?v=20261006"></script>
 </body>
 </html>

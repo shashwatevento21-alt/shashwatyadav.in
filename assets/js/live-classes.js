@@ -9,10 +9,14 @@
   var listEl = document.getElementById('classes-list');
   var emptyEl = document.getElementById('classes-empty');
   var countEl = document.getElementById('classes-count');
+  var myClassesLink = document.getElementById('my-classes-link');
   var modal = document.getElementById('enroll-modal');
   if (!listEl || !modal) return;
 
-  var state = { cls: null, csrf: '', countries: [], user: null, mobile: null, enrolled: {}, apiOk: false };
+  var state = {
+    cls: null, csrf: '', countries: [], user: null, mobile: null, enrolled: {}, apiOk: false,
+    sessions: [], sessionsLoaded: false, sessionsFailed: false
+  };
 
   /* ---------- API ---------- */
 
@@ -45,12 +49,42 @@
     state.user = data.authenticated ? data.user : null;
     state.mobile = data.authenticated ? data.mobile : null;
     state.enrolled = {};
-    (data.enrolled || []).forEach(function (id) { state.enrolled[id] = true; });
+    (data.enrolled || []).forEach(function (id) { state.enrolled[String(id)] = true; });
     fillCountries();
+    if (myClassesLink) {
+      myClassesLink.href = API_ORIGIN + '/my-classes';
+      myClassesLink.classList.toggle('hidden', !state.user);
+    }
   }
 
   function loadSession() {
     return request('me').then(applySession).catch(function () { state.apiOk = false; });
+  }
+
+  function toClass(s) {
+    var start = new Date(s.startsAt);
+    return {
+      id: String(s.id),
+      topic: s.title,
+      summary: s.summary,
+      learn: s.learn || [],
+      startsAt: s.startsAt,
+      durationMins: s.durationMins,
+      isFull: !!s.isFull,
+      spotsLeft: s.spotsLeft,
+      start: start,
+      end: new Date(start.getTime() + s.durationMins * 60000)
+    };
+  }
+
+  function loadSessions() {
+    return request('sessions')
+      .then(function (data) {
+        state.sessions = (data.sessions || []).map(toClass);
+        state.sessionsFailed = false;
+      })
+      .catch(function () { state.sessionsFailed = true; })
+      .then(function () { state.sessionsLoaded = true; });
   }
 
   /* ---------- formatting ---------- */
@@ -108,11 +142,7 @@
 
   function upcoming() {
     var now = Date.now();
-    return (window.LIVE_CLASSES || [])
-      .map(function (c) {
-        var start = new Date(c.startsAt);
-        return Object.assign({}, c, { start: start, end: new Date(start.getTime() + c.durationMins * 60000) });
-      })
+    return state.sessions
       .filter(function (c) { return !isNaN(c.start.getTime()) && c.end.getTime() > now; })
       .sort(function (a, b) { return a.start - b.start; });
   }
@@ -124,6 +154,7 @@
 
   function joinButton(cls) {
     if (state.enrolled[cls.id]) return enrolledButton();
+    if (cls.isFull) return fullButton();
     return '<button type="button" data-join="' + esc(cls.id) + '" class="w-full inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full bg-primary text-white text-sm font-semibold hover:bg-primary-dark transition-all">Join class ' + ICON_ARROW + '</button>';
   }
 
@@ -132,11 +163,18 @@
       '<svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>Enrolled</span>';
   }
 
+  function fullButton() {
+    return '<span class="w-full inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full bg-background text-text-body/70 text-sm font-semibold border border-border">Class full</span>';
+  }
+
   function cardHtml(cls, index) {
     var isNext = index === 0;
     var rel = relativeLabel(cls);
     var relClass = rel === 'Live now' ? 'bg-red-50 text-red-600 border-red-200' : 'bg-cta-accent/10 text-amber-700 border-cta-accent/30';
     var detailsId = 'details-' + cls.id;
+    var seatsLeft = cls.spotsLeft !== null && cls.spotsLeft !== undefined && !cls.isFull && cls.spotsLeft <= 5
+      ? '<span class="px-2.5 py-1 rounded-full bg-red-50 text-red-600 border border-red-200 text-[11px] font-semibold">' + cls.spotsLeft + (cls.spotsLeft === 1 ? ' seat left' : ' seats left') + '</span>'
+      : '';
     return '' +
       '<article data-class-card="' + esc(cls.id) + '" class="rounded-2xl bg-surface-card border ' + (isNext ? 'border-primary/40 shadow-lg' : 'border-border') + ' overflow-hidden">' +
         '<div class="p-5 md:p-6 flex flex-col md:flex-row md:items-center gap-5">' +
@@ -149,7 +187,7 @@
             '<div class="flex flex-wrap items-center gap-2 mb-2">' +
               (isNext ? '<span class="px-2.5 py-1 rounded-full bg-growth-accent text-white text-[11px] font-semibold">Next class</span>' : '') +
               '<span class="px-2.5 py-1 rounded-full border text-[11px] font-semibold ' + relClass + '">' + esc(rel) + '</span>' +
-              '<a href="/courses/' + esc(cls.courseSlug) + '" class="px-2.5 py-1 rounded-full bg-primary/10 text-primary text-[11px] font-semibold hover:bg-primary/15 transition-colors">' + esc(cls.course) + '</a>' +
+              seatsLeft +
             '</div>' +
             '<h3 class="font-semibold text-lg md:text-xl text-text-heading mb-2">' + esc(cls.topic) + '</h3>' +
             '<div class="flex flex-wrap items-center gap-x-4 gap-y-1 text-sm text-text-body">' +
@@ -164,12 +202,14 @@
         '</div>' +
         '<div id="' + esc(detailsId) + '" hidden class="border-t border-border bg-background px-5 md:px-6 py-5">' +
           '<p class="text-sm text-text-body mb-4">' + esc(cls.summary) + '</p>' +
-          '<h4 class="text-sm font-semibold text-text-heading mb-3">What you\'ll learn in this class</h4>' +
-          '<ul class="grid sm:grid-cols-2 gap-x-6 gap-y-2.5">' +
-            cls.learn.map(function (item) {
-              return '<li class="flex items-start gap-2 text-sm text-text-body">' + ICON_CHECK + '<span>' + esc(item) + '</span></li>';
-            }).join('') +
-          '</ul>' +
+          (cls.learn.length
+            ? '<h4 class="text-sm font-semibold text-text-heading mb-3">What you\'ll learn in this class</h4>' +
+              '<ul class="grid sm:grid-cols-2 gap-x-6 gap-y-2.5">' +
+                cls.learn.map(function (item) {
+                  return '<li class="flex items-start gap-2 text-sm text-text-body">' + ICON_CHECK + '<span>' + esc(item) + '</span></li>';
+                }).join('') +
+              '</ul>'
+            : '') +
         '</div>' +
       '</article>';
   }
@@ -177,6 +217,17 @@
   var classes = [];
 
   function renderList() {
+    if (!state.sessionsLoaded) {
+      listEl.innerHTML = '<p class="text-sm text-text-body text-center py-10">Loading classes…</p>';
+      emptyEl.classList.add('hidden');
+      return;
+    }
+    if (state.sessionsFailed) {
+      listEl.innerHTML = '<p class="text-sm text-red-600 text-center py-10">We couldn\'t load the class schedule. Please refresh the page, or message me on WhatsApp.</p>';
+      emptyEl.classList.add('hidden');
+      if (countEl) countEl.textContent = '';
+      return;
+    }
     classes = upcoming();
     listEl.innerHTML = classes.map(cardHtml).join('');
     emptyEl.classList.toggle('hidden', classes.length > 0);
@@ -184,7 +235,7 @@
   }
 
   function findClass(id) {
-    for (var i = 0; i < classes.length; i++) if (classes[i].id === id) return classes[i];
+    for (var i = 0; i < classes.length; i++) if (classes[i].id === String(id)) return classes[i];
     return null;
   }
 
@@ -203,9 +254,16 @@
     if (join) openModal(findClass(join.getAttribute('data-join')));
   });
 
-  function markEnrolled(id) {
+  function setSlot(id, html) {
     var card = listEl.querySelector('[data-class-card="' + id + '"]');
-    if (card) card.querySelector('[data-join-slot]').innerHTML = enrolledButton();
+    if (card) card.querySelector('[data-join-slot]').innerHTML = html;
+  }
+
+  function markEnrolled(id) { setSlot(id, enrolledButton()); }
+
+  function markFull(id) {
+    state.sessions.forEach(function (c) { if (c.id === String(id)) c.isFull = true; });
+    setSlot(id, fullButton());
   }
 
   /* ---------- mobile number ---------- */
@@ -347,6 +405,7 @@
     state.user = null;
     state.mobile = null;
     state.enrolled = {};
+    if (myClassesLink) myClassesLink.classList.add('hidden');
     renderList();
     showStep('account');
     if (message) setError('account', message);
@@ -354,8 +413,26 @@
 
   function handleEnrolError(err, errorTarget) {
     var data = err.data || {};
+    var id = state.cls.id;
+
     if (err.status === 401 || err.status === 419) {
       loadSession().then(function () { backToSignIn('Your session expired. Please sign in again.'); });
+      return;
+    }
+    if (err.status === 409 && data.code === 'already_enrolled') {
+      state.enrolled[id] = true;
+      markEnrolled(id);
+      setError(errorTarget, "You're already enrolled in this class. You'll find it in My Classes.");
+      return;
+    }
+    if (err.status === 409 && data.code === 'full') {
+      markFull(id);
+      setError(errorTarget, data.message || 'Sorry, this class is full.');
+      return;
+    }
+    if (err.status === 422 && data.code === 'closed') {
+      setError(errorTarget, data.message || 'This class is no longer available.');
+      loadSessions().then(renderList);
       return;
     }
     if (err.status === 422 && data.errors) {
@@ -372,13 +449,7 @@
 
   function enrol(extra, btn, errorTarget) {
     setBusy(btn, true, 'Enrolling…');
-    var body = Object.assign({
-      class_id: state.cls.id,
-      course_slug: state.cls.courseSlug,
-      course_name: state.cls.course,
-      class_topic: state.cls.topic,
-      starts_at: state.cls.startsAt
-    }, extra || {});
+    var body = Object.assign({ session_id: Number(state.cls.id) }, extra || {});
     request('enrol', 'POST', body)
       .then(function (data) {
         setBusy(btn, false);
@@ -388,6 +459,9 @@
         fillUser();
         q('[data-done-topic]').textContent = state.cls.topic;
         q('[data-done-when]').textContent = whenText(state.cls);
+        q('[data-done-email-note]').classList.toggle('hidden', !data.emailSent);
+        q('[data-done-no-email-note]').classList.toggle('hidden', !!data.emailSent);
+        q('[data-my-classes-btn]').href = API_ORIGIN + '/my-classes';
         showStep('done');
       })
       .catch(function (err) {
@@ -448,13 +522,13 @@
       openModal(cls);
       showStep('account');
       setError('account', SIGNIN_ERRORS[error] || 'Sign-in did not complete. Please try again.');
-    } else if (state.user) {
+    } else if (state.user && !state.enrolled[cls.id]) {
       openModal(cls);
     }
   }
 
   renderList();
-  loadSession().then(function () {
+  Promise.all([loadSession(), loadSessions()]).then(function () {
     renderList();
     handleReturn();
   });
