@@ -3,8 +3,10 @@
 
   var TZ = 'Asia/Kolkata';
   var isLocal = /^(localhost|127\.0\.0\.1)$/.test(location.hostname);
-  // Live: the Laravel app is served from the /creators folder of the same domain.
-  var API_ORIGIN = isLocal ? location.protocol + '//' + location.hostname + ':8000' : '/creators';
+  // The ONLY place the Laravel app's folder is named. Everything below (API calls, Google sign-in,
+  // My Classes links) builds its URLs from API_ORIGIN, so moving the app means changing this one line.
+  var APP_BASE_PATH = '/classes';
+  var API_ORIGIN = isLocal ? location.protocol + '//' + location.hostname + ':8000' : APP_BASE_PATH;
 
   var listEl = document.getElementById('classes-list');
   var emptyEl = document.getElementById('classes-empty');
