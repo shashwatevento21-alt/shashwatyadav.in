@@ -8,17 +8,41 @@
   var APP_BASE_PATH = '/classes';
   var API_ORIGIN = isLocal ? location.protocol + '//' + location.hostname + ':8000' : APP_BASE_PATH;
 
+  // A small "logged in" hint cookie set by the app (value "1", no personal data, same ~30 days as the login).
+  // It is only a UI hint: without it this page never calls the app for the visitor (no session is created for
+  // anonymous visitors); with it, the app is asked who is signed in and decides everything.
+  var HINT = 'lc_in';
+  var JOIN_OPENS_MIN = 15;
+
   var listEl = document.getElementById('classes-list');
   var emptyEl = document.getElementById('classes-empty');
   var countEl = document.getElementById('classes-count');
-  var myClassesLink = document.getElementById('my-classes-link');
+  var accountEl = document.getElementById('lc-account');
+  var noticeEl = document.getElementById('lc-notice');
   var modal = document.getElementById('enroll-modal');
   if (!listEl || !modal) return;
 
   var state = {
     cls: null, csrf: '', countries: [], user: null, mobile: null, enrolled: {}, apiOk: false,
-    sessions: [], sessionsLoaded: false, sessionsFailed: false
+    sessions: [], sessionsLoaded: false, sessionsFailed: false, sessionsAt: 0, busy: {}
   };
+
+  /* ---------- hint cookie + sign-up intent ---------- */
+
+  function hasHint() { return new RegExp('(?:^|;\\s*)' + HINT + '=1(?:;|$)').test(document.cookie); }
+  function clearHint() { document.cookie = HINT + '=; Max-Age=0; path=/'; }
+
+  var INTENT_KEY = 'lc_intent';
+  function saveIntent(id) { try { sessionStorage.setItem(INTENT_KEY, JSON.stringify({ id: String(id), t: Date.now() })); } catch (e) { /* storage blocked */ } }
+  function takeIntent() {
+    try {
+      var raw = sessionStorage.getItem(INTENT_KEY);
+      sessionStorage.removeItem(INTENT_KEY);
+      var v = raw && JSON.parse(raw);
+      // Only a sign-up started on this page, in this tab, in the last 20 minutes can enrol on return. A pasted link cannot.
+      return v && Date.now() - v.t < 20 * 60000 ? v.id : null;
+    } catch (e) { return null; }
+  }
 
   /* ---------- API ---------- */
 
@@ -44,23 +68,46 @@
     });
   }
 
+  function signedOut() {
+    state.user = null;
+    state.mobile = null;
+    state.enrolled = {};
+  }
+
   function applySession(data) {
     state.apiOk = true;
     state.csrf = data.csrfToken;
     state.countries = data.countries || [];
-    state.user = data.authenticated ? data.user : null;
-    state.mobile = data.authenticated ? data.mobile : null;
-    state.enrolled = {};
-    (data.enrolled || []).forEach(function (id) { state.enrolled[String(id)] = true; });
-    fillCountries();
-    if (myClassesLink) {
-      myClassesLink.href = API_ORIGIN + '/my-classes';
-      myClassesLink.classList.toggle('hidden', !state.user);
+    if (data.authenticated) {
+      state.user = data.user;
+      state.mobile = data.mobile || null;
+      state.enrolled = {};
+      (data.enrolled || []).forEach(function (id) { state.enrolled[String(id)] = true; });
+    } else {
+      signedOut();
+      clearHint();
+      restoreHeader();
     }
+    fillCountries();
   }
 
+  // Only asks the app when the hint cookie says there may be a login.
   function loadSession() {
+    if (!hasHint()) { signedOut(); return Promise.resolve(); }
     return request('me').then(applySession).catch(function () { state.apiOk = false; });
+  }
+
+  // Public data (no login, no personal data). Never creates a session on the server.
+  function loadSessions() {
+    return fetch(API_ORIGIN + '/live-classes/api/sessions', { headers: { 'Accept': 'application/json' } })
+      .then(function (res) { if (!res.ok) throw new Error('sessions'); return res.json(); })
+      .then(function (data) {
+        state.sessions = (data.sessions || []).map(toClass);
+        state.sessionsFailed = false;
+        state.sessionsAt = Date.now();
+      })
+      .catch(function () { state.sessionsFailed = true; })
+      .then(function () { state.sessionsLoaded = true; });
   }
 
   function toClass(s) {
@@ -77,16 +124,6 @@
       start: start,
       end: new Date(start.getTime() + s.durationMins * 60000)
     };
-  }
-
-  function loadSessions() {
-    return request('sessions')
-      .then(function (data) {
-        state.sessions = (data.sessions || []).map(toClass);
-        state.sessionsFailed = false;
-      })
-      .catch(function () { state.sessionsFailed = true; })
-      .then(function () { state.sessionsLoaded = true; });
   }
 
   /* ---------- formatting ---------- */
@@ -134,10 +171,69 @@
       fmtTime(cls.start) + ' – ' + fmtTime(cls.end) + ' IST';
   }
 
-  function maskMobile(m) {
-    if (!m) return '';
-    var n = m.number;
-    return m.countryCode + ' ' + (n.length > 4 ? n.slice(0, 2) + '••••' + n.slice(-2) : n);
+  /* ---------- notices (success, errors, explanations) ---------- */
+
+  var NOTICE_STYLE = {
+    ok: 'border-growth-accent/40 bg-growth-accent/10 text-text-heading',
+    info: 'border-primary/30 bg-primary/5 text-text-heading',
+    error: 'border-red-200 bg-red-50 text-red-700'
+  };
+
+  // html is built from escaped pieces only.
+  function notice(kind, html) {
+    noticeEl.className = 'mb-4 rounded-xl border px-4 py-3 text-sm focus:outline-none ' + (NOTICE_STYLE[kind] || NOTICE_STYLE.info);
+    noticeEl.innerHTML = html;
+    noticeEl.classList.remove('hidden');
+    noticeEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    noticeEl.focus({ preventScroll: true });
+  }
+
+  function myClassesUrl() { return API_ORIGIN + '/my-classes'; }
+  function joinUrl(id) { return API_ORIGIN + '/my-classes/sessions/' + encodeURIComponent(id) + '/join'; }
+  function signInUrl(id) { return API_ORIGIN + '/live-classes/google' + (id ? '?class=' + encodeURIComponent(id) : ''); }
+
+  /* ---------- account area (header of the list) ---------- */
+
+  function renderAccount() {
+    if (!accountEl) return;
+    if (state.user) {
+      accountEl.innerHTML =
+        '<span class="text-text-body hidden sm:inline">Hi, ' + esc(state.user.name.split(' ')[0]) + '</span>' +
+        '<a href="' + esc(myClassesUrl()) + '" class="font-semibold text-primary hover:underline">My classes &rarr;</a>' +
+        '<button type="button" data-logout class="text-text-body/80 hover:text-text-heading underline underline-offset-2">Log out</button>';
+    } else {
+      accountEl.innerHTML = '<a id="lc-signup-link" href="' + esc(signInUrl()) + '" class="inline-flex items-center px-4 py-2 rounded-full bg-primary text-white text-xs font-semibold hover:bg-primary-dark transition-all">Sign up / Log in</a>';
+    }
+  }
+
+  if (accountEl) {
+    accountEl.addEventListener('click', function (e) {
+      if (e.target.closest('[data-logout]')) logout();
+    });
+  }
+
+  function logout() {
+    request('logout', 'POST').then(function (data) {
+      state.csrf = data.csrfToken;
+    }).catch(function () { /* the app is unreachable: still forget locally */ }).then(function () {
+      signedOut();
+      clearHint();
+      restoreHeader();
+      renderAccount();
+      renderList();
+      notice('info', 'You have been logged out.');
+    });
+  }
+
+  // main.js turned the header's "Join Live Classes" into "My Classes" while signed in; put it back.
+  function restoreHeader() {
+    document.querySelectorAll('a[data-lc-swapped]').forEach(function (a) {
+      var label = null;
+      Array.prototype.forEach.call(a.children, function (c) { if (c.tagName === 'SPAN' && c.textContent.trim()) label = c; });
+      if (label) label.innerHTML = a.getAttribute('data-lc-swapped');
+      a.setAttribute('href', '/live-classes');
+      a.removeAttribute('data-lc-swapped');
+    });
   }
 
   /* ---------- class list ---------- */
@@ -154,19 +250,41 @@
   var ICON_CHEVRON = '<svg data-chevron class="w-4 h-4 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>';
   var ICON_ARROW = '<svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>';
 
-  function joinButton(cls) {
-    if (state.enrolled[cls.id]) return enrolledButton();
-    if (cls.isFull) return fullButton();
-    return '<button type="button" data-join="' + esc(cls.id) + '" class="w-full inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full bg-primary text-white text-sm font-semibold hover:bg-primary-dark transition-all">Join class ' + ICON_ARROW + '</button>';
-  }
+  var BTN = 'w-full inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full text-sm font-semibold transition-all ';
+  var BTN_PRIMARY = BTN + 'bg-primary text-white hover:bg-primary-dark';
+  var BTN_LABEL = BTN + 'bg-background text-text-body/70 border border-border';
 
-  function enrolledButton() {
-    return '<span class="w-full inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full bg-growth-accent/10 text-growth-accent text-sm font-semibold border border-growth-accent/30">' +
-      '<svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>Enrolled</span>';
-  }
+  // The state of one class for this visitor. Pure UI: the server re-checks everything on every request, and the
+  // Meet link is never in this page: the green button is a link to the app, which checks the enrolment and the window.
+  function actionHtml(cls) {
+    var now = Date.now();
+    var id = esc(cls.id);
 
-  function fullButton() {
-    return '<span class="w-full inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full bg-background text-text-body/70 text-sm font-semibold border border-border">Class full</span>';
+    if (now >= cls.end.getTime()) return '<span class="' + BTN_LABEL + '">Class ended</span>';
+
+    if (state.enrolled[cls.id]) {
+      var opens = new Date(cls.start.getTime() - JOIN_OPENS_MIN * 60000);
+      var head = '<span class="' + BTN + 'bg-growth-accent/10 text-growth-accent border border-growth-accent/30">Enrolled ✓</span>';
+      if (now >= opens.getTime()) {
+        return '<div class="flex flex-col gap-1.5 w-full">' + head +
+          '<a href="' + esc(joinUrl(cls.id)) + '" target="_blank" rel="noopener noreferrer" data-join-link class="' + BTN + 'bg-growth-accent text-white hover:brightness-110">Join class ' + ICON_ARROW + '</a></div>';
+      }
+      return '<div class="flex flex-col gap-1.5 w-full">' + head +
+        '<button type="button" disabled aria-disabled="true" class="' + BTN + 'bg-border/60 text-text-body/60 cursor-not-allowed">You can join ' + JOIN_OPENS_MIN + ' minutes before class</button>' +
+        '<span class="text-xs text-text-body/70 text-center">Opens at ' + esc(fmtTime(opens)) + ' IST</span></div>';
+    }
+
+    if (cls.isFull) return '<span class="' + BTN_LABEL + '">Class full</span>';
+
+    if (state.busy[cls.id]) return '<button type="button" disabled class="' + BTN_PRIMARY + ' opacity-70">Enrolling…</button>';
+
+    if (!state.user) {
+      return '<div class="flex flex-col items-stretch gap-1.5 w-full">' +
+        '<button type="button" data-signup="' + id + '" class="' + BTN_PRIMARY + '">Sign up to enrol ' + ICON_ARROW + '</button>' +
+        '<a href="' + esc(signInUrl(cls.id)) + '" data-login="' + id + '" class="text-xs text-center text-primary hover:underline">Already signed up? Log in</a></div>';
+    }
+
+    return '<button type="button" data-enrol="' + id + '" class="' + BTN_PRIMARY + '">Enrol ' + ICON_ARROW + '</button>';
   }
 
   function cardHtml(cls, index) {
@@ -174,8 +292,8 @@
     var rel = relativeLabel(cls);
     var relClass = rel === 'Live now' ? 'bg-red-50 text-red-600 border-red-200' : 'bg-cta-accent/10 text-amber-700 border-cta-accent/30';
     var detailsId = 'details-' + cls.id;
-    var seatsLeft = cls.spotsLeft !== null && cls.spotsLeft !== undefined && !cls.isFull && cls.spotsLeft <= 5
-      ? '<span class="px-2.5 py-1 rounded-full bg-red-50 text-red-600 border border-red-200 text-[11px] font-semibold">' + cls.spotsLeft + (cls.spotsLeft === 1 ? ' seat left' : ' seats left') + '</span>'
+    var seats = cls.spotsLeft !== null && cls.spotsLeft !== undefined && !cls.isFull
+      ? '<span class="px-2.5 py-1 rounded-full border text-[11px] font-semibold ' + (cls.spotsLeft <= 5 ? 'bg-red-50 text-red-600 border-red-200' : 'bg-background text-text-body border-border') + '">' + cls.spotsLeft + (cls.spotsLeft === 1 ? ' seat left' : ' seats left') + '</span>'
       : '';
     return '' +
       '<article data-class-card="' + esc(cls.id) + '" class="rounded-2xl bg-surface-card border ' + (isNext ? 'border-primary/40 shadow-lg' : 'border-border') + ' overflow-hidden">' +
@@ -189,7 +307,7 @@
             '<div class="flex flex-wrap items-center gap-2 mb-2">' +
               (isNext ? '<span class="px-2.5 py-1 rounded-full bg-growth-accent text-white text-[11px] font-semibold">Next class</span>' : '') +
               '<span class="px-2.5 py-1 rounded-full border text-[11px] font-semibold ' + relClass + '">' + esc(rel) + '</span>' +
-              seatsLeft +
+              seats +
             '</div>' +
             '<h3 class="font-semibold text-lg md:text-xl text-text-heading mb-2">' + esc(cls.topic) + '</h3>' +
             '<div class="flex flex-wrap items-center gap-x-4 gap-y-1 text-sm text-text-body">' +
@@ -197,9 +315,9 @@
               '<span class="inline-flex items-center px-2 py-0.5 rounded-md bg-background border border-border text-xs font-medium">' + esc(fmtDuration(cls.durationMins)) + '</span>' +
             '</div>' +
           '</div>' +
-          '<div class="flex flex-col sm:flex-row md:flex-col lg:flex-row gap-2.5 md:flex-shrink-0">' +
+          '<div class="flex flex-col gap-2.5 md:w-52 md:flex-shrink-0">' +
             '<button type="button" data-toggle="' + esc(detailsId) + '" aria-expanded="false" aria-controls="' + esc(detailsId) + '" class="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full border border-border text-text-heading text-sm font-semibold hover:border-primary/40 hover:text-primary transition-all"><span data-toggle-label>What you\'ll learn</span> ' + ICON_CHEVRON + '</button>' +
-            '<span data-join-slot>' + joinButton(cls) + '</span>' +
+            '<span data-action-slot class="block">' + actionHtml(cls) + '</span>' +
           '</div>' +
         '</div>' +
         '<div id="' + esc(detailsId) + '" hidden class="border-t border-border bg-background px-5 md:px-6 py-5">' +
@@ -212,6 +330,7 @@
                 }).join('') +
               '</ul>'
             : '') +
+          '<div class="mt-5 max-w-xs" data-detail-slot>' + actionHtml(cls) + '</div>' +
         '</div>' +
       '</article>';
   }
@@ -230,10 +349,27 @@
       if (countEl) countEl.textContent = '';
       return;
     }
+    // Keep any open "What you'll learn" panels open across a redraw.
+    var open = {};
+    listEl.querySelectorAll('[data-toggle][aria-expanded="true"]').forEach(function (b) { open[b.getAttribute('data-toggle')] = true; });
     classes = upcoming();
     listEl.innerHTML = classes.map(cardHtml).join('');
+    Object.keys(open).forEach(function (id) {
+      var btn = listEl.querySelector('[data-toggle="' + id + '"]');
+      if (btn) toggleDetails(btn, true);
+    });
     emptyEl.classList.toggle('hidden', classes.length > 0);
     if (countEl) countEl.textContent = classes.length ? classes.length + (classes.length === 1 ? ' upcoming class' : ' upcoming classes') : '';
+  }
+
+  // Redraw only the buttons (so expanded details and focus stay put).
+  function refreshButtons() {
+    classes.forEach(function (cls) {
+      var card = listEl.querySelector('[data-class-card="' + cls.id + '"]');
+      if (!card) return;
+      var html = actionHtml(cls);
+      card.querySelectorAll('[data-action-slot], [data-detail-slot]').forEach(function (el) { el.innerHTML = html; });
+    });
   }
 
   function findClass(id) {
@@ -241,34 +377,132 @@
     return null;
   }
 
+  function toggleDetails(toggle, forceOpen) {
+    var panel = document.getElementById(toggle.getAttribute('data-toggle'));
+    var open = forceOpen === true ? true : panel.hasAttribute('hidden');
+    panel.toggleAttribute('hidden', !open);
+    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    toggle.querySelector('[data-toggle-label]').textContent = open ? 'Hide details' : 'What you\'ll learn';
+    toggle.querySelector('[data-chevron]').style.transform = open ? 'rotate(180deg)' : '';
+  }
+
   listEl.addEventListener('click', function (e) {
     var toggle = e.target.closest('[data-toggle]');
-    if (toggle) {
-      var panel = document.getElementById(toggle.getAttribute('data-toggle'));
-      var open = panel.hasAttribute('hidden');
-      panel.toggleAttribute('hidden', !open);
-      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
-      toggle.querySelector('[data-toggle-label]').textContent = open ? 'Hide details' : 'What you\'ll learn';
-      toggle.querySelector('[data-chevron]').style.transform = open ? 'rotate(180deg)' : '';
-      return;
-    }
-    var join = e.target.closest('[data-join]');
-    if (join) openModal(findClass(join.getAttribute('data-join')));
+    if (toggle) { toggleDetails(toggle); return; }
+
+    var signup = e.target.closest('[data-signup]');
+    if (signup) { startSignup(signup.getAttribute('data-signup')); return; }
+
+    var login = e.target.closest('[data-login]');
+    if (login) { saveIntent(login.getAttribute('data-login')); return; } // the link itself goes to Google
+
+    var enrolBtn = e.target.closest('[data-enrol]');
+    if (enrolBtn) startEnrol(findClass(enrolBtn.getAttribute('data-enrol')));
   });
 
-  function setSlot(id, html) {
-    var card = listEl.querySelector('[data-class-card="' + id + '"]');
-    if (card) card.querySelector('[data-join-slot]').innerHTML = html;
+  /* ---------- sign up, then enrol ---------- */
+
+  function startSignup(id) {
+    saveIntent(id);
+    window.location.href = signInUrl(id);
   }
 
-  function markEnrolled(id) { setSlot(id, enrolledButton()); }
-
-  function markFull(id) {
-    state.sessions.forEach(function (c) { if (c.id === String(id)) c.isFull = true; });
-    setSlot(id, fullButton());
+  // One click for a signed-in student with a mobile number on file. Asks for the number only if it is missing.
+  function startEnrol(cls) {
+    if (!cls) return;
+    if (!state.user) { startSignup(cls.id); return; }
+    if (!state.mobile) { openMobileModal(cls); return; }
+    enrolNow(cls, {});
   }
 
-  /* ---------- mobile number ---------- */
+  function setBusy(id, on) {
+    if (on) state.busy[id] = true; else delete state.busy[id];
+    refreshButtons();
+  }
+
+  function enrolNow(cls, extra, retried) {
+    setBusy(cls.id, true);
+    return request('enrol', 'POST', Object.assign({ session_id: Number(cls.id) }, extra || {}))
+      .then(function (data) {
+        state.mobile = data.mobile || state.mobile;
+        state.enrolled[cls.id] = true;
+        setBusy(cls.id, false);
+        closeModal();
+        notice('ok',
+          '<strong>You\'re enrolled in ' + esc(cls.topic) + '.</strong> ' + esc(whenText(cls)) + '. ' +
+          (data.emailSent ? 'A confirmation is on its way to <strong>' + esc(state.user.email) + '</strong>. ' : 'We couldn\'t queue the confirmation email, but your seat is saved. ') +
+          'Your <strong>Join</strong> button appears here and in <a class="underline font-semibold" href="' + esc(myClassesUrl()) + '">My classes</a> ' + JOIN_OPENS_MIN + ' minutes before the class starts.');
+        return true;
+      })
+      .catch(function (err) {
+        setBusy(cls.id, false);
+        return handleEnrolError(err, cls, extra, retried);
+      });
+  }
+
+  function handleEnrolError(err, cls, extra, retried) {
+    var data = err.data || {};
+
+    // The 2-hour login lapsed (or this tab is old): ask the app again. The 30-day cookie usually signs the student
+    // straight back in, so retry once instead of sending them to the sign-in again.
+    if ((err.status === 401 || err.status === 419) && !retried) {
+      document.cookie = HINT + '=1; path=/'; // let loadSession ask the app even if the hint was dropped
+      return loadSession().then(function () {
+        renderAccount();
+        if (state.user) return enrolNow(cls, extra, true);
+        refreshButtons();
+        notice('info', 'Please sign up or log in to enrol in <strong>' + esc(cls.topic) + '</strong>. It takes a few seconds.');
+        return false;
+      });
+    }
+    if (err.status === 401 || err.status === 419) {
+      signedOut(); clearHint(); restoreHeader(); renderAccount(); refreshButtons();
+      notice('info', 'Your session ended. Please log in again to enrol.');
+      return false;
+    }
+    if (err.status === 409 && data.code === 'already_enrolled') {
+      state.enrolled[cls.id] = true;
+      closeModal(); refreshButtons();
+      notice('info', 'You\'re already enrolled in <strong>' + esc(cls.topic) + '</strong>. Find it in <a class="underline font-semibold" href="' + esc(myClassesUrl()) + '">My classes</a>.');
+      return false;
+    }
+    if (err.status === 409 && data.code === 'full') {
+      cls.isFull = true;
+      closeModal(); refreshButtons();
+      notice('error', 'Sorry, <strong>' + esc(cls.topic) + '</strong> is full. Other upcoming classes are listed below.');
+      return false;
+    }
+    if (err.status === 422 && data.code === 'closed') {
+      closeModal();
+      notice('error', esc(data.message || 'This class is no longer available.') + ' Here are the classes that are open.');
+      loadSessions().then(function () { renderList(); });
+      return false;
+    }
+    if (err.status === 422 && data.errors) {
+      var first = (data.errors.mobile || data.errors.country_code || [])[0] || data.message || 'Please check your details.';
+      if (!modal.classList.contains('hidden')) setError('mobile', first); else { state.mobile = null; openMobileModal(cls); setError('mobile', first); }
+      return false;
+    }
+    if (err.status === 403) {
+      closeModal();
+      notice('error', 'Please verify your email address first, or sign in with Google.');
+      return false;
+    }
+    closeModal();
+    notice('error', 'Something went wrong, and you are not enrolled yet. Please try again in a moment.');
+    return false;
+  }
+
+  /* ---------- mobile number (asked once) ---------- */
+
+  function q(sel) { return modal.querySelector(sel); }
+
+  function setError(name, message) {
+    var el = q('[data-error="' + name + '"]');
+    if (!el) return;
+    el.textContent = message || '';
+    el.classList.toggle('hidden', !message);
+  }
 
   function normaliseMobile(raw) {
     var digits = String(raw).replace(/\D+/g, '');
@@ -288,6 +522,7 @@
 
   function fillCountries() {
     var select = q('[data-country]');
+    if (!state.countries.length) return;
     select.innerHTML = state.countries.map(function (c) {
       return '<option value="' + esc(c.code) + '">' + esc(c.name) + ' (' + esc(c.code) + ')</option>';
     }).join('');
@@ -299,86 +534,20 @@
     updateMobileHint();
   });
 
-  /* ---------- enrol modal ---------- */
-
-  var STEP_INDEX = { account: 0, details: 1, confirm: 1 };
-  var panels = modal.querySelectorAll('[data-step-panel]');
-  var dots = modal.querySelectorAll('[data-dot]');
-  var steps = modal.querySelector('[data-steps]');
-
-  function q(sel) { return modal.querySelector(sel); }
-
-  function setError(name, message) {
-    var el = q('[data-error="' + name + '"]');
-    if (!el) return;
-    el.textContent = message || '';
-    el.classList.toggle('hidden', !message);
-  }
-
-  function clearErrors() {
-    modal.querySelectorAll('[data-error]').forEach(function (el) { el.textContent = ''; el.classList.add('hidden'); });
-  }
-
-  function setBusy(btn, busy, label) {
-    if (busy) {
-      btn.dataset.label = btn.innerHTML;
-      btn.innerHTML = label;
-      btn.disabled = true;
-    } else {
-      btn.innerHTML = btn.dataset.label || btn.innerHTML;
-      btn.disabled = false;
-    }
-  }
-
-  function showStep(name) {
-    clearErrors();
-    panels.forEach(function (p) { p.classList.toggle('hidden', p.getAttribute('data-step-panel') !== name); });
-    var idx = STEP_INDEX[name];
-    steps.classList.toggle('hidden', idx === undefined);
-    dots.forEach(function (d, i) {
-      d.classList.toggle('bg-primary', idx !== undefined && i <= idx);
-      d.classList.toggle('bg-border', idx === undefined || i > idx);
-    });
-    var target = q('[data-step-panel="' + name + '"] [data-autofocus]');
-    if (target) setTimeout(function () { target.focus(); }, 50);
-  }
-
-  function fillUser() {
-    if (!state.user) return;
-    modal.querySelectorAll('[data-user-name]').forEach(function (el) { el.textContent = state.user.name; });
-    modal.querySelectorAll('[data-user-email]').forEach(function (el) { el.textContent = state.user.email; });
-    modal.querySelectorAll('[data-user-initial]').forEach(function (el) { el.textContent = state.user.name.charAt(0).toUpperCase(); });
-    modal.querySelectorAll('[data-user-mobile]').forEach(function (el) { el.textContent = maskMobile(state.mobile); });
-  }
-
-  function prefillMobileForm() {
-    var form = q('[data-form="details"]');
-    if (state.mobile) {
-      q('[data-country]').value = state.mobile.countryCode;
-      form.elements.mobile.value = state.mobile.number;
-    } else {
-      form.elements.mobile.value = '';
-    }
-    updateMobileHint();
-  }
-
-  function openModal(cls) {
-    if (!cls) return;
+  function openMobileModal(cls) {
     state.cls = cls;
     q('[data-class-topic]').textContent = cls.topic;
     q('[data-class-when]').textContent = whenText(cls);
+    modal.querySelectorAll('[data-user-name]').forEach(function (el) { el.textContent = state.user.name; });
+    modal.querySelectorAll('[data-user-email]').forEach(function (el) { el.textContent = state.user.email; });
+    modal.querySelectorAll('[data-user-initial]').forEach(function (el) { el.textContent = state.user.name.charAt(0).toUpperCase(); });
+    q('[data-form="details"]').elements.mobile.value = '';
+    setError('mobile', '');
+    updateMobileHint();
     modal.classList.remove('hidden');
     modal.classList.add('flex');
     document.body.classList.add('overflow-hidden');
-    fillUser();
-    if (!state.user) {
-      showStep('account');
-    } else if (state.mobile) {
-      showStep('confirm');
-    } else {
-      prefillMobileForm();
-      showStep('details');
-    }
+    setTimeout(function () { q('[data-autofocus]').focus(); }, 50);
   }
 
   function closeModal() {
@@ -389,88 +558,12 @@
 
   modal.addEventListener('click', function (e) {
     if (e.target.closest('[data-close]')) closeModal();
+    if (e.target.closest('[data-signout]')) { closeModal(); logout(); }
   });
 
   document.addEventListener('keydown', function (e) {
     if (e.key === 'Escape' && !modal.classList.contains('hidden')) closeModal();
   });
-
-  q('[data-google-btn]').addEventListener('click', function () {
-    if (!state.apiOk) {
-      setError('account', 'Sign-in is temporarily unavailable. Please try again later, or message me on WhatsApp.');
-      return;
-    }
-    window.location.href = API_ORIGIN + '/live-classes/google?class=' + encodeURIComponent(state.cls.id);
-  });
-
-  function backToSignIn(message) {
-    state.user = null;
-    state.mobile = null;
-    state.enrolled = {};
-    if (myClassesLink) myClassesLink.classList.add('hidden');
-    renderList();
-    showStep('account');
-    if (message) setError('account', message);
-  }
-
-  function handleEnrolError(err, errorTarget) {
-    var data = err.data || {};
-    var id = state.cls.id;
-
-    if (err.status === 401 || err.status === 419) {
-      loadSession().then(function () { backToSignIn('Your session expired. Please sign in again.'); });
-      return;
-    }
-    if (err.status === 409 && data.code === 'already_enrolled') {
-      state.enrolled[id] = true;
-      markEnrolled(id);
-      setError(errorTarget, "You're already enrolled in this class. You'll find it in My Classes.");
-      return;
-    }
-    if (err.status === 409 && data.code === 'full') {
-      markFull(id);
-      setError(errorTarget, data.message || 'Sorry, this class is full.');
-      return;
-    }
-    if (err.status === 422 && data.code === 'closed') {
-      setError(errorTarget, data.message || 'This class is no longer available.');
-      loadSessions().then(renderList);
-      return;
-    }
-    if (err.status === 422 && data.errors) {
-      var first = data.errors.mobile || data.errors.country_code || [];
-      setError(errorTarget, first[0] || data.message || 'Please check your details.');
-      return;
-    }
-    if (err.status === 403) {
-      setError(errorTarget, 'Please verify your email address first, or sign in with Google.');
-      return;
-    }
-    setError(errorTarget, 'Something went wrong. Please try again.');
-  }
-
-  function enrol(extra, btn, errorTarget) {
-    setBusy(btn, true, 'Enrolling…');
-    var body = Object.assign({ session_id: Number(state.cls.id) }, extra || {});
-    request('enrol', 'POST', body)
-      .then(function (data) {
-        setBusy(btn, false);
-        state.mobile = data.mobile;
-        state.enrolled[state.cls.id] = true;
-        markEnrolled(state.cls.id);
-        fillUser();
-        q('[data-done-topic]').textContent = state.cls.topic;
-        q('[data-done-when]').textContent = whenText(state.cls);
-        q('[data-done-email-note]').classList.toggle('hidden', !data.emailSent);
-        q('[data-done-no-email-note]').classList.toggle('hidden', !!data.emailSent);
-        q('[data-my-classes-btn]').href = API_ORIGIN + '/my-classes';
-        showStep('done');
-      })
-      .catch(function (err) {
-        setBusy(btn, false);
-        handleEnrolError(err, errorTarget);
-      });
-  }
 
   q('[data-form="details"]').addEventListener('submit', function (e) {
     e.preventDefault();
@@ -481,27 +574,7 @@
       return;
     }
     setError('mobile', '');
-    enrol({ country_code: country.code, mobile: number }, this.querySelector('button[type="submit"]'), 'mobile');
-  });
-
-  q('[data-confirm-btn]').addEventListener('click', function () {
-    enrol({}, this, 'confirm');
-  });
-
-  q('[data-change-number]').addEventListener('click', function () {
-    prefillMobileForm();
-    showStep('details');
-  });
-
-  modal.querySelectorAll('[data-signout]').forEach(function (btn) {
-    btn.addEventListener('click', function () {
-      request('logout', 'POST').then(function (data) {
-        state.csrf = data.csrfToken;
-        backToSignIn();
-      }).catch(function () {
-        backToSignIn('Could not sign out. Please refresh the page and try again.');
-      });
-    });
+    enrolNow(state.cls, { country_code: country.code, mobile: number });
   });
 
   /* ---------- coming back from Google ---------- */
@@ -518,20 +591,52 @@
     var error = params.get('signin');
     if (!id && !error) return;
     history.replaceState(null, '', location.pathname);
-    var cls = id ? findClass(id) : null;
-    if (!cls) return;
+
     if (error) {
-      openModal(cls);
-      showStep('account');
-      setError('account', SIGNIN_ERRORS[error] || 'Sign-in did not complete. Please try again.');
-    } else if (state.user && !state.enrolled[cls.id]) {
-      openModal(cls);
+      notice('error', esc(SIGNIN_ERRORS[error] || 'Sign-in did not complete. Please try again.'));
+      return;
+    }
+
+    var cls = findClass(id);
+    var intent = takeIntent();
+
+    if (!cls) {
+      notice('info', 'That class is no longer open. Here are the upcoming classes.');
+      return;
+    }
+    if (!state.user) {
+      notice('error', 'We could not confirm your sign-in. Please try again.');
+      return;
+    }
+    if (state.enrolled[cls.id]) {
+      refreshButtons();
+      notice('info', 'You\'re already enrolled in <strong>' + esc(cls.topic) + '</strong>.');
+      return;
+    }
+    if (intent === cls.id) {
+      // The student started the sign-up from this class: finish it (mobile number first, only if missing).
+      startEnrol(cls);
+    } else {
+      var card = listEl.querySelector('[data-class-card="' + cls.id + '"]');
+      if (card) card.scrollIntoView({ behavior: 'smooth', block: 'center' });
     }
   }
 
+  /* ---------- start ---------- */
+
+  renderAccount();
   renderList();
   Promise.all([loadSession(), loadSessions()]).then(function () {
+    renderAccount();
     renderList();
     handleReturn();
+  });
+
+  // Keep "opens at" / "Join class" / "Class ended" right without a reload, and the seat counts fresh.
+  setInterval(refreshButtons, 20000);
+  document.addEventListener('visibilitychange', function () {
+    if (document.hidden) return;
+    refreshButtons();
+    if (Date.now() - state.sessionsAt > 120000) loadSessions().then(function () { if (!state.sessionsFailed) renderList(); });
   });
 })();

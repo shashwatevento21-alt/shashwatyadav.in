@@ -146,7 +146,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </li>
         <li class="flex items-start gap-3 p-4 rounded-2xl bg-surface-card border border-border">
           <span class="w-8 h-8 rounded-full bg-primary text-white text-sm font-bold flex items-center justify-center flex-shrink-0">2</span>
-          <div><h3 class="text-sm font-semibold text-text-heading">Sign in &amp; add your number</h3><p class="text-xs text-text-body mt-1">Sign in with Google and add your mobile number.</p></div>
+          <div><h3 class="text-sm font-semibold text-text-heading">Sign up once</h3><p class="text-xs text-text-body mt-1">Sign in with Google and add your mobile number once. After that, enrolling is one tap.</p></div>
         </li>
         <li class="flex items-start gap-3 p-4 rounded-2xl bg-surface-card border border-border">
           <span class="w-8 h-8 rounded-full bg-primary text-white text-sm font-bold flex items-center justify-center flex-shrink-0">3</span>
@@ -165,10 +165,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <p id="classes-count" class="text-sm text-text-body mt-1"></p>
         </div>
         <div class="flex flex-col items-end gap-1">
-          <a id="my-classes-link" href="#" class="hidden text-sm font-semibold text-primary hover:underline">My classes &rarr;</a>
+          <div id="lc-account" class="flex flex-wrap items-center justify-end gap-x-3 gap-y-1 text-sm">
+            <!-- Works without JavaScript: the link goes straight to Google sign-in. The script replaces it with My classes / Log out for signed-in students. -->
+            <a id="lc-signup-link" href="/classes/live-classes/google" class="inline-flex items-center px-4 py-2 rounded-full bg-primary text-white text-xs font-semibold hover:bg-primary-dark transition-all">Sign up / Log in</a>
+          </div>
           <p class="text-xs font-mono text-text-body/70">All times in IST (India Standard Time)</p>
         </div>
       </div>
+
+      <div id="lc-notice" class="hidden mb-4 rounded-xl border px-4 py-3 text-sm" role="status" aria-live="polite" tabindex="-1"></div>
+      <noscript><p class="text-sm text-text-body mb-4">The class schedule needs JavaScript. You can also message me on WhatsApp to ask about the next class.</p></noscript>
 
       <div id="classes-list" class="space-y-4"></div>
 
@@ -249,7 +255,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="absolute inset-0 bg-black/60 backdrop-blur-sm" data-close></div>
     <div class="relative w-full max-w-md max-h-[92vh] overflow-y-auto rounded-2xl bg-white shadow-2xl">
       <div class="flex items-center justify-between px-6 pt-5 pb-3">
-        <h2 id="enroll-title" class="font-semibold text-lg text-text-heading">Join this class</h2>
+        <h2 id="enroll-title" class="font-semibold text-lg text-text-heading">Almost there</h2>
         <button type="button" data-close class="text-text-body/60 hover:text-text-heading" aria-label="Close">
           <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
         </button>
@@ -260,25 +266,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <p data-class-when class="text-xs text-text-body mt-0.5"></p>
       </div>
 
-      <div data-steps class="flex gap-1.5 mx-6 mb-5" aria-hidden="true">
-        <span data-dot class="h-1 flex-1 rounded-full bg-primary"></span>
-        <span data-dot class="h-1 flex-1 rounded-full bg-border"></span>
-      </div>
-
       <div class="px-6 pb-6">
 
-        <!-- Step 1: sign in with Google -->
-        <div data-step-panel="account">
-          <p class="text-sm text-text-body mb-4">Sign in with your Google account to join. We only use your name and email.</p>
-          <button type="button" data-google-btn data-autofocus class="w-full flex items-center justify-center gap-3 px-4 py-2.5 rounded-full border border-border bg-white text-sm font-semibold text-text-heading hover:bg-background transition-colors">
-            <svg class="w-5 h-5" viewBox="0 0 48 48" aria-hidden="true"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg>
-            Continue with Google
-          </button>
-          <p data-error="account" class="hidden text-xs text-red-600 mt-3"></p>
-        </div>
-
-        <!-- Step 2: mobile number + enrol -->
-        <div data-step-panel="details" class="hidden">
+        <!-- Asked once, only when no mobile number is saved yet -->
+        <div data-step-panel="details">
+          <p class="text-sm text-text-body mb-3">One last step: add your mobile number so I can reach you about this class. You only do this once.</p>
           <div class="flex items-center gap-3 mb-4 px-3 py-2.5 rounded-xl bg-background border border-border">
             <span data-user-initial class="w-8 h-8 rounded-full bg-primary text-white text-sm font-bold flex items-center justify-center flex-shrink-0"></span>
             <div class="min-w-0 flex-1">
@@ -297,48 +289,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               <p data-error="mobile" class="hidden text-xs text-red-600 mt-1"></p>
               <p data-mobile-hint class="text-xs text-text-body/70 mt-1.5"></p>
             </div>
-            <button type="submit" class="w-full px-5 py-2.5 rounded-full bg-primary text-white text-sm font-semibold hover:bg-primary-dark transition-all">Enrol in this class</button>
+            <button type="submit" class="w-full px-5 py-2.5 rounded-full bg-primary text-white text-sm font-semibold hover:bg-primary-dark transition-all">Add number &amp; enrol</button>
           </form>
-        </div>
-
-        <!-- Returning student with a saved number -->
-        <div data-step-panel="confirm" class="hidden">
-          <div class="flex items-center gap-3 mb-3 px-3 py-2.5 rounded-xl bg-background border border-border">
-            <span data-user-initial class="w-8 h-8 rounded-full bg-primary text-white text-sm font-bold flex items-center justify-center flex-shrink-0"></span>
-            <div class="min-w-0 flex-1">
-              <p data-user-name class="text-sm font-semibold text-text-heading truncate"></p>
-              <p data-user-email class="text-xs text-text-body truncate"></p>
-            </div>
-            <button type="button" data-signout class="text-xs font-semibold text-primary hover:underline flex-shrink-0">Not you?</button>
-          </div>
-          <p class="text-sm text-text-body mb-4">Mobile: <strong data-user-mobile class="text-text-heading"></strong> <button type="button" data-change-number class="text-primary font-semibold hover:underline">Change</button></p>
-          <p data-error="confirm" class="hidden text-xs text-red-600 mb-3"></p>
-          <button type="button" data-confirm-btn data-autofocus class="w-full px-5 py-2.5 rounded-full bg-primary text-white text-sm font-semibold hover:bg-primary-dark transition-all">Confirm enrolment</button>
-        </div>
-
-        <!-- Done -->
-        <div data-step-panel="done" class="hidden text-center py-2">
-          <div class="w-14 h-14 mx-auto mb-4 rounded-full bg-growth-accent/10 flex items-center justify-center">
-            <svg class="w-7 h-7 text-growth-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-          </div>
-          <h3 class="font-semibold text-xl text-text-heading mb-1">You're enrolled!</h3>
-          <p data-done-topic class="text-sm font-semibold text-text-heading"></p>
-          <p data-done-when class="text-sm text-text-body mb-4"></p>
-          <p data-done-email-note class="text-xs text-text-body mb-2">A confirmation is on its way to <strong data-user-email class="text-text-heading"></strong>.</p>
-          <p data-done-no-email-note class="hidden text-xs text-text-body mb-2">You're enrolled, but we couldn't send the confirmation email just now.</p>
-          <p class="text-xs text-text-body mb-5">Your <strong>Join</strong> button appears on <strong>My Classes</strong> 15 minutes before the class starts.</p>
-          <div class="flex flex-col sm:flex-row gap-2.5 justify-center">
-            <a data-my-classes-btn href="#" class="px-6 py-2.5 rounded-full bg-primary text-white text-sm font-semibold hover:bg-primary-dark transition-all text-center">Open My Classes</a>
-            <button type="button" data-close data-autofocus class="px-6 py-2.5 rounded-full border border-border text-text-heading text-sm font-semibold hover:border-primary/40 transition-all">Done</button>
-          </div>
         </div>
 
       </div>
     </div>
   </div>
 
-  <script src="/assets/js/main.js"></script>
+  <script src="/assets/js/main.js?v=20261009"></script>
   <script src="/assets/js/chatbot-widget.js"></script>
-  <script src="/assets/js/live-classes.js?v=20261008"></script>
+  <script src="/assets/js/live-classes.js?v=20261009"></script>
 </body>
 </html>

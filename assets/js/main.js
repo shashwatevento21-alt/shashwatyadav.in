@@ -405,3 +405,26 @@ function handleFormSubmission(event) {
     })
     .catch(showError);
 }
+
+// Header: a student who is signed in to Live Classes sees "My Classes" instead of "Join Live Classes".
+// Reads only the small "logged in" hint cookie set by the Live Classes app (value "1", no personal data) and makes no
+// network call. It is just a label and a link: My Classes itself checks the real login. Without JavaScript, or without
+// the cookie, the original "Join Live Classes" link stays and works.
+(function () {
+  try {
+    if (!/(?:^|;\s*)lc_in=1(?:;|$)/.test(document.cookie)) return;
+    var isLocal = /^(localhost|127\.0\.0\.1)$/.test(location.hostname);
+    var myClasses = (isLocal ? location.protocol + '//' + location.hostname + ':8000' : '/classes') + '/my-classes';
+    document.querySelectorAll('a[href="/live-classes"]').forEach(function (a) {
+      if (a.textContent.replace(/\s+/g, ' ').trim() !== 'Join Live Classes') return;
+      // The label is the last direct <span> child (one header variant nests a hidden "Live " span inside it).
+      var label = null;
+      Array.prototype.forEach.call(a.children, function (c) { if (c.tagName === 'SPAN' && c.textContent.trim()) label = c; });
+      if (!label) return;
+      // Remember the original so the Live Classes page can put it back on log out.
+      a.setAttribute('data-lc-swapped', label.innerHTML);
+      label.textContent = 'My Classes';
+      a.setAttribute('href', myClasses);
+    });
+  } catch (e) { /* the header just keeps its default link */ }
+})();
