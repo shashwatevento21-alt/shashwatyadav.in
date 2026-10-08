@@ -18,13 +18,14 @@
   var emptyEl = document.getElementById('classes-empty');
   var countEl = document.getElementById('classes-count');
   var accountEl = document.getElementById('lc-account');
+  var filtersEl = document.getElementById('lc-filters');
   var noticeEl = document.getElementById('lc-notice');
   var modal = document.getElementById('enroll-modal');
   if (!listEl || !modal) return;
 
   var state = {
     cls: null, csrf: '', countries: [], user: null, mobile: null, enrolled: {}, apiOk: false,
-    sessions: [], sessionsLoaded: false, sessionsFailed: false, sessionsAt: 0, busy: {}
+    sessions: [], sessionsLoaded: false, sessionsFailed: false, sessionsAt: 0, busy: {}, filter: 'all'
   };
 
   /* ---------- hint cookie + sign-up intent ---------- */
@@ -227,11 +228,14 @@
 
   // main.js turned the header's "Join Live Classes" into "My Classes" while signed in; put it back.
   function restoreHeader() {
+    document.querySelectorAll('a[data-lc-added]').forEach(function (a) { a.parentNode.removeChild(a); });
     document.querySelectorAll('a[data-lc-swapped]').forEach(function (a) {
       var label = null;
       Array.prototype.forEach.call(a.children, function (c) { if (c.tagName === 'SPAN' && c.textContent.trim()) label = c; });
       if (label) label.innerHTML = a.getAttribute('data-lc-swapped');
       a.setAttribute('href', '/live-classes');
+      if (a.getAttribute('data-lc-dot') && a.firstElementChild) { a.firstElementChild.classList.remove('hidden'); a.removeAttribute('data-lc-dot'); }
+      if (a.getAttribute('data-lc-class')) { a.className = a.getAttribute('data-lc-class'); a.removeAttribute('data-lc-class'); }
       a.removeAttribute('data-lc-swapped');
     });
   }
@@ -287,8 +291,20 @@
     return '<button type="button" data-enrol="' + id + '" class="' + BTN_PRIMARY + '">Enrol ' + ICON_ARROW + '</button>';
   }
 
-  function cardHtml(cls, index) {
-    var isNext = index === 0;
+  // A class that shares time with one the student is enrolled in: a note, never a block.
+  function overlapNote(cls) {
+    if (!state.user || state.enrolled[cls.id]) return '';
+    for (var i = 0; i < state.sessions.length; i++) {
+      var e = state.sessions[i];
+      if (e.id !== cls.id && state.enrolled[e.id] && e.start < cls.end && cls.start < e.end) {
+        return '<p class="mt-2 inline-block rounded-md bg-amber-50 border border-amber-200 px-2 py-1 text-xs text-amber-800">Overlaps with ' + esc(e.topic) + ' at ' + esc(fmtTime(e.start)) + ' IST</p>';
+      }
+    }
+    return '';
+  }
+
+  function cardHtml(cls) {
+    var isNext = classes.length > 0 && classes[0].id === cls.id;
     var rel = relativeLabel(cls);
     var relClass = rel === 'Live now' ? 'bg-red-50 text-red-600 border-red-200' : 'bg-cta-accent/10 text-amber-700 border-cta-accent/30';
     var detailsId = 'details-' + cls.id;
@@ -314,6 +330,7 @@
               '<span class="inline-flex items-center gap-1.5">' + ICON_CLOCK + esc(fmtTime(cls.start) + ' – ' + fmtTime(cls.end) + ' IST') + '</span>' +
               '<span class="inline-flex items-center px-2 py-0.5 rounded-md bg-background border border-border text-xs font-medium">' + esc(fmtDuration(cls.durationMins)) + '</span>' +
             '</div>' +
+            overlapNote(cls) +
           '</div>' +
           '<div class="flex flex-col gap-2.5 md:w-52 md:flex-shrink-0">' +
             '<button type="button" data-toggle="' + esc(detailsId) + '" aria-expanded="false" aria-controls="' + esc(detailsId) + '" class="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full border border-border text-text-heading text-sm font-semibold hover:border-primary/40 hover:text-primary transition-all"><span data-toggle-label>What you\'ll learn</span> ' + ICON_CHEVRON + '</button>' +
@@ -353,14 +370,61 @@
     var open = {};
     listEl.querySelectorAll('[data-toggle][aria-expanded="true"]').forEach(function (b) { open[b.getAttribute('data-toggle')] = true; });
     classes = upcoming();
-    listEl.innerHTML = classes.map(cardHtml).join('');
+    renderFilters();
+    var shown = classes.filter(function (c) {
+      if (!state.user || state.filter === 'all') return true;
+      return state.filter === 'enrolled' ? !!state.enrolled[c.id] : !state.enrolled[c.id];
+    });
+    listEl.innerHTML = shown.length || !classes.length ? shown.map(cardHtml).join('') : emptyFilterHtml();
     Object.keys(open).forEach(function (id) {
       var btn = listEl.querySelector('[data-toggle="' + id + '"]');
       if (btn) toggleDetails(btn, true);
     });
     emptyEl.classList.toggle('hidden', classes.length > 0);
-    if (countEl) countEl.textContent = classes.length ? classes.length + (classes.length === 1 ? ' upcoming class' : ' upcoming classes') : '';
+    if (countEl) {
+      countEl.textContent = !classes.length ? '' : shown.length === classes.length
+        ? classes.length + (classes.length === 1 ? ' upcoming class' : ' upcoming classes')
+        : 'Showing ' + shown.length + ' of ' + classes.length + ' upcoming classes';
+    }
   }
+
+  /* ---------- filter chips (signed-in students only; the public list itself is never personalised) ---------- */
+
+  var CHIPS = [['all', 'All upcoming'], ['enrolled', 'Enrolled'], ['notenrolled', 'Not enrolled yet']];
+
+  function filterCounts() {
+    var all = classes.length, mine = classes.filter(function (c) { return !!state.enrolled[c.id]; }).length;
+    return { all: all, enrolled: mine, notenrolled: all - mine };
+  }
+
+  function renderFilters() {
+    if (!filtersEl) return;
+    if (!state.user || !classes.length) { filtersEl.classList.add('hidden'); filtersEl.classList.remove('flex'); state.filter = 'all'; return; }
+    var n = filterCounts();
+    filtersEl.innerHTML = CHIPS.map(function (c) {
+      var on = state.filter === c[0];
+      return '<button type="button" data-filter="' + c[0] + '" aria-pressed="' + on + '" class="px-4 py-2 rounded-full border text-sm font-semibold transition-all ' +
+        (on ? 'bg-primary text-white border-primary' : 'bg-white text-text-heading border-border hover:border-primary/40') + '">' + c[1] + ' (' + n[c[0]] + ')</button>';
+    }).join('');
+    filtersEl.classList.remove('hidden');
+    filtersEl.classList.add('flex');
+  }
+
+  function emptyFilterHtml() {
+    var msg = state.filter === 'enrolled'
+      ? 'You haven\'t enrolled in any upcoming class yet.'
+      : 'You\'re enrolled in every upcoming class. New dates are added regularly.';
+    return '<div class="text-center rounded-2xl bg-surface-card border border-border px-6 py-10">' +
+      '<p class="text-sm text-text-body mb-4">' + msg + '</p>' +
+      '<button type="button" data-filter="all" class="inline-flex items-center px-5 py-2.5 rounded-full bg-primary text-white text-sm font-semibold hover:bg-primary-dark transition-all">Show all upcoming classes</button></div>';
+  }
+
+  document.addEventListener('click', function (e) {
+    var chip = e.target.closest('[data-filter]');
+    if (chip) { state.filter = chip.getAttribute('data-filter'); renderList(); return; }
+    var more = e.target.closest('[data-show-all]');
+    if (more) { state.filter = 'all'; renderList(); listEl.scrollIntoView({ behavior: 'smooth', block: 'start' }); e.preventDefault(); }
+  });
 
   // Redraw only the buttons (so expanded details and focus stay put).
   function refreshButtons() {
@@ -431,7 +495,9 @@
         notice('ok',
           '<strong>You\'re enrolled in ' + esc(cls.topic) + '.</strong> ' + esc(whenText(cls)) + '. ' +
           (data.emailSent ? 'A confirmation is on its way to <strong>' + esc(state.user.email) + '</strong>. ' : 'We couldn\'t queue the confirmation email, but your seat is saved. ') +
-          'Your <strong>Join</strong> button appears here and in <a class="underline font-semibold" href="' + esc(myClassesUrl()) + '">My classes</a> ' + JOIN_OPENS_MIN + ' minutes before the class starts.');
+          'Your <strong>Join</strong> button appears here and in <a class="underline font-semibold" href="' + esc(myClassesUrl()) + '">My classes</a> ' + JOIN_OPENS_MIN + ' minutes before the class starts. ' +
+          '<a href="#classes-list" data-show-all class="underline font-semibold">Browse more classes</a>');
+        renderFilters();
         return true;
       })
       .catch(function (err) {

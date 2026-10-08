@@ -406,10 +406,10 @@ function handleFormSubmission(event) {
     .catch(showError);
 }
 
-// Header: a student who is signed in to Live Classes sees "My Classes" instead of "Join Live Classes".
-// Reads only the small "logged in" hint cookie set by the Live Classes app (value "1", no personal data) and makes no
-// network call. It is just a label and a link: My Classes itself checks the real login. Without JavaScript, or without
-// the cookie, the original "Join Live Classes" link stays and works.
+// Header: a student who is signed in to Live Classes sees two links, "Classes" (the full class list) and "My Classes"
+// (their own page in the app), instead of "Join Live Classes". Reads only the small "logged in" hint cookie set by the
+// Live Classes app (value "1", no personal data) and makes no network call. It is just labels and links: My Classes
+// itself checks the real login. Without JavaScript, or without the cookie, the original "Join Live Classes" link stays.
 (function () {
   try {
     if (!/(?:^|;\s*)lc_in=1(?:;|$)/.test(document.cookie)) return;
@@ -421,6 +421,26 @@ function handleFormSubmission(event) {
       var label = null;
       Array.prototype.forEach.call(a.children, function (c) { if (c.tagName === 'SPAN' && c.textContent.trim()) label = c; });
       if (!label) return;
+
+      // "Classes": a copy of the pill (no pulsing dot, so it stays compact) placed before "My Classes".
+      var classes = a.cloneNode(true);
+      classes.setAttribute('data-lc-added', '1');
+      classes.setAttribute('href', '/live-classes');
+      classes.removeAttribute('data-lc-swapped');
+      var dot = classes.firstElementChild;
+      if (dot && dot.children.length) classes.removeChild(dot);
+      var clabel = null;
+      Array.prototype.forEach.call(classes.children, function (c) { if (c.tagName === 'SPAN' && c.textContent.trim()) clabel = c; });
+      if (clabel) clabel.textContent = 'Classes';
+      a.parentNode.insertBefore(classes, a);
+
+      // The small header pill (phones) is short of width with two links: hide its pulsing dot, put back on log out.
+      var firstDot = a.firstElementChild;
+      var compact = /text-\[11px\]/.test(a.className);   // phone header pill
+      var desktop = /px-4 py-2 rounded-full/.test(a.className); // desktop header pill: two pills must fit beside the nav links
+      if ((compact || desktop) && firstDot && firstDot.children.length) { firstDot.classList.add('hidden'); a.setAttribute('data-lc-dot', '1'); }
+      if (desktop) { a.setAttribute('data-lc-class', a.className); a.className = a.className.replace('px-4', 'px-3'); classes.className = a.className; }
+
       // Remember the original so the Live Classes page can put it back on log out.
       a.setAttribute('data-lc-swapped', label.innerHTML);
       label.textContent = 'My Classes';
