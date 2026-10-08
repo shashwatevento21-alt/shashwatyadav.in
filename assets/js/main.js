@@ -406,17 +406,21 @@ function handleFormSubmission(event) {
     .catch(showError);
 }
 
-// Header: a student who is signed in to Live Classes sees two links, "Classes" (the full class list) and "My Classes"
-// (their own page in the app), instead of "Join Live Classes". Reads only the small "logged in" hint cookie set by the
+// Header: a guest sees "Live Classes" and a "Log in" link. A student who is signed in to Live Classes sees two links,
+// "Classes" (the full class list) and "My Classes" (their own page in the app), and no "Log in". Reads only the small "logged in" hint cookie set by the
 // Live Classes app (value "1", no personal data) and makes no network call. It is just labels and links: My Classes
-// itself checks the real login. Without JavaScript, or without the cookie, the original "Join Live Classes" link stays.
+// itself checks the real login. Without JavaScript, or without the cookie, the guest header stays.
 (function () {
   try {
-    if (!/(?:^|;\s*)lc_in=1(?:;|$)/.test(document.cookie)) return;
     var isLocal = /^(localhost|127\.0\.0\.1)$/.test(location.hostname);
-    var myClasses = (isLocal ? location.protocol + '//' + location.hostname + ':8000' : '/classes') + '/my-classes';
+    var appBase = isLocal ? location.protocol + '//' + location.hostname + ':8000' : '/classes';
+    // The "Log in" links point at the app's login page (the app lives on another port while developing locally).
+    document.querySelectorAll('a[data-lc-login]').forEach(function (a) { a.setAttribute('href', appBase + '/login'); });
+    if (!/(?:^|;\s*)lc_in=1(?:;|$)/.test(document.cookie)) return;
+    document.querySelectorAll('[data-lc-guest]').forEach(function (el) { el.classList.add('hidden'); });
+    var myClasses = appBase + '/my-classes';
     document.querySelectorAll('a[href="/live-classes"]').forEach(function (a) {
-      if (a.textContent.replace(/\s+/g, ' ').trim() !== 'Join Live Classes') return;
+      if (a.textContent.replace(/\s+/g, ' ').trim() !== 'Live Classes') return;
       // The label is the last direct <span> child (one header variant nests a hidden "Live " span inside it).
       var label = null;
       Array.prototype.forEach.call(a.children, function (c) { if (c.tagName === 'SPAN' && c.textContent.trim()) label = c; });

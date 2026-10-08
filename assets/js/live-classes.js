@@ -196,14 +196,16 @@
   /* ---------- account area (header of the list) ---------- */
 
   function renderAccount() {
+    var guestLine = document.getElementById('lc-guest-line');
+    if (guestLine) guestLine.classList.toggle('hidden', !!state.user);
     if (!accountEl) return;
     if (state.user) {
       accountEl.innerHTML =
-        '<span class="text-text-body hidden sm:inline">Hi, ' + esc(state.user.name.split(' ')[0]) + '</span>' +
+        '<span class="text-text-body break-all text-right">Signed in as <strong class="text-text-heading font-semibold">' + esc(state.user.email) + '</strong></span>' +
         '<a href="' + esc(myClassesUrl()) + '" class="font-semibold text-primary hover:underline">My classes &rarr;</a>' +
-        '<button type="button" data-logout class="text-text-body/80 hover:text-text-heading underline underline-offset-2">Log out</button>';
+        '<button type="button" data-logout class="text-text-body/80 hover:text-text-heading underline underline-offset-2">Not you? Log out</button>';
     } else {
-      accountEl.innerHTML = '<a id="lc-signup-link" href="' + esc(signInUrl()) + '" class="inline-flex items-center px-4 py-2 rounded-full bg-primary text-white text-xs font-semibold hover:bg-primary-dark transition-all">Sign up / Log in</a>';
+      accountEl.innerHTML = '<a id="lc-signup-link" href="' + esc(signInUrl()) + '" class="inline-flex items-center px-4 py-2 rounded-full bg-primary text-white text-xs font-semibold hover:bg-primary-dark transition-all">Log in</a>';
     }
   }
 
@@ -226,9 +228,10 @@
     });
   }
 
-  // main.js turned the header's "Join Live Classes" into "My Classes" while signed in; put it back.
+  // main.js turned the header's "Live Classes" into "Classes" and "My Classes" while signed in; put it back.
   function restoreHeader() {
     document.querySelectorAll('a[data-lc-added]').forEach(function (a) { a.parentNode.removeChild(a); });
+    document.querySelectorAll('[data-lc-guest]').forEach(function (el) { el.classList.remove('hidden'); });
     document.querySelectorAll('a[data-lc-swapped]').forEach(function (a) {
       var label = null;
       Array.prototype.forEach.call(a.children, function (c) { if (c.tagName === 'SPAN' && c.textContent.trim()) label = c; });
@@ -284,8 +287,7 @@
 
     if (!state.user) {
       return '<div class="flex flex-col items-stretch gap-1.5 w-full">' +
-        '<button type="button" data-signup="' + id + '" class="' + BTN_PRIMARY + '">Sign up to enrol ' + ICON_ARROW + '</button>' +
-        '<a href="' + esc(signInUrl(cls.id)) + '" data-login="' + id + '" class="text-xs text-center text-primary hover:underline">Already signed up? Log in</a></div>';
+        '<button type="button" data-signup="' + id + '" class="' + BTN_PRIMARY + '">Continue with Google to enrol ' + ICON_ARROW + '</button></div>';
     }
 
     return '<button type="button" data-enrol="' + id + '" class="' + BTN_PRIMARY + '">Enrol ' + ICON_ARROW + '</button>';
@@ -457,9 +459,6 @@
     var signup = e.target.closest('[data-signup]');
     if (signup) { startSignup(signup.getAttribute('data-signup')); return; }
 
-    var login = e.target.closest('[data-login]');
-    if (login) { saveIntent(login.getAttribute('data-login')); return; } // the link itself goes to Google
-
     var enrolBtn = e.target.closest('[data-enrol]');
     if (enrolBtn) startEnrol(findClass(enrolBtn.getAttribute('data-enrol')));
   });
@@ -495,7 +494,7 @@
         notice('ok',
           '<strong>You\'re enrolled in ' + esc(cls.topic) + '.</strong> ' + esc(whenText(cls)) + '. ' +
           (data.emailSent ? 'A confirmation is on its way to <strong>' + esc(state.user.email) + '</strong>. ' : 'We couldn\'t queue the confirmation email, but your seat is saved. ') +
-          'Your <strong>Join</strong> button appears here and in <a class="underline font-semibold" href="' + esc(myClassesUrl()) + '">My classes</a> ' + JOIN_OPENS_MIN + ' minutes before the class starts. ' +
+          'Your <strong>Join class</strong> button appears here and in <a class="underline font-semibold" href="' + esc(myClassesUrl()) + '">My classes</a> ' + JOIN_OPENS_MIN + ' minutes before the class starts. ' +
           '<a href="#classes-list" data-show-all class="underline font-semibold">Browse more classes</a>');
         renderFilters();
         return true;
@@ -517,13 +516,13 @@
         renderAccount();
         if (state.user) return enrolNow(cls, extra, true);
         refreshButtons();
-        notice('info', 'Please sign up or log in to enrol in <strong>' + esc(cls.topic) + '</strong>. It takes a few seconds.');
+        notice('info', 'Please continue with Google to enrol in <strong>' + esc(cls.topic) + '</strong>. It takes a few seconds.');
         return false;
       });
     }
     if (err.status === 401 || err.status === 419) {
       signedOut(); clearHint(); restoreHeader(); renderAccount(); refreshButtons();
-      notice('info', 'Your session ended. Please log in again to enrol.');
+      notice('info', 'Your session ended. Please continue with Google to enrol.');
       return false;
     }
     if (err.status === 409 && data.code === 'already_enrolled') {
@@ -551,7 +550,7 @@
     }
     if (err.status === 403) {
       closeModal();
-      notice('error', 'Please verify your email address first, or sign in with Google.');
+      notice('error', 'Please verify your email address first, or continue with Google.');
       return false;
     }
     closeModal();
