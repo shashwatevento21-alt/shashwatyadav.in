@@ -141,7 +141,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- PRIVACY POLICY -->
   <section class="relative pt-40 pb-6 bg-background">
     <div class="max-w-3xl mx-auto px-4 md:px-8">
-      <p class="text-xs font-mono text-primary mb-3">Last updated: 5 October 2026</p>
+      <p class="text-xs font-mono text-primary mb-3">Last updated: 9 October 2026</p>
       <h1 class="font-serif text-4xl md:text-5xl font-bold text-text-heading mb-4">Privacy Policy</h1>
       <p class="text-lg text-text-body">This page explains what personal information shashwatyadav.in collects, why, who can see it, how long it is kept, and how to ask for it to be deleted. It describes what the website actually does today.</p>
     </div>
@@ -163,15 +163,35 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <li><strong>Mobile number with country code.</strong> Asked when you enrol, so I can reach you about a class if needed. It is checked for format only; it is not verified by SMS. You can edit it on My Classes.</li>
         <li><strong>Class enrolments.</strong> Which class session you joined, when, and its status, together with a copy of your name, email and mobile number as they were when you enrolled.</li>
         <li><strong>One-time codes.</strong> Codes for email verification and password reset are emailed to you. They are stored only as a hash, expire after 10 minutes and can be tried a limited number of times.</li>
-        <li><strong>Emails.</strong> I send you an enrolment confirmation (class, date and time, and a link to My Classes) and the codes above. The Meet link is not put in that email; it is only emailed if I have chosen to send calendar invites for a class (see Google Calendar below).</li>
+        <li><strong>Emails.</strong> See &ldquo;Emails I send you&rdquo; below.</li>
       </ul>
 
-      <h3 class="text-lg font-semibold text-text-heading mt-6 mb-2">Cookies and sign-in sessions</h3>
-      <p class="mb-3">Live Classes uses only the cookies it needs to work:</p>
+      <h3 class="text-lg font-semibold text-text-heading mt-6 mb-2">Emails I send you</h3>
+      <p class="mb-3">Students receive these emails about their classes:</p>
       <ul class="list-disc pl-6 space-y-2 mb-4">
-        <li>A <strong>session cookie</strong> that keeps you signed in. The session ends after 2 hours without activity. The server records the session together with your IP address and browser details.</li>
-        <li>An <strong>XSRF-TOKEN cookie</strong>, a security token that protects forms.</li>
-        <li>A <strong>&ldquo;remember me&rdquo; cookie</strong> if you tick Remember me, and always when you sign in with Google. It keeps you signed in on that browser until you log out.</li>
+        <li>a <strong>welcome email</strong> the first time you sign in with Google;</li>
+        <li>an <strong>enrolment confirmation</strong> with the class, date and time, a link to My Classes and a calendar file (.ics) you can add to your own calendar;</li>
+        <li>a notice if a class is <strong>cancelled</strong> or <strong>rescheduled</strong>;</li>
+        <li>a notice if I <strong>remove you from a class</strong>, when I choose to send one;</li>
+        <li>a <strong>reminder 15 minutes before</strong> a class starts. You can switch it off on My Classes.</li>
+      </ul>
+      <p class="mb-3">Sign-in and password-reset codes are also emailed to you (see One-time codes above). The Meet link is not put in these emails; it is only emailed if I have chosen to send calendar invites for a class (see Google Calendar below).</p>
+      <p class="mb-4">The emails are sent from <a href="mailto:support@shashwatyadav.in" class="text-primary underline underline-offset-2 hover:text-primary-dark">support@shashwatyadav.in</a> through Hostinger&rsquo;s mail service. They contain no tracking pixels, no remote images and no marketing tools. I keep a log of each email (its type, the class, whether it was sent or failed, and any error message) so that the same email is not sent twice and failures can be fixed. Only I can see this log.</p>
+
+      <h3 class="text-lg font-semibold text-text-heading mt-6 mb-2">Cancelling and being removed</h3>
+      <p class="mb-4">You can cancel your own enrolment on My Classes until 2 hours before the class starts. I can also remove a student from a class, and I may send them a notice when I do; My Classes then shows &ldquo;Removed by organiser&rdquo;. A reason I enter for the removal is kept with the enrolment.</p>
+
+      <h3 class="text-lg font-semibold text-text-heading mt-6 mb-2">Admin activity log</h3>
+      <p class="mb-4">When I add, change, cancel, remove or delete things in the admin area, the site records which action it was, on which list, the record numbers involved and how many records. It holds no names, email addresses or mobile numbers.</p>
+
+      <h3 class="text-lg font-semibold text-text-heading mt-6 mb-2">Cookies and sign-in sessions</h3>
+      <p class="mb-3">Live Classes uses only the cookies and browser storage it needs to work:</p>
+      <ul class="list-disc pl-6 space-y-2 mb-4">
+        <li><code class="text-sm bg-white border border-border rounded px-1">live-classes-session</code>: the session cookie that keeps you signed in. It is used only under /classes and the session ends after about 2 hours without activity. The server records the session together with your IP address and browser details.</li>
+        <li><code class="text-sm bg-white border border-border rounded px-1">XSRF-TOKEN</code>: a security token that protects forms. It is used only under /classes and lasts about 2 hours.</li>
+        <li>A <strong>&ldquo;remember me&rdquo; cookie</strong>, set if you tick Remember me and always when you sign in with Google. It keeps you signed in on that browser for 30 days, or until you log out.</li>
+        <li><code class="text-sm bg-white border border-border rounded px-1">lc_in</code>: a small hint cookie that lets the site&rsquo;s pages show Classes and My Classes instead of Log in. It contains only the number 1, no personal data, lasts 30 days and is removed when you log out.</li>
+        <li><code class="text-sm bg-white border border-border rounded px-1">lc_intent</code>: an entry in your browser&rsquo;s session storage (not a cookie) that remembers which class you chose before going to Google to sign in. It stays in that browser tab only and is used only within 20 minutes.</li>
       </ul>
 
       <h3 class="text-lg font-semibold text-text-heading mt-6 mb-2">Contact form</h3>
@@ -198,27 +218,35 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
       <h2 class="font-serif text-2xl font-bold text-text-heading mt-10 mb-3">Who can see your information</h2>
       <ul class="list-disc pl-6 space-y-2 mb-4">
-        <li><strong>Me.</strong> In the admin area I can see students&rsquo; names, emails, mobile numbers and enrolments, and export them as a spreadsheet for running classes.</li>
+        <li><strong>Me.</strong> In the admin area I can see students&rsquo; names, emails, mobile numbers and enrolments, the log of emails sent to them and the admin activity log, and export lists as a spreadsheet for running classes.</li>
         <li><strong>Other students: no.</strong> Students cannot see each other&rsquo;s details. The class Meet link is visible only to students enrolled in that class (see the Terms).</li>
-        <li><strong>Service providers that handle data for the site:</strong> my hosting provider (Hostinger), the email service that delivers the site&rsquo;s emails, Google (sign-in, Sheets and Gmail for the contact form, Calendar and Meet for classes), OpenRouter (chat replies) and Google Tag Manager.</li>
+        <li><strong>Service providers that handle data for the site:</strong> my hosting provider (Hostinger), including its mail service that delivers the site&rsquo;s emails, Google (sign-in, Sheets and Gmail for the contact form, Calendar and Meet for classes), OpenRouter (chat replies) and Google Tag Manager.</li>
       </ul>
       <p class="mb-4">I do not sell your information and I do not use it for advertising.</p>
 
       <h2 class="font-serif text-2xl font-bold text-text-heading mt-10 mb-3">How long it is kept</h2>
       <ul class="list-disc pl-6 space-y-2 mb-4">
-        <li>Sign-in codes expire after 10 minutes. Sign-in sessions end after 2 hours without activity (a &ldquo;remember me&rdquo; sign-in lasts until you log out).</li>
-        <li>Your Live Classes account, mobile number and enrolments are kept for as long as your account exists, so you can see your class history. I do not currently delete accounts automatically.</li>
+        <li>Sign-in codes expire after 10 minutes. Sign-in sessions end after 2 hours without activity (a &ldquo;remember me&rdquo; sign-in lasts 30 days, or until you log out).</li>
+        <li>Your Live Classes account, mobile number, enrolments, the email log and the admin activity log are kept until deletion is requested, so you can see your class history. I do not delete accounts automatically.</li>
+        <li><strong>Trash.</strong> When I delete a class, a class session or an enrolment (for example one that was cancelled or removed), it goes to Trash first, stays there for 30 days and is then deleted permanently. Items in Trash are not shown to students or on the public schedule and are not sent any emails.</li>
         <li>Contact-form and chat enquiries stay in my Google Sheet until I delete them.</li>
       </ul>
 
       <h2 class="font-serif text-2xl font-bold text-text-heading mt-10 mb-3">Your choices and deleting your data</h2>
       <p class="mb-4">You can correct your mobile number yourself on My Classes. To see, correct or delete what I hold about you, email <a href="mailto:support@shashwatyadav.in" class="text-primary underline underline-offset-2 hover:text-primary-dark">support@shashwatyadav.in</a> from the email address you signed up with and say what you would like. For a deletion request I will delete your account, mobile number and enrolments, and any enquiry you sent, within 30 days, and confirm by email.</p>
+      <p class="mb-4">I can add, edit and delete student accounts from the admin area. Deleting a student&rsquo;s account removes their name, email address, mobile number, enrolments, sign-in sessions and remember-me tokens, and cancels any upcoming enrolments first. A record that an email was sent stays in the email log, but without any link to the person. To ask for your account to be deleted, email <a href="mailto:support@shashwatyadav.in" class="text-primary underline underline-offset-2 hover:text-primary-dark">support@shashwatyadav.in</a>; requests are handled within 30 days.</p>
 
       <h2 class="font-serif text-2xl font-bold text-text-heading mt-10 mb-3">Security</h2>
       <p class="mb-4">The site is served over HTTPS. Passwords and sign-in codes are stored only as hashes, the Google Calendar token is encrypted, and the admin area is restricted to my account. No online system is perfectly secure, so if you think your account has been misused, tell me right away.</p>
 
       <h2 class="font-serif text-2xl font-bold text-text-heading mt-10 mb-3">Changes to this policy</h2>
       <p class="mb-4">If what the site does changes, I will update this page and the date at the top.</p>
+      <p class="mb-2"><strong>Changes in the 9 October 2026 update:</strong></p>
+      <ul class="list-disc pl-6 space-y-1 mb-4">
+        <li>Listed every email students receive and how the email log is used.</li>
+        <li>Listed each cookie and browser-storage entry with how long it lasts. A &ldquo;remember me&rdquo; sign-in lasts 30 days (this page used to say until you log out).</li>
+        <li>Added cancelling and removal from a class, account deletion by me, the 30-day Trash and the admin activity log.</li>
+      </ul>
 
       <h2 class="font-serif text-2xl font-bold text-text-heading mt-10 mb-3">Contact</h2>
       <p class="mb-4">Shashwat Yadav &middot; <a href="mailto:support@shashwatyadav.in" class="text-primary underline underline-offset-2 hover:text-primary-dark">support@shashwatyadav.in</a> &middot; <a href="/terms" class="text-primary underline underline-offset-2 hover:text-primary-dark">Terms of use</a></p>
