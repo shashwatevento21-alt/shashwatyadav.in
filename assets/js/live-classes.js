@@ -537,6 +537,11 @@
       notice('error', 'Sorry, <strong>' + esc(cls.topic) + '</strong> is full. Other upcoming classes are listed below.');
       return false;
     }
+    if (err.status === 409 && data.code === 'removed') {
+      closeModal(); refreshButtons();
+      notice('error', 'You were removed from this class by the organiser. Please contact <a class="underline font-semibold" href="mailto:support@shashwatyadav.in">support@shashwatyadav.in</a>.');
+      return false;
+    }
     if (err.status === 422 && data.code === 'closed') {
       closeModal();
       notice('error', esc(data.message || 'This class is no longer available.') + ' Here are the classes that are open.');
