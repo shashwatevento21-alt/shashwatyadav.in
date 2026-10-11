@@ -19,14 +19,19 @@
   var countEl = document.getElementById('classes-count');
   var accountEl = document.getElementById('lc-account');
   var filtersEl = document.getElementById('lc-filters');
+  var coursesEl = document.getElementById('lc-courses');
   var noticeEl = document.getElementById('lc-notice');
   var modal = document.getElementById('enroll-modal');
   if (!listEl || !modal) return;
 
   var state = {
     cls: null, csrf: '', countries: [], user: null, mobile: null, enrolled: {}, apiOk: false,
-    sessions: [], sessionsLoaded: false, sessionsFailed: false, sessionsAt: 0, busy: {}, filter: 'all'
+    sessions: [], sessionsLoaded: false, sessionsFailed: false, sessionsAt: 0, busy: {}, filter: 'all',
+    // course chip: 'all', a course address (slug), or OTHER for classes that are in no course. courseWanted is ?course= from the link,
+    // checked once the classes are known (an unknown one falls back to All).
+    course: 'all', courseWanted: new URLSearchParams(window.location.search).get('course')
   };
+  var OTHER = '_other';
 
   /* ---------- hint cookie + sign-up intent ---------- */
 
@@ -118,6 +123,9 @@
       topic: s.title,
       summary: s.summary,
       learn: s.learn || [],
+      courseName: s.courseName || null,
+      courseSlug: s.courseSlug || null,
+      coursePosition: typeof s.coursePosition === 'number' ? s.coursePosition : 0,
       startsAt: s.startsAt,
       durationMins: s.durationMins,
       isFull: !!s.isFull,
@@ -327,6 +335,7 @@
               '<span class="px-2.5 py-1 rounded-full border text-[11px] font-semibold ' + relClass + '">' + esc(rel) + '</span>' +
               seats +
             '</div>' +
+            (cls.courseName ? '<p class="text-xs font-semibold text-primary mb-1" data-course-name>' + esc(cls.courseName) + '</p>' : '') +
             '<h3 class="font-semibold text-lg md:text-xl text-text-heading mb-2">' + esc(cls.topic) + '</h3>' +
             '<div class="flex flex-wrap items-center gap-x-4 gap-y-1 text-sm text-text-body">' +
               '<span class="inline-flex items-center gap-1.5">' + ICON_CLOCK + esc(fmtTime(cls.start) + ' – ' + fmtTime(cls.end) + ' IST') + '</span>' +
@@ -372,8 +381,9 @@
     var open = {};
     listEl.querySelectorAll('[data-toggle][aria-expanded="true"]').forEach(function (b) { open[b.getAttribute('data-toggle')] = true; });
     classes = upcoming();
+    renderCourses();
     renderFilters();
-    var shown = classes.filter(function (c) {
+    var shown = courseScoped().filter(function (c) {
       if (!state.user || state.filter === 'all') return true;
       return state.filter === 'enrolled' ? !!state.enrolled[c.id] : !state.enrolled[c.id];
     });
@@ -384,10 +394,79 @@
     });
     emptyEl.classList.toggle('hidden', classes.length > 0);
     if (countEl) {
-      countEl.textContent = !classes.length ? '' : shown.length === classes.length
-        ? classes.length + (classes.length === 1 ? ' upcoming class' : ' upcoming classes')
-        : 'Showing ' + shown.length + ' of ' + classes.length + ' upcoming classes';
+      var scoped = courseScoped(), where = state.course === 'all' ? '' : (state.course === OTHER ? ' in Other classes' : ' in ' + courseLabel(state.course));
+      countEl.textContent = !classes.length ? '' : shown.length === scoped.length
+        ? scoped.length + (scoped.length === 1 ? ' upcoming class' : ' upcoming classes') + where
+        : 'Showing ' + shown.length + ' of ' + scoped.length + ' upcoming classes' + where;
     }
+  }
+
+  /* ---------- course chips (everyone; the public list stays the same for all visitors) ---------- */
+
+  // The groups that have at least one upcoming class: courses in position order, then "Other classes" for the rest.
+  function courseGroups() {
+    var map = {}, list = [], other = 0;
+    classes.forEach(function (c) {
+      if (!c.courseSlug) { other++; return; }
+      if (!map[c.courseSlug]) { map[c.courseSlug] = { slug: c.courseSlug, name: c.courseName, position: c.coursePosition, count: 0 }; list.push(map[c.courseSlug]); }
+      map[c.courseSlug].count++;
+    });
+    list.sort(function (a, b) { return (a.position - b.position) || a.name.localeCompare(b.name); });
+    return { courses: list, other: other };
+  }
+
+  function courseLabel(slug) {
+    var g = courseGroups().courses.filter(function (c) { return c.slug === slug; })[0];
+    return g ? g.name : slug;
+  }
+
+  function courseScoped() {
+    if (state.course === 'all') return classes;
+    return classes.filter(function (c) { return state.course === OTHER ? !c.courseSlug : c.courseSlug === state.course; });
+  }
+
+  // Keeps the address in step with the chip so the link can be shared. Only ?course= is touched; "All classes" removes it.
+  function writeCourseToUrl() {
+    try {
+      var url = new URL(window.location.href);
+      if (state.course === 'all') url.searchParams.delete('course'); else url.searchParams.set('course', state.course);
+      window.history.replaceState(window.history.state, '', url.pathname + url.search + url.hash);
+    } catch (e) { /* old browser: the chips still work, the address just stays as it is */ }
+  }
+
+  function renderCourses() {
+    if (!coursesEl) return;
+    var g = courseGroups(), groups = g.courses.length + (g.other ? 1 : 0);
+
+    // The link's ?course= is checked once, as soon as there are classes to check it against.
+    if (state.courseWanted !== null && classes.length) {
+      var wanted = state.courseWanted;
+      state.courseWanted = null;
+      var known = wanted === OTHER ? (g.other > 0 && g.courses.length > 0) : g.courses.some(function (c) { return c.slug === wanted; });
+      state.course = known ? wanted : 'all';
+      if (!known) writeCourseToUrl();
+    }
+
+    // One group (or none) means nothing to choose between: no row, and any chip choice is cleared.
+    if (groups <= 1 || !g.courses.length) {
+      coursesEl.classList.add('hidden'); coursesEl.classList.remove('flex'); coursesEl.innerHTML = '';
+      if (state.course !== 'all') { state.course = 'all'; writeCourseToUrl(); }
+      return;
+    }
+
+    // A chosen course that no longer has an upcoming class (it just finished) falls back to All.
+    if (state.course !== 'all' && state.course !== OTHER && !g.courses.some(function (c) { return c.slug === state.course; })) { state.course = 'all'; writeCourseToUrl(); }
+    if (state.course === OTHER && !g.other) { state.course = 'all'; writeCourseToUrl(); }
+
+    var chips = [['all', 'All classes', classes.length]].concat(g.courses.map(function (c) { return [c.slug, c.name, c.count]; }));
+    if (g.other) chips.push([OTHER, 'Other classes', g.other]);
+    coursesEl.innerHTML = chips.map(function (c) {
+      var on = state.course === c[0];
+      return '<button type="button" data-course="' + esc(c[0]) + '" aria-pressed="' + on + '" class="px-4 py-2 rounded-full border text-sm font-semibold transition-all ' +
+        (on ? 'bg-primary text-white border-primary' : 'bg-white text-text-heading border-border hover:border-primary/40') + '">' + esc(c[1]) + ' (' + c[2] + ')</button>';
+    }).join('');
+    coursesEl.classList.remove('hidden');
+    coursesEl.classList.add('flex');
   }
 
   /* ---------- filter chips (signed-in students only; the public list itself is never personalised) ---------- */
@@ -395,7 +474,7 @@
   var CHIPS = [['all', 'All upcoming'], ['enrolled', 'Enrolled'], ['notenrolled', 'Not enrolled yet']];
 
   function filterCounts() {
-    var all = classes.length, mine = classes.filter(function (c) { return !!state.enrolled[c.id]; }).length;
+    var scoped = courseScoped(), all = scoped.length, mine = scoped.filter(function (c) { return !!state.enrolled[c.id]; }).length;
     return { all: all, enrolled: mine, notenrolled: all - mine };
   }
 
@@ -413,17 +492,25 @@
   }
 
   function emptyFilterHtml() {
+    var scopedNote = state.course !== 'all' ? ' in this group' : '';
     var msg = state.filter === 'enrolled'
-      ? 'You haven\'t enrolled in any upcoming class yet.'
-      : 'You\'re enrolled in every upcoming class. New dates are added regularly.';
+      ? 'You haven\'t enrolled in any upcoming class' + scopedNote + ' yet.'
+      : 'You\'re enrolled in every upcoming class' + scopedNote + '. New dates are added regularly.';
     return '<div class="text-center rounded-2xl bg-surface-card border border-border px-6 py-10">' +
       '<p class="text-sm text-text-body mb-4">' + msg + '</p>' +
-      '<button type="button" data-filter="all" class="inline-flex items-center px-5 py-2.5 rounded-full bg-primary text-white text-sm font-semibold hover:bg-primary-dark transition-all">Show all upcoming classes</button></div>';
+      '<button type="button" data-filter="all" data-course-reset class="inline-flex items-center px-5 py-2.5 rounded-full bg-primary text-white text-sm font-semibold hover:bg-primary-dark transition-all">Show all upcoming classes</button></div>';
   }
 
   document.addEventListener('click', function (e) {
+    var courseChip = e.target.closest('[data-course]');
+    if (courseChip) { state.course = courseChip.getAttribute('data-course'); writeCourseToUrl(); renderList(); return; }
     var chip = e.target.closest('[data-filter]');
-    if (chip) { state.filter = chip.getAttribute('data-filter'); renderList(); return; }
+    if (chip) {
+      state.filter = chip.getAttribute('data-filter');
+      if (chip.hasAttribute('data-course-reset') && state.course !== 'all') { state.course = 'all'; writeCourseToUrl(); } // "Show all upcoming classes" clears both
+      renderList();
+      return;
+    }
     var more = e.target.closest('[data-show-all]');
     if (more) { state.filter = 'all'; renderList(); listEl.scrollIntoView({ behavior: 'smooth', block: 'start' }); e.preventDefault(); }
   });
