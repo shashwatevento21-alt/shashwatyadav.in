@@ -22,6 +22,7 @@
   <script src="/assets/js/tailwind-config.js"></script>
 
   <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="stylesheet" href="/assets/css/journey.css?v=20261017">
 </head>
 <body class="bg-background text-text-body overflow-x-hidden">
 <!-- Google Tag Manager (noscript) -->
@@ -139,50 +140,275 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </section>
 
-  <!-- CAREER TIMELINE -->
-  <section class="relative py-16 md:py-24 bg-surface-card border-y border-border">
-    <div class="max-w-3xl mx-auto px-4 md:px-8">
-      <h2 class="font-serif text-3xl md:text-4xl font-bold text-text-heading text-center mb-14">The Journey So Far</h2>
-      <div class="space-y-10 border-l-2 border-border pl-8 relative">
+  <!-- CAREER TIMELINE: interactive career map (styles: /assets/css/journey.css, behaviour: /assets/js/journey.js; works without JavaScript) -->
+  <section id="journey" class="journey" aria-labelledby="journey-title">
+    <div class="journey-wrap">
 
-        <div class="relative">
-          <span class="absolute -left-[41px] top-1 w-4 h-4 rounded-full bg-primary border-4 border-surface-card"></span>
-          <h3 class="font-semibold text-text-heading mb-1">Business Development Trainee — Byju's</h3>
-          <p class="text-xs font-mono text-text-body/60 mb-1">Remote · Nov 2020 (3 months)</p>
-          <p class="text-sm text-text-body">Cold calling, session delivery, and course sales.</p>
+      <header class="journey-head">
+        <h2 id="journey-title" class="journey-title">The Journey So Far</h2>
+        <p class="journey-lede">From a mechanical engineering degree, through sales, a business of my own and leading a team, to teaching.</p>
+      </header>
+
+      <ul class="journey-stats" aria-label="At a glance">
+        <li class="journey-stat"><span class="journey-stat-value">Since 2020</span><span class="journey-stat-label">in business and marketing</span></li>
+        <li class="journey-stat"><span class="journey-stat-value"><span class="journey-count" data-target="15">15</span></span><span class="journey-stat-label">person team I lead</span></li>
+        <li class="journey-stat"><span class="journey-stat-value"><span class="journey-count" data-target="30" data-suffix="+">30+</span></span><span class="journey-stat-label">clients served</span></li>
+        <li class="journey-stat"><span class="journey-stat-value"><span class="journey-count" data-target="30" data-prefix="₹" data-suffix="L">₹30L</span></span><span class="journey-stat-label">annual revenue built at Evento</span></li>
+      </ul>
+
+      <div class="journey-controls" hidden>
+        <div class="journey-row" role="group" aria-label="Show chapters by theme">
+          <span class="journey-label" aria-hidden="true">Show</span>
+          <button type="button" class="journey-chip" data-filter="all" aria-pressed="true">All</button>
+          <button type="button" class="journey-chip" data-filter="biz" aria-pressed="false">Business &amp; Sales</button>
+          <button type="button" class="journey-chip" data-filter="mkt" aria-pressed="false">Marketing &amp; SEO</button>
+          <button type="button" class="journey-chip" data-filter="webtech" aria-pressed="false">Web / Tech &amp; AI</button>
+          <button type="button" class="journey-chip" data-filter="teach" aria-pressed="false">Teaching &amp; Learning</button>
+          <span class="journey-actions">
+            <button type="button" class="journey-btn" data-expand-all>Expand all</button>
+            <button type="button" class="journey-btn" data-collapse-all>Collapse all</button>
+          </span>
         </div>
-
-        <div class="relative">
-          <span class="absolute -left-[41px] top-1 w-4 h-4 rounded-full bg-primary border-4 border-surface-card"></span>
-          <h3 class="font-semibold text-text-heading mb-1">Business Development Associate — Lido Learning</h3>
-          <p class="text-xs font-mono text-text-body/60 mb-1">Noida · Jul 2021 – Sep 2021</p>
-          <p class="text-sm text-text-body">On-site sales visits and lead conversion for ed-tech course enrollments.</p>
-        </div>
-
-        <div class="relative">
-          <span class="absolute -left-[41px] top-1 w-4 h-4 rounded-full bg-primary border-4 border-surface-card"></span>
-          <h3 class="font-semibold text-text-heading mb-1">Founder — Evento Balloon Decoration Pvt Ltd <span class="font-normal text-text-body">(formerly Eventoplanner)</span></h3>
-          <p class="text-xs font-mono text-text-body/60 mb-1">Raipur · Nov 2021 – Nov 2025</p>
-          <p class="text-sm text-text-body">Founded with 2 partners, ran solo from Nov 2022, incorporated as a private limited company in March 2023. Scaled to ₹30L annual revenue with a 4-member core team and 7 gig workers. Ranked #1 organically for "balloon decoration Raipur" across Google Business Profile, ChatGPT, Gemini, and Google AI Mode — zero ad spend. Built a payment-integrated e-commerce site (Razorpay + GoDaddy + WordPress).</p>
-        </div>
-
-        <div class="relative">
-          <span class="absolute -left-[41px] top-1 w-4 h-4 rounded-full bg-primary border-4 border-surface-card"></span>
-          <h3 class="font-semibold text-text-heading mb-1">WordPress Designer & SEO Consultant — MyFemily by Nutritionist Saloni</h3>
-          <p class="text-xs font-mono text-text-body/60 mb-1">Delhi, remote · Feb 2026 – Mar 2026</p>
-          <p class="text-sm text-text-body">WordPress website design and on-page SEO for a nutrition/dietitian consultancy.</p>
-        </div>
-
-        <div class="relative">
-          <span class="absolute -left-[41px] top-1 w-4 h-4 rounded-full bg-growth-accent border-4 border-surface-card"></span>
-          <h3 class="font-semibold text-text-heading mb-1">Today: Ad Performance Marketing Head — The Digital Agency</h3>
-          <p class="text-xs font-mono text-text-body/60 mb-1">Raipur · Mar 2026 – Present</p>
-          <p class="text-sm text-text-body">Leads a 15-member team (4 social media managers, 4 video editors, 1 website designer, 2 graphic designers) managing 30+ clients across real estate, healthcare, and education verticals.</p>
-        </div>
-
+        <p class="journey-count-status" role="status" aria-live="polite"></p>
       </div>
+
+      <div class="journey-skills" hidden>
+        <h3>Skills I carry</h3>
+        <p class="journey-count-status" style="margin:0 0 10px">Tap a skill to see the chapters where I used it.</p>
+        <ul class="journey-skill-list">
+          <li><span class="journey-skilltag" data-skill="meta-ads">Meta Ads</span></li>
+          <li><span class="journey-skilltag" data-skill="google-ads">Google Ads</span></li>
+          <li><span class="journey-skilltag" data-skill="lead-gen">Lead generation</span></li>
+          <li><span class="journey-skilltag" data-skill="gtm">Google Tag Manager</span></li>
+          <li><span class="journey-skilltag" data-skill="ga4">GA4</span></li>
+          <li><span class="journey-skilltag" data-skill="meta-pixel">Meta Pixel</span></li>
+          <li><span class="journey-skilltag" data-skill="conversion-tracking">Conversion tracking</span></li>
+          <li><span class="journey-skilltag" data-skill="local-seo">Local SEO</span></li>
+          <li><span class="journey-skilltag" data-skill="gbp">Google Business Profile</span></li>
+          <li><span class="journey-skilltag" data-skill="geo">GEO and AI search optimisation</span></li>
+          <li><span class="journey-skilltag" data-skill="wordpress">WordPress</span></li>
+          <li><span class="journey-skilltag" data-skill="claude-code">Claude Code</span></li>
+          <li><span class="journey-skilltag" data-skill="ai-agents">AI agents</span></li>
+          <li><span class="journey-skilltag" data-skill="team-mgmt">Team management</span></li>
+          <li><span class="journey-skilltag" data-skill="multi-client">Multi-client account management</span></li>
+          <li><span class="journey-skilltag" data-skill="cold-sales">Cold calling and sales</span></li>
+        </ul>
+        <p class="journey-lens-status" role="status" aria-live="polite"></p>
+      </div>
+
+      <div class="journey-route">
+        <span class="journey-fill" aria-hidden="true"></span>
+        <ol class="journey-chapters">
+
+        <li id="journey-school" class="journey-chapter" data-cats="edu" data-skills="">
+          <div class="journey-mark" aria-hidden="true"><span class="journey-year">2016</span><span class="journey-node"></span></div>
+          <article class="journey-card">
+            <h3 class="journey-heading"><button type="button" class="journey-toggle" aria-expanded="true" aria-controls="journey-school-panel">
+              <span class="journey-toggle-text"><span class="journey-date">2016 – 2020</span><span class="journey-role">B.Tech, Mechanical Engineering</span><span class="journey-org">Shankar Charya Technical Campus (CSVTU)</span></span>
+              <svg class="journey-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+            </button></h3>
+            <div class="journey-pills"><span class="journey-tag edu">Education</span></div>
+            <p class="journey-summary">A mechanical engineering degree, before any of the work below.</p>
+            <div id="journey-school-panel" class="journey-panel">
+              <ul class="journey-bullets">
+                <li>Degree: B.Tech, Mechanical Engineering.</li>
+                <li>Institution: Shankar Charya Technical Campus (CSVTU).</li>
+                <li>Years: 2016 to 2020.</li>
+              </ul>
+              <p class="journey-took"><strong>What I took from it</strong>Engineering trained me to break a problem into parts and check each one.</p>
+            </div>
+          </article>
+        </li>
+
+        <li id="journey-byjus" class="journey-chapter" data-cats="biz" data-skills="cold-sales">
+          <div class="journey-mark" aria-hidden="true"><span class="journey-year">2020</span><span class="journey-node"></span></div>
+          <article class="journey-card">
+            <h3 class="journey-heading"><button type="button" class="journey-toggle" aria-expanded="true" aria-controls="journey-byjus-panel">
+              <span class="journey-toggle-text"><span class="journey-date">Nov 2020 · about 3 months · Remote</span><span class="journey-role">Business Development Trainee</span><span class="journey-org">Byju's</span></span>
+              <svg class="journey-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+            </button></h3>
+            <div class="journey-pills"><span class="journey-tag biz">Business &amp; Sales</span></div>
+            <p class="journey-summary">My first job: cold calling, delivering sessions and selling courses.</p>
+            <div id="journey-byjus-panel" class="journey-panel">
+              <ul class="journey-bullets">
+                <li>Cold calling.</li>
+                <li>Session delivery.</li>
+                <li>Course sales.</li>
+                <li>Remote, for about three months.</li>
+              </ul>
+              <div class="journey-tags-line"><h4>Skills used</h4><ul><li><span class="journey-skilltag" data-skill="cold-sales">Cold calling and sales</span></li></ul></div>
+              <p class="journey-took"><strong>What I took from it</strong>Cold calls and live sessions taught me to listen first and explain simply.</p>
+            </div>
+          </article>
+        </li>
+
+        <li id="journey-lido" class="journey-chapter" data-cats="biz" data-skills="cold-sales">
+          <div class="journey-mark" aria-hidden="true"><span class="journey-year">2021</span><span class="journey-node"></span></div>
+          <article class="journey-card">
+            <h3 class="journey-heading"><button type="button" class="journey-toggle" aria-expanded="true" aria-controls="journey-lido-panel">
+              <span class="journey-toggle-text"><span class="journey-date">Jul – Sep 2021 · Noida</span><span class="journey-role">Business Development Associate</span><span class="journey-org">Lido Learning</span></span>
+              <svg class="journey-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+            </button></h3>
+            <div class="journey-pills"><span class="journey-tag biz">Business &amp; Sales</span></div>
+            <p class="journey-summary">On-site visits, turning leads into ed-tech enrolments.</p>
+            <div id="journey-lido-panel" class="journey-panel">
+              <ul class="journey-bullets">
+                <li>On-site visits.</li>
+                <li>Converting leads into ed-tech enrolments.</li>
+                <li>Based in Noida.</li>
+              </ul>
+              <div class="journey-tags-line"><h4>Skills used</h4><ul><li><span class="journey-skilltag" data-skill="cold-sales">Cold calling and sales</span></li></ul></div>
+              <p class="journey-took"><strong>What I took from it</strong>Meeting people in person showed me what actually turns a lead into an enrolment.</p>
+            </div>
+          </article>
+        </li>
+
+        <li id="journey-evento" class="journey-chapter" data-cats="biz mkt" data-skills="gbp local-seo geo wordpress team-mgmt">
+          <div class="journey-mark" aria-hidden="true"><span class="journey-node"></span></div>
+          <article class="journey-card">
+            <h3 class="journey-heading"><button type="button" class="journey-toggle" aria-expanded="true" aria-controls="journey-evento-panel">
+              <span class="journey-toggle-text"><span class="journey-date">Nov 2021 – Nov 2025 · Raipur</span><span class="journey-role">Founder</span><span class="journey-org">Evento Balloon Decoration Pvt Ltd (formerly Eventoplanner)</span></span>
+              <svg class="journey-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+            </button></h3>
+            <div class="journey-pills"><span class="journey-tag biz">Business &amp; Sales</span><span class="journey-tag mkt">Marketing &amp; SEO</span></div>
+            <p class="journey-summary">Founded a balloon decoration business and grew it to ₹30 lakh a year in revenue.</p>
+            <div id="journey-evento-panel" class="journey-panel">
+              <ul class="journey-bullets">
+                <li>Grew annual revenue to ₹30 lakh with a 4-member core team and 7 gig workers.</li>
+                <li>Ranked first organically for &ldquo;balloon decoration Raipur&rdquo; on Google Business Profile, ChatGPT, Gemini and Google AI Mode, with zero ad spend.</li>
+                <li>Built a payment-enabled WordPress e-commerce site with Razorpay.</li>
+              </ul>
+              <div class="journey-sub">
+                <h4>Milestones</h4>
+                <ol>
+                  <li><time datetime="2021-11">Nov 2021</time><span>Founded with two partners.</span></li>
+                  <li><time datetime="2022-11">Nov 2022</time><span>Ran it solo.</span></li>
+                  <li><time datetime="2023-03">Mar 2023</time><span>Incorporated as a private limited company.</span></li>
+                </ol>
+              </div>
+              <div class="journey-tags-line"><h4>Skills used</h4><ul>
+                <li><span class="journey-skilltag" data-skill="gbp">Google Business Profile</span></li>
+                <li><span class="journey-skilltag" data-skill="local-seo">Local SEO</span></li>
+                <li><span class="journey-skilltag" data-skill="geo">GEO and AI search optimisation</span></li>
+                <li><span class="journey-skilltag" data-skill="wordpress">WordPress</span></li>
+                <li><span class="journey-skilltag" data-skill="team-mgmt">Team management</span></li>
+              </ul></div>
+              <p class="journey-took"><strong>What I took from it</strong>Building demand from zero taught me the difference between vanity metrics and business outcomes.</p>
+            </div>
+          </article>
+        </li>
+
+        <li id="journey-myfemily" class="journey-chapter" data-cats="mkt web" data-skills="wordpress">
+          <div class="journey-mark" aria-hidden="true"><span class="journey-year">2026</span><span class="journey-node"></span></div>
+          <article class="journey-card">
+            <h3 class="journey-heading"><button type="button" class="journey-toggle" aria-expanded="true" aria-controls="journey-myfemily-panel">
+              <span class="journey-toggle-text"><span class="journey-date">Feb – Mar 2026 · Delhi, remote</span><span class="journey-role">WordPress Designer and SEO Consultant</span><span class="journey-org">MyFemily by Nutritionist Saloni</span></span>
+              <svg class="journey-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+            </button></h3>
+            <div class="journey-pills"><span class="journey-tag mkt">Marketing &amp; SEO</span><span class="journey-tag web">Web</span></div>
+            <p class="journey-summary">WordPress design and on-page SEO for a nutrition consultancy.</p>
+            <div id="journey-myfemily-panel" class="journey-panel">
+              <ul class="journey-bullets">
+                <li>WordPress website design.</li>
+                <li>On-page SEO.</li>
+                <li>For a nutrition consultancy in Delhi, working remotely.</li>
+              </ul>
+              <div class="journey-tags-line"><h4>Skills used</h4><ul><li><span class="journey-skilltag" data-skill="wordpress">WordPress</span></li></ul></div>
+              <p class="journey-took"><strong>What I took from it</strong>A short, focused project showed me how a site&rsquo;s design and its SEO work best when planned together.</p>
+            </div>
+          </article>
+        </li>
+
+        <li id="journey-digital-agency" class="journey-chapter" data-cats="mkt" data-skills="meta-ads google-ads lead-gen gtm ga4 meta-pixel conversion-tracking team-mgmt multi-client">
+          <div class="journey-mark" aria-hidden="true"><span class="journey-node"></span></div>
+          <article class="journey-card">
+            <h3 class="journey-heading"><button type="button" class="journey-toggle" aria-expanded="true" aria-controls="journey-digital-agency-panel">
+              <span class="journey-toggle-text"><span class="journey-date">Mar 2026 – Now · Raipur</span><span class="journey-role">Ad Performance Marketing Head</span><span class="journey-org">The Digital Agency</span></span>
+              <svg class="journey-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+            </button></h3>
+            <div class="journey-pills"><span class="journey-tag mkt">Marketing &amp; SEO</span></div>
+            <p class="journey-summary">Joined as Ad Performance Marketing Head; I lead a 15-person team serving 30+ clients.</p>
+            <div id="journey-digital-agency-panel" class="journey-panel">
+              <ul class="journey-bullets">
+                <li>Leads a 15-person team: 4 social media managers, 4 video editors, 1 website designer and 2 graphic designers.</li>
+                <li>Serves 30+ clients in real estate, healthcare and education.</li>
+                <li>Meta Ads and Google Ads for lead generation.</li>
+                <li>Conversion tracking with Google Tag Manager, GA4 and Meta Pixel.</li>
+              </ul>
+              <div class="journey-tags-line"><h4>Skills used</h4><ul>
+                <li><span class="journey-skilltag" data-skill="meta-ads">Meta Ads</span></li>
+                <li><span class="journey-skilltag" data-skill="google-ads">Google Ads</span></li>
+                <li><span class="journey-skilltag" data-skill="lead-gen">Lead generation</span></li>
+                <li><span class="journey-skilltag" data-skill="gtm">Google Tag Manager</span></li>
+                <li><span class="journey-skilltag" data-skill="ga4">GA4</span></li>
+                <li><span class="journey-skilltag" data-skill="meta-pixel">Meta Pixel</span></li>
+                <li><span class="journey-skilltag" data-skill="conversion-tracking">Conversion tracking</span></li>
+                <li><span class="journey-skilltag" data-skill="team-mgmt">Team management</span></li>
+                <li><span class="journey-skilltag" data-skill="multi-client">Multi-client account management</span></li>
+              </ul></div>
+              <p class="journey-took"><strong>What I took from it</strong>Leading a team means keeping the ad, the tracking and the landing page working as one system.</p>
+            </div>
+          </article>
+        </li>
+
+        <li id="journey-scholar" class="journey-chapter" data-cats="teach" data-skills="meta-ads google-ads ai-agents geo">
+          <div class="journey-mark" aria-hidden="true"><span class="journey-node"></span></div>
+          <article class="journey-card">
+            <h3 class="journey-heading"><button type="button" class="journey-toggle" aria-expanded="true" aria-controls="journey-scholar-panel">
+              <span class="journey-toggle-text"><span class="journey-date">7 May 2026</span><span class="journey-role">Digital Marketing Program, First Class with Distinction</span><span class="journey-org">Digital Scholar</span></span>
+              <svg class="journey-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+            </button></h3>
+            <div class="journey-pills"><span class="journey-tag teach">Teaching &amp; Learning</span></div>
+            <p class="journey-summary">Completed the Digital Marketing Program with First Class with Distinction.</p>
+            <div id="journey-scholar-panel" class="journey-panel">
+              <ul class="journey-bullets">
+                <li>Digital Scholar: Digital Marketing Program, First Class with Distinction, issued 7 May 2026.</li>
+                <li>Also certified in Google Ads Performance, Meta Ads Performance, Social Media Content, AI Creative Production, AI Agent, and AI Search and LLM Optimisation.</li>
+              </ul>
+              <div class="journey-tags-line"><h4>Skills used</h4><ul>
+                <li><span class="journey-skilltag" data-skill="meta-ads">Meta Ads</span></li>
+                <li><span class="journey-skilltag" data-skill="google-ads">Google Ads</span></li>
+                <li><span class="journey-skilltag" data-skill="ai-agents">AI agents</span></li>
+                <li><span class="journey-skilltag" data-skill="geo">GEO and AI search optimisation</span></li>
+              </ul></div>
+              <p class="journey-took"><strong>What I took from it</strong>Structured learning gave names and frameworks to things I had learned by doing.</p>
+            </div>
+          </article>
+        </li>
+
+        <li id="journey-now" class="journey-chapter is-now" data-cats="teach web tech" data-skills="claude-code">
+          <div class="journey-mark" aria-hidden="true"><span class="journey-year">Now</span><span class="journey-node"></span></div>
+          <article class="journey-card">
+            <h3 class="journey-heading"><button type="button" class="journey-toggle" aria-expanded="true" aria-controls="journey-now-panel">
+              <span class="journey-toggle-text"><span class="journey-date">Now</span><span class="journey-role">Teaching and building</span><span class="journey-org">The Digital School and live classes</span></span>
+              <svg class="journey-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+            </button></h3>
+            <div class="journey-pills">
+              <span class="journey-here"><span class="journey-pulse" aria-hidden="true"><span></span><span></span></span>You are here</span>
+              <span class="journey-tag teach">Teaching &amp; Learning</span><span class="journey-tag web">Web</span><span class="journey-tag tech">Tech &amp; AI</span>
+            </div>
+            <p class="journey-summary">Running live classes and building the platform behind them.</p>
+            <div id="journey-now-panel" class="journey-panel">
+              <ul class="journey-bullets">
+                <li>Runs The Digital School and its live classes.</li>
+                <li>Built the live classes platform (Laravel, MySQL) with AI-assisted development.</li>
+              </ul>
+              <div class="journey-tags-line"><h4>Skills used</h4><ul><li><span class="journey-skilltag" data-skill="claude-code">Claude Code</span></li></ul></div>
+              <p class="journey-took"><strong>What I took from it</strong>Teaching is the best test of whether I really understand what I do.</p>
+            </div>
+          </article>
+        </li>
+        </ol>
+      </div>
+
+      <div class="journey-cta">
+        <a href="/contact" class="journey-cta-primary">Work with me</a>
+        <a href="/courses/" class="journey-cta-secondary">Learn with me</a>
+      </div>
+
     </div>
   </section>
+  <script src="/assets/js/journey.js?v=20261017"></script>
 
   <!-- EDUCATION -->
   <section class="relative py-16 bg-background">
