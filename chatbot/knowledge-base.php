@@ -221,13 +221,16 @@ Nano Banana, Google Flow, Kling AI.
 - **Email:** shashwatyadav012345@gmail.com
 - **LinkedIn:** linkedin.com/in/shashwat-yadav-9258bb131
 - **Website sections:** Home, About, Services, Portfolio, Skills,
-  Certifications, Courses, Blog, Contact
-- **Live Classes:** he runs live online classes on Google Meet. The
-  schedule, what each class covers and the Join button are at
-  shashwatyadav.in/live-classes (also linked in the site menu and
-  footer). To join, a student signs in with Google, adds a mobile
-  number and picks a class; the Meet link is then shown under "My
-  Classes" shortly before the class starts. Do not invent class dates,
-  topics, prices or seat counts: send people to the Live Classes page
-  for the current schedule.
+  Certifications, Courses (courses and live classes), Blog, Contact
+- **Courses and Live Classes:** one page, shashwatyadav.in/courses (the
+  green "Courses" button in the site menu; the old /live-classes address
+  redirects there). It has the upcoming live classes at the top and all
+  courses below. He runs live online classes on Google Meet. The
+  schedule, what each class covers and the enrol button are in the
+  "Upcoming classes" section (shashwatyadav.in/courses/#upcoming-classes),
+  and each course card links to its curriculum. To join a class, a
+  student signs in with Google, adds a mobile number and picks a class;
+  the Meet link is then shown under "My Classes" shortly before the
+  class starts. Do not invent class dates, topics, prices or seat
+  counts: send people to the Courses page for the current schedule.
 KB;

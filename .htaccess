@@ -1,11 +1,17 @@
 RewriteEngine On
 
 # Old page retirement (site rebuild): preserve any existing inbound links/bookmarks
-RewriteRule ^training/?$ /courses [R=301,L]
+RewriteRule ^training/?$ /courses/ [R=301,L]
 RewriteRule ^expertise/?$ /skills [R=301,L]
 
-# The retired Creators Platform page now points at the Live Classes page
-RewriteRule ^creators-platform/?$ /live-classes [R=301,L]
+# The retired Creators Platform page now points at the Courses page (which now holds the live classes too)
+RewriteRule ^creators-platform/?$ /courses/ [R=301,L]
+
+# Live Classes moved onto the Courses page. The whole query string is kept; ?course=<slug> keeps its meaning and lands on the
+# upcoming classes list. (/live-classes and /live-classes/ both match; NE keeps the # unescaped.)
+RewriteCond %{QUERY_STRING} (^|&)course=[^&]+
+RewriteRule ^live-classes/?$ /courses/?%{QUERY_STRING}#upcoming-classes [R=301,NE,L]
+RewriteRule ^live-classes/?$ /courses/ [R=301,QSA,L]
 
 # If someone requests a URL with .html directly, redirect to the clean URL (avoids duplicate content)
 RewriteCond %{THE_REQUEST} \s/+(.+)\.html[\s?] [NC]

@@ -406,8 +406,8 @@ function handleFormSubmission(event) {
     .catch(showError);
 }
 
-// Header: a guest sees "Live Classes" and a "Log in" link. A student who is signed in to Live Classes sees two links,
-// "Classes" (the full class list) and "My Classes" (their own page in the app), and no "Log in". Reads only the small "logged in" hint cookie set by the
+// Header: a guest sees the green "Courses" pill (the merged courses and live classes page) and a "Log in" link. A student who is signed in sees
+// two pills, "Courses" and "My Classes" (their own page in the app), and no "Log in". Reads only the small "logged in" hint cookie set by the
 // Live Classes app (value "1", no personal data) and makes no network call. It is just labels and links: My Classes
 // itself checks the real login. Without JavaScript, or without the cookie, the guest header stays.
 (function () {
@@ -419,23 +419,24 @@ function handleFormSubmission(event) {
     if (!/(?:^|;\s*)lc_in=1(?:;|$)/.test(document.cookie)) return;
     document.querySelectorAll('[data-lc-guest]').forEach(function (el) { el.classList.add('hidden'); });
     var myClasses = appBase + '/my-classes';
-    document.querySelectorAll('a[href="/live-classes"]').forEach(function (a) {
-      if (a.textContent.replace(/\s+/g, ' ').trim() !== 'Live Classes') return;
+    document.querySelectorAll('a[data-lc-pill]').forEach(function (a) {
+      if (a.textContent.replace(/\s+/g, ' ').trim() !== 'Courses') return;
       // The label is the last direct <span> child (one header variant nests a hidden "Live " span inside it).
       var label = null;
       Array.prototype.forEach.call(a.children, function (c) { if (c.tagName === 'SPAN' && c.textContent.trim()) label = c; });
       if (!label) return;
 
-      // "Classes": a copy of the pill (no pulsing dot, so it stays compact) placed before "My Classes".
+      // "Courses": a copy of the pill (no pulsing dot, so it stays compact) placed before "My Classes".
       var classes = a.cloneNode(true);
       classes.setAttribute('data-lc-added', '1');
-      classes.setAttribute('href', '/live-classes');
+      classes.setAttribute('href', '/courses/');
       classes.removeAttribute('data-lc-swapped');
+      classes.removeAttribute('data-lc-pill');
       var dot = classes.firstElementChild;
       if (dot && dot.children.length) classes.removeChild(dot);
       var clabel = null;
       Array.prototype.forEach.call(classes.children, function (c) { if (c.tagName === 'SPAN' && c.textContent.trim()) clabel = c; });
-      if (clabel) clabel.textContent = 'Classes';
+      if (clabel) clabel.textContent = 'Courses';
       a.parentNode.insertBefore(classes, a);
 
       // The small header pill (phones) is short of width with two links: hide its pulsing dot, put back on log out.
@@ -445,7 +446,7 @@ function handleFormSubmission(event) {
       if ((compact || desktop) && firstDot && firstDot.children.length) { firstDot.classList.add('hidden'); a.setAttribute('data-lc-dot', '1'); }
       if (desktop) { a.setAttribute('data-lc-class', a.className); a.className = a.className.replace('px-4', 'px-3'); classes.className = a.className; }
 
-      // Remember the original so the Live Classes page can put it back on log out.
+      // Remember the original so the courses page can put it back on log out.
       a.setAttribute('data-lc-swapped', label.innerHTML);
       label.textContent = 'My Classes';
       a.setAttribute('href', myClasses);

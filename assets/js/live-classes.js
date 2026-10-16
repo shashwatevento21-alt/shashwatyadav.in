@@ -236,7 +236,7 @@
     });
   }
 
-  // main.js turned the header's "Live Classes" into "Classes" and "My Classes" while signed in; put it back.
+  // main.js turned the header's "Courses" pill into "Courses" and "My Classes" while signed in; put it back.
   function restoreHeader() {
     document.querySelectorAll('a[data-lc-added]').forEach(function (a) { a.parentNode.removeChild(a); });
     document.querySelectorAll('[data-lc-guest]').forEach(function (el) { el.classList.remove('hidden'); });
@@ -244,7 +244,7 @@
       var label = null;
       Array.prototype.forEach.call(a.children, function (c) { if (c.tagName === 'SPAN' && c.textContent.trim()) label = c; });
       if (label) label.innerHTML = a.getAttribute('data-lc-swapped');
-      a.setAttribute('href', '/live-classes');
+      a.setAttribute('href', '/courses/');
       if (a.getAttribute('data-lc-dot') && a.firstElementChild) { a.firstElementChild.classList.remove('hidden'); a.removeAttribute('data-lc-dot'); }
       if (a.getAttribute('data-lc-class')) { a.className = a.getAttribute('data-lc-class'); a.removeAttribute('data-lc-class'); }
       a.removeAttribute('data-lc-swapped');
@@ -399,6 +399,54 @@
         ? scoped.length + (scoped.length === 1 ? ' upcoming class' : ' upcoming classes') + where
         : 'Showing ' + shown.length + ' of ' + scoped.length + ' upcoming classes' + where;
     }
+    renderCourseCards();
+  }
+
+  /* ---------- course cards (the "All courses" grid on the same page; filled from the same sessions request as the list) ---------- */
+
+  var courseGridEl = document.getElementById('courses-grid');
+  var SEE_BTN = 'inline-flex items-center px-3 py-1.5 rounded-full bg-primary text-white text-xs font-semibold hover:bg-primary-dark transition-all';
+
+  // A card whose course has an upcoming class shows the next date (IST) and a "See classes" button. Any other card says
+  // "No class scheduled yet" next to its "Ask about the next class" WhatsApp link. Without JavaScript (or if the sessions
+  // could not load) the cards simply keep the WhatsApp link they were written with.
+  function fillCourseCard(card, items, ask) {
+    var box = card.querySelector('[data-course-classes]');
+    if (!box) return;
+    if (!box.getAttribute('data-ask')) { var a0 = box.querySelector('a'); box.setAttribute('data-ask', a0 ? a0.getAttribute('href') : (ask || '#')); }
+    var slug = card.getAttribute('data-course');
+    if (items && items.length) {
+      var next = items[0];
+      box.innerHTML = '<span class="text-text-body"><span class="font-semibold text-text-heading">Next class:</span> ' +
+        esc(fmt(next.start, { weekday: 'short', day: 'numeric', month: 'short' }) + ', ' + fmtTime(next.start) + ' IST') + '</span>' +
+        '<button type="button" data-see-course="' + esc(slug) + '" class="' + SEE_BTN + '">See classes</button>';
+    } else {
+      box.innerHTML = '<span class="text-text-body">No class scheduled yet</span>' +
+        '<a href="' + esc(box.getAttribute('data-ask')) + '" target="_blank" rel="noopener" class="text-growth-accent font-semibold hover:underline">Ask about the next class</a>';
+    }
+  }
+
+  function renderCourseCards() {
+    if (!courseGridEl || !state.sessionsLoaded || state.sessionsFailed) return;
+    var bySlug = {};
+    classes.forEach(function (c) { if (c.courseSlug) (bySlug[c.courseSlug] = bySlug[c.courseSlug] || []).push(c); });   // `classes` is sorted by start
+    courseGridEl.querySelectorAll('article[data-course]').forEach(function (card) { fillCourseCard(card, bySlug[card.getAttribute('data-course')]); });
+
+    // "Master Classes" has no page of its own: its card shows only while the sessions JSON has that course.
+    var master = bySlug['master-classes'], existing = courseGridEl.querySelector('article[data-course="master-classes"]');
+    if (master && master.length && !existing) {
+      var card = document.createElement('article');
+      card.setAttribute('data-course', 'master-classes');
+      card.className = 'group p-6 rounded-2xl bg-surface-card border border-border hover:border-primary/40 transition-all flex flex-col';
+      card.innerHTML = '<h3 class="font-semibold text-lg text-text-heading mb-2">' + esc(master[0].courseName) + '</h3>' +
+        '<p class="text-sm text-text-body mb-4 flex-grow">Live master classes, taught on Google Meet.</p>' +
+        '<div class="mt-3 pt-3 border-t border-border flex flex-wrap items-center justify-between gap-x-3 gap-y-1 text-xs" data-course-classes></div>';
+      courseGridEl.appendChild(card);
+      fillCourseCard(card, master, 'https://wa.me/917000198366');
+    } else if (!master && existing && existing.getAttribute('data-dynamic') !== null) {
+      existing.parentNode.removeChild(existing);
+    }
+    if (master && master.length && existing === null) { var made = courseGridEl.querySelector('article[data-course="master-classes"]'); if (made) made.setAttribute('data-dynamic', '1'); }
   }
 
   /* ---------- course chips (everyone; the public list stays the same for all visitors) ---------- */
@@ -502,7 +550,17 @@
   }
 
   document.addEventListener('click', function (e) {
-    var courseChip = e.target.closest('[data-course]');
+    var seeCourse = e.target.closest('[data-see-course]');
+    if (seeCourse) {
+      // "See classes" on a course card: pick that course's chip and bring the list into view.
+      state.course = seeCourse.getAttribute('data-see-course');
+      writeCourseToUrl();
+      renderList();
+      var target = document.getElementById('upcoming-classes');
+      if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      return;
+    }
+    var courseChip = e.target.closest('button[data-course]');
     if (courseChip) { state.course = courseChip.getAttribute('data-course'); writeCourseToUrl(); renderList(); return; }
     var chip = e.target.closest('[data-filter]');
     if (chip) {
@@ -747,7 +805,7 @@
     var id = params.get('class');
     var error = params.get('signin');
     if (!id && !error) return;
-    history.replaceState(null, '', location.pathname);
+    history.replaceState(null, '', location.pathname + location.hash);
 
     if (error) {
       notice('error', esc(SIGNIN_ERRORS[error] || 'Sign-in did not complete. Please try again.'));
