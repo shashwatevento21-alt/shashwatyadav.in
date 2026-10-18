@@ -193,4 +193,34 @@
       pickIndustry(indBtns[0].getAttribute('data-ind'), false);
     }
   }
+
+  /* ---------- long text sections: a short opening, then a "Read more" button that expands the rest ---------- */
+  all('.abt-bio').forEach(function (sec, n) {
+    var kids = Array.prototype.slice.call(sec.children);
+    var firstP = -1;
+    kids.forEach(function (k, i) { if (firstP < 0 && k.tagName === 'P') firstP = i; });
+    var rest = firstP >= 0 ? kids.slice(firstP + 1) : [];
+    if (!rest.some(function (k) { return k.tagName === 'P'; })) return;   // nothing worth hiding
+    var more = document.createElement('div');
+    var inner = document.createElement('div');
+    more.className = 'abt-bio-more';
+    more.id = 'abt-bio-more-' + (n + 1);
+    inner.className = 'abt-bio-more-inner';
+    rest.forEach(function (k) { inner.appendChild(k); });
+    more.appendChild(inner);
+    var btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'abt-readmore';
+    btn.setAttribute('aria-controls', more.id);
+    btn.innerHTML = '<span class="abt-readmore-text">Read more</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>';
+    sec.appendChild(more);
+    sec.appendChild(btn);
+    var label = btn.querySelector('.abt-readmore-text');
+    function toggle(open) {
+      setOpen(sec, btn, more, open);
+      label.textContent = open ? 'Read less' : 'Read more';
+    }
+    toggle(false);
+    btn.addEventListener('click', function () { toggle(btn.getAttribute('aria-expanded') !== 'true'); });
+  });
 })();

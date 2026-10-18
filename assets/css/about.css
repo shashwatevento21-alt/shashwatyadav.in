@@ -219,3 +219,19 @@
 
 .abt .abt-h3 { margin: 22px 0 6px; font-family: "Playfair Display", Georgia, serif; font-size: 20px; font-weight: 700; color: var(--a-ink); }
 .abt .abt-h3:first-of-type { margin-top: 4px; }
+
+/* ---------- "Read more" on long text sections (the full text is in the HTML; JavaScript folds it) ---------- */
+.abt-bio-more { display: grid; grid-template-rows: 0fr; transition: grid-template-rows .35s ease; }
+.abt-bio.is-open > .abt-bio-more { grid-template-rows: 1fr; }
+.abt-bio-more-inner { overflow: hidden; min-height: 0; padding-top: 0; }
+.abt-bio.is-open > .abt-bio-more > .abt-bio-more-inner { padding-top: 14px; }
+.abt-bio-more-inner > .abt-p:first-child { margin-top: 0; }
+.abt-bio-more-inner > .abt-p + .abt-p { margin-top: 14px; }
+.abt-readmore { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 48px; margin-top: 16px; padding: 0 22px; border: 2px solid var(--a-primary); border-radius: 999px; background: #FFFFFF; color: var(--a-primary); font: 700 16px/1 'Plus Jakarta Sans', system-ui, sans-serif; cursor: pointer; transition: background .2s, color .2s, box-shadow .2s; }
+.abt-readmore:hover { background: var(--a-primary); color: #FFFFFF; box-shadow: 0 8px 20px rgba(21, 96, 168, .25); }
+.abt-readmore svg { width: 18px; height: 18px; transition: transform .3s ease; }
+.abt-bio.is-open > .abt-readmore svg { transform: rotate(180deg); }
+@media (max-width: 479px) { .abt-readmore { width: 100%; } }
+@media (prefers-reduced-motion: reduce) {
+  .abt-bio-more, .abt-readmore, .abt-readmore svg { transition: none; }
+}
