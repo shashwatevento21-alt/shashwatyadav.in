@@ -9,8 +9,8 @@
   font-family: 'Plus Jakarta Sans', system-ui, sans-serif; color: var(--c-body); background: var(--c-bg);
 }
 .cd, .cd * { box-sizing: border-box; }
-.cd h1, .cd h2, .cd h3, .cd p, .cd ul, .cd ol, .cd li { margin: 0; padding: 0; }
-.cd ul, .cd ol { list-style: none; }
+:where(.cd) :where(h1, h2, h3, p, ul, ol, li) { margin: 0; padding: 0; }
+:where(.cd) :where(ul, ol) { list-style: none; }
 .cd [hidden] { display: none !important; }
 .cd a:focus-visible, .cd button:focus-visible, .cd input:focus-visible { outline: 3px solid var(--c-amber); outline-offset: 2px; border-radius: 8px; }
 .cd [id] { scroll-margin-top: 110px; }
