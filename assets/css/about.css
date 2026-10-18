@@ -210,3 +210,6 @@
 @media (prefers-reduced-motion: reduce) {
   .abt-ind, .abt-tab, .abt-res { transition: none; }
 }
+
+.abt .abt-h3 { margin: 22px 0 6px; font-family: "Playfair Display", Georgia, serif; font-size: 20px; font-weight: 700; color: var(--a-ink); }
+.abt .abt-h3:first-of-type { margin-top: 4px; }
