@@ -252,3 +252,10 @@
 @media (prefers-reduced-motion: reduce) {
   .abt-details .abt-act, .abt-details .abt-act::after { transition: none; }
 }
+
+/* ---------- highlighted external link (Insinfluencer) ---------- */
+a.abt-hl { display: inline; padding: 2px 8px; border-radius: 8px; background: rgba(245, 158, 11, .22); box-shadow: inset 0 -2px 0 var(--a-amber, #F59E0B); color: var(--a-primary, #1560A8); font-weight: 700; text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 3px; overflow-wrap: anywhere; transition: background .2s; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+a.abt-hl::after { content: " \2197"; text-decoration: none; display: inline-block; }
+a.abt-hl:hover { background: rgba(245, 158, 11, .4); }
+a.abt-hl:focus-visible { outline: 3px solid var(--a-primary, #1560A8); outline-offset: 2px; }
+@media (prefers-reduced-motion: reduce) { a.abt-hl { transition: none; } }
