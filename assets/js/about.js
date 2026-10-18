@@ -95,13 +95,14 @@
     var target = parseFloat(el.getAttribute('data-target')) || 0;
     var prefix = el.getAttribute('data-prefix') || '';
     var suffix = el.getAttribute('data-suffix') || '';
+    var decimals = parseInt(el.getAttribute('data-decimals') || '0', 10);
     var finalText = el.textContent;
     var start = null;
     function tick(now) {
       if (start === null) start = now;
       var p = Math.min((now - start) / 1400, 1);
       if (p < 1) {
-        el.textContent = prefix + Math.round(target * (1 - Math.pow(1 - p, 3))) + suffix;
+        el.textContent = prefix + (target * (1 - Math.pow(1 - p, 3))).toFixed(decimals) + suffix;
         window.requestAnimationFrame(tick);
       } else {
         el.textContent = finalText;
@@ -137,5 +138,59 @@
       });
       btn.addEventListener('pointerleave', function () { btn.style.transform = ''; });
     });
+  }
+
+  /* ---------- skill tabs (arrow keys, Home and End; without JavaScript every panel is shown in turn) ---------- */
+  all('.abt-tabs').forEach(function (set) {
+    var list = set.querySelector('.abt-tablist');
+    var tabs = all('[role="tab"]', set);
+    if (!list || !tabs.length) return;
+    var panels = tabs.map(function (t) { return document.getElementById(t.getAttribute('aria-controls')); });
+    list.hidden = false;
+    function select(i, focus) {
+      tabs.forEach(function (t, j) {
+        var on = i === j;
+        t.setAttribute('aria-selected', on ? 'true' : 'false');
+        t.tabIndex = on ? 0 : -1;
+        if (panels[j]) panels[j].hidden = !on;
+      });
+      if (focus) tabs[i].focus();
+    }
+    tabs.forEach(function (t, i) {
+      t.addEventListener('click', function () { select(i, false); });
+      t.addEventListener('keydown', function (e) {
+        var n = null;
+        if (e.key === 'ArrowRight') n = (i + 1) % tabs.length;
+        else if (e.key === 'ArrowLeft') n = (i - 1 + tabs.length) % tabs.length;
+        else if (e.key === 'Home') n = 0;
+        else if (e.key === 'End') n = tabs.length - 1;
+        if (n !== null) { e.preventDefault(); select(n, true); }
+      });
+    });
+    select(0, false);
+  });
+
+  /* ---------- industries: pick one to see what I do there; the matching result cards stay bright ---------- */
+  var indWrap = root.querySelector('.abt-ind-wrap');
+  if (indWrap) {
+    var indList = indWrap.querySelector('.abt-ind-list');
+    var indBtns = all('.abt-ind', indWrap);
+    var indPanels = all('.abt-ind-panel', indWrap);
+    var indStatus = indWrap.querySelector('.abt-ind-status');
+    var cards = all('.abt-res');
+    if (indList && indBtns.length) {
+      indList.hidden = false;
+      var pickIndustry = function (slug, fromUser) {
+        indBtns.forEach(function (b) { b.setAttribute('aria-pressed', b.getAttribute('data-ind') === slug ? 'true' : 'false'); });
+        indPanels.forEach(function (p) { p.hidden = p.getAttribute('data-ind') !== slug; });
+        if (!fromUser) return;
+        var hits = cards.filter(function (c) { return (c.getAttribute('data-ind') || '').split(' ').indexOf(slug) >= 0; });
+        cards.forEach(function (c) { c.classList.toggle('is-dim', hits.length > 0 && hits.indexOf(c) < 0); });
+        var name = indWrap.querySelector('.abt-ind[data-ind="' + slug + '"]').textContent;
+        if (indStatus) indStatus.textContent = name + ': ' + (hits.length ? hits.length + (hits.length === 1 ? ' published result' : ' published results') + ' highlighted below.' : 'no published results yet.');
+      };
+      indBtns.forEach(function (b) { b.addEventListener('click', function () { pickIndustry(b.getAttribute('data-ind'), true); }); });
+      pickIndustry(indBtns[0].getAttribute('data-ind'), false);
+    }
   }
 })();

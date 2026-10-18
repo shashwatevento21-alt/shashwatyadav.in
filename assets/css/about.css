@@ -168,3 +168,45 @@
   .abt-js .abt-reveal { opacity: 1; transform: none; }
   .abt-card { transform: none !important; }
 }
+
+/* ---------- performance-marketing additions: industries, results, skill tabs, process, built ---------- */
+.abt [hidden] { display: none !important; }
+
+.abt-ind-list { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; }
+.abt-ind, .abt-tab { min-height: 44px; padding: 0 16px; border: 1px solid var(--a-line); background: #FFFFFF; border-radius: 999px; font: 600 14px/1.2 'Plus Jakarta Sans', system-ui, sans-serif; color: var(--a-ink); cursor: pointer; transition: background .2s, color .2s, border-color .2s; }
+.abt-ind:hover, .abt-tab:hover { border-color: var(--a-primary); }
+.abt-ind[aria-pressed="true"], .abt-tab[aria-selected="true"] { background: var(--a-primary); border-color: var(--a-primary); color: #FFFFFF; }
+.abt-ind-status { min-height: 18px; margin-bottom: 10px; }
+.abt-ind-panel, .abt-tabpanel, .abt-built { background: #FFFFFF; border: 1px solid var(--a-line); border-radius: 16px; padding: 16px 18px; }
+.abt-ind-panel + .abt-ind-panel { margin-top: 10px; }
+.abt .abt-ind-panel h3, .abt .abt-tabpanel h3 { font-size: 18px; font-weight: 700; color: var(--a-ink); }
+.abt-ind-panel p, .abt-tabpanel > p, .abt-built p { margin-top: 6px; font-size: 15px; line-height: 1.6; }
+.abt-ind-panel .abt-ind-res { color: var(--a-green); font-weight: 600; }
+
+.abt-results { display: grid; gap: 14px; grid-template-columns: minmax(0, 1fr); }
+.abt-res { background: #FFFFFF; border: 1px solid var(--a-line); border-radius: 16px; padding: 18px; transition: opacity .25s, border-color .25s; }
+.abt-res.is-dim { opacity: .45; }
+.abt-res b { display: block; margin-top: 6px; font-family: 'Playfair Display', Georgia, serif; font-size: 24px; line-height: 1.2; color: var(--a-primary); }
+.abt-res p { margin-top: 8px; font-size: 14px; line-height: 1.55; }
+
+.abt-tablist { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; }
+.abt-tabpanel + .abt-tabpanel { margin-top: 10px; }
+.abt-js .abt-tabpanel > h3 { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.abt-chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0 8px; padding: 0; list-style: none; }
+.abt-chip { padding: 8px 12px; border: 1px solid var(--a-line); border-radius: 999px; background: var(--a-bg); font-size: 14px; font-weight: 600; color: var(--a-ink); }
+.abt-tabpanel .abt-link { display: inline-flex; align-items: center; min-height: 44px; }
+
+.abt-steps { display: grid; gap: 12px; grid-template-columns: minmax(0, 1fr); margin: 0; padding: 0; list-style: none; counter-reset: abtstep; }
+.abt-step { position: relative; background: #FFFFFF; border: 1px solid var(--a-line); border-radius: 16px; padding: 16px 16px 16px 58px; counter-increment: abtstep; }
+.abt-step::before { content: counter(abtstep); position: absolute; left: 14px; top: 14px; width: 32px; height: 32px; border-radius: 50%; background: var(--a-primary); color: #FFFFFF; display: flex; align-items: center; justify-content: center; font: 700 14px 'Space Mono', monospace; }
+.abt-step b { display: block; font-size: 16px; color: var(--a-ink); }
+.abt-step span { display: block; margin-top: 4px; font-size: 14px; line-height: 1.5; }
+
+.abt-built p { margin: 0; }
+.abt-built .abt-link { font-weight: 700; }
+
+@media (min-width: 640px) { .abt-results { grid-template-columns: repeat(2, minmax(0, 1fr)); } .abt-steps { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (min-width: 900px) { .abt-results { grid-template-columns: repeat(3, minmax(0, 1fr)); } .abt-steps { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+@media (prefers-reduced-motion: reduce) {
+  .abt-ind, .abt-tab, .abt-res { transition: none; }
+}
