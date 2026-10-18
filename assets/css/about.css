@@ -76,9 +76,13 @@
 
 /* ---------- stats strip ---------- */
 .abt-stats { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
-.abt-stat { background: #FFFFFF; border: 1px solid var(--a-line); border-radius: 16px; padding: 18px 10px; text-align: center; min-width: 0; }
-.abt-stat b { display: block; font-family: 'Playfair Display', Georgia, serif; font-size: 34px; line-height: 1.1; color: var(--a-primary); font-variant-numeric: tabular-nums; }
-.abt-stat span { display: block; margin-top: 6px; font-size: 13px; line-height: 1.35; color: var(--a-muted); overflow-wrap: anywhere; }
+.abt-stat { background: #FFFFFF; border: 1px solid var(--a-line); border-top: 4px solid var(--a-primary); border-radius: 16px; padding: 22px 10px 18px; text-align: center; min-width: 0; box-shadow: 0 6px 18px rgba(15, 23, 42, .06); }
+.abt-stat:nth-child(2) { border-top-color: var(--a-green); }
+.abt-stat:nth-child(3) { border-top-color: var(--a-amber); }
+.abt-stat:nth-child(4) { border-top-color: var(--a-primary-dark); }
+.abt-stat > b { display: block; font-family: 'Playfair Display', Georgia, serif; font-size: clamp(30px, 9.5vw, 44px); font-weight: 800; line-height: 1.05; color: var(--a-primary); font-variant-numeric: lining-nums tabular-nums; white-space: nowrap; }
+.abt-stat > b .abt-count { font: inherit; color: inherit; }
+.abt-stat > span { display: block; margin-top: 8px; font-size: 14px; font-weight: 600; line-height: 1.35; color: var(--a-ink); overflow-wrap: anywhere; }
 
 /* ---------- skill cards ---------- */
 .abt-skills { display: grid; gap: 14px; grid-template-columns: minmax(0, 1fr); }
@@ -146,7 +150,7 @@
 .abt-js .abt-reveal { opacity: 0; transform: translateY(16px); transition: opacity .6s ease, transform .6s ease; }
 .abt-js .abt-reveal.is-in { opacity: 1; transform: none; }
 
-@media (min-width: 480px) { .abt-stats { grid-template-columns: repeat(4, minmax(0, 1fr)); } .abt-phone { grid-template-columns: 128px minmax(0, 1fr); } }
+@media (min-width: 480px) { .abt-phone { grid-template-columns: 128px minmax(0, 1fr); } }
 @media (min-width: 640px) { .abt-skills { grid-template-columns: repeat(2, minmax(0, 1fr)); } .abt-badges { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (min-width: 768px) {
   .abt-wrap { padding: 0 32px; }
@@ -155,7 +159,9 @@
   .abt .abt-h1 { font-size: 54px; }
   .abt-minibar { position: sticky; top: 76px; z-index: 30; }
   .abt-formbox { padding: 28px; }
-  .abt-stat b { font-size: 40px; }
+  .abt-stats { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px; }
+  .abt-stat > b { font-size: clamp(40px, 4.2vw, 52px); }
+  .abt-stat > span { font-size: 15px; }
 }
 @media (min-width: 900px) {
   .abt-hero-grid { grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr); gap: 40px; }
