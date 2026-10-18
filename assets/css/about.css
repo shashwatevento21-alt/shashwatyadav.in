@@ -261,5 +261,5 @@ a.abt-hl:focus-visible { outline: 3px solid var(--a-primary, #1560A8); outline-o
 @media (prefers-reduced-motion: reduce) { a.abt-hl { transition: none; } }
 
 /* ---------- journey cards: the duration is highlighted ---------- */
-.journey .journey-date { display: inline-block; max-width: 100%; margin-bottom: 8px; padding: 5px 12px; border-radius: 999px; background: #1560A8; color: #FFFFFF; font-family: 'Space Mono', monospace; font-size: 13px; font-weight: 700; line-height: 1.3; letter-spacing: .01em; }
-.journey .is-now .journey-date { background: #1E8449; }
+.journey .journey-date { font-family: 'Space Mono', monospace; font-size: 13px; font-weight: 700; color: #1560A8; letter-spacing: .01em; }
+.journey .is-now .journey-date { color: #1E8449; }
