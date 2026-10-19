@@ -150,6 +150,7 @@
     var target = parseFloat(el.getAttribute('data-target')) || 0;
     var finalText = el.textContent;
     var start = null;
+    window.setTimeout(function () { el.textContent = finalText; }, 1800);   // a background tab can stall animation frames: always end on the real value
     function tick(now) {
       if (start === null) start = now;
       var p = Math.min((now - start) / 1200, 1);

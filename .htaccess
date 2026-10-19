@@ -13,6 +13,9 @@ RewriteCond %{QUERY_STRING} (^|&)course=[^&]+
 RewriteRule ^live-classes/?$ /courses/?%{QUERY_STRING}#upcoming-classes [R=301,NE,L]
 RewriteRule ^live-classes/?$ /courses/ [R=301,QSA,L]
 
+# Retired courses (only Google Ads, Meta Ads and Claude and Claude Code remain): old links go to the Courses page
+RewriteRule ^courses/(n8n-automation|ai-content-creation-tools|seo-geo|wordpress-elementor|conversion-tracking|social-media-marketing)/?$ /courses/ [R=301,L]
+
 # If someone requests a URL with .html directly, redirect to the clean URL (avoids duplicate content)
 RewriteCond %{THE_REQUEST} \s/+(.+)\.html[\s?] [NC]
 RewriteRule ^ /%1 [R=301,L]
