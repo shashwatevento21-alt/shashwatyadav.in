@@ -17,6 +17,9 @@ RewriteRule ^live-classes/?$ /courses/ [R=301,QSA,L]
 # slugs, with or without a trailing slash, /index or .html. Kept above the .html clean-URL rules so the .html form is caught first.
 RewriteRule ^courses/(n8n-automation|ai-content-creation-tools|seo-geo|wordpress-elementor|conversion-tracking|social-media-marketing)(/index)?(\.html)?/?$ /courses/ [R=301,L]
 
+# The old Claude AI Mastery syllabus PDF was retired with that course page: its address now goes to the current Claude course page
+RewriteRule ^courses/claude-mastery/claude-ai-mastery-course-syllabus\.pdf$ /courses/claude-mastery/ [R=301,L]
+
 # If someone requests a URL with .html directly, redirect to the clean URL (avoids duplicate content)
 RewriteCond %{THE_REQUEST} \s/+(.+)\.html[\s?] [NC]
 RewriteRule ^ /%1 [R=301,L]
