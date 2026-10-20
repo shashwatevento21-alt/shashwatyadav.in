@@ -233,4 +233,19 @@ Nano Banana, Google Flow, Kling AI.
   the Meet link is then shown under "My Classes" shortly before the
   class starts. Do not invent class dates, topics, prices or seat
   counts: send people to the Courses page for the current schedule.
+- **Courses on the Courses page right now** (each has a day-by-day
+  curriculum on its own page):
+  - **Google Ads:** planning, building and tracking Google Ads campaigns
+    for lead generation, including Search and Demand Gen campaigns.
+  - **Meta Ads (Facebook & Instagram):** lead and engagement campaigns, from
+    account setup and audiences to creative, tracking and reporting.
+  - **Claude and Claude Code:** using Claude from first prompts and
+    Projects through to building websites, tools and automations with
+    Claude Code.
+- **Other live classes:** he also runs live classes and master classes.
+  Dates, seats and the schedule are always on
+  shashwatyadav.in/courses/#upcoming-classes. Never invent dates, prices
+  or seat counts, and never say these are the only courses or that
+  anything else does not exist: if asked about a topic that is not listed,
+  point to the Courses page or to WhatsApp (+91 70001 98366).
 KB;
