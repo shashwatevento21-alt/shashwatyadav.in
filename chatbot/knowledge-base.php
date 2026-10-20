@@ -159,9 +159,9 @@ Nano Banana, Google Flow, Kling AI.
 
 # Certifications (7, all from Digital Scholar)
 
-1. **Digital Marketing Program** — 4-Month Program, First Class with
-   Distinction. Digital Scholar (Sorav Jain, Founder). Earned 7 May 2026.
-   Credential ID: 2025OB63041.
+1. **Digital Marketing Program** — Completed the Digital Marketing Program
+   (a 4-month program), First Class with Distinction. Digital Scholar
+   (Sorav Jain, Founder). Earned 7 May 2026. Credential ID: 2025OB63041.
 2. **Google Ads Performance Specialist** — Advanced training in campaign
    structure, optimisation and scaling. Digital Scholar (Rishi Jain &
    Sorav Jain, Co-founders). Credential ID: 94177253213859.
