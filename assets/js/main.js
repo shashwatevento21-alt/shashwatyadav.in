@@ -485,13 +485,20 @@ function handleFormSubmission(event) {
       '.cm-mobile{display:flex;flex-direction:column;gap:2px;margin:-6px 0 0 12px;padding-left:12px;border-left:2px solid rgba(255,255,255,.25)}' +
       '.cm-mobile a{display:block;padding:9px 4px;font-size:13px;font-weight:500;color:rgba(255,255,255,.78);text-decoration:none}' +
       '.cm-mobile a:hover{color:#fff}' +
-      // Phone header: the Courses (and signed-in My Classes) pill is a white button with blue text, big enough to tap.
-      '#mobile-header-actions a[data-lc-pill],#mobile-header-actions a[data-lc-added]{background:#fff;color:#1560A8;font-size:12px;font-weight:700;line-height:1;padding:9px 14px;min-height:36px;border:1px solid rgba(21,96,168,.18);box-shadow:0 2px 8px rgba(0,0,0,.22);' +
+      // The Courses (and signed-in "My Classes") pills are white buttons with blue text on every screen: desktop header, phone header
+      // and the phone menu. Sizes differ per place; colours, shadow and states are shared. The pulsing dot turns green on white.
+      '#navbar a[data-lc-pill],#navbar a[data-lc-added]{background:#fff;color:#1560A8;font-weight:700;border:1px solid rgba(21,96,168,.18);box-shadow:0 2px 8px rgba(0,0,0,.22);' +
       (calm ? '' : 'transition:background .15s ease,transform .1s ease;') + '}' +
-      '#mobile-header-actions a[data-lc-pill]:hover,#mobile-header-actions a[data-lc-added]:hover{background:#EFF6FF}' +
-      '#mobile-header-actions a[data-lc-pill]:active,#mobile-header-actions a[data-lc-added]:active{transform:scale(.97)}' +
-      '#mobile-header-actions a[data-lc-pill]:focus-visible,#mobile-header-actions a[data-lc-added]:focus-visible{outline:3px solid #F59E0B;outline-offset:2px}' +
-      '#mobile-header-actions a[data-lc-pill] span span,#mobile-header-actions a[data-lc-added] span span{background-color:#1E8449}' +
+      '#navbar a[data-lc-pill]:hover,#navbar a[data-lc-added]:hover{background:#EFF6FF;filter:none}' +
+      '#navbar a[data-lc-pill]:active,#navbar a[data-lc-added]:active{transform:scale(.97)}' +
+      '#navbar a[data-lc-pill]:focus-visible,#navbar a[data-lc-added]:focus-visible{outline:3px solid #F59E0B;outline-offset:2px}' +
+      '#navbar a[data-lc-pill] span span,#navbar a[data-lc-added] span span{background-color:#1E8449}' +
+      // phone header: big enough to tap
+      '#mobile-header-actions a[data-lc-pill],#mobile-header-actions a[data-lc-added]{font-size:12px;line-height:1;padding:9px 14px;min-height:36px}' +
+      // phone menu: full-width button
+      '#mobile-menu a[data-lc-pill],#mobile-menu a[data-lc-added]{font-size:13px;line-height:1.2;padding:12px 20px;min-height:44px}' +
+      // desktop header: a little taller than the text links beside it
+      '#navbar-container > div.xl\\:flex a[data-lc-pill],#navbar-container > div.xl\\:flex a[data-lc-added]{min-height:36px}' +
       '@media (max-width:360px){#mobile-header-actions a[data-lc-pill],#mobile-header-actions a[data-lc-added]{font-size:11px;padding:8px 10px}}';
     document.head.appendChild(css);
 
