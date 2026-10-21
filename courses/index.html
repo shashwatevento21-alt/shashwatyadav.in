@@ -11,7 +11,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Courses and Live Classes | Shashwat Yadav</title>
-  <meta name="description" content="Courses and live classes on Google Ads, Meta Ads, and Claude and Claude Code, taught by Shashwat Yadav. See upcoming live classes, browse every course, and enrol online.">
+  <meta name="description" content="Courses, live classes and 3-hour master classes on Google Ads, Meta Ads, and Claude and Claude Code by Shashwat Yadav. See upcoming dates and enrol online.">
   <link rel="icon" type="image/png" href="/assets/images/favicon.png">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -131,9 +131,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
       <h1 class="font-serif text-4xl md:text-6xl font-bold text-text-heading mb-4">Courses and Live Classes</h1>
       <p class="text-lg md:text-xl text-text-heading font-medium max-w-2xl mx-auto mb-3">Learn performance marketing and AI automation from someone who does this work every day.</p>
-      <p class="text-text-body max-w-2xl mx-auto">Taught under <strong class="text-text-heading">The Digital School</strong>. Join an upcoming live class on Google Meet, or browse every course and see exactly what it covers.</p>
+      <p class="text-text-body max-w-2xl mx-auto">Taught under <strong class="text-text-heading">The Digital School</strong>. Join an upcoming live class on Google Meet, try a 3-hour master class, or browse every course and see exactly what it covers.</p>
       <nav class="flex flex-wrap items-center justify-center gap-3 mt-6" aria-label="On this page">
         <a href="#upcoming-classes" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-primary text-white text-sm font-semibold hover:bg-primary-dark transition-all">Upcoming classes</a>
+        <a href="#master-classes" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white text-text-heading border border-border text-sm font-semibold hover:border-primary/40 transition-all">Master classes</a>
         <a href="#all-courses" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white text-text-heading border border-border text-sm font-semibold hover:border-primary/40 transition-all">All courses</a>
       </nav>
     </div>
@@ -191,6 +192,83 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </section>
 
+
+  <!-- MASTER CLASSES
+       How to add another master class: copy one whole <article data-master-course ...> card below and change
+         data-master-course : the course address (slug) of the Master Classes course in the Live Classes app admin
+         data-class-title   : the class title, exactly as it is written in the admin (it is matched letter for letter)
+       then edit the title, tagline, highlights, "What to bring" and the full list, and the WhatsApp link text.
+       Dates and seats are NOT typed here: they come from the sessions you schedule for that class in the admin, and the card
+       shows the earliest upcoming one. The card works on its own; the script only fills in the "Next session" and seats lines. -->
+  <section id="master-classes" class="relative py-12 md:py-16 bg-background scroll-mt-24">
+    <style>
+      .mc summary { list-style: none; cursor: pointer; }
+      .mc summary::-webkit-details-marker { display: none; }
+      .mc details[open] .mc-chev { transform: rotate(180deg); }
+      @media (prefers-reduced-motion: reduce) { .mc .mc-chev { transition: none; } }
+    </style>
+    <div class="max-w-6xl mx-auto px-4 md:px-8 mc">
+      <div class="mb-8 text-center">
+        <h2 class="font-serif text-2xl md:text-3xl font-bold text-text-heading">Master Classes: 3-hour live deep dives</h2>
+        <p class="text-sm text-text-body mt-1 max-w-2xl mx-auto">Each master class covers one skill from start to finish, hands-on, live on Google Meet. Join one or several.</p>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <article data-master-course="3-hrs-master-class" data-class-title="Master Class 1: Meta Ads Lead Generation Basics" class="group p-6 rounded-2xl bg-surface-card border border-border hover:border-primary/40 transition-all flex flex-col">
+          <div class="flex flex-wrap gap-2 mb-3">
+            <span class="px-2.5 py-1 rounded-full bg-primary/10 text-primary text-[11px] font-semibold border border-primary/20">3 hours</span>
+            <span class="px-2.5 py-1 rounded-full bg-growth-accent/10 text-growth-accent text-[11px] font-semibold border border-growth-accent/25">Live on Google Meet</span>
+          </div>
+          <h3 class="font-semibold text-lg text-text-heading mb-2">Master Class 1: Meta Ads Lead Generation Basics</h3>
+          <p class="text-sm text-text-body mb-4">Build your first Meta lead campaign live, from audience to follow-up, in one 3-hour session.</p>
+          <ul class="space-y-2 mb-4">
+            <li class="flex items-start gap-2 text-sm text-text-body"><svg class="w-4 h-4 text-growth-accent flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg><span>Creating the lead campaign in Ads Manager</span></li>
+            <li class="flex items-start gap-2 text-sm text-text-body"><svg class="w-4 h-4 text-growth-accent flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg><span>Audience, placements and Advantage+</span></li>
+            <li class="flex items-start gap-2 text-sm text-text-body"><svg class="w-4 h-4 text-growth-accent flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg><span>Creative, instant form and follow-up messages</span></li>
+            <li class="flex items-start gap-2 text-sm text-text-body"><svg class="w-4 h-4 text-growth-accent flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg><span>Reading your first results</span></li>
+          </ul>
+          <p class="text-sm text-text-body mb-4"><span class="font-semibold text-text-heading">What to bring:</span> A laptop, a Facebook account and a Page you can use. You build in draft, so no ad spend is needed.</p>
+          <div class="mt-auto pt-3 border-t border-border">
+            <p data-master-next class="text-sm text-text-body"><span class="font-semibold text-text-heading">Next session:</span> see the dates under Upcoming classes.</p>
+            <p data-master-seats class="text-xs font-semibold text-amber-700 mt-1" hidden></p>
+            <p data-master-ask class="text-xs mt-1"><a href="https://wa.me/917000198366?text=Hi%20Shashwat%21%20Please%20tell%20me%20when%20Master%20Class%201%3A%20Meta%20Ads%20Lead%20Generation%20Basics%20is%20scheduled." target="_blank" rel="noopener" class="text-growth-accent font-semibold hover:underline">Tell me when it's scheduled</a></p>
+            <div class="mt-3 flex flex-wrap gap-2">
+              <a href="#upcoming-classes" data-see-master class="inline-flex items-center justify-center px-4 py-2.5 min-h-[44px] rounded-full bg-primary text-white text-sm font-semibold hover:bg-primary-dark transition-all">See dates and enrol</a>
+            </div>
+            <details class="mt-3">
+              <summary class="inline-flex items-center gap-2 px-4 py-2.5 min-h-[44px] rounded-full bg-background text-text-heading border border-border text-sm font-semibold hover:border-primary/40 transition-all">What you'll learn <svg class="mc-chev w-4 h-4 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg></summary>
+              <ul class="space-y-2 mt-3">
+              <li class="flex items-start gap-2 text-sm text-text-body"><svg class="w-4 h-4 text-growth-accent flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg><span>How a Meta lead generation campaign works and when to use it</span></li>
+              <li class="flex items-start gap-2 text-sm text-text-body"><svg class="w-4 h-4 text-growth-accent flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg><span>Creating the lead campaign in Ads Manager: objective, budget and setup choices</span></li>
+              <li class="flex items-start gap-2 text-sm text-text-body"><svg class="w-4 h-4 text-growth-accent flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg><span>Choosing who sees your ads: location, age and gender, and how much to narrow</span></li>
+              <li class="flex items-start gap-2 text-sm text-text-body"><svg class="w-4 h-4 text-growth-accent flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg><span>Platforms and placements: where your ads appear and when to use Advantage+ placements</span></li>
+              <li class="flex items-start gap-2 text-sm text-text-body"><svg class="w-4 h-4 text-growth-accent flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg><span>Using an existing post or creating a new ad, and the trade-offs of each</span></li>
+              <li class="flex items-start gap-2 text-sm text-text-body"><svg class="w-4 h-4 text-growth-accent flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg><span>Advantage+ audience and the other Advantage+ options, and when to use them</span></li>
+              <li class="flex items-start gap-2 text-sm text-text-body"><svg class="w-4 h-4 text-growth-accent flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg><span>Creative enhancements: what they change in your ad and when to switch them off</span></li>
+              <li class="flex items-start gap-2 text-sm text-text-body"><svg class="w-4 h-4 text-growth-accent flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg><span>Building the instant form: questions, lead quality settings, privacy link and thank-you screen</span></li>
+              <li class="flex items-start gap-2 text-sm text-text-body"><svg class="w-4 h-4 text-growth-accent flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg><span>Following up on leads: message timing, a WhatsApp or call script and a simple lead tracker</span></li>
+              <li class="flex items-start gap-2 text-sm text-text-body"><svg class="w-4 h-4 text-growth-accent flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg><span>Checking lead quality and reading your first results</span></li>
+              <li class="flex items-start gap-2 text-sm text-text-body"><svg class="w-4 h-4 text-growth-accent flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg><span>Policy basics and common reasons lead ads get rejected</span></li>
+              </ul>
+            </details>
+          </div>
+        </article>
+
+        <article class="p-6 rounded-2xl bg-surface-card border border-dashed border-border flex flex-col">
+          <div class="flex flex-wrap gap-2 mb-3">
+            <span class="px-2.5 py-1 rounded-full bg-primary/10 text-primary text-[11px] font-semibold border border-primary/20">3 hours</span>
+            <span class="px-2.5 py-1 rounded-full bg-growth-accent/10 text-growth-accent text-[11px] font-semibold border border-growth-accent/25">Live on Google Meet</span>
+          </div>
+          <h3 class="font-semibold text-lg text-text-heading mb-2">More master classes coming</h3>
+          <p class="text-sm text-text-body mb-4 flex-grow">New master classes are added from time to time. Tell me which skill you would like covered in one focused session.</p>
+          <div class="pt-3 border-t border-border">
+            <a href="https://wa.me/917000198366?text=Hi%20Shashwat%21%20I%27d%20like%20a%20master%20class%20on..." target="_blank" rel="noopener" class="inline-flex items-center justify-center px-4 py-2.5 min-h-[44px] rounded-full bg-white text-text-heading border border-border text-sm font-semibold hover:border-primary/40 transition-all">Suggest a topic</a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
 
   <!-- ALL COURSES -->
   <section id="all-courses" class="relative py-12 md:py-16 bg-background scroll-mt-24">
@@ -383,6 +461,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <script src="/assets/js/main.js?v=20261014"></script>
   <script src="/assets/js/chatbot-widget.js"></script>
-  <script src="/assets/js/live-classes.js?v=20261014"></script>
+  <script src="/assets/js/live-classes.js?v=20261022"></script>
 </body>
 </html>

@@ -400,6 +400,39 @@
         : 'Showing ' + shown.length + ' of ' + scoped.length + ' upcoming classes' + where;
     }
     renderCourseCards();
+    renderMasterCards();
+  }
+
+  /* ---------- master classes (the "Master classes" section: one card per class, matched to the same sessions request) ---------- */
+  // A card carries data-master-course="<course slug>" and data-class-title="<exact class title>". The earliest upcoming session whose
+  // courseSlug and title both match is shown as "Next session"; without one the card says so and offers a WhatsApp link.
+  // The cards are plain HTML and stay readable if this never runs.
+
+  var masterCards = document.querySelectorAll('[data-master-course]');
+
+  function renderMasterCards() {
+    if (!masterCards.length || !state.sessionsLoaded || state.sessionsFailed) return;
+    var soon = upcoming();   // sorted by start, so the first match is the earliest
+    Array.prototype.forEach.call(masterCards, function (card) {
+      var slug = card.getAttribute('data-master-course'), title = card.getAttribute('data-class-title');
+      var next = null;
+      for (var i = 0; i < soon.length; i++) { if (soon[i].courseSlug === slug && soon[i].topic === title) { next = soon[i]; break; } }
+      var whenEl = card.querySelector('[data-master-next]'), seatsEl = card.querySelector('[data-master-seats]');
+      var askEl = card.querySelector('[data-master-ask]'), seeBtn = card.querySelector('[data-see-master]');
+      if (whenEl) {
+        whenEl.innerHTML = next
+          ? '<span class="font-semibold text-text-heading">Next session:</span> ' + esc(fmt(next.start, { weekday: 'short', day: 'numeric', month: 'short' }) + ', ' + fmtTime(next.start) + ' IST')
+          : '<span class="font-semibold text-text-heading">No session scheduled yet</span>';
+      }
+      if (seatsEl) {
+        var left = next ? next.spotsLeft : null;
+        if (next && next.isFull) { seatsEl.textContent = 'This session is full'; seatsEl.hidden = false; }
+        else if (next && left !== null && left !== undefined) { seatsEl.textContent = left + (left === 1 ? ' seat left' : ' seats left'); seatsEl.hidden = false; }
+        else { seatsEl.hidden = true; }
+      }
+      if (askEl) askEl.hidden = !!next;
+      if (seeBtn) { if (next) seeBtn.setAttribute('data-see-master-id', next.id); else seeBtn.removeAttribute('data-see-master-id'); }
+    });
   }
 
   /* ---------- course cards (the "All courses" grid on the same page; filled from the same sessions request as the list) ---------- */
@@ -550,6 +583,27 @@
   }
 
   document.addEventListener('click', function (e) {
+    var seeMaster = e.target.closest('[data-see-master]');
+    if (seeMaster) {
+      // "See dates and enrol" on a master class card: pick that course's chip if it has an upcoming class, bring the list into view
+      // and briefly mark the matching class card. With no matching session it simply scrolls to the list.
+      e.preventDefault();
+      var mCard = seeMaster.closest('[data-master-course]');
+      var mSlug = mCard ? mCard.getAttribute('data-master-course') : '';
+      var mId = seeMaster.getAttribute('data-see-master-id');
+      if (mSlug && classes.some(function (c) { return c.courseSlug === mSlug; })) { state.course = mSlug; writeCourseToUrl(); renderList(); }
+      var calm = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      var mTarget = document.getElementById('upcoming-classes');
+      if (mTarget) mTarget.scrollIntoView({ behavior: calm ? 'auto' : 'smooth', block: 'start' });
+      if (mId) {
+        var mClass = listEl.querySelector('[data-class-card="' + mId + '"]');
+        if (mClass) {
+          mClass.classList.add('ring-4', 'ring-primary/40');
+          window.setTimeout(function () { mClass.classList.remove('ring-4', 'ring-primary/40'); }, 3000);
+        }
+      }
+      return;
+    }
     var seeCourse = e.target.closest('[data-see-course]');
     if (seeCourse) {
       // "See classes" on a course card: pick that course's chip and bring the list into view.

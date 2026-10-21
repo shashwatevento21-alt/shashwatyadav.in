@@ -248,4 +248,12 @@ Nano Banana, Google Flow, Kling AI.
   or seat counts, and never say these are the only courses or that
   anything else does not exist: if asked about a topic that is not listed,
   point to the Courses page or to WhatsApp (+91 70001 98366).
+- **Master classes:** 3-hour live deep dives on Google Meet, each covering
+  one skill from start to finish, hands-on. They have their own section on
+  the Courses page (shashwatyadav.in/courses/#master-classes). The first is
+  "Master Class 1: Meta Ads Lead Generation Basics": building a Meta lead
+  generation campaign step by step, from audience and placements to ads,
+  the instant form and follow-up. Dates and seats are on
+  shashwatyadav.in/courses/#upcoming-classes. Never invent dates, prices or
+  seat counts, and do not promise certificates or recordings.
 KB;
