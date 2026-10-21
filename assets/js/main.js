@@ -453,3 +453,125 @@ function handleFormSubmission(event) {
     });
   } catch (e) { /* the header just keeps its default link */ }
 })();
+
+// Header "Courses" dropdown (desktop): point at the green Courses pill and a list opens with every course page, so a visitor can go straight
+// to one. The pill itself still links to the Courses page (so touch screens, keyboards without hover and no-JavaScript visitors lose nothing).
+// One floating panel serves every page; it follows whichever pill currently says "Courses" (also the extra pill a signed-in student gets).
+// The phone menu gets the same links as a short list under its Courses pill. No libraries, no network calls.
+(function () {
+  try {
+    var ITEMS = [
+      ['All courses', 'Courses and upcoming live classes', '/courses/'],
+      ['Master Classes', '3-hour live deep dives', '/courses/master-classes/'],
+      ['Google Ads', 'Search and Demand Gen lead campaigns', '/courses/google-ads/'],
+      ['Meta Ads', 'Lead and engagement campaigns', '/courses/meta-ads/'],
+      ['Claude and Claude Code', 'Prompting, building and automation', '/courses/claude-mastery/']
+    ];
+    var calm = !!(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches);
+
+    var css = document.createElement('style');
+    css.id = 'courses-menu-css';
+    css.textContent =
+      '#courses-menu{position:fixed;z-index:60;width:292px;max-width:calc(100vw - 16px);padding-top:10px;opacity:0;visibility:hidden;transform:translateY(-6px);' +
+      (calm ? '' : 'transition:opacity .16s ease,transform .16s ease,visibility .16s;') + '}' +
+      '#courses-menu.is-open{opacity:1;visibility:visible;transform:none}' +
+      '#courses-menu .cm-box{background:#fff;border:1px solid #E2E8F0;border-radius:16px;box-shadow:0 18px 40px rgba(15,23,42,.22);padding:8px;font-family:"Plus Jakarta Sans",system-ui,sans-serif}' +
+      '#courses-menu a{display:block;padding:10px 12px;border-radius:10px;text-decoration:none;min-height:44px;color:#1F2937}' +
+      '#courses-menu a:hover,#courses-menu a:focus-visible{background:#EFF6FF;outline:none}' +
+      '#courses-menu a:focus-visible{box-shadow:0 0 0 3px #F59E0B}' +
+      '#courses-menu .cm-t{display:block;font-size:14px;font-weight:700;line-height:1.3}' +
+      '#courses-menu .cm-d{display:block;margin-top:2px;font-size:12px;line-height:1.35;color:#475569}' +
+      '#courses-menu .cm-all{border-bottom:1px solid #E2E8F0;border-radius:10px 10px 0 0;margin-bottom:4px}' +
+      '.cm-mobile{display:flex;flex-direction:column;gap:2px;margin:-6px 0 0 12px;padding-left:12px;border-left:2px solid rgba(255,255,255,.25)}' +
+      '.cm-mobile a{display:block;padding:9px 4px;font-size:13px;font-weight:500;color:rgba(255,255,255,.78);text-decoration:none}' +
+      '.cm-mobile a:hover{color:#fff}';
+    document.head.appendChild(css);
+
+    var menu = document.createElement('div');
+    menu.id = 'courses-menu';
+    menu.setAttribute('role', 'menu');
+    menu.setAttribute('aria-label', 'Courses');
+    var box = document.createElement('div');
+    box.className = 'cm-box';
+    ITEMS.forEach(function (it, i) {
+      var a = document.createElement('a');
+      a.href = it[2];
+      a.setAttribute('role', 'menuitem');
+      if (i === 0) a.className = 'cm-all';
+      a.innerHTML = '<span class="cm-t"></span><span class="cm-d"></span>';
+      a.firstChild.textContent = it[0];
+      a.lastChild.textContent = it[1];
+      box.appendChild(a);
+    });
+    menu.appendChild(box);
+    document.body.appendChild(menu);
+
+    var current = null, hideTimer = null;
+    function isCoursesPill(el) {
+      if (!el || el.tagName !== 'A') return false;
+      if (!el.hasAttribute('data-lc-pill') && !el.hasAttribute('data-lc-added')) return false;
+      if (el.closest('#mobile-menu') || el.closest('#mobile-header-actions')) return false;   // desktop header only
+      return el.getAttribute('href') === '/courses/';                                          // not the "My Classes" pill
+    }
+    function open(pill) {
+      window.clearTimeout(hideTimer);
+      current = pill;
+      var r = pill.getBoundingClientRect();
+      var w = Math.min(292, window.innerWidth - 16);
+      var left = Math.max(8, Math.min(r.right - w, window.innerWidth - w - 8));
+      menu.style.top = (r.bottom - 6) + 'px';
+      menu.style.left = left + 'px';
+      menu.classList.add('is-open');
+      pill.setAttribute('aria-haspopup', 'true');
+      pill.setAttribute('aria-expanded', 'true');
+    }
+    function close() {
+      menu.classList.remove('is-open');
+      if (current) current.setAttribute('aria-expanded', 'false');
+      current = null;
+    }
+    function closeSoon() { window.clearTimeout(hideTimer); hideTimer = window.setTimeout(close, 180); }
+
+    document.addEventListener('mouseover', function (e) {
+      var pill = e.target.closest && e.target.closest('a');
+      if (isCoursesPill(pill)) { if (window.innerWidth >= 1280) open(pill); return; }
+      if (menu.contains(e.target)) window.clearTimeout(hideTimer);
+    });
+    document.addEventListener('mouseout', function (e) {
+      var from = e.target.closest && e.target.closest('a');
+      if (isCoursesPill(from) || menu.contains(e.target)) closeSoon();
+    });
+    document.addEventListener('focusin', function (e) {
+      if (isCoursesPill(e.target) && window.innerWidth >= 1280) open(e.target);
+      else if (!menu.contains(e.target) && menu.classList.contains('is-open')) close();
+    });
+    document.addEventListener('keydown', function (e) {
+      if (!menu.classList.contains('is-open')) return;
+      var items = Array.prototype.slice.call(menu.querySelectorAll('a'));
+      var at = items.indexOf(document.activeElement);
+      if (e.key === 'Escape') { var p = current; close(); if (p) p.focus(); }
+      else if (e.key === 'ArrowDown') { e.preventDefault(); items[(at + 1) % items.length].focus(); }
+      else if (e.key === 'ArrowUp' && at >= 0) { e.preventDefault(); items[(at - 1 + items.length) % items.length].focus(); }
+    });
+    window.addEventListener('scroll', function () { if (menu.classList.contains('is-open')) close(); }, { passive: true });
+    window.addEventListener('resize', close);
+
+    // Phone menu: the same links as a short list under the Courses pill.
+    var mobile = document.getElementById('mobile-menu');
+    if (mobile) {
+      var pills = mobile.querySelectorAll('a[data-lc-pill], a[data-lc-added]');
+      Array.prototype.forEach.call(pills, function (p) {
+        if (p.getAttribute('href') !== '/courses/' || mobile.querySelector('.cm-mobile')) return;
+        var list = document.createElement('div');
+        list.className = 'cm-mobile';
+        ITEMS.slice(1).forEach(function (it) {
+          var a = document.createElement('a');
+          a.href = it[2];
+          a.textContent = it[0];
+          list.appendChild(a);
+        });
+        p.parentNode.insertBefore(list, p.nextSibling);
+      });
+    }
+  } catch (e) { /* the header keeps its plain Courses link */ }
+})();
