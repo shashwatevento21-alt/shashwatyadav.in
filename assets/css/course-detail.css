@@ -131,3 +131,41 @@
   .cd *, .cd *::before, .cd *::after { animation: none !important; transition: none !important; }
   .cd-js .cd-reveal { opacity: 1; transform: none; }
 }
+
+/* ---------- Master Classes page ---------- */
+.cd-logo-icon { display: block; width: 64px; height: 64px; color: var(--c-primary); }
+.cd-logo-icon svg { display: block; width: 100%; height: 100%; }
+.cd-stats-3 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.cd-stats-3 .cd-stat:last-child { grid-column: 1 / -1; }
+.cd-mc-grid { display: grid; gap: 16px; grid-template-columns: minmax(0, 1fr); margin-top: 22px; }
+.cd-mc { display: flex; flex-direction: column; background: #FFFFFF; border: 1px solid var(--c-line); border-radius: 18px; padding: 20px; box-shadow: 0 4px 14px rgba(15, 23, 42, .05); transition: border-color .25s, box-shadow .25s; }
+.cd-mc:hover { border-color: rgba(21, 96, 168, .45); box-shadow: 0 12px 28px rgba(15, 23, 42, .1); }
+.cd-mc-soon { border-style: dashed; background: transparent; box-shadow: none; }
+.cd-mc-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; }
+.cd-mc-tags span { padding: 4px 10px; border-radius: 999px; background: rgba(21, 96, 168, .1); border: 1px solid rgba(21, 96, 168, .2); font-size: 11px; font-weight: 700; color: var(--c-primary); }
+.cd-mc-tags span.green { background: rgba(30, 132, 73, .1); border-color: rgba(30, 132, 73, .25); color: var(--c-green); }
+.cd-mc-title { font-family: 'Playfair Display', Georgia, serif; font-size: 22px; line-height: 1.25; font-weight: 700; color: var(--c-ink); }
+.cd-mc-tag { margin-top: 8px; font-size: 15px; line-height: 1.6; }
+.cd-mc-list { display: grid; gap: 8px; margin-top: 14px; }
+.cd-mc-list li { display: flex; align-items: flex-start; gap: 8px; font-size: 15px; line-height: 1.55; }
+.cd-mc-list svg { flex: none; width: 16px; height: 16px; margin-top: 4px; color: var(--c-green); }
+.cd-mc .cd-bring { margin-top: 16px; }
+.cd-mc-when { margin-top: 16px; padding-top: 14px; border-top: 1px solid var(--c-line); font-size: 14px; line-height: 1.5; }
+.cd-mc-when strong { color: var(--c-ink); }
+.cd-mc-when p + p { margin-top: 4px; }
+.cd-mc-seats { font-weight: 700; color: #B45309; }
+.cd-mc-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 14px; }
+.cd-mc-more { margin-top: 14px; }
+.cd-mc-more summary { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 18px; border: 1px solid var(--c-line); border-radius: 999px; background: var(--c-bg); font-size: 14px; font-weight: 700; color: var(--c-ink); cursor: pointer; list-style: none; }
+.cd-mc-more summary::-webkit-details-marker { display: none; }
+.cd-mc-more summary:hover { border-color: var(--c-primary); }
+.cd-mc-chev { width: 16px; height: 16px; transition: transform .3s ease; }
+.cd-mc-more[open] .cd-mc-chev { transform: rotate(180deg); }
+@media (min-width: 640px) {
+  .cd-logo-icon { width: 84px; height: 84px; }
+  .cd-stats-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); max-width: 560px; }
+  .cd-stats-3 .cd-stat:last-child { grid-column: auto; }
+  .cd-mc-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .cd-mc { padding: 24px; }
+}
+@media (prefers-reduced-motion: reduce) { .cd-mc, .cd-mc-chev { transition: none; } }
