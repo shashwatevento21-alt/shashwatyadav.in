@@ -254,7 +254,8 @@ Nano Banana, Google Flow, Kling AI.
   (shashwatyadav.in/courses/master-classes/). The first is
   "Master Class 1: Meta Ads Lead Generation Basics": building a Meta lead
   generation campaign step by step, from audience and placements to ads,
-  the instant form and follow-up. Dates and seats are on
+  the instant form and follow-up. It has its own page,
+  shashwatyadav.in/meta-ads-lead-generation-master-class/. Dates and seats are on
   shashwatyadav.in/courses/#upcoming-classes. Never invent dates, prices or
   seat counts, and do not promise certificates or recordings.
 KB;
