@@ -236,17 +236,14 @@
     });
   }
 
-  // main.js turned the header's "Courses" pill into "Courses" and "My Classes" while signed in; put it back.
+  // main.js added a "My Classes" pill and hid "Log in" while signed in; put the header back.
   function restoreHeader() {
-    document.querySelectorAll('a[data-lc-added]').forEach(function (a) { a.parentNode.removeChild(a); });
+    document.querySelectorAll('[data-lc-added]').forEach(function (a) { a.parentNode.removeChild(a); });
+    document.querySelectorAll('.nav.lc-in').forEach(function (n) { n.classList.remove('lc-in'); });
     document.querySelectorAll('[data-lc-guest]').forEach(function (el) { el.classList.remove('hidden'); });
     document.querySelectorAll('a[data-lc-swapped]').forEach(function (a) {
-      var label = null;
-      Array.prototype.forEach.call(a.children, function (c) { if (c.tagName === 'SPAN' && c.textContent.trim()) label = c; });
-      if (label) label.innerHTML = a.getAttribute('data-lc-swapped');
+      a.textContent = a.getAttribute('data-lc-swapped');
       a.setAttribute('href', '/courses/');
-      if (a.getAttribute('data-lc-dot') && a.firstElementChild) { a.firstElementChild.classList.remove('hidden'); a.removeAttribute('data-lc-dot'); }
-      if (a.getAttribute('data-lc-class')) { a.className = a.getAttribute('data-lc-class'); a.removeAttribute('data-lc-class'); }
       a.removeAttribute('data-lc-swapped');
     });
   }

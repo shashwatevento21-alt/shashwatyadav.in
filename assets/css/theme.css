@@ -153,6 +153,9 @@ h4, .h4 { font-size: 14px; font-weight: 700; line-height: 1.55; letter-spacing: 
 .menu-toggle[aria-expanded="true"] .bars::after { top: 0; transform: rotate(-45deg); }
 .bar-end { display: none; align-items: center; gap: var(--sp-2); }
 
+/* A signed-in student has Courses + My Classes + Let's Connect beside the links (main.js adds .lc-in): tighter spacing so they still fit at 1280 px */
+@media (width >= 1280px) { .nav.lc-in { gap: 8px; } .nav.lc-in .nav-list { gap: 0; } .nav.lc-in .nav-link { padding: 8px 8px; } .nav.lc-in .nav-actions { gap: 6px; } .nav.lc-in .nav-actions .btn { padding: 10px 16px; } }
+
 /* ---------- 8. Header on tablet and phone: burger + full-width panel under the header ---------- */
 @media (width <= 1279px) {
   .bar { gap: var(--sp-4); }
@@ -287,7 +290,8 @@ h4, .h4 { font-size: 14px; font-weight: 700; line-height: 1.55; letter-spacing: 
 .field-row > .field:first-child { flex: 0 0 38%; }
 .field-row > .field:last-child { flex: 1; }
 .field .error, .field-error { font-size: 14px; color: var(--ss-error); }
-.field.invalid input, .field.invalid select, .field.invalid textarea, .invalid-input { border-color: var(--ss-error); }
+.field.invalid input, .field.invalid select, .field.invalid textarea { border-color: var(--ss-error); }
+.invalid-input { border-color: var(--ss-error) !important; }
 .notice { padding: var(--sp-4) var(--sp-5); border-radius: var(--radius-tile); background: var(--ss-mist); color: var(--ss-slate); font-size: 14px; line-height: 1.6; }
 .notice.ok { border: 1px solid var(--ss-blue); color: var(--ss-ink); }
 .notice.err { border: 1px solid var(--ss-error); color: var(--ss-ink); }
@@ -354,3 +358,19 @@ h4, .h4 { font-size: 14px; font-weight: 700; line-height: 1.55; letter-spacing: 
 /* ---------- Icons: inline <svg class="icon"><use href="/assets/icons.svg#i-name"></use></svg>; stroke icons by default, .icon-fill for the WhatsApp mark ---------- */
 .icon { width: 1em; height: 1em; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; flex: none; }
 .icon-fill { fill: currentColor; stroke: none; }
+
+/* ---------- Page components: stats row, tags that are not links, whole-card links, accent words ---------- */
+.hl { color: var(--ss-cyan); }
+.grid-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--sp-5); }
+@media (width <= 1023px) { .grid-stats { grid-template-columns: repeat(2, 1fr); } }
+@media (width <= 767px) { .grid-stats { gap: var(--sp-3); } .metric { padding: var(--sp-4); } .metric-value { font-size: 32px; } }
+.chip.static { cursor: default; }
+.chip.static:hover { border-color: var(--ss-border); }
+a.post { color: inherit; text-decoration: none; }
+a.post:hover h3, a.post:focus-visible h3 { color: var(--ss-blue); }
+.post .media { display: grid; place-items: center; }
+.post .media .icon { width: 40px; height: 40px; color: rgba(0, 88, 213, 0.4); }
+.tile ul { margin-top: var(--sp-2); }
+.tile.dark p { color: var(--ss-mist); }
+.tile .icon-tile { margin-bottom: var(--sp-4); }
+.more-link { margin-top: var(--sp-6); }

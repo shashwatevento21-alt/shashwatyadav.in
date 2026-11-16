@@ -23,9 +23,10 @@ async () => {
   const chatbotBlocks = comments.filter((c) => /CHATBOT-OFF/.test(c)).map((c) => c.replace(/\s+/g, ' ').trim());
 
   // ---- 2. the rendered page (after the site's own scripts ran)
-  const regionOf = (el) => (el.closest('#navbar, header.site-header, [data-region=header]') ? 'header' : el.closest('footer, [data-region=footer]') ? 'footer' : 'content');
+  // regions: header (nav + skip link), footer, floating (WhatsApp/call buttons, fixed in the corner), content (everything else)
+  const regionOf = (el) => (el.closest('#navbar, header.site-header, [data-region=header]') ? 'header' : el.closest('footer, [data-region=footer]') ? 'footer' : el.closest('.fab-group, div[style*="position: fixed"], [data-region=floating]') ? 'floating' : 'content');
   const skip = new Set(['SCRIPT', 'STYLE', 'NOSCRIPT', 'TEMPLATE']);
-  const text = { header: [], content: [], footer: [] };
+  const text = { header: [], content: [], footer: [], floating: [] };
   const tw = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
   while (tw.nextNode()) {
     const n = tw.currentNode; const p = n.parentElement; const t = norm(n.nodeValue);
@@ -50,8 +51,8 @@ async () => {
     head,
     chatbotBlocks,
     commentCount: comments.length,
-    text: { header: joined(text.header), content: joined(text.content), footer: joined(text.footer) },
-    wordCount: { header: joined(text.header).split(' ').filter(Boolean).length, content: joined(text.content).split(' ').filter(Boolean).length, footer: joined(text.footer).split(' ').filter(Boolean).length },
+    text: { header: joined(text.header), content: joined(text.content), footer: joined(text.footer), floating: joined(text.floating) },
+    wordCount: { header: joined(text.header).split(' ').filter(Boolean).length, content: joined(text.content).split(' ').filter(Boolean).length, footer: joined(text.footer).split(' ').filter(Boolean).length, floating: joined(text.floating).split(' ').filter(Boolean).length },
     headings, links, images, pictureSources, media, bgImages, forms, dataHooks,
     ids: [...document.querySelectorAll('[id]')].map((e) => e.id).filter((v, i, a) => a.indexOf(v) === i),
     htmlBytes: raw.length,

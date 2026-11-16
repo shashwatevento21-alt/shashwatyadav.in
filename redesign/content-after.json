@@ -1,0 +1,754 @@
+{
+ "base": "http://127.0.0.1:8090",
+ "when": "2026-11-16T19:58:23.907Z",
+ "pageCount": 1,
+ "pages": {
+  "/": {
+   "url": "/",
+   "head": {
+    "lang": "en",
+    "title": "Shashwat Yadav | Performance Marketing Expert & SEO Specialist",
+    "meta": [
+     {
+      "name": null,
+      "property": null,
+      "httpEquiv": null,
+      "charset": "UTF-8",
+      "content": null
+     },
+     {
+      "name": "viewport",
+      "property": null,
+      "httpEquiv": null,
+      "charset": null,
+      "content": "width=device-width, initial-scale=1.0"
+     },
+     {
+      "name": "google-site-verification",
+      "property": null,
+      "httpEquiv": null,
+      "charset": null,
+      "content": "3tNBNX1gNhzrZCjg8AExzsOtmfgR4DGQ95fZ5uztkEE"
+     },
+     {
+      "name": "description",
+      "property": null,
+      "httpEquiv": null,
+      "charset": null,
+      "content": "Performance Marketing Expert managing ₹5.7L+ monthly ad spend across Google & Meta, SEO Specialist, and full-stack marketer."
+     }
+    ],
+    "links": [
+     {
+      "rel": "canonical",
+      "href": "https://shashwatyadav.com/",
+      "type": null,
+      "sizes": null,
+      "as": null
+     },
+     {
+      "rel": "icon",
+      "href": "/assets/images/favicon.png",
+      "type": "image/png",
+      "sizes": null,
+      "as": null
+     },
+     {
+      "rel": "preload",
+      "href": "/assets/fonts/inter-latin-400.woff2",
+      "type": "font/woff2",
+      "sizes": null,
+      "as": "font"
+     },
+     {
+      "rel": "preload",
+      "href": "/assets/fonts/inter-latin-600.woff2",
+      "type": "font/woff2",
+      "sizes": null,
+      "as": "font"
+     },
+     {
+      "rel": "preload",
+      "href": "/assets/fonts/montserrat-latin-800.woff2",
+      "type": "font/woff2",
+      "sizes": null,
+      "as": "font"
+     },
+     {
+      "rel": "preload",
+      "href": "/assets/fonts/montserrat-latin-700.woff2",
+      "type": "font/woff2",
+      "sizes": null,
+      "as": "font"
+     },
+     {
+      "rel": "stylesheet",
+      "href": "/assets/css/theme.css?v=1",
+      "type": null,
+      "sizes": null,
+      "as": null
+     }
+    ],
+    "jsonLd": [],
+    "scripts": [
+     {
+      "inline": "7da60269",
+      "bytes": 358,
+      "gtm": true
+     },
+     {
+      "src": "/assets/js/theme.js?v=1"
+     },
+     {
+      "src": "/assets/js/main.js?v=20261026"
+     }
+    ],
+    "noscriptGtm": true
+   },
+   "chatbotBlocks": [
+    "CHATBOT-OFF-START (bubble): the chat widget is switched off. To restore, delete this line and the CHATBOT-OFF-END line <button type=\"button\" id=\"chatbot-toggle\" aria-expanded=\"false\" aria-controls=\"chatbot-panel\" class=\"relative w-14 h-14 rounded-full bg-yellow-400 hover:brightness-95 flex items-center justify-center text-gray-900 shadow-[0_8px_30px_rgba(250,204,21,0.4)] hover:scale-110 active:scale-95 transition-all\"> <svg id=\"chatbot-icon-chat\" class=\"w-7 h-7\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z\"/></svg> <svg id=\"chatbot-icon-close\" class=\"w-6 h-6 hidden\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M6 18L18 6M6 6l12 12\"/></svg> </button> CHATBOT-OFF-END",
+    "CHATBOT-OFF-START (panel): the chat widget is switched off. To restore, delete this line and the CHATBOT-OFF-END line [ AI Chatbot panel (hidden until the bubble above is clicked) ] <div id=\"chatbot-panel\" class=\"hidden fixed z-[110] bg-white rounded-2xl shadow-2xl border border-border flex flex-col overflow-hidden\" style=\"bottom: 96px; right: 24px; width: min(380px, calc(100vw - 32px)); height: min(560px, calc(100vh - 140px));\"> <div class=\"bg-primary text-white px-4 py-3 flex items-center justify-between flex-shrink-0\"> <div class=\"flex items-center gap-2\"> <img src=\"/assets/images/logo.png\" alt=\"\" class=\"logo-on-dark h-6 w-auto\"> <span class=\"text-sm font-semibold\">Chat with Shashwat</span> </div> <button type=\"button\" id=\"chatbot-close-btn\" class=\"text-white/80 hover:text-white\" aria-label=\"Close chat\"> <svg class=\"w-5 h-5\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M6 18L18 6M6 6l12 12\"/></svg> </button> </div> <div id=\"chatbot-messages\" class=\"flex-1 overflow-y-auto px-4 py-4 space-y-3 bg-background\"></div> <div id=\"chatbot-quick-replies\" class=\"hidden px-4 pb-2 flex flex-wrap gap-2 bg-background\"></div> <form id=\"chatbot-form\" class=\"flex items-center gap-2 px-3 py-3 border-t border-border bg-white flex-shrink-0\"> <input type=\"text\" id=\"chatbot-input\" placeholder=\"Type a message&hellip;\" autocomplete=\"off\" class=\"flex-1 px-3 py-2 rounded-full bg-background border border-border text-sm text-text-body focus:outline-none focus:border-primary\"> <button type=\"submit\" id=\"chatbot-send-btn\" class=\"w-9 h-9 rounded-full bg-primary hover:bg-primary-dark flex items-center justify-center text-white flex-shrink-0 disabled:opacity-50 disabled:cursor-not-allowed\"> <svg class=\"w-4 h-4\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M14 5l7 7m0 0l-7 7m7-7H3\"/></svg> </button> </form> </div> CHATBOT-OFF-END",
+    "CHATBOT-OFF-START (script): the chat widget is switched off. To restore, delete this line and the CHATBOT-OFF-END line <script src=\"/assets/js/chatbot-widget.js\"></script> CHATBOT-OFF-END"
+   ],
+   "commentCount": 8,
+   "text": {
+    "header": "Skip to content Home About Services Portfolio Skills Certifications Blog Contact Log in Courses All courses Courses and upcoming live classes Master Classes 3-hour live deep dives Google Ads Search and Demand Gen lead campaigns Meta Ads Lead and engagement campaigns Claude and Claude Code Prompting, building and automation Let's Connect Courses",
+    "content": "Available for Performance Marketing Projects Driving Growth Through Data-Driven Marketing Ad Performance Marketing Head managing ₹5.7L+ monthly ad spend across Google & Meta | SEO & GEO Specialist ranking businesses on Google, ChatGPT & Gemini | Full-Stack Marketer building on WordPress & Elementor | AI & Automation-driven workflows with Claude Code & n8n View Services Get In Touch ₹5.7L+ Monthly Ad Spend Managed 6+ Years Experience 9 Industries Served 7 Certifications What I Do Services Snapshot Performance Marketing & Paid Ads Google Ads Meta Ads LinkedIn Ads Tracking & Analytics Google Tag Manager (GTM) Google Analytics 4 (GA4) Meta Pixel & Conversion Tracking SEO & GEO SEO (on-page, technical, keyword strategy) GEO / AI Search & LLM Optimisation Google Business Profile (GBP) SEO Website & Landing Page Development WordPress Development Elementor / Page Building Custom WordPress Plugin Development HTML/CSS/JS Frontend Development AI-Assisted Development (Claude Code) Landing Page Design & Development Content, Creative & Automation Content Strategy & Content Calendars Social Media Content Creation AI Creative Production (Kling AI, Hailuo, Runway, Nano Banana, Google Flow) Agentic Workflow & AI Agent Automation (Claude Code, n8n) Marketing Automation & Lead-Gen Systems Reporting & Client Ops Multi-Channel Performance Reporting (GSC, Instagram, YouTube) Client Proposals & Pitch Decks Google/Meta Ads Policy Compliance & Disapproval Resolution AI & Marketing Automation AI agent building, workflow automation, and AI-assisted development — the systems that run marketing operations. View All Skills Industries I've Worked With Healthcare Commercial Real Estate Residential Real Estate Salon & Wellness Education Retail & Malls Hospitality Food & Beverage Schools Results Featured Case Studies Residential Real Estate 2BHK/3BHK Residential Launch — Meta Ads Lead Generation 516 Qualified Leads · ₹291 Avg. CPL Commercial Real Estate Commercial Showroom, Office & Retail Space — Multi-Platform Lead Generation 152 Qualified Leads · Meta + Google Healthcare Multi-Treatment Hospital Campaign — IVF, Cataract, Painless Labour, LASIK & OPD 7,598 Patient Interactions Ready to Drive Growth? Call Now WhatsApp Me",
+    "footer": "Performance Marketing Expert & SEO Specialist driving measurable growth through data-driven strategy. Quick Links Home About Services Portfolio Skills Certifications Courses Blog Contact Connect LinkedIn Instagram Contact +91 70001 98366 WhatsApp shashwatyadav012345@gmail.com © 2026 Shashwat Yadav. All rights reserved. | Privacy Policy | Terms Courses",
+    "floating": ""
+   },
+   "wordCount": {
+    "header": 52,
+    "content": 320,
+    "footer": 45,
+    "floating": 0
+   },
+   "headings": [
+    {
+     "level": 1,
+     "text": "Driving Growth Through Data-Driven Marketing",
+     "region": "content"
+    },
+    {
+     "level": 2,
+     "text": "Services Snapshot",
+     "region": "content"
+    },
+    {
+     "level": 3,
+     "text": "Performance Marketing & Paid Ads",
+     "region": "content"
+    },
+    {
+     "level": 3,
+     "text": "Tracking & Analytics",
+     "region": "content"
+    },
+    {
+     "level": 3,
+     "text": "SEO & GEO",
+     "region": "content"
+    },
+    {
+     "level": 3,
+     "text": "Website & Landing Page Development",
+     "region": "content"
+    },
+    {
+     "level": 3,
+     "text": "Content, Creative & Automation",
+     "region": "content"
+    },
+    {
+     "level": 3,
+     "text": "Reporting & Client Ops",
+     "region": "content"
+    },
+    {
+     "level": 3,
+     "text": "AI & Marketing Automation",
+     "region": "content"
+    },
+    {
+     "level": 2,
+     "text": "Industries I've Worked With",
+     "region": "content"
+    },
+    {
+     "level": 2,
+     "text": "Featured Case Studies",
+     "region": "content"
+    },
+    {
+     "level": 3,
+     "text": "2BHK/3BHK Residential Launch — Meta Ads Lead Generation",
+     "region": "content"
+    },
+    {
+     "level": 3,
+     "text": "Commercial Showroom, Office & Retail Space — Multi-Platform Lead Generation",
+     "region": "content"
+    },
+    {
+     "level": 3,
+     "text": "Multi-Treatment Hospital Campaign — IVF, Cataract, Painless Labour, LASIK & OPD",
+     "region": "content"
+    },
+    {
+     "level": 2,
+     "text": "Ready to Drive Growth?",
+     "region": "content"
+    },
+    {
+     "level": 4,
+     "text": "Quick Links",
+     "region": "footer"
+    },
+    {
+     "level": 4,
+     "text": "Connect",
+     "region": "footer"
+    },
+    {
+     "level": 4,
+     "text": "Contact",
+     "region": "footer"
+    }
+   ],
+   "links": [
+    {
+     "href": "#main",
+     "text": "Skip to content",
+     "target": null,
+     "rel": null,
+     "region": "header"
+    },
+    {
+     "href": "/",
+     "text": "img:Shashwat Yadav",
+     "target": null,
+     "rel": null,
+     "region": "header"
+    },
+    {
+     "href": "/",
+     "text": "Home",
+     "target": null,
+     "rel": null,
+     "region": "header"
+    },
+    {
+     "href": "/about",
+     "text": "About",
+     "target": null,
+     "rel": null,
+     "region": "header"
+    },
+    {
+     "href": "/services",
+     "text": "Services",
+     "target": null,
+     "rel": null,
+     "region": "header"
+    },
+    {
+     "href": "/portfolio",
+     "text": "Portfolio",
+     "target": null,
+     "rel": null,
+     "region": "header"
+    },
+    {
+     "href": "/skills",
+     "text": "Skills",
+     "target": null,
+     "rel": null,
+     "region": "header"
+    },
+    {
+     "href": "/certifications",
+     "text": "Certifications",
+     "target": null,
+     "rel": null,
+     "region": "header"
+    },
+    {
+     "href": "/blog/",
+     "text": "Blog",
+     "target": null,
+     "rel": null,
+     "region": "header"
+    },
+    {
+     "href": "/contact",
+     "text": "Contact",
+     "target": null,
+     "rel": null,
+     "region": "header"
+    },
+    {
+     "href": "http://127.0.0.1:8000/login",
+     "text": "Log in",
+     "target": null,
+     "rel": null,
+     "region": "header"
+    },
+    {
+     "href": "/courses/",
+     "text": "Courses",
+     "target": null,
+     "rel": null,
+     "region": "header"
+    },
+    {
+     "href": "/courses/",
+     "text": "All coursesCourses and upcoming live classes",
+     "target": null,
+     "rel": null,
+     "region": "header"
+    },
+    {
+     "href": "/courses/master-classes/",
+     "text": "Master Classes3-hour live deep dives",
+     "target": null,
+     "rel": null,
+     "region": "header"
+    },
+    {
+     "href": "/courses/google-ads/",
+     "text": "Google AdsSearch and Demand Gen lead campaigns",
+     "target": null,
+     "rel": null,
+     "region": "header"
+    },
+    {
+     "href": "/courses/meta-ads/",
+     "text": "Meta AdsLead and engagement campaigns",
+     "target": null,
+     "rel": null,
+     "region": "header"
+    },
+    {
+     "href": "/courses/claude-mastery/",
+     "text": "Claude and Claude CodePrompting, building and automation",
+     "target": null,
+     "rel": null,
+     "region": "header"
+    },
+    {
+     "href": "/contact",
+     "text": "Let's Connect",
+     "target": null,
+     "rel": null,
+     "region": "header"
+    },
+    {
+     "href": "/courses/",
+     "text": "Courses",
+     "target": null,
+     "rel": null,
+     "region": "header"
+    },
+    {
+     "href": "/services",
+     "text": "View Services",
+     "target": null,
+     "rel": null,
+     "region": "content"
+    },
+    {
+     "href": "/contact",
+     "text": "Get In Touch",
+     "target": null,
+     "rel": null,
+     "region": "content"
+    },
+    {
+     "href": "/skills",
+     "text": "Performance Marketing & Paid Ads Google Ads Meta Ads LinkedIn Ads",
+     "target": null,
+     "rel": null,
+     "region": "content"
+    },
+    {
+     "href": "/skills",
+     "text": "Tracking & Analytics Google Tag Manager (GTM) Google Analytics 4 (GA4) Meta Pixel & Conversion Tracking",
+     "target": null,
+     "rel": null,
+     "region": "content"
+    },
+    {
+     "href": "/skills",
+     "text": "SEO & GEO SEO (on-page, technical, keyword strategy) GEO / AI Search & LLM Optimisation Google Business Profile (GBP) SEO",
+     "target": null,
+     "rel": null,
+     "region": "content"
+    },
+    {
+     "href": "/skills",
+     "text": "Website & Landing Page Development WordPress Development Elementor / Page Building Custom WordPress Plugin Development HTML/CSS/JS Frontend Development AI-Assisted Development (Claude Code) Landing Page Design & Development",
+     "target": null,
+     "rel": null,
+     "region": "content"
+    },
+    {
+     "href": "/skills",
+     "text": "Content, Creative & Automation Content Strategy & Content Calendars Social Media Content Creation AI Creative Production (Kling AI, Hailuo, Runway, Nano Banana, Google Flow) Agentic Workflow & AI Agent Automation (Claude Code, n8n) Marketing Automation & Lead-Gen Systems",
+     "target": null,
+     "rel": null,
+     "region": "content"
+    },
+    {
+     "href": "/skills",
+     "text": "Reporting & Client Ops Multi-Channel Performance Reporting (GSC, Instagram, YouTube) Client Proposals & Pitch Decks Google/Meta Ads Policy Compliance & Disapproval Resolution",
+     "target": null,
+     "rel": null,
+     "region": "content"
+    },
+    {
+     "href": "/skills#ai-automation",
+     "text": "AI & Marketing Automation AI agent building, workflow automation, and AI-assisted development — the systems that run marketing operations.",
+     "target": null,
+     "rel": null,
+     "region": "content"
+    },
+    {
+     "href": "/skills",
+     "text": "View All Skills",
+     "target": null,
+     "rel": null,
+     "region": "content"
+    },
+    {
+     "href": "/portfolio/residential-real-estate-meta-ads-2026",
+     "text": "Residential Real Estate 2BHK/3BHK Residential Launch — Meta Ads Lead Generation 516 Qualified Leads · ₹291 Avg. CPL",
+     "target": null,
+     "rel": null,
+     "region": "content"
+    },
+    {
+     "href": "/portfolio/commercial-real-estate-meta-google-2026",
+     "text": "Commercial Real Estate Commercial Showroom, Office & Retail Space — Multi-Platform Lead Generation 152 Qualified Leads · Meta + Google",
+     "target": null,
+     "rel": null,
+     "region": "content"
+    },
+    {
+     "href": "/portfolio/hospital-multi-treatment-2026",
+     "text": "Healthcare Multi-Treatment Hospital Campaign — IVF, Cataract, Painless Labour, LASIK & OPD 7,598 Patient Interactions",
+     "target": null,
+     "rel": null,
+     "region": "content"
+    },
+    {
+     "href": "tel:+917000198366",
+     "text": "Call Now",
+     "target": null,
+     "rel": null,
+     "region": "content"
+    },
+    {
+     "href": "https://wa.me/917000198366",
+     "text": "WhatsApp Me",
+     "target": "_blank",
+     "rel": null,
+     "region": "content"
+    },
+    {
+     "href": "/",
+     "text": "img:Shashwat Yadav",
+     "target": null,
+     "rel": null,
+     "region": "footer"
+    },
+    {
+     "href": "/",
+     "text": "Home",
+     "target": null,
+     "rel": null,
+     "region": "footer"
+    },
+    {
+     "href": "/about",
+     "text": "About",
+     "target": null,
+     "rel": null,
+     "region": "footer"
+    },
+    {
+     "href": "/services",
+     "text": "Services",
+     "target": null,
+     "rel": null,
+     "region": "footer"
+    },
+    {
+     "href": "/portfolio",
+     "text": "Portfolio",
+     "target": null,
+     "rel": null,
+     "region": "footer"
+    },
+    {
+     "href": "/skills",
+     "text": "Skills",
+     "target": null,
+     "rel": null,
+     "region": "footer"
+    },
+    {
+     "href": "/certifications",
+     "text": "Certifications",
+     "target": null,
+     "rel": null,
+     "region": "footer"
+    },
+    {
+     "href": "/courses",
+     "text": "Courses",
+     "target": null,
+     "rel": null,
+     "region": "footer"
+    },
+    {
+     "href": "/blog/",
+     "text": "Blog",
+     "target": null,
+     "rel": null,
+     "region": "footer"
+    },
+    {
+     "href": "/contact",
+     "text": "Contact",
+     "target": null,
+     "rel": null,
+     "region": "footer"
+    },
+    {
+     "href": "https://www.linkedin.com/in/shashwat-yadav-9258bb131",
+     "text": "LinkedIn",
+     "target": "_blank",
+     "rel": null,
+     "region": "footer"
+    },
+    {
+     "href": "https://www.instagram.com/shashwat.ai.seo",
+     "text": "Instagram",
+     "target": "_blank",
+     "rel": "noopener noreferrer",
+     "region": "footer"
+    },
+    {
+     "href": "tel:+917000198366",
+     "text": "+91 70001 98366",
+     "target": null,
+     "rel": null,
+     "region": "footer"
+    },
+    {
+     "href": "https://wa.me/917000198366",
+     "text": "WhatsApp",
+     "target": "_blank",
+     "rel": null,
+     "region": "footer"
+    },
+    {
+     "href": "mailto:shashwatyadav012345@gmail.com",
+     "text": "shashwatyadav012345@gmail.com",
+     "target": null,
+     "rel": null,
+     "region": "footer"
+    },
+    {
+     "href": "/privacy-policy",
+     "text": "Privacy Policy",
+     "target": null,
+     "rel": null,
+     "region": "footer"
+    },
+    {
+     "href": "/terms",
+     "text": "Terms",
+     "target": null,
+     "rel": null,
+     "region": "footer"
+    },
+    {
+     "href": "/courses/",
+     "text": "Courses",
+     "target": null,
+     "rel": null,
+     "region": "footer"
+    },
+    {
+     "href": "https://wa.me/917000198366?text=Hi%20Shashwat!%20I%20visited%20your%20portfolio%20and%20would%20love%20to%20discuss%20performance%20marketing.",
+     "text": "",
+     "target": "_blank",
+     "rel": null,
+     "region": "floating"
+    },
+    {
+     "href": "tel:+917000198366",
+     "text": "",
+     "target": null,
+     "rel": null,
+     "region": "floating"
+    }
+   ],
+   "images": [
+    {
+     "src": "/assets/images/logo.png",
+     "srcset": null,
+     "alt": "Shashwat Yadav",
+     "width": "150",
+     "height": "40",
+     "loading": null,
+     "region": "header"
+    },
+    {
+     "src": "/assets/images/logo.png",
+     "srcset": null,
+     "alt": "Shashwat Yadav",
+     "width": "150",
+     "height": "40",
+     "loading": null,
+     "region": "footer"
+    }
+   ],
+   "pictureSources": [],
+   "media": [],
+   "bgImages": [],
+   "forms": [],
+   "dataHooks": {
+    "data-lc-actions": 1,
+    "data-lc-guest": 1,
+    "data-lc-login": 1,
+    "data-lc-pill": 2,
+    "data-lc-cta": 1,
+    "data-lc-compact": 1
+   },
+   "ids": [
+    "navbar",
+    "site-nav",
+    "main",
+    "hero",
+    "whatsapp-widget"
+   ],
+   "htmlBytes": 22471,
+   "network": [
+    {
+     "method": "GET",
+     "url": "https://www.googletagmanager.com/gtm.js"
+    }
+   ],
+   "externalHosts": [
+    "www.googletagmanager.com"
+   ],
+   "desktopShot": {
+    "width": 1280,
+    "height": 4578,
+    "files": [
+     "home-desktop.jpg"
+    ]
+   },
+   "desktopDocHeight": 4578,
+   "mobileShot": {
+    "width": 375,
+    "height": 7348,
+    "files": [
+     "home-mobile.jpg"
+    ]
+   },
+   "mobileOverflowX": false,
+   "mobileDocHeight": 7348
+  }
+ },
+ "integrations": {
+  "assets/js/main.js": {
+   "bytes": 16058,
+   "absoluteUrls": [
+    "https://script.google.com/macros/s/AKfycbz1kckQ5vIQnR2mNQ7ChucD6Qry5yTe_GowfBl3qK8ox6IUqwYaimijc8NW7JLZ3V8D/exec"
+   ],
+   "endpoints": [
+    "/classes"
+   ],
+   "fetchCalls": [],
+   "localStorage": [],
+   "cookies": []
+  },
+  "assets/js/live-classes.js": {
+   "bytes": 42770,
+   "absoluteUrls": [
+    "https://wa.me/917000198366"
+   ],
+   "endpoints": [
+    "/classes"
+   ],
+   "fetchCalls": [
+    "API_ORIGIN + '/live-classes/api/sessions', { headers: { 'Accept': 'application/json' } }"
+   ],
+   "localStorage": [],
+   "cookies": [
+    "lc_in",
+    "lc_intent"
+   ]
+  },
+  "assets/js/course-detail.js": {
+   "bytes": 7346,
+   "absoluteUrls": [],
+   "endpoints": [],
+   "fetchCalls": [],
+   "localStorage": [],
+   "cookies": []
+  },
+  "assets/js/master-classes.js": {
+   "bytes": 3484,
+   "absoluteUrls": [],
+   "endpoints": [
+    "/classes"
+   ],
+   "fetchCalls": [
+    "API_ORIGIN + '/live-classes/api/sessions', { headers: { 'Accept': 'application/json' } }"
+   ],
+   "localStorage": [],
+   "cookies": []
+  },
+  "assets/js/chatbot-widget.js": {
+   "bytes": 9138,
+   "absoluteUrls": [
+    "https://script.google.com/macros/s/AKfycbz1kckQ5vIQnR2mNQ7ChucD6Qry5yTe_GowfBl3qK8ox6IUqwYaimijc8NW7JLZ3V8D/exec"
+   ],
+   "endpoints": [
+    "/chatbot/chat.php"
+   ],
+   "fetchCalls": [],
+   "localStorage": [],
+   "cookies": []
+  },
+  "assets/js/image-slot.js": {
+   "bytes": 1430,
+   "absoluteUrls": [],
+   "endpoints": [],
+   "fetchCalls": [],
+   "localStorage": [],
+   "cookies": []
+  },
+  "assets/js/about.js": {
+   "bytes": 10935,
+   "absoluteUrls": [],
+   "endpoints": [],
+   "fetchCalls": [],
+   "localStorage": [],
+   "cookies": []
+  },
+  "assets/js/journey.js": {
+   "bytes": 9507,
+   "absoluteUrls": [],
+   "endpoints": [],
+   "fetchCalls": [],
+   "localStorage": [],
+   "cookies": []
+  }
+ },
+ "errors": []
+}

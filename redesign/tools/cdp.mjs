@@ -8,12 +8,12 @@ import path from 'node:path';
 const CHROME = process.env.CHROME_PATH || 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe';
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
-export async function launchChrome(port = 9333) {
+export async function launchChrome(port = 9333, extraArgs = []) {
   const profile = fs.mkdtempSync(path.join(os.tmpdir(), 'cdp-profile-'));
   const proc = spawn(CHROME, [
     '--headless=new', `--remote-debugging-port=${port}`, `--user-data-dir=${profile}`,
     '--no-first-run', '--no-default-browser-check', '--disable-gpu', '--hide-scrollbars', '--mute-audio',
-    '--force-color-profile=srgb', 'about:blank',
+    '--force-color-profile=srgb', ...extraArgs, 'about:blank',
   ], { stdio: 'ignore' });
   let wsUrl = null;
   for (let i = 0; i < 60 && !wsUrl; i++) {
