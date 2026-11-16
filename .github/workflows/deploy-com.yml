@@ -1,12 +1,11 @@
 name: Deploy to shashwatyadav.com
 
-# SECOND workflow, for shashwatyadav.com only. The .in workflow (deploy.yml) is unchanged.
-# It runs only from the branch named below, never from main (main still deploys .in).
-# After cutover, change the branch to the one that is merged for .com, and disable deploy.yml.
+# Deploys shashwatyadav.com (the site, since the cutover on 2026-11-16). Runs on every push to main, and by hand (Run workflow).
+# The old .in workflow (deploy.yml) is switched off: shashwatyadav.in only redirects now.
 on:
   push:
     branches:
-      - migration/com-deploy
+      - main
   workflow_dispatch:
 
 jobs:
