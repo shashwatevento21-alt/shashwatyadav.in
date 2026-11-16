@@ -1,0 +1,7 @@
+# shashwatyadav.in/blog/.htaccess AFTER CUTOVER (replaces the WordPress one; the old .in blog files stay on disk, unreachable).
+# Nothing from the .in blog was imported: every address under /blog goes to the .com blog page.
+# The wp-admin of this old blog is not reachable after this. Rollback restores the saved WordPress .htaccess.
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteRule ^ https://shashwatyadav.com/blog/ [R=301,L]
+</IfModule>

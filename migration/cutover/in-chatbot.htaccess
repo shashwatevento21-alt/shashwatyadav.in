@@ -1,0 +1,10 @@
+# shashwatyadav.in/chatbot/.htaccess AFTER CUTOVER (new file): the chatbot endpoint now lives on .com.
+# GET/HEAD get a 301; a POST from a stale cached page gets a 308 so the message body is kept.
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /chatbot/
+
+    RewriteCond %{REQUEST_METHOD} ^(GET|HEAD)$
+    RewriteRule ^(.*)$ https://shashwatyadav.com/chatbot/$1 [R=301,L]
+    RewriteRule ^(.*)$ https://shashwatyadav.com/chatbot/$1 [R=308,L]
+</IfModule>

@@ -1,0 +1,10 @@
+# shashwatyadav.in/classes/.htaccess AFTER CUTOVER (replaces the Laravel one; the app itself keeps running, served from .com/classes).
+# GET/HEAD get a 301; any other method (a stale form post) gets a 308 so the method is kept.
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /classes/
+
+    RewriteCond %{REQUEST_METHOD} ^(GET|HEAD)$
+    RewriteRule ^(.*)$ https://shashwatyadav.com/classes/$1 [R=301,L]
+    RewriteRule ^(.*)$ https://shashwatyadav.com/classes/$1 [R=308,L]
+</IfModule>

@@ -1,0 +1,48 @@
+# shashwatyadav.in/.htaccess AFTER CUTOVER: this domain only redirects. Every rule goes straight to the FINAL
+# shashwatyadav.com address (one hop, no chains). Source of the page list: migration/url-map.csv (branch migration/url-inventory).
+# Sub-folders with their own .htaccess (classes/, creators/, blog/, chatbot/) are handled by their own files in this folder:
+# Apache does not apply these root rules inside them.
+RewriteEngine On
+
+# ---- stays on .in (search-engine and certificate files; never redirected)
+RewriteRule ^(robots\.txt|sitemap-migration\.xml)$ - [L]
+RewriteRule ^\.well-known/ - [L]
+
+# ---- 1. legacy URLs (old .htaccess redirects), straight to their final targets
+RewriteRule ^training/?$ https://shashwatyadav.com/courses/ [R=301,L]
+RewriteRule ^expertise/?$ https://shashwatyadav.com/skills [R=301,L]
+RewriteRule ^creators-platform/?$ https://shashwatyadav.com/courses/ [R=301,L]
+RewriteCond %{QUERY_STRING} (^|&)course=[^&]+
+RewriteRule ^live-classes/?$ https://shashwatyadav.com/courses/?%{QUERY_STRING}#upcoming-classes [R=301,NE,L]
+RewriteRule ^live-classes/?$ https://shashwatyadav.com/courses/ [R=301,L]
+RewriteRule ^courses/(n8n-automation|ai-content-creation-tools|seo-geo|wordpress-elementor|conversion-tracking|social-media-marketing)(/index)?(\.html)?/?$ https://shashwatyadav.com/courses/ [R=301,L]
+RewriteRule ^courses/claude-mastery/claude-ai-mastery-course-syllabus\.pdf$ https://shashwatyadav.com/courses/claude-mastery/ [R=301,L]
+
+# ---- 2. the 22 pages (action=keep): same page on .com, with or without .html, /index, trailing slash
+RewriteRule ^(index(\.html)?)?$ https://shashwatyadav.com/ [R=301,L]
+RewriteRule ^about(\.html)?/?$ https://shashwatyadav.com/about [R=301,L]
+RewriteRule ^services(\.html)?/?$ https://shashwatyadav.com/services [R=301,L]
+RewriteRule ^skills(\.html)?/?$ https://shashwatyadav.com/skills [R=301,L]
+RewriteRule ^certifications(\.html)?/?$ https://shashwatyadav.com/certifications [R=301,L]
+RewriteRule ^contact(\.html)?/?$ https://shashwatyadav.com/contact [R=301,L]
+RewriteRule ^privacy-policy(\.html)?/?$ https://shashwatyadav.com/privacy-policy [R=301,L]
+RewriteRule ^terms(\.html)?/?$ https://shashwatyadav.com/terms [R=301,L]
+RewriteRule ^courses(/index(\.html)?)?/?$ https://shashwatyadav.com/courses/ [R=301,L]
+RewriteRule ^courses/(claude-mastery|google-ads|master-classes|meta-ads)(/index(\.html)?)?/?$ https://shashwatyadav.com/courses/$1/ [R=301,L]
+RewriteRule ^meta-ads-lead-generation-master-class(/index(\.html)?)?/?$ https://shashwatyadav.com/meta-ads-lead-generation-master-class/ [R=301,L]
+RewriteRule ^portfolio(/index(\.html)?)?/?$ https://shashwatyadav.com/portfolio/ [R=301,L]
+# the removed sample page (action=delete) goes to the portfolio index
+RewriteRule ^portfolio/sample-case-study(/.*)?$ https://shashwatyadav.com/portfolio/ [R=301,L]
+RewriteRule ^portfolio/(chaitanya-greens-residential-2026|commercial-real-estate-meta-google-2026|hospital-multi-treatment-2026|life-educare-school-marketing-2026|residential-real-estate-meta-ads-2026|salon-academy-admissions-2026|vasarsha-reality-residential-2026)(/index(\.html)?)?/?$ https://shashwatyadav.com/portfolio/$1/ [R=301,L]
+
+# ---- 3. old WordPress blog: nothing was imported; every blog address goes to the .com blog page
+RewriteRule ^blog(/.*)?$ https://shashwatyadav.com/blog/ [R=301,L]
+
+# ---- 4. the app and the chatbot moved: same path on .com (the folders' own .htaccess files do the same for everything inside them)
+RewriteRule ^classes(/.*)?$ https://shashwatyadav.com/classes$1 [R=301,L]
+RewriteRule ^chatbot(/.*)?$ https://shashwatyadav.com/chatbot$1 [R=301,L]
+RewriteRule ^creators/?$ https://shashwatyadav.com/courses/ [R=301,L]
+RewriteRule ^creators/(.+)$ https://shashwatyadav.com/classes/$1 [R=301,L]
+
+# ---- 5. catch-all: any other path goes to the same path on .com (.com keeps the same URL structure)
+RewriteRule ^(.*)$ https://shashwatyadav.com/$1 [R=301,L]
