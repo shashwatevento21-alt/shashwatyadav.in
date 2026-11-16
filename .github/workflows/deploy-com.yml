@@ -1,0 +1,45 @@
+name: Deploy to shashwatyadav.com
+
+# SECOND workflow, for shashwatyadav.com only. The .in workflow (deploy.yml) is unchanged.
+# It runs only from the branch named below, never from main (main still deploys .in).
+# After cutover, change the branch to the one that is merged for .com, and disable deploy.yml.
+on:
+  push:
+    branches:
+      - migration/com-deploy
+  workflow_dispatch:
+
+jobs:
+  ftp-deploy-com:
+    name: FTP Deploy (.com)
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install lftp
+        run: sudo apt-get update && sudo apt-get install -y lftp
+
+      # Upload-only (no --delete flag, ever): this can add or replace our own site files and can never remove a
+      # remote file. The FTP account is rooted at shashwatyadav.com's public_html (WordPress lives there too), so
+      # the mirror uses an explicit include list instead of "everything": only the folders and files below are sent.
+      # Never sent: .htaccess, .htaccess.bk, default.php, llms.txt, mall/, .private/, index.php, wp-*, xmlrpc.php,
+      # readme.html, license.txt (WordPress and hosting files). .htaccess and robots.txt are edited on the server by hand.
+      - name: Stage only the site files
+        run: |
+          mkdir -p _out
+          cp index.html about.html services.html skills.html certifications.html contact.html privacy-policy.html terms.html sitemap-pages.xml _out/
+          cp -r assets courses portfolio meta-ads-lead-generation-master-class _out/
+
+      - name: Deploy to shashwatyadav.com via lftp (upload-only, never deletes)
+        env:
+          FTP_SERVER: ${{ secrets.COM_FTP_SERVER }}
+          FTP_USERNAME: ${{ secrets.COM_FTP_USERNAME }}
+          FTP_PASSWORD: ${{ secrets.COM_FTP_PASSWORD }}
+        run: |
+          lftp -c "
+          set ftp:ssl-allow no;
+          set mirror:use-pget-n 1;
+          open -u \"$FTP_USERNAME\",\"$FTP_PASSWORD\" \"$FTP_SERVER\";
+          mirror -R --verbose=1 --parallel=4 ./_out /;
+          "
