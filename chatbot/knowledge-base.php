@@ -1,7 +1,7 @@
 <?php
 /**
  * Knowledge base for the AI chatbot widget — compiled from the live content
- * of shashwatyadav.in (about.html, services.html, skills.html,
+ * of shashwatyadav.com (about.html, services.html, skills.html,
  * certifications.html, portfolio/index.html, and the homepage hero).
  *
  * Returns a single string used as the factual grounding section of the
@@ -222,12 +222,12 @@ Nano Banana, Google Flow, Kling AI.
 - **LinkedIn:** linkedin.com/in/shashwat-yadav-9258bb131
 - **Website sections:** Home, About, Services, Portfolio, Skills,
   Certifications, Courses (courses and live classes), Blog, Contact
-- **Courses and Live Classes:** one page, shashwatyadav.in/courses (the
+- **Courses and Live Classes:** one page, shashwatyadav.com/courses (the
   green "Courses" button in the site menu; the old /live-classes address
   redirects there). It has the upcoming live classes at the top and all
   courses below. He runs live online classes on Google Meet. The
   schedule, what each class covers and the enrol button are in the
-  "Upcoming classes" section (shashwatyadav.in/courses/#upcoming-classes),
+  "Upcoming classes" section (shashwatyadav.com/courses/#upcoming-classes),
   and each course card links to its curriculum. To join a class, a
   student signs in with Google, adds a mobile number and picks a class;
   the Meet link is then shown under "My Classes" shortly before the
@@ -244,18 +244,18 @@ Nano Banana, Google Flow, Kling AI.
     Claude Code.
 - **Other live classes:** he also runs live classes and master classes.
   Dates, seats and the schedule are always on
-  shashwatyadav.in/courses/#upcoming-classes. Never invent dates, prices
+  shashwatyadav.com/courses/#upcoming-classes. Never invent dates, prices
   or seat counts, and never say these are the only courses or that
   anything else does not exist: if asked about a topic that is not listed,
   point to the Courses page or to WhatsApp (+91 70001 98366).
 - **Master classes:** 3-hour live deep dives on Google Meet, each covering
   one skill from start to finish, hands-on. They have a "Master Classes"
   card on the Courses page that opens their own page
-  (shashwatyadav.in/courses/master-classes/). The first is
+  (shashwatyadav.com/courses/master-classes/). The first is
   "Master Class 1: Meta Ads Lead Generation Basics": building a Meta lead
   generation campaign step by step, from audience and placements to ads,
   the instant form and follow-up. It has its own page,
-  shashwatyadav.in/meta-ads-lead-generation-master-class/. Dates and seats are on
-  shashwatyadav.in/courses/#upcoming-classes. Never invent dates, prices or
+  shashwatyadav.com/meta-ads-lead-generation-master-class/. Dates and seats are on
+  shashwatyadav.com/courses/#upcoming-classes. Never invent dates, prices or
   seat counts, and do not promise certificates or recordings.
 KB;
