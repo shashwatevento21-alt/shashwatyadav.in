@@ -34,7 +34,7 @@ async () => {
     text[regionOf(p)].push(t);
   }
   const headings = [...document.querySelectorAll('h1,h2,h3,h4,h5,h6')].map((h) => ({ level: +h.tagName[1], text: norm(h.textContent), region: regionOf(h) }));
-  const links = [...document.querySelectorAll('a[href]')].map((a) => ({ href: a.getAttribute('href'), text: norm(a.textContent) || a.getAttribute('aria-label') || (a.querySelector('img') ? 'img:' + (a.querySelector('img').getAttribute('alt') || '') : ''), target: a.getAttribute('target'), rel: a.getAttribute('rel'), region: regionOf(a) }));
+  const links = [...document.querySelectorAll('a[href]')].map((a) => ({ href: a.getAttribute('href'), text: norm(a.textContent) || (a.querySelector('img') ? 'img:' + (a.querySelector('img').getAttribute('alt') || '') : ''), label: a.getAttribute('aria-label'), target: a.getAttribute('target'), rel: a.getAttribute('rel'), region: regionOf(a) }));
   const images = [...document.querySelectorAll('img')].map((i) => ({ src: i.getAttribute('src'), srcset: i.getAttribute('srcset') ? 'yes' : null, alt: i.getAttribute('alt'), width: i.getAttribute('width'), height: i.getAttribute('height'), loading: i.getAttribute('loading'), region: regionOf(i) }));
   const pictureSources = [...document.querySelectorAll('picture source')].map((s) => ({ srcset: s.getAttribute('srcset'), type: s.getAttribute('type'), media: s.getAttribute('media') }));
   const media = [...document.querySelectorAll('video, iframe, audio, object, embed')].map((m) => ({ tag: m.tagName.toLowerCase(), src: m.getAttribute('src') || (m.querySelector('source') && m.querySelector('source').getAttribute('src')) || null, poster: m.getAttribute('poster'), title: m.getAttribute('title') }));

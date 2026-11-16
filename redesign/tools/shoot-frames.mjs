@@ -7,7 +7,8 @@ import { launchChrome } from './cdp.mjs';
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const BASE = process.env.BASE || 'http://127.0.0.1:8090';
 const SLUG = process.env.SLUG || 'home';
-const PAGE = process.env.PAGE || '/';
+// PAGE uses "~" for "/" (Git Bash rewrites values that start with a slash): PAGE=about, PAGE=courses~google-ads~, PAGE=home
+const PAGE = process.env.PAGE === undefined || process.env.PAGE === 'home' ? '/' : '/' + process.env.PAGE.split('~').join('/');
 const DIR = path.join(root, 'screens', process.env.DIR || 'after', 'frames');
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 const chrome = await launchChrome(9345);
