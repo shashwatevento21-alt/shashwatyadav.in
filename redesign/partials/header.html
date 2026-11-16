@@ -1,0 +1,37 @@
+<!-- SHARED HEADER (source of truth: redesign/partials/header.html; Phase C copies it into every page). Links and labels are the site's own.
+     Live Classes hooks kept: data-lc-guest / data-lc-login (the "Log in" link) and data-lc-pill (the Courses pill, which becomes "My Classes" for a signed-in student). -->
+<header class="site-header" id="navbar">
+  <div class="container bar">
+    <a class="brand" href="/"><img src="/assets/images/logo.png" alt="Shashwat Yadav" width="150" height="40"></a>
+    <nav class="nav" id="site-nav" aria-label="Main">
+      <ul class="nav-list">
+        <li><a class="nav-link" href="/">Home</a></li>
+        <li><a class="nav-link" href="/about">About</a></li>
+        <li><a class="nav-link" href="/services">Services</a></li>
+        <li><a class="nav-link" href="/portfolio">Portfolio</a></li>
+        <li><a class="nav-link" href="/skills">Skills</a></li>
+        <li><a class="nav-link" href="/certifications">Certifications</a></li>
+        <li><a class="nav-link" href="/blog/">Blog</a></li>
+        <li><a class="nav-link" href="/contact">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a class="nav-link" href="/classes/login" data-lc-guest data-lc-login>Log in</a>
+        <div class="has-menu">
+          <a class="btn btn-outline" href="/courses/" data-lc-pill>Courses <svg class="icon chev" aria-hidden="true" focusable="false"><use href="/assets/icons.svg#i-chev"></use></svg></a>
+          <div class="menu" role="group" aria-label="Courses">
+            <a class="menu-item" href="/courses/"><span class="menu-title">All courses</span><span class="menu-desc">Courses and upcoming live classes</span></a>
+            <a class="menu-item" href="/courses/master-classes/"><span class="menu-title">Master Classes</span><span class="menu-desc">3-hour live deep dives</span></a>
+            <a class="menu-item" href="/courses/google-ads/"><span class="menu-title">Google Ads</span><span class="menu-desc">Search and Demand Gen lead campaigns</span></a>
+            <a class="menu-item" href="/courses/meta-ads/"><span class="menu-title">Meta Ads</span><span class="menu-desc">Lead and engagement campaigns</span></a>
+            <a class="menu-item" href="/courses/claude-mastery/"><span class="menu-title">Claude and Claude Code</span><span class="menu-desc">Prompting, building and automation</span></a>
+          </div>
+        </div>
+        <a class="btn btn-primary" href="/contact">Let's Connect</a>
+      </div>
+    </nav>
+    <div class="bar-end">
+      <a class="btn btn-outline btn-sm" href="/courses/" data-lc-pill>Courses</a>
+      <button class="menu-toggle" type="button" aria-controls="site-nav" aria-expanded="false" aria-label="Open menu"><span class="bars"></span></button>
+    </div>
+  </div>
+</header>

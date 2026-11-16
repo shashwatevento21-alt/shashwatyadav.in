@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Design samples (not a site page)</title>
+  <link rel="icon" type="image/png" href="/assets/images/favicon.png">
+  <!--HEAD-->
+  <style>
+    /* sample-page only: swatches and spacing of the demo blocks */
+    .demo-label { margin: 0 0 var(--sp-4); font-family: var(--font-heading); font-size: 12px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ss-slate); }
+    .on-dark .demo-label { color: var(--ss-cyan); }
+    .stack > * + * { margin-top: var(--sp-5); }
+    .swatches { display: grid; grid-template-columns: repeat(6, 1fr); gap: var(--sp-3); }
+    .sw { border: 1px solid var(--ss-border); border-radius: var(--radius-tile); overflow: hidden; background: #fff; font-size: 12px; }
+    .sw i { display: block; height: 56px; }
+    .sw b { display: block; padding: 8px 10px 0; color: var(--ss-ink); }
+    .sw span { display: block; padding: 0 10px 8px; }
+    @media (width <= 767px) { .swatches { grid-template-columns: repeat(3, 1fr); } }
+  </style>
+</head>
+<body>
+<!--HEADER-->
+<main id="main">
+
+  <!-- 1. crumb bar + hero without a photo -->
+  <div class="crumb-bar bg-midnight"><div class="container"><nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><span aria-current="page">Design samples</span></li></ol></nav></div></div>
+  <section class="hero">
+    <div class="container">
+      <p class="eyebrow">Hero, no photo</p>
+      <h1>Page heading in the new design</h1>
+      <p class="lead">A supporting sentence under the heading. The navy and blue light fields are the complete look; a photo is optional.</p>
+      <div class="btn-row">
+        <a class="btn btn-primary" href="#">Primary action <svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/icons.svg#i-arrow"></use></svg></a>
+        <a class="btn btn-secondary" href="#">Secondary action</a>
+        <a class="btn btn-ghost-dark" href="#"><svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/icons.svg#i-chat"></use></svg>Ghost on dark</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. hero with the photo slot filled (demo image) -->
+  <section class="hero hero-home" style="min-height:0">
+    <div class="container">
+      <div class="hero-grid has-photo">
+        <div>
+          <p class="eyebrow">Hero, with photo</p>
+          <h1 style="font-size:44px">Same hero when the photo slot is used</h1>
+          <p class="lead">The photo sits on the right on desktop and drops below the text on tablet and phone.</p>
+          <div class="btn-row"><a class="btn btn-primary" href="#">Primary action</a><a class="btn btn-secondary" href="#">Secondary action</a></div>
+        </div>
+        <div class="hero-photo"><img src="/assets/images/shashwat-yadav-performance-marketing-expert.webp" alt="" width="880" height="1100"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. type, palette -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head"><p class="eyebrow">Typography</p><h2 class="h2-lg">Section heading, large</h2><p class="lead">Lead paragraph in Inter, 18 px. Body text is Inter 16 px in slate; headings are Montserrat.</p></div>
+      <div class="stack">
+        <h1>Heading 1: Montserrat 800</h1>
+        <h2>Heading 2: Montserrat 700</h2>
+        <h3>Heading 3: Montserrat 700</h3>
+        <h4>Heading 4: label style</h4>
+        <p>Body text, with a <a href="#">text link</a>. The rupee sign ₹5,000, a dash — and “quotes” render in the web font.</p>
+      </div>
+      <p class="demo-label" style="margin-top:var(--sp-7)">Palette</p>
+      <div class="swatches">
+        <div class="sw"><i style="background:#0058d5"></i><b>Blue</b><span>#0058D5 primary</span></div>
+        <div class="sw"><i style="background:#003187"></i><b>Navy</b><span>#003187 hover</span></div>
+        <div class="sw"><i style="background:#001e54"></i><b>Midnight</b><span>#001E54 dark</span></div>
+        <div class="sw"><i style="background:#0081fe"></i><b>Signal</b><span>#0081FE</span></div>
+        <div class="sw"><i style="background:#00beff"></i><b>Cyan</b><span>#00BEFF accent</span></div>
+        <div class="sw"><i style="background:#eef4fb"></i><b>Mist</b><span>#EEF4FB wash</span></div>
+        <div class="sw"><i style="background:#0b0d12"></i><b>Ink</b><span>#0B0D12 headings</span></div>
+        <div class="sw"><i style="background:#5b6475"></i><b>Slate</b><span>#5B6475 body</span></div>
+        <div class="sw"><i style="background:#dce4f0"></i><b>Border</b><span>#DCE4F0</span></div>
+        <div class="sw"><i style="background:#002a6e"></i><b>Card dark</b><span>#002A6E</span></div>
+        <div class="sw"><i style="background:linear-gradient(135deg,#00beff,#0081fe 45%,#003187)"></i><b>Gradient</b><span>CTA bands</span></div>
+        <div class="sw"><i style="background:#b42318"></i><b>Error</b><span>forms only</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. buttons, tags, chips, lists, metrics -->
+  <section class="section bg-mist">
+    <div class="container">
+      <div class="section-head"><p class="eyebrow">Components</p><h2 class="h2-lg">Buttons, tags, chips and lists</h2></div>
+      <p class="demo-label">Buttons</p>
+      <div class="btn-row" style="margin-bottom:var(--sp-6)">
+        <a class="btn btn-primary" href="#">Primary</a><a class="btn btn-secondary" href="#">Secondary</a><a class="btn btn-outline" href="#">Outline</a><a class="btn btn-primary btn-sm" href="#">Small</a><span class="btn btn-primary" aria-disabled="true">Disabled</span>
+      </div>
+      <p class="demo-label">Tags and chips</p>
+      <div class="chips" style="margin-bottom:var(--sp-3)"><span class="tag">Tag</span><span class="tag">Another tag</span><span class="dot-tag">Dot tag</span></div>
+      <div class="chips" style="margin-bottom:var(--sp-6)"><a class="chip active" href="#" aria-current="page">All</a><a class="chip" href="#">Filter one</a><a class="chip" href="#">Filter two</a><a class="chip" href="#">Filter three</a></div>
+      <div class="grid grid-2">
+        <div class="card"><p class="demo-label">Check list</p><ul class="ticks"><li>First list item with a blue check mark</li><li>Second list item, a little longer so it wraps onto a second line on narrow screens</li><li>Third list item</li></ul></div>
+        <div class="grid grid-2" style="gap:var(--sp-4)"><div class="metric"><div class="metric-value">00</div><div class="metric-label">Metric label</div></div><div class="metric"><div class="metric-value">00</div><div class="metric-label">Metric label</div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. cards, tiles -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head"><p class="eyebrow">Cards</p><h2 class="h2-lg">Cards and tiles</h2><p class="lead">Cards are bordered and flat. Tiles lift on hover.</p></div>
+      <div class="grid grid-3">
+        <div class="card shadow-soft"><span class="icon-tile"><svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/icons.svg#i-search"></use></svg></span><h3>Card title</h3><p>Short supporting text inside a card, in slate.</p><a class="card-link" href="#">Link text <svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/icons.svg#i-arrow"></use></svg></a></div>
+        <a class="tile" href="#"><div class="tile-top"><span class="icon-tile"><svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/icons.svg#i-monitor"></use></svg></span><span class="dot-tag">Tile tag</span></div><h3>Tile title</h3><p>Hover this tile: it lifts and the arrow moves.</p><span class="card-link">Explore <svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/icons.svg#i-arrow"></use></svg></span></a>
+        <a class="tile dark" href="#"><div class="tile-top"><span class="icon-tile"><svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/icons.svg#i-trend"></use></svg></span><span class="dot-tag">Dark tile</span></div><h3>Dark tile title</h3><p>The dark variant for emphasis.</p><span class="card-link" style="color:var(--ss-cyan)">Explore <svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/icons.svg#i-arrow"></use></svg></span></a>
+      </div>
+      <div class="grid grid-3" style="margin-top:var(--sp-5)">
+        <article class="post"><a class="media" href="#" tabindex="-1" aria-hidden="true"><img src="/assets/images/shashwat-yadav-performance-marketing-expert.webp" alt="" width="640" height="360" loading="lazy" style="object-position:50% 20%"></a><div class="body"><a class="cat" href="#">Category</a><h3><a href="#">Post or case-study card title</a></h3><p class="excerpt">Excerpt text in the card, up to a few lines, in slate.</p><p class="meta">17 November 2026 · 8 min read</p></div></article>
+        <article class="post"><a class="media" href="#" tabindex="-1" aria-hidden="true"></a><div class="body"><a class="cat" href="#">Category</a><h3><a href="#">Card without an image</a></h3><p class="excerpt">The image area stays a mist block, so a card without a picture still looks finished.</p><p class="meta">17 November 2026 · 5 min read</p></div></article>
+        <div class="post"><div class="body"><span class="tag">Tag</span><h3>Card with no media area</h3><p class="excerpt">The same bordered card with only text.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. form + FAQ -->
+  <section class="section bg-mist">
+    <div class="container">
+      <div class="grid grid-2" style="align-items:start;gap:var(--sp-7)">
+        <div>
+          <div class="section-head" style="margin-bottom:var(--sp-5)"><p class="eyebrow">Forms</p><h2 class="h2-lg">Form fields</h2></div>
+          <form class="form card" onsubmit="return false">
+            <div class="field"><label for="d-name">Name</label><input id="d-name" type="text" placeholder="Your name"></div>
+            <div class="field-row"><div class="field"><label for="d-cc">Code</label><select id="d-cc"><option>+91</option><option>+1</option></select></div><div class="field"><label for="d-ph">Phone</label><input id="d-ph" type="tel" placeholder="98765 43210"></div></div>
+            <div class="field invalid"><label for="d-em">Email (error state)</label><input id="d-em" type="email" value="not-an-email"><span class="error">Please enter a valid email address.</span></div>
+            <div class="field"><label for="d-msg">Message</label><textarea id="d-msg" placeholder="Tell me about your goal"></textarea></div>
+            <label class="checkbox"><input type="checkbox" checked> Checkbox option</label>
+            <div class="notice ok"><strong>Success message.</strong> Shown after a form is sent.</div>
+            <div class="notice err"><strong>Error message.</strong> Shown when sending fails.</div>
+            <button class="btn btn-primary" type="submit">Submit button</button>
+          </form>
+        </div>
+        <div>
+          <div class="section-head" style="margin-bottom:var(--sp-5)"><p class="eyebrow">Accordion</p><h2 class="h2-lg">FAQ rows</h2></div>
+          <div class="faq-wrap">
+            <details class="faq" open><summary><h3>Question one, open by default?</h3><span class="toggle"><svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/icons.svg#i-plus"></use></svg></span></summary><p>Answer text appears here when the row is open. It uses the native details element, so it works without JavaScript.</p></details>
+            <details class="faq"><summary><h3>Question two?</h3><span class="toggle"><svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/icons.svg#i-plus"></use></svg></span></summary><p>Another answer.</p></details>
+            <details class="faq"><summary><h3>Question three with a longer title that wraps onto two lines on phones?</h3><span class="toggle"><svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/icons.svg#i-plus"></use></svg></span></summary><p>One more answer.</p></details>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. dark section -->
+  <section class="section bg-midnight on-dark">
+    <div class="container">
+      <div class="section-head"><p class="eyebrow">Dark section</p><h2 class="h2-lg">Cards on a midnight background</h2><p class="lead">Dark sections use the card-dark colour, cyan accents and white headings.</p></div>
+      <div class="grid grid-3">
+        <div class="card"><span class="icon-tile"><svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/icons.svg#i-target"></use></svg></span><h3>Dark card title</h3><p>Supporting text in mist.</p><a class="card-link" href="#">Link text <svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/icons.svg#i-arrow"></use></svg></a></div>
+        <div class="card"><h3>Check list</h3><ul class="ticks"><li>Item one</li><li>Item two</li><li>Item three</li></ul></div>
+        <div class="metric"><div class="metric-value">00</div><div class="metric-label">Metric on dark</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. CTA band -->
+  <section class="cta">
+    <div class="container">
+      <h2>Call-to-action band headline</h2>
+      <p>One sentence of supporting text in white on the blue gradient.</p>
+      <div class="btn-row"><a class="btn btn-secondary" href="#">White button</a><a class="btn btn-ghost-dark" href="#">Outline button</a></div>
+    </div>
+  </section>
+</main>
+<!--FOOTER-->
+<!--FLOATING-->
+<script src="/assets/js/theme.js?v=1" defer></script>
+</body>
+</html>

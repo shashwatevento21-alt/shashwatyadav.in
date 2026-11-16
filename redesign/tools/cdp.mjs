@@ -44,12 +44,17 @@ export async function launchChrome(port = 9333) {
     await s('Emulation.setDeviceMetricsOverride', { width, height, deviceScaleFactor: scale, mobile });
     if (mobile) await s('Emulation.setUserAgentOverride', { userAgent: 'Mozilla/5.0 (Linux; Android 13; Pixel 7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Mobile Safari/537.36' });
     const requests = [];
+    const responses = [];
+    const consoleErrors = [];
     listeners.push((msg) => {
       if (msg.sessionId !== sessionId) return;
       if (msg.method === 'Network.requestWillBeSent') requests.push({ url: msg.params.request.url, method: msg.params.request.method });
+      if (msg.method === 'Network.responseReceived') responses.push({ url: msg.params.response.url, status: msg.params.response.status, type: msg.params.type });
+      if (msg.method === 'Runtime.exceptionThrown') consoleErrors.push(msg.params.exceptionDetails.exception?.description || msg.params.exceptionDetails.text);
+      if (msg.method === 'Runtime.consoleAPICalled' && msg.params.type === 'error') consoleErrors.push((msg.params.args || []).map((a) => a.value || a.description || '').join(' '));
     });
     return {
-      requests,
+      requests, responses, consoleErrors,
       async goto(url, { settle = 1200 } = {}) {
         const loaded = new Promise((res) => { const l = (msg) => { if (msg.sessionId === sessionId && msg.method === 'Page.loadEventFired') { res(); } }; listeners.push(l); setTimeout(res, 30000); });
         await s('Page.navigate', { url });
@@ -107,6 +112,19 @@ export async function launchChrome(port = 9333) {
         const shot = await s('Page.captureScreenshot', { format: 'jpeg', quality });
         fs.mkdirSync(path.dirname(file), { recursive: true });
         fs.writeFileSync(file, Buffer.from(shot.data, 'base64'));
+      },
+      /** A rectangle of the page (page coordinates), e.g. just the header or one component. */
+      async clipShot(file, { x = 0, y = 0, width, height }, { quality = 85 } = {}) {
+        const shot = await s('Page.captureScreenshot', { format: 'jpeg', quality, captureBeyondViewport: true, clip: { x, y, width, height, scale: 1 } });
+        fs.mkdirSync(path.dirname(file), { recursive: true });
+        fs.writeFileSync(file, Buffer.from(shot.data, 'base64'));
+      },
+      /** The element with this selector, with optional extra space around it. */
+      async elementShot(file, selector, { pad = 0, quality = 85 } = {}) {
+        const r = await this.eval(`(() => { const e = document.querySelector(${JSON.stringify(selector)}); if (!e) return null; const b = e.getBoundingClientRect(); return { x: b.left + scrollX, y: b.top + scrollY, w: b.width, h: b.height }; })()`);
+        if (!r) return false;
+        await this.clipShot(file, { x: Math.max(0, r.x - pad), y: Math.max(0, r.y - pad), width: r.w + pad * 2, height: r.h + pad * 2 }, { quality });
+        return true;
       },
       async click(selector) {
         return this.eval(`(() => { const e = [...document.querySelectorAll(${JSON.stringify(selector)})].find(x => { const r = x.getBoundingClientRect(); return r.width > 0 && r.height > 0; }); if (!e) return false; e.click(); return true; })()`);
