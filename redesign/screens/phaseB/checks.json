@@ -1,0 +1,156 @@
+{
+ "desktop1440": {
+  "width": 1440,
+  "docWidth": 1440,
+  "overflowX": false,
+  "headerH": 77,
+  "fonts": [
+   "Inter 400",
+   "Inter 400",
+   "Inter 600",
+   "Inter Fallback normal",
+   "Montserrat 600",
+   "Montserrat 700",
+   "Montserrat 800",
+   "Montserrat Fallback normal"
+  ],
+  "bodyFont": "Inter",
+  "h1Font": "Montserrat",
+  "burgerShown": false,
+  "navListShown": true,
+  "barFit": {
+   "barInner": 1176,
+   "navWidth": 981,
+   "rowHeight": 44,
+   "wrapped": false,
+   "brandRight": 282,
+   "navLeft": 327
+  },
+  "bad": [],
+  "consoleErrors": [],
+  "dropdownOpen": true
+ },
+ "viewport1280": {
+  "width": 1280,
+  "docWidth": 1280,
+  "overflowX": false,
+  "headerH": 77,
+  "fonts": [
+   "Inter 400",
+   "Inter 400",
+   "Inter 600",
+   "Inter Fallback normal",
+   "Montserrat 600",
+   "Montserrat 700",
+   "Montserrat 800",
+   "Montserrat Fallback normal"
+  ],
+  "bodyFont": "Inter",
+  "h1Font": "Montserrat",
+  "burgerShown": false,
+  "navListShown": true,
+  "barFit": {
+   "barInner": 1176,
+   "navWidth": 981,
+   "rowHeight": 44,
+   "wrapped": false,
+   "brandRight": 202,
+   "navLeft": 247
+  }
+ },
+ "viewport1100": {
+  "width": 1100,
+  "docWidth": 1100,
+  "overflowX": false,
+  "headerH": 77,
+  "fonts": [
+   "Inter 400",
+   "Inter 400",
+   "Inter 600",
+   "Inter Fallback normal",
+   "Montserrat 600",
+   "Montserrat 700",
+   "Montserrat 800",
+   "Montserrat Fallback normal"
+  ],
+  "bodyFont": "Inter",
+  "h1Font": "Montserrat",
+  "burgerShown": true,
+  "navListShown": false,
+  "barFit": {
+   "barInner": 1036,
+   "navWidth": 0,
+   "rowHeight": 0,
+   "wrapped": false,
+   "brandRight": 182,
+   "navLeft": 0
+  }
+ },
+ "tablet768": {
+  "width": 768,
+  "docWidth": 768,
+  "overflowX": false,
+  "headerH": 77,
+  "fonts": [
+   "Inter 400",
+   "Inter 400",
+   "Inter 600",
+   "Inter Fallback normal",
+   "Montserrat 600",
+   "Montserrat 700",
+   "Montserrat 800",
+   "Montserrat Fallback normal"
+  ],
+  "bodyFont": "Inter",
+  "h1Font": "Montserrat",
+  "burgerShown": true,
+  "navListShown": false,
+  "bad": 0
+ },
+ "mobile375": {
+  "width": 375,
+  "docWidth": 375,
+  "overflowX": false,
+  "headerH": 65,
+  "fonts": [
+   "Inter 400",
+   "Inter 400",
+   "Inter 600",
+   "Inter Fallback normal",
+   "Montserrat 600",
+   "Montserrat 700",
+   "Montserrat 800",
+   "Montserrat Fallback normal"
+  ],
+  "bodyFont": "Inter",
+  "h1Font": "Montserrat",
+  "burgerShown": true,
+  "navListShown": false,
+  "bad": [],
+  "consoleErrors": [],
+  "menuOpen": {
+   "navDisplay": "flex",
+   "expanded": "true",
+   "bodyLocked": true,
+   "links": [
+    "Home",
+    "About",
+    "Services",
+    "Portfolio",
+    "Skills",
+    "Certifications",
+    "Blog",
+    "Contact",
+    "Log in",
+    "Courses",
+    "All coursesCourses and upcoming live classes",
+    "Master Classes3-hour live deep dives",
+    "Google AdsSearch and Demand Gen lead campaigns",
+    "Meta AdsLead and engagement campaigns",
+    "Claude and Claude CodePrompting, building and automation",
+    "Let's Connect"
+   ]
+  },
+  "menuClosedAgain": true
+ }
+}

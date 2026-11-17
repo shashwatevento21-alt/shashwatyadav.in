@@ -1,0 +1,47 @@
+/* ==========================================================================
+   New design layer for the course pages and the master class pages (shared tokens from theme.css).
+   ========================================================================== */
+.cd { background: var(--ss-white); overflow-x: clip; }
+.cd .cd-h1, .cd .cd-h2, .cd h3 { font-family: var(--font-heading); }
+.cd-wrap { max-width: var(--container); padding: 0 var(--gutter); }
+.cd [id] { scroll-margin-top: calc(var(--header-h) + 16px); }
+.cd a:focus-visible, .cd button:focus-visible, .cd input:focus-visible { outline: 3px solid var(--ss-blue); }
+
+/* hero: midnight with blue light fields, left aligned like the other pages */
+.cd-hero { padding: var(--sp-7) 0 var(--sp-8); background: var(--ss-midnight); color: var(--ss-mist); }
+.cd-hero::before { width: auto; height: auto; right: 0; top: 0; bottom: 0; left: 0; border-radius: 0; background: radial-gradient(55% 75% at 90% 55%, rgba(0, 129, 254, 0.40), transparent 65%), radial-gradient(50% 60% at 6% 100%, rgba(0, 190, 255, 0.20), transparent 60%); }
+.cd-hero::after { display: none; }
+.cd-hero .cd-wrap { text-align: left; }
+.cd-back { font-family: var(--font-heading); font-size: 13px; font-weight: 600; color: var(--ss-cyan); }
+.cd-logo { margin: 6px 0 var(--sp-5); border-radius: var(--radius-card); border-color: transparent; }
+.cd-eyebrow { padding: 0; border: 0; border-radius: 0; background: none; font-family: var(--font-heading); font-size: 13px; font-weight: 600; letter-spacing: 0.3em; text-transform: uppercase; color: var(--ss-cyan); }
+.cd-h1 { margin-top: var(--sp-4); font-size: 32px; font-weight: 800; line-height: 1.1; letter-spacing: -0.02em; color: var(--ss-white); }
+.cd-tag { max-width: 680px; margin: var(--sp-5) 0 0; font-size: 18px; color: var(--ss-mist); }
+.cd-stats { margin: var(--sp-6) 0 0; max-width: 760px; }
+.cd-stat { border-top-width: 1px; border-top-color: var(--ss-border); box-shadow: 0 12px 40px rgba(0, 30, 84, 0.2); }
+.cd-stat:nth-child(n) { border-top-color: var(--ss-border); }
+.cd-stat > b { font-weight: 800; color: var(--ss-blue); }
+.cd-cta { justify-content: flex-start; margin-top: var(--sp-6); }
+.cd-btn { min-height: 44px; padding: 12px 22px; border: 1.5px solid transparent; font-size: 15px; font-weight: 600; transition: background-color 0.2s, color 0.2s, border-color 0.2s; }
+.cd-btn:hover { transform: none; box-shadow: none; }
+.cd-btn.primary { background: var(--ss-blue); border-color: var(--ss-blue); color: var(--ss-white); }
+.cd-btn.primary:hover { background: var(--ss-navy); border-color: var(--ss-navy); }
+.cd-btn.green { background: var(--ss-white); border-color: var(--ss-white); color: var(--ss-midnight); }
+.cd-btn.green:hover { background: var(--ss-mist); }
+.cd-hero .cd-btn:not(.primary):not(.green) { background: transparent; border-color: var(--ss-white); color: var(--ss-white); }
+.cd-hero .cd-btn:not(.primary):not(.green):hover { background: var(--ss-navy); }
+.cd-note { margin: var(--sp-5) 0 0; max-width: 640px; color: var(--ss-mist); }
+
+/* sections */
+.cd-section { padding: var(--section-pad) 0; }
+.cd-section.alt { background: var(--ss-mist); border-top: 0; border-bottom: 0; }
+.cd-h2 { font-size: 28px; font-weight: 800; line-height: 1.1; letter-spacing: -0.02em; }
+.cd-lede { font-size: 16px; }
+.cd-search { border-width: 1.5px; border-radius: var(--radius-tile); min-height: 44px; }
+.cd-search:focus { box-shadow: 0 0 0 3px var(--ss-mist); }
+.cd-chip, .cd-small { border-width: 1.5px; }
+
+@media (min-width: 768px) {
+  .cd-h1 { font-size: 44px; }
+  .cd-h2 { font-size: 44px; }
+}

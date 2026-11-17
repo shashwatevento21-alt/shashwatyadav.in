@@ -183,14 +183,14 @@
   /* ---------- notices (success, errors, explanations) ---------- */
 
   var NOTICE_STYLE = {
-    ok: 'border-growth-accent/40 bg-growth-accent/10 text-text-heading',
-    info: 'border-primary/30 bg-primary/5 text-text-heading',
-    error: 'border-red-200 bg-red-50 text-red-700'
+    ok: 'ok',
+    info: 'info',
+    error: 'err'
   };
 
   // html is built from escaped pieces only.
   function notice(kind, html) {
-    noticeEl.className = 'mb-4 rounded-xl border px-4 py-3 text-sm focus:outline-none ' + (NOTICE_STYLE[kind] || NOTICE_STYLE.info);
+    noticeEl.className = 'notice lc-notice ' + (NOTICE_STYLE[kind] || NOTICE_STYLE.info);
     noticeEl.innerHTML = html;
     noticeEl.classList.remove('hidden');
     noticeEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
@@ -209,11 +209,11 @@
     if (!accountEl) return;
     if (state.user) {
       accountEl.innerHTML =
-        '<span class="text-text-body break-all text-right">Signed in as <strong class="text-text-heading font-semibold">' + esc(state.user.email) + '</strong></span>' +
-        '<a href="' + esc(myClassesUrl()) + '" class="font-semibold text-primary hover:underline">My classes &rarr;</a>' +
-        '<button type="button" data-logout class="text-text-body/80 hover:text-text-heading underline underline-offset-2">Not you? Log out</button>';
+        '<span class="lc-acct-text">Signed in as <strong>' + esc(state.user.email) + '</strong></span>' +
+        '<a href="' + esc(myClassesUrl()) + '" class="lc-acct-link">My classes &rarr;</a>' +
+        '<button type="button" data-logout class="lc-acct-btn">Not you? Log out</button>';
     } else {
-      accountEl.innerHTML = '<a id="lc-signup-link" href="' + esc(signInUrl()) + '" class="inline-flex items-center px-4 py-2 rounded-full bg-primary text-white text-xs font-semibold hover:bg-primary-dark transition-all">Log in</a>';
+      accountEl.innerHTML = '<a id="lc-signup-link" href="' + esc(signInUrl()) + '" class="btn btn-primary btn-sm">Log in</a>';
     }
   }
 
@@ -236,17 +236,14 @@
     });
   }
 
-  // main.js turned the header's "Courses" pill into "Courses" and "My Classes" while signed in; put it back.
+  // main.js added a "My Classes" pill and hid "Log in" while signed in; put the header back.
   function restoreHeader() {
-    document.querySelectorAll('a[data-lc-added]').forEach(function (a) { a.parentNode.removeChild(a); });
+    document.querySelectorAll('[data-lc-added]').forEach(function (a) { a.parentNode.removeChild(a); });
+    document.querySelectorAll('.nav.lc-in').forEach(function (n) { n.classList.remove('lc-in'); });
     document.querySelectorAll('[data-lc-guest]').forEach(function (el) { el.classList.remove('hidden'); });
     document.querySelectorAll('a[data-lc-swapped]').forEach(function (a) {
-      var label = null;
-      Array.prototype.forEach.call(a.children, function (c) { if (c.tagName === 'SPAN' && c.textContent.trim()) label = c; });
-      if (label) label.innerHTML = a.getAttribute('data-lc-swapped');
+      a.textContent = a.getAttribute('data-lc-swapped');
       a.setAttribute('href', '/courses/');
-      if (a.getAttribute('data-lc-dot') && a.firstElementChild) { a.firstElementChild.classList.remove('hidden'); a.removeAttribute('data-lc-dot'); }
-      if (a.getAttribute('data-lc-class')) { a.className = a.getAttribute('data-lc-class'); a.removeAttribute('data-lc-class'); }
       a.removeAttribute('data-lc-swapped');
     });
   }
@@ -260,14 +257,14 @@
       .sort(function (a, b) { return a.start - b.start; });
   }
 
-  var ICON_CLOCK = '<svg class="w-4 h-4 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path stroke-linecap="round" stroke-linejoin="round" d="M12 7v5l3 2"/></svg>';
-  var ICON_CHECK = '<svg class="w-4 h-4 text-growth-accent flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>';
-  var ICON_CHEVRON = '<svg data-chevron class="w-4 h-4 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>';
-  var ICON_ARROW = '<svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>';
+  var ICON_CLOCK = '<svg class="icon" aria-hidden="true" focusable="false" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path stroke-linecap="round" stroke-linejoin="round" d="M12 7v5l3 2"/></svg>';
+  var ICON_CHECK = '<svg class="icon" aria-hidden="true" focusable="false" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>';
+  var ICON_CHEVRON = '<svg data-chevron class="icon" aria-hidden="true" focusable="false" style="transition:transform .2s" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>';
+  var ICON_ARROW = '<svg class="icon" aria-hidden="true" focusable="false" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>';
 
-  var BTN = 'w-full inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full text-sm font-semibold transition-all ';
-  var BTN_PRIMARY = BTN + 'bg-primary text-white hover:bg-primary-dark';
-  var BTN_LABEL = BTN + 'bg-background text-text-body/70 border border-border';
+  var BTN = 'btn btn-block ';
+  var BTN_PRIMARY = BTN + 'btn-primary';
+  var BTN_LABEL = 'lc-label';
 
   // The state of one class for this visitor. Pure UI: the server re-checks everything on every request, and the
   // Meet link is never in this page: the green button is a link to the app, which checks the enrolment and the window.
@@ -279,22 +276,22 @@
 
     if (state.enrolled[cls.id]) {
       var opens = new Date(cls.start.getTime() - JOIN_OPENS_MIN * 60000);
-      var head = '<span class="' + BTN + 'bg-growth-accent/10 text-growth-accent border border-growth-accent/30">Enrolled ✓</span>';
+      var head = '<span class="lc-enrolled">Enrolled ✓</span>';
       if (now >= opens.getTime()) {
-        return '<div class="flex flex-col gap-1.5 w-full">' + head +
-          '<a href="' + esc(joinUrl(cls.id)) + '" target="_blank" rel="noopener noreferrer" data-join-link class="' + BTN + 'bg-growth-accent text-white hover:brightness-110">Join class ' + ICON_ARROW + '</a></div>';
+        return '<div class="lc-stack">' + head +
+          '<a href="' + esc(joinUrl(cls.id)) + '" target="_blank" rel="noopener noreferrer" data-join-link class="' + BTN + 'btn-primary">Join class ' + ICON_ARROW + '</a></div>';
       }
-      return '<div class="flex flex-col gap-1.5 w-full">' + head +
-        '<button type="button" disabled aria-disabled="true" class="' + BTN + 'bg-border/60 text-text-body/60 cursor-not-allowed">You can join ' + JOIN_OPENS_MIN + ' minutes before class</button>' +
-        '<span class="text-xs text-text-body/70 text-center">Opens at ' + esc(fmtTime(opens)) + ' IST</span></div>';
+      return '<div class="lc-stack">' + head +
+        '<button type="button" disabled aria-disabled="true" class="' + BTN + 'lc-disabled">You can join ' + JOIN_OPENS_MIN + ' minutes before class</button>' +
+        '<span class="lc-stamp">Opens at ' + esc(fmtTime(opens)) + ' IST</span></div>';
     }
 
     if (cls.isFull) return '<span class="' + BTN_LABEL + '">Class full</span>';
 
-    if (state.busy[cls.id]) return '<button type="button" disabled class="' + BTN_PRIMARY + ' opacity-70">Enrolling…</button>';
+    if (state.busy[cls.id]) return '<button type="button" disabled class="' + BTN_PRIMARY + ' lc-busy">Enrolling…</button>';
 
     if (!state.user) {
-      return '<div class="flex flex-col items-stretch gap-1.5 w-full">' +
+      return '<div class="lc-stack">' +
         '<button type="button" data-signup="' + id + '" class="' + BTN_PRIMARY + '">Continue with Google to enrol ' + ICON_ARROW + '</button></div>';
     }
 
@@ -307,7 +304,7 @@
     for (var i = 0; i < state.sessions.length; i++) {
       var e = state.sessions[i];
       if (e.id !== cls.id && state.enrolled[e.id] && e.start < cls.end && cls.start < e.end) {
-        return '<p class="mt-2 inline-block rounded-md bg-amber-50 border border-amber-200 px-2 py-1 text-xs text-amber-800">Overlaps with ' + esc(e.topic) + ' at ' + esc(fmtTime(e.start)) + ' IST</p>';
+        return '<p class="lc-warn">Overlaps with ' + esc(e.topic) + ' at ' + esc(fmtTime(e.start)) + ' IST</p>';
       }
     }
     return '';
@@ -316,49 +313,49 @@
   function cardHtml(cls) {
     var isNext = classes.length > 0 && classes[0].id === cls.id;
     var rel = relativeLabel(cls);
-    var relClass = rel === 'Live now' ? 'bg-red-50 text-red-600 border-red-200' : 'bg-cta-accent/10 text-amber-700 border-cta-accent/30';
+    var relClass = rel === 'Live now' ? 'live' : 'soon';
     var detailsId = 'details-' + cls.id;
     var seats = cls.spotsLeft !== null && cls.spotsLeft !== undefined && !cls.isFull
-      ? '<span class="px-2.5 py-1 rounded-full border text-[11px] font-semibold ' + (cls.spotsLeft <= 5 ? 'bg-red-50 text-red-600 border-red-200' : 'bg-background text-text-body border-border') + '">' + cls.spotsLeft + (cls.spotsLeft === 1 ? ' seat left' : ' seats left') + '</span>'
+      ? '<span class="lc-pill' + (cls.spotsLeft <= 5 ? ' few' : '') + '">' + cls.spotsLeft + (cls.spotsLeft === 1 ? ' seat left' : ' seats left') + '</span>'
       : '';
     return '' +
-      '<article data-class-card="' + esc(cls.id) + '" class="rounded-2xl bg-surface-card border ' + (isNext ? 'border-primary/40 shadow-lg' : 'border-border') + ' overflow-hidden">' +
-        '<div class="p-5 md:p-6 flex flex-col md:flex-row md:items-center gap-5">' +
-          '<div class="flex md:flex-col items-center md:justify-center gap-3 md:gap-0 md:w-24 md:flex-shrink-0 rounded-xl bg-primary/5 border border-primary/15 px-4 py-3 md:py-4 md:text-center">' +
-            '<span class="text-xs font-mono uppercase tracking-wider text-primary">' + esc(fmt(cls.start, { weekday: 'short' })) + '</span>' +
-            '<span class="font-serif text-3xl md:text-4xl font-bold text-text-heading leading-none md:my-1">' + esc(fmt(cls.start, { day: 'numeric' })) + '</span>' +
-            '<span class="text-xs font-semibold text-text-body uppercase tracking-wider">' + esc(fmt(cls.start, { month: 'short' })) + '</span>' +
+      '<article data-class-card="' + esc(cls.id) + '" class="lc-card' + (isNext ? ' is-next' : '') + '">' +
+        '<div class="lc-main">' +
+          '<div class="lc-date">' +
+            '<span class="wd">' + esc(fmt(cls.start, { weekday: 'short' })) + '</span>' +
+            '<span class="day">' + esc(fmt(cls.start, { day: 'numeric' })) + '</span>' +
+            '<span class="mo">' + esc(fmt(cls.start, { month: 'short' })) + '</span>' +
           '</div>' +
-          '<div class="flex-1 min-w-0">' +
-            '<div class="flex flex-wrap items-center gap-2 mb-2">' +
-              (isNext ? '<span class="px-2.5 py-1 rounded-full bg-growth-accent text-white text-[11px] font-semibold">Next class</span>' : '') +
-              '<span class="px-2.5 py-1 rounded-full border text-[11px] font-semibold ' + relClass + '">' + esc(rel) + '</span>' +
+          '<div class="lc-body">' +
+            '<div class="lc-tags">' +
+              (isNext ? '<span class="lc-pill next">Next class</span>' : '') +
+              '<span class="lc-pill ' + relClass + '">' + esc(rel) + '</span>' +
               seats +
             '</div>' +
-            (cls.courseName ? '<p class="text-xs font-semibold text-primary mb-1" data-course-name>' + esc(cls.courseName) + '</p>' : '') +
-            '<h3 class="font-semibold text-lg md:text-xl text-text-heading mb-2">' + esc(cls.topic) + '</h3>' +
-            '<div class="flex flex-wrap items-center gap-x-4 gap-y-1 text-sm text-text-body">' +
-              '<span class="inline-flex items-center gap-1.5">' + ICON_CLOCK + esc(fmtTime(cls.start) + ' – ' + fmtTime(cls.end) + ' IST') + '</span>' +
-              '<span class="inline-flex items-center px-2 py-0.5 rounded-md bg-background border border-border text-xs font-medium">' + esc(fmtDuration(cls.durationMins)) + '</span>' +
+            (cls.courseName ? '<p class="lc-course" data-course-name>' + esc(cls.courseName) + '</p>' : '') +
+            '<h3 class="lc-topic">' + esc(cls.topic) + '</h3>' +
+            '<div class="lc-meta">' +
+              '<span>' + ICON_CLOCK + esc(fmtTime(cls.start) + ' – ' + fmtTime(cls.end) + ' IST') + '</span>' +
+              '<span class="lc-chip">' + esc(fmtDuration(cls.durationMins)) + '</span>' +
             '</div>' +
             overlapNote(cls) +
           '</div>' +
-          '<div class="flex flex-col gap-2.5 md:w-52 md:flex-shrink-0">' +
-            '<button type="button" data-toggle="' + esc(detailsId) + '" aria-expanded="false" aria-controls="' + esc(detailsId) + '" class="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full border border-border text-text-heading text-sm font-semibold hover:border-primary/40 hover:text-primary transition-all"><span data-toggle-label>What you\'ll learn</span> ' + ICON_CHEVRON + '</button>' +
-            '<span data-action-slot class="block">' + actionHtml(cls) + '</span>' +
+          '<div class="lc-actions">' +
+            '<button type="button" data-toggle="' + esc(detailsId) + '" aria-expanded="false" aria-controls="' + esc(detailsId) + '" class="btn btn-outline btn-block"><span data-toggle-label>What you\'ll learn</span> ' + ICON_CHEVRON + '</button>' +
+            '<span data-action-slot style="display:block">' + actionHtml(cls) + '</span>' +
           '</div>' +
         '</div>' +
-        '<div id="' + esc(detailsId) + '" hidden class="border-t border-border bg-background px-5 md:px-6 py-5">' +
-          '<p class="text-sm text-text-body mb-4">' + esc(cls.summary) + '</p>' +
+        '<div id="' + esc(detailsId) + '" hidden class="lc-details">' +
+          '<p>' + esc(cls.summary) + '</p>' +
           (cls.learn.length
-            ? '<h4 class="text-sm font-semibold text-text-heading mb-3">What you\'ll learn in this class</h4>' +
-              '<ul class="grid sm:grid-cols-2 gap-x-6 gap-y-2.5">' +
+            ? '<h4>What you\'ll learn in this class</h4>' +
+              '<ul class="lc-learn">' +
                 cls.learn.map(function (item) {
-                  return '<li class="flex items-start gap-2 text-sm text-text-body">' + ICON_CHECK + '<span>' + esc(item) + '</span></li>';
+                  return '<li>' + ICON_CHECK + '<span>' + esc(item) + '</span></li>';
                 }).join('') +
               '</ul>'
             : '') +
-          '<div class="mt-5 max-w-xs" data-detail-slot>' + actionHtml(cls) + '</div>' +
+          '<div class="lc-slot" data-detail-slot>' + actionHtml(cls) + '</div>' +
         '</div>' +
       '</article>';
   }
@@ -367,12 +364,12 @@
 
   function renderList() {
     if (!state.sessionsLoaded) {
-      listEl.innerHTML = '<p class="text-sm text-text-body text-center py-10">Loading classes…</p>';
+      listEl.innerHTML = '<p class="lc-note">Loading classes…</p>';
       emptyEl.classList.add('hidden');
       return;
     }
     if (state.sessionsFailed) {
-      listEl.innerHTML = '<p class="text-sm text-red-600 text-center py-10">We couldn\'t load the class schedule. Please refresh the page, or message me on WhatsApp.</p>';
+      listEl.innerHTML = '<p class="lc-note err">We couldn\'t load the class schedule. Please refresh the page, or message me on WhatsApp.</p>';
       emptyEl.classList.add('hidden');
       if (countEl) countEl.textContent = '';
       return;
@@ -405,7 +402,7 @@
   /* ---------- course cards (the "All courses" grid on the same page; filled from the same sessions request as the list) ---------- */
 
   var courseGridEl = document.getElementById('courses-grid');
-  var SEE_BTN = 'inline-flex items-center px-3 py-1.5 rounded-full bg-primary text-white text-xs font-semibold hover:bg-primary-dark transition-all';
+  var SEE_BTN = 'btn btn-primary btn-sm';
 
   // A card whose course has an upcoming class shows the next date (IST) and a "See classes" button. Any other card says
   // "No class scheduled yet" next to its "Ask about the next class" WhatsApp link. Without JavaScript (or if the sessions
@@ -417,12 +414,12 @@
     var slug = card.getAttribute('data-course');
     if (items && items.length) {
       var next = items[0];
-      box.innerHTML = '<span class="text-text-body"><span class="font-semibold text-text-heading">Next class:</span> ' +
+      box.innerHTML = '<span><strong>Next class:</strong> ' +
         esc(fmt(next.start, { weekday: 'short', day: 'numeric', month: 'short' }) + ', ' + fmtTime(next.start) + ' IST') + '</span>' +
         '<button type="button" data-see-course="' + esc(slug) + '" class="' + SEE_BTN + '">See classes</button>';
     } else {
-      box.innerHTML = '<span class="text-text-body">No class scheduled yet</span>' +
-        '<a href="' + esc(box.getAttribute('data-ask')) + '" target="_blank" rel="noopener" class="text-growth-accent font-semibold hover:underline">Ask about the next class</a>';
+      box.innerHTML = '<span>No class scheduled yet</span>' +
+        '<a href="' + esc(box.getAttribute('data-ask')) + '" target="_blank" rel="noopener">Ask about the next class</a>';
     }
   }
 
@@ -437,10 +434,10 @@
     if (master && master.length && !existing) {
       var card = document.createElement('article');
       card.setAttribute('data-course', 'master-classes');
-      card.className = 'group p-6 rounded-2xl bg-surface-card border border-border hover:border-primary/40 transition-all flex flex-col';
-      card.innerHTML = '<h3 class="font-semibold text-lg text-text-heading mb-2">' + esc(master[0].courseName) + '</h3>' +
-        '<p class="text-sm text-text-body mb-4 flex-grow">Live master classes, taught on Google Meet.</p>' +
-        '<div class="mt-3 pt-3 border-t border-border flex flex-wrap items-center justify-between gap-x-3 gap-y-1 text-xs" data-course-classes></div>';
+      card.className = 'course-card';
+      card.innerHTML = '<h3>' + esc(master[0].courseName) + '</h3>' +
+        '<p>Live master classes, taught on Google Meet.</p>' +
+        '<div class="course-classes" data-course-classes></div>';
       courseGridEl.appendChild(card);
       fillCourseCard(card, master, 'https://wa.me/917000198366');
     } else if (!master && existing && existing.getAttribute('data-dynamic') !== null) {
@@ -510,8 +507,7 @@
     if (g.other) chips.push([OTHER, 'Other classes', g.other]);
     coursesEl.innerHTML = chips.map(function (c) {
       var on = state.course === c[0];
-      return '<button type="button" data-course="' + esc(c[0]) + '" aria-pressed="' + on + '" class="px-4 py-2 rounded-full border text-sm font-semibold transition-all ' +
-        (on ? 'bg-primary text-white border-primary' : 'bg-white text-text-heading border-border hover:border-primary/40') + '">' + esc(c[1]) + ' (' + c[2] + ')</button>';
+      return '<button type="button" data-course="' + esc(c[0]) + '" aria-pressed="' + on + '" class="chip">' + esc(c[1]) + ' (' + c[2] + ')</button>';
     }).join('');
     coursesEl.classList.remove('hidden');
     coursesEl.classList.add('flex');
@@ -532,8 +528,7 @@
     var n = filterCounts();
     filtersEl.innerHTML = CHIPS.map(function (c) {
       var on = state.filter === c[0];
-      return '<button type="button" data-filter="' + c[0] + '" aria-pressed="' + on + '" class="px-4 py-2 rounded-full border text-sm font-semibold transition-all ' +
-        (on ? 'bg-primary text-white border-primary' : 'bg-white text-text-heading border-border hover:border-primary/40') + '">' + c[1] + ' (' + n[c[0]] + ')</button>';
+      return '<button type="button" data-filter="' + c[0] + '" aria-pressed="' + on + '" class="chip">' + c[1] + ' (' + n[c[0]] + ')</button>';
     }).join('');
     filtersEl.classList.remove('hidden');
     filtersEl.classList.add('flex');
@@ -544,9 +539,9 @@
     var msg = state.filter === 'enrolled'
       ? 'You haven\'t enrolled in any upcoming class' + scopedNote + ' yet.'
       : 'You\'re enrolled in every upcoming class' + scopedNote + '. New dates are added regularly.';
-    return '<div class="text-center rounded-2xl bg-surface-card border border-border px-6 py-10">' +
-      '<p class="text-sm text-text-body mb-4">' + msg + '</p>' +
-      '<button type="button" data-filter="all" data-course-reset class="inline-flex items-center px-5 py-2.5 rounded-full bg-primary text-white text-sm font-semibold hover:bg-primary-dark transition-all">Show all upcoming classes</button></div>';
+    return '<div class="lc-empty card">' +
+      '<p>' + msg + '</p>' +
+      '<button type="button" data-filter="all" data-course-reset class="btn btn-primary">Show all upcoming classes</button></div>';
   }
 
   document.addEventListener('click', function (e) {
@@ -639,8 +634,8 @@
         notice('ok',
           '<strong>You\'re enrolled in ' + esc(cls.topic) + '.</strong> ' + esc(whenText(cls)) + '. ' +
           (data.emailSent ? 'A confirmation is on its way to <strong>' + esc(state.user.email) + '</strong>. ' : 'We couldn\'t queue the confirmation email, but your seat is saved. ') +
-          'Your <strong>Join class</strong> button appears here and in <a class="underline font-semibold" href="' + esc(myClassesUrl()) + '">My classes</a> ' + JOIN_OPENS_MIN + ' minutes before the class starts. ' +
-          '<a href="#classes-list" data-show-all class="underline font-semibold">Browse more classes</a>');
+          'Your <strong>Join class</strong> button appears here and in <a class="lc-link" href="' + esc(myClassesUrl()) + '">My classes</a> ' + JOIN_OPENS_MIN + ' minutes before the class starts. ' +
+          '<a href="#classes-list" data-show-all class="lc-link">Browse more classes</a>');
         renderFilters();
         return true;
       })
@@ -673,7 +668,7 @@
     if (err.status === 409 && data.code === 'already_enrolled') {
       state.enrolled[cls.id] = true;
       closeModal(); refreshButtons();
-      notice('info', 'You\'re already enrolled in <strong>' + esc(cls.topic) + '</strong>. Find it in <a class="underline font-semibold" href="' + esc(myClassesUrl()) + '">My classes</a>.');
+      notice('info', 'You\'re already enrolled in <strong>' + esc(cls.topic) + '</strong>. Find it in <a class="lc-link" href="' + esc(myClassesUrl()) + '">My classes</a>.');
       return false;
     }
     if (err.status === 409 && data.code === 'full') {
@@ -684,7 +679,7 @@
     }
     if (err.status === 409 && data.code === 'removed') {
       closeModal(); refreshButtons();
-      notice('error', 'You were removed from this class by the organiser. Please contact <a class="underline font-semibold" href="mailto:support@shashwatyadav.in">support@shashwatyadav.in</a>.');
+      notice('error', 'You were removed from this class by the organiser. Please contact <a class="lc-link" href="mailto:support@shashwatyadav.in">support@shashwatyadav.in</a>.');
       return false;
     }
     if (err.status === 422 && data.code === 'closed') {

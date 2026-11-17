@@ -1,0 +1,75 @@
+/* ==========================================================================
+   New design layer for the About page (shared tokens from theme.css). Everything above is the original rules re-targeted to the tokens.
+   ========================================================================== */
+.abt { overflow-x: clip; }
+.abt .abt-h1, .abt .abt-h2, .abt .abt-h3, .abt .abt-card h3, .abt .abt-faq h3 { font-family: var(--font-heading); }
+.abt-section { padding: var(--section-pad) 0; }
+.abt-section.alt { background: var(--ss-mist); border-top: 0; border-bottom: 0; }
+.abt-wrap { max-width: var(--container); }
+.abt [id] { scroll-margin-top: calc(var(--header-h) + 76px); }
+.abt .abt-h2 { font-size: 28px; font-weight: 800; line-height: 1.1; letter-spacing: -0.02em; }
+.abt .abt-h3 { font-weight: 700; }
+.abt-link { color: var(--ss-blue); }
+.abt-link:hover { color: var(--ss-navy); }
+
+/* hero: midnight with blue light fields (same look as the other pages' heroes) */
+.abt-hero { position: relative; padding: var(--sp-7) 0 var(--sp-8); overflow: hidden; background: var(--ss-midnight); color: var(--ss-mist); }
+.abt-hero::before { content: ""; position: absolute; inset: 0; pointer-events: none; background: radial-gradient(55% 75% at 90% 55%, rgba(0, 129, 254, 0.40), transparent 65%), radial-gradient(50% 60% at 6% 100%, rgba(0, 190, 255, 0.20), transparent 60%); }
+.abt-hero > .abt-wrap { position: relative; z-index: 1; }
+.abt-eyebrow { padding: 0; border: 0; border-radius: 0; background: none; font-family: var(--font-heading); font-size: 13px; font-weight: 600; letter-spacing: 0.3em; text-transform: uppercase; color: var(--ss-cyan); }
+.abt .abt-h1 { margin-top: var(--sp-4); font-size: 32px; font-weight: 800; line-height: 1.1; letter-spacing: -0.02em; color: var(--ss-white); }
+.abt-sub { color: var(--ss-cyan); }
+.abt-roles { color: var(--ss-white); }
+.abt-roles > span + span::before { color: var(--ss-cyan); }
+.abt-js .abt-roles > span { color: rgba(238, 244, 251, 0.6); }
+.abt-js .abt-roles > span.is-active { color: var(--ss-cyan); }
+.abt-lede { color: var(--ss-mist); }
+.abt-btn { min-height: 44px; padding: 12px 22px; border: 1.5px solid transparent; font-size: 15px; font-weight: 600; transition: background-color 0.2s, color 0.2s, border-color 0.2s; }
+.abt-btn.primary { background: var(--ss-blue); color: var(--ss-white); }
+.abt-btn.primary:hover { background: var(--ss-navy); }
+.abt-btn.green { background: var(--ss-white); color: var(--ss-midnight); }
+.abt-btn.green:hover { background: var(--ss-mist); filter: none; }
+.abt-btn.ghost { background: transparent; color: var(--ss-white); border-color: var(--ss-white); }
+.abt-btn.ghost:hover { background: var(--ss-navy); color: var(--ss-white); }
+.abt-pulse::after { border-color: var(--ss-cyan); }
+.abt-photo::before { background: linear-gradient(160deg, rgba(0, 190, 255, 0.25), rgba(0, 88, 213, 0.30)); }
+.abt-photo img { border-radius: var(--radius-card); }
+
+/* on-page mini bar: white, sticky under the header, same pills as the filter chips */
+.abt-minibar { background: var(--ss-white); border-top: 0; border-bottom: 1px solid var(--ss-border); }
+.abt-minibar a { color: var(--ss-ink); }
+.abt-minibar a:hover { background: var(--ss-mist); }
+.abt-minibar a.is-current { background: var(--ss-blue); color: var(--ss-white); }
+
+/* stats, cards, badges */
+.abt-stat { border-top-width: 1px; border-top-color: var(--ss-border); box-shadow: 0 12px 40px rgba(0, 30, 84, 0.06); }
+.abt-stat:nth-child(n) { border-top-color: var(--ss-border); }
+.abt-stat > b { font-weight: 800; color: var(--ss-blue); }
+.abt-card { border-radius: var(--radius-card); }
+.abt-card:hover { border-color: var(--ss-signal); box-shadow: 0 16px 40px rgba(0, 88, 213, 0.14); }
+.abt-flip { border-color: var(--ss-border); }
+.abt-badge { border-radius: var(--radius-tile); }
+.abt-badge svg { color: var(--ss-blue); }
+.abt-teach { background: var(--ss-gradient); border-radius: var(--radius-card); }
+.abt-teach .abt-btn { background: var(--ss-white); color: var(--ss-midnight); }
+.abt-teach .abt-btn:hover { background: var(--ss-mist); }
+.abt-faq { border-radius: var(--radius-tile); }
+.abt-ind, .abt-tab { border-width: 1.5px; }
+.abt-res b { font-weight: 800; }
+.abt-step::before { background: var(--ss-blue); }
+
+/* form */
+.abt-formbox { border-radius: var(--radius-card); }
+.abt-field input, .abt-field select, .abt-field textarea { min-height: 44px; border-color: var(--ss-border); border-radius: var(--radius-tile); }
+.abt-field input:focus, .abt-field select:focus, .abt-field textarea:focus { border-color: var(--ss-blue); box-shadow: 0 0 0 3px var(--ss-mist); outline: none; }
+.abt-submit { background: var(--ss-blue); color: var(--ss-white); border-radius: var(--radius-pill); }
+.abt-submit:hover:not(:disabled) { background: var(--ss-navy); }
+.abt-notice { border-radius: var(--radius-card); }
+.abt-details li { border-radius: var(--radius-tile); }
+
+@media (min-width: 768px) {
+  .abt .abt-h1 { font-size: 44px; }
+  .abt .abt-h2 { font-size: 44px; }
+  .abt-minibar { top: var(--header-h); }
+}
+.abt-name > span { margin-right: 0; }

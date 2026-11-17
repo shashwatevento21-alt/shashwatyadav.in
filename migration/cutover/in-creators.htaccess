@@ -1,0 +1,12 @@
+# shashwatyadav.in/creators/.htaccess AFTER CUTOVER: straight to the final .com addresses (the old file went to .in/live-classes, a chain).
+# Old emailed signed links (email verification etc.) cannot validate on a different host: those links must be re-sent.
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /creators/
+
+    RewriteCond %{REQUEST_METHOD} ^(GET|HEAD)$
+    RewriteRule ^$ https://shashwatyadav.com/courses/ [R=301,L]
+
+    RewriteCond %{REQUEST_METHOD} ^(GET|HEAD)$
+    RewriteRule ^(.+)$ https://shashwatyadav.com/classes/$1 [R=301,L]
+</IfModule>

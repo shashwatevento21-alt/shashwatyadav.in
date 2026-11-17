@@ -1,0 +1,27 @@
+/* ==========================================================================
+   New design layer for "The Journey So Far" (shared tokens from theme.css).
+   ========================================================================== */
+.journey { padding: var(--section-pad) 0; background: var(--ss-mist); border: 0; }
+.journey .journey-title { font-weight: 800; letter-spacing: -0.02em; font-size: 28px; line-height: 1.1; }
+.journey-wrap { max-width: var(--container); }
+.journey-stat, .journey-skills, .journey-card { background: var(--ss-white); }
+.journey-stat-value { font-weight: 800; }
+.journey-fill { background: linear-gradient(180deg, var(--ss-blue), var(--ss-cyan)); }
+.journey-chapter.is-lit .journey-card { border-color: var(--ss-signal); box-shadow: 0 0 0 3px rgba(0, 129, 254, 0.30); }
+.journey-chapter.is-lit .journey-node { border-color: var(--ss-signal); }
+.journey-chapter.is-now .journey-node { border-color: var(--ss-blue); background: var(--ss-blue); }
+.journey-card { border-radius: var(--radius-card); }
+.journey-chapter.is-dim .journey-card { background: var(--ss-mist); }
+.journey-skilltag[aria-pressed="true"] { background: var(--ss-blue); border-color: var(--ss-blue); }
+.journey-chip { border-width: 1.5px; }
+.journey-chip[aria-pressed="true"] { background: var(--ss-blue); border-color: var(--ss-blue); }
+.journey-took { background: var(--ss-mist); border-left-color: var(--ss-blue); }
+.journey-took strong { color: var(--ss-blue); }
+.journey .is-now .journey-date { color: var(--ss-blue); }
+.journey-cta a { min-height: 44px; padding: 12px 22px; font-size: 15px; font-weight: 600; border: 1.5px solid transparent; transition: background-color 0.2s, color 0.2s, border-color 0.2s; }
+.journey-cta .journey-cta-primary { background: var(--ss-blue); color: var(--ss-white); }
+.journey-cta .journey-cta-primary:hover { background: var(--ss-navy); }
+.journey-cta .journey-cta-secondary { background: var(--ss-white); color: var(--ss-blue); border-color: var(--ss-blue); }
+.journey-cta .journey-cta-secondary:hover { background: var(--ss-mist); color: var(--ss-navy); }
+@media (min-width: 768px) { .journey .journey-title { font-size: 44px; } }
+.journey { padding: var(--sp-8) 0; }

@@ -1,12 +1,14 @@
 name: Deploy to Hostinger
 
+# SWITCHED OFF at the shashwatyadav.com cutover (2026-11-16). shashwatyadav.in is now redirect-only, and its .htaccess files are
+# kept on the server by hand (migration/cutover/). This workflow uploads the whole repo, so running it would overwrite them.
+# It is also disabled in GitHub (Actions) and the job below can never run (if: false). Do not re-enable.
 on:
-  push:
-    branches:
-      - main
+  workflow_dispatch:
 
 jobs:
   ftp-deploy:
+    if: false
     name: FTP Deploy
     runs-on: ubuntu-latest
     steps:

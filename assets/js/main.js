@@ -11,35 +11,6 @@ function smoothScroll(targetId) {
   }
 }
 
-// Mobile menu toggle
-function toggleMobileMenu() {
-  const menu = document.getElementById('mobile-menu');
-  const panel = document.getElementById('mobile-menu-panel');
-
-  if (menu.classList.contains('opacity-0')) {
-    menu.classList.remove('opacity-0', 'pointer-events-none');
-    menu.classList.add('opacity-100');
-    panel.classList.remove('translate-x-full');
-    panel.classList.add('translate-x-0');
-  } else {
-    menu.classList.add('opacity-0', 'pointer-events-none');
-    menu.classList.remove('opacity-100');
-    panel.classList.add('translate-x-full');
-    panel.classList.remove('translate-x-0');
-  }
-}
-
-// Navbar scroll effect — subtle shadow for depth once the page scrolls
-window.addEventListener('scroll', function() {
-  const navbar = document.getElementById('navbar');
-  if (!navbar) return;
-  if (window.scrollY > 50) {
-    navbar.classList.add('shadow-lg');
-  } else {
-    navbar.classList.remove('shadow-lg');
-  }
-});
-
 // Portfolio filter bar (Portfolio listing page only — no-op elsewhere)
 function initPortfolioFilter() {
   const bar = document.getElementById('portfolio-filter-bar');
@@ -228,7 +199,7 @@ function validatePhone() {
   if (!digitsOnly) {
     error.textContent = 'Phone number is required';
     error.classList.remove('hidden');
-    input.classList.add('border-red-500');
+    input.classList.add('invalid-input');
     return false;
   }
 
@@ -240,12 +211,12 @@ function validatePhone() {
     const expectedText = range.min === range.max ? (range.min + ' digits') : (range.min + '-' + range.max + ' digits');
     error.textContent = 'Enter a valid ' + expectedText + ' mobile number for ' + countryName;
     error.classList.remove('hidden');
-    input.classList.add('border-red-500');
+    input.classList.add('invalid-input');
     return false;
   }
 
   error.classList.add('hidden');
-  input.classList.remove('border-red-500');
+  input.classList.remove('invalid-input');
   return true;
 }
 
@@ -257,7 +228,7 @@ function validateEmail() {
   // Email is optional; only validate format if the user typed something
   if (!input.value.trim()) {
     error.classList.add('hidden');
-    input.classList.remove('border-red-500');
+    input.classList.remove('invalid-input');
     return true;
   }
 
@@ -266,12 +237,12 @@ function validateEmail() {
 
   if (!valid) {
     error.classList.remove('hidden');
-    input.classList.add('border-red-500');
+    input.classList.add('invalid-input');
     return false;
   }
 
   error.classList.add('hidden');
-  input.classList.remove('border-red-500');
+  input.classList.remove('invalid-input');
   return true;
 }
 
@@ -406,187 +377,35 @@ function handleFormSubmission(event) {
     .catch(showError);
 }
 
-// Header: a guest sees the green "Courses" pill (the merged courses and live classes page) and a "Log in" link. A student who is signed in sees
-// two pills, "Courses" and "My Classes" (their own page in the app), and no "Log in". Reads only the small "logged in" hint cookie set by the
-// Live Classes app (value "1", no personal data) and makes no network call. It is just labels and links: My Classes
-// itself checks the real login. Without JavaScript, or without the cookie, the guest header stays.
+// Header: a guest sees a "Log in" link and the "Courses" pill (the merged courses and live classes page). A student who is signed in sees two
+// pills, "Courses" and "My Classes" (their own page in the app), and no "Log in". Reads only the small "logged in" hint cookie set by the
+// Live Classes app (value "1", no personal data) and makes no network call. It is just labels and links: My Classes itself checks the real
+// login. Without JavaScript, or without the cookie, the guest header stays.
+// The header's explicit hooks: [data-lc-guest] (hidden when signed in), a[data-lc-login], [data-lc-actions] (the button group; "My Classes" is
+// added before its [data-lc-cta] button) and a[data-lc-compact] (the small phone pill, whose label becomes "My Classes").
 (function () {
   try {
-    var isLocal = /^(localhost|127\.0\.0\.1)$/.test(location.hostname);
+    var isLocal = /^(localhost|127.0.0.1)$/.test(location.hostname);
     var appBase = isLocal ? location.protocol + '//' + location.hostname + ':8000' : '/classes';
     // The "Log in" links point at the app's login page (the app lives on another port while developing locally).
     document.querySelectorAll('a[data-lc-login]').forEach(function (a) { a.setAttribute('href', appBase + '/login'); });
-    if (!/(?:^|;\s*)lc_in=1(?:;|$)/.test(document.cookie)) return;
+    if (!/(?:^|;s*)lc_in=1(?:;|$)/.test(document.cookie)) return;
     document.querySelectorAll('[data-lc-guest]').forEach(function (el) { el.classList.add('hidden'); });
     var myClasses = appBase + '/my-classes';
-    document.querySelectorAll('a[data-lc-pill]').forEach(function (a) {
-      if (a.textContent.replace(/\s+/g, ' ').trim() !== 'Courses') return;
-      // The label is the last direct <span> child (one header variant nests a hidden "Live " span inside it).
-      var label = null;
-      Array.prototype.forEach.call(a.children, function (c) { if (c.tagName === 'SPAN' && c.textContent.trim()) label = c; });
-      if (!label) return;
-
-      // "Courses": a copy of the pill (no pulsing dot, so it stays compact) placed before "My Classes".
-      var classes = a.cloneNode(true);
-      classes.setAttribute('data-lc-added', '1');
-      classes.setAttribute('href', '/courses/');
-      classes.removeAttribute('data-lc-swapped');
-      classes.removeAttribute('data-lc-pill');
-      var dot = classes.firstElementChild;
-      if (dot && dot.children.length) classes.removeChild(dot);
-      var clabel = null;
-      Array.prototype.forEach.call(classes.children, function (c) { if (c.tagName === 'SPAN' && c.textContent.trim()) clabel = c; });
-      if (clabel) clabel.textContent = 'Courses';
-      a.parentNode.insertBefore(classes, a);
-
-      // The small header pill (phones) is short of width with two links: hide its pulsing dot, put back on log out.
-      var firstDot = a.firstElementChild;
-      var compact = /text-\[11px\]/.test(a.className);   // phone header pill
-      var desktop = /px-4 py-2 rounded-full/.test(a.className); // desktop header pill: two pills must fit beside the nav links
-      if ((compact || desktop) && firstDot && firstDot.children.length) { firstDot.classList.add('hidden'); a.setAttribute('data-lc-dot', '1'); }
-      if (desktop) { a.setAttribute('data-lc-class', a.className); a.className = a.className.replace('px-4', 'px-3'); classes.className = a.className; }
-
+    document.querySelectorAll('.nav').forEach(function (n) { n.classList.add('lc-in'); }); // tighter spacing: three buttons must fit beside the links
+    document.querySelectorAll('[data-lc-actions]').forEach(function (box) {
+      var pill = document.createElement('a');
+      pill.className = 'btn btn-outline';
+      pill.setAttribute('data-lc-added', '1');
+      pill.setAttribute('href', myClasses);
+      pill.textContent = 'My Classes';
+      box.insertBefore(pill, box.querySelector('[data-lc-cta]'));
+    });
+    document.querySelectorAll('a[data-lc-compact]').forEach(function (a) {
       // Remember the original so the courses page can put it back on log out.
-      a.setAttribute('data-lc-swapped', label.innerHTML);
-      label.textContent = 'My Classes';
+      a.setAttribute('data-lc-swapped', a.textContent);
+      a.textContent = 'My Classes';
       a.setAttribute('href', myClasses);
     });
   } catch (e) { /* the header just keeps its default link */ }
-})();
-
-// Header "Courses" dropdown (desktop): point at the green Courses pill and a list opens with every course page, so a visitor can go straight
-// to one. The pill itself still links to the Courses page (so touch screens, keyboards without hover and no-JavaScript visitors lose nothing).
-// One floating panel serves every page; it follows whichever pill currently says "Courses" (also the extra pill a signed-in student gets).
-// The phone menu gets the same links as a short list under its Courses pill. No libraries, no network calls.
-(function () {
-  try {
-    var ITEMS = [
-      ['All courses', 'Courses and upcoming live classes', '/courses/'],
-      ['Master Classes', '3-hour live deep dives', '/courses/master-classes/'],
-      ['Google Ads', 'Search and Demand Gen lead campaigns', '/courses/google-ads/'],
-      ['Meta Ads', 'Lead and engagement campaigns', '/courses/meta-ads/'],
-      ['Claude and Claude Code', 'Prompting, building and automation', '/courses/claude-mastery/']
-    ];
-    var calm = !!(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches);
-
-    var css = document.createElement('style');
-    css.id = 'courses-menu-css';
-    css.textContent =
-      '#courses-menu{position:fixed;z-index:60;width:292px;max-width:calc(100vw - 16px);padding-top:10px;opacity:0;visibility:hidden;transform:translateY(-6px);' +
-      (calm ? '' : 'transition:opacity .16s ease,transform .16s ease,visibility .16s;') + '}' +
-      '#courses-menu.is-open{opacity:1;visibility:visible;transform:none}' +
-      '#courses-menu .cm-box{background:#fff;border:1px solid #E2E8F0;border-radius:16px;box-shadow:0 18px 40px rgba(15,23,42,.22);padding:8px;font-family:"Plus Jakarta Sans",system-ui,sans-serif}' +
-      '#courses-menu a{display:block;padding:10px 12px;border-radius:10px;text-decoration:none;min-height:44px;color:#1F2937}' +
-      '#courses-menu a:hover,#courses-menu a:focus-visible{background:#EFF6FF;outline:none}' +
-      '#courses-menu a:focus-visible{box-shadow:0 0 0 3px #F59E0B}' +
-      '#courses-menu .cm-t{display:block;font-size:14px;font-weight:700;line-height:1.3}' +
-      '#courses-menu .cm-d{display:block;margin-top:2px;font-size:12px;line-height:1.35;color:#475569}' +
-      '#courses-menu .cm-all{border-bottom:1px solid #E2E8F0;border-radius:10px 10px 0 0;margin-bottom:4px}' +
-      '.cm-mobile{display:flex;flex-direction:column;gap:2px;margin:-6px 0 0 12px;padding-left:12px;border-left:2px solid rgba(255,255,255,.25)}' +
-      '.cm-mobile a{display:block;padding:9px 4px;font-size:13px;font-weight:500;color:rgba(255,255,255,.78);text-decoration:none}' +
-      '.cm-mobile a:hover{color:#fff}' +
-      // The Courses (and signed-in "My Classes") pills are white buttons with blue text on every screen: desktop header, phone header
-      // and the phone menu. Sizes differ per place; colours, shadow and states are shared. The pulsing dot turns green on white.
-      '#navbar a[data-lc-pill],#navbar a[data-lc-added]{background:#fff;color:#1560A8;font-weight:700;border:1px solid rgba(21,96,168,.18);box-shadow:0 2px 8px rgba(0,0,0,.22);' +
-      (calm ? '' : 'transition:background .15s ease,transform .1s ease;') + '}' +
-      '#navbar a[data-lc-pill]:hover,#navbar a[data-lc-added]:hover{background:#EFF6FF;filter:none}' +
-      '#navbar a[data-lc-pill]:active,#navbar a[data-lc-added]:active{transform:scale(.97)}' +
-      '#navbar a[data-lc-pill]:focus-visible,#navbar a[data-lc-added]:focus-visible{outline:3px solid #F59E0B;outline-offset:2px}' +
-      '#navbar a[data-lc-pill] span span,#navbar a[data-lc-added] span span{background-color:#1E8449}' +
-      // phone header: big enough to tap
-      '#mobile-header-actions a[data-lc-pill],#mobile-header-actions a[data-lc-added]{font-size:12px;line-height:1;padding:9px 14px;min-height:36px}' +
-      // phone menu: full-width button
-      '#mobile-menu a[data-lc-pill],#mobile-menu a[data-lc-added]{font-size:13px;line-height:1.2;padding:12px 20px;min-height:44px}' +
-      // desktop header: a little taller than the text links beside it
-      '#navbar-container > div.xl\\:flex a[data-lc-pill],#navbar-container > div.xl\\:flex a[data-lc-added]{min-height:36px}' +
-      '@media (max-width:360px){#mobile-header-actions a[data-lc-pill],#mobile-header-actions a[data-lc-added]{font-size:11px;padding:8px 10px}}';
-    document.head.appendChild(css);
-
-    var menu = document.createElement('div');
-    menu.id = 'courses-menu';
-    menu.setAttribute('role', 'menu');
-    menu.setAttribute('aria-label', 'Courses');
-    var box = document.createElement('div');
-    box.className = 'cm-box';
-    ITEMS.forEach(function (it, i) {
-      var a = document.createElement('a');
-      a.href = it[2];
-      a.setAttribute('role', 'menuitem');
-      if (i === 0) a.className = 'cm-all';
-      a.innerHTML = '<span class="cm-t"></span><span class="cm-d"></span>';
-      a.firstChild.textContent = it[0];
-      a.lastChild.textContent = it[1];
-      box.appendChild(a);
-    });
-    menu.appendChild(box);
-    document.body.appendChild(menu);
-
-    var current = null, hideTimer = null;
-    function isCoursesPill(el) {
-      if (!el || el.tagName !== 'A') return false;
-      if (!el.hasAttribute('data-lc-pill') && !el.hasAttribute('data-lc-added')) return false;
-      if (el.closest('#mobile-menu') || el.closest('#mobile-header-actions')) return false;   // desktop header only
-      return el.getAttribute('href') === '/courses/';                                          // not the "My Classes" pill
-    }
-    function open(pill) {
-      window.clearTimeout(hideTimer);
-      current = pill;
-      var r = pill.getBoundingClientRect();
-      var w = Math.min(292, window.innerWidth - 16);
-      var left = Math.max(8, Math.min(r.right - w, window.innerWidth - w - 8));
-      menu.style.top = (r.bottom - 6) + 'px';
-      menu.style.left = left + 'px';
-      menu.classList.add('is-open');
-      pill.setAttribute('aria-haspopup', 'true');
-      pill.setAttribute('aria-expanded', 'true');
-    }
-    function close() {
-      menu.classList.remove('is-open');
-      if (current) current.setAttribute('aria-expanded', 'false');
-      current = null;
-    }
-    function closeSoon() { window.clearTimeout(hideTimer); hideTimer = window.setTimeout(close, 180); }
-
-    document.addEventListener('mouseover', function (e) {
-      var pill = e.target.closest && e.target.closest('a');
-      if (isCoursesPill(pill)) { if (window.innerWidth >= 1280) open(pill); return; }
-      if (menu.contains(e.target)) window.clearTimeout(hideTimer);
-    });
-    document.addEventListener('mouseout', function (e) {
-      var from = e.target.closest && e.target.closest('a');
-      if (isCoursesPill(from) || menu.contains(e.target)) closeSoon();
-    });
-    document.addEventListener('focusin', function (e) {
-      if (isCoursesPill(e.target) && window.innerWidth >= 1280) open(e.target);
-      else if (!menu.contains(e.target) && menu.classList.contains('is-open')) close();
-    });
-    document.addEventListener('keydown', function (e) {
-      if (!menu.classList.contains('is-open')) return;
-      var items = Array.prototype.slice.call(menu.querySelectorAll('a'));
-      var at = items.indexOf(document.activeElement);
-      if (e.key === 'Escape') { var p = current; close(); if (p) p.focus(); }
-      else if (e.key === 'ArrowDown') { e.preventDefault(); items[(at + 1) % items.length].focus(); }
-      else if (e.key === 'ArrowUp' && at >= 0) { e.preventDefault(); items[(at - 1 + items.length) % items.length].focus(); }
-    });
-    window.addEventListener('scroll', function () { if (menu.classList.contains('is-open')) close(); }, { passive: true });
-    window.addEventListener('resize', close);
-
-    // Phone menu: the same links as a short list under the Courses pill.
-    var mobile = document.getElementById('mobile-menu');
-    if (mobile) {
-      var pills = mobile.querySelectorAll('a[data-lc-pill], a[data-lc-added]');
-      Array.prototype.forEach.call(pills, function (p) {
-        if (p.getAttribute('href') !== '/courses/' || mobile.querySelector('.cm-mobile')) return;
-        var list = document.createElement('div');
-        list.className = 'cm-mobile';
-        ITEMS.slice(1).forEach(function (it) {
-          var a = document.createElement('a');
-          a.href = it[2];
-          a.textContent = it[0];
-          list.appendChild(a);
-        });
-        p.parentNode.insertBefore(list, p.nextSibling);
-      });
-    }
-  } catch (e) { /* the header keeps its plain Courses link */ }
 })();

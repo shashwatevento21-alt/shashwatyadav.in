@@ -1,0 +1,310 @@
+{
+ "overflow": [],
+ "menu": [
+  "/: opened={\"expanded\":\"true\",\"panel\":\"visible\"} closedExpanded=false",
+  "/about: opened={\"expanded\":\"true\",\"panel\":\"visible\"} closedExpanded=false",
+  "/courses/: opened={\"expanded\":\"true\",\"panel\":\"visible\"} closedExpanded=false"
+ ],
+ "links": [
+  {
+   "url": "/",
+   "status": 200,
+   "from": "/terms",
+   "where": "local"
+  },
+  {
+   "url": "/about",
+   "status": 200,
+   "from": "/terms",
+   "where": "local"
+  },
+  {
+   "url": "/services",
+   "status": 200,
+   "from": "/terms",
+   "where": "local"
+  },
+  {
+   "url": "/portfolio",
+   "status": 200,
+   "from": "/terms",
+   "where": "local"
+  },
+  {
+   "url": "/skills",
+   "status": 200,
+   "from": "/terms",
+   "where": "local"
+  },
+  {
+   "url": "/certifications",
+   "status": 200,
+   "from": "/terms",
+   "where": "local"
+  },
+  {
+   "url": "/blog/",
+   "status": 200,
+   "from": "/terms",
+   "where": "live"
+  },
+  {
+   "url": "/contact",
+   "status": 200,
+   "from": "/terms",
+   "where": "local"
+  },
+  {
+   "url": "/classes/login",
+   "status": 200,
+   "from": "/terms",
+   "where": "live"
+  },
+  {
+   "url": "/courses/",
+   "status": 200,
+   "from": "/terms",
+   "where": "local"
+  },
+  {
+   "url": "/courses/master-classes/",
+   "status": 200,
+   "from": "/terms",
+   "where": "local"
+  },
+  {
+   "url": "/courses/google-ads/",
+   "status": 200,
+   "from": "/terms",
+   "where": "local"
+  },
+  {
+   "url": "/courses/meta-ads/",
+   "status": 200,
+   "from": "/terms",
+   "where": "local"
+  },
+  {
+   "url": "/courses/claude-mastery/",
+   "status": 200,
+   "from": "/terms",
+   "where": "local"
+  },
+  {
+   "url": "/portfolio/residential-real-estate-meta-ads-2026",
+   "status": 200,
+   "from": "/portfolio/commercial-real-estate-meta-google-2026/",
+   "where": "local"
+  },
+  {
+   "url": "/portfolio/commercial-real-estate-meta-google-2026",
+   "status": 200,
+   "from": "/portfolio/residential-real-estate-meta-ads-2026/",
+   "where": "local"
+  },
+  {
+   "url": "/portfolio/hospital-multi-treatment-2026",
+   "status": 200,
+   "from": "/portfolio/",
+   "where": "local"
+  },
+  {
+   "url": "/courses",
+   "status": 200,
+   "from": "/terms",
+   "where": "local"
+  },
+  {
+   "url": "/privacy-policy",
+   "status": 200,
+   "from": "/terms",
+   "where": "local"
+  },
+  {
+   "url": "/terms",
+   "status": 200,
+   "from": "/terms",
+   "where": "local"
+  },
+  {
+   "url": "/assets/images/logo.png",
+   "status": 200,
+   "from": "/terms",
+   "where": "local"
+  },
+  {
+   "url": "/assets/images/shashwat-yadav-performance-marketing-expert.webp",
+   "status": 200,
+   "from": "/about",
+   "where": "local"
+  },
+  {
+   "url": "/assets/images/DS%20Certificates/digital-marketing-program-thumb.png",
+   "status": 200,
+   "from": "/certifications",
+   "where": "local"
+  },
+  {
+   "url": "/assets/images/DS%20Certificates/google-ads-performance-specialist.png",
+   "status": 200,
+   "from": "/certifications",
+   "where": "local"
+  },
+  {
+   "url": "/assets/images/DS%20Certificates/meta-ads-performance-specialist.png",
+   "status": 200,
+   "from": "/certifications",
+   "where": "local"
+  },
+  {
+   "url": "/assets/images/DS%20Certificates/social-media-content-expert.png",
+   "status": 200,
+   "from": "/certifications",
+   "where": "local"
+  },
+  {
+   "url": "/assets/images/DS%20Certificates/ai-creative-production-expert.png",
+   "status": 200,
+   "from": "/certifications",
+   "where": "local"
+  },
+  {
+   "url": "/assets/images/DS%20Certificates/ai-agent-specialist.png",
+   "status": 200,
+   "from": "/certifications",
+   "where": "local"
+  },
+  {
+   "url": "/assets/images/DS%20Certificates/ai-search-and-llm-optimisation-expert.png",
+   "status": 200,
+   "from": "/certifications",
+   "where": "local"
+  },
+  {
+   "url": "/classes/live-classes/google",
+   "status": 200,
+   "from": "/courses/",
+   "where": "live"
+  },
+  {
+   "url": "/courses/google-ads",
+   "status": 200,
+   "from": "/courses/",
+   "where": "local"
+  },
+  {
+   "url": "/courses/meta-ads",
+   "status": 200,
+   "from": "/courses/",
+   "where": "local"
+  },
+  {
+   "url": "/courses/claude-mastery",
+   "status": 200,
+   "from": "/courses/",
+   "where": "local"
+  },
+  {
+   "url": "/assets/images/logo/google-ads-logo.webp",
+   "status": 200,
+   "from": "/skills",
+   "where": "local"
+  },
+  {
+   "url": "/assets/images/logo/meta-logo.webp",
+   "status": 200,
+   "from": "/skills",
+   "where": "local"
+  },
+  {
+   "url": "/assets/images/logo/claude-logo.webp",
+   "status": 200,
+   "from": "/skills",
+   "where": "local"
+  },
+  {
+   "url": "/meta-ads-lead-generation-master-class/",
+   "status": 200,
+   "from": "/courses/master-classes/",
+   "where": "local"
+  },
+  {
+   "url": "/portfolio/chaitanya-greens-residential-2026",
+   "status": 200,
+   "from": "/portfolio/vasarsha-reality-residential-2026/",
+   "where": "local"
+  },
+  {
+   "url": "/portfolio/vasarsha-reality-residential-2026",
+   "status": 200,
+   "from": "/portfolio/chaitanya-greens-residential-2026/",
+   "where": "local"
+  },
+  {
+   "url": "/portfolio/life-educare-school-marketing-2026",
+   "status": 200,
+   "from": "/portfolio/salon-academy-admissions-2026/",
+   "where": "local"
+  },
+  {
+   "url": "/portfolio/salon-academy-admissions-2026",
+   "status": 200,
+   "from": "/portfolio/life-educare-school-marketing-2026/",
+   "where": "local"
+  },
+  {
+   "url": "/assets/images/logo/linkedin-logo.webp",
+   "status": 200,
+   "from": "/skills",
+   "where": "local"
+  },
+  {
+   "url": "/assets/images/logo/google-tag-manager-logo.webp",
+   "status": 200,
+   "from": "/skills",
+   "where": "local"
+  },
+  {
+   "url": "/assets/images/logo/google-analytics-4-logo.webp",
+   "status": 200,
+   "from": "/skills",
+   "where": "local"
+  },
+  {
+   "url": "/assets/images/logo/google-search-console-logo.webp",
+   "status": 200,
+   "from": "/skills",
+   "where": "local"
+  },
+  {
+   "url": "/assets/images/logo/google-business-profile-logo.webp",
+   "status": 200,
+   "from": "/skills",
+   "where": "local"
+  },
+  {
+   "url": "/assets/images/logo/wordpress-logo.webp",
+   "status": 200,
+   "from": "/skills",
+   "where": "local"
+  },
+  {
+   "url": "/assets/images/logo/elementor-logo.webp",
+   "status": 200,
+   "from": "/skills",
+   "where": "local"
+  },
+  {
+   "url": "/assets/images/logo/canva-logo.webp",
+   "status": 200,
+   "from": "/skills",
+   "where": "local"
+  },
+  {
+   "url": "/assets/images/logo/n8n-logo.webp",
+   "status": 200,
+   "from": "/skills",
+   "where": "local"
+  }
+ ]
+}

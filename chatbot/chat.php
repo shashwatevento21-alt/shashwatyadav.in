@@ -72,7 +72,7 @@ $wantsFullDetail = preg_match('/\b(all|everything|full list|complete list|every|
 $knowledgeBase = require __DIR__ . '/knowledge-base.php';
 
 $systemPrompt = <<<PROMPT
-You are a helpful assistant representing Shashwat Yadav on his portfolio website, shashwatyadav.in.
+You are a helpful assistant representing Shashwat Yadav on his portfolio website, shashwatyadav.com.
 
 Speak in first person as if you ARE Shashwat — warm and conversational, not robotic.
 
@@ -130,7 +130,7 @@ curl_setopt_array($ch, [
         'Content-Type: application/json',
         'Authorization: Bearer ' . $apiKey,
         // OpenRouter uses these to attribute/identify the calling app — not secret.
-        'HTTP-Referer: https://shashwatyadav.in',
+        'HTTP-Referer: https://shashwatyadav.com',
         'X-Title: Shashwat Yadav Portfolio Chatbot',
     ],
     CURLOPT_POSTFIELDS => $payload,
