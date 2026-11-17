@@ -28,6 +28,15 @@
   "@type": "EducationalOrganization",
   "name": "Shankar Charya Technical Campus"
  },
+ "hasOccupation": {
+  "@type": "Occupation",
+  "name": "Performance Marketer and SEO Specialist",
+  "occupationLocation": {
+   "@type": "City",
+   "name": "Raipur"
+  },
+  "experienceRequirements": "6+ years of experience"
+ },
  "knowsAbout": [
   "Performance marketing",
   "Meta Ads",

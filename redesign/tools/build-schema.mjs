@@ -34,8 +34,11 @@ const NAV = { '/about': 'About', '/services': 'Services', '/skills': 'Skills', '
 
 const OVERRIDES = JSON.parse(read('redesign/seo-overrides.json'));
 const DATES = JSON.parse(read('redesign/case-study-dates.json')).dates;
+const EXPERIENCE = JSON.parse(read('redesign/experience-text.json'));
+const applyExperience = (str, p) => (EXPERIENCE[p] || []).reduce((t, [from, to]) => t.split(from).join(to), str);
 // the approved titles and descriptions are written into the page here, so a rebuild of the pages never loses them
 function applyOverrides(html, p) {
+  html = applyExperience(html, p);
   const o = OVERRIDES[p]; if (!o) return html;
   if (o.title) html = html.replace(/<title>[\s\S]*?<\/title>/, () => `<title>${o.title}</title>`);
   if (o.description) html = html.replace(/(<meta name="description" content=")[^"]*(")/, (m, a, b) => a + o.description + b);
@@ -69,6 +72,7 @@ const personNode = () => ({
   jobTitle: 'Ad Performance Marketing Head', worksFor: { '@type': 'Organization', name: 'The Digital Agency' },
   address: FACTS.address, telephone: FACTS.phone, email: FACTS.email, sameAs: FACTS.sameAs,
   alumniOf: { '@type': 'EducationalOrganization', name: 'Shankar Charya Technical Campus' },
+  hasOccupation: { '@type': 'Occupation', name: 'Performance Marketer and SEO Specialist', occupationLocation: { '@type': 'City', name: 'Raipur' }, experienceRequirements: EXPERIENCE.yearsOfExperience + ' years of experience' },
   knowsAbout: ['Performance marketing', 'Meta Ads', 'Google Ads', 'LinkedIn Ads', 'Lead generation', 'Google Tag Manager', 'GA4', 'Meta Pixel', 'Conversion tracking', 'Technical SEO', 'Local SEO', 'Google Business Profile', 'GEO and AI search optimisation', 'WordPress', 'Elementor', 'Claude Code', 'n8n', 'AI agents'],
 });
 const websiteNode = () => ({ '@type': 'WebSite', '@id': ID.website, url: ROOT, name: FACTS.name, publisher: { '@id': ID.person }, inLanguage: LANG });
@@ -98,7 +102,7 @@ function build(pi) {
     webpage.about = { '@id': ID.person }; webpage.mainEntity = { '@id': ID.person };
     // the FAQ already on the page (its JSON-LD is kept as written; every question is visible on the page)
     const old = [...read('redesign/originals/about.html').matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)].map((m) => JSON.parse(m[1])).find((x) => x['@type'] === 'FAQPage');
-    if (old) g.push({ '@type': 'FAQPage', '@id': url + '#faq', isPartOf: { '@id': url + '#webpage' }, inLanguage: LANG, mainEntity: old.mainEntity });
+    if (old) g.push({ '@type': 'FAQPage', '@id': url + '#faq', isPartOf: { '@id': url + '#webpage' }, inLanguage: LANG, mainEntity: JSON.parse(applyExperience(JSON.stringify(old.mainEntity), p)) });
   }
   if (p === '/skills') webpage.about = { '@id': ID.person };
   if (p === '/contact') {

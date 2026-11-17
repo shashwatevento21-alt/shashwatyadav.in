@@ -1,0 +1,8 @@
+{
+  "note": "Approved experience wording: 6+ years. Home already shows '6+ Years Experience' (count-up target 6). About had two year counts ('4+ years in performance marketing') that are changed to 6+ here. build-schema.mjs applies these to the page and its FAQ schema; compare.mjs expects them. Pairs are [old text, new text] per page path.",
+  "/about": [
+    ["After 4+ years in performance marketing", "After 6+ years in performance marketing"],
+    ["4+ years in performance marketing, a business founded", "6+ years in performance marketing, a business founded"]
+  ],
+  "yearsOfExperience": "6+"
+}
