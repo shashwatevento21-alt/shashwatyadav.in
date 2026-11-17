@@ -1,13 +1,13 @@
 {
  "base": "https://shashwatyadav.com",
- "when": "2026-11-17T06:19:39.029Z",
+ "when": "2026-11-17T08:29:44.823Z",
  "pageCount": 22,
  "pages": {
   "/": {
    "url": "/",
    "head": {
     "lang": "en",
-    "title": "Shashwat Yadav | Performance Marketing Expert & SEO Specialist",
+    "title": "Shashwat Yadav | Performance Marketing & SEO Expert Raipur",
     "meta": [
      {
       "name": null,
@@ -89,7 +89,119 @@
       "as": null
      }
     ],
-    "jsonLd": [],
+    "jsonLd": [
+     {
+      "@context": "https://schema.org",
+      "@graph": [
+       {
+        "@type": [
+         "Person",
+         "Organization"
+        ],
+        "@id": "https://shashwatyadav.com/#person",
+        "name": "Shashwat Yadav",
+        "url": "https://shashwatyadav.com/",
+        "image": "https://shashwatyadav.com/assets/images/shashwat-yadav-performance-marketing-expert.webp",
+        "jobTitle": "Ad Performance Marketing Head",
+        "worksFor": {
+         "@type": "Organization",
+         "name": "The Digital Agency"
+        },
+        "address": {
+         "@type": "PostalAddress",
+         "addressLocality": "Raipur",
+         "addressRegion": "Chhattisgarh",
+         "addressCountry": "IN"
+        },
+        "telephone": "+91 70001 98366",
+        "email": "shashwatyadav012345@gmail.com",
+        "sameAs": [
+         "https://www.linkedin.com/in/shashwat-yadav-9258bb131",
+         "https://www.instagram.com/shashwat.ai.seo"
+        ],
+        "alumniOf": {
+         "@type": "EducationalOrganization",
+         "name": "Shankar Charya Technical Campus"
+        },
+        "knowsAbout": [
+         "Performance marketing",
+         "Meta Ads",
+         "Google Ads",
+         "LinkedIn Ads",
+         "Lead generation",
+         "Google Tag Manager",
+         "GA4",
+         "Meta Pixel",
+         "Conversion tracking",
+         "Technical SEO",
+         "Local SEO",
+         "Google Business Profile",
+         "GEO and AI search optimisation",
+         "WordPress",
+         "Elementor",
+         "Claude Code",
+         "n8n",
+         "AI agents"
+        ]
+       },
+       {
+        "@type": "WebSite",
+        "@id": "https://shashwatyadav.com/#website",
+        "url": "https://shashwatyadav.com",
+        "name": "Shashwat Yadav",
+        "publisher": {
+         "@id": "https://shashwatyadav.com/#person"
+        },
+        "inLanguage": "en-US"
+       },
+       {
+        "@type": "WebPage",
+        "@id": "https://shashwatyadav.com/#webpage",
+        "url": "https://shashwatyadav.com/",
+        "name": "Shashwat Yadav | Performance Marketing & SEO Expert Raipur",
+        "description": "Performance Marketing Expert managing ₹5.7L+ monthly ad spend across Google & Meta, SEO Specialist, and full-stack marketer.",
+        "isPartOf": {
+         "@id": "https://shashwatyadav.com/#website"
+        },
+        "inLanguage": "en-US",
+        "about": {
+         "@id": "https://shashwatyadav.com/#professionalservice"
+        }
+       },
+       {
+        "@type": [
+         "ProfessionalService",
+         "LocalBusiness"
+        ],
+        "@id": "https://shashwatyadav.com/#professionalservice",
+        "name": "Shashwat Yadav",
+        "url": "https://shashwatyadav.com/",
+        "description": "Performance Marketing Expert managing ₹5.7L+ monthly ad spend across Google & Meta, SEO Specialist, and full-stack marketer.",
+        "image": "https://shashwatyadav.com/assets/images/shashwat-yadav-performance-marketing-expert.webp",
+        "telephone": "+91 70001 98366",
+        "email": "shashwatyadav012345@gmail.com",
+        "address": {
+         "@type": "PostalAddress",
+         "addressLocality": "Raipur",
+         "addressRegion": "Chhattisgarh",
+         "addressCountry": "IN"
+        },
+        "sameAs": [
+         "https://www.linkedin.com/in/shashwat-yadav-9258bb131",
+         "https://www.instagram.com/shashwat.ai.seo"
+        ],
+        "knowsAbout": [
+         "Performance marketing",
+         "Google Ads",
+         "Meta Ads",
+         "SEO",
+         "GEO and AI search optimisation",
+         "WordPress"
+        ]
+       }
+      ]
+     }
+    ],
     "scripts": [
      {
       "inline": "7da60269",
@@ -667,13 +779,14 @@
     "data-lc-compact": 1
    },
    "ids": [
+    "site-schema",
     "navbar",
     "site-nav",
     "main",
     "hero",
     "whatsapp-widget"
    ],
-   "htmlBytes": 22573,
+   "htmlBytes": 25188,
    "network": [
     {
      "method": "GET",
@@ -683,21 +796,7 @@
    "externalHosts": [
     "www.googletagmanager.com"
    ],
-   "desktopShot": {
-    "width": 1280,
-    "height": 4582,
-    "files": [
-     "home-desktop.jpg"
-    ]
-   },
    "desktopDocHeight": 4582,
-   "mobileShot": {
-    "width": 375,
-    "height": 7361,
-    "files": [
-     "home-mobile.jpg"
-    ]
-   },
    "mobileOverflowX": false,
    "mobileDocHeight": 7361
   },
@@ -902,199 +1001,246 @@
     "jsonLd": [
      {
       "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Shashwat Yadav",
-      "url": "https://shashwatyadav.com/about",
-      "image": "https://shashwatyadav.com/assets/images/shashwat-yadav-performance-marketing-expert.webp",
-      "jobTitle": "Ad Performance Marketing Head",
-      "worksFor": {
-       "@type": "Organization",
-       "name": "The Digital Agency"
-      },
-      "address": {
-       "@type": "PostalAddress",
-       "addressLocality": "Raipur",
-       "addressRegion": "Chhattisgarh",
-       "addressCountry": "IN"
-      },
-      "alumniOf": {
-       "@type": "EducationalOrganization",
-       "name": "Shankar Charya Technical Campus"
-      },
-      "sameAs": [
-       "https://www.linkedin.com/in/shashwat-yadav-9258bb131",
-       "https://www.instagram.com/shashwat.ai.seo"
-      ],
-      "knowsAbout": [
-       "Performance marketing",
-       "Meta Ads",
-       "Google Ads",
-       "LinkedIn Ads",
-       "Lead generation",
-       "Google Tag Manager",
-       "GA4",
-       "Meta Pixel",
-       "Conversion tracking",
-       "Technical SEO",
-       "Local SEO",
-       "Google Business Profile",
-       "GEO and AI search optimisation",
-       "WordPress",
-       "Elementor",
-       "Claude Code",
-       "n8n",
-       "AI agents"
-      ]
-     },
-     {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
+      "@graph": [
        {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Home",
-        "item": "https://shashwatyadav.com/"
+        "@type": [
+         "Person",
+         "Organization"
+        ],
+        "@id": "https://shashwatyadav.com/#person",
+        "name": "Shashwat Yadav",
+        "url": "https://shashwatyadav.com/",
+        "image": "https://shashwatyadav.com/assets/images/shashwat-yadav-performance-marketing-expert.webp",
+        "jobTitle": "Ad Performance Marketing Head",
+        "worksFor": {
+         "@type": "Organization",
+         "name": "The Digital Agency"
+        },
+        "address": {
+         "@type": "PostalAddress",
+         "addressLocality": "Raipur",
+         "addressRegion": "Chhattisgarh",
+         "addressCountry": "IN"
+        },
+        "telephone": "+91 70001 98366",
+        "email": "shashwatyadav012345@gmail.com",
+        "sameAs": [
+         "https://www.linkedin.com/in/shashwat-yadav-9258bb131",
+         "https://www.instagram.com/shashwat.ai.seo"
+        ],
+        "alumniOf": {
+         "@type": "EducationalOrganization",
+         "name": "Shankar Charya Technical Campus"
+        },
+        "knowsAbout": [
+         "Performance marketing",
+         "Meta Ads",
+         "Google Ads",
+         "LinkedIn Ads",
+         "Lead generation",
+         "Google Tag Manager",
+         "GA4",
+         "Meta Pixel",
+         "Conversion tracking",
+         "Technical SEO",
+         "Local SEO",
+         "Google Business Profile",
+         "GEO and AI search optimisation",
+         "WordPress",
+         "Elementor",
+         "Claude Code",
+         "n8n",
+         "AI agents"
+        ]
        },
        {
-        "@type": "ListItem",
-        "position": 2,
-        "name": "About",
-        "item": "https://shashwatyadav.com/about"
-       }
-      ]
-     },
-     {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
+        "@type": "WebSite",
+        "@id": "https://shashwatyadav.com/#website",
+        "url": "https://shashwatyadav.com",
+        "name": "Shashwat Yadav",
+        "publisher": {
+         "@id": "https://shashwatyadav.com/#person"
+        },
+        "inLanguage": "en-US"
+       },
        {
-        "@type": "Question",
-        "name": "Who is Shashwat Yadav?",
-        "acceptedAnswer": {
-         "@type": "Answer",
-         "text": "A performance marketer and SEO specialist in Raipur who leads a 15-person team."
+        "@type": "BreadcrumbList",
+        "@id": "https://shashwatyadav.com/about#breadcrumb",
+        "itemListElement": [
+         {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://shashwatyadav.com/"
+         },
+         {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "About",
+          "item": "https://shashwatyadav.com/about"
+         }
+        ]
+       },
+       {
+        "@type": [
+         "WebPage",
+         "AboutPage"
+        ],
+        "@id": "https://shashwatyadav.com/about#webpage",
+        "url": "https://shashwatyadav.com/about",
+        "name": "Shashwat Yadav: Complete Biography, Experience & Skills",
+        "description": "Shashwat Yadav is a performance marketer and SEO specialist in Raipur. Read his biography, experience and skills, then contact him on WhatsApp or by form.",
+        "isPartOf": {
+         "@id": "https://shashwatyadav.com/#website"
+        },
+        "inLanguage": "en-US",
+        "breadcrumb": {
+         "@id": "https://shashwatyadav.com/about#breadcrumb"
+        },
+        "about": {
+         "@id": "https://shashwatyadav.com/#person"
+        },
+        "mainEntity": {
+         "@id": "https://shashwatyadav.com/#person"
         }
        },
        {
-        "@type": "Question",
-        "name": "What does Shashwat Yadav do?",
-        "acceptedAnswer": {
-         "@type": "Answer",
-         "text": "Paid ads, tracking, SEO, WordPress sites and AI automation for lead generation."
-        }
-       },
-       {
-        "@type": "Question",
-        "name": "Where is Shashwat Yadav based?",
-        "acceptedAnswer": {
-         "@type": "Answer",
-         "text": "In Raipur, Chhattisgarh, India."
-        }
-       },
-       {
-        "@type": "Question",
-        "name": "What does Shashwat Yadav’s experience include?",
-        "acceptedAnswer": {
-         "@type": "Answer",
-         "text": "4+ years in performance marketing, a business founded in 2021, and a team lead role since March 2026."
-        }
-       },
-       {
-        "@type": "Question",
-        "name": "Does Shashwat Yadav teach?",
-        "acceptedAnswer": {
-         "@type": "Answer",
-         "text": "Yes. He teaches through The Digital School in Raipur and runs live classes."
-        }
-       },
-       {
-        "@type": "Question",
-        "name": "How can I work with Shashwat Yadav?",
-        "acceptedAnswer": {
-         "@type": "Answer",
-         "text": "Use the contact form on this page, message +91 70001 98366 on WhatsApp, or email shashwatyadav012345@gmail.com."
-        }
-       },
-       {
-        "@type": "Question",
-        "name": "Which industries does Shashwat Yadav work in?",
-        "acceptedAnswer": {
-         "@type": "Answer",
-         "text": "Healthcare, real estate, salons, education, retail, hospitality, food and beverage, and schools."
-        }
-       },
-       {
-        "@type": "Question",
-        "name": "Which platforms does Shashwat Yadav run ads on?",
-        "acceptedAnswer": {
-         "@type": "Answer",
-         "text": "Meta Ads, Google Ads and LinkedIn Ads, with lead generation as the main goal."
-        }
-       },
-       {
-        "@type": "Question",
-        "name": "How does Shashwat Yadav measure results?",
-        "acceptedAnswer": {
-         "@type": "Answer",
-         "text": "Through conversion tracking set up in Google Tag Manager, GA4 and Meta Pixel, with reporting across Search Console, Instagram and YouTube."
-        }
-       },
-       {
-        "@type": "Question",
-        "name": "What is GEO, and does Shashwat Yadav offer it?",
-        "acceptedAnswer": {
-         "@type": "Answer",
-         "text": "GEO is optimising content so AI tools such as ChatGPT and Gemini surface and cite a business. Yes, it is part of his SEO work."
-        }
-       },
-       {
-        "@type": "Question",
-        "name": "What did Shashwat Yadav build at Evento?",
-        "acceptedAnswer": {
-         "@type": "Answer",
-         "text": "Evento Balloon Decoration Pvt Ltd, a Raipur business founded in November 2021, incorporated in March 2023 and run until November 2025, with ₹30 lakh in annual revenue."
-        }
-       },
-       {
-        "@type": "Question",
-        "name": "Does Shashwat Yadav use AI in his work?",
-        "acceptedAnswer": {
-         "@type": "Answer",
-         "text": "Yes. He uses Claude Code for development, n8n and AI agents for automation, and AI creative tools for ads and video."
-        }
-       },
-       {
-        "@type": "Question",
-        "name": "What is Shashwat Yadav’s role at The Digital Agency?",
-        "acceptedAnswer": {
-         "@type": "Answer",
-         "text": "Ad Performance Marketing Head since March 2026, leading a 15-person team that serves 30+ clients."
-        }
-       },
-       {
-        "@type": "Question",
-        "name": "Does Shashwat Yadav work with Raipur businesses?",
-        "acceptedAnswer": {
-         "@type": "Answer",
-         "text": "Yes. Several published case studies are for Raipur businesses, including real estate developers and a hospital."
-        }
-       },
-       {
-        "@type": "Question",
-        "name": "What qualifications does Shashwat Yadav have?",
-        "acceptedAnswer": {
-         "@type": "Answer",
-         "text": "A B.Tech in Mechanical Engineering from Shankar Charya Technical Campus (CSVTU), 2016 to 2020, and seven Digital Scholar certifications."
-        }
-       },
-       {
-        "@type": "Question",
-        "name": "What has Shashwat Yadav built with AI and code?",
-        "acceptedAnswer": {
-         "@type": "Answer",
-         "text": "Websites, landing pages, workflow automations and tools using Claude Code and n8n, including the Insinfluencer website and creator platform, built from scratch."
-        }
+        "@type": "FAQPage",
+        "@id": "https://shashwatyadav.com/about#faq",
+        "isPartOf": {
+         "@id": "https://shashwatyadav.com/about#webpage"
+        },
+        "inLanguage": "en-US",
+        "mainEntity": [
+         {
+          "@type": "Question",
+          "name": "Who is Shashwat Yadav?",
+          "acceptedAnswer": {
+           "@type": "Answer",
+           "text": "A performance marketer and SEO specialist in Raipur who leads a 15-person team."
+          }
+         },
+         {
+          "@type": "Question",
+          "name": "What does Shashwat Yadav do?",
+          "acceptedAnswer": {
+           "@type": "Answer",
+           "text": "Paid ads, tracking, SEO, WordPress sites and AI automation for lead generation."
+          }
+         },
+         {
+          "@type": "Question",
+          "name": "Where is Shashwat Yadav based?",
+          "acceptedAnswer": {
+           "@type": "Answer",
+           "text": "In Raipur, Chhattisgarh, India."
+          }
+         },
+         {
+          "@type": "Question",
+          "name": "What does Shashwat Yadav’s experience include?",
+          "acceptedAnswer": {
+           "@type": "Answer",
+           "text": "4+ years in performance marketing, a business founded in 2021, and a team lead role since March 2026."
+          }
+         },
+         {
+          "@type": "Question",
+          "name": "Does Shashwat Yadav teach?",
+          "acceptedAnswer": {
+           "@type": "Answer",
+           "text": "Yes. He teaches through The Digital School in Raipur and runs live classes."
+          }
+         },
+         {
+          "@type": "Question",
+          "name": "How can I work with Shashwat Yadav?",
+          "acceptedAnswer": {
+           "@type": "Answer",
+           "text": "Use the contact form on this page, message +91 70001 98366 on WhatsApp, or email shashwatyadav012345@gmail.com."
+          }
+         },
+         {
+          "@type": "Question",
+          "name": "Which industries does Shashwat Yadav work in?",
+          "acceptedAnswer": {
+           "@type": "Answer",
+           "text": "Healthcare, real estate, salons, education, retail, hospitality, food and beverage, and schools."
+          }
+         },
+         {
+          "@type": "Question",
+          "name": "Which platforms does Shashwat Yadav run ads on?",
+          "acceptedAnswer": {
+           "@type": "Answer",
+           "text": "Meta Ads, Google Ads and LinkedIn Ads, with lead generation as the main goal."
+          }
+         },
+         {
+          "@type": "Question",
+          "name": "How does Shashwat Yadav measure results?",
+          "acceptedAnswer": {
+           "@type": "Answer",
+           "text": "Through conversion tracking set up in Google Tag Manager, GA4 and Meta Pixel, with reporting across Search Console, Instagram and YouTube."
+          }
+         },
+         {
+          "@type": "Question",
+          "name": "What is GEO, and does Shashwat Yadav offer it?",
+          "acceptedAnswer": {
+           "@type": "Answer",
+           "text": "GEO is optimising content so AI tools such as ChatGPT and Gemini surface and cite a business. Yes, it is part of his SEO work."
+          }
+         },
+         {
+          "@type": "Question",
+          "name": "What did Shashwat Yadav build at Evento?",
+          "acceptedAnswer": {
+           "@type": "Answer",
+           "text": "Evento Balloon Decoration Pvt Ltd, a Raipur business founded in November 2021, incorporated in March 2023 and run until November 2025, with ₹30 lakh in annual revenue."
+          }
+         },
+         {
+          "@type": "Question",
+          "name": "Does Shashwat Yadav use AI in his work?",
+          "acceptedAnswer": {
+           "@type": "Answer",
+           "text": "Yes. He uses Claude Code for development, n8n and AI agents for automation, and AI creative tools for ads and video."
+          }
+         },
+         {
+          "@type": "Question",
+          "name": "What is Shashwat Yadav’s role at The Digital Agency?",
+          "acceptedAnswer": {
+           "@type": "Answer",
+           "text": "Ad Performance Marketing Head since March 2026, leading a 15-person team that serves 30+ clients."
+          }
+         },
+         {
+          "@type": "Question",
+          "name": "Does Shashwat Yadav work with Raipur businesses?",
+          "acceptedAnswer": {
+           "@type": "Answer",
+           "text": "Yes. Several published case studies are for Raipur businesses, including real estate developers and a hospital."
+          }
+         },
+         {
+          "@type": "Question",
+          "name": "What qualifications does Shashwat Yadav have?",
+          "acceptedAnswer": {
+           "@type": "Answer",
+           "text": "A B.Tech in Mechanical Engineering from Shankar Charya Technical Campus (CSVTU), 2016 to 2020, and seven Digital Scholar certifications."
+          }
+         },
+         {
+          "@type": "Question",
+          "name": "What has Shashwat Yadav built with AI and code?",
+          "acceptedAnswer": {
+           "@type": "Answer",
+           "text": "Websites, landing pages, workflow automations and tools using Claude Code and n8n, including the Insinfluencer website and creator platform, built from scratch."
+          }
+         }
+        ]
        }
       ]
      }
@@ -2268,6 +2414,7 @@
     "data-lc-compact": 1
    },
    "ids": [
+    "site-schema",
     "navbar",
     "site-nav",
     "main",
@@ -2367,7 +2514,7 @@
     "form-error",
     "whatsapp-widget"
    ],
-   "htmlBytes": 84200,
+   "htmlBytes": 85198,
    "network": [
     {
      "method": "GET",
@@ -2377,22 +2524,7 @@
    "externalHosts": [
     "www.googletagmanager.com"
    ],
-   "desktopShot": {
-    "width": 1280,
-    "height": 12398,
-    "files": [
-     "about-desktop.jpg"
-    ]
-   },
    "desktopDocHeight": 12398,
-   "mobileShot": {
-    "width": 375,
-    "height": 17768,
-    "files": [
-     "about-mobile.jpg",
-     "about-mobile-part2.jpg"
-    ]
-   },
    "mobileOverflowX": false,
    "mobileDocHeight": 17768
   },
@@ -2421,7 +2553,7 @@
       "property": null,
       "httpEquiv": null,
       "charset": null,
-      "content": "Professional certifications in performance marketing and AI, held by Shashwat Yadav."
+      "content": "Seven Digital Scholar certifications in digital marketing, Google Ads, Meta Ads, social media content and AI, held by Shashwat Yadav."
      }
     ],
     "links": [
@@ -2475,7 +2607,106 @@
       "as": null
      }
     ],
-    "jsonLd": [],
+    "jsonLd": [
+     {
+      "@context": "https://schema.org",
+      "@graph": [
+       {
+        "@type": [
+         "Person",
+         "Organization"
+        ],
+        "@id": "https://shashwatyadav.com/#person",
+        "name": "Shashwat Yadav",
+        "url": "https://shashwatyadav.com/",
+        "image": "https://shashwatyadav.com/assets/images/shashwat-yadav-performance-marketing-expert.webp",
+        "jobTitle": "Ad Performance Marketing Head",
+        "worksFor": {
+         "@type": "Organization",
+         "name": "The Digital Agency"
+        },
+        "address": {
+         "@type": "PostalAddress",
+         "addressLocality": "Raipur",
+         "addressRegion": "Chhattisgarh",
+         "addressCountry": "IN"
+        },
+        "telephone": "+91 70001 98366",
+        "email": "shashwatyadav012345@gmail.com",
+        "sameAs": [
+         "https://www.linkedin.com/in/shashwat-yadav-9258bb131",
+         "https://www.instagram.com/shashwat.ai.seo"
+        ],
+        "alumniOf": {
+         "@type": "EducationalOrganization",
+         "name": "Shankar Charya Technical Campus"
+        },
+        "knowsAbout": [
+         "Performance marketing",
+         "Meta Ads",
+         "Google Ads",
+         "LinkedIn Ads",
+         "Lead generation",
+         "Google Tag Manager",
+         "GA4",
+         "Meta Pixel",
+         "Conversion tracking",
+         "Technical SEO",
+         "Local SEO",
+         "Google Business Profile",
+         "GEO and AI search optimisation",
+         "WordPress",
+         "Elementor",
+         "Claude Code",
+         "n8n",
+         "AI agents"
+        ]
+       },
+       {
+        "@type": "WebSite",
+        "@id": "https://shashwatyadav.com/#website",
+        "url": "https://shashwatyadav.com",
+        "name": "Shashwat Yadav",
+        "publisher": {
+         "@id": "https://shashwatyadav.com/#person"
+        },
+        "inLanguage": "en-US"
+       },
+       {
+        "@type": "BreadcrumbList",
+        "@id": "https://shashwatyadav.com/certifications#breadcrumb",
+        "itemListElement": [
+         {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://shashwatyadav.com/"
+         },
+         {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Certifications",
+          "item": "https://shashwatyadav.com/certifications"
+         }
+        ]
+       },
+       {
+        "@type": "WebPage",
+        "@id": "https://shashwatyadav.com/certifications#webpage",
+        "url": "https://shashwatyadav.com/certifications",
+        "name": "Certifications | Shashwat Yadav",
+        "description": "Seven Digital Scholar certifications in digital marketing, Google Ads, Meta Ads, social media content and AI, held by Shashwat Yadav.",
+        "isPartOf": {
+         "@id": "https://shashwatyadav.com/#website"
+        },
+        "inLanguage": "en-US",
+        "breadcrumb": {
+         "@id": "https://shashwatyadav.com/certifications#breadcrumb"
+        }
+       }
+      ]
+     }
+    ],
     "scripts": [
      {
       "inline": "7da60269",
@@ -2991,6 +3222,7 @@
     "data-lc-compact": 1
    },
    "ids": [
+    "site-schema",
     "navbar",
     "site-nav",
     "main",
@@ -3001,7 +3233,7 @@
     "certificate-lightbox-img",
     "whatsapp-widget"
    ],
-   "htmlBytes": 19875,
+   "htmlBytes": 22048,
    "network": [
     {
      "method": "GET",
@@ -3011,21 +3243,7 @@
    "externalHosts": [
     "www.googletagmanager.com"
    ],
-   "desktopShot": {
-    "width": 1280,
-    "height": 3045,
-    "files": [
-     "certifications-desktop.jpg"
-    ]
-   },
    "desktopDocHeight": 3045,
-   "mobileShot": {
-    "width": 375,
-    "height": 5510,
-    "files": [
-     "certifications-mobile.jpg"
-    ]
-   },
    "mobileOverflowX": false,
    "mobileDocHeight": 5510
   },
@@ -3054,7 +3272,7 @@
       "property": null,
       "httpEquiv": null,
       "charset": null,
-      "content": "Get in touch with Shashwat Yadav for performance marketing, SEO, or web development projects."
+      "content": "Contact Shashwat Yadav for performance marketing, SEO or web development projects. Use the form, call +91 70001 98366 or message on WhatsApp."
      }
     ],
     "links": [
@@ -3108,7 +3326,118 @@
       "as": null
      }
     ],
-    "jsonLd": [],
+    "jsonLd": [
+     {
+      "@context": "https://schema.org",
+      "@graph": [
+       {
+        "@type": [
+         "Person",
+         "Organization"
+        ],
+        "@id": "https://shashwatyadav.com/#person",
+        "name": "Shashwat Yadav",
+        "url": "https://shashwatyadav.com/",
+        "image": "https://shashwatyadav.com/assets/images/shashwat-yadav-performance-marketing-expert.webp",
+        "jobTitle": "Ad Performance Marketing Head",
+        "worksFor": {
+         "@type": "Organization",
+         "name": "The Digital Agency"
+        },
+        "address": {
+         "@type": "PostalAddress",
+         "addressLocality": "Raipur",
+         "addressRegion": "Chhattisgarh",
+         "addressCountry": "IN"
+        },
+        "telephone": "+91 70001 98366",
+        "email": "shashwatyadav012345@gmail.com",
+        "sameAs": [
+         "https://www.linkedin.com/in/shashwat-yadav-9258bb131",
+         "https://www.instagram.com/shashwat.ai.seo"
+        ],
+        "alumniOf": {
+         "@type": "EducationalOrganization",
+         "name": "Shankar Charya Technical Campus"
+        },
+        "knowsAbout": [
+         "Performance marketing",
+         "Meta Ads",
+         "Google Ads",
+         "LinkedIn Ads",
+         "Lead generation",
+         "Google Tag Manager",
+         "GA4",
+         "Meta Pixel",
+         "Conversion tracking",
+         "Technical SEO",
+         "Local SEO",
+         "Google Business Profile",
+         "GEO and AI search optimisation",
+         "WordPress",
+         "Elementor",
+         "Claude Code",
+         "n8n",
+         "AI agents"
+        ],
+        "contactPoint": {
+         "@type": "ContactPoint",
+         "telephone": "+91 70001 98366",
+         "email": "shashwatyadav012345@gmail.com",
+         "contactType": "customer service"
+        }
+       },
+       {
+        "@type": "WebSite",
+        "@id": "https://shashwatyadav.com/#website",
+        "url": "https://shashwatyadav.com",
+        "name": "Shashwat Yadav",
+        "publisher": {
+         "@id": "https://shashwatyadav.com/#person"
+        },
+        "inLanguage": "en-US"
+       },
+       {
+        "@type": "BreadcrumbList",
+        "@id": "https://shashwatyadav.com/contact#breadcrumb",
+        "itemListElement": [
+         {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://shashwatyadav.com/"
+         },
+         {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Contact",
+          "item": "https://shashwatyadav.com/contact"
+         }
+        ]
+       },
+       {
+        "@type": [
+         "WebPage",
+         "ContactPage"
+        ],
+        "@id": "https://shashwatyadav.com/contact#webpage",
+        "url": "https://shashwatyadav.com/contact",
+        "name": "Contact | Shashwat Yadav",
+        "description": "Contact Shashwat Yadav for performance marketing, SEO or web development projects. Use the form, call +91 70001 98366 or message on WhatsApp.",
+        "isPartOf": {
+         "@id": "https://shashwatyadav.com/#website"
+        },
+        "inLanguage": "en-US",
+        "breadcrumb": {
+         "@id": "https://shashwatyadav.com/contact#breadcrumb"
+        },
+        "about": {
+         "@id": "https://shashwatyadav.com/#person"
+        }
+       }
+      ]
+     }
+    ],
     "scripts": [
      {
       "inline": "7da60269",
@@ -3734,6 +4063,7 @@
     "data-lc-compact": 1
    },
    "ids": [
+    "site-schema",
     "navbar",
     "site-nav",
     "main",
@@ -3757,7 +4087,7 @@
     "form-error",
     "whatsapp-widget"
    ],
-   "htmlBytes": 21742,
+   "htmlBytes": 24084,
    "network": [
     {
      "method": "GET",
@@ -3767,21 +4097,7 @@
    "externalHosts": [
     "www.googletagmanager.com"
    ],
-   "desktopShot": {
-    "width": 1280,
-    "height": 1714,
-    "files": [
-     "contact-desktop.jpg"
-    ]
-   },
    "desktopDocHeight": 1714,
-   "mobileShot": {
-    "width": 375,
-    "height": 2920,
-    "files": [
-     "contact-mobile.jpg"
-    ]
-   },
    "mobileOverflowX": false,
    "mobileDocHeight": 2920
   },
@@ -3864,7 +4180,150 @@
       "as": null
      }
     ],
-    "jsonLd": [],
+    "jsonLd": [
+     {
+      "@context": "https://schema.org",
+      "@graph": [
+       {
+        "@type": [
+         "Person",
+         "Organization"
+        ],
+        "@id": "https://shashwatyadav.com/#person",
+        "name": "Shashwat Yadav",
+        "url": "https://shashwatyadav.com/",
+        "image": "https://shashwatyadav.com/assets/images/shashwat-yadav-performance-marketing-expert.webp",
+        "jobTitle": "Ad Performance Marketing Head",
+        "worksFor": {
+         "@type": "Organization",
+         "name": "The Digital Agency"
+        },
+        "address": {
+         "@type": "PostalAddress",
+         "addressLocality": "Raipur",
+         "addressRegion": "Chhattisgarh",
+         "addressCountry": "IN"
+        },
+        "telephone": "+91 70001 98366",
+        "email": "shashwatyadav012345@gmail.com",
+        "sameAs": [
+         "https://www.linkedin.com/in/shashwat-yadav-9258bb131",
+         "https://www.instagram.com/shashwat.ai.seo"
+        ],
+        "alumniOf": {
+         "@type": "EducationalOrganization",
+         "name": "Shankar Charya Technical Campus"
+        },
+        "knowsAbout": [
+         "Performance marketing",
+         "Meta Ads",
+         "Google Ads",
+         "LinkedIn Ads",
+         "Lead generation",
+         "Google Tag Manager",
+         "GA4",
+         "Meta Pixel",
+         "Conversion tracking",
+         "Technical SEO",
+         "Local SEO",
+         "Google Business Profile",
+         "GEO and AI search optimisation",
+         "WordPress",
+         "Elementor",
+         "Claude Code",
+         "n8n",
+         "AI agents"
+        ]
+       },
+       {
+        "@type": "WebSite",
+        "@id": "https://shashwatyadav.com/#website",
+        "url": "https://shashwatyadav.com",
+        "name": "Shashwat Yadav",
+        "publisher": {
+         "@id": "https://shashwatyadav.com/#person"
+        },
+        "inLanguage": "en-US"
+       },
+       {
+        "@type": "BreadcrumbList",
+        "@id": "https://shashwatyadav.com/courses/#breadcrumb",
+        "itemListElement": [
+         {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://shashwatyadav.com/"
+         },
+         {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Courses",
+          "item": "https://shashwatyadav.com/courses/"
+         }
+        ]
+       },
+       {
+        "@type": [
+         "WebPage",
+         "CollectionPage"
+        ],
+        "@id": "https://shashwatyadav.com/courses/#webpage",
+        "url": "https://shashwatyadav.com/courses/",
+        "name": "Courses and Live Classes | Shashwat Yadav",
+        "description": "Courses, live classes and 3-hour master classes on Google Ads, Meta Ads, and Claude and Claude Code by Shashwat Yadav. See upcoming dates and enrol online.",
+        "isPartOf": {
+         "@id": "https://shashwatyadav.com/#website"
+        },
+        "inLanguage": "en-US",
+        "breadcrumb": {
+         "@id": "https://shashwatyadav.com/courses/#breadcrumb"
+        },
+        "mainEntity": {
+         "@type": "ItemList",
+         "itemListElement": [
+          {
+           "@type": "ListItem",
+           "position": 1,
+           "item": {
+            "@type": "Course",
+            "@id": "https://shashwatyadav.com/courses/google-ads/#course",
+            "url": "https://shashwatyadav.com/courses/google-ads/"
+           }
+          },
+          {
+           "@type": "ListItem",
+           "position": 2,
+           "item": {
+            "@type": "Course",
+            "@id": "https://shashwatyadav.com/courses/meta-ads/#course",
+            "url": "https://shashwatyadav.com/courses/meta-ads/"
+           }
+          },
+          {
+           "@type": "ListItem",
+           "position": 3,
+           "item": {
+            "@type": "Course",
+            "@id": "https://shashwatyadav.com/courses/claude-mastery/#course",
+            "url": "https://shashwatyadav.com/courses/claude-mastery/"
+           }
+          },
+          {
+           "@type": "ListItem",
+           "position": 4,
+           "item": {
+            "@type": "Course",
+            "@id": "https://shashwatyadav.com/courses/master-classes/#course",
+            "url": "https://shashwatyadav.com/courses/master-classes/"
+           }
+          }
+         ]
+        }
+       }
+      ]
+     }
+    ],
     "scripts": [
      {
       "inline": "7da60269",
@@ -4551,6 +5010,7 @@
     "data-form": 1
    },
    "ids": [
+    "site-schema",
     "navbar",
     "site-nav",
     "main",
@@ -4571,7 +5031,7 @@
     "enroll-mobile",
     "whatsapp-widget"
    ],
-   "htmlBytes": 23894,
+   "htmlBytes": 26798,
    "network": [
     {
      "method": "GET",
@@ -4585,21 +5045,7 @@
    "externalHosts": [
     "www.googletagmanager.com"
    ],
-   "desktopShot": {
-    "width": 1280,
-    "height": 3227,
-    "files": [
-     "courses-desktop.jpg"
-    ]
-   },
    "desktopDocHeight": 3227,
-   "mobileShot": {
-    "width": 375,
-    "height": 4896,
-    "files": [
-     "courses-mobile.jpg"
-    ]
-   },
    "mobileOverflowX": false,
    "mobileDocHeight": 4896
   },
@@ -4689,7 +5135,138 @@
       "as": null
      }
     ],
-    "jsonLd": [],
+    "jsonLd": [
+     {
+      "@context": "https://schema.org",
+      "@graph": [
+       {
+        "@type": [
+         "Person",
+         "Organization"
+        ],
+        "@id": "https://shashwatyadav.com/#person",
+        "name": "Shashwat Yadav",
+        "url": "https://shashwatyadav.com/",
+        "image": "https://shashwatyadav.com/assets/images/shashwat-yadav-performance-marketing-expert.webp",
+        "jobTitle": "Ad Performance Marketing Head",
+        "worksFor": {
+         "@type": "Organization",
+         "name": "The Digital Agency"
+        },
+        "address": {
+         "@type": "PostalAddress",
+         "addressLocality": "Raipur",
+         "addressRegion": "Chhattisgarh",
+         "addressCountry": "IN"
+        },
+        "telephone": "+91 70001 98366",
+        "email": "shashwatyadav012345@gmail.com",
+        "sameAs": [
+         "https://www.linkedin.com/in/shashwat-yadav-9258bb131",
+         "https://www.instagram.com/shashwat.ai.seo"
+        ],
+        "alumniOf": {
+         "@type": "EducationalOrganization",
+         "name": "Shankar Charya Technical Campus"
+        },
+        "knowsAbout": [
+         "Performance marketing",
+         "Meta Ads",
+         "Google Ads",
+         "LinkedIn Ads",
+         "Lead generation",
+         "Google Tag Manager",
+         "GA4",
+         "Meta Pixel",
+         "Conversion tracking",
+         "Technical SEO",
+         "Local SEO",
+         "Google Business Profile",
+         "GEO and AI search optimisation",
+         "WordPress",
+         "Elementor",
+         "Claude Code",
+         "n8n",
+         "AI agents"
+        ]
+       },
+       {
+        "@type": "WebSite",
+        "@id": "https://shashwatyadav.com/#website",
+        "url": "https://shashwatyadav.com",
+        "name": "Shashwat Yadav",
+        "publisher": {
+         "@id": "https://shashwatyadav.com/#person"
+        },
+        "inLanguage": "en-US"
+       },
+       {
+        "@type": "BreadcrumbList",
+        "@id": "https://shashwatyadav.com/courses/claude-mastery/#breadcrumb",
+        "itemListElement": [
+         {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://shashwatyadav.com/"
+         },
+         {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Courses",
+          "item": "https://shashwatyadav.com/courses/"
+         },
+         {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Claude and Claude Code Course",
+          "item": "https://shashwatyadav.com/courses/claude-mastery/"
+         }
+        ]
+       },
+       {
+        "@type": "WebPage",
+        "@id": "https://shashwatyadav.com/courses/claude-mastery/#webpage",
+        "url": "https://shashwatyadav.com/courses/claude-mastery/",
+        "name": "Claude and Claude Code: 12 Live Classes | Shashwat Yadav",
+        "description": "Learn Claude and Claude Code in 12 live 90-minute classes: prompting, Projects, building websites and tools, n8n automation and AI agents.",
+        "isPartOf": {
+         "@id": "https://shashwatyadav.com/#website"
+        },
+        "inLanguage": "en-US",
+        "breadcrumb": {
+         "@id": "https://shashwatyadav.com/courses/claude-mastery/#breadcrumb"
+        },
+        "mainEntity": {
+         "@id": "https://shashwatyadav.com/courses/claude-mastery/#course"
+        }
+       },
+       {
+        "@type": "Course",
+        "@id": "https://shashwatyadav.com/courses/claude-mastery/#course",
+        "name": "Claude and Claude Code Course",
+        "description": "Learn Claude and Claude Code in 12 live 90-minute classes: prompting, Projects, building websites and tools, n8n automation and AI agents.",
+        "url": "https://shashwatyadav.com/courses/claude-mastery/",
+        "provider": {
+         "@id": "https://shashwatyadav.com/#the-digital-school"
+        },
+        "hasCourseInstance": {
+         "@type": "CourseInstance",
+         "courseMode": "online",
+         "instructor": {
+          "@id": "https://shashwatyadav.com/#person"
+         },
+         "courseWorkload": "PT18H"
+        }
+       },
+       {
+        "@type": "Organization",
+        "@id": "https://shashwatyadav.com/#the-digital-school",
+        "name": "The Digital School"
+       }
+      ]
+     }
+    ],
     "scripts": [
      {
       "inline": "7da60269",
@@ -5300,6 +5877,7 @@
     "data-lc-compact": 1
    },
    "ids": [
+    "site-schema",
     "navbar",
     "site-nav",
     "main",
@@ -5333,7 +5911,7 @@
     "cd-tools-h",
     "whatsapp-widget"
    ],
-   "htmlBytes": 43821,
+   "htmlBytes": 46871,
    "network": [
     {
      "method": "GET",
@@ -5343,21 +5921,7 @@
    "externalHosts": [
     "www.googletagmanager.com"
    ],
-   "desktopShot": {
-    "width": 1280,
-    "height": 4431,
-    "files": [
-     "courses__claude-mastery-desktop.jpg"
-    ]
-   },
    "desktopDocHeight": 4431,
-   "mobileShot": {
-    "width": 375,
-    "height": 7037,
-    "files": [
-     "courses__claude-mastery-mobile.jpg"
-    ]
-   },
    "mobileOverflowX": false,
    "mobileDocHeight": 7037
   },
@@ -5447,7 +6011,138 @@
       "as": null
      }
     ],
-    "jsonLd": [],
+    "jsonLd": [
+     {
+      "@context": "https://schema.org",
+      "@graph": [
+       {
+        "@type": [
+         "Person",
+         "Organization"
+        ],
+        "@id": "https://shashwatyadav.com/#person",
+        "name": "Shashwat Yadav",
+        "url": "https://shashwatyadav.com/",
+        "image": "https://shashwatyadav.com/assets/images/shashwat-yadav-performance-marketing-expert.webp",
+        "jobTitle": "Ad Performance Marketing Head",
+        "worksFor": {
+         "@type": "Organization",
+         "name": "The Digital Agency"
+        },
+        "address": {
+         "@type": "PostalAddress",
+         "addressLocality": "Raipur",
+         "addressRegion": "Chhattisgarh",
+         "addressCountry": "IN"
+        },
+        "telephone": "+91 70001 98366",
+        "email": "shashwatyadav012345@gmail.com",
+        "sameAs": [
+         "https://www.linkedin.com/in/shashwat-yadav-9258bb131",
+         "https://www.instagram.com/shashwat.ai.seo"
+        ],
+        "alumniOf": {
+         "@type": "EducationalOrganization",
+         "name": "Shankar Charya Technical Campus"
+        },
+        "knowsAbout": [
+         "Performance marketing",
+         "Meta Ads",
+         "Google Ads",
+         "LinkedIn Ads",
+         "Lead generation",
+         "Google Tag Manager",
+         "GA4",
+         "Meta Pixel",
+         "Conversion tracking",
+         "Technical SEO",
+         "Local SEO",
+         "Google Business Profile",
+         "GEO and AI search optimisation",
+         "WordPress",
+         "Elementor",
+         "Claude Code",
+         "n8n",
+         "AI agents"
+        ]
+       },
+       {
+        "@type": "WebSite",
+        "@id": "https://shashwatyadav.com/#website",
+        "url": "https://shashwatyadav.com",
+        "name": "Shashwat Yadav",
+        "publisher": {
+         "@id": "https://shashwatyadav.com/#person"
+        },
+        "inLanguage": "en-US"
+       },
+       {
+        "@type": "BreadcrumbList",
+        "@id": "https://shashwatyadav.com/courses/google-ads/#breadcrumb",
+        "itemListElement": [
+         {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://shashwatyadav.com/"
+         },
+         {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Courses",
+          "item": "https://shashwatyadav.com/courses/"
+         },
+         {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Google Ads Course",
+          "item": "https://shashwatyadav.com/courses/google-ads/"
+         }
+        ]
+       },
+       {
+        "@type": "WebPage",
+        "@id": "https://shashwatyadav.com/courses/google-ads/#webpage",
+        "url": "https://shashwatyadav.com/courses/google-ads/",
+        "name": "Google Ads Course: 18 Live Classes | Shashwat Yadav",
+        "description": "Learn Google Ads in 18 live 90-minute classes: Search and Demand Gen campaigns for lead generation, landing pages, conversion tracking and reporting.",
+        "isPartOf": {
+         "@id": "https://shashwatyadav.com/#website"
+        },
+        "inLanguage": "en-US",
+        "breadcrumb": {
+         "@id": "https://shashwatyadav.com/courses/google-ads/#breadcrumb"
+        },
+        "mainEntity": {
+         "@id": "https://shashwatyadav.com/courses/google-ads/#course"
+        }
+       },
+       {
+        "@type": "Course",
+        "@id": "https://shashwatyadav.com/courses/google-ads/#course",
+        "name": "Google Ads Course",
+        "description": "Learn Google Ads in 18 live 90-minute classes: Search and Demand Gen campaigns for lead generation, landing pages, conversion tracking and reporting.",
+        "url": "https://shashwatyadav.com/courses/google-ads/",
+        "provider": {
+         "@id": "https://shashwatyadav.com/#the-digital-school"
+        },
+        "hasCourseInstance": {
+         "@type": "CourseInstance",
+         "courseMode": "online",
+         "instructor": {
+          "@id": "https://shashwatyadav.com/#person"
+         },
+         "courseWorkload": "PT27H"
+        }
+       },
+       {
+        "@type": "Organization",
+        "@id": "https://shashwatyadav.com/#the-digital-school",
+        "name": "The Digital School"
+       }
+      ]
+     }
+    ],
     "scripts": [
      {
       "inline": "7da60269",
@@ -6136,6 +6831,7 @@
     "data-lc-compact": 1
    },
    "ids": [
+    "site-schema",
     "navbar",
     "site-nav",
     "main",
@@ -6181,7 +6877,7 @@
     "cd-tools-h",
     "whatsapp-widget"
    ],
-   "htmlBytes": 59999,
+   "htmlBytes": 63010,
    "network": [
     {
      "method": "GET",
@@ -6191,21 +6887,7 @@
    "externalHosts": [
     "www.googletagmanager.com"
    ],
-   "desktopShot": {
-    "width": 1280,
-    "height": 5447,
-    "files": [
-     "courses__google-ads-desktop.jpg"
-    ]
-   },
    "desktopDocHeight": 5447,
-   "mobileShot": {
-    "width": 375,
-    "height": 9375,
-    "files": [
-     "courses__google-ads-mobile.jpg"
-    ]
-   },
    "mobileOverflowX": false,
    "mobileDocHeight": 9375
   },
@@ -6295,7 +6977,138 @@
       "as": null
      }
     ],
-    "jsonLd": [],
+    "jsonLd": [
+     {
+      "@context": "https://schema.org",
+      "@graph": [
+       {
+        "@type": [
+         "Person",
+         "Organization"
+        ],
+        "@id": "https://shashwatyadav.com/#person",
+        "name": "Shashwat Yadav",
+        "url": "https://shashwatyadav.com/",
+        "image": "https://shashwatyadav.com/assets/images/shashwat-yadav-performance-marketing-expert.webp",
+        "jobTitle": "Ad Performance Marketing Head",
+        "worksFor": {
+         "@type": "Organization",
+         "name": "The Digital Agency"
+        },
+        "address": {
+         "@type": "PostalAddress",
+         "addressLocality": "Raipur",
+         "addressRegion": "Chhattisgarh",
+         "addressCountry": "IN"
+        },
+        "telephone": "+91 70001 98366",
+        "email": "shashwatyadav012345@gmail.com",
+        "sameAs": [
+         "https://www.linkedin.com/in/shashwat-yadav-9258bb131",
+         "https://www.instagram.com/shashwat.ai.seo"
+        ],
+        "alumniOf": {
+         "@type": "EducationalOrganization",
+         "name": "Shankar Charya Technical Campus"
+        },
+        "knowsAbout": [
+         "Performance marketing",
+         "Meta Ads",
+         "Google Ads",
+         "LinkedIn Ads",
+         "Lead generation",
+         "Google Tag Manager",
+         "GA4",
+         "Meta Pixel",
+         "Conversion tracking",
+         "Technical SEO",
+         "Local SEO",
+         "Google Business Profile",
+         "GEO and AI search optimisation",
+         "WordPress",
+         "Elementor",
+         "Claude Code",
+         "n8n",
+         "AI agents"
+        ]
+       },
+       {
+        "@type": "WebSite",
+        "@id": "https://shashwatyadav.com/#website",
+        "url": "https://shashwatyadav.com",
+        "name": "Shashwat Yadav",
+        "publisher": {
+         "@id": "https://shashwatyadav.com/#person"
+        },
+        "inLanguage": "en-US"
+       },
+       {
+        "@type": "BreadcrumbList",
+        "@id": "https://shashwatyadav.com/courses/master-classes/#breadcrumb",
+        "itemListElement": [
+         {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://shashwatyadav.com/"
+         },
+         {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Courses",
+          "item": "https://shashwatyadav.com/courses/"
+         },
+         {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Master Classes",
+          "item": "https://shashwatyadav.com/courses/master-classes/"
+         }
+        ]
+       },
+       {
+        "@type": "WebPage",
+        "@id": "https://shashwatyadav.com/courses/master-classes/#webpage",
+        "url": "https://shashwatyadav.com/courses/master-classes/",
+        "name": "Master Classes: 3-Hour Live Deep Dives | Shashwat Yadav",
+        "description": "Join 3-hour live master classes on Google Meet, each covering one skill hands-on from start to finish. Start with Meta Ads lead generation basics.",
+        "isPartOf": {
+         "@id": "https://shashwatyadav.com/#website"
+        },
+        "inLanguage": "en-US",
+        "breadcrumb": {
+         "@id": "https://shashwatyadav.com/courses/master-classes/#breadcrumb"
+        },
+        "mainEntity": {
+         "@id": "https://shashwatyadav.com/courses/master-classes/#course"
+        }
+       },
+       {
+        "@type": "Course",
+        "@id": "https://shashwatyadav.com/courses/master-classes/#course",
+        "name": "Master Classes",
+        "description": "Join 3-hour live master classes on Google Meet, each covering one skill hands-on from start to finish. Start with Meta Ads lead generation basics.",
+        "url": "https://shashwatyadav.com/courses/master-classes/",
+        "provider": {
+         "@id": "https://shashwatyadav.com/#the-digital-school"
+        },
+        "hasCourseInstance": {
+         "@type": "CourseInstance",
+         "courseMode": "online",
+         "instructor": {
+          "@id": "https://shashwatyadav.com/#person"
+         },
+         "courseWorkload": "PT3H"
+        }
+       },
+       {
+        "@type": "Organization",
+        "@id": "https://shashwatyadav.com/#the-digital-school",
+        "name": "The Digital School"
+       }
+      ]
+     }
+    ],
     "scripts": [
      {
       "inline": "7da60269",
@@ -6787,6 +7600,7 @@
     "data-master-enrol": 1
    },
    "ids": [
+    "site-schema",
     "navbar",
     "site-nav",
     "main",
@@ -6795,7 +7609,7 @@
     "cd-types-h",
     "whatsapp-widget"
    ],
-   "htmlBytes": 21134,
+   "htmlBytes": 24168,
    "network": [
     {
      "method": "GET",
@@ -6809,21 +7623,7 @@
    "externalHosts": [
     "www.googletagmanager.com"
    ],
-   "desktopShot": {
-    "width": 1280,
-    "height": 2576,
-    "files": [
-     "courses__master-classes-desktop.jpg"
-    ]
-   },
    "desktopDocHeight": 2576,
-   "mobileShot": {
-    "width": 375,
-    "height": 3640,
-    "files": [
-     "courses__master-classes-mobile.jpg"
-    ]
-   },
    "mobileOverflowX": false,
    "mobileDocHeight": 3640
   },
@@ -6913,7 +7713,138 @@
       "as": null
      }
     ],
-    "jsonLd": [],
+    "jsonLd": [
+     {
+      "@context": "https://schema.org",
+      "@graph": [
+       {
+        "@type": [
+         "Person",
+         "Organization"
+        ],
+        "@id": "https://shashwatyadav.com/#person",
+        "name": "Shashwat Yadav",
+        "url": "https://shashwatyadav.com/",
+        "image": "https://shashwatyadav.com/assets/images/shashwat-yadav-performance-marketing-expert.webp",
+        "jobTitle": "Ad Performance Marketing Head",
+        "worksFor": {
+         "@type": "Organization",
+         "name": "The Digital Agency"
+        },
+        "address": {
+         "@type": "PostalAddress",
+         "addressLocality": "Raipur",
+         "addressRegion": "Chhattisgarh",
+         "addressCountry": "IN"
+        },
+        "telephone": "+91 70001 98366",
+        "email": "shashwatyadav012345@gmail.com",
+        "sameAs": [
+         "https://www.linkedin.com/in/shashwat-yadav-9258bb131",
+         "https://www.instagram.com/shashwat.ai.seo"
+        ],
+        "alumniOf": {
+         "@type": "EducationalOrganization",
+         "name": "Shankar Charya Technical Campus"
+        },
+        "knowsAbout": [
+         "Performance marketing",
+         "Meta Ads",
+         "Google Ads",
+         "LinkedIn Ads",
+         "Lead generation",
+         "Google Tag Manager",
+         "GA4",
+         "Meta Pixel",
+         "Conversion tracking",
+         "Technical SEO",
+         "Local SEO",
+         "Google Business Profile",
+         "GEO and AI search optimisation",
+         "WordPress",
+         "Elementor",
+         "Claude Code",
+         "n8n",
+         "AI agents"
+        ]
+       },
+       {
+        "@type": "WebSite",
+        "@id": "https://shashwatyadav.com/#website",
+        "url": "https://shashwatyadav.com",
+        "name": "Shashwat Yadav",
+        "publisher": {
+         "@id": "https://shashwatyadav.com/#person"
+        },
+        "inLanguage": "en-US"
+       },
+       {
+        "@type": "BreadcrumbList",
+        "@id": "https://shashwatyadav.com/courses/meta-ads/#breadcrumb",
+        "itemListElement": [
+         {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://shashwatyadav.com/"
+         },
+         {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Courses",
+          "item": "https://shashwatyadav.com/courses/"
+         },
+         {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Meta Ads Course",
+          "item": "https://shashwatyadav.com/courses/meta-ads/"
+         }
+        ]
+       },
+       {
+        "@type": "WebPage",
+        "@id": "https://shashwatyadav.com/courses/meta-ads/#webpage",
+        "url": "https://shashwatyadav.com/courses/meta-ads/",
+        "name": "Meta Ads Course: 14 Live Classes | Shashwat Yadav",
+        "description": "Learn Meta Ads in 14 live 90-minute classes: lead and engagement campaigns, creative, Advantage+, Meta Pixel tracking, reporting and scaling.",
+        "isPartOf": {
+         "@id": "https://shashwatyadav.com/#website"
+        },
+        "inLanguage": "en-US",
+        "breadcrumb": {
+         "@id": "https://shashwatyadav.com/courses/meta-ads/#breadcrumb"
+        },
+        "mainEntity": {
+         "@id": "https://shashwatyadav.com/courses/meta-ads/#course"
+        }
+       },
+       {
+        "@type": "Course",
+        "@id": "https://shashwatyadav.com/courses/meta-ads/#course",
+        "name": "Meta Ads Course",
+        "description": "Learn Meta Ads in 14 live 90-minute classes: lead and engagement campaigns, creative, Advantage+, Meta Pixel tracking, reporting and scaling.",
+        "url": "https://shashwatyadav.com/courses/meta-ads/",
+        "provider": {
+         "@id": "https://shashwatyadav.com/#the-digital-school"
+        },
+        "hasCourseInstance": {
+         "@type": "CourseInstance",
+         "courseMode": "online",
+         "instructor": {
+          "@id": "https://shashwatyadav.com/#person"
+         },
+         "courseWorkload": "PT21H"
+        }
+       },
+       {
+        "@type": "Organization",
+        "@id": "https://shashwatyadav.com/#the-digital-school",
+        "name": "The Digital School"
+       }
+      ]
+     }
+    ],
     "scripts": [
      {
       "inline": "7da60269",
@@ -7550,6 +8481,7 @@
     "data-lc-compact": 1
    },
    "ids": [
+    "site-schema",
     "navbar",
     "site-nav",
     "main",
@@ -7587,7 +8519,7 @@
     "cd-tools-h",
     "whatsapp-widget"
    ],
-   "htmlBytes": 49069,
+   "htmlBytes": 52042,
    "network": [
     {
      "method": "GET",
@@ -7597,21 +8529,7 @@
    "externalHosts": [
     "www.googletagmanager.com"
    ],
-   "desktopShot": {
-    "width": 1280,
-    "height": 5124,
-    "files": [
-     "courses__meta-ads-desktop.jpg"
-    ]
-   },
    "desktopDocHeight": 5124,
-   "mobileShot": {
-    "width": 375,
-    "height": 8351,
-    "files": [
-     "courses__meta-ads-mobile.jpg"
-    ]
-   },
    "mobileOverflowX": false,
    "mobileDocHeight": 8351
   },
@@ -7729,7 +8647,144 @@
       "as": null
      }
     ],
-    "jsonLd": [],
+    "jsonLd": [
+     {
+      "@context": "https://schema.org",
+      "@graph": [
+       {
+        "@type": [
+         "Person",
+         "Organization"
+        ],
+        "@id": "https://shashwatyadav.com/#person",
+        "name": "Shashwat Yadav",
+        "url": "https://shashwatyadav.com/",
+        "image": "https://shashwatyadav.com/assets/images/shashwat-yadav-performance-marketing-expert.webp",
+        "jobTitle": "Ad Performance Marketing Head",
+        "worksFor": {
+         "@type": "Organization",
+         "name": "The Digital Agency"
+        },
+        "address": {
+         "@type": "PostalAddress",
+         "addressLocality": "Raipur",
+         "addressRegion": "Chhattisgarh",
+         "addressCountry": "IN"
+        },
+        "telephone": "+91 70001 98366",
+        "email": "shashwatyadav012345@gmail.com",
+        "sameAs": [
+         "https://www.linkedin.com/in/shashwat-yadav-9258bb131",
+         "https://www.instagram.com/shashwat.ai.seo"
+        ],
+        "alumniOf": {
+         "@type": "EducationalOrganization",
+         "name": "Shankar Charya Technical Campus"
+        },
+        "knowsAbout": [
+         "Performance marketing",
+         "Meta Ads",
+         "Google Ads",
+         "LinkedIn Ads",
+         "Lead generation",
+         "Google Tag Manager",
+         "GA4",
+         "Meta Pixel",
+         "Conversion tracking",
+         "Technical SEO",
+         "Local SEO",
+         "Google Business Profile",
+         "GEO and AI search optimisation",
+         "WordPress",
+         "Elementor",
+         "Claude Code",
+         "n8n",
+         "AI agents"
+        ]
+       },
+       {
+        "@type": "WebSite",
+        "@id": "https://shashwatyadav.com/#website",
+        "url": "https://shashwatyadav.com",
+        "name": "Shashwat Yadav",
+        "publisher": {
+         "@id": "https://shashwatyadav.com/#person"
+        },
+        "inLanguage": "en-US"
+       },
+       {
+        "@type": "BreadcrumbList",
+        "@id": "https://shashwatyadav.com/meta-ads-lead-generation-master-class/#breadcrumb",
+        "itemListElement": [
+         {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://shashwatyadav.com/"
+         },
+         {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Courses",
+          "item": "https://shashwatyadav.com/courses/"
+         },
+         {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Master Classes",
+          "item": "https://shashwatyadav.com/courses/master-classes/"
+         },
+         {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Meta Ads Lead Generation Basics",
+          "item": "https://shashwatyadav.com/meta-ads-lead-generation-master-class/"
+         }
+        ]
+       },
+       {
+        "@type": "WebPage",
+        "@id": "https://shashwatyadav.com/meta-ads-lead-generation-master-class/#webpage",
+        "url": "https://shashwatyadav.com/meta-ads-lead-generation-master-class/",
+        "name": "Meta Ads Lead Generation Basics: 3-Hour Master Class",
+        "description": "Build your first Meta lead campaign live in one 3-hour master class: audience, placements, ads, instant form and follow-up. Live on Google Meet.",
+        "isPartOf": {
+         "@id": "https://shashwatyadav.com/#website"
+        },
+        "inLanguage": "en-US",
+        "breadcrumb": {
+         "@id": "https://shashwatyadav.com/meta-ads-lead-generation-master-class/#breadcrumb"
+        },
+        "mainEntity": {
+         "@id": "https://shashwatyadav.com/meta-ads-lead-generation-master-class/#course"
+        }
+       },
+       {
+        "@type": "Course",
+        "@id": "https://shashwatyadav.com/meta-ads-lead-generation-master-class/#course",
+        "name": "Meta Ads Lead Generation Basics",
+        "description": "Build your first Meta lead campaign live in one 3-hour master class: audience, placements, ads, instant form and follow-up. Live on Google Meet.",
+        "url": "https://shashwatyadav.com/meta-ads-lead-generation-master-class/",
+        "provider": {
+         "@id": "https://shashwatyadav.com/#the-digital-school"
+        },
+        "hasCourseInstance": {
+         "@type": "CourseInstance",
+         "courseMode": "online",
+         "instructor": {
+          "@id": "https://shashwatyadav.com/#person"
+         },
+         "courseWorkload": "PT3H"
+        }
+       },
+       {
+        "@type": "Organization",
+        "@id": "https://shashwatyadav.com/#the-digital-school",
+        "name": "The Digital School"
+       }
+      ]
+     }
+    ],
     "scripts": [
      {
       "inline": "7da60269",
@@ -8205,6 +9260,7 @@
     "data-master-enrol": 1
    },
    "ids": [
+    "site-schema",
     "navbar",
     "site-nav",
     "main",
@@ -8215,7 +9271,7 @@
     "cd-faq-h",
     "whatsapp-widget"
    ],
-   "htmlBytes": 20601,
+   "htmlBytes": 23899,
    "network": [
     {
      "method": "GET",
@@ -8229,21 +9285,7 @@
    "externalHosts": [
     "www.googletagmanager.com"
    ],
-   "desktopShot": {
-    "width": 1280,
-    "height": 4306,
-    "files": [
-     "meta-ads-lead-generation-master-class-desktop.jpg"
-    ]
-   },
    "desktopDocHeight": 4306,
-   "mobileShot": {
-    "width": 375,
-    "height": 5732,
-    "files": [
-     "meta-ads-lead-generation-master-class-mobile.jpg"
-    ]
-   },
    "mobileOverflowX": false,
    "mobileDocHeight": 5732
   },
@@ -8272,7 +9314,7 @@
       "property": null,
       "httpEquiv": null,
       "charset": null,
-      "content": "Case studies across real estate, healthcare, education, and retail — performance marketing results by Shashwat Yadav."
+      "content": "Case studies across real estate, healthcare, education, and retail: Meta Ads and Google Ads results by Shashwat Yadav, a performance marketer in Raipur."
      }
     ],
     "links": [
@@ -8326,7 +9368,156 @@
       "as": null
      }
     ],
-    "jsonLd": [],
+    "jsonLd": [
+     {
+      "@context": "https://schema.org",
+      "@graph": [
+       {
+        "@type": [
+         "Person",
+         "Organization"
+        ],
+        "@id": "https://shashwatyadav.com/#person",
+        "name": "Shashwat Yadav",
+        "url": "https://shashwatyadav.com/",
+        "image": "https://shashwatyadav.com/assets/images/shashwat-yadav-performance-marketing-expert.webp",
+        "jobTitle": "Ad Performance Marketing Head",
+        "worksFor": {
+         "@type": "Organization",
+         "name": "The Digital Agency"
+        },
+        "address": {
+         "@type": "PostalAddress",
+         "addressLocality": "Raipur",
+         "addressRegion": "Chhattisgarh",
+         "addressCountry": "IN"
+        },
+        "telephone": "+91 70001 98366",
+        "email": "shashwatyadav012345@gmail.com",
+        "sameAs": [
+         "https://www.linkedin.com/in/shashwat-yadav-9258bb131",
+         "https://www.instagram.com/shashwat.ai.seo"
+        ],
+        "alumniOf": {
+         "@type": "EducationalOrganization",
+         "name": "Shankar Charya Technical Campus"
+        },
+        "knowsAbout": [
+         "Performance marketing",
+         "Meta Ads",
+         "Google Ads",
+         "LinkedIn Ads",
+         "Lead generation",
+         "Google Tag Manager",
+         "GA4",
+         "Meta Pixel",
+         "Conversion tracking",
+         "Technical SEO",
+         "Local SEO",
+         "Google Business Profile",
+         "GEO and AI search optimisation",
+         "WordPress",
+         "Elementor",
+         "Claude Code",
+         "n8n",
+         "AI agents"
+        ]
+       },
+       {
+        "@type": "WebSite",
+        "@id": "https://shashwatyadav.com/#website",
+        "url": "https://shashwatyadav.com",
+        "name": "Shashwat Yadav",
+        "publisher": {
+         "@id": "https://shashwatyadav.com/#person"
+        },
+        "inLanguage": "en-US"
+       },
+       {
+        "@type": "BreadcrumbList",
+        "@id": "https://shashwatyadav.com/portfolio/#breadcrumb",
+        "itemListElement": [
+         {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://shashwatyadav.com/"
+         },
+         {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Portfolio",
+          "item": "https://shashwatyadav.com/portfolio/"
+         }
+        ]
+       },
+       {
+        "@type": [
+         "WebPage",
+         "CollectionPage"
+        ],
+        "@id": "https://shashwatyadav.com/portfolio/#webpage",
+        "url": "https://shashwatyadav.com/portfolio/",
+        "name": "Portfolio | Shashwat Yadav",
+        "description": "Case studies across real estate, healthcare, education, and retail: Meta Ads and Google Ads results by Shashwat Yadav, a performance marketer in Raipur.",
+        "isPartOf": {
+         "@id": "https://shashwatyadav.com/#website"
+        },
+        "inLanguage": "en-US",
+        "breadcrumb": {
+         "@id": "https://shashwatyadav.com/portfolio/#breadcrumb"
+        },
+        "mainEntity": {
+         "@type": "ItemList",
+         "itemListElement": [
+          {
+           "@type": "ListItem",
+           "position": 1,
+           "url": "https://shashwatyadav.com/portfolio/residential-real-estate-meta-ads-2026/",
+           "name": "2BHK/3BHK Residential Launch — Meta Ads Lead Generation"
+          },
+          {
+           "@type": "ListItem",
+           "position": 2,
+           "url": "https://shashwatyadav.com/portfolio/commercial-real-estate-meta-google-2026/",
+           "name": "Commercial Showroom, Office & Retail Space — Multi-Platform Lead Generation"
+          },
+          {
+           "@type": "ListItem",
+           "position": 3,
+           "url": "https://shashwatyadav.com/portfolio/hospital-multi-treatment-2026/",
+           "name": "Multi-Treatment Hospital Campaign — IVF, Cataract, Painless Labour, LASIK & OPD"
+          },
+          {
+           "@type": "ListItem",
+           "position": 4,
+           "url": "https://shashwatyadav.com/portfolio/chaitanya-greens-residential-2026/",
+           "name": "Chaitanya Greens — Residential Lead Generation"
+          },
+          {
+           "@type": "ListItem",
+           "position": 5,
+           "url": "https://shashwatyadav.com/portfolio/vasarsha-reality-residential-2026/",
+           "name": "Vasarsha Reality — Residential Lead Generation"
+          },
+          {
+           "@type": "ListItem",
+           "position": 6,
+           "url": "https://shashwatyadav.com/portfolio/life-educare-school-marketing-2026/",
+           "name": "LIFE Educare — School Setup & Consultancy Lead Generation"
+          },
+          {
+           "@type": "ListItem",
+           "position": 7,
+           "url": "https://shashwatyadav.com/portfolio/salon-academy-admissions-2026/",
+           "name": "Premium Salon & Academy — Admission Lead Generation"
+          }
+         ]
+        }
+       }
+      ]
+     }
+    ],
     "scripts": [
      {
       "inline": "7da60269",
@@ -8805,6 +9996,7 @@
     "data-lc-compact": 1
    },
    "ids": [
+    "site-schema",
     "navbar",
     "site-nav",
     "main",
@@ -8812,7 +10004,7 @@
     "portfolio-grid",
     "whatsapp-widget"
    ],
-   "htmlBytes": 17122,
+   "htmlBytes": 20616,
    "network": [
     {
      "method": "GET",
@@ -8822,21 +10014,7 @@
    "externalHosts": [
     "www.googletagmanager.com"
    ],
-   "desktopShot": {
-    "width": 1280,
-    "height": 2537,
-    "files": [
-     "portfolio-desktop.jpg"
-    ]
-   },
    "desktopDocHeight": 2537,
-   "mobileShot": {
-    "width": 375,
-    "height": 4766,
-    "files": [
-     "portfolio-mobile.jpg"
-    ]
-   },
    "mobileOverflowX": false,
    "mobileDocHeight": 4766
   },
@@ -8844,7 +10022,7 @@
    "url": "/portfolio/chaitanya-greens-residential-2026/",
    "head": {
     "lang": "en",
-    "title": "Chaitanya Greens — Residential Real Estate Lead Generation | Shashwat Yadav",
+    "title": "Residential Real Estate Lead Generation: Chaitanya Greens",
     "meta": [
      {
       "name": null,
@@ -8919,7 +10097,139 @@
       "as": null
      }
     ],
-    "jsonLd": [],
+    "jsonLd": [
+     {
+      "@context": "https://schema.org",
+      "@graph": [
+       {
+        "@type": [
+         "Person",
+         "Organization"
+        ],
+        "@id": "https://shashwatyadav.com/#person",
+        "name": "Shashwat Yadav",
+        "url": "https://shashwatyadav.com/",
+        "image": "https://shashwatyadav.com/assets/images/shashwat-yadav-performance-marketing-expert.webp",
+        "jobTitle": "Ad Performance Marketing Head",
+        "worksFor": {
+         "@type": "Organization",
+         "name": "The Digital Agency"
+        },
+        "address": {
+         "@type": "PostalAddress",
+         "addressLocality": "Raipur",
+         "addressRegion": "Chhattisgarh",
+         "addressCountry": "IN"
+        },
+        "telephone": "+91 70001 98366",
+        "email": "shashwatyadav012345@gmail.com",
+        "sameAs": [
+         "https://www.linkedin.com/in/shashwat-yadav-9258bb131",
+         "https://www.instagram.com/shashwat.ai.seo"
+        ],
+        "alumniOf": {
+         "@type": "EducationalOrganization",
+         "name": "Shankar Charya Technical Campus"
+        },
+        "knowsAbout": [
+         "Performance marketing",
+         "Meta Ads",
+         "Google Ads",
+         "LinkedIn Ads",
+         "Lead generation",
+         "Google Tag Manager",
+         "GA4",
+         "Meta Pixel",
+         "Conversion tracking",
+         "Technical SEO",
+         "Local SEO",
+         "Google Business Profile",
+         "GEO and AI search optimisation",
+         "WordPress",
+         "Elementor",
+         "Claude Code",
+         "n8n",
+         "AI agents"
+        ]
+       },
+       {
+        "@type": "WebSite",
+        "@id": "https://shashwatyadav.com/#website",
+        "url": "https://shashwatyadav.com",
+        "name": "Shashwat Yadav",
+        "publisher": {
+         "@id": "https://shashwatyadav.com/#person"
+        },
+        "inLanguage": "en-US"
+       },
+       {
+        "@type": "BreadcrumbList",
+        "@id": "https://shashwatyadav.com/portfolio/chaitanya-greens-residential-2026/#breadcrumb",
+        "itemListElement": [
+         {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://shashwatyadav.com/"
+         },
+         {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Portfolio",
+          "item": "https://shashwatyadav.com/portfolio/"
+         },
+         {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Chaitanya Greens — Residential Lead Generation",
+          "item": "https://shashwatyadav.com/portfolio/chaitanya-greens-residential-2026/"
+         }
+        ]
+       },
+       {
+        "@type": "WebPage",
+        "@id": "https://shashwatyadav.com/portfolio/chaitanya-greens-residential-2026/#webpage",
+        "url": "https://shashwatyadav.com/portfolio/chaitanya-greens-residential-2026/",
+        "name": "Residential Real Estate Lead Generation: Chaitanya Greens",
+        "description": "300+ qualified leads/month for Chaitanya Greens, a residential real estate developer in Raipur, on ₹45K/month Meta Ads spend.",
+        "isPartOf": {
+         "@id": "https://shashwatyadav.com/#website"
+        },
+        "inLanguage": "en-US",
+        "breadcrumb": {
+         "@id": "https://shashwatyadav.com/portfolio/chaitanya-greens-residential-2026/#breadcrumb"
+        },
+        "mainEntity": {
+         "@id": "https://shashwatyadav.com/portfolio/chaitanya-greens-residential-2026/#casestudy"
+        }
+       },
+       {
+        "@type": [
+         "CreativeWork",
+         "Article"
+        ],
+        "@id": "https://shashwatyadav.com/portfolio/chaitanya-greens-residential-2026/#casestudy",
+        "headline": "Chaitanya Greens — Residential Lead Generation",
+        "name": "Chaitanya Greens — Residential Lead Generation",
+        "description": "300+ qualified leads/month for Chaitanya Greens, a residential real estate developer in Raipur, on ₹45K/month Meta Ads spend.",
+        "url": "https://shashwatyadav.com/portfolio/chaitanya-greens-residential-2026/",
+        "author": {
+         "@id": "https://shashwatyadav.com/#person"
+        },
+        "publisher": {
+         "@id": "https://shashwatyadav.com/#person"
+        },
+        "inLanguage": "en-US",
+        "datePublished": "2026-09-14T23:11:03+05:30",
+        "dateModified": "2026-10-21T15:48:04+05:30",
+        "about": "Residential Real Estate",
+        "isPartOf": {
+         "@id": "https://shashwatyadav.com/portfolio/chaitanya-greens-residential-2026/#webpage"
+        }
+       }
+      ]
+     }
+    ],
     "scripts": [
      {
       "inline": "7da60269",
@@ -9346,12 +10656,13 @@
     "data-lc-compact": 1
    },
    "ids": [
+    "site-schema",
     "navbar",
     "site-nav",
     "main",
     "whatsapp-widget"
    ],
-   "htmlBytes": 12801,
+   "htmlBytes": 16122,
    "network": [
     {
      "method": "GET",
@@ -9361,21 +10672,7 @@
    "externalHosts": [
     "www.googletagmanager.com"
    ],
-   "desktopShot": {
-    "width": 1280,
-    "height": 2003,
-    "files": [
-     "portfolio__chaitanya-greens-residential-2026-desktop.jpg"
-    ]
-   },
    "desktopDocHeight": 2003,
-   "mobileShot": {
-    "width": 375,
-    "height": 2709,
-    "files": [
-     "portfolio__chaitanya-greens-residential-2026-mobile.jpg"
-    ]
-   },
    "mobileOverflowX": false,
    "mobileDocHeight": 2709
   },
@@ -9383,7 +10680,7 @@
    "url": "/portfolio/commercial-real-estate-meta-google-2026/",
    "head": {
     "lang": "en",
-    "title": "Commercial Showroom, Office & Retail Space — Multi-Platform Lead Generation | Shashwat Yadav",
+    "title": "Commercial Real Estate Lead Generation: Meta + Google Ads",
     "meta": [
      {
       "name": null,
@@ -9458,7 +10755,139 @@
       "as": null
      }
     ],
-    "jsonLd": [],
+    "jsonLd": [
+     {
+      "@context": "https://schema.org",
+      "@graph": [
+       {
+        "@type": [
+         "Person",
+         "Organization"
+        ],
+        "@id": "https://shashwatyadav.com/#person",
+        "name": "Shashwat Yadav",
+        "url": "https://shashwatyadav.com/",
+        "image": "https://shashwatyadav.com/assets/images/shashwat-yadav-performance-marketing-expert.webp",
+        "jobTitle": "Ad Performance Marketing Head",
+        "worksFor": {
+         "@type": "Organization",
+         "name": "The Digital Agency"
+        },
+        "address": {
+         "@type": "PostalAddress",
+         "addressLocality": "Raipur",
+         "addressRegion": "Chhattisgarh",
+         "addressCountry": "IN"
+        },
+        "telephone": "+91 70001 98366",
+        "email": "shashwatyadav012345@gmail.com",
+        "sameAs": [
+         "https://www.linkedin.com/in/shashwat-yadav-9258bb131",
+         "https://www.instagram.com/shashwat.ai.seo"
+        ],
+        "alumniOf": {
+         "@type": "EducationalOrganization",
+         "name": "Shankar Charya Technical Campus"
+        },
+        "knowsAbout": [
+         "Performance marketing",
+         "Meta Ads",
+         "Google Ads",
+         "LinkedIn Ads",
+         "Lead generation",
+         "Google Tag Manager",
+         "GA4",
+         "Meta Pixel",
+         "Conversion tracking",
+         "Technical SEO",
+         "Local SEO",
+         "Google Business Profile",
+         "GEO and AI search optimisation",
+         "WordPress",
+         "Elementor",
+         "Claude Code",
+         "n8n",
+         "AI agents"
+        ]
+       },
+       {
+        "@type": "WebSite",
+        "@id": "https://shashwatyadav.com/#website",
+        "url": "https://shashwatyadav.com",
+        "name": "Shashwat Yadav",
+        "publisher": {
+         "@id": "https://shashwatyadav.com/#person"
+        },
+        "inLanguage": "en-US"
+       },
+       {
+        "@type": "BreadcrumbList",
+        "@id": "https://shashwatyadav.com/portfolio/commercial-real-estate-meta-google-2026/#breadcrumb",
+        "itemListElement": [
+         {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://shashwatyadav.com/"
+         },
+         {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Portfolio",
+          "item": "https://shashwatyadav.com/portfolio/"
+         },
+         {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Commercial Showroom, Office & Retail Space — Multi-Platform Lead Generation",
+          "item": "https://shashwatyadav.com/portfolio/commercial-real-estate-meta-google-2026/"
+         }
+        ]
+       },
+       {
+        "@type": "WebPage",
+        "@id": "https://shashwatyadav.com/portfolio/commercial-real-estate-meta-google-2026/#webpage",
+        "url": "https://shashwatyadav.com/portfolio/commercial-real-estate-meta-google-2026/",
+        "name": "Commercial Real Estate Lead Generation: Meta + Google Ads",
+        "description": "152 qualified leads at ₹987 average cost per lead on high-ticket commercial inventory in Raipur, delivered via combined Meta Ads and Google Ads.",
+        "isPartOf": {
+         "@id": "https://shashwatyadav.com/#website"
+        },
+        "inLanguage": "en-US",
+        "breadcrumb": {
+         "@id": "https://shashwatyadav.com/portfolio/commercial-real-estate-meta-google-2026/#breadcrumb"
+        },
+        "mainEntity": {
+         "@id": "https://shashwatyadav.com/portfolio/commercial-real-estate-meta-google-2026/#casestudy"
+        }
+       },
+       {
+        "@type": [
+         "CreativeWork",
+         "Article"
+        ],
+        "@id": "https://shashwatyadav.com/portfolio/commercial-real-estate-meta-google-2026/#casestudy",
+        "headline": "Commercial Showroom, Office & Retail Space — Multi-Platform Lead Generation",
+        "name": "Commercial Showroom, Office & Retail Space — Multi-Platform Lead Generation",
+        "description": "152 qualified leads at ₹987 average cost per lead on high-ticket commercial inventory in Raipur, delivered via combined Meta Ads and Google Ads.",
+        "url": "https://shashwatyadav.com/portfolio/commercial-real-estate-meta-google-2026/",
+        "author": {
+         "@id": "https://shashwatyadav.com/#person"
+        },
+        "publisher": {
+         "@id": "https://shashwatyadav.com/#person"
+        },
+        "inLanguage": "en-US",
+        "datePublished": "2026-08-17T00:59:07+05:30",
+        "dateModified": "2026-10-21T15:48:04+05:30",
+        "about": "Commercial Real Estate",
+        "isPartOf": {
+         "@id": "https://shashwatyadav.com/portfolio/commercial-real-estate-meta-google-2026/#webpage"
+        }
+       }
+      ]
+     }
+    ],
     "scripts": [
      {
       "inline": "7da60269",
@@ -9895,12 +11324,13 @@
     "data-lc-compact": 1
    },
    "ids": [
+    "site-schema",
     "navbar",
     "site-nav",
     "main",
     "whatsapp-widget"
    ],
-   "htmlBytes": 15945,
+   "htmlBytes": 19427,
    "network": [
     {
      "method": "GET",
@@ -9910,21 +11340,7 @@
    "externalHosts": [
     "www.googletagmanager.com"
    ],
-   "desktopShot": {
-    "width": 1280,
-    "height": 3173,
-    "files": [
-     "portfolio__commercial-real-estate-meta-google-2026-desktop.jpg"
-    ]
-   },
    "desktopDocHeight": 3173,
-   "mobileShot": {
-    "width": 375,
-    "height": 4792,
-    "files": [
-     "portfolio__commercial-real-estate-meta-google-2026-mobile.jpg"
-    ]
-   },
    "mobileOverflowX": false,
    "mobileDocHeight": 4792
   },
@@ -9932,7 +11348,7 @@
    "url": "/portfolio/hospital-multi-treatment-2026/",
    "head": {
     "lang": "en",
-    "title": "Multi-Treatment Hospital Campaign — IVF, Cataract, Painless Labour, LASIK & OPD | Shashwat Yadav",
+    "title": "Multi-Treatment Hospital Lead Generation Case Study",
     "meta": [
      {
       "name": null,
@@ -9953,7 +11369,7 @@
       "property": null,
       "httpEquiv": null,
       "charset": null,
-      "content": "7,598 patient interactions generated across lead forms, WhatsApp, and phone calls for a multi-treatment hospital campaign in Raipur, via Meta Ads and Google Ads."
+      "content": "7,598 patient interactions from lead forms, WhatsApp and phone calls for a multi-treatment hospital in Raipur, via Meta Ads and Google Ads."
      }
     ],
     "links": [
@@ -10007,7 +11423,140 @@
       "as": null
      }
     ],
-    "jsonLd": [],
+    "jsonLd": [
+     {
+      "@context": "https://schema.org",
+      "@graph": [
+       {
+        "@type": [
+         "Person",
+         "Organization"
+        ],
+        "@id": "https://shashwatyadav.com/#person",
+        "name": "Shashwat Yadav",
+        "url": "https://shashwatyadav.com/",
+        "image": "https://shashwatyadav.com/assets/images/shashwat-yadav-performance-marketing-expert.webp",
+        "jobTitle": "Ad Performance Marketing Head",
+        "worksFor": {
+         "@type": "Organization",
+         "name": "The Digital Agency"
+        },
+        "address": {
+         "@type": "PostalAddress",
+         "addressLocality": "Raipur",
+         "addressRegion": "Chhattisgarh",
+         "addressCountry": "IN"
+        },
+        "telephone": "+91 70001 98366",
+        "email": "shashwatyadav012345@gmail.com",
+        "sameAs": [
+         "https://www.linkedin.com/in/shashwat-yadav-9258bb131",
+         "https://www.instagram.com/shashwat.ai.seo"
+        ],
+        "alumniOf": {
+         "@type": "EducationalOrganization",
+         "name": "Shankar Charya Technical Campus"
+        },
+        "knowsAbout": [
+         "Performance marketing",
+         "Meta Ads",
+         "Google Ads",
+         "LinkedIn Ads",
+         "Lead generation",
+         "Google Tag Manager",
+         "GA4",
+         "Meta Pixel",
+         "Conversion tracking",
+         "Technical SEO",
+         "Local SEO",
+         "Google Business Profile",
+         "GEO and AI search optimisation",
+         "WordPress",
+         "Elementor",
+         "Claude Code",
+         "n8n",
+         "AI agents"
+        ]
+       },
+       {
+        "@type": "WebSite",
+        "@id": "https://shashwatyadav.com/#website",
+        "url": "https://shashwatyadav.com",
+        "name": "Shashwat Yadav",
+        "publisher": {
+         "@id": "https://shashwatyadav.com/#person"
+        },
+        "inLanguage": "en-US"
+       },
+       {
+        "@type": "BreadcrumbList",
+        "@id": "https://shashwatyadav.com/portfolio/hospital-multi-treatment-2026/#breadcrumb",
+        "itemListElement": [
+         {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://shashwatyadav.com/"
+         },
+         {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Portfolio",
+          "item": "https://shashwatyadav.com/portfolio/"
+         },
+         {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Multi-Treatment Hospital Campaign — IVF, Cataract, Painless Labour, LASIK & OPD",
+          "item": "https://shashwatyadav.com/portfolio/hospital-multi-treatment-2026/"
+         }
+        ]
+       },
+       {
+        "@type": "WebPage",
+        "@id": "https://shashwatyadav.com/portfolio/hospital-multi-treatment-2026/#webpage",
+        "url": "https://shashwatyadav.com/portfolio/hospital-multi-treatment-2026/",
+        "name": "Multi-Treatment Hospital Lead Generation Case Study",
+        "description": "7,598 patient interactions from lead forms, WhatsApp and phone calls for a multi-treatment hospital in Raipur, via Meta Ads and Google Ads.",
+        "isPartOf": {
+         "@id": "https://shashwatyadav.com/#website"
+        },
+        "inLanguage": "en-US",
+        "breadcrumb": {
+         "@id": "https://shashwatyadav.com/portfolio/hospital-multi-treatment-2026/#breadcrumb"
+        },
+        "mainEntity": {
+         "@id": "https://shashwatyadav.com/portfolio/hospital-multi-treatment-2026/#casestudy"
+        }
+       },
+       {
+        "@type": [
+         "CreativeWork",
+         "Article"
+        ],
+        "@id": "https://shashwatyadav.com/portfolio/hospital-multi-treatment-2026/#casestudy",
+        "headline": "Multi-Treatment Hospital Campaign — IVF, Cataract, Painless Labour, LASIK & OPD",
+        "name": "Multi-Treatment Hospital Campaign — IVF, Cataract, Painless Labour, LASIK & OPD",
+        "description": "7,598 patient interactions from lead forms, WhatsApp and phone calls for a multi-treatment hospital in Raipur, via Meta Ads and Google Ads.",
+        "url": "https://shashwatyadav.com/portfolio/hospital-multi-treatment-2026/",
+        "author": {
+         "@id": "https://shashwatyadav.com/#person"
+        },
+        "publisher": {
+         "@id": "https://shashwatyadav.com/#person"
+        },
+        "inLanguage": "en-US",
+        "datePublished": "2026-08-17T00:59:07+05:30",
+        "dateModified": "2026-10-21T15:48:04+05:30",
+        "about": "Healthcare",
+        "temporalCoverage": "2026-03/2026-08",
+        "isPartOf": {
+         "@id": "https://shashwatyadav.com/portfolio/hospital-multi-treatment-2026/#webpage"
+        }
+       }
+      ]
+     }
+    ],
     "scripts": [
      {
       "inline": "7da60269",
@@ -10444,12 +11993,13 @@
     "data-lc-compact": 1
    },
    "ids": [
+    "site-schema",
     "navbar",
     "site-nav",
     "main",
     "whatsapp-widget"
    ],
-   "htmlBytes": 16581,
+   "htmlBytes": 19962,
    "network": [
     {
      "method": "GET",
@@ -10459,21 +12009,7 @@
    "externalHosts": [
     "www.googletagmanager.com"
    ],
-   "desktopShot": {
-    "width": 1280,
-    "height": 3430,
-    "files": [
-     "portfolio__hospital-multi-treatment-2026-desktop.jpg"
-    ]
-   },
    "desktopDocHeight": 3430,
-   "mobileShot": {
-    "width": 375,
-    "height": 5199,
-    "files": [
-     "portfolio__hospital-multi-treatment-2026-mobile.jpg"
-    ]
-   },
    "mobileOverflowX": false,
    "mobileDocHeight": 5199
   },
@@ -10481,7 +12017,7 @@
    "url": "/portfolio/life-educare-school-marketing-2026/",
    "head": {
     "lang": "en",
-    "title": "LIFE Educare — School Setup & Consultancy Lead Generation | Shashwat Yadav",
+    "title": "School Setup Lead Generation: LIFE Educare Case Study",
     "meta": [
      {
       "name": null,
@@ -10502,7 +12038,7 @@
       "property": null,
       "httpEquiv": null,
       "charset": null,
-      "content": "50 leads/month for LIFE Educare's school setup and consultancy services, on ₹26K/month ad spend."
+      "content": "50 leads a month for LIFE Educare's school setup and consultancy services, on ₹26K/month ad spend. Agency client work, ongoing."
      }
     ],
     "links": [
@@ -10556,7 +12092,139 @@
       "as": null
      }
     ],
-    "jsonLd": [],
+    "jsonLd": [
+     {
+      "@context": "https://schema.org",
+      "@graph": [
+       {
+        "@type": [
+         "Person",
+         "Organization"
+        ],
+        "@id": "https://shashwatyadav.com/#person",
+        "name": "Shashwat Yadav",
+        "url": "https://shashwatyadav.com/",
+        "image": "https://shashwatyadav.com/assets/images/shashwat-yadav-performance-marketing-expert.webp",
+        "jobTitle": "Ad Performance Marketing Head",
+        "worksFor": {
+         "@type": "Organization",
+         "name": "The Digital Agency"
+        },
+        "address": {
+         "@type": "PostalAddress",
+         "addressLocality": "Raipur",
+         "addressRegion": "Chhattisgarh",
+         "addressCountry": "IN"
+        },
+        "telephone": "+91 70001 98366",
+        "email": "shashwatyadav012345@gmail.com",
+        "sameAs": [
+         "https://www.linkedin.com/in/shashwat-yadav-9258bb131",
+         "https://www.instagram.com/shashwat.ai.seo"
+        ],
+        "alumniOf": {
+         "@type": "EducationalOrganization",
+         "name": "Shankar Charya Technical Campus"
+        },
+        "knowsAbout": [
+         "Performance marketing",
+         "Meta Ads",
+         "Google Ads",
+         "LinkedIn Ads",
+         "Lead generation",
+         "Google Tag Manager",
+         "GA4",
+         "Meta Pixel",
+         "Conversion tracking",
+         "Technical SEO",
+         "Local SEO",
+         "Google Business Profile",
+         "GEO and AI search optimisation",
+         "WordPress",
+         "Elementor",
+         "Claude Code",
+         "n8n",
+         "AI agents"
+        ]
+       },
+       {
+        "@type": "WebSite",
+        "@id": "https://shashwatyadav.com/#website",
+        "url": "https://shashwatyadav.com",
+        "name": "Shashwat Yadav",
+        "publisher": {
+         "@id": "https://shashwatyadav.com/#person"
+        },
+        "inLanguage": "en-US"
+       },
+       {
+        "@type": "BreadcrumbList",
+        "@id": "https://shashwatyadav.com/portfolio/life-educare-school-marketing-2026/#breadcrumb",
+        "itemListElement": [
+         {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://shashwatyadav.com/"
+         },
+         {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Portfolio",
+          "item": "https://shashwatyadav.com/portfolio/"
+         },
+         {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "LIFE Educare — School Setup & Consultancy Lead Generation",
+          "item": "https://shashwatyadav.com/portfolio/life-educare-school-marketing-2026/"
+         }
+        ]
+       },
+       {
+        "@type": "WebPage",
+        "@id": "https://shashwatyadav.com/portfolio/life-educare-school-marketing-2026/#webpage",
+        "url": "https://shashwatyadav.com/portfolio/life-educare-school-marketing-2026/",
+        "name": "School Setup Lead Generation: LIFE Educare Case Study",
+        "description": "50 leads a month for LIFE Educare's school setup and consultancy services, on ₹26K/month ad spend. Agency client work, ongoing.",
+        "isPartOf": {
+         "@id": "https://shashwatyadav.com/#website"
+        },
+        "inLanguage": "en-US",
+        "breadcrumb": {
+         "@id": "https://shashwatyadav.com/portfolio/life-educare-school-marketing-2026/#breadcrumb"
+        },
+        "mainEntity": {
+         "@id": "https://shashwatyadav.com/portfolio/life-educare-school-marketing-2026/#casestudy"
+        }
+       },
+       {
+        "@type": [
+         "CreativeWork",
+         "Article"
+        ],
+        "@id": "https://shashwatyadav.com/portfolio/life-educare-school-marketing-2026/#casestudy",
+        "headline": "LIFE Educare — School Setup & Consultancy Lead Generation",
+        "name": "LIFE Educare — School Setup & Consultancy Lead Generation",
+        "description": "50 leads a month for LIFE Educare's school setup and consultancy services, on ₹26K/month ad spend. Agency client work, ongoing.",
+        "url": "https://shashwatyadav.com/portfolio/life-educare-school-marketing-2026/",
+        "author": {
+         "@id": "https://shashwatyadav.com/#person"
+        },
+        "publisher": {
+         "@id": "https://shashwatyadav.com/#person"
+        },
+        "inLanguage": "en-US",
+        "datePublished": "2026-09-14T23:11:03+05:30",
+        "dateModified": "2026-10-21T15:48:04+05:30",
+        "about": "Education",
+        "isPartOf": {
+         "@id": "https://shashwatyadav.com/portfolio/life-educare-school-marketing-2026/#webpage"
+        }
+       }
+      ]
+     }
+    ],
     "scripts": [
      {
       "inline": "7da60269",
@@ -10983,12 +12651,13 @@
     "data-lc-compact": 1
    },
    "ids": [
+    "site-schema",
     "navbar",
     "site-nav",
     "main",
     "whatsapp-widget"
    ],
-   "htmlBytes": 12694,
+   "htmlBytes": 16071,
    "network": [
     {
      "method": "GET",
@@ -10998,21 +12667,7 @@
    "externalHosts": [
     "www.googletagmanager.com"
    ],
-   "desktopShot": {
-    "width": 1280,
-    "height": 2003,
-    "files": [
-     "portfolio__life-educare-school-marketing-2026-desktop.jpg"
-    ]
-   },
    "desktopDocHeight": 2003,
-   "mobileShot": {
-    "width": 375,
-    "height": 2668,
-    "files": [
-     "portfolio__life-educare-school-marketing-2026-mobile.jpg"
-    ]
-   },
    "mobileOverflowX": false,
    "mobileDocHeight": 2668
   },
@@ -11020,7 +12675,7 @@
    "url": "/portfolio/residential-real-estate-meta-ads-2026/",
    "head": {
     "lang": "en",
-    "title": "2BHK/3BHK Residential Launch — Meta Ads Lead Generation | Shashwat Yadav",
+    "title": "Residential Launch Lead Generation: Meta Ads Case Study",
     "meta": [
      {
       "name": null,
@@ -11095,7 +12750,139 @@
       "as": null
      }
     ],
-    "jsonLd": [],
+    "jsonLd": [
+     {
+      "@context": "https://schema.org",
+      "@graph": [
+       {
+        "@type": [
+         "Person",
+         "Organization"
+        ],
+        "@id": "https://shashwatyadav.com/#person",
+        "name": "Shashwat Yadav",
+        "url": "https://shashwatyadav.com/",
+        "image": "https://shashwatyadav.com/assets/images/shashwat-yadav-performance-marketing-expert.webp",
+        "jobTitle": "Ad Performance Marketing Head",
+        "worksFor": {
+         "@type": "Organization",
+         "name": "The Digital Agency"
+        },
+        "address": {
+         "@type": "PostalAddress",
+         "addressLocality": "Raipur",
+         "addressRegion": "Chhattisgarh",
+         "addressCountry": "IN"
+        },
+        "telephone": "+91 70001 98366",
+        "email": "shashwatyadav012345@gmail.com",
+        "sameAs": [
+         "https://www.linkedin.com/in/shashwat-yadav-9258bb131",
+         "https://www.instagram.com/shashwat.ai.seo"
+        ],
+        "alumniOf": {
+         "@type": "EducationalOrganization",
+         "name": "Shankar Charya Technical Campus"
+        },
+        "knowsAbout": [
+         "Performance marketing",
+         "Meta Ads",
+         "Google Ads",
+         "LinkedIn Ads",
+         "Lead generation",
+         "Google Tag Manager",
+         "GA4",
+         "Meta Pixel",
+         "Conversion tracking",
+         "Technical SEO",
+         "Local SEO",
+         "Google Business Profile",
+         "GEO and AI search optimisation",
+         "WordPress",
+         "Elementor",
+         "Claude Code",
+         "n8n",
+         "AI agents"
+        ]
+       },
+       {
+        "@type": "WebSite",
+        "@id": "https://shashwatyadav.com/#website",
+        "url": "https://shashwatyadav.com",
+        "name": "Shashwat Yadav",
+        "publisher": {
+         "@id": "https://shashwatyadav.com/#person"
+        },
+        "inLanguage": "en-US"
+       },
+       {
+        "@type": "BreadcrumbList",
+        "@id": "https://shashwatyadav.com/portfolio/residential-real-estate-meta-ads-2026/#breadcrumb",
+        "itemListElement": [
+         {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://shashwatyadav.com/"
+         },
+         {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Portfolio",
+          "item": "https://shashwatyadav.com/portfolio/"
+         },
+         {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "2BHK/3BHK Residential Launch — Meta Ads Lead Generation",
+          "item": "https://shashwatyadav.com/portfolio/residential-real-estate-meta-ads-2026/"
+         }
+        ]
+       },
+       {
+        "@type": "WebPage",
+        "@id": "https://shashwatyadav.com/portfolio/residential-real-estate-meta-ads-2026/#webpage",
+        "url": "https://shashwatyadav.com/portfolio/residential-real-estate-meta-ads-2026/",
+        "name": "Residential Launch Lead Generation: Meta Ads Case Study",
+        "description": "516 qualified leads at ₹291 average cost per lead for a residential real estate launch in Raipur, delivered via Meta Ads.",
+        "isPartOf": {
+         "@id": "https://shashwatyadav.com/#website"
+        },
+        "inLanguage": "en-US",
+        "breadcrumb": {
+         "@id": "https://shashwatyadav.com/portfolio/residential-real-estate-meta-ads-2026/#breadcrumb"
+        },
+        "mainEntity": {
+         "@id": "https://shashwatyadav.com/portfolio/residential-real-estate-meta-ads-2026/#casestudy"
+        }
+       },
+       {
+        "@type": [
+         "CreativeWork",
+         "Article"
+        ],
+        "@id": "https://shashwatyadav.com/portfolio/residential-real-estate-meta-ads-2026/#casestudy",
+        "headline": "2BHK/3BHK Residential Launch — Meta Ads Lead Generation",
+        "name": "2BHK/3BHK Residential Launch — Meta Ads Lead Generation",
+        "description": "516 qualified leads at ₹291 average cost per lead for a residential real estate launch in Raipur, delivered via Meta Ads.",
+        "url": "https://shashwatyadav.com/portfolio/residential-real-estate-meta-ads-2026/",
+        "author": {
+         "@id": "https://shashwatyadav.com/#person"
+        },
+        "publisher": {
+         "@id": "https://shashwatyadav.com/#person"
+        },
+        "inLanguage": "en-US",
+        "datePublished": "2026-08-17T00:59:07+05:30",
+        "dateModified": "2026-10-21T15:48:04+05:30",
+        "about": "Residential Real Estate",
+        "isPartOf": {
+         "@id": "https://shashwatyadav.com/portfolio/residential-real-estate-meta-ads-2026/#webpage"
+        }
+       }
+      ]
+     }
+    ],
     "scripts": [
      {
       "inline": "7da60269",
@@ -11532,12 +13319,13 @@
     "data-lc-compact": 1
    },
    "ids": [
+    "site-schema",
     "navbar",
     "site-nav",
     "main",
     "whatsapp-widget"
    ],
-   "htmlBytes": 15466,
+   "htmlBytes": 18841,
    "network": [
     {
      "method": "GET",
@@ -11547,21 +13335,7 @@
    "externalHosts": [
     "www.googletagmanager.com"
    ],
-   "desktopShot": {
-    "width": 1280,
-    "height": 3039,
-    "files": [
-     "portfolio__residential-real-estate-meta-ads-2026-desktop.jpg"
-    ]
-   },
    "desktopDocHeight": 3039,
-   "mobileShot": {
-    "width": 375,
-    "height": 4640,
-    "files": [
-     "portfolio__residential-real-estate-meta-ads-2026-mobile.jpg"
-    ]
-   },
    "mobileOverflowX": false,
    "mobileDocHeight": 4640
   },
@@ -11569,7 +13343,7 @@
    "url": "/portfolio/salon-academy-admissions-2026/",
    "head": {
     "lang": "en",
-    "title": "Premium Salon & Academy — Admission Lead Generation | Shashwat Yadav",
+    "title": "Salon & Academy Admission Lead Generation Case Study",
     "meta": [
      {
       "name": null,
@@ -11590,7 +13364,7 @@
       "property": null,
       "httpEquiv": null,
       "charset": null,
-      "content": "700+ admission leads generated in 4 months for a premium salon and academy client."
+      "content": "700+ admission leads generated in 4 months for a premium salon and academy client. Agency client work by performance marketer Shashwat Yadav."
      }
     ],
     "links": [
@@ -11644,7 +13418,139 @@
       "as": null
      }
     ],
-    "jsonLd": [],
+    "jsonLd": [
+     {
+      "@context": "https://schema.org",
+      "@graph": [
+       {
+        "@type": [
+         "Person",
+         "Organization"
+        ],
+        "@id": "https://shashwatyadav.com/#person",
+        "name": "Shashwat Yadav",
+        "url": "https://shashwatyadav.com/",
+        "image": "https://shashwatyadav.com/assets/images/shashwat-yadav-performance-marketing-expert.webp",
+        "jobTitle": "Ad Performance Marketing Head",
+        "worksFor": {
+         "@type": "Organization",
+         "name": "The Digital Agency"
+        },
+        "address": {
+         "@type": "PostalAddress",
+         "addressLocality": "Raipur",
+         "addressRegion": "Chhattisgarh",
+         "addressCountry": "IN"
+        },
+        "telephone": "+91 70001 98366",
+        "email": "shashwatyadav012345@gmail.com",
+        "sameAs": [
+         "https://www.linkedin.com/in/shashwat-yadav-9258bb131",
+         "https://www.instagram.com/shashwat.ai.seo"
+        ],
+        "alumniOf": {
+         "@type": "EducationalOrganization",
+         "name": "Shankar Charya Technical Campus"
+        },
+        "knowsAbout": [
+         "Performance marketing",
+         "Meta Ads",
+         "Google Ads",
+         "LinkedIn Ads",
+         "Lead generation",
+         "Google Tag Manager",
+         "GA4",
+         "Meta Pixel",
+         "Conversion tracking",
+         "Technical SEO",
+         "Local SEO",
+         "Google Business Profile",
+         "GEO and AI search optimisation",
+         "WordPress",
+         "Elementor",
+         "Claude Code",
+         "n8n",
+         "AI agents"
+        ]
+       },
+       {
+        "@type": "WebSite",
+        "@id": "https://shashwatyadav.com/#website",
+        "url": "https://shashwatyadav.com",
+        "name": "Shashwat Yadav",
+        "publisher": {
+         "@id": "https://shashwatyadav.com/#person"
+        },
+        "inLanguage": "en-US"
+       },
+       {
+        "@type": "BreadcrumbList",
+        "@id": "https://shashwatyadav.com/portfolio/salon-academy-admissions-2026/#breadcrumb",
+        "itemListElement": [
+         {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://shashwatyadav.com/"
+         },
+         {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Portfolio",
+          "item": "https://shashwatyadav.com/portfolio/"
+         },
+         {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Premium Salon & Academy — Admission Lead Generation",
+          "item": "https://shashwatyadav.com/portfolio/salon-academy-admissions-2026/"
+         }
+        ]
+       },
+       {
+        "@type": "WebPage",
+        "@id": "https://shashwatyadav.com/portfolio/salon-academy-admissions-2026/#webpage",
+        "url": "https://shashwatyadav.com/portfolio/salon-academy-admissions-2026/",
+        "name": "Salon & Academy Admission Lead Generation Case Study",
+        "description": "700+ admission leads generated in 4 months for a premium salon and academy client. Agency client work by performance marketer Shashwat Yadav.",
+        "isPartOf": {
+         "@id": "https://shashwatyadav.com/#website"
+        },
+        "inLanguage": "en-US",
+        "breadcrumb": {
+         "@id": "https://shashwatyadav.com/portfolio/salon-academy-admissions-2026/#breadcrumb"
+        },
+        "mainEntity": {
+         "@id": "https://shashwatyadav.com/portfolio/salon-academy-admissions-2026/#casestudy"
+        }
+       },
+       {
+        "@type": [
+         "CreativeWork",
+         "Article"
+        ],
+        "@id": "https://shashwatyadav.com/portfolio/salon-academy-admissions-2026/#casestudy",
+        "headline": "Premium Salon & Academy — Admission Lead Generation",
+        "name": "Premium Salon & Academy — Admission Lead Generation",
+        "description": "700+ admission leads generated in 4 months for a premium salon and academy client. Agency client work by performance marketer Shashwat Yadav.",
+        "url": "https://shashwatyadav.com/portfolio/salon-academy-admissions-2026/",
+        "author": {
+         "@id": "https://shashwatyadav.com/#person"
+        },
+        "publisher": {
+         "@id": "https://shashwatyadav.com/#person"
+        },
+        "inLanguage": "en-US",
+        "datePublished": "2026-09-14T23:11:03+05:30",
+        "dateModified": "2026-10-21T15:48:04+05:30",
+        "about": "Salon & Wellness / Education",
+        "isPartOf": {
+         "@id": "https://shashwatyadav.com/portfolio/salon-academy-admissions-2026/#webpage"
+        }
+       }
+      ]
+     }
+    ],
     "scripts": [
      {
       "inline": "7da60269",
@@ -12071,12 +13977,13 @@
     "data-lc-compact": 1
    },
    "ids": [
+    "site-schema",
     "navbar",
     "site-nav",
     "main",
     "whatsapp-widget"
    ],
-   "htmlBytes": 12425,
+   "htmlBytes": 15818,
    "network": [
     {
      "method": "GET",
@@ -12086,21 +13993,7 @@
    "externalHosts": [
     "www.googletagmanager.com"
    ],
-   "desktopShot": {
-    "width": 1280,
-    "height": 2003,
-    "files": [
-     "portfolio__salon-academy-admissions-2026-desktop.jpg"
-    ]
-   },
    "desktopDocHeight": 2003,
-   "mobileShot": {
-    "width": 375,
-    "height": 2416,
-    "files": [
-     "portfolio__salon-academy-admissions-2026-mobile.jpg"
-    ]
-   },
    "mobileOverflowX": false,
    "mobileDocHeight": 2416
   },
@@ -12108,7 +14001,7 @@
    "url": "/portfolio/vasarsha-reality-residential-2026/",
    "head": {
     "lang": "en",
-    "title": "Vasarsha Reality — Residential Real Estate Lead Generation | Shashwat Yadav",
+    "title": "Residential Real Estate Lead Generation: Vasarsha Reality",
     "meta": [
      {
       "name": null,
@@ -12183,7 +14076,139 @@
       "as": null
      }
     ],
-    "jsonLd": [],
+    "jsonLd": [
+     {
+      "@context": "https://schema.org",
+      "@graph": [
+       {
+        "@type": [
+         "Person",
+         "Organization"
+        ],
+        "@id": "https://shashwatyadav.com/#person",
+        "name": "Shashwat Yadav",
+        "url": "https://shashwatyadav.com/",
+        "image": "https://shashwatyadav.com/assets/images/shashwat-yadav-performance-marketing-expert.webp",
+        "jobTitle": "Ad Performance Marketing Head",
+        "worksFor": {
+         "@type": "Organization",
+         "name": "The Digital Agency"
+        },
+        "address": {
+         "@type": "PostalAddress",
+         "addressLocality": "Raipur",
+         "addressRegion": "Chhattisgarh",
+         "addressCountry": "IN"
+        },
+        "telephone": "+91 70001 98366",
+        "email": "shashwatyadav012345@gmail.com",
+        "sameAs": [
+         "https://www.linkedin.com/in/shashwat-yadav-9258bb131",
+         "https://www.instagram.com/shashwat.ai.seo"
+        ],
+        "alumniOf": {
+         "@type": "EducationalOrganization",
+         "name": "Shankar Charya Technical Campus"
+        },
+        "knowsAbout": [
+         "Performance marketing",
+         "Meta Ads",
+         "Google Ads",
+         "LinkedIn Ads",
+         "Lead generation",
+         "Google Tag Manager",
+         "GA4",
+         "Meta Pixel",
+         "Conversion tracking",
+         "Technical SEO",
+         "Local SEO",
+         "Google Business Profile",
+         "GEO and AI search optimisation",
+         "WordPress",
+         "Elementor",
+         "Claude Code",
+         "n8n",
+         "AI agents"
+        ]
+       },
+       {
+        "@type": "WebSite",
+        "@id": "https://shashwatyadav.com/#website",
+        "url": "https://shashwatyadav.com",
+        "name": "Shashwat Yadav",
+        "publisher": {
+         "@id": "https://shashwatyadav.com/#person"
+        },
+        "inLanguage": "en-US"
+       },
+       {
+        "@type": "BreadcrumbList",
+        "@id": "https://shashwatyadav.com/portfolio/vasarsha-reality-residential-2026/#breadcrumb",
+        "itemListElement": [
+         {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://shashwatyadav.com/"
+         },
+         {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Portfolio",
+          "item": "https://shashwatyadav.com/portfolio/"
+         },
+         {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Vasarsha Reality — Residential Lead Generation",
+          "item": "https://shashwatyadav.com/portfolio/vasarsha-reality-residential-2026/"
+         }
+        ]
+       },
+       {
+        "@type": "WebPage",
+        "@id": "https://shashwatyadav.com/portfolio/vasarsha-reality-residential-2026/#webpage",
+        "url": "https://shashwatyadav.com/portfolio/vasarsha-reality-residential-2026/",
+        "name": "Residential Real Estate Lead Generation: Vasarsha Reality",
+        "description": "100+ qualified leads/month for Vasarsha Reality, a residential real estate developer in Raipur, on ₹36K/month Meta Ads spend.",
+        "isPartOf": {
+         "@id": "https://shashwatyadav.com/#website"
+        },
+        "inLanguage": "en-US",
+        "breadcrumb": {
+         "@id": "https://shashwatyadav.com/portfolio/vasarsha-reality-residential-2026/#breadcrumb"
+        },
+        "mainEntity": {
+         "@id": "https://shashwatyadav.com/portfolio/vasarsha-reality-residential-2026/#casestudy"
+        }
+       },
+       {
+        "@type": [
+         "CreativeWork",
+         "Article"
+        ],
+        "@id": "https://shashwatyadav.com/portfolio/vasarsha-reality-residential-2026/#casestudy",
+        "headline": "Vasarsha Reality — Residential Lead Generation",
+        "name": "Vasarsha Reality — Residential Lead Generation",
+        "description": "100+ qualified leads/month for Vasarsha Reality, a residential real estate developer in Raipur, on ₹36K/month Meta Ads spend.",
+        "url": "https://shashwatyadav.com/portfolio/vasarsha-reality-residential-2026/",
+        "author": {
+         "@id": "https://shashwatyadav.com/#person"
+        },
+        "publisher": {
+         "@id": "https://shashwatyadav.com/#person"
+        },
+        "inLanguage": "en-US",
+        "datePublished": "2026-09-14T23:11:03+05:30",
+        "dateModified": "2026-10-21T15:48:04+05:30",
+        "about": "Residential Real Estate",
+        "isPartOf": {
+         "@id": "https://shashwatyadav.com/portfolio/vasarsha-reality-residential-2026/#webpage"
+        }
+       }
+      ]
+     }
+    ],
     "scripts": [
      {
       "inline": "7da60269",
@@ -12610,12 +14635,13 @@
     "data-lc-compact": 1
    },
    "ids": [
+    "site-schema",
     "navbar",
     "site-nav",
     "main",
     "whatsapp-widget"
    ],
-   "htmlBytes": 12806,
+   "htmlBytes": 16127,
    "network": [
     {
      "method": "GET",
@@ -12625,21 +14651,7 @@
    "externalHosts": [
     "www.googletagmanager.com"
    ],
-   "desktopShot": {
-    "width": 1280,
-    "height": 2003,
-    "files": [
-     "portfolio__vasarsha-reality-residential-2026-desktop.jpg"
-    ]
-   },
    "desktopDocHeight": 2003,
-   "mobileShot": {
-    "width": 375,
-    "height": 2709,
-    "files": [
-     "portfolio__vasarsha-reality-residential-2026-mobile.jpg"
-    ]
-   },
    "mobileOverflowX": false,
    "mobileDocHeight": 2709
   },
@@ -12668,7 +14680,7 @@
       "property": null,
       "httpEquiv": null,
       "charset": null,
-      "content": "How shashwatyadav.com handles personal information: Live Classes accounts, Google sign-in, Google Calendar access, cookies, who can see your data, how long it is kept and how to ask for deletion."
+      "content": "How shashwatyadav.com handles personal information: Live Classes accounts, Google sign-in, Google Calendar access, cookies, retention and deletion."
      }
     ],
     "links": [
@@ -12722,7 +14734,106 @@
       "as": null
      }
     ],
-    "jsonLd": [],
+    "jsonLd": [
+     {
+      "@context": "https://schema.org",
+      "@graph": [
+       {
+        "@type": [
+         "Person",
+         "Organization"
+        ],
+        "@id": "https://shashwatyadav.com/#person",
+        "name": "Shashwat Yadav",
+        "url": "https://shashwatyadav.com/",
+        "image": "https://shashwatyadav.com/assets/images/shashwat-yadav-performance-marketing-expert.webp",
+        "jobTitle": "Ad Performance Marketing Head",
+        "worksFor": {
+         "@type": "Organization",
+         "name": "The Digital Agency"
+        },
+        "address": {
+         "@type": "PostalAddress",
+         "addressLocality": "Raipur",
+         "addressRegion": "Chhattisgarh",
+         "addressCountry": "IN"
+        },
+        "telephone": "+91 70001 98366",
+        "email": "shashwatyadav012345@gmail.com",
+        "sameAs": [
+         "https://www.linkedin.com/in/shashwat-yadav-9258bb131",
+         "https://www.instagram.com/shashwat.ai.seo"
+        ],
+        "alumniOf": {
+         "@type": "EducationalOrganization",
+         "name": "Shankar Charya Technical Campus"
+        },
+        "knowsAbout": [
+         "Performance marketing",
+         "Meta Ads",
+         "Google Ads",
+         "LinkedIn Ads",
+         "Lead generation",
+         "Google Tag Manager",
+         "GA4",
+         "Meta Pixel",
+         "Conversion tracking",
+         "Technical SEO",
+         "Local SEO",
+         "Google Business Profile",
+         "GEO and AI search optimisation",
+         "WordPress",
+         "Elementor",
+         "Claude Code",
+         "n8n",
+         "AI agents"
+        ]
+       },
+       {
+        "@type": "WebSite",
+        "@id": "https://shashwatyadav.com/#website",
+        "url": "https://shashwatyadav.com",
+        "name": "Shashwat Yadav",
+        "publisher": {
+         "@id": "https://shashwatyadav.com/#person"
+        },
+        "inLanguage": "en-US"
+       },
+       {
+        "@type": "BreadcrumbList",
+        "@id": "https://shashwatyadav.com/privacy-policy#breadcrumb",
+        "itemListElement": [
+         {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://shashwatyadav.com/"
+         },
+         {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Privacy Policy",
+          "item": "https://shashwatyadav.com/privacy-policy"
+         }
+        ]
+       },
+       {
+        "@type": "WebPage",
+        "@id": "https://shashwatyadav.com/privacy-policy#webpage",
+        "url": "https://shashwatyadav.com/privacy-policy",
+        "name": "Privacy Policy | Shashwat Yadav",
+        "description": "How shashwatyadav.com handles personal information: Live Classes accounts, Google sign-in, Google Calendar access, cookies, retention and deletion.",
+        "isPartOf": {
+         "@id": "https://shashwatyadav.com/#website"
+        },
+        "inLanguage": "en-US",
+        "breadcrumb": {
+         "@id": "https://shashwatyadav.com/privacy-policy#breadcrumb"
+        }
+       }
+      ]
+     }
+    ],
     "scripts": [
      {
       "inline": "7da60269",
@@ -13264,12 +15375,13 @@
     "data-lc-compact": 1
    },
    "ids": [
+    "site-schema",
     "navbar",
     "site-nav",
     "main",
     "whatsapp-widget"
    ],
-   "htmlBytes": 23491,
+   "htmlBytes": 25579,
    "network": [
     {
      "method": "GET",
@@ -13279,21 +15391,7 @@
    "externalHosts": [
     "www.googletagmanager.com"
    ],
-   "desktopShot": {
-    "width": 1280,
-    "height": 5908,
-    "files": [
-     "privacy-policy-desktop.jpg"
-    ]
-   },
    "desktopDocHeight": 5908,
-   "mobileShot": {
-    "width": 375,
-    "height": 9392,
-    "files": [
-     "privacy-policy-mobile.jpg"
-    ]
-   },
    "mobileOverflowX": false,
    "mobileDocHeight": 9392
   },
@@ -13322,7 +15420,7 @@
       "property": null,
       "httpEquiv": null,
       "charset": null,
-      "content": "Google Ads, Meta Ads, SEO & Local Search Optimization, and Website Development services by Shashwat Yadav."
+      "content": "Google Ads, Meta Ads, SEO & Local Search Optimization, website design and development, and AI and marketing automation setup by Shashwat Yadav."
      }
     ],
     "links": [
@@ -13376,7 +15474,201 @@
       "as": null
      }
     ],
-    "jsonLd": [],
+    "jsonLd": [
+     {
+      "@context": "https://schema.org",
+      "@graph": [
+       {
+        "@type": [
+         "Person",
+         "Organization"
+        ],
+        "@id": "https://shashwatyadav.com/#person",
+        "name": "Shashwat Yadav",
+        "url": "https://shashwatyadav.com/",
+        "image": "https://shashwatyadav.com/assets/images/shashwat-yadav-performance-marketing-expert.webp",
+        "jobTitle": "Ad Performance Marketing Head",
+        "worksFor": {
+         "@type": "Organization",
+         "name": "The Digital Agency"
+        },
+        "address": {
+         "@type": "PostalAddress",
+         "addressLocality": "Raipur",
+         "addressRegion": "Chhattisgarh",
+         "addressCountry": "IN"
+        },
+        "telephone": "+91 70001 98366",
+        "email": "shashwatyadav012345@gmail.com",
+        "sameAs": [
+         "https://www.linkedin.com/in/shashwat-yadav-9258bb131",
+         "https://www.instagram.com/shashwat.ai.seo"
+        ],
+        "alumniOf": {
+         "@type": "EducationalOrganization",
+         "name": "Shankar Charya Technical Campus"
+        },
+        "knowsAbout": [
+         "Performance marketing",
+         "Meta Ads",
+         "Google Ads",
+         "LinkedIn Ads",
+         "Lead generation",
+         "Google Tag Manager",
+         "GA4",
+         "Meta Pixel",
+         "Conversion tracking",
+         "Technical SEO",
+         "Local SEO",
+         "Google Business Profile",
+         "GEO and AI search optimisation",
+         "WordPress",
+         "Elementor",
+         "Claude Code",
+         "n8n",
+         "AI agents"
+        ]
+       },
+       {
+        "@type": "WebSite",
+        "@id": "https://shashwatyadav.com/#website",
+        "url": "https://shashwatyadav.com",
+        "name": "Shashwat Yadav",
+        "publisher": {
+         "@id": "https://shashwatyadav.com/#person"
+        },
+        "inLanguage": "en-US"
+       },
+       {
+        "@type": "BreadcrumbList",
+        "@id": "https://shashwatyadav.com/services#breadcrumb",
+        "itemListElement": [
+         {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://shashwatyadav.com/"
+         },
+         {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Services",
+          "item": "https://shashwatyadav.com/services"
+         }
+        ]
+       },
+       {
+        "@type": "WebPage",
+        "@id": "https://shashwatyadav.com/services#webpage",
+        "url": "https://shashwatyadav.com/services",
+        "name": "Services | Shashwat Yadav",
+        "description": "Google Ads, Meta Ads, SEO & Local Search Optimization, website design and development, and AI and marketing automation setup by Shashwat Yadav.",
+        "isPartOf": {
+         "@id": "https://shashwatyadav.com/#website"
+        },
+        "inLanguage": "en-US",
+        "breadcrumb": {
+         "@id": "https://shashwatyadav.com/services#breadcrumb"
+        },
+        "mainEntity": {
+         "@type": "ItemList",
+         "itemListElement": [
+          {
+           "@type": "ListItem",
+           "position": 1,
+           "item": {
+            "@id": "https://shashwatyadav.com/services#service-1"
+           }
+          },
+          {
+           "@type": "ListItem",
+           "position": 2,
+           "item": {
+            "@id": "https://shashwatyadav.com/services#service-2"
+           }
+          },
+          {
+           "@type": "ListItem",
+           "position": 3,
+           "item": {
+            "@id": "https://shashwatyadav.com/services#service-3"
+           }
+          },
+          {
+           "@type": "ListItem",
+           "position": 4,
+           "item": {
+            "@id": "https://shashwatyadav.com/services#service-4"
+           }
+          },
+          {
+           "@type": "ListItem",
+           "position": 5,
+           "item": {
+            "@id": "https://shashwatyadav.com/services#service-5"
+           }
+          }
+         ]
+        }
+       },
+       {
+        "@type": "Service",
+        "@id": "https://shashwatyadav.com/services#service-1",
+        "name": "Google Ads Management",
+        "serviceType": "Google Ads Management",
+        "description": "Strategic campaign setup, optimization, and scaling for maximum ROI.",
+        "url": "https://shashwatyadav.com/services",
+        "provider": {
+         "@id": "https://shashwatyadav.com/#person"
+        }
+       },
+       {
+        "@type": "Service",
+        "@id": "https://shashwatyadav.com/services#service-2",
+        "name": "Meta Ads (Facebook & Instagram)",
+        "serviceType": "Meta Ads (Facebook & Instagram)",
+        "description": "High-converting campaigns with advanced audience targeting and creative testing.",
+        "url": "https://shashwatyadav.com/services",
+        "provider": {
+         "@id": "https://shashwatyadav.com/#person"
+        }
+       },
+       {
+        "@type": "Service",
+        "@id": "https://shashwatyadav.com/services#service-3",
+        "name": "SEO & Local Search Optimization",
+        "serviceType": "SEO & Local Search Optimization",
+        "description": "Comprehensive SEO strategy including AI search optimization.",
+        "url": "https://shashwatyadav.com/services",
+        "provider": {
+         "@id": "https://shashwatyadav.com/#person"
+        }
+       },
+       {
+        "@type": "Service",
+        "@id": "https://shashwatyadav.com/services#service-4",
+        "name": "Website Design & Development",
+        "serviceType": "Website Design & Development",
+        "description": "Professional websites optimized for conversions and performance.",
+        "url": "https://shashwatyadav.com/services",
+        "provider": {
+         "@id": "https://shashwatyadav.com/#person"
+        }
+       },
+       {
+        "@type": "Service",
+        "@id": "https://shashwatyadav.com/services#service-5",
+        "name": "AI & Marketing Automation Setup",
+        "serviceType": "AI & Marketing Automation Setup",
+        "description": "Custom AI agents and automated workflows that take repetitive marketing work off your plate, built with Claude Code and n8n.",
+        "url": "https://shashwatyadav.com/services",
+        "provider": {
+         "@id": "https://shashwatyadav.com/#person"
+        }
+       }
+      ]
+     }
+    ],
     "scripts": [
      {
       "inline": "7da60269",
@@ -13868,13 +16160,14 @@
     "data-lc-compact": 1
    },
    "ids": [
+    "site-schema",
     "navbar",
     "site-nav",
     "main",
     "services",
     "whatsapp-widget"
    ],
-   "htmlBytes": 22035,
+   "htmlBytes": 26451,
    "network": [
     {
      "method": "GET",
@@ -13884,21 +16177,7 @@
    "externalHosts": [
     "www.googletagmanager.com"
    ],
-   "desktopShot": {
-    "width": 1280,
-    "height": 3765,
-    "files": [
-     "services-desktop.jpg"
-    ]
-   },
    "desktopDocHeight": 3765,
-   "mobileShot": {
-    "width": 375,
-    "height": 6791,
-    "files": [
-     "services-mobile.jpg"
-    ]
-   },
    "mobileOverflowX": false,
    "mobileDocHeight": 6791
   },
@@ -13927,7 +16206,7 @@
       "property": null,
       "httpEquiv": null,
       "charset": null,
-      "content": "Core skill domains: ad platforms, analytics, automation, content & SEO, and web development."
+      "content": "Core skills of Shashwat Yadav: ad platforms, tracking and analytics, SEO and GEO, automation, content and web development."
      }
     ],
     "links": [
@@ -13981,7 +16260,109 @@
       "as": null
      }
     ],
-    "jsonLd": [],
+    "jsonLd": [
+     {
+      "@context": "https://schema.org",
+      "@graph": [
+       {
+        "@type": [
+         "Person",
+         "Organization"
+        ],
+        "@id": "https://shashwatyadav.com/#person",
+        "name": "Shashwat Yadav",
+        "url": "https://shashwatyadav.com/",
+        "image": "https://shashwatyadav.com/assets/images/shashwat-yadav-performance-marketing-expert.webp",
+        "jobTitle": "Ad Performance Marketing Head",
+        "worksFor": {
+         "@type": "Organization",
+         "name": "The Digital Agency"
+        },
+        "address": {
+         "@type": "PostalAddress",
+         "addressLocality": "Raipur",
+         "addressRegion": "Chhattisgarh",
+         "addressCountry": "IN"
+        },
+        "telephone": "+91 70001 98366",
+        "email": "shashwatyadav012345@gmail.com",
+        "sameAs": [
+         "https://www.linkedin.com/in/shashwat-yadav-9258bb131",
+         "https://www.instagram.com/shashwat.ai.seo"
+        ],
+        "alumniOf": {
+         "@type": "EducationalOrganization",
+         "name": "Shankar Charya Technical Campus"
+        },
+        "knowsAbout": [
+         "Performance marketing",
+         "Meta Ads",
+         "Google Ads",
+         "LinkedIn Ads",
+         "Lead generation",
+         "Google Tag Manager",
+         "GA4",
+         "Meta Pixel",
+         "Conversion tracking",
+         "Technical SEO",
+         "Local SEO",
+         "Google Business Profile",
+         "GEO and AI search optimisation",
+         "WordPress",
+         "Elementor",
+         "Claude Code",
+         "n8n",
+         "AI agents"
+        ]
+       },
+       {
+        "@type": "WebSite",
+        "@id": "https://shashwatyadav.com/#website",
+        "url": "https://shashwatyadav.com",
+        "name": "Shashwat Yadav",
+        "publisher": {
+         "@id": "https://shashwatyadav.com/#person"
+        },
+        "inLanguage": "en-US"
+       },
+       {
+        "@type": "BreadcrumbList",
+        "@id": "https://shashwatyadav.com/skills#breadcrumb",
+        "itemListElement": [
+         {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://shashwatyadav.com/"
+         },
+         {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Skills",
+          "item": "https://shashwatyadav.com/skills"
+         }
+        ]
+       },
+       {
+        "@type": "WebPage",
+        "@id": "https://shashwatyadav.com/skills#webpage",
+        "url": "https://shashwatyadav.com/skills",
+        "name": "Skills | Shashwat Yadav",
+        "description": "Core skills of Shashwat Yadav: ad platforms, tracking and analytics, SEO and GEO, automation, content and web development.",
+        "isPartOf": {
+         "@id": "https://shashwatyadav.com/#website"
+        },
+        "inLanguage": "en-US",
+        "breadcrumb": {
+         "@id": "https://shashwatyadav.com/skills#breadcrumb"
+        },
+        "about": {
+         "@id": "https://shashwatyadav.com/#person"
+        }
+       }
+      ]
+     }
+    ],
     "scripts": [
      {
       "inline": "7da60269",
@@ -14579,13 +16960,14 @@
     "data-lc-compact": 1
    },
    "ids": [
+    "site-schema",
     "navbar",
     "site-nav",
     "main",
     "ai-automation",
     "whatsapp-widget"
    ],
-   "htmlBytes": 24299,
+   "htmlBytes": 26436,
    "network": [
     {
      "method": "GET",
@@ -14599,21 +16981,7 @@
    "externalHosts": [
     "www.googletagmanager.com"
    ],
-   "desktopShot": {
-    "width": 1280,
-    "height": 4037,
-    "files": [
-     "skills-desktop.jpg"
-    ]
-   },
    "desktopDocHeight": 4037,
-   "mobileShot": {
-    "width": 375,
-    "height": 7263,
-    "files": [
-     "skills-mobile.jpg"
-    ]
-   },
    "mobileOverflowX": false,
    "mobileDocHeight": 7263
   },
@@ -14696,7 +17064,106 @@
       "as": null
      }
     ],
-    "jsonLd": [],
+    "jsonLd": [
+     {
+      "@context": "https://schema.org",
+      "@graph": [
+       {
+        "@type": [
+         "Person",
+         "Organization"
+        ],
+        "@id": "https://shashwatyadav.com/#person",
+        "name": "Shashwat Yadav",
+        "url": "https://shashwatyadav.com/",
+        "image": "https://shashwatyadav.com/assets/images/shashwat-yadav-performance-marketing-expert.webp",
+        "jobTitle": "Ad Performance Marketing Head",
+        "worksFor": {
+         "@type": "Organization",
+         "name": "The Digital Agency"
+        },
+        "address": {
+         "@type": "PostalAddress",
+         "addressLocality": "Raipur",
+         "addressRegion": "Chhattisgarh",
+         "addressCountry": "IN"
+        },
+        "telephone": "+91 70001 98366",
+        "email": "shashwatyadav012345@gmail.com",
+        "sameAs": [
+         "https://www.linkedin.com/in/shashwat-yadav-9258bb131",
+         "https://www.instagram.com/shashwat.ai.seo"
+        ],
+        "alumniOf": {
+         "@type": "EducationalOrganization",
+         "name": "Shankar Charya Technical Campus"
+        },
+        "knowsAbout": [
+         "Performance marketing",
+         "Meta Ads",
+         "Google Ads",
+         "LinkedIn Ads",
+         "Lead generation",
+         "Google Tag Manager",
+         "GA4",
+         "Meta Pixel",
+         "Conversion tracking",
+         "Technical SEO",
+         "Local SEO",
+         "Google Business Profile",
+         "GEO and AI search optimisation",
+         "WordPress",
+         "Elementor",
+         "Claude Code",
+         "n8n",
+         "AI agents"
+        ]
+       },
+       {
+        "@type": "WebSite",
+        "@id": "https://shashwatyadav.com/#website",
+        "url": "https://shashwatyadav.com",
+        "name": "Shashwat Yadav",
+        "publisher": {
+         "@id": "https://shashwatyadav.com/#person"
+        },
+        "inLanguage": "en-US"
+       },
+       {
+        "@type": "BreadcrumbList",
+        "@id": "https://shashwatyadav.com/terms#breadcrumb",
+        "itemListElement": [
+         {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://shashwatyadav.com/"
+         },
+         {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Terms of Use",
+          "item": "https://shashwatyadav.com/terms"
+         }
+        ]
+       },
+       {
+        "@type": "WebPage",
+        "@id": "https://shashwatyadav.com/terms#webpage",
+        "url": "https://shashwatyadav.com/terms",
+        "name": "Terms of Use | Shashwat Yadav",
+        "description": "Plain terms for using shashwatyadav.com and joining Live Classes: accounts, class access and the Meet link, acceptable use, and changes or cancellations.",
+        "isPartOf": {
+         "@id": "https://shashwatyadav.com/#website"
+        },
+        "inLanguage": "en-US",
+        "breadcrumb": {
+         "@id": "https://shashwatyadav.com/terms#breadcrumb"
+        }
+       }
+      ]
+     }
+    ],
     "scripts": [
      {
       "inline": "7da60269",
@@ -15156,12 +17623,13 @@
     "data-lc-compact": 1
    },
    "ids": [
+    "site-schema",
     "navbar",
     "site-nav",
     "main",
     "whatsapp-widget"
    ],
-   "htmlBytes": 14323,
+   "htmlBytes": 16416,
    "network": [
     {
      "method": "GET",
@@ -15171,21 +17639,7 @@
    "externalHosts": [
     "www.googletagmanager.com"
    ],
-   "desktopShot": {
-    "width": 1280,
-    "height": 2711,
-    "files": [
-     "terms-desktop.jpg"
-    ]
-   },
    "desktopDocHeight": 2711,
-   "mobileShot": {
-    "width": 375,
-    "height": 3895,
-    "files": [
-     "terms-mobile.jpg"
-    ]
-   },
    "mobileOverflowX": false,
    "mobileDocHeight": 3895
   }
