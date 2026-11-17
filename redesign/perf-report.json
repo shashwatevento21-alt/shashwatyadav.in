@@ -1,0 +1,62 @@
+{
+ "before /": {
+  "fcp": 1208,
+  "lcp": 1208,
+  "cls": 0,
+  "longTaskMs": 784,
+  "requests": 9,
+  "kb": 68,
+  "nodes": 349,
+  "external": "fonts.googleapis.com, cdn.tailwindcss.com, www.googletagmanager.com"
+ },
+ "after /": {
+  "fcp": 580,
+  "lcp": 580,
+  "cls": 0,
+  "longTaskMs": 250,
+  "requests": 14,
+  "kb": 272,
+  "nodes": 292,
+  "external": "www.googletagmanager.com"
+ },
+ "before /courses/": {
+  "fcp": 1100,
+  "lcp": 1100,
+  "cls": 0,
+  "longTaskMs": 607,
+  "requests": 14,
+  "kb": 118,
+  "nodes": 345,
+  "external": "fonts.googleapis.com, cdn.tailwindcss.com, www.googletagmanager.com"
+ },
+ "after /courses/": {
+  "fcp": 412,
+  "lcp": 412,
+  "cls": 0,
+  "longTaskMs": 154,
+  "requests": 17,
+  "kb": 251,
+  "nodes": 290,
+  "external": "www.googletagmanager.com"
+ },
+ "before /portfolio/hospital-multi-treatment-2026/": {
+  "fcp": 924,
+  "lcp": 924,
+  "cls": 0,
+  "longTaskMs": 596,
+  "requests": 9,
+  "kb": 68,
+  "nodes": 258,
+  "external": "fonts.googleapis.com, cdn.tailwindcss.com, www.googletagmanager.com"
+ },
+ "after /portfolio/hospital-multi-treatment-2026/": {
+  "fcp": 1112,
+  "lcp": 1112,
+  "cls": 0,
+  "longTaskMs": 0,
+  "requests": 15,
+  "kb": 308,
+  "nodes": 213,
+  "external": "www.googletagmanager.com"
+ }
+}
