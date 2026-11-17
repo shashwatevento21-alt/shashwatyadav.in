@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Shashwat Blog Layout
  * Description: Gives the blog page (/blog/), the blog posts and the blog category page the same header and footer as the rest of shashwatyadav.com, with a card-style blog index. Leaves every other page (Divi, Elementor, /seo/) untouched. Off by default: visible only with the secret preview link until the option shashwat_blog_layout_live is 1.
- * Version: 1.0.0
+ * Version: 1.1.0 (adds the new design: private preview with ?sbpreview=<token>&sbnew=1, public once the option shashwat_blog_layout_design is 'new')
  */
 
 if (! defined('ABSPATH')) {
@@ -18,6 +18,27 @@ function sbl_is_preview(): bool
     $token = (string) get_option('shashwat_blog_layout_token', '');
 
     return $token !== '' && isset($_GET['sbpreview']) && hash_equals($token, (string) $_GET['sbpreview']);
+}
+
+/**
+ * The NEW design (the redesigned site: shared theme, new header and footer). Off for visitors until the option shashwat_blog_layout_design is 'new'.
+ * Before that it shows only on a request that carries the secret preview token AND sbnew=1 (the private preview at /_preview/).
+ */
+function sbl_new_design(): bool
+{
+    return get_option('shashwat_blog_layout_design') === 'new' || (sbl_is_preview() && isset($_GET['sbnew']));
+}
+
+/** Where the new design's assets live: the private preview folder until go-live, the site root after. */
+function sbl_base(): string
+{
+    return get_option('shashwat_blog_layout_design') === 'new' ? '' : '/_preview';
+}
+
+/** True while the new design is only a private preview (so the page must never be cached or indexed). */
+function sbl_new_is_private(): bool
+{
+    return sbl_new_design() && get_option('shashwat_blog_layout_design') !== 'new';
 }
 
 function sbl_active(): bool
@@ -62,7 +83,7 @@ add_filter('template_include', function ($template) {
     if ($own === null) {
         return $template;
     }
-    if (sbl_is_preview() && get_option('shashwat_blog_layout_live') !== '1') {
+    if (sbl_new_is_private() || (sbl_is_preview() && get_option('shashwat_blog_layout_live') !== '1')) {
         // a preview must never be cached or indexed
         nocache_headers();
         header('X-Robots-Tag: noindex, nofollow');
@@ -95,6 +116,11 @@ function sbl_excerpt(int $postId): string
 /** Runs a template part (header.html/footer.html) that was generated from the static site. */
 function sbl_partial(string $name): void
 {
+    if (sbl_new_design()) {
+        echo str_replace('{{BASE}}', sbl_base(), (string) file_get_contents(SBL_DIR.'partials-v2/'.$name.'.html'));
+
+        return;
+    }
     readfile(SBL_DIR.'partials/'.$name.'.html');
 }
 
@@ -130,6 +156,11 @@ add_action('wp_enqueue_scripts', function () {
             wp_dequeue_script($handle);
         }
     }
+    if (sbl_new_design()) {
+        wp_enqueue_style('sbl-blog-v2', SBL_URL.'assets/blog-v2.css', [], (string) filemtime(SBL_DIR.'assets/blog-v2.css'));
+
+        return;
+    }
     wp_enqueue_style('sbl-blog', SBL_URL.'assets/blog.css', [], (string) filemtime(SBL_DIR.'assets/blog.css'));
 }, 9999);
 
@@ -138,4 +169,5 @@ register_activation_hook(__FILE__, function () {
         add_option('shashwat_blog_layout_token', wp_generate_password(24, false, false), '', 'no');
     }
     add_option('shashwat_blog_layout_live', '0', '', 'yes');
+    add_option('shashwat_blog_layout_design', 'old', '', 'yes');
 });

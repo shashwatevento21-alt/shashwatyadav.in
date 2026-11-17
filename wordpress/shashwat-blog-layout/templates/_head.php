@@ -8,12 +8,31 @@ $sblAsset = function (string $path): string {
 
     return $path.(is_file($file) ? '?v='.filemtime($file) : '');
 };
+$sblNew = sbl_new_design();
+$sblB = sbl_base();
+// the new design's files: in the private preview they live under /_preview/, after go-live at the site root
+$sblNewAsset = function (string $path) use ($sblB): string {
+    $file = ABSPATH.ltrim($sblB.$path, '/');
+
+    return $sblB.$path.(is_file($file) ? '?v='.filemtime($file) : '');
+};
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
   <meta charset="<?php bloginfo('charset'); ?>">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/png" href="/assets/images/favicon.png">
+<?php if ($sblNew && sbl_new_is_private()) : ?>
+  <meta name="robots" content="noindex, nofollow">
+<?php endif; ?>
+  <link rel="icon" type="image/png" href="<?php echo esc_attr($sblNew ? $sblB.'/assets/images/favicon.png' : '/assets/images/favicon.png'); ?>">
+<?php if ($sblNew) : ?>
+
+  <link rel="preload" href="<?php echo esc_attr($sblB); ?>/assets/fonts/inter-latin-400.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="<?php echo esc_attr($sblB); ?>/assets/fonts/inter-latin-600.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="<?php echo esc_attr($sblB); ?>/assets/fonts/montserrat-latin-800.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="<?php echo esc_attr($sblB); ?>/assets/fonts/montserrat-latin-700.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="<?php echo esc_attr($sblNewAsset('/assets/css/theme.css')); ?>">
+<?php else : ?>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,9 +41,10 @@ $sblAsset = function (string $path): string {
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="<?php echo esc_attr($sblAsset('/assets/js/tailwind-config.js')); ?>"></script>
   <link rel="stylesheet" href="<?php echo esc_attr($sblAsset('/assets/css/style.css')); ?>">
+<?php endif; ?>
   <?php sbl_filtered('wp_head'); ?>
 </head>
-<body <?php body_class('bg-background text-text-body overflow-x-hidden sbl'); ?>>
+<body <?php body_class($sblNew ? 'sbl sbl-v2' : 'bg-background text-text-body overflow-x-hidden sbl'); ?>>
 <?php
 if (function_exists('wp_body_open')) {
     wp_body_open();

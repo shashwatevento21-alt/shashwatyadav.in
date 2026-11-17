@@ -105,6 +105,15 @@ function contact({ content }) {
   grid = grid.replace(/<svg\b[\s\S]*?<\/svg>/g, () => svgs[i++]);
   const mapped = mapClasses(grid, contactRules);
   unknownCheck('contact', mapped.unknown);
+  // accessibility: a select whose <label for> is not picked up by assistive tech also gets the label text as its accessible name (aria-label is outside the content diff)
+  const before = mapped.html;
+  mapped.html = before.replace(/<select\b([^>]*?)\bid="([^"]+)"([^>]*)>/g, (m, a, id, b, off) => {
+    if (/aria-label=/.test(m)) return m;
+    const labels = [...before.slice(0, off).matchAll(/<label[^>]*>([\s\S]*?)<\/label>/g)];
+    const lab = labels[labels.length - 1];
+    const text = id === 'form-country-code' ? 'Country code' : lab ? tag(lab[1].replace(/<[^>]+>/g, '')).replace(/\s*\*$/, '') : '';
+    return text ? `<select${a}id="${id}"${b} aria-label="${text}">` : m;
+  });
   return `<main id="main">
   ${hero({ ...intro, id: 'contact-cta' })}
 

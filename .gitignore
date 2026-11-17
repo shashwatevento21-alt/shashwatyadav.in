@@ -12,3 +12,4 @@ chatbot/chat-config.php
 
 # Local dev-server config (Claude Code preview only) — not needed on Hostinger.
 .claude/
+redesign/preview-build/
