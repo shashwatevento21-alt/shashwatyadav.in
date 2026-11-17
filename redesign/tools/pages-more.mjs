@@ -131,7 +131,21 @@ function keepWithCta({ content }) {
 }
 const keep = ({ content }) => content;
 import { coursesHub, hubModal } from './pages-hub.mjs';
+import { restyle, restyleTail } from './pages-rest.mjs';
+const rest = (file, active, name) => ({ file, active, content: restyle(name), tail: restyleTail(name) });
 export const more = {
+  portfolio: rest('portfolio/index.html', '/portfolio', 'portfolio'),
+  skills: rest('skills.html', '/skills', 'skills'),
+  certifications: rest('certifications.html', '/certifications', 'certifications'),
+  'privacy-policy': rest('privacy-policy.html', null, 'privacy'),
+  terms: rest('terms.html', null, 'terms'),
+  'cs-residential-real-estate-meta-ads-2026': rest('portfolio/residential-real-estate-meta-ads-2026/index.html', '/portfolio', 'residential-real-estate-meta-ads-2026'),
+  'cs-commercial-real-estate-meta-google-2026': rest('portfolio/commercial-real-estate-meta-google-2026/index.html', '/portfolio', 'commercial-real-estate-meta-google-2026'),
+  'cs-hospital-multi-treatment-2026': rest('portfolio/hospital-multi-treatment-2026/index.html', '/portfolio', 'hospital-multi-treatment-2026'),
+  'cs-chaitanya-greens-residential-2026': rest('portfolio/chaitanya-greens-residential-2026/index.html', '/portfolio', 'chaitanya-greens-residential-2026'),
+  'cs-salon-academy-admissions-2026': rest('portfolio/salon-academy-admissions-2026/index.html', '/portfolio', 'salon-academy-admissions-2026'),
+  'cs-life-educare-school-marketing-2026': rest('portfolio/life-educare-school-marketing-2026/index.html', '/portfolio', 'life-educare-school-marketing-2026'),
+  'cs-vasarsha-reality-residential-2026': rest('portfolio/vasarsha-reality-residential-2026/index.html', '/portfolio', 'vasarsha-reality-residential-2026'),
   'courses-hub': { file: 'courses/index.html', active: null, content: coursesHub, tail: hubModal },
   services: { file: 'services.html', active: '/services', content: services },
   contact: { file: 'contact.html', active: '/contact', content: contact },
