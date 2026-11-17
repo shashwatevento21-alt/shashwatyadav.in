@@ -26,6 +26,10 @@ function sbl_is_preview(): bool
  */
 function sbl_new_design(): bool
 {
+    if (sbl_is_preview() && isset($_GET['sbold'])) {
+        return false; // private comparison view: the previous (old) design, whatever the option says
+    }
+
     return get_option('shashwat_blog_layout_design') === 'new' || (sbl_is_preview() && isset($_GET['sbnew']));
 }
 
