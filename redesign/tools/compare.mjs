@@ -67,7 +67,10 @@ for (const [p, a] of Object.entries(after.pages)) {
 
   // ---- headings
   for (const r of ['content', 'footer']) {
-    const x = seq(b.headings, r, (h) => 'h' + h.level + ' ' + h.text), y = seq(a.headings, r, (h) => 'h' + h.level + ' ' + h.text);
+    // agreed exception (go-live): the three footer column titles are no longer h4 elements (heading order); their text is still compared in the footer text below
+    const FOOT_TITLES = ['Quick Links', 'Connect', 'Contact'];
+    const bh = b.headings.filter((h) => !(h.region === 'footer' && h.level === 4 && FOOT_TITLES.includes(h.text)));
+    const x = seq(bh, r, (h) => 'h' + h.level + ' ' + h.text), y = seq(a.headings, r, (h) => 'h' + h.level + ' ' + h.text);
     if (!same(x, y)) add('headings(' + r + ')', firstDiff(x, y));
   }
   const hh = seq(a.headings, 'header', (h) => h.text); if (hh.length) add('headings(header)', 'new headings in the header: ' + hh.join(' | '));

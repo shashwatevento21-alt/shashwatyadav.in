@@ -185,7 +185,7 @@ h4, .h4 { font-size: 14px; font-weight: 700; line-height: 1.55; letter-spacing: 
 .logo-card { display: inline-flex; align-items: center; justify-content: center; padding: 18px 22px; border-radius: var(--radius-card); background: var(--ss-white); }
 .logo-card img { height: 40px; width: auto; }
 .site-footer .about { margin-top: var(--sp-5); max-width: 340px; color: var(--ss-mist); line-height: 1.55; }
-.site-footer h4 { margin-bottom: var(--sp-4); font-size: 13px; font-weight: 600; letter-spacing: 0.3em; color: var(--ss-cyan); }
+.site-footer .foot-h { margin-bottom: var(--sp-4); font-family: var(--font-heading); font-size: 13px; font-weight: 600; line-height: 1.55; letter-spacing: 0.3em; text-transform: uppercase; color: var(--ss-cyan); }
 .site-footer li + li { margin-top: 10px; }
 .site-footer a:not(.btn) { color: var(--ss-mist); text-decoration: none; }
 .site-footer a:not(.btn):hover { color: var(--ss-white); text-decoration: underline; }

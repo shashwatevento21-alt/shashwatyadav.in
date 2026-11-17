@@ -1,6 +1,6 @@
 {
  "base": "http://test.local:8090",
- "when": "2026-11-17T04:57:45.440Z",
+ "when": "2026-11-17T05:56:12.900Z",
  "pageCount": 22,
  "pages": {
   "/": {
@@ -198,21 +198,6 @@
      "level": 2,
      "text": "Ready to Drive Growth?",
      "region": "content"
-    },
-    {
-     "level": 4,
-     "text": "Quick Links",
-     "region": "footer"
-    },
-    {
-     "level": 4,
-     "text": "Connect",
-     "region": "footer"
-    },
-    {
-     "level": 4,
-     "text": "Contact",
-     "region": "footer"
     }
    ],
    "links": [
@@ -688,7 +673,7 @@
     "hero",
     "whatsapp-widget"
    ],
-   "htmlBytes": 22534,
+   "htmlBytes": 22573,
    "network": [
     {
      "method": "GET",
@@ -698,21 +683,7 @@
    "externalHosts": [
     "www.googletagmanager.com"
    ],
-   "desktopShot": {
-    "width": 1280,
-    "height": 4582,
-    "files": [
-     "home-desktop.jpg"
-    ]
-   },
    "desktopDocHeight": 4582,
-   "mobileShot": {
-    "width": 375,
-    "height": 7361,
-    "files": [
-     "home-mobile.jpg"
-    ]
-   },
    "mobileOverflowX": false,
    "mobileDocHeight": 7361
   },
@@ -1513,21 +1484,6 @@
      "level": 3,
      "text": "Something Went Wrong",
      "region": "content"
-    },
-    {
-     "level": 4,
-     "text": "Quick Links",
-     "region": "footer"
-    },
-    {
-     "level": 4,
-     "text": "Connect",
-     "region": "footer"
-    },
-    {
-     "level": 4,
-     "text": "Contact",
-     "region": "footer"
     }
    ],
    "links": [
@@ -2397,7 +2353,7 @@
     "form-error",
     "whatsapp-widget"
    ],
-   "htmlBytes": 84161,
+   "htmlBytes": 84200,
    "network": [
     {
      "method": "GET",
@@ -2407,22 +2363,7 @@
    "externalHosts": [
     "www.googletagmanager.com"
    ],
-   "desktopShot": {
-    "width": 1280,
-    "height": 12398,
-    "files": [
-     "about-desktop.jpg"
-    ]
-   },
    "desktopDocHeight": 12398,
-   "mobileShot": {
-    "width": 375,
-    "height": 17768,
-    "files": [
-     "about-mobile.jpg",
-     "about-mobile-part2.jpg"
-    ]
-   },
    "mobileOverflowX": false,
    "mobileDocHeight": 17768
   },
@@ -2584,21 +2525,6 @@
      "level": 2,
      "text": "Want to work with a certified specialist?",
      "region": "content"
-    },
-    {
-     "level": 4,
-     "text": "Quick Links",
-     "region": "footer"
-    },
-    {
-     "level": 4,
-     "text": "Connect",
-     "region": "footer"
-    },
-    {
-     "level": 4,
-     "text": "Contact",
-     "region": "footer"
     }
    ],
    "links": [
@@ -3046,7 +2972,7 @@
     "certificate-lightbox-img",
     "whatsapp-widget"
    ],
-   "htmlBytes": 19830,
+   "htmlBytes": 19875,
    "network": [
     {
      "method": "GET",
@@ -3056,23 +2982,9 @@
    "externalHosts": [
     "www.googletagmanager.com"
    ],
-   "desktopShot": {
-    "width": 1280,
-    "height": 3205,
-    "files": [
-     "certifications-desktop.jpg"
-    ]
-   },
-   "desktopDocHeight": 3205,
-   "mobileShot": {
-    "width": 375,
-    "height": 5590,
-    "files": [
-     "certifications-mobile.jpg"
-    ]
-   },
+   "desktopDocHeight": 3045,
    "mobileOverflowX": false,
-   "mobileDocHeight": 5590
+   "mobileDocHeight": 5510
   },
   "/contact": {
    "url": "/contact",
@@ -3202,21 +3114,6 @@
      "level": 3,
      "text": "Something Went Wrong",
      "region": "content"
-    },
-    {
-     "level": 4,
-     "text": "Quick Links",
-     "region": "footer"
-    },
-    {
-     "level": 4,
-     "text": "Connect",
-     "region": "footer"
-    },
-    {
-     "level": 4,
-     "text": "Contact",
-     "region": "footer"
     }
    ],
    "links": [
@@ -3817,7 +3714,7 @@
     "form-error",
     "whatsapp-widget"
    ],
-   "htmlBytes": 21599,
+   "htmlBytes": 21742,
    "network": [
     {
      "method": "GET",
@@ -3827,21 +3724,7 @@
    "externalHosts": [
     "www.googletagmanager.com"
    ],
-   "desktopShot": {
-    "width": 1280,
-    "height": 1714,
-    "files": [
-     "contact-desktop.jpg"
-    ]
-   },
    "desktopDocHeight": 1714,
-   "mobileShot": {
-    "width": 375,
-    "height": 2920,
-    "files": [
-     "contact-mobile.jpg"
-    ]
-   },
    "mobileOverflowX": false,
    "mobileDocHeight": 2920
   },
@@ -4021,21 +3904,6 @@
      "level": 2,
      "text": "Interested in learning performance marketing from real-world experience?",
      "region": "content"
-    },
-    {
-     "level": 4,
-     "text": "Quick Links",
-     "region": "footer"
-    },
-    {
-     "level": 4,
-     "text": "Connect",
-     "region": "footer"
-    },
-    {
-     "level": 4,
-     "text": "Contact",
-     "region": "footer"
     },
     {
      "level": 2,
@@ -4646,7 +4514,7 @@
     "enroll-mobile",
     "whatsapp-widget"
    ],
-   "htmlBytes": 23855,
+   "htmlBytes": 23894,
    "network": [
     {
      "method": "GET",
@@ -4660,21 +4528,7 @@
    "externalHosts": [
     "www.googletagmanager.com"
    ],
-   "desktopShot": {
-    "width": 1280,
-    "height": 3227,
-    "files": [
-     "courses-desktop.jpg"
-    ]
-   },
    "desktopDocHeight": 3227,
-   "mobileShot": {
-    "width": 375,
-    "height": 4896,
-    "files": [
-     "courses-mobile.jpg"
-    ]
-   },
    "mobileOverflowX": false,
    "mobileDocHeight": 4896
   },
@@ -4881,21 +4735,6 @@
      "level": 2,
      "text": "Want to join the next class?",
      "region": "content"
-    },
-    {
-     "level": 4,
-     "text": "Quick Links",
-     "region": "footer"
-    },
-    {
-     "level": 4,
-     "text": "Connect",
-     "region": "footer"
-    },
-    {
-     "level": 4,
-     "text": "Contact",
-     "region": "footer"
     }
    ],
    "links": [
@@ -5423,31 +5262,21 @@
     "cd-tools-h",
     "whatsapp-widget"
    ],
-   "htmlBytes": 43782,
+   "htmlBytes": 43821,
    "network": [
     {
      "method": "GET",
      "url": "https://www.googletagmanager.com/gtm.js"
+    },
+    {
+     "method": "GET",
+     "url": "https://www.googletagmanager.com/td"
     }
    ],
    "externalHosts": [
     "www.googletagmanager.com"
    ],
-   "desktopShot": {
-    "width": 1280,
-    "height": 4431,
-    "files": [
-     "courses__claude-mastery-desktop.jpg"
-    ]
-   },
    "desktopDocHeight": 4431,
-   "mobileShot": {
-    "width": 375,
-    "height": 7037,
-    "files": [
-     "courses__claude-mastery-mobile.jpg"
-    ]
-   },
    "mobileOverflowX": false,
    "mobileDocHeight": 7037
   },
@@ -5684,21 +5513,6 @@
      "level": 2,
      "text": "Want to join the next class?",
      "region": "content"
-    },
-    {
-     "level": 4,
-     "text": "Quick Links",
-     "region": "footer"
-    },
-    {
-     "level": 4,
-     "text": "Connect",
-     "region": "footer"
-    },
-    {
-     "level": 4,
-     "text": "Contact",
-     "region": "footer"
     }
    ],
    "links": [
@@ -6286,7 +6100,7 @@
     "cd-tools-h",
     "whatsapp-widget"
    ],
-   "htmlBytes": 59960,
+   "htmlBytes": 59999,
    "network": [
     {
      "method": "GET",
@@ -6296,21 +6110,7 @@
    "externalHosts": [
     "www.googletagmanager.com"
    ],
-   "desktopShot": {
-    "width": 1280,
-    "height": 5447,
-    "files": [
-     "courses__google-ads-desktop.jpg"
-    ]
-   },
    "desktopDocHeight": 5447,
-   "mobileShot": {
-    "width": 375,
-    "height": 9375,
-    "files": [
-     "courses__google-ads-mobile.jpg"
-    ]
-   },
    "mobileOverflowX": false,
    "mobileDocHeight": 9375
   },
@@ -6465,21 +6265,6 @@
      "level": 2,
      "text": "Want to join a master class?",
      "region": "content"
-    },
-    {
-     "level": 4,
-     "text": "Quick Links",
-     "region": "footer"
-    },
-    {
-     "level": 4,
-     "text": "Connect",
-     "region": "footer"
-    },
-    {
-     "level": 4,
-     "text": "Contact",
-     "region": "footer"
     }
    ],
    "links": [
@@ -6915,7 +6700,7 @@
     "cd-types-h",
     "whatsapp-widget"
    ],
-   "htmlBytes": 21095,
+   "htmlBytes": 21134,
    "network": [
     {
      "method": "GET",
@@ -6929,21 +6714,7 @@
    "externalHosts": [
     "www.googletagmanager.com"
    ],
-   "desktopShot": {
-    "width": 1280,
-    "height": 2576,
-    "files": [
-     "courses__master-classes-desktop.jpg"
-    ]
-   },
    "desktopDocHeight": 2576,
-   "mobileShot": {
-    "width": 375,
-    "height": 3640,
-    "files": [
-     "courses__master-classes-mobile.jpg"
-    ]
-   },
    "mobileOverflowX": false,
    "mobileDocHeight": 3640
   },
@@ -7160,21 +6931,6 @@
      "level": 2,
      "text": "Want to join the next class?",
      "region": "content"
-    },
-    {
-     "level": 4,
-     "text": "Quick Links",
-     "region": "footer"
-    },
-    {
-     "level": 4,
-     "text": "Connect",
-     "region": "footer"
-    },
-    {
-     "level": 4,
-     "text": "Contact",
-     "region": "footer"
     }
    ],
    "links": [
@@ -7722,7 +7478,7 @@
     "cd-tools-h",
     "whatsapp-widget"
    ],
-   "htmlBytes": 49030,
+   "htmlBytes": 49069,
    "network": [
     {
      "method": "GET",
@@ -7732,21 +7488,7 @@
    "externalHosts": [
     "www.googletagmanager.com"
    ],
-   "desktopShot": {
-    "width": 1280,
-    "height": 5124,
-    "files": [
-     "courses__meta-ads-desktop.jpg"
-    ]
-   },
    "desktopDocHeight": 5124,
-   "mobileShot": {
-    "width": 375,
-    "height": 8351,
-    "files": [
-     "courses__meta-ads-mobile.jpg"
-    ]
-   },
    "mobileOverflowX": false,
    "mobileDocHeight": 8351
   },
@@ -7937,21 +7679,6 @@
      "level": 2,
      "text": "Ready to build your first Meta lead campaign?",
      "region": "content"
-    },
-    {
-     "level": 4,
-     "text": "Quick Links",
-     "region": "footer"
-    },
-    {
-     "level": 4,
-     "text": "Connect",
-     "region": "footer"
-    },
-    {
-     "level": 4,
-     "text": "Contact",
-     "region": "footer"
     }
    ],
    "links": [
@@ -8365,7 +8092,7 @@
     "cd-faq-h",
     "whatsapp-widget"
    ],
-   "htmlBytes": 20562,
+   "htmlBytes": 20601,
    "network": [
     {
      "method": "GET",
@@ -8379,21 +8106,7 @@
    "externalHosts": [
     "www.googletagmanager.com"
    ],
-   "desktopShot": {
-    "width": 1280,
-    "height": 4306,
-    "files": [
-     "meta-ads-lead-generation-master-class-desktop.jpg"
-    ]
-   },
    "desktopDocHeight": 4306,
-   "mobileShot": {
-    "width": 375,
-    "height": 5732,
-    "files": [
-     "meta-ads-lead-generation-master-class-mobile.jpg"
-    ]
-   },
    "mobileOverflowX": false,
    "mobileDocHeight": 5732
   },
@@ -8550,21 +8263,6 @@
      "level": 3,
      "text": "Premium Salon & Academy — Admission Lead Generation",
      "region": "content"
-    },
-    {
-     "level": 4,
-     "text": "Quick Links",
-     "region": "footer"
-    },
-    {
-     "level": 4,
-     "text": "Connect",
-     "region": "footer"
-    },
-    {
-     "level": 4,
-     "text": "Contact",
-     "region": "footer"
     }
    ],
    "links": [
@@ -8977,7 +8675,7 @@
     "portfolio-grid",
     "whatsapp-widget"
    ],
-   "htmlBytes": 17077,
+   "htmlBytes": 17122,
    "network": [
     {
      "method": "GET",
@@ -8987,23 +8685,9 @@
    "externalHosts": [
     "www.googletagmanager.com"
    ],
-   "desktopShot": {
-    "width": 1280,
-    "height": 2697,
-    "files": [
-     "portfolio-desktop.jpg"
-    ]
-   },
-   "desktopDocHeight": 2697,
-   "mobileShot": {
-    "width": 375,
-    "height": 4846,
-    "files": [
-     "portfolio-mobile.jpg"
-    ]
-   },
+   "desktopDocHeight": 2537,
    "mobileOverflowX": false,
-   "mobileDocHeight": 4846
+   "mobileDocHeight": 4766
   },
   "/portfolio/chaitanya-greens-residential-2026/": {
    "url": "/portfolio/chaitanya-greens-residential-2026/",
@@ -9138,21 +8822,6 @@
      "level": 2,
      "text": "More Case Studies",
      "region": "content"
-    },
-    {
-     "level": 4,
-     "text": "Quick Links",
-     "region": "footer"
-    },
-    {
-     "level": 4,
-     "text": "Connect",
-     "region": "footer"
-    },
-    {
-     "level": 4,
-     "text": "Contact",
-     "region": "footer"
     }
    ],
    "links": [
@@ -9531,7 +9200,7 @@
     "main",
     "whatsapp-widget"
    ],
-   "htmlBytes": 12762,
+   "htmlBytes": 12801,
    "network": [
     {
      "method": "GET",
@@ -9541,21 +9210,7 @@
    "externalHosts": [
     "www.googletagmanager.com"
    ],
-   "desktopShot": {
-    "width": 1280,
-    "height": 2003,
-    "files": [
-     "portfolio__chaitanya-greens-residential-2026-desktop.jpg"
-    ]
-   },
    "desktopDocHeight": 2003,
-   "mobileShot": {
-    "width": 375,
-    "height": 2709,
-    "files": [
-     "portfolio__chaitanya-greens-residential-2026-mobile.jpg"
-    ]
-   },
    "mobileOverflowX": false,
    "mobileDocHeight": 2709
   },
@@ -9702,21 +9357,6 @@
      "level": 2,
      "text": "More Case Studies",
      "region": "content"
-    },
-    {
-     "level": 4,
-     "text": "Quick Links",
-     "region": "footer"
-    },
-    {
-     "level": 4,
-     "text": "Connect",
-     "region": "footer"
-    },
-    {
-     "level": 4,
-     "text": "Contact",
-     "region": "footer"
     }
    ],
    "links": [
@@ -10095,7 +9735,7 @@
     "main",
     "whatsapp-widget"
    ],
-   "htmlBytes": 15906,
+   "htmlBytes": 15945,
    "network": [
     {
      "method": "GET",
@@ -10105,21 +9745,7 @@
    "externalHosts": [
     "www.googletagmanager.com"
    ],
-   "desktopShot": {
-    "width": 1280,
-    "height": 3173,
-    "files": [
-     "portfolio__commercial-real-estate-meta-google-2026-desktop.jpg"
-    ]
-   },
    "desktopDocHeight": 3173,
-   "mobileShot": {
-    "width": 375,
-    "height": 4792,
-    "files": [
-     "portfolio__commercial-real-estate-meta-google-2026-mobile.jpg"
-    ]
-   },
    "mobileOverflowX": false,
    "mobileDocHeight": 4792
   },
@@ -10266,21 +9892,6 @@
      "level": 2,
      "text": "More Case Studies",
      "region": "content"
-    },
-    {
-     "level": 4,
-     "text": "Quick Links",
-     "region": "footer"
-    },
-    {
-     "level": 4,
-     "text": "Connect",
-     "region": "footer"
-    },
-    {
-     "level": 4,
-     "text": "Contact",
-     "region": "footer"
     }
    ],
    "links": [
@@ -10659,7 +10270,7 @@
     "main",
     "whatsapp-widget"
    ],
-   "htmlBytes": 16542,
+   "htmlBytes": 16581,
    "network": [
     {
      "method": "GET",
@@ -10669,21 +10280,7 @@
    "externalHosts": [
     "www.googletagmanager.com"
    ],
-   "desktopShot": {
-    "width": 1280,
-    "height": 3430,
-    "files": [
-     "portfolio__hospital-multi-treatment-2026-desktop.jpg"
-    ]
-   },
    "desktopDocHeight": 3430,
-   "mobileShot": {
-    "width": 375,
-    "height": 5199,
-    "files": [
-     "portfolio__hospital-multi-treatment-2026-mobile.jpg"
-    ]
-   },
    "mobileOverflowX": false,
    "mobileDocHeight": 5199
   },
@@ -10820,21 +10417,6 @@
      "level": 2,
      "text": "More Case Studies",
      "region": "content"
-    },
-    {
-     "level": 4,
-     "text": "Quick Links",
-     "region": "footer"
-    },
-    {
-     "level": 4,
-     "text": "Connect",
-     "region": "footer"
-    },
-    {
-     "level": 4,
-     "text": "Contact",
-     "region": "footer"
     }
    ],
    "links": [
@@ -11213,7 +10795,7 @@
     "main",
     "whatsapp-widget"
    ],
-   "htmlBytes": 12655,
+   "htmlBytes": 12694,
    "network": [
     {
      "method": "GET",
@@ -11223,21 +10805,7 @@
    "externalHosts": [
     "www.googletagmanager.com"
    ],
-   "desktopShot": {
-    "width": 1280,
-    "height": 2003,
-    "files": [
-     "portfolio__life-educare-school-marketing-2026-desktop.jpg"
-    ]
-   },
    "desktopDocHeight": 2003,
-   "mobileShot": {
-    "width": 375,
-    "height": 2668,
-    "files": [
-     "portfolio__life-educare-school-marketing-2026-mobile.jpg"
-    ]
-   },
    "mobileOverflowX": false,
    "mobileDocHeight": 2668
   },
@@ -11384,21 +10952,6 @@
      "level": 2,
      "text": "More Case Studies",
      "region": "content"
-    },
-    {
-     "level": 4,
-     "text": "Quick Links",
-     "region": "footer"
-    },
-    {
-     "level": 4,
-     "text": "Connect",
-     "region": "footer"
-    },
-    {
-     "level": 4,
-     "text": "Contact",
-     "region": "footer"
     }
    ],
    "links": [
@@ -11777,7 +11330,7 @@
     "main",
     "whatsapp-widget"
    ],
-   "htmlBytes": 15427,
+   "htmlBytes": 15466,
    "network": [
     {
      "method": "GET",
@@ -11787,21 +11340,7 @@
    "externalHosts": [
     "www.googletagmanager.com"
    ],
-   "desktopShot": {
-    "width": 1280,
-    "height": 3039,
-    "files": [
-     "portfolio__residential-real-estate-meta-ads-2026-desktop.jpg"
-    ]
-   },
    "desktopDocHeight": 3039,
-   "mobileShot": {
-    "width": 375,
-    "height": 4640,
-    "files": [
-     "portfolio__residential-real-estate-meta-ads-2026-mobile.jpg"
-    ]
-   },
    "mobileOverflowX": false,
    "mobileDocHeight": 4640
   },
@@ -11938,21 +11477,6 @@
      "level": 2,
      "text": "More Case Studies",
      "region": "content"
-    },
-    {
-     "level": 4,
-     "text": "Quick Links",
-     "region": "footer"
-    },
-    {
-     "level": 4,
-     "text": "Connect",
-     "region": "footer"
-    },
-    {
-     "level": 4,
-     "text": "Contact",
-     "region": "footer"
     }
    ],
    "links": [
@@ -12331,7 +11855,7 @@
     "main",
     "whatsapp-widget"
    ],
-   "htmlBytes": 12386,
+   "htmlBytes": 12425,
    "network": [
     {
      "method": "GET",
@@ -12341,21 +11865,7 @@
    "externalHosts": [
     "www.googletagmanager.com"
    ],
-   "desktopShot": {
-    "width": 1280,
-    "height": 2003,
-    "files": [
-     "portfolio__salon-academy-admissions-2026-desktop.jpg"
-    ]
-   },
    "desktopDocHeight": 2003,
-   "mobileShot": {
-    "width": 375,
-    "height": 2416,
-    "files": [
-     "portfolio__salon-academy-admissions-2026-mobile.jpg"
-    ]
-   },
    "mobileOverflowX": false,
    "mobileDocHeight": 2416
   },
@@ -12492,21 +12002,6 @@
      "level": 2,
      "text": "More Case Studies",
      "region": "content"
-    },
-    {
-     "level": 4,
-     "text": "Quick Links",
-     "region": "footer"
-    },
-    {
-     "level": 4,
-     "text": "Connect",
-     "region": "footer"
-    },
-    {
-     "level": 4,
-     "text": "Contact",
-     "region": "footer"
     }
    ],
    "links": [
@@ -12885,7 +12380,7 @@
     "main",
     "whatsapp-widget"
    ],
-   "htmlBytes": 12767,
+   "htmlBytes": 12806,
    "network": [
     {
      "method": "GET",
@@ -12895,21 +12390,7 @@
    "externalHosts": [
     "www.googletagmanager.com"
    ],
-   "desktopShot": {
-    "width": 1280,
-    "height": 2003,
-    "files": [
-     "portfolio__vasarsha-reality-residential-2026-desktop.jpg"
-    ]
-   },
    "desktopDocHeight": 2003,
-   "mobileShot": {
-    "width": 375,
-    "height": 2709,
-    "files": [
-     "portfolio__vasarsha-reality-residential-2026-mobile.jpg"
-    ]
-   },
    "mobileOverflowX": false,
    "mobileDocHeight": 2709
   },
@@ -13121,21 +12602,6 @@
      "level": 2,
      "text": "Contact",
      "region": "content"
-    },
-    {
-     "level": 4,
-     "text": "Quick Links",
-     "region": "footer"
-    },
-    {
-     "level": 4,
-     "text": "Connect",
-     "region": "footer"
-    },
-    {
-     "level": 4,
-     "text": "Contact",
-     "region": "footer"
     }
    ],
    "links": [
@@ -13554,7 +13020,7 @@
     "main",
     "whatsapp-widget"
    ],
-   "htmlBytes": 23452,
+   "htmlBytes": 23491,
    "network": [
     {
      "method": "GET",
@@ -13564,21 +13030,7 @@
    "externalHosts": [
     "www.googletagmanager.com"
    ],
-   "desktopShot": {
-    "width": 1280,
-    "height": 5908,
-    "files": [
-     "privacy-policy-desktop.jpg"
-    ]
-   },
    "desktopDocHeight": 5908,
-   "mobileShot": {
-    "width": 375,
-    "height": 9392,
-    "files": [
-     "privacy-policy-mobile.jpg"
-    ]
-   },
    "mobileOverflowX": false,
    "mobileDocHeight": 9392
   },
@@ -13780,21 +13232,6 @@
      "level": 2,
      "text": "Ready to discuss which service fits your business?",
      "region": "content"
-    },
-    {
-     "level": 4,
-     "text": "Quick Links",
-     "region": "footer"
-    },
-    {
-     "level": 4,
-     "text": "Connect",
-     "region": "footer"
-    },
-    {
-     "level": 4,
-     "text": "Contact",
-     "region": "footer"
     }
    ],
    "links": [
@@ -14174,7 +13611,7 @@
     "services",
     "whatsapp-widget"
    ],
-   "htmlBytes": 21996,
+   "htmlBytes": 22035,
    "network": [
     {
      "method": "GET",
@@ -14184,21 +13621,7 @@
    "externalHosts": [
     "www.googletagmanager.com"
    ],
-   "desktopShot": {
-    "width": 1280,
-    "height": 3765,
-    "files": [
-     "services-desktop.jpg"
-    ]
-   },
    "desktopDocHeight": 3765,
-   "mobileShot": {
-    "width": 375,
-    "height": 6791,
-    "files": [
-     "services-mobile.jpg"
-    ]
-   },
    "mobileOverflowX": false,
    "mobileDocHeight": 6791
   },
@@ -14405,21 +13828,6 @@
      "level": 2,
      "text": "Tools & Platforms",
      "region": "content"
-    },
-    {
-     "level": 4,
-     "text": "Quick Links",
-     "region": "footer"
-    },
-    {
-     "level": 4,
-     "text": "Connect",
-     "region": "footer"
-    },
-    {
-     "level": 4,
-     "text": "Contact",
-     "region": "footer"
     }
    ],
    "links": [
@@ -14900,7 +14308,7 @@
     "ai-automation",
     "whatsapp-widget"
    ],
-   "htmlBytes": 24260,
+   "htmlBytes": 24299,
    "network": [
     {
      "method": "GET",
@@ -14914,21 +14322,7 @@
    "externalHosts": [
     "www.googletagmanager.com"
    ],
-   "desktopShot": {
-    "width": 1280,
-    "height": 4037,
-    "files": [
-     "skills-desktop.jpg"
-    ]
-   },
    "desktopDocHeight": 4037,
-   "mobileShot": {
-    "width": 375,
-    "height": 7263,
-    "files": [
-     "skills-mobile.jpg"
-    ]
-   },
    "mobileOverflowX": false,
    "mobileDocHeight": 7263
   },
@@ -15090,21 +14484,6 @@
      "level": 2,
      "text": "Contact",
      "region": "content"
-    },
-    {
-     "level": 4,
-     "text": "Quick Links",
-     "region": "footer"
-    },
-    {
-     "level": 4,
-     "text": "Connect",
-     "region": "footer"
-    },
-    {
-     "level": 4,
-     "text": "Contact",
-     "region": "footer"
     }
    ],
    "links": [
@@ -15491,7 +14870,7 @@
     "main",
     "whatsapp-widget"
    ],
-   "htmlBytes": 14284,
+   "htmlBytes": 14323,
    "network": [
     {
      "method": "GET",
@@ -15501,21 +14880,7 @@
    "externalHosts": [
     "www.googletagmanager.com"
    ],
-   "desktopShot": {
-    "width": 1280,
-    "height": 2711,
-    "files": [
-     "terms-desktop.jpg"
-    ]
-   },
    "desktopDocHeight": 2711,
-   "mobileShot": {
-    "width": 375,
-    "height": 3895,
-    "files": [
-     "terms-mobile.jpg"
-    ]
-   },
    "mobileOverflowX": false,
    "mobileDocHeight": 3895
   }
