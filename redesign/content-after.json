@@ -1,6 +1,6 @@
 {
  "base": "http://test.local:8090",
- "when": "2026-11-17T10:19:32.702Z",
+ "when": "2026-11-17T17:30:57.080Z",
  "pageCount": 22,
  "pages": {
   "/": {
@@ -83,7 +83,7 @@
      },
      {
       "rel": "stylesheet",
-      "href": "/assets/css/theme.css?v=1",
+      "href": "/assets/css/theme.css?v=eed52cec",
       "type": null,
       "sizes": null,
       "as": null
@@ -218,10 +218,10 @@
       "gtm": true
      },
      {
-      "src": "/assets/js/theme.js?v=1"
+      "src": "/assets/js/theme.js?v=b79ebabc"
      },
      {
-      "src": "/assets/js/main.js?v=20261026"
+      "src": "/assets/js/main.js?v=ad3dfd86"
      }
     ],
     "noscriptGtm": true
@@ -795,7 +795,7 @@
     "hero",
     "whatsapp-widget"
    ],
-   "htmlBytes": 25382,
+   "htmlBytes": 25726,
    "network": [
     {
      "method": "GET",
@@ -987,21 +987,21 @@
      },
      {
       "rel": "stylesheet",
-      "href": "/assets/css/theme.css?v=1",
+      "href": "/assets/css/theme.css?v=eed52cec",
       "type": null,
       "sizes": null,
       "as": null
      },
      {
       "rel": "stylesheet",
-      "href": "/assets/css/journey.css?v=20261017",
+      "href": "/assets/css/journey.css?v=fb0a04db",
       "type": null,
       "sizes": null,
       "as": null
      },
      {
       "rel": "stylesheet",
-      "href": "/assets/css/about.css?v=20261027",
+      "href": "/assets/css/about.css?v=9b2b036a",
       "type": null,
       "sizes": null,
       "as": null
@@ -1270,16 +1270,16 @@
       "gtm": true
      },
      {
-      "src": "/assets/js/journey.js?v=20261017"
+      "src": "/assets/js/journey.js?v=eb5c4f06"
      },
      {
-      "src": "/assets/js/theme.js?v=1"
+      "src": "/assets/js/theme.js?v=b79ebabc"
      },
      {
-      "src": "/assets/js/main.js?v=20261026"
+      "src": "/assets/js/main.js?v=ad3dfd86"
      },
      {
-      "src": "/assets/js/about.js?v=20261022"
+      "src": "/assets/js/about.js?v=ad170434"
      }
     ],
     "noscriptGtm": true
@@ -2532,7 +2532,7 @@
     "form-error",
     "whatsapp-widget"
    ],
-   "htmlBytes": 85392,
+   "htmlBytes": 86263,
    "network": [
     {
      "method": "GET",
@@ -2619,7 +2619,7 @@
      },
      {
       "rel": "stylesheet",
-      "href": "/assets/css/theme.css?v=1",
+      "href": "/assets/css/theme.css?v=eed52cec",
       "type": null,
       "sizes": null,
       "as": null
@@ -2741,10 +2741,10 @@
       "gtm": true
      },
      {
-      "src": "/assets/js/theme.js?v=1"
+      "src": "/assets/js/theme.js?v=b79ebabc"
      },
      {
-      "src": "/assets/js/main.js?v=20261026"
+      "src": "/assets/js/main.js?v=ad3dfd86"
      }
     ],
     "noscriptGtm": true
@@ -3260,7 +3260,7 @@
     "certificate-lightbox-img",
     "whatsapp-widget"
    ],
-   "htmlBytes": 22242,
+   "htmlBytes": 22560,
    "network": [
     {
      "method": "GET",
@@ -3347,7 +3347,7 @@
      },
      {
       "rel": "stylesheet",
-      "href": "/assets/css/theme.css?v=1",
+      "href": "/assets/css/theme.css?v=eed52cec",
       "type": null,
       "sizes": null,
       "as": null
@@ -3481,10 +3481,10 @@
       "gtm": true
      },
      {
-      "src": "/assets/js/theme.js?v=1"
+      "src": "/assets/js/theme.js?v=b79ebabc"
      },
      {
-      "src": "/assets/js/main.js?v=20261026"
+      "src": "/assets/js/main.js?v=ad3dfd86"
      }
     ],
     "noscriptGtm": true
@@ -4123,7 +4123,7 @@
     "form-error",
     "whatsapp-widget"
    ],
-   "htmlBytes": 24278,
+   "htmlBytes": 24654,
    "network": [
     {
      "method": "GET",
@@ -4210,7 +4210,7 @@
      },
      {
       "rel": "stylesheet",
-      "href": "/assets/css/theme.css?v=1",
+      "href": "/assets/css/theme.css?v=eed52cec",
       "type": null,
       "sizes": null,
       "as": null
@@ -4376,13 +4376,13 @@
       "gtm": true
      },
      {
-      "src": "/assets/js/theme.js?v=1"
+      "src": "/assets/js/theme.js?v=b79ebabc"
      },
      {
-      "src": "/assets/js/main.js?v=20261026"
+      "src": "/assets/js/main.js?v=ad3dfd86"
      },
      {
-      "src": "/assets/js/live-classes.js?v=20261023"
+      "src": "/assets/js/live-classes.js?v=56256034"
      }
     ],
     "noscriptGtm": true
@@ -5076,7 +5076,7 @@
     "enroll-mobile",
     "whatsapp-widget"
    ],
-   "htmlBytes": 26992,
+   "htmlBytes": 27375,
    "network": [
     {
      "method": "GET",
@@ -5167,14 +5167,14 @@
      },
      {
       "rel": "stylesheet",
-      "href": "/assets/css/theme.css?v=1",
+      "href": "/assets/css/theme.css?v=eed52cec",
       "type": null,
       "sizes": null,
       "as": null
      },
      {
       "rel": "stylesheet",
-      "href": "/assets/css/course-detail.css?v=20261027",
+      "href": "/assets/css/course-detail.css?v=61f9591c",
       "type": null,
       "sizes": null,
       "as": null
@@ -5328,13 +5328,13 @@
       "gtm": true
      },
      {
-      "src": "/assets/js/theme.js?v=1"
+      "src": "/assets/js/theme.js?v=b79ebabc"
      },
      {
-      "src": "/assets/js/main.js?v=20261026"
+      "src": "/assets/js/main.js?v=ad3dfd86"
      },
      {
-      "src": "/assets/js/course-detail.js?v=20261022"
+      "src": "/assets/js/course-detail.js?v=3d5ac7da"
      }
     ],
     "noscriptGtm": true
@@ -5965,7 +5965,7 @@
     "cd-tools-h",
     "whatsapp-widget"
    ],
-   "htmlBytes": 47065,
+   "htmlBytes": 47479,
    "network": [
     {
      "method": "GET",
@@ -6052,14 +6052,14 @@
      },
      {
       "rel": "stylesheet",
-      "href": "/assets/css/theme.css?v=1",
+      "href": "/assets/css/theme.css?v=eed52cec",
       "type": null,
       "sizes": null,
       "as": null
      },
      {
       "rel": "stylesheet",
-      "href": "/assets/css/course-detail.css?v=20261027",
+      "href": "/assets/css/course-detail.css?v=61f9591c",
       "type": null,
       "sizes": null,
       "as": null
@@ -6213,13 +6213,13 @@
       "gtm": true
      },
      {
-      "src": "/assets/js/theme.js?v=1"
+      "src": "/assets/js/theme.js?v=b79ebabc"
      },
      {
-      "src": "/assets/js/main.js?v=20261026"
+      "src": "/assets/js/main.js?v=ad3dfd86"
      },
      {
-      "src": "/assets/js/course-detail.js?v=20261022"
+      "src": "/assets/js/course-detail.js?v=3d5ac7da"
      }
     ],
     "noscriptGtm": true
@@ -6940,7 +6940,7 @@
     "cd-tools-h",
     "whatsapp-widget"
    ],
-   "htmlBytes": 63204,
+   "htmlBytes": 63708,
    "network": [
     {
      "method": "GET",
@@ -7027,14 +7027,14 @@
      },
      {
       "rel": "stylesheet",
-      "href": "/assets/css/theme.css?v=1",
+      "href": "/assets/css/theme.css?v=eed52cec",
       "type": null,
       "sizes": null,
       "as": null
      },
      {
       "rel": "stylesheet",
-      "href": "/assets/css/course-detail.css?v=20261027",
+      "href": "/assets/css/course-detail.css?v=61f9591c",
       "type": null,
       "sizes": null,
       "as": null
@@ -7188,16 +7188,16 @@
       "gtm": true
      },
      {
-      "src": "/assets/js/theme.js?v=1"
+      "src": "/assets/js/theme.js?v=b79ebabc"
      },
      {
-      "src": "/assets/js/main.js?v=20261026"
+      "src": "/assets/js/main.js?v=ad3dfd86"
      },
      {
-      "src": "/assets/js/course-detail.js?v=20261023"
+      "src": "/assets/js/course-detail.js?v=3d5ac7da"
      },
      {
-      "src": "/assets/js/master-classes.js?v=20261023"
+      "src": "/assets/js/master-classes.js?v=9c14053f"
      }
     ],
     "noscriptGtm": true
@@ -7681,7 +7681,7 @@
     "cd-types-h",
     "whatsapp-widget"
    ],
-   "htmlBytes": 24362,
+   "htmlBytes": 24635,
    "network": [
     {
      "method": "GET",
@@ -7697,7 +7697,7 @@
    ],
    "desktopDocHeight": 2576,
    "mobileOverflowX": false,
-   "mobileDocHeight": 3661
+   "mobileDocHeight": 3640
   },
   "/courses/meta-ads/": {
    "url": "/courses/meta-ads/",
@@ -7772,14 +7772,14 @@
      },
      {
       "rel": "stylesheet",
-      "href": "/assets/css/theme.css?v=1",
+      "href": "/assets/css/theme.css?v=eed52cec",
       "type": null,
       "sizes": null,
       "as": null
      },
      {
       "rel": "stylesheet",
-      "href": "/assets/css/course-detail.css?v=20261027",
+      "href": "/assets/css/course-detail.css?v=61f9591c",
       "type": null,
       "sizes": null,
       "as": null
@@ -7933,13 +7933,13 @@
       "gtm": true
      },
      {
-      "src": "/assets/js/theme.js?v=1"
+      "src": "/assets/js/theme.js?v=b79ebabc"
      },
      {
-      "src": "/assets/js/main.js?v=20261026"
+      "src": "/assets/js/main.js?v=ad3dfd86"
      },
      {
-      "src": "/assets/js/course-detail.js?v=20261022"
+      "src": "/assets/js/course-detail.js?v=3d5ac7da"
      }
     ],
     "noscriptGtm": true
@@ -8600,7 +8600,7 @@
     "cd-tools-h",
     "whatsapp-widget"
    ],
-   "htmlBytes": 52236,
+   "htmlBytes": 52680,
    "network": [
     {
      "method": "GET",
@@ -8715,14 +8715,14 @@
      },
      {
       "rel": "stylesheet",
-      "href": "/assets/css/theme.css?v=1",
+      "href": "/assets/css/theme.css?v=eed52cec",
       "type": null,
       "sizes": null,
       "as": null
      },
      {
       "rel": "stylesheet",
-      "href": "/assets/css/course-detail.css?v=20261027",
+      "href": "/assets/css/course-detail.css?v=61f9591c",
       "type": null,
       "sizes": null,
       "as": null
@@ -8882,19 +8882,19 @@
       "gtm": true
      },
      {
-      "src": "/assets/js/theme.js?v=1"
+      "src": "/assets/js/theme.js?v=b79ebabc"
      },
      {
-      "src": "/assets/js/main.js?v=20261026"
+      "src": "/assets/js/main.js?v=ad3dfd86"
      },
      {
-      "src": "/assets/js/course-detail.js?v=20261027"
+      "src": "/assets/js/course-detail.js?v=3d5ac7da"
      },
      {
-      "src": "/assets/js/master-classes.js?v=20261027"
+      "src": "/assets/js/master-classes.js?v=9c14053f"
      },
      {
-      "src": "/assets/js/image-slot.js?v=20261027"
+      "src": "/assets/js/image-slot.js?v=275f235f"
      }
     ],
     "noscriptGtm": true
@@ -8907,13 +8907,13 @@
    "commentCount": 9,
    "text": {
     "header": "Skip to content Home About Services Portfolio Skills Certifications Blog Contact Log in Courses All courses Courses and upcoming live classes Master Classes 3-hour live deep dives Google Ads Search and Demand Gen lead campaigns Meta Ads Lead and engagement campaigns Claude and Claude Code Prompting, building and automation Let's Connect Courses",
-    "content": "← All master classes Master Class 1 · 3 hours · Live on Google Meet Meta Ads Lead Generation Basics Build your first Meta lead campaign live, from audience to follow-up, in one 3-hour session. Next session: see the dates under Upcoming classes. Tell me when it's scheduled See dates and enrol Ask on WhatsApp Nothing here is a guarantee of results. Dates and seats are set when a session is scheduled. 3-hour live master class Meta Ads lead generation, step by step 3 hours, one session Live on Google Meet Build hands-on, step by step No ad spend needed A hands-on 3-hour master class. Build a Meta lead generation campaign step by step: audience, placements, ads, instant form and follow-up. Learn what each setting does and how to avoid common beginner mistakes. What You Will Do 1 Creating the lead campaign in Ads Manager 2 Audience, placements and Advantage+ 3 Creative, instant form and follow-up messages 4 Reading your first results What You’ll Learn Eleven topics, taught in the order you will meet them when you build the campaign. How a Meta lead generation campaign works and when to use it Creating the lead campaign in Ads Manager: objective, budget and setup choices Choosing who sees your ads: location, age and gender, and how much to narrow Platforms and placements: where your ads appear and when to use Advantage+ placements Using an existing post or creating a new ad, and the trade-offs of each Advantage+ audience and the other Advantage+ options, and when to use them Creative enhancements: what they change in your ad and when to switch them off Building the instant form: questions, lead quality settings, privacy link and thank-you screen Following up on leads: message timing, a WhatsApp or call script and a simple lead tracker Checking lead quality and reading your first results Policy basics and common reasons lead ads get rejected What to bring A laptop, a Facebook account and a Page you can use. You build in draft, so no ad spend is needed. How to Join Pick a session See the dates under Upcoming classes on the Courses page, or at the top of this page once one is scheduled. Sign in and enrol Sign in with Google and add your mobile number once. After that, enrolling is one tap. Join on Google Meet The green Join class button on My Classes opens 15 minutes before the class starts. Questions Do I need to spend money on ads? No. You build in draft, so no ad spend is needed. What do I need to bring? A laptop, a Facebook account and a Page you can use. You build in draft, so no ad spend is needed. Where do I find the dates? The next session is shown at the top of this page once it is scheduled. All upcoming classes are also listed on the Courses page. Can I join more than one master class? Yes. Each master class covers one skill from start to finish, and you can join one or several. Ready to build your first Meta lead campaign? See dates and enrol WhatsApp Me",
+    "content": "← All master classes Master Class 1 · 3 hours · Live on Google Meet Meta Ads Lead Generation Basics Build your first Meta lead campaign live, from audience to follow-up, in one 3-hour session. No session scheduled yet Tell me when it's scheduled See dates and enrol Ask on WhatsApp Nothing here is a guarantee of results. Dates and seats are set when a session is scheduled. 3-hour live master class Meta Ads lead generation, step by step 3 hours, one session Live on Google Meet Build hands-on, step by step No ad spend needed A hands-on 3-hour master class. Build a Meta lead generation campaign step by step: audience, placements, ads, instant form and follow-up. Learn what each setting does and how to avoid common beginner mistakes. What You Will Do 1 Creating the lead campaign in Ads Manager 2 Audience, placements and Advantage+ 3 Creative, instant form and follow-up messages 4 Reading your first results What You’ll Learn Eleven topics, taught in the order you will meet them when you build the campaign. How a Meta lead generation campaign works and when to use it Creating the lead campaign in Ads Manager: objective, budget and setup choices Choosing who sees your ads: location, age and gender, and how much to narrow Platforms and placements: where your ads appear and when to use Advantage+ placements Using an existing post or creating a new ad, and the trade-offs of each Advantage+ audience and the other Advantage+ options, and when to use them Creative enhancements: what they change in your ad and when to switch them off Building the instant form: questions, lead quality settings, privacy link and thank-you screen Following up on leads: message timing, a WhatsApp or call script and a simple lead tracker Checking lead quality and reading your first results Policy basics and common reasons lead ads get rejected What to bring A laptop, a Facebook account and a Page you can use. You build in draft, so no ad spend is needed. How to Join Pick a session See the dates under Upcoming classes on the Courses page, or at the top of this page once one is scheduled. Sign in and enrol Sign in with Google and add your mobile number once. After that, enrolling is one tap. Join on Google Meet The green Join class button on My Classes opens 15 minutes before the class starts. Questions Do I need to spend money on ads? No. You build in draft, so no ad spend is needed. What do I need to bring? A laptop, a Facebook account and a Page you can use. You build in draft, so no ad spend is needed. Where do I find the dates? The next session is shown at the top of this page once it is scheduled. All upcoming classes are also listed on the Courses page. Can I join more than one master class? Yes. Each master class covers one skill from start to finish, and you can join one or several. Ready to build your first Meta lead campaign? See dates and enrol WhatsApp Me",
     "footer": "Performance Marketing Expert & SEO Specialist driving measurable growth through data-driven strategy. Quick Links Home About Services Portfolio Skills Certifications Courses Blog Contact Connect LinkedIn Instagram Contact +91 70001 98366 WhatsApp shashwatyadav012345@gmail.com © 2026 Shashwat Yadav. All rights reserved. | Privacy Policy | Terms Courses",
     "floating": ""
    },
    "wordCount": {
     "header": 52,
-    "content": 525,
+    "content": 521,
     "footer": 45,
     "floating": 0
    },
@@ -9361,7 +9361,7 @@
     "cd-faq-h",
     "whatsapp-widget"
    ],
-   "htmlBytes": 24093,
+   "htmlBytes": 24386,
    "network": [
     {
      "method": "GET",
@@ -9377,7 +9377,7 @@
    ],
    "desktopDocHeight": 4306,
    "mobileOverflowX": false,
-   "mobileDocHeight": 5754
+   "mobileDocHeight": 5732
   },
   "/portfolio/": {
    "url": "/portfolio/",
@@ -9452,7 +9452,7 @@
      },
      {
       "rel": "stylesheet",
-      "href": "/assets/css/theme.css?v=1",
+      "href": "/assets/css/theme.css?v=eed52cec",
       "type": null,
       "sizes": null,
       "as": null
@@ -9624,10 +9624,10 @@
       "gtm": true
      },
      {
-      "src": "/assets/js/theme.js?v=1"
+      "src": "/assets/js/theme.js?v=b79ebabc"
      },
      {
-      "src": "/assets/js/main.js?v=20261026"
+      "src": "/assets/js/main.js?v=ad3dfd86"
      }
     ],
     "noscriptGtm": true
@@ -10103,7 +10103,7 @@
     "portfolio-grid",
     "whatsapp-widget"
    ],
-   "htmlBytes": 20810,
+   "htmlBytes": 21095,
    "network": [
     {
      "method": "GET",
@@ -10190,7 +10190,7 @@
      },
      {
       "rel": "stylesheet",
-      "href": "/assets/css/theme.css?v=1",
+      "href": "/assets/css/theme.css?v=eed52cec",
       "type": null,
       "sizes": null,
       "as": null
@@ -10345,10 +10345,10 @@
       "gtm": true
      },
      {
-      "src": "/assets/js/theme.js?v=1"
+      "src": "/assets/js/theme.js?v=b79ebabc"
      },
      {
-      "src": "/assets/js/main.js?v=20261026"
+      "src": "/assets/js/main.js?v=ad3dfd86"
      }
     ],
     "noscriptGtm": true
@@ -10770,7 +10770,7 @@
     "main",
     "whatsapp-widget"
    ],
-   "htmlBytes": 16316,
+   "htmlBytes": 16547,
    "network": [
     {
      "method": "GET",
@@ -10857,7 +10857,7 @@
      },
      {
       "rel": "stylesheet",
-      "href": "/assets/css/theme.css?v=1",
+      "href": "/assets/css/theme.css?v=eed52cec",
       "type": null,
       "sizes": null,
       "as": null
@@ -11012,10 +11012,10 @@
       "gtm": true
      },
      {
-      "src": "/assets/js/theme.js?v=1"
+      "src": "/assets/js/theme.js?v=b79ebabc"
      },
      {
-      "src": "/assets/js/main.js?v=20261026"
+      "src": "/assets/js/main.js?v=ad3dfd86"
      }
     ],
     "noscriptGtm": true
@@ -11447,7 +11447,7 @@
     "main",
     "whatsapp-widget"
    ],
-   "htmlBytes": 19621,
+   "htmlBytes": 19898,
    "network": [
     {
      "method": "GET",
@@ -11534,7 +11534,7 @@
      },
      {
       "rel": "stylesheet",
-      "href": "/assets/css/theme.css?v=1",
+      "href": "/assets/css/theme.css?v=eed52cec",
       "type": null,
       "sizes": null,
       "as": null
@@ -11690,10 +11690,10 @@
       "gtm": true
      },
      {
-      "src": "/assets/js/theme.js?v=1"
+      "src": "/assets/js/theme.js?v=b79ebabc"
      },
      {
-      "src": "/assets/js/main.js?v=20261026"
+      "src": "/assets/js/main.js?v=ad3dfd86"
      }
     ],
     "noscriptGtm": true
@@ -12125,7 +12125,7 @@
     "main",
     "whatsapp-widget"
    ],
-   "htmlBytes": 20156,
+   "htmlBytes": 20444,
    "network": [
     {
      "method": "GET",
@@ -12212,7 +12212,7 @@
      },
      {
       "rel": "stylesheet",
-      "href": "/assets/css/theme.css?v=1",
+      "href": "/assets/css/theme.css?v=eed52cec",
       "type": null,
       "sizes": null,
       "as": null
@@ -12367,10 +12367,10 @@
       "gtm": true
      },
      {
-      "src": "/assets/js/theme.js?v=1"
+      "src": "/assets/js/theme.js?v=b79ebabc"
      },
      {
-      "src": "/assets/js/main.js?v=20261026"
+      "src": "/assets/js/main.js?v=ad3dfd86"
      }
     ],
     "noscriptGtm": true
@@ -12792,7 +12792,7 @@
     "main",
     "whatsapp-widget"
    ],
-   "htmlBytes": 16265,
+   "htmlBytes": 16496,
    "network": [
     {
      "method": "GET",
@@ -12879,7 +12879,7 @@
      },
      {
       "rel": "stylesheet",
-      "href": "/assets/css/theme.css?v=1",
+      "href": "/assets/css/theme.css?v=eed52cec",
       "type": null,
       "sizes": null,
       "as": null
@@ -13034,10 +13034,10 @@
       "gtm": true
      },
      {
-      "src": "/assets/js/theme.js?v=1"
+      "src": "/assets/js/theme.js?v=b79ebabc"
      },
      {
-      "src": "/assets/js/main.js?v=20261026"
+      "src": "/assets/js/main.js?v=ad3dfd86"
      }
     ],
     "noscriptGtm": true
@@ -13469,7 +13469,7 @@
     "main",
     "whatsapp-widget"
    ],
-   "htmlBytes": 19035,
+   "htmlBytes": 19314,
    "network": [
     {
      "method": "GET",
@@ -13556,7 +13556,7 @@
      },
      {
       "rel": "stylesheet",
-      "href": "/assets/css/theme.css?v=1",
+      "href": "/assets/css/theme.css?v=eed52cec",
       "type": null,
       "sizes": null,
       "as": null
@@ -13711,10 +13711,10 @@
       "gtm": true
      },
      {
-      "src": "/assets/js/theme.js?v=1"
+      "src": "/assets/js/theme.js?v=b79ebabc"
      },
      {
-      "src": "/assets/js/main.js?v=20261026"
+      "src": "/assets/js/main.js?v=ad3dfd86"
      }
     ],
     "noscriptGtm": true
@@ -14136,7 +14136,7 @@
     "main",
     "whatsapp-widget"
    ],
-   "htmlBytes": 16012,
+   "htmlBytes": 16236,
    "network": [
     {
      "method": "GET",
@@ -14223,7 +14223,7 @@
      },
      {
       "rel": "stylesheet",
-      "href": "/assets/css/theme.css?v=1",
+      "href": "/assets/css/theme.css?v=eed52cec",
       "type": null,
       "sizes": null,
       "as": null
@@ -14378,10 +14378,10 @@
       "gtm": true
      },
      {
-      "src": "/assets/js/theme.js?v=1"
+      "src": "/assets/js/theme.js?v=b79ebabc"
      },
      {
-      "src": "/assets/js/main.js?v=20261026"
+      "src": "/assets/js/main.js?v=ad3dfd86"
      }
     ],
     "noscriptGtm": true
@@ -14803,7 +14803,7 @@
     "main",
     "whatsapp-widget"
    ],
-   "htmlBytes": 16321,
+   "htmlBytes": 16552,
    "network": [
     {
      "method": "GET",
@@ -14890,7 +14890,7 @@
      },
      {
       "rel": "stylesheet",
-      "href": "/assets/css/theme.css?v=1",
+      "href": "/assets/css/theme.css?v=eed52cec",
       "type": null,
       "sizes": null,
       "as": null
@@ -15012,10 +15012,10 @@
       "gtm": true
      },
      {
-      "src": "/assets/js/theme.js?v=1"
+      "src": "/assets/js/theme.js?v=b79ebabc"
      },
      {
-      "src": "/assets/js/main.js?v=20261026"
+      "src": "/assets/js/main.js?v=ad3dfd86"
      }
     ],
     "noscriptGtm": true
@@ -15552,7 +15552,7 @@
     "main",
     "whatsapp-widget"
    ],
-   "htmlBytes": 25773,
+   "htmlBytes": 26058,
    "network": [
     {
      "method": "GET",
@@ -15639,7 +15639,7 @@
      },
      {
       "rel": "stylesheet",
-      "href": "/assets/css/theme.css?v=1",
+      "href": "/assets/css/theme.css?v=eed52cec",
       "type": null,
       "sizes": null,
       "as": null
@@ -15856,10 +15856,10 @@
       "gtm": true
      },
      {
-      "src": "/assets/js/theme.js?v=1"
+      "src": "/assets/js/theme.js?v=b79ebabc"
      },
      {
-      "src": "/assets/js/main.js?v=20261026"
+      "src": "/assets/js/main.js?v=ad3dfd86"
      }
     ],
     "noscriptGtm": true
@@ -16347,7 +16347,7 @@
     "services",
     "whatsapp-widget"
    ],
-   "htmlBytes": 26645,
+   "htmlBytes": 26964,
    "network": [
     {
      "method": "GET",
@@ -16434,7 +16434,7 @@
      },
      {
       "rel": "stylesheet",
-      "href": "/assets/css/theme.css?v=1",
+      "href": "/assets/css/theme.css?v=eed52cec",
       "type": null,
       "sizes": null,
       "as": null
@@ -16559,10 +16559,10 @@
       "gtm": true
      },
      {
-      "src": "/assets/js/theme.js?v=1"
+      "src": "/assets/js/theme.js?v=b79ebabc"
      },
      {
-      "src": "/assets/js/main.js?v=20261026"
+      "src": "/assets/js/main.js?v=ad3dfd86"
      }
     ],
     "noscriptGtm": true
@@ -17156,7 +17156,7 @@
     "ai-automation",
     "whatsapp-widget"
    ],
-   "htmlBytes": 26630,
+   "htmlBytes": 27083,
    "network": [
     {
      "method": "GET",
@@ -17247,7 +17247,7 @@
      },
      {
       "rel": "stylesheet",
-      "href": "/assets/css/theme.css?v=1",
+      "href": "/assets/css/theme.css?v=eed52cec",
       "type": null,
       "sizes": null,
       "as": null
@@ -17369,10 +17369,10 @@
       "gtm": true
      },
      {
-      "src": "/assets/js/theme.js?v=1"
+      "src": "/assets/js/theme.js?v=b79ebabc"
      },
      {
-      "src": "/assets/js/main.js?v=20261026"
+      "src": "/assets/js/main.js?v=ad3dfd86"
      }
     ],
     "noscriptGtm": true
@@ -17827,7 +17827,7 @@
     "main",
     "whatsapp-widget"
    ],
-   "htmlBytes": 16610,
+   "htmlBytes": 16832,
    "network": [
     {
      "method": "GET",
