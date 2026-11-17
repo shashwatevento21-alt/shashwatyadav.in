@@ -1,6 +1,6 @@
 {
  "base": "http://test.local:8090",
- "when": "2026-11-17T08:22:48.938Z",
+ "when": "2026-11-17T10:19:32.702Z",
  "pageCount": 22,
  "pages": {
   "/": {
@@ -122,6 +122,15 @@
         "alumniOf": {
          "@type": "EducationalOrganization",
          "name": "Shankar Charya Technical Campus"
+        },
+        "hasOccupation": {
+         "@type": "Occupation",
+         "name": "Performance Marketer and SEO Specialist",
+         "occupationLocation": {
+          "@type": "City",
+          "name": "Raipur"
+         },
+         "experienceRequirements": "6+ years of experience"
         },
         "knowsAbout": [
          "Performance marketing",
@@ -786,7 +795,7 @@
     "hero",
     "whatsapp-widget"
    ],
-   "htmlBytes": 25188,
+   "htmlBytes": 25382,
    "network": [
     {
      "method": "GET",
@@ -1032,6 +1041,15 @@
          "@type": "EducationalOrganization",
          "name": "Shankar Charya Technical Campus"
         },
+        "hasOccupation": {
+         "@type": "Occupation",
+         "name": "Performance Marketer and SEO Specialist",
+         "occupationLocation": {
+          "@type": "City",
+          "name": "Raipur"
+         },
+         "experienceRequirements": "6+ years of experience"
+        },
         "knowsAbout": [
          "Performance marketing",
          "Meta Ads",
@@ -1141,7 +1159,7 @@
           "name": "What does Shashwat Yadav’s experience include?",
           "acceptedAnswer": {
            "@type": "Answer",
-           "text": "4+ years in performance marketing, a business founded in 2021, and a team lead role since March 2026."
+           "text": "6+ years in performance marketing, a business founded in 2021, and a team lead role since March 2026."
           }
          },
          {
@@ -1274,7 +1292,7 @@
    "commentCount": 26,
    "text": {
     "header": "Skip to content Home About Services Portfolio Skills Certifications Blog Contact Log in Courses All courses Courses and upcoming live classes Master Classes 3-hour live deep dives Google Ads Search and Demand Gen lead campaigns Meta Ads Lead and engagement campaigns Claude and Claude Code Prompting, building and automation Let's Connect Courses",
-    "content": "About Shashwat Yadav Performance Marketer and SEO Specialist in Raipur Performance Marketer SEO Specialist AI Automation Builder Based in Raipur, Chhattisgarh, I treat ads, search and tracking as one system. After 4+ years in performance marketing, I joined The Digital Agency in March 2026 as Ad Performance Marketing Head and lead a 15-person team. Contact me WhatsApp me Browse courses Bio Industries Results Journey Skills Certifications FAQ Contact Who Is Shashwat Yadav? Shashwat Yadav is a performance marketer and SEO specialist from Raipur. Clients in real estate, healthcare and education work with him to turn ads and search into steady enquiries. Before agency work, I founded Evento Balloon Decoration and ranked it first organically for “balloon decoration Raipur” without ad spend. Selling, building and marketing a business myself shapes how I plan every campaign. My own path began with a Mechanical Engineering degree at Shankar Charya Technical Campus (CSVTU), from 2016 to 2020. Sales roles at Byju’s and Lido Learning came next, then Evento from November 2021. A short WordPress and SEO consulting project for MyFemily in early 2026 led into the agency role. Read more How Shashwat Yadav Approaches Marketing Most agencies hand the ad, the tracking and the landing page to three different people. I prefer to build the landing page, wire up the tracking and run the ads myself, so nothing gets lost between them. That habit comes from running a business. At Evento Balloon Decoration I did the selling, the building and the marketing at once, and the business ranked first organically for “balloon decoration Raipur” on Google Business Profile, ChatGPT, Gemini and Google AI Mode, with zero ad spend. Today the same thinking guides a 15-person team serving 30+ clients. Every campaign starts from the lead a business actually wants, with tracking wired up so results can be measured. Leading people is part of the job as well. The work includes managing the team, handling accounts for many clients at once, preparing proposals and pitch decks, and keeping every ad within Google and Meta policy. Read more Performance Marketing at a Glance Meta Ads, Google Ads and LinkedIn Ads, with lead generation as the focus. Alongside the ads I handle tracking and landing pages, and I manage accounts for 30+ clients across real estate, healthcare and education. ₹5.7L+ monthly ad spend managed 15 person team 30+ clients 9 industries served Industries I Work In Pick an industry to see what I do there and the published results. Industries without published results show the description only. Healthcare Commercial Real Estate Residential Real Estate Salon & Wellness Education Retail & Malls Hospitality Food & Beverage Schools Healthcare Hospital lead generation. Treatments covered include IVF, IUI, gynecology, cosmetic gynecology, LASIK, cataract surgery and painless (epidural) labour, each with its own campaign. 7,598 patient interactions in 5 months. Commercial Real Estate Campaigns for premium commercial developers, including a business park. Inventory spans showroom, office and retail space from 350 to 6,400 sq ft. 152 qualified leads in 5 months. Residential Real Estate Meta Ads lead generation for 2BHK and 3BHK developers, from affordable to luxury. Unit prices across these accounts run from ₹35L to ₹1.2Cr. 516 qualified leads and 128 site visits in 5 months. Salon & Wellness Marketing for premium unisex salons. 700+ admission leads in 4 months. Education Lead generation for education service providers. LIFE Educare is a school setup and consultancy account. 50 leads a month for LIFE Educare. Retail & Malls Marketing for shopping malls. Hospitality Marketing for hotels. Food & Beverage Marketing for premium restaurants. Schools Marketing for K-12 schools. Results from Client Work Figures are quoted as published in the portfolio, with the platform and time period shown wherever the case study gives one. Past results do not guarantee future ones. Residential Real Estate 516 qualified leads 128 site visits at a ₹291 average cost per qualified lead on Meta Ads, over 5 months (ongoing). Confidential client. Commercial Real Estate 152 qualified leads Meta and Google Ads at a ₹987 average cost per qualified lead, over 5 months (ongoing). Healthcare 7,598 patient interactions Form leads, click-to-WhatsApp conversions and answered calls on Meta and Google over 5 months. Advertising performance only. Chaitanya Greens 300+ qualified leads a month Meta Ads, ongoing. Vasarsha Reality 100+ qualified leads a month Meta Ads, ongoing. LIFE Educare 50 leads a month School setup consultancy, ongoing. Salon & Education 700+ admission leads Admission leads for a premium salon and academy in 4 months. Confidential client. Read the full case studies PHPCODE_DUMMY How the Campaigns Work Residential launch Lead forms asked about budget range, location preference and unit type, so serious buyers were filtered before a single call was made. A parallel brand-awareness campaign showed the project’s amenities. Lead quality was checked against the form answers to refine targeting and creative. The outcome was 516 qualified leads and 128 site visits over five months. Commercial property Showroom, office and retail space ran on Meta Ads and Google Ads at the same time, pairing Meta’s audience targeting with Google’s high-intent search. Forms captured preferred location and budget range to filter for serious intent. Cost per lead was tracked closely against a fixed budget. Hospital services Each treatment line, from IVF to cataract, painless labour, LASIK and OPD, had its own campaign, so messaging matched each patient’s concerns. Meta Ads used lead forms and click-to-WhatsApp ads, while Google Ads used call tracking to capture answered calls. This describes advertising performance only, not treatment outcomes. Read more Shashwat Yadav’s Journey So Far From a mechanical engineering degree, through sales, a business of my own and leading a team, to teaching. Show All Business & Sales Marketing & SEO Web / Tech & AI Teaching & Learning Expand all Collapse all Skills I carry Tap a skill to see the chapters where I used it. Meta Ads Google Ads Lead generation Google Tag Manager GA4 Meta Pixel Conversion tracking Local SEO Google Business Profile GEO and AI search optimisation WordPress Claude Code AI agents Team management Multi-client account management Cold calling and sales 2016 2016 – 2020 B.Tech, Mechanical Engineering Shankar Charya Technical Campus (CSVTU) Education A mechanical engineering degree, before any of the work below. Degree: B.Tech, Mechanical Engineering. Institution: Shankar Charya Technical Campus (CSVTU). Years: 2016 to 2020. What I took from it Engineering trained me to break a problem into parts and check each one. 2020 Nov 2020 · about 3 months · Remote Business Development Trainee Byju's Business & Sales My first job: cold calling, delivering sessions and selling courses. Cold calling. Session delivery. Course sales. Remote, for about three months. Skills used Cold calling and sales What I took from it Cold calls and live sessions taught me to listen first and explain simply. 2021 Jul – Sep 2021 · Noida Business Development Associate Lido Learning Business & Sales On-site visits, turning leads into ed-tech enrolments. On-site visits. Converting leads into ed-tech enrolments. Based in Noida. Skills used Cold calling and sales What I took from it Meeting people in person showed me what actually turns a lead into an enrolment. Nov 2021 – Nov 2025 · Raipur Founder Evento Balloon Decoration Pvt Ltd (formerly Eventoplanner) Business & Sales Marketing & SEO Founded a balloon decoration business and grew it to ₹30 lakh a year in revenue. Grew annual revenue to ₹30 lakh with a 4-member core team and 7 gig workers. Ranked first organically for “balloon decoration Raipur” on Google Business Profile, ChatGPT, Gemini and Google AI Mode, with zero ad spend. Built a payment-enabled WordPress e-commerce site with Razorpay. Milestones Nov 2021 Founded with two partners. Nov 2022 Ran it solo. Mar 2023 Incorporated as a private limited company. Skills used Google Business Profile Local SEO GEO and AI search optimisation WordPress Team management What I took from it Building demand from zero taught me the difference between vanity metrics and business outcomes. Nov 2025 – Apr 2026 Digital Marketing Program, First Class with Distinction Digital Scholar Teaching & Learning Studied the Digital Marketing Program from November to April and completed it with First Class with Distinction, with seven certifications in total. Seven certifications Digital Marketing Program, First Class with Distinction (issued 7 May 2026) Google Ads Performance Specialist Meta Ads Performance Specialist Social Media Content Expert AI Creative Production Expert AI Agent Specialist AI Search and LLM Optimisation Expert Skills learned SEO: On-page SEO, Technical SEO, Local SEO, Keyword strategy, Google Business Profile, Search Console WordPress: WordPress, Elementor, Landing pages Google: Google Ads, Search, Display, Video, Tag Manager, GA4 Meta: Meta Ads, Lead generation, Audiences, Creative testing, Meta Pixel, Conversion tracking Social media: Content creation, Content strategy, Content calendars AI: AI creative production, Kling AI, Hailuo, Runway, Nano Banana, Google Flow, GEO, AI search optimisation Automation with AI and Claude Code: Workflow automation, n8n, AI agents, Lead routing, Reporting pipelines, WhatsApp notifications, Content pipelines, Website building Skills used Meta Ads Google Ads Google Tag Manager GA4 Meta Pixel Conversion tracking Local SEO Google Business Profile WordPress AI agents Claude Code GEO and AI search optimisation What I took from it Structured learning gave names and frameworks to things I had learned by doing. 2026 Feb – Mar 2026 · Delhi, remote WordPress Designer and SEO Consultant MyFemily by Nutritionist Saloni Marketing & SEO Web WordPress design and on-page SEO for a nutrition consultancy. WordPress website design. On-page SEO. For a nutrition consultancy in Delhi, working remotely. Skills used WordPress What I took from it A short, focused project showed me how a site’s design and its SEO work best when planned together. Mar 2026 – Now · Raipur Ad Performance Marketing Head The Digital Agency Marketing & SEO Web Tech & AI Joined as Ad Performance Marketing Head; I lead a 15-person team serving 30+ clients. Leads a 15-person team: 4 social media managers, 4 video editors, 1 website designer and 2 graphic designers. Serves 30+ clients in real estate, healthcare and education. Meta Ads and Google Ads for lead generation. Conversion tracking with Google Tag Manager, GA4 and Meta Pixel. Workflow automation with n8n, AI agents and Claude Code. Vibe coding: building websites and tools with Claude Code. Built Insinfluencer (insinfluencer.com) from scratch: the website and creator platform of an influencer marketing agency, including its SEO. Skills used Meta Ads Google Ads Lead generation Google Tag Manager GA4 Meta Pixel Conversion tracking Claude Code AI agents Team management Multi-client account management What I took from it Leading a team means keeping the ad, the tracking and the landing page working as one system. Now Now Teaching live classes Claude Code, Meta Ads, Google Ads and SEO You are here Teaching & Learning Marketing & SEO Web Tech & AI Teaching live classes on Claude Code, Meta Ads, Google Ads and SEO, and building the platform behind them. Runs live classes. Teaches Claude Code, Meta Ads, Google Ads and SEO. Built the live classes platform (Laravel, MySQL) with AI-assisted development. Skills used Claude Code Meta Ads Google Ads SEO What I took from it Teaching is the best test of whether I really understand what I do. Work with me Learn with me What Shashwat Yadav Learned Building Evento Evento Balloon Decoration Pvt Ltd, formerly Eventoplanner, started in Raipur in November 2021 with two partners. From November 2022 I ran it on my own, and it was incorporated in March 2023. The business had a core team of four, seven gig workers and ₹30 lakh in annual revenue. Its visibility came from search rather than ads: first place organically for “balloon decoration Raipur” across Google Business Profile, ChatGPT, Gemini and Google AI Mode. Running Evento until November 2025 meant handling selling, building and marketing myself. That is why I judge every campaign by the leads and customers it brings in. Read more Shashwat Yadav’s Services in Detail Google Ads Search, Display and Video campaign setup, backed by keyword research and competitor analysis, conversion tracking through Google Tag Manager, and monthly performance reporting. Current accounts include commercial real estate and healthcare. Meta Ads Lead generation and conversion campaigns on Facebook and Instagram, with custom and lookalike audiences, ad copy and visual strategy, and A/B testing before scaling. The accounts span several sectors. SEO and local search Google search ranking work, AI search optimisation for ChatGPT and Gemini, Google Business Profile optimisation, and technical SEO with a content strategy behind it. Websites and automation WordPress and Elementor builds, custom HTML, CSS and JavaScript, and landing pages made for conversion. On the automation side come custom AI agents for lead handling and automated lead-routing and reporting pipelines. See every service . Read more Who Shashwat Yadav Works With The accounts are business owners and developers who want enquiries rather than impressions: residential and commercial property developers, hospitals, schools and education consultancies, salons, hotels, restaurants and shopping malls. Several of the published case studies are for Raipur businesses, so the local market, its buyers and its search habits are familiar ground. Each account starts with the goal, the budget and the lead the business actually wants, and the plan follows from those. Read more What Shashwat Yadav Does Performance Marketing AI and Automation SEO and GEO Performance Marketing Ads, tracking and landing pages as one system. I set up Google Ads, Meta Ads and LinkedIn Ads for lead generation, and wire conversion tracking through Google Tag Manager, GA4 and Meta Pixel so results can be measured. Reporting spans Search Console, Instagram and YouTube, and I resolve Google and Meta ad policy disapprovals. Google Ads Meta Ads LinkedIn Ads Google Tag Manager GA4 Meta Pixel and conversion tracking Landing page design Multi-channel reporting Ads policy compliance See the services AI and Automation Agents and workflows that remove repeat work. I build the systems behind marketing operations: content pipelines, lead routing and AI agents. With Claude Code I direct an AI coding agent to ship websites and landing pages. With n8n, the WhatsApp API and Google Sheets, a form submission can reach the CRM and trigger a WhatsApp notification with no manual steps. AI creative tools turn briefs into publish-ready ads and video. Claude Code n8n AI agent building AI-assisted development Vibe coding Websites and tools WhatsApp API Google Sheets Kling AI Hailuo Runway Nano Banana Google Flow See all skills SEO and GEO Visibility on Google and in AI answers, from Google’s SEO Starter Guide up. That covers technical, on-page and local SEO, and Google Business Profile work. GEO means structuring content with schema and E-E-A-T signals so AI Overviews, ChatGPT and Gemini can cite the business, not only so Google ranks it. Technical SEO On-page SEO Keyword strategy Local SEO Google Business Profile Google Search Console AI search and LLM optimisation Schema and E-E-A-T signals See the services Day to day I work in Meta Ads Manager, Google Search Console, Canva, WordPress and Elementor, alongside the tools above. How I Work Research Keyword research, competitor analysis and a clear view of the right audience. Build and track The landing page comes first, then Google Tag Manager, GA4 and Meta Pixel so every lead is counted. Launch and test Lead-generation campaigns go live, with A/B tests on creative and audiences before scaling what works. Report and improve Monthly reporting shows what the spend produced, and the next round of optimisation follows from it. Certifications and Learning Seven certifications from Digital Scholar cover paid ads, content, AI creative production, AI agents and AI search. They sit alongside hands-on work for real client accounts: Digital Marketing Program (First Class with Distinction) Google Ads Performance Specialist Meta Ads Performance Specialist Social Media Content Expert AI Creative Production Expert AI Agent Specialist AI Search and LLM Optimisation Expert Teaching Shashwat Yadav also teaches at The Digital School, a digital marketing training institute in Raipur, and runs live classes. The certifications above include a Digital Marketing Program completed with First Class with Distinction, issued on 7 May 2026, and cover the same areas he works in every day: paid ads, AI creative production, AI agents and AI search. Browse courses Built from Scratch: Insinfluencer Insinfluencer (insinfluencer.com) is an influencer marketing agency and creator platform for India. Brands launch campaigns and find creators, while creators join with a free profile and get access to brand opportunities. I built the website and creator platform from scratch and handle its SEO, on behalf of The Digital Agency. The site covers influencer campaigns, UGC content, creator sourcing, local and store marketing, social media strategy and performance reporting, with a creator directory and a Brief, Match, Create and Report process. Frequently Asked Questions Who is Shashwat Yadav? A performance marketer and SEO specialist in Raipur who leads a 15-person team. What does Shashwat Yadav do? Paid ads, tracking, SEO, WordPress sites and AI automation for lead generation. Where is Shashwat Yadav based? In Raipur, Chhattisgarh, India. What does Shashwat Yadav’s experience include? 4+ years in performance marketing, a business founded in 2021, and a team lead role since March 2026. Does Shashwat Yadav teach? Yes. He teaches through The Digital School in Raipur and runs live classes. How can I work with Shashwat Yadav? Use the contact form on this page, message +91 70001 98366 on WhatsApp, or email shashwatyadav012345@gmail.com. Which industries does Shashwat Yadav work in? Healthcare, real estate, salons, education, retail, hospitality, food and beverage, and schools. Which platforms does Shashwat Yadav run ads on? Meta Ads, Google Ads and LinkedIn Ads, with lead generation as the main goal. How does Shashwat Yadav measure results? Through conversion tracking set up in Google Tag Manager, GA4 and Meta Pixel, with reporting across Search Console, Instagram and YouTube. What is GEO, and does Shashwat Yadav offer it? GEO is optimising content so AI tools such as ChatGPT and Gemini surface and cite a business. Yes, it is part of his SEO work. What did Shashwat Yadav build at Evento? Evento Balloon Decoration Pvt Ltd, a Raipur business founded in November 2021, incorporated in March 2023 and run until November 2025, with ₹30 lakh in annual revenue. Does Shashwat Yadav use AI in his work? Yes. He uses Claude Code for development, n8n and AI agents for automation, and AI creative tools for ads and video. What is Shashwat Yadav’s role at The Digital Agency? Ad Performance Marketing Head since March 2026, leading a 15-person team that serves 30+ clients. Does Shashwat Yadav work with Raipur businesses? Yes. Several published case studies are for Raipur businesses, including real estate developers and a hospital. What qualifications does Shashwat Yadav have? A B.Tech in Mechanical Engineering from Shankar Charya Technical Campus (CSVTU), 2016 to 2020, and seven Digital Scholar certifications. What has Shashwat Yadav built with AI and code? Websites, landing pages, workflow automations and tools using Claude Code and n8n, including the Insinfluencer website and creator platform, built from scratch. Get in Touch Tell me about your business, what you need help with and, if you like, a budget range. Messages sent to Shashwat Yadav through this form get a reply within 24 hours, and WhatsApp is open for quicker questions. Phone · tap to call +91 70001 98366 WhatsApp · tap to chat Message on WhatsApp Email · tap to write shashwatyadav012345@gmail.com City Raipur, Chhattisgarh, India LinkedIn · open profile Shashwat Yadav on LinkedIn Instagram · open profile @shashwat.ai.seo Your Name Phone / WhatsApp India (+91) USA / Canada (+1) United Kingdom (+44) Australia (+61) New Zealand (+64) UAE (+971) Saudi Arabia (+966) Qatar (+974) Pakistan (+92) Bangladesh (+880) Nepal (+977) Sri Lanka (+94) Singapore (+65) Malaysia (+60) China (+86) Japan (+81) South Korea (+82) Germany (+49) France (+33) Italy (+39) Spain (+34) Russia (+7) South Africa (+27) Brazil (+55) Please enter a valid mobile number Email Address (optional) Please enter a valid email address What Do You Need Help With? Select one... Performance Marketing (Google/Meta Ads) SEO / GEO Website Development AI & Marketing Automation Something else Budget Range (optional) Prefer not to say Just exploring Under ₹50K/month ₹50K–2L/month ₹2L+/month Tell Me About Your Business Website Send Message Message Sent! Thanks for reaching out. I’ll get back to you within 24 hours. Send Another Message Something Went Wrong Your message didn’t go through. Please try again, or reach out directly on WhatsApp. Try Again WhatsApp Me Instead",
+    "content": "About Shashwat Yadav Performance Marketer and SEO Specialist in Raipur Performance Marketer SEO Specialist AI Automation Builder Based in Raipur, Chhattisgarh, I treat ads, search and tracking as one system. After 6+ years in performance marketing, I joined The Digital Agency in March 2026 as Ad Performance Marketing Head and lead a 15-person team. Contact me WhatsApp me Browse courses Bio Industries Results Journey Skills Certifications FAQ Contact Who Is Shashwat Yadav? Shashwat Yadav is a performance marketer and SEO specialist from Raipur. Clients in real estate, healthcare and education work with him to turn ads and search into steady enquiries. Before agency work, I founded Evento Balloon Decoration and ranked it first organically for “balloon decoration Raipur” without ad spend. Selling, building and marketing a business myself shapes how I plan every campaign. My own path began with a Mechanical Engineering degree at Shankar Charya Technical Campus (CSVTU), from 2016 to 2020. Sales roles at Byju’s and Lido Learning came next, then Evento from November 2021. A short WordPress and SEO consulting project for MyFemily in early 2026 led into the agency role. Read more How Shashwat Yadav Approaches Marketing Most agencies hand the ad, the tracking and the landing page to three different people. I prefer to build the landing page, wire up the tracking and run the ads myself, so nothing gets lost between them. That habit comes from running a business. At Evento Balloon Decoration I did the selling, the building and the marketing at once, and the business ranked first organically for “balloon decoration Raipur” on Google Business Profile, ChatGPT, Gemini and Google AI Mode, with zero ad spend. Today the same thinking guides a 15-person team serving 30+ clients. Every campaign starts from the lead a business actually wants, with tracking wired up so results can be measured. Leading people is part of the job as well. The work includes managing the team, handling accounts for many clients at once, preparing proposals and pitch decks, and keeping every ad within Google and Meta policy. Read more Performance Marketing at a Glance Meta Ads, Google Ads and LinkedIn Ads, with lead generation as the focus. Alongside the ads I handle tracking and landing pages, and I manage accounts for 30+ clients across real estate, healthcare and education. ₹5.7L+ monthly ad spend managed 15 person team 30+ clients 9 industries served Industries I Work In Pick an industry to see what I do there and the published results. Industries without published results show the description only. Healthcare Commercial Real Estate Residential Real Estate Salon & Wellness Education Retail & Malls Hospitality Food & Beverage Schools Healthcare Hospital lead generation. Treatments covered include IVF, IUI, gynecology, cosmetic gynecology, LASIK, cataract surgery and painless (epidural) labour, each with its own campaign. 7,598 patient interactions in 5 months. Commercial Real Estate Campaigns for premium commercial developers, including a business park. Inventory spans showroom, office and retail space from 350 to 6,400 sq ft. 152 qualified leads in 5 months. Residential Real Estate Meta Ads lead generation for 2BHK and 3BHK developers, from affordable to luxury. Unit prices across these accounts run from ₹35L to ₹1.2Cr. 516 qualified leads and 128 site visits in 5 months. Salon & Wellness Marketing for premium unisex salons. 700+ admission leads in 4 months. Education Lead generation for education service providers. LIFE Educare is a school setup and consultancy account. 50 leads a month for LIFE Educare. Retail & Malls Marketing for shopping malls. Hospitality Marketing for hotels. Food & Beverage Marketing for premium restaurants. Schools Marketing for K-12 schools. Results from Client Work Figures are quoted as published in the portfolio, with the platform and time period shown wherever the case study gives one. Past results do not guarantee future ones. Residential Real Estate 516 qualified leads 128 site visits at a ₹291 average cost per qualified lead on Meta Ads, over 5 months (ongoing). Confidential client. Commercial Real Estate 152 qualified leads Meta and Google Ads at a ₹987 average cost per qualified lead, over 5 months (ongoing). Healthcare 7,598 patient interactions Form leads, click-to-WhatsApp conversions and answered calls on Meta and Google over 5 months. Advertising performance only. Chaitanya Greens 300+ qualified leads a month Meta Ads, ongoing. Vasarsha Reality 100+ qualified leads a month Meta Ads, ongoing. LIFE Educare 50 leads a month School setup consultancy, ongoing. Salon & Education 700+ admission leads Admission leads for a premium salon and academy in 4 months. Confidential client. Read the full case studies PHPCODE_DUMMY How the Campaigns Work Residential launch Lead forms asked about budget range, location preference and unit type, so serious buyers were filtered before a single call was made. A parallel brand-awareness campaign showed the project’s amenities. Lead quality was checked against the form answers to refine targeting and creative. The outcome was 516 qualified leads and 128 site visits over five months. Commercial property Showroom, office and retail space ran on Meta Ads and Google Ads at the same time, pairing Meta’s audience targeting with Google’s high-intent search. Forms captured preferred location and budget range to filter for serious intent. Cost per lead was tracked closely against a fixed budget. Hospital services Each treatment line, from IVF to cataract, painless labour, LASIK and OPD, had its own campaign, so messaging matched each patient’s concerns. Meta Ads used lead forms and click-to-WhatsApp ads, while Google Ads used call tracking to capture answered calls. This describes advertising performance only, not treatment outcomes. Read more Shashwat Yadav’s Journey So Far From a mechanical engineering degree, through sales, a business of my own and leading a team, to teaching. Show All Business & Sales Marketing & SEO Web / Tech & AI Teaching & Learning Expand all Collapse all Skills I carry Tap a skill to see the chapters where I used it. Meta Ads Google Ads Lead generation Google Tag Manager GA4 Meta Pixel Conversion tracking Local SEO Google Business Profile GEO and AI search optimisation WordPress Claude Code AI agents Team management Multi-client account management Cold calling and sales 2016 2016 – 2020 B.Tech, Mechanical Engineering Shankar Charya Technical Campus (CSVTU) Education A mechanical engineering degree, before any of the work below. Degree: B.Tech, Mechanical Engineering. Institution: Shankar Charya Technical Campus (CSVTU). Years: 2016 to 2020. What I took from it Engineering trained me to break a problem into parts and check each one. 2020 Nov 2020 · about 3 months · Remote Business Development Trainee Byju's Business & Sales My first job: cold calling, delivering sessions and selling courses. Cold calling. Session delivery. Course sales. Remote, for about three months. Skills used Cold calling and sales What I took from it Cold calls and live sessions taught me to listen first and explain simply. 2021 Jul – Sep 2021 · Noida Business Development Associate Lido Learning Business & Sales On-site visits, turning leads into ed-tech enrolments. On-site visits. Converting leads into ed-tech enrolments. Based in Noida. Skills used Cold calling and sales What I took from it Meeting people in person showed me what actually turns a lead into an enrolment. Nov 2021 – Nov 2025 · Raipur Founder Evento Balloon Decoration Pvt Ltd (formerly Eventoplanner) Business & Sales Marketing & SEO Founded a balloon decoration business and grew it to ₹30 lakh a year in revenue. Grew annual revenue to ₹30 lakh with a 4-member core team and 7 gig workers. Ranked first organically for “balloon decoration Raipur” on Google Business Profile, ChatGPT, Gemini and Google AI Mode, with zero ad spend. Built a payment-enabled WordPress e-commerce site with Razorpay. Milestones Nov 2021 Founded with two partners. Nov 2022 Ran it solo. Mar 2023 Incorporated as a private limited company. Skills used Google Business Profile Local SEO GEO and AI search optimisation WordPress Team management What I took from it Building demand from zero taught me the difference between vanity metrics and business outcomes. Nov 2025 – Apr 2026 Digital Marketing Program, First Class with Distinction Digital Scholar Teaching & Learning Studied the Digital Marketing Program from November to April and completed it with First Class with Distinction, with seven certifications in total. Seven certifications Digital Marketing Program, First Class with Distinction (issued 7 May 2026) Google Ads Performance Specialist Meta Ads Performance Specialist Social Media Content Expert AI Creative Production Expert AI Agent Specialist AI Search and LLM Optimisation Expert Skills learned SEO: On-page SEO, Technical SEO, Local SEO, Keyword strategy, Google Business Profile, Search Console WordPress: WordPress, Elementor, Landing pages Google: Google Ads, Search, Display, Video, Tag Manager, GA4 Meta: Meta Ads, Lead generation, Audiences, Creative testing, Meta Pixel, Conversion tracking Social media: Content creation, Content strategy, Content calendars AI: AI creative production, Kling AI, Hailuo, Runway, Nano Banana, Google Flow, GEO, AI search optimisation Automation with AI and Claude Code: Workflow automation, n8n, AI agents, Lead routing, Reporting pipelines, WhatsApp notifications, Content pipelines, Website building Skills used Meta Ads Google Ads Google Tag Manager GA4 Meta Pixel Conversion tracking Local SEO Google Business Profile WordPress AI agents Claude Code GEO and AI search optimisation What I took from it Structured learning gave names and frameworks to things I had learned by doing. 2026 Feb – Mar 2026 · Delhi, remote WordPress Designer and SEO Consultant MyFemily by Nutritionist Saloni Marketing & SEO Web WordPress design and on-page SEO for a nutrition consultancy. WordPress website design. On-page SEO. For a nutrition consultancy in Delhi, working remotely. Skills used WordPress What I took from it A short, focused project showed me how a site’s design and its SEO work best when planned together. Mar 2026 – Now · Raipur Ad Performance Marketing Head The Digital Agency Marketing & SEO Web Tech & AI Joined as Ad Performance Marketing Head; I lead a 15-person team serving 30+ clients. Leads a 15-person team: 4 social media managers, 4 video editors, 1 website designer and 2 graphic designers. Serves 30+ clients in real estate, healthcare and education. Meta Ads and Google Ads for lead generation. Conversion tracking with Google Tag Manager, GA4 and Meta Pixel. Workflow automation with n8n, AI agents and Claude Code. Vibe coding: building websites and tools with Claude Code. Built Insinfluencer (insinfluencer.com) from scratch: the website and creator platform of an influencer marketing agency, including its SEO. Skills used Meta Ads Google Ads Lead generation Google Tag Manager GA4 Meta Pixel Conversion tracking Claude Code AI agents Team management Multi-client account management What I took from it Leading a team means keeping the ad, the tracking and the landing page working as one system. Now Now Teaching live classes Claude Code, Meta Ads, Google Ads and SEO You are here Teaching & Learning Marketing & SEO Web Tech & AI Teaching live classes on Claude Code, Meta Ads, Google Ads and SEO, and building the platform behind them. Runs live classes. Teaches Claude Code, Meta Ads, Google Ads and SEO. Built the live classes platform (Laravel, MySQL) with AI-assisted development. Skills used Claude Code Meta Ads Google Ads SEO What I took from it Teaching is the best test of whether I really understand what I do. Work with me Learn with me What Shashwat Yadav Learned Building Evento Evento Balloon Decoration Pvt Ltd, formerly Eventoplanner, started in Raipur in November 2021 with two partners. From November 2022 I ran it on my own, and it was incorporated in March 2023. The business had a core team of four, seven gig workers and ₹30 lakh in annual revenue. Its visibility came from search rather than ads: first place organically for “balloon decoration Raipur” across Google Business Profile, ChatGPT, Gemini and Google AI Mode. Running Evento until November 2025 meant handling selling, building and marketing myself. That is why I judge every campaign by the leads and customers it brings in. Read more Shashwat Yadav’s Services in Detail Google Ads Search, Display and Video campaign setup, backed by keyword research and competitor analysis, conversion tracking through Google Tag Manager, and monthly performance reporting. Current accounts include commercial real estate and healthcare. Meta Ads Lead generation and conversion campaigns on Facebook and Instagram, with custom and lookalike audiences, ad copy and visual strategy, and A/B testing before scaling. The accounts span several sectors. SEO and local search Google search ranking work, AI search optimisation for ChatGPT and Gemini, Google Business Profile optimisation, and technical SEO with a content strategy behind it. Websites and automation WordPress and Elementor builds, custom HTML, CSS and JavaScript, and landing pages made for conversion. On the automation side come custom AI agents for lead handling and automated lead-routing and reporting pipelines. See every service . Read more Who Shashwat Yadav Works With The accounts are business owners and developers who want enquiries rather than impressions: residential and commercial property developers, hospitals, schools and education consultancies, salons, hotels, restaurants and shopping malls. Several of the published case studies are for Raipur businesses, so the local market, its buyers and its search habits are familiar ground. Each account starts with the goal, the budget and the lead the business actually wants, and the plan follows from those. Read more What Shashwat Yadav Does Performance Marketing AI and Automation SEO and GEO Performance Marketing Ads, tracking and landing pages as one system. I set up Google Ads, Meta Ads and LinkedIn Ads for lead generation, and wire conversion tracking through Google Tag Manager, GA4 and Meta Pixel so results can be measured. Reporting spans Search Console, Instagram and YouTube, and I resolve Google and Meta ad policy disapprovals. Google Ads Meta Ads LinkedIn Ads Google Tag Manager GA4 Meta Pixel and conversion tracking Landing page design Multi-channel reporting Ads policy compliance See the services AI and Automation Agents and workflows that remove repeat work. I build the systems behind marketing operations: content pipelines, lead routing and AI agents. With Claude Code I direct an AI coding agent to ship websites and landing pages. With n8n, the WhatsApp API and Google Sheets, a form submission can reach the CRM and trigger a WhatsApp notification with no manual steps. AI creative tools turn briefs into publish-ready ads and video. Claude Code n8n AI agent building AI-assisted development Vibe coding Websites and tools WhatsApp API Google Sheets Kling AI Hailuo Runway Nano Banana Google Flow See all skills SEO and GEO Visibility on Google and in AI answers, from Google’s SEO Starter Guide up. That covers technical, on-page and local SEO, and Google Business Profile work. GEO means structuring content with schema and E-E-A-T signals so AI Overviews, ChatGPT and Gemini can cite the business, not only so Google ranks it. Technical SEO On-page SEO Keyword strategy Local SEO Google Business Profile Google Search Console AI search and LLM optimisation Schema and E-E-A-T signals See the services Day to day I work in Meta Ads Manager, Google Search Console, Canva, WordPress and Elementor, alongside the tools above. How I Work Research Keyword research, competitor analysis and a clear view of the right audience. Build and track The landing page comes first, then Google Tag Manager, GA4 and Meta Pixel so every lead is counted. Launch and test Lead-generation campaigns go live, with A/B tests on creative and audiences before scaling what works. Report and improve Monthly reporting shows what the spend produced, and the next round of optimisation follows from it. Certifications and Learning Seven certifications from Digital Scholar cover paid ads, content, AI creative production, AI agents and AI search. They sit alongside hands-on work for real client accounts: Digital Marketing Program (First Class with Distinction) Google Ads Performance Specialist Meta Ads Performance Specialist Social Media Content Expert AI Creative Production Expert AI Agent Specialist AI Search and LLM Optimisation Expert Teaching Shashwat Yadav also teaches at The Digital School, a digital marketing training institute in Raipur, and runs live classes. The certifications above include a Digital Marketing Program completed with First Class with Distinction, issued on 7 May 2026, and cover the same areas he works in every day: paid ads, AI creative production, AI agents and AI search. Browse courses Built from Scratch: Insinfluencer Insinfluencer (insinfluencer.com) is an influencer marketing agency and creator platform for India. Brands launch campaigns and find creators, while creators join with a free profile and get access to brand opportunities. I built the website and creator platform from scratch and handle its SEO, on behalf of The Digital Agency. The site covers influencer campaigns, UGC content, creator sourcing, local and store marketing, social media strategy and performance reporting, with a creator directory and a Brief, Match, Create and Report process. Frequently Asked Questions Who is Shashwat Yadav? A performance marketer and SEO specialist in Raipur who leads a 15-person team. What does Shashwat Yadav do? Paid ads, tracking, SEO, WordPress sites and AI automation for lead generation. Where is Shashwat Yadav based? In Raipur, Chhattisgarh, India. What does Shashwat Yadav’s experience include? 6+ years in performance marketing, a business founded in 2021, and a team lead role since March 2026. Does Shashwat Yadav teach? Yes. He teaches through The Digital School in Raipur and runs live classes. How can I work with Shashwat Yadav? Use the contact form on this page, message +91 70001 98366 on WhatsApp, or email shashwatyadav012345@gmail.com. Which industries does Shashwat Yadav work in? Healthcare, real estate, salons, education, retail, hospitality, food and beverage, and schools. Which platforms does Shashwat Yadav run ads on? Meta Ads, Google Ads and LinkedIn Ads, with lead generation as the main goal. How does Shashwat Yadav measure results? Through conversion tracking set up in Google Tag Manager, GA4 and Meta Pixel, with reporting across Search Console, Instagram and YouTube. What is GEO, and does Shashwat Yadav offer it? GEO is optimising content so AI tools such as ChatGPT and Gemini surface and cite a business. Yes, it is part of his SEO work. What did Shashwat Yadav build at Evento? Evento Balloon Decoration Pvt Ltd, a Raipur business founded in November 2021, incorporated in March 2023 and run until November 2025, with ₹30 lakh in annual revenue. Does Shashwat Yadav use AI in his work? Yes. He uses Claude Code for development, n8n and AI agents for automation, and AI creative tools for ads and video. What is Shashwat Yadav’s role at The Digital Agency? Ad Performance Marketing Head since March 2026, leading a 15-person team that serves 30+ clients. Does Shashwat Yadav work with Raipur businesses? Yes. Several published case studies are for Raipur businesses, including real estate developers and a hospital. What qualifications does Shashwat Yadav have? A B.Tech in Mechanical Engineering from Shankar Charya Technical Campus (CSVTU), 2016 to 2020, and seven Digital Scholar certifications. What has Shashwat Yadav built with AI and code? Websites, landing pages, workflow automations and tools using Claude Code and n8n, including the Insinfluencer website and creator platform, built from scratch. Get in Touch Tell me about your business, what you need help with and, if you like, a budget range. Messages sent to Shashwat Yadav through this form get a reply within 24 hours, and WhatsApp is open for quicker questions. Phone · tap to call +91 70001 98366 WhatsApp · tap to chat Message on WhatsApp Email · tap to write shashwatyadav012345@gmail.com City Raipur, Chhattisgarh, India LinkedIn · open profile Shashwat Yadav on LinkedIn Instagram · open profile @shashwat.ai.seo Your Name Phone / WhatsApp India (+91) USA / Canada (+1) United Kingdom (+44) Australia (+61) New Zealand (+64) UAE (+971) Saudi Arabia (+966) Qatar (+974) Pakistan (+92) Bangladesh (+880) Nepal (+977) Sri Lanka (+94) Singapore (+65) Malaysia (+60) China (+86) Japan (+81) South Korea (+82) Germany (+49) France (+33) Italy (+39) Spain (+34) Russia (+7) South Africa (+27) Brazil (+55) Please enter a valid mobile number Email Address (optional) Please enter a valid email address What Do You Need Help With? Select one... Performance Marketing (Google/Meta Ads) SEO / GEO Website Development AI & Marketing Automation Something else Budget Range (optional) Prefer not to say Just exploring Under ₹50K/month ₹50K–2L/month ₹2L+/month Tell Me About Your Business Website Send Message Message Sent! Thanks for reaching out. I’ll get back to you within 24 hours. Send Another Message Something Went Wrong Your message didn’t go through. Please try again, or reach out directly on WhatsApp. Try Again WhatsApp Me Instead",
     "footer": "Performance Marketing Expert & SEO Specialist driving measurable growth through data-driven strategy. Quick Links Home About Services Portfolio Skills Certifications Courses Blog Contact Connect LinkedIn Instagram Contact +91 70001 98366 WhatsApp shashwatyadav012345@gmail.com © 2026 Shashwat Yadav. All rights reserved. | Privacy Policy | Terms Courses",
     "floating": ""
    },
@@ -2514,7 +2532,7 @@
     "form-error",
     "whatsapp-widget"
    ],
-   "htmlBytes": 85198,
+   "htmlBytes": 85392,
    "network": [
     {
      "method": "GET",
@@ -2640,6 +2658,15 @@
         "alumniOf": {
          "@type": "EducationalOrganization",
          "name": "Shankar Charya Technical Campus"
+        },
+        "hasOccupation": {
+         "@type": "Occupation",
+         "name": "Performance Marketer and SEO Specialist",
+         "occupationLocation": {
+          "@type": "City",
+          "name": "Raipur"
+         },
+         "experienceRequirements": "6+ years of experience"
         },
         "knowsAbout": [
          "Performance marketing",
@@ -3233,7 +3260,7 @@
     "certificate-lightbox-img",
     "whatsapp-widget"
    ],
-   "htmlBytes": 22048,
+   "htmlBytes": 22242,
    "network": [
     {
      "method": "GET",
@@ -3359,6 +3386,15 @@
         "alumniOf": {
          "@type": "EducationalOrganization",
          "name": "Shankar Charya Technical Campus"
+        },
+        "hasOccupation": {
+         "@type": "Occupation",
+         "name": "Performance Marketer and SEO Specialist",
+         "occupationLocation": {
+          "@type": "City",
+          "name": "Raipur"
+         },
+         "experienceRequirements": "6+ years of experience"
         },
         "knowsAbout": [
          "Performance marketing",
@@ -4087,7 +4123,7 @@
     "form-error",
     "whatsapp-widget"
    ],
-   "htmlBytes": 24084,
+   "htmlBytes": 24278,
    "network": [
     {
      "method": "GET",
@@ -4213,6 +4249,15 @@
         "alumniOf": {
          "@type": "EducationalOrganization",
          "name": "Shankar Charya Technical Campus"
+        },
+        "hasOccupation": {
+         "@type": "Occupation",
+         "name": "Performance Marketer and SEO Specialist",
+         "occupationLocation": {
+          "@type": "City",
+          "name": "Raipur"
+         },
+         "experienceRequirements": "6+ years of experience"
         },
         "knowsAbout": [
          "Performance marketing",
@@ -5031,7 +5076,7 @@
     "enroll-mobile",
     "whatsapp-widget"
    ],
-   "htmlBytes": 26798,
+   "htmlBytes": 26992,
    "network": [
     {
      "method": "GET",
@@ -5168,6 +5213,15 @@
         "alumniOf": {
          "@type": "EducationalOrganization",
          "name": "Shankar Charya Technical Campus"
+        },
+        "hasOccupation": {
+         "@type": "Occupation",
+         "name": "Performance Marketer and SEO Specialist",
+         "occupationLocation": {
+          "@type": "City",
+          "name": "Raipur"
+         },
+         "experienceRequirements": "6+ years of experience"
         },
         "knowsAbout": [
          "Performance marketing",
@@ -5911,7 +5965,7 @@
     "cd-tools-h",
     "whatsapp-widget"
    ],
-   "htmlBytes": 46871,
+   "htmlBytes": 47065,
    "network": [
     {
      "method": "GET",
@@ -6044,6 +6098,15 @@
         "alumniOf": {
          "@type": "EducationalOrganization",
          "name": "Shankar Charya Technical Campus"
+        },
+        "hasOccupation": {
+         "@type": "Occupation",
+         "name": "Performance Marketer and SEO Specialist",
+         "occupationLocation": {
+          "@type": "City",
+          "name": "Raipur"
+         },
+         "experienceRequirements": "6+ years of experience"
         },
         "knowsAbout": [
          "Performance marketing",
@@ -6877,7 +6940,7 @@
     "cd-tools-h",
     "whatsapp-widget"
    ],
-   "htmlBytes": 63010,
+   "htmlBytes": 63204,
    "network": [
     {
      "method": "GET",
@@ -7010,6 +7073,15 @@
         "alumniOf": {
          "@type": "EducationalOrganization",
          "name": "Shankar Charya Technical Campus"
+        },
+        "hasOccupation": {
+         "@type": "Occupation",
+         "name": "Performance Marketer and SEO Specialist",
+         "occupationLocation": {
+          "@type": "City",
+          "name": "Raipur"
+         },
+         "experienceRequirements": "6+ years of experience"
         },
         "knowsAbout": [
          "Performance marketing",
@@ -7609,7 +7681,7 @@
     "cd-types-h",
     "whatsapp-widget"
    ],
-   "htmlBytes": 24168,
+   "htmlBytes": 24362,
    "network": [
     {
      "method": "GET",
@@ -7625,7 +7697,7 @@
    ],
    "desktopDocHeight": 2576,
    "mobileOverflowX": false,
-   "mobileDocHeight": 3640
+   "mobileDocHeight": 3661
   },
   "/courses/meta-ads/": {
    "url": "/courses/meta-ads/",
@@ -7746,6 +7818,15 @@
         "alumniOf": {
          "@type": "EducationalOrganization",
          "name": "Shankar Charya Technical Campus"
+        },
+        "hasOccupation": {
+         "@type": "Occupation",
+         "name": "Performance Marketer and SEO Specialist",
+         "occupationLocation": {
+          "@type": "City",
+          "name": "Raipur"
+         },
+         "experienceRequirements": "6+ years of experience"
         },
         "knowsAbout": [
          "Performance marketing",
@@ -8519,7 +8600,7 @@
     "cd-tools-h",
     "whatsapp-widget"
    ],
-   "htmlBytes": 52042,
+   "htmlBytes": 52236,
    "network": [
     {
      "method": "GET",
@@ -8681,6 +8762,15 @@
          "@type": "EducationalOrganization",
          "name": "Shankar Charya Technical Campus"
         },
+        "hasOccupation": {
+         "@type": "Occupation",
+         "name": "Performance Marketer and SEO Specialist",
+         "occupationLocation": {
+          "@type": "City",
+          "name": "Raipur"
+         },
+         "experienceRequirements": "6+ years of experience"
+        },
         "knowsAbout": [
          "Performance marketing",
          "Meta Ads",
@@ -8817,13 +8907,13 @@
    "commentCount": 9,
    "text": {
     "header": "Skip to content Home About Services Portfolio Skills Certifications Blog Contact Log in Courses All courses Courses and upcoming live classes Master Classes 3-hour live deep dives Google Ads Search and Demand Gen lead campaigns Meta Ads Lead and engagement campaigns Claude and Claude Code Prompting, building and automation Let's Connect Courses",
-    "content": "← All master classes Master Class 1 · 3 hours · Live on Google Meet Meta Ads Lead Generation Basics Build your first Meta lead campaign live, from audience to follow-up, in one 3-hour session. No session scheduled yet Tell me when it's scheduled See dates and enrol Ask on WhatsApp Nothing here is a guarantee of results. Dates and seats are set when a session is scheduled. 3-hour live master class Meta Ads lead generation, step by step 3 hours, one session Live on Google Meet Build hands-on, step by step No ad spend needed A hands-on 3-hour master class. Build a Meta lead generation campaign step by step: audience, placements, ads, instant form and follow-up. Learn what each setting does and how to avoid common beginner mistakes. What You Will Do 1 Creating the lead campaign in Ads Manager 2 Audience, placements and Advantage+ 3 Creative, instant form and follow-up messages 4 Reading your first results What You’ll Learn Eleven topics, taught in the order you will meet them when you build the campaign. How a Meta lead generation campaign works and when to use it Creating the lead campaign in Ads Manager: objective, budget and setup choices Choosing who sees your ads: location, age and gender, and how much to narrow Platforms and placements: where your ads appear and when to use Advantage+ placements Using an existing post or creating a new ad, and the trade-offs of each Advantage+ audience and the other Advantage+ options, and when to use them Creative enhancements: what they change in your ad and when to switch them off Building the instant form: questions, lead quality settings, privacy link and thank-you screen Following up on leads: message timing, a WhatsApp or call script and a simple lead tracker Checking lead quality and reading your first results Policy basics and common reasons lead ads get rejected What to bring A laptop, a Facebook account and a Page you can use. You build in draft, so no ad spend is needed. How to Join Pick a session See the dates under Upcoming classes on the Courses page, or at the top of this page once one is scheduled. Sign in and enrol Sign in with Google and add your mobile number once. After that, enrolling is one tap. Join on Google Meet The green Join class button on My Classes opens 15 minutes before the class starts. Questions Do I need to spend money on ads? No. You build in draft, so no ad spend is needed. What do I need to bring? A laptop, a Facebook account and a Page you can use. You build in draft, so no ad spend is needed. Where do I find the dates? The next session is shown at the top of this page once it is scheduled. All upcoming classes are also listed on the Courses page. Can I join more than one master class? Yes. Each master class covers one skill from start to finish, and you can join one or several. Ready to build your first Meta lead campaign? See dates and enrol WhatsApp Me",
+    "content": "← All master classes Master Class 1 · 3 hours · Live on Google Meet Meta Ads Lead Generation Basics Build your first Meta lead campaign live, from audience to follow-up, in one 3-hour session. Next session: see the dates under Upcoming classes. Tell me when it's scheduled See dates and enrol Ask on WhatsApp Nothing here is a guarantee of results. Dates and seats are set when a session is scheduled. 3-hour live master class Meta Ads lead generation, step by step 3 hours, one session Live on Google Meet Build hands-on, step by step No ad spend needed A hands-on 3-hour master class. Build a Meta lead generation campaign step by step: audience, placements, ads, instant form and follow-up. Learn what each setting does and how to avoid common beginner mistakes. What You Will Do 1 Creating the lead campaign in Ads Manager 2 Audience, placements and Advantage+ 3 Creative, instant form and follow-up messages 4 Reading your first results What You’ll Learn Eleven topics, taught in the order you will meet them when you build the campaign. How a Meta lead generation campaign works and when to use it Creating the lead campaign in Ads Manager: objective, budget and setup choices Choosing who sees your ads: location, age and gender, and how much to narrow Platforms and placements: where your ads appear and when to use Advantage+ placements Using an existing post or creating a new ad, and the trade-offs of each Advantage+ audience and the other Advantage+ options, and when to use them Creative enhancements: what they change in your ad and when to switch them off Building the instant form: questions, lead quality settings, privacy link and thank-you screen Following up on leads: message timing, a WhatsApp or call script and a simple lead tracker Checking lead quality and reading your first results Policy basics and common reasons lead ads get rejected What to bring A laptop, a Facebook account and a Page you can use. You build in draft, so no ad spend is needed. How to Join Pick a session See the dates under Upcoming classes on the Courses page, or at the top of this page once one is scheduled. Sign in and enrol Sign in with Google and add your mobile number once. After that, enrolling is one tap. Join on Google Meet The green Join class button on My Classes opens 15 minutes before the class starts. Questions Do I need to spend money on ads? No. You build in draft, so no ad spend is needed. What do I need to bring? A laptop, a Facebook account and a Page you can use. You build in draft, so no ad spend is needed. Where do I find the dates? The next session is shown at the top of this page once it is scheduled. All upcoming classes are also listed on the Courses page. Can I join more than one master class? Yes. Each master class covers one skill from start to finish, and you can join one or several. Ready to build your first Meta lead campaign? See dates and enrol WhatsApp Me",
     "footer": "Performance Marketing Expert & SEO Specialist driving measurable growth through data-driven strategy. Quick Links Home About Services Portfolio Skills Certifications Courses Blog Contact Connect LinkedIn Instagram Contact +91 70001 98366 WhatsApp shashwatyadav012345@gmail.com © 2026 Shashwat Yadav. All rights reserved. | Privacy Policy | Terms Courses",
     "floating": ""
    },
    "wordCount": {
     "header": 52,
-    "content": 521,
+    "content": 525,
     "footer": 45,
     "floating": 0
    },
@@ -9271,7 +9361,7 @@
     "cd-faq-h",
     "whatsapp-widget"
    ],
-   "htmlBytes": 23899,
+   "htmlBytes": 24093,
    "network": [
     {
      "method": "GET",
@@ -9287,7 +9377,7 @@
    ],
    "desktopDocHeight": 4306,
    "mobileOverflowX": false,
-   "mobileDocHeight": 5732
+   "mobileDocHeight": 5754
   },
   "/portfolio/": {
    "url": "/portfolio/",
@@ -9401,6 +9491,15 @@
         "alumniOf": {
          "@type": "EducationalOrganization",
          "name": "Shankar Charya Technical Campus"
+        },
+        "hasOccupation": {
+         "@type": "Occupation",
+         "name": "Performance Marketer and SEO Specialist",
+         "occupationLocation": {
+          "@type": "City",
+          "name": "Raipur"
+         },
+         "experienceRequirements": "6+ years of experience"
         },
         "knowsAbout": [
          "Performance marketing",
@@ -10004,7 +10103,7 @@
     "portfolio-grid",
     "whatsapp-widget"
    ],
-   "htmlBytes": 20616,
+   "htmlBytes": 20810,
    "network": [
     {
      "method": "GET",
@@ -10130,6 +10229,15 @@
         "alumniOf": {
          "@type": "EducationalOrganization",
          "name": "Shankar Charya Technical Campus"
+        },
+        "hasOccupation": {
+         "@type": "Occupation",
+         "name": "Performance Marketer and SEO Specialist",
+         "occupationLocation": {
+          "@type": "City",
+          "name": "Raipur"
+         },
+         "experienceRequirements": "6+ years of experience"
         },
         "knowsAbout": [
          "Performance marketing",
@@ -10662,7 +10770,7 @@
     "main",
     "whatsapp-widget"
    ],
-   "htmlBytes": 16122,
+   "htmlBytes": 16316,
    "network": [
     {
      "method": "GET",
@@ -10788,6 +10896,15 @@
         "alumniOf": {
          "@type": "EducationalOrganization",
          "name": "Shankar Charya Technical Campus"
+        },
+        "hasOccupation": {
+         "@type": "Occupation",
+         "name": "Performance Marketer and SEO Specialist",
+         "occupationLocation": {
+          "@type": "City",
+          "name": "Raipur"
+         },
+         "experienceRequirements": "6+ years of experience"
         },
         "knowsAbout": [
          "Performance marketing",
@@ -11330,7 +11447,7 @@
     "main",
     "whatsapp-widget"
    ],
-   "htmlBytes": 19427,
+   "htmlBytes": 19621,
    "network": [
     {
      "method": "GET",
@@ -11456,6 +11573,15 @@
         "alumniOf": {
          "@type": "EducationalOrganization",
          "name": "Shankar Charya Technical Campus"
+        },
+        "hasOccupation": {
+         "@type": "Occupation",
+         "name": "Performance Marketer and SEO Specialist",
+         "occupationLocation": {
+          "@type": "City",
+          "name": "Raipur"
+         },
+         "experienceRequirements": "6+ years of experience"
         },
         "knowsAbout": [
          "Performance marketing",
@@ -11999,7 +12125,7 @@
     "main",
     "whatsapp-widget"
    ],
-   "htmlBytes": 19962,
+   "htmlBytes": 20156,
    "network": [
     {
      "method": "GET",
@@ -12125,6 +12251,15 @@
         "alumniOf": {
          "@type": "EducationalOrganization",
          "name": "Shankar Charya Technical Campus"
+        },
+        "hasOccupation": {
+         "@type": "Occupation",
+         "name": "Performance Marketer and SEO Specialist",
+         "occupationLocation": {
+          "@type": "City",
+          "name": "Raipur"
+         },
+         "experienceRequirements": "6+ years of experience"
         },
         "knowsAbout": [
          "Performance marketing",
@@ -12657,7 +12792,7 @@
     "main",
     "whatsapp-widget"
    ],
-   "htmlBytes": 16071,
+   "htmlBytes": 16265,
    "network": [
     {
      "method": "GET",
@@ -12783,6 +12918,15 @@
         "alumniOf": {
          "@type": "EducationalOrganization",
          "name": "Shankar Charya Technical Campus"
+        },
+        "hasOccupation": {
+         "@type": "Occupation",
+         "name": "Performance Marketer and SEO Specialist",
+         "occupationLocation": {
+          "@type": "City",
+          "name": "Raipur"
+         },
+         "experienceRequirements": "6+ years of experience"
         },
         "knowsAbout": [
          "Performance marketing",
@@ -13325,7 +13469,7 @@
     "main",
     "whatsapp-widget"
    ],
-   "htmlBytes": 18841,
+   "htmlBytes": 19035,
    "network": [
     {
      "method": "GET",
@@ -13451,6 +13595,15 @@
         "alumniOf": {
          "@type": "EducationalOrganization",
          "name": "Shankar Charya Technical Campus"
+        },
+        "hasOccupation": {
+         "@type": "Occupation",
+         "name": "Performance Marketer and SEO Specialist",
+         "occupationLocation": {
+          "@type": "City",
+          "name": "Raipur"
+         },
+         "experienceRequirements": "6+ years of experience"
         },
         "knowsAbout": [
          "Performance marketing",
@@ -13983,7 +14136,7 @@
     "main",
     "whatsapp-widget"
    ],
-   "htmlBytes": 15818,
+   "htmlBytes": 16012,
    "network": [
     {
      "method": "GET",
@@ -14109,6 +14262,15 @@
         "alumniOf": {
          "@type": "EducationalOrganization",
          "name": "Shankar Charya Technical Campus"
+        },
+        "hasOccupation": {
+         "@type": "Occupation",
+         "name": "Performance Marketer and SEO Specialist",
+         "occupationLocation": {
+          "@type": "City",
+          "name": "Raipur"
+         },
+         "experienceRequirements": "6+ years of experience"
         },
         "knowsAbout": [
          "Performance marketing",
@@ -14641,7 +14803,7 @@
     "main",
     "whatsapp-widget"
    ],
-   "htmlBytes": 16127,
+   "htmlBytes": 16321,
    "network": [
     {
      "method": "GET",
@@ -14767,6 +14929,15 @@
         "alumniOf": {
          "@type": "EducationalOrganization",
          "name": "Shankar Charya Technical Campus"
+        },
+        "hasOccupation": {
+         "@type": "Occupation",
+         "name": "Performance Marketer and SEO Specialist",
+         "occupationLocation": {
+          "@type": "City",
+          "name": "Raipur"
+         },
+         "experienceRequirements": "6+ years of experience"
         },
         "knowsAbout": [
          "Performance marketing",
@@ -15381,7 +15552,7 @@
     "main",
     "whatsapp-widget"
    ],
-   "htmlBytes": 25579,
+   "htmlBytes": 25773,
    "network": [
     {
      "method": "GET",
@@ -15507,6 +15678,15 @@
         "alumniOf": {
          "@type": "EducationalOrganization",
          "name": "Shankar Charya Technical Campus"
+        },
+        "hasOccupation": {
+         "@type": "Occupation",
+         "name": "Performance Marketer and SEO Specialist",
+         "occupationLocation": {
+          "@type": "City",
+          "name": "Raipur"
+         },
+         "experienceRequirements": "6+ years of experience"
         },
         "knowsAbout": [
          "Performance marketing",
@@ -16167,7 +16347,7 @@
     "services",
     "whatsapp-widget"
    ],
-   "htmlBytes": 26451,
+   "htmlBytes": 26645,
    "network": [
     {
      "method": "GET",
@@ -16293,6 +16473,15 @@
         "alumniOf": {
          "@type": "EducationalOrganization",
          "name": "Shankar Charya Technical Campus"
+        },
+        "hasOccupation": {
+         "@type": "Occupation",
+         "name": "Performance Marketer and SEO Specialist",
+         "occupationLocation": {
+          "@type": "City",
+          "name": "Raipur"
+         },
+         "experienceRequirements": "6+ years of experience"
         },
         "knowsAbout": [
          "Performance marketing",
@@ -16967,7 +17156,7 @@
     "ai-automation",
     "whatsapp-widget"
    ],
-   "htmlBytes": 26436,
+   "htmlBytes": 26630,
    "network": [
     {
      "method": "GET",
@@ -17097,6 +17286,15 @@
         "alumniOf": {
          "@type": "EducationalOrganization",
          "name": "Shankar Charya Technical Campus"
+        },
+        "hasOccupation": {
+         "@type": "Occupation",
+         "name": "Performance Marketer and SEO Specialist",
+         "occupationLocation": {
+          "@type": "City",
+          "name": "Raipur"
+         },
+         "experienceRequirements": "6+ years of experience"
         },
         "knowsAbout": [
          "Performance marketing",
@@ -17629,7 +17827,7 @@
     "main",
     "whatsapp-widget"
    ],
-   "htmlBytes": 16416,
+   "htmlBytes": 16610,
    "network": [
     {
      "method": "GET",

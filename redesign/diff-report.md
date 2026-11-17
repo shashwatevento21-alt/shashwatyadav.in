@@ -1,9 +1,9 @@
 # Content diff report
 
-After: `content-live.json` (https://shashwatyadav.com, 2026-11-17T08:29:44.823Z)
+After: `content-after.json` (http://test.local:8090, 2026-11-17T10:19:32.702Z)
 Before: `content-baseline.json` (https://shashwatyadav.com, 2026-11-16T20:04:27.466Z)
 
-Pages compared: 22. **Differences: 0**
+Pages compared: 22. **Differences: 1**
 
 - `/`: identical
 - `/about`: identical
@@ -14,7 +14,8 @@ Pages compared: 22. **Differences: 0**
 - `/courses/google-ads/`: identical
 - `/courses/master-classes/`: identical
 - `/courses/meta-ads/`: identical
-- `/meta-ads-lead-generation-master-class/`: identical
+- `/meta-ads-lead-generation-master-class/`: **1 difference(s)**
+    - text(content): first difference at word 35: before "one 3-hour session. No session scheduled yet Tell me" | after "one 3-hour session. Next session: see the dates under"
 - `/portfolio/`: identical
 - `/portfolio/chaitanya-greens-residential-2026/`: identical
 - `/portfolio/commercial-real-estate-meta-google-2026/`: identical
