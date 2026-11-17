@@ -11,6 +11,9 @@ const afterFile = path.resolve(root, process.argv[2] || 'content-after.json');
 const beforeFile = path.resolve(root, process.argv[3] || 'content-baseline.json');
 const after = JSON.parse(fs.readFileSync(afterFile, 'utf8'));
 const before = JSON.parse(fs.readFileSync(beforeFile, 'utf8'));
+const optional = (f) => { try { return JSON.parse(fs.readFileSync(path.join(root, f), 'utf8')); } catch { return null; } };
+const SEO_OVERRIDES = optional('seo-overrides.json') || {};
+const EXPERIENCE = optional('experience-text.json');
 
 const ALLOWED_TEXT = ['Skip to content', 'All courses', 'Courses and upcoming live classes', '3-hour live deep dives', 'Search and Demand Gen lead campaigns', 'Lead and engagement campaigns', 'Prompting, building and automation'];
 const ALLOWED_LINKS = new Set(['#main|Skip to content', '/courses/|All coursesCourses and upcoming live classes', '/courses/master-classes/|Master Classes3-hour live deep dives', '/courses/google-ads/|Google AdsSearch and Demand Gen lead campaigns', '/courses/meta-ads/|Meta AdsLead and engagement campaigns', '/courses/claude-mastery/|Claude and Claude CodePrompting, building and automation']);
@@ -31,9 +34,15 @@ const textDiff = (a, b) => { const x = a.split(' '), y = b.split(' '); const n =
 const MENU_TEXT = 'All courses Courses and upcoming live classes Master Classes 3-hour live deep dives Google Ads Search and Demand Gen lead campaigns Meta Ads Lead and engagement campaigns Claude and Claude Code Prompting, building and automation';
 const fixHref = (h) => (h || '').replace(/^https?:\/\/(localhost|127\.0\.0\.1):8000\//, '/classes/');
 function normalise(side, isBefore) {
-  for (const e of Object.values(side.pages)) {
+  for (const [pagePath, e] of Object.entries(side.pages)) {
     for (const l of e.links) l.href = fixHref(l.href);
     if (isBefore) {
+      // the approved SEO title/description changes (redesign/seo-overrides.json) are expected in the "after" side
+      const ov = SEO_OVERRIDES[pagePath];
+      if (ov && ov.title) e.head.title = ov.title;
+      if (ov && ov.description) for (const m of e.head.meta) if (m.name === 'description') m.content = ov.description;
+      // the approved experience wording (redesign/experience-text.json), when present, replaces the old figure in the baseline text
+      if (EXPERIENCE && EXPERIENCE[pagePath]) for (const [from, to] of EXPERIENCE[pagePath]) e.text.content = e.text.content.split(from).join(to);
       if (e.text.content.endsWith(' ' + MENU_TEXT)) e.text.content = e.text.content.slice(0, -(MENU_TEXT.length + 1));
       // the five old dropdown links (they were appended to the end of <body>, so they sit in the baseline's content region)
       e.links = e.links.filter((l) => !(l.region === 'content' && l.href.startsWith('/courses/') && ALLOWED_LINKS.has(l.href + '|' + l.text) && l.text.length > 14));

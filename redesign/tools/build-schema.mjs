@@ -32,8 +32,18 @@ const paths = [...xml.matchAll(/<loc>https:\/\/shashwatyadav\.com([^<]*)<\/loc>/
 const fileFor = (p) => (p === '/' ? 'index.html' : p.endsWith('/') ? p.slice(1) + 'index.html' : p.slice(1) + '.html');
 const NAV = { '/about': 'About', '/services': 'Services', '/skills': 'Skills', '/portfolio/': 'Portfolio', '/certifications': 'Certifications', '/contact': 'Contact', '/privacy-policy': 'Privacy Policy', '/terms': 'Terms of Use', '/courses/': 'Courses' };
 
+const OVERRIDES = JSON.parse(read('redesign/seo-overrides.json'));
+const DATES = JSON.parse(read('redesign/case-study-dates.json')).dates;
+// the approved titles and descriptions are written into the page here, so a rebuild of the pages never loses them
+function applyOverrides(html, p) {
+  const o = OVERRIDES[p]; if (!o) return html;
+  if (o.title) html = html.replace(/<title>[\s\S]*?<\/title>/, () => `<title>${o.title}</title>`);
+  if (o.description) html = html.replace(/(<meta name="description" content=")[^"]*(")/, (m, a, b) => a + o.description + b);
+  return html;
+}
+
 function pageInfo(p) {
-  const html = read(fileFor(p));
+  const html = applyOverrides(read(fileFor(p)), p);
   return {
     p, html, url: ROOT + p,
     title: first(html, /<title>([\s\S]*?)<\/title>/),
@@ -120,7 +130,7 @@ function build(pi) {
     const meta = first(html, /<p class="hero-meta">([\s\S]*?)<\/p>/);
     const range = meta.match(/([A-Z][a-z]+) (\d{4}) [–-] ([A-Z][a-z]+) (\d{4})/);
     const MO = { January: '01', February: '02', March: '03', April: '04', May: '05', June: '06', July: '07', August: '08', September: '09', October: '10', November: '11', December: '12' };
-    const work = { '@type': ['CreativeWork', 'Article'], '@id': url + '#casestudy', headline: pi.h1, name: pi.h1, description: pi.description, url, author: { '@id': ID.person }, publisher: { '@id': ID.person }, inLanguage: LANG, about: industry || undefined, temporalCoverage: range && MO[range[1]] && MO[range[3]] ? `${range[2]}-${MO[range[1]]}/${range[4]}-${MO[range[3]]}` : undefined, isPartOf: { '@id': url + '#webpage' } };
+    const work = { '@type': ['CreativeWork', 'Article'], '@id': url + '#casestudy', headline: pi.h1, name: pi.h1, description: pi.description, url, author: { '@id': ID.person }, publisher: { '@id': ID.person }, inLanguage: LANG, datePublished: DATES[p] && DATES[p].datePublished, dateModified: DATES[p] && DATES[p].dateModified, about: industry || undefined, temporalCoverage: range && MO[range[1]] && MO[range[3]] ? `${range[2]}-${MO[range[1]]}/${range[4]}-${MO[range[3]]}` : undefined, isPartOf: { '@id': url + '#webpage' } };
     g.push(work); webpage.mainEntity = { '@id': url + '#casestudy' };
   }
   return { '@context': 'https://schema.org', '@graph': JSON.parse(JSON.stringify(g)) }; // JSON round trip drops the undefined fields
@@ -129,6 +139,9 @@ function schoolNode() { return { '@type': 'Organization', '@id': ID.school, name
 
 // graph pieces repeated on a page (e.g. the school node on a course page) are kept once
 const dedupe = (graph) => { const seen = new Set(); return graph['@graph'].filter((n) => !n['@id'] || (!seen.has(n['@id']) && seen.add(n['@id']))); };
+
+// the same Person node, for the blog: the blog plugin reads this file and puts it into Rank Math's #person node
+fs.writeFileSync(path.join(repo, 'wordpress', 'shashwat-blog-layout', 'person.json'), JSON.stringify(personNode(), null, 1));
 
 const out = {};
 for (const p of paths) {

@@ -1,0 +1,33 @@
+{
+ "note": "datePublished = first commit of the page, dateModified = last commit that touched the page before the redesign (git log pre-redesign)",
+ "dates": {
+  "/portfolio/residential-real-estate-meta-ads-2026/": {
+   "datePublished": "2026-08-17T00:59:07+05:30",
+   "dateModified": "2026-10-21T15:48:04+05:30"
+  },
+  "/portfolio/commercial-real-estate-meta-google-2026/": {
+   "datePublished": "2026-08-17T00:59:07+05:30",
+   "dateModified": "2026-10-21T15:48:04+05:30"
+  },
+  "/portfolio/hospital-multi-treatment-2026/": {
+   "datePublished": "2026-08-17T00:59:07+05:30",
+   "dateModified": "2026-10-21T15:48:04+05:30"
+  },
+  "/portfolio/chaitanya-greens-residential-2026/": {
+   "datePublished": "2026-09-14T23:11:03+05:30",
+   "dateModified": "2026-10-21T15:48:04+05:30"
+  },
+  "/portfolio/salon-academy-admissions-2026/": {
+   "datePublished": "2026-09-14T23:11:03+05:30",
+   "dateModified": "2026-10-21T15:48:04+05:30"
+  },
+  "/portfolio/life-educare-school-marketing-2026/": {
+   "datePublished": "2026-09-14T23:11:03+05:30",
+   "dateModified": "2026-10-21T15:48:04+05:30"
+  },
+  "/portfolio/vasarsha-reality-residential-2026/": {
+   "datePublished": "2026-09-14T23:11:03+05:30",
+   "dateModified": "2026-10-21T15:48:04+05:30"
+  }
+ }
+}

@@ -212,6 +212,25 @@ add_action('wp_enqueue_scripts', function () {
     wp_enqueue_style('sbl-blog', SBL_URL.'assets/blog.css', [], (string) filemtime(SBL_DIR.'assets/blog.css'));
 }, 9999);
 
+/**
+ * One Person/Organization entity across the site: Rank Math's #person node gets the same facts the static pages print for it.
+ * person.json is generated from the static pages' graph (redesign/tools/build-schema.mjs), so the two cannot drift apart.
+ */
+add_filter('rank_math/json_ld', function ($data) {
+    $file = SBL_DIR.'person.json';
+    $facts = is_file($file) ? json_decode((string) file_get_contents($file), true) : null;
+    if (! is_array($facts) || empty($facts['@id'])) {
+        return $data;
+    }
+    foreach ((array) $data as $key => $node) {
+        if (is_array($node) && ($node['@id'] ?? '') === $facts['@id']) {
+            $data[$key] = $facts;
+        }
+    }
+
+    return $data;
+}, 99);
+
 register_activation_hook(__FILE__, function () {
     if (get_option('shashwat_blog_layout_token', '') === '') {
         add_option('shashwat_blog_layout_token', wp_generate_password(24, false, false), '', 'no');

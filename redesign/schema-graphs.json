@@ -67,7 +67,7 @@
     "@type": "WebPage",
     "@id": "https://shashwatyadav.com/#webpage",
     "url": "https://shashwatyadav.com/",
-    "name": "Shashwat Yadav | Performance Marketing Expert & SEO Specialist",
+    "name": "Shashwat Yadav | Performance Marketing & SEO Expert Raipur",
     "description": "Performance Marketing Expert managing ₹5.7L+ monthly ad spend across Google & Meta, SEO Specialist, and full-stack marketer.",
     "isPartOf": {
      "@id": "https://shashwatyadav.com/#website"
@@ -442,7 +442,7 @@
     "@id": "https://shashwatyadav.com/certifications#webpage",
     "url": "https://shashwatyadav.com/certifications",
     "name": "Certifications | Shashwat Yadav",
-    "description": "Professional certifications in performance marketing and AI, held by Shashwat Yadav.",
+    "description": "Seven Digital Scholar certifications in digital marketing, Google Ads, Meta Ads, social media content and AI, held by Shashwat Yadav.",
     "isPartOf": {
      "@id": "https://shashwatyadav.com/#website"
     },
@@ -549,7 +549,7 @@
     "@id": "https://shashwatyadav.com/contact#webpage",
     "url": "https://shashwatyadav.com/contact",
     "name": "Contact | Shashwat Yadav",
-    "description": "Get in touch with Shashwat Yadav for performance marketing, SEO, or web development projects.",
+    "description": "Contact Shashwat Yadav for performance marketing, SEO or web development projects. Use the form, call +91 70001 98366 or message on WhatsApp.",
     "isPartOf": {
      "@id": "https://shashwatyadav.com/#website"
     },
@@ -1451,7 +1451,7 @@
     "@id": "https://shashwatyadav.com/portfolio/#webpage",
     "url": "https://shashwatyadav.com/portfolio/",
     "name": "Portfolio | Shashwat Yadav",
-    "description": "Case studies across real estate, healthcare, education, and retail — performance marketing results by Shashwat Yadav.",
+    "description": "Case studies across real estate, healthcare, education, and retail: Meta Ads and Google Ads results by Shashwat Yadav, a performance marketer in Raipur.",
     "isPartOf": {
      "@id": "https://shashwatyadav.com/#website"
     },
@@ -1601,7 +1601,7 @@
     "@type": "WebPage",
     "@id": "https://shashwatyadav.com/portfolio/chaitanya-greens-residential-2026/#webpage",
     "url": "https://shashwatyadav.com/portfolio/chaitanya-greens-residential-2026/",
-    "name": "Chaitanya Greens — Residential Real Estate Lead Generation | Shashwat Yadav",
+    "name": "Residential Real Estate Lead Generation: Chaitanya Greens",
     "description": "300+ qualified leads/month for Chaitanya Greens, a residential real estate developer in Raipur, on ₹45K/month Meta Ads spend.",
     "isPartOf": {
      "@id": "https://shashwatyadav.com/#website"
@@ -1631,6 +1631,8 @@
      "@id": "https://shashwatyadav.com/#person"
     },
     "inLanguage": "en-US",
+    "datePublished": "2026-09-14T23:11:03+05:30",
+    "dateModified": "2026-10-21T15:48:04+05:30",
     "about": "Residential Real Estate",
     "isPartOf": {
      "@id": "https://shashwatyadav.com/portfolio/chaitanya-greens-residential-2026/#webpage"
@@ -1730,7 +1732,7 @@
     "@type": "WebPage",
     "@id": "https://shashwatyadav.com/portfolio/commercial-real-estate-meta-google-2026/#webpage",
     "url": "https://shashwatyadav.com/portfolio/commercial-real-estate-meta-google-2026/",
-    "name": "Commercial Showroom, Office & Retail Space — Multi-Platform Lead Generation | Shashwat Yadav",
+    "name": "Commercial Real Estate Lead Generation: Meta + Google Ads",
     "description": "152 qualified leads at ₹987 average cost per lead on high-ticket commercial inventory in Raipur, delivered via combined Meta Ads and Google Ads.",
     "isPartOf": {
      "@id": "https://shashwatyadav.com/#website"
@@ -1760,6 +1762,8 @@
      "@id": "https://shashwatyadav.com/#person"
     },
     "inLanguage": "en-US",
+    "datePublished": "2026-08-17T00:59:07+05:30",
+    "dateModified": "2026-10-21T15:48:04+05:30",
     "about": "Commercial Real Estate",
     "isPartOf": {
      "@id": "https://shashwatyadav.com/portfolio/commercial-real-estate-meta-google-2026/#webpage"
@@ -1859,8 +1863,8 @@
     "@type": "WebPage",
     "@id": "https://shashwatyadav.com/portfolio/hospital-multi-treatment-2026/#webpage",
     "url": "https://shashwatyadav.com/portfolio/hospital-multi-treatment-2026/",
-    "name": "Multi-Treatment Hospital Campaign — IVF, Cataract, Painless Labour, LASIK & OPD | Shashwat Yadav",
-    "description": "7,598 patient interactions generated across lead forms, WhatsApp, and phone calls for a multi-treatment hospital campaign in Raipur, via Meta Ads and Google Ads.",
+    "name": "Multi-Treatment Hospital Lead Generation Case Study",
+    "description": "7,598 patient interactions from lead forms, WhatsApp and phone calls for a multi-treatment hospital in Raipur, via Meta Ads and Google Ads.",
     "isPartOf": {
      "@id": "https://shashwatyadav.com/#website"
     },
@@ -1880,7 +1884,7 @@
     "@id": "https://shashwatyadav.com/portfolio/hospital-multi-treatment-2026/#casestudy",
     "headline": "Multi-Treatment Hospital Campaign — IVF, Cataract, Painless Labour, LASIK & OPD",
     "name": "Multi-Treatment Hospital Campaign — IVF, Cataract, Painless Labour, LASIK & OPD",
-    "description": "7,598 patient interactions generated across lead forms, WhatsApp, and phone calls for a multi-treatment hospital campaign in Raipur, via Meta Ads and Google Ads.",
+    "description": "7,598 patient interactions from lead forms, WhatsApp and phone calls for a multi-treatment hospital in Raipur, via Meta Ads and Google Ads.",
     "url": "https://shashwatyadav.com/portfolio/hospital-multi-treatment-2026/",
     "author": {
      "@id": "https://shashwatyadav.com/#person"
@@ -1889,6 +1893,8 @@
      "@id": "https://shashwatyadav.com/#person"
     },
     "inLanguage": "en-US",
+    "datePublished": "2026-08-17T00:59:07+05:30",
+    "dateModified": "2026-10-21T15:48:04+05:30",
     "about": "Healthcare",
     "temporalCoverage": "2026-03/2026-08",
     "isPartOf": {
@@ -1989,8 +1995,8 @@
     "@type": "WebPage",
     "@id": "https://shashwatyadav.com/portfolio/life-educare-school-marketing-2026/#webpage",
     "url": "https://shashwatyadav.com/portfolio/life-educare-school-marketing-2026/",
-    "name": "LIFE Educare — School Setup & Consultancy Lead Generation | Shashwat Yadav",
-    "description": "50 leads/month for LIFE Educare's school setup and consultancy services, on ₹26K/month ad spend.",
+    "name": "School Setup Lead Generation: LIFE Educare Case Study",
+    "description": "50 leads a month for LIFE Educare's school setup and consultancy services, on ₹26K/month ad spend. Agency client work, ongoing.",
     "isPartOf": {
      "@id": "https://shashwatyadav.com/#website"
     },
@@ -2010,7 +2016,7 @@
     "@id": "https://shashwatyadav.com/portfolio/life-educare-school-marketing-2026/#casestudy",
     "headline": "LIFE Educare — School Setup & Consultancy Lead Generation",
     "name": "LIFE Educare — School Setup & Consultancy Lead Generation",
-    "description": "50 leads/month for LIFE Educare's school setup and consultancy services, on ₹26K/month ad spend.",
+    "description": "50 leads a month for LIFE Educare's school setup and consultancy services, on ₹26K/month ad spend. Agency client work, ongoing.",
     "url": "https://shashwatyadav.com/portfolio/life-educare-school-marketing-2026/",
     "author": {
      "@id": "https://shashwatyadav.com/#person"
@@ -2019,6 +2025,8 @@
      "@id": "https://shashwatyadav.com/#person"
     },
     "inLanguage": "en-US",
+    "datePublished": "2026-09-14T23:11:03+05:30",
+    "dateModified": "2026-10-21T15:48:04+05:30",
     "about": "Education",
     "isPartOf": {
      "@id": "https://shashwatyadav.com/portfolio/life-educare-school-marketing-2026/#webpage"
@@ -2118,7 +2126,7 @@
     "@type": "WebPage",
     "@id": "https://shashwatyadav.com/portfolio/residential-real-estate-meta-ads-2026/#webpage",
     "url": "https://shashwatyadav.com/portfolio/residential-real-estate-meta-ads-2026/",
-    "name": "2BHK/3BHK Residential Launch — Meta Ads Lead Generation | Shashwat Yadav",
+    "name": "Residential Launch Lead Generation: Meta Ads Case Study",
     "description": "516 qualified leads at ₹291 average cost per lead for a residential real estate launch in Raipur, delivered via Meta Ads.",
     "isPartOf": {
      "@id": "https://shashwatyadav.com/#website"
@@ -2148,6 +2156,8 @@
      "@id": "https://shashwatyadav.com/#person"
     },
     "inLanguage": "en-US",
+    "datePublished": "2026-08-17T00:59:07+05:30",
+    "dateModified": "2026-10-21T15:48:04+05:30",
     "about": "Residential Real Estate",
     "isPartOf": {
      "@id": "https://shashwatyadav.com/portfolio/residential-real-estate-meta-ads-2026/#webpage"
@@ -2247,8 +2257,8 @@
     "@type": "WebPage",
     "@id": "https://shashwatyadav.com/portfolio/salon-academy-admissions-2026/#webpage",
     "url": "https://shashwatyadav.com/portfolio/salon-academy-admissions-2026/",
-    "name": "Premium Salon & Academy — Admission Lead Generation | Shashwat Yadav",
-    "description": "700+ admission leads generated in 4 months for a premium salon and academy client.",
+    "name": "Salon & Academy Admission Lead Generation Case Study",
+    "description": "700+ admission leads generated in 4 months for a premium salon and academy client. Agency client work by performance marketer Shashwat Yadav.",
     "isPartOf": {
      "@id": "https://shashwatyadav.com/#website"
     },
@@ -2268,7 +2278,7 @@
     "@id": "https://shashwatyadav.com/portfolio/salon-academy-admissions-2026/#casestudy",
     "headline": "Premium Salon & Academy — Admission Lead Generation",
     "name": "Premium Salon & Academy — Admission Lead Generation",
-    "description": "700+ admission leads generated in 4 months for a premium salon and academy client.",
+    "description": "700+ admission leads generated in 4 months for a premium salon and academy client. Agency client work by performance marketer Shashwat Yadav.",
     "url": "https://shashwatyadav.com/portfolio/salon-academy-admissions-2026/",
     "author": {
      "@id": "https://shashwatyadav.com/#person"
@@ -2277,6 +2287,8 @@
      "@id": "https://shashwatyadav.com/#person"
     },
     "inLanguage": "en-US",
+    "datePublished": "2026-09-14T23:11:03+05:30",
+    "dateModified": "2026-10-21T15:48:04+05:30",
     "about": "Salon & Wellness / Education",
     "isPartOf": {
      "@id": "https://shashwatyadav.com/portfolio/salon-academy-admissions-2026/#webpage"
@@ -2376,7 +2388,7 @@
     "@type": "WebPage",
     "@id": "https://shashwatyadav.com/portfolio/vasarsha-reality-residential-2026/#webpage",
     "url": "https://shashwatyadav.com/portfolio/vasarsha-reality-residential-2026/",
-    "name": "Vasarsha Reality — Residential Real Estate Lead Generation | Shashwat Yadav",
+    "name": "Residential Real Estate Lead Generation: Vasarsha Reality",
     "description": "100+ qualified leads/month for Vasarsha Reality, a residential real estate developer in Raipur, on ₹36K/month Meta Ads spend.",
     "isPartOf": {
      "@id": "https://shashwatyadav.com/#website"
@@ -2406,6 +2418,8 @@
      "@id": "https://shashwatyadav.com/#person"
     },
     "inLanguage": "en-US",
+    "datePublished": "2026-09-14T23:11:03+05:30",
+    "dateModified": "2026-10-21T15:48:04+05:30",
     "about": "Residential Real Estate",
     "isPartOf": {
      "@id": "https://shashwatyadav.com/portfolio/vasarsha-reality-residential-2026/#webpage"
@@ -2500,7 +2514,7 @@
     "@id": "https://shashwatyadav.com/privacy-policy#webpage",
     "url": "https://shashwatyadav.com/privacy-policy",
     "name": "Privacy Policy | Shashwat Yadav",
-    "description": "How shashwatyadav.com handles personal information: Live Classes accounts, Google sign-in, Google Calendar access, cookies, who can see your data, how long it is kept and how to ask for deletion.",
+    "description": "How shashwatyadav.com handles personal information: Live Classes accounts, Google sign-in, Google Calendar access, cookies, retention and deletion.",
     "isPartOf": {
      "@id": "https://shashwatyadav.com/#website"
     },
@@ -2598,7 +2612,7 @@
     "@id": "https://shashwatyadav.com/services#webpage",
     "url": "https://shashwatyadav.com/services",
     "name": "Services | Shashwat Yadav",
-    "description": "Google Ads, Meta Ads, SEO & Local Search Optimization, and Website Development services by Shashwat Yadav.",
+    "description": "Google Ads, Meta Ads, SEO & Local Search Optimization, website design and development, and AI and marketing automation setup by Shashwat Yadav.",
     "isPartOf": {
      "@id": "https://shashwatyadav.com/#website"
     },
@@ -2791,7 +2805,7 @@
     "@id": "https://shashwatyadav.com/skills#webpage",
     "url": "https://shashwatyadav.com/skills",
     "name": "Skills | Shashwat Yadav",
-    "description": "Core skill domains: ad platforms, analytics, automation, content & SEO, and web development.",
+    "description": "Core skills of Shashwat Yadav: ad platforms, tracking and analytics, SEO and GEO, automation, content and web development.",
     "isPartOf": {
      "@id": "https://shashwatyadav.com/#website"
     },

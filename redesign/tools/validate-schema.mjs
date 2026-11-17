@@ -9,6 +9,7 @@ const read = (f) => fs.readFileSync(path.join(repo, f), 'utf8').replace(/\r\n/g,
 const decode = (s) => s.replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&quot;/g, '"').replace(/&#0?39;/g, "'").replace(/&rsquo;/g, '’').replace(/&mdash;/g, '—').replace(/&ndash;/g, '–');
 const squash = (s) => decode(s).replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim().toLowerCase();
 const xml = read('sitemap-pages.xml');
+const DATES = JSON.parse(read('redesign/case-study-dates.json')).dates;
 const paths = [...xml.matchAll(/<loc>https:\/\/shashwatyadav\.com([^<]*)<\/loc>/g)].map((m) => m[1] || '/');
 const fileFor = (p) => (p === '/' ? 'index.html' : p.endsWith('/') ? p.slice(1) + 'index.html' : p.slice(1) + '.html');
 
@@ -42,7 +43,8 @@ for (const p of paths) {
     if (types.some((t) => ['Service', 'Course', 'CreativeWork', 'WebPage'].includes(t))) for (const f of ['name', 'headline', 'description']) if (n[f] && !(types.includes('WebPage') && f === 'name' ? hay.includes(squash(n[f])) : onPage(n[f]))) err(p, `${types.join('/')} "${f}" text is not on the page: ${String(n[f]).slice(0, 70)}`);
     if (types.includes('BreadcrumbList')) for (const it of n.itemListElement) if (!onPage(it.name) && it.name !== 'Home') warn(p, 'breadcrumb name not literally on the page: ' + it.name);
     for (const [k, v] of Object.entries(n)) if (v === null || v === undefined) err(p, 'null value ' + k);
-    if (n.datePublished || n.dateModified) err(p, 'a date was invented: ' + (n.datePublished || n.dateModified));
+    if (n.datePublished || n.dateModified) { const d = DATES[p]; if (!d || n.datePublished !== d.datePublished || n.dateModified !== d.dateModified || !/^[0-9]{4}-[0-9]{2}-[0-9]{2}T/.test(n.datePublished)) err(p, 'date is not the git-derived one: ' + n.datePublished + ' / ' + n.dateModified); }
+    if (types.includes('CreativeWork') && !(n.datePublished && n.dateModified)) err(p, 'case study without dates');
     if (JSON.stringify(n).match(/aggregateRating|"review"|"offers"|priceRange|price"/)) err(p, 'rating/review/price found');
   }
   // the graph's page node and canonical agree
