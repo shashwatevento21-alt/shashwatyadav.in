@@ -1,0 +1,26 @@
+{
+  "note": "Approved titles and descriptions (17 rows). build-schema.mjs applies them to the pages; compare.mjs expects them. Home title: the requested wording was 61 characters, so 'in' was dropped to stay within 60.",
+  "/": { "title": "Shashwat Yadav | Performance Marketing & SEO Expert Raipur" },
+  "/portfolio/chaitanya-greens-residential-2026/": { "title": "Residential Real Estate Lead Generation: Chaitanya Greens" },
+  "/portfolio/commercial-real-estate-meta-google-2026/": { "title": "Commercial Real Estate Lead Generation: Meta + Google Ads" },
+  "/portfolio/hospital-multi-treatment-2026/": {
+    "title": "Multi-Treatment Hospital Lead Generation Case Study",
+    "description": "7,598 patient interactions from lead forms, WhatsApp and phone calls for a multi-treatment hospital in Raipur, via Meta Ads and Google Ads."
+  },
+  "/portfolio/life-educare-school-marketing-2026/": {
+    "title": "School Setup Lead Generation: LIFE Educare Case Study",
+    "description": "50 leads a month for LIFE Educare's school setup and consultancy services, on ₹26K/month ad spend. Agency client work, ongoing."
+  },
+  "/portfolio/residential-real-estate-meta-ads-2026/": { "title": "Residential Launch Lead Generation: Meta Ads Case Study" },
+  "/portfolio/salon-academy-admissions-2026/": {
+    "title": "Salon & Academy Admission Lead Generation Case Study",
+    "description": "700+ admission leads generated in 4 months for a premium salon and academy client. Agency client work by performance marketer Shashwat Yadav."
+  },
+  "/portfolio/vasarsha-reality-residential-2026/": { "title": "Residential Real Estate Lead Generation: Vasarsha Reality" },
+  "/certifications": { "description": "Seven Digital Scholar certifications in digital marketing, Google Ads, Meta Ads, social media content and AI, held by Shashwat Yadav." },
+  "/contact": { "description": "Contact Shashwat Yadav for performance marketing, SEO or web development projects. Use the form, call +91 70001 98366 or message on WhatsApp." },
+  "/portfolio/": { "description": "Case studies across real estate, healthcare, education, and retail: Meta Ads and Google Ads results by Shashwat Yadav, a performance marketer in Raipur." },
+  "/privacy-policy": { "description": "How shashwatyadav.com handles personal information: Live Classes accounts, Google sign-in, Google Calendar access, cookies, retention and deletion." },
+  "/services": { "description": "Google Ads, Meta Ads, SEO & Local Search Optimization, website design and development, and AI and marketing automation setup by Shashwat Yadav." },
+  "/skills": { "description": "Core skills of Shashwat Yadav: ad platforms, tracking and analytics, SEO and GEO, automation, content and web development." }
+}

@@ -1,0 +1,51 @@
+{
+ "@type": [
+  "Person",
+  "Organization"
+ ],
+ "@id": "https://shashwatyadav.com/#person",
+ "name": "Shashwat Yadav",
+ "url": "https://shashwatyadav.com/",
+ "image": "https://shashwatyadav.com/assets/images/shashwat-yadav-performance-marketing-expert.webp",
+ "jobTitle": "Ad Performance Marketing Head",
+ "worksFor": {
+  "@type": "Organization",
+  "name": "The Digital Agency"
+ },
+ "address": {
+  "@type": "PostalAddress",
+  "addressLocality": "Raipur",
+  "addressRegion": "Chhattisgarh",
+  "addressCountry": "IN"
+ },
+ "telephone": "+91 70001 98366",
+ "email": "shashwatyadav012345@gmail.com",
+ "sameAs": [
+  "https://www.linkedin.com/in/shashwat-yadav-9258bb131",
+  "https://www.instagram.com/shashwat.ai.seo"
+ ],
+ "alumniOf": {
+  "@type": "EducationalOrganization",
+  "name": "Shankar Charya Technical Campus"
+ },
+ "knowsAbout": [
+  "Performance marketing",
+  "Meta Ads",
+  "Google Ads",
+  "LinkedIn Ads",
+  "Lead generation",
+  "Google Tag Manager",
+  "GA4",
+  "Meta Pixel",
+  "Conversion tracking",
+  "Technical SEO",
+  "Local SEO",
+  "Google Business Profile",
+  "GEO and AI search optimisation",
+  "WordPress",
+  "Elementor",
+  "Claude Code",
+  "n8n",
+  "AI agents"
+ ]
+}
