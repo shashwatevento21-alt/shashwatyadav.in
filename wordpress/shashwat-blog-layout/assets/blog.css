@@ -143,3 +143,12 @@
   .sbl-card:hover, .sbl-btn:hover { transform: none; }
   .sbl-card:hover .sbl-card__img { transform: none; }
 }
+
+/* the post title in the breadcrumb is printed in full (it matches the BreadcrumbList schema) and cut with an ellipsis on screen */
+.sbl-crumbs li:last-child { min-width: 0; max-width: 100%; }
+.sbl-crumbs li:last-child span { display: inline-block; max-width: min(100%, 60ch); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; vertical-align: bottom; }
+.sbl-crumbs ol { min-width: 0; }
+.sbl-crumbs ol { flex-wrap: nowrap; }
+.sbl-crumbs li { flex: none; }
+.sbl-crumbs li:last-child { flex: 0 1 auto; }
+.sbl-crumbs li:last-child span { display: block; max-width: 100%; }

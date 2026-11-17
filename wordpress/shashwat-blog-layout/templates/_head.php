@@ -46,6 +46,11 @@ $sblNewAsset = function (string $path) use ($sblB): string {
 </head>
 <body <?php body_class($sblNew ? 'sbl sbl-v2' : 'bg-background text-text-body overflow-x-hidden sbl'); ?>>
 <?php
+// Google Tag Manager (noscript): right after <body>, same container as the static pages
+echo '<!-- Google Tag Manager (noscript) -->' . "
+" . '<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5SRRSFV6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>' . "
+" . '<!-- End Google Tag Manager (noscript) -->' . "
+";
 if (function_exists('wp_body_open')) {
     wp_body_open();
 }

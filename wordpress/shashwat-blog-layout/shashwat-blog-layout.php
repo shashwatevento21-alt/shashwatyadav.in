@@ -97,6 +97,50 @@ add_filter('template_include', function ($template) {
     return SBL_DIR.'templates/'.$own;
 }, 99);
 
+/**
+ * The breadcrumb trail of the blog pages: Home > Blog > (category | post title). ONE source for the visible breadcrumb and for Rank Math's
+ * BreadcrumbList schema (filter below), so the two always match. Returns null on any other page (Rank Math's own trail is then left alone).
+ *
+ * @return array<int, array{0:string,1:string}>|null  [label, url] pairs; the LAST pair is the current page (it has its URL because the schema needs one)
+ */
+function sbl_crumbs(): ?array
+{
+    $home = ['Home', home_url('/')];
+    if (is_page('blog')) {
+        return [$home, ['Blog', home_url('/blog/')]];
+    }
+    if (is_category()) {
+        $name = single_cat_title('', false);
+
+        $link = (string) get_category_link(get_queried_object_id());
+
+        return get_queried_object() && get_queried_object()->slug === 'blog' ? [$home, [$name, $link]] : [$home, ['Blog', home_url('/blog/')], [$name, $link]];
+    }
+    if (is_singular('post')) {
+        return [$home, ['Blog', home_url('/blog/')], [get_the_title(), (string) get_permalink()]];
+    }
+
+    return null;
+}
+
+add_filter('rank_math/frontend/breadcrumb/items', function ($crumbs) {
+    $own = sbl_active() ? sbl_crumbs() : null;
+
+    return $own === null ? $crumbs : $own;
+}, 99);
+
+/** Prints the visible breadcrumb list items from the same trail. */
+function sbl_breadcrumb_items(): void
+{
+    $trail = (array) sbl_crumbs();
+    $last = count($trail) - 1;
+    foreach ($trail as $i => [$label, $url]) {
+        echo $i === $last ? '<li><span aria-current="page">'.esc_html($label).'</span></li>' : '<li><a href="'.esc_url($url).'">'.esc_html($label).'</a></li>';
+        echo "
+";
+    }
+}
+
 /** Reading time in whole minutes (200 words a minute), at least 1. */
 function sbl_read_minutes(int $postId): int
 {

@@ -37,13 +37,7 @@ include __DIR__.'/_head.php';
     <div class="sbl-container">
       <nav class="sbl-crumbs" aria-label="Breadcrumb">
         <ol>
-          <li><a href="/">Home</a></li>
-          <?php if (is_category()) : ?>
-            <li><a href="/blog/">Blog</a></li>
-            <li><span aria-current="page"><?php echo esc_html($h1); ?></span></li>
-          <?php else : ?>
-            <li><span aria-current="page">Blog</span></li>
-          <?php endif; ?>
+          <?php sbl_breadcrumb_items(); ?>
         </ol>
       </nav>
     </div>

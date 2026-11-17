@@ -21,9 +21,7 @@ include __DIR__.'/_head.php';
     <div class="sbl-container">
       <nav class="sbl-crumbs" aria-label="Breadcrumb">
         <ol>
-          <li><a href="/">Home</a></li>
-          <li><a href="/blog/">Blog</a></li>
-          <li><span aria-current="page"><?php echo esc_html(wp_trim_words(get_the_title(), 8, '…')); ?></span></li>
+          <?php sbl_breadcrumb_items(); ?>
         </ol>
       </nav>
     </div>
