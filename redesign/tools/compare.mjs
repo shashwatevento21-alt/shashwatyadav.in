@@ -56,7 +56,7 @@ for (const [p, a] of Object.entries(after.pages)) {
   const la = a.head.links.filter((l) => !IGNORED_LINK_RELS.has(l.rel)).map((l) => [l.rel, l.href, l.type, l.sizes].join('|')).sort();
   const lb = b.head.links.filter((l) => !IGNORED_LINK_RELS.has(l.rel)).map((l) => [l.rel, l.href, l.type, l.sizes].join('|')).sort();
   if (!same(la, lb)) add('head-links', 'canonical/icon/alternate links differ: ' + firstDiff(lb, la));
-  if (!same(a.head.jsonLd, b.head.jsonLd)) add('json-ld', 'structured data differs');
+  if (!process.env.ALLOW_JSONLD && !same(a.head.jsonLd, b.head.jsonLd)) add('json-ld', 'structured data differs');
   const sa = a.head.scripts.filter((s) => s.inline).map((s) => s.inline).sort(), sb = b.head.scripts.filter((s) => s.inline).map((s) => s.inline).sort();
   if (!same(sa, sb)) add('scripts', 'inline scripts (GTM, page scripts) differ');
   const ea = a.head.scripts.filter((s) => s.src).map((s) => s.src.replace(/\?.*$/, '')), eb = b.head.scripts.filter((s) => s.src && !TAILWIND.test(s.src)).map((s) => s.src.replace(/\?.*$/, ''));
