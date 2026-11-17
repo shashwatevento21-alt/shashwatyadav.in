@@ -1,13 +1,13 @@
 {
- "base": "http://127.0.0.1:8090",
- "when": "2026-11-16T20:16:31.077Z",
- "pageCount": 3,
+ "base": "http://test.local:8090",
+ "when": "2026-11-17T04:47:37.328Z",
+ "pageCount": 1,
  "pages": {
-  "/about": {
-   "url": "/about",
+  "/courses/": {
+   "url": "/courses/",
    "head": {
     "lang": "en",
-    "title": "Shashwat Yadav: Complete Biography, Experience & Skills",
+    "title": "Courses and Live Classes | Shashwat Yadav",
     "meta": [
      {
       "name": null,
@@ -28,118 +28,13 @@
       "property": null,
       "httpEquiv": null,
       "charset": null,
-      "content": "Shashwat Yadav is a performance marketer and SEO specialist in Raipur. Read his biography, experience and skills, then contact him on WhatsApp or by form."
-     },
-     {
-      "name": "robots",
-      "property": null,
-      "httpEquiv": null,
-      "charset": null,
-      "content": "index, follow"
-     },
-     {
-      "name": null,
-      "property": "og:type",
-      "httpEquiv": null,
-      "charset": null,
-      "content": "profile"
-     },
-     {
-      "name": null,
-      "property": "og:site_name",
-      "httpEquiv": null,
-      "charset": null,
-      "content": "Shashwat Yadav"
-     },
-     {
-      "name": null,
-      "property": "og:title",
-      "httpEquiv": null,
-      "charset": null,
-      "content": "Shashwat Yadav: Complete Biography, Experience & Skills"
-     },
-     {
-      "name": null,
-      "property": "og:description",
-      "httpEquiv": null,
-      "charset": null,
-      "content": "Shashwat Yadav is a performance marketer and SEO specialist in Raipur. Read his biography, experience and skills, then contact him on WhatsApp or by form."
-     },
-     {
-      "name": null,
-      "property": "og:url",
-      "httpEquiv": null,
-      "charset": null,
-      "content": "https://shashwatyadav.com/about"
-     },
-     {
-      "name": null,
-      "property": "og:image",
-      "httpEquiv": null,
-      "charset": null,
-      "content": "https://shashwatyadav.com/assets/images/shashwat-yadav-performance-marketing-expert.webp"
-     },
-     {
-      "name": null,
-      "property": "og:image:width",
-      "httpEquiv": null,
-      "charset": null,
-      "content": "720"
-     },
-     {
-      "name": null,
-      "property": "og:image:height",
-      "httpEquiv": null,
-      "charset": null,
-      "content": "539"
-     },
-     {
-      "name": null,
-      "property": "og:image:alt",
-      "httpEquiv": null,
-      "charset": null,
-      "content": "Shashwat Yadav, performance marketer and SEO specialist in Raipur"
-     },
-     {
-      "name": "twitter:card",
-      "property": null,
-      "httpEquiv": null,
-      "charset": null,
-      "content": "summary"
-     },
-     {
-      "name": "twitter:title",
-      "property": null,
-      "httpEquiv": null,
-      "charset": null,
-      "content": "Shashwat Yadav: Complete Biography, Experience & Skills"
-     },
-     {
-      "name": "twitter:description",
-      "property": null,
-      "httpEquiv": null,
-      "charset": null,
-      "content": "Shashwat Yadav is a performance marketer and SEO specialist in Raipur. Read his biography, experience and skills, then contact him on WhatsApp or by form."
-     },
-     {
-      "name": "twitter:image",
-      "property": null,
-      "httpEquiv": null,
-      "charset": null,
-      "content": "https://shashwatyadav.com/assets/images/shashwat-yadav-performance-marketing-expert.webp"
-     },
-     {
-      "name": "twitter:image:alt",
-      "property": null,
-      "httpEquiv": null,
-      "charset": null,
-      "content": "Shashwat Yadav, performance marketer and SEO specialist in Raipur"
+      "content": "Courses, live classes and 3-hour master classes on Google Ads, Meta Ads, and Claude and Claude Code by Shashwat Yadav. See upcoming dates and enrol online."
      }
     ],
     "links": [
      {
       "rel": "canonical",
-      "href": "https://shashwatyadav.com/about",
+      "href": "https://shashwatyadav.com/courses/",
       "type": null,
       "sizes": null,
       "as": null
@@ -185,230 +80,14 @@
       "type": null,
       "sizes": null,
       "as": null
-     },
-     {
-      "rel": "stylesheet",
-      "href": "/assets/css/journey.css?v=20261017",
-      "type": null,
-      "sizes": null,
-      "as": null
-     },
-     {
-      "rel": "stylesheet",
-      "href": "/assets/css/about.css?v=20261027",
-      "type": null,
-      "sizes": null,
-      "as": null
      }
     ],
-    "jsonLd": [
-     {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Shashwat Yadav",
-      "url": "https://shashwatyadav.com/about",
-      "image": "https://shashwatyadav.com/assets/images/shashwat-yadav-performance-marketing-expert.webp",
-      "jobTitle": "Ad Performance Marketing Head",
-      "worksFor": {
-       "@type": "Organization",
-       "name": "The Digital Agency"
-      },
-      "address": {
-       "@type": "PostalAddress",
-       "addressLocality": "Raipur",
-       "addressRegion": "Chhattisgarh",
-       "addressCountry": "IN"
-      },
-      "alumniOf": {
-       "@type": "EducationalOrganization",
-       "name": "Shankar Charya Technical Campus"
-      },
-      "sameAs": [
-       "https://www.linkedin.com/in/shashwat-yadav-9258bb131",
-       "https://www.instagram.com/shashwat.ai.seo"
-      ],
-      "knowsAbout": [
-       "Performance marketing",
-       "Meta Ads",
-       "Google Ads",
-       "LinkedIn Ads",
-       "Lead generation",
-       "Google Tag Manager",
-       "GA4",
-       "Meta Pixel",
-       "Conversion tracking",
-       "Technical SEO",
-       "Local SEO",
-       "Google Business Profile",
-       "GEO and AI search optimisation",
-       "WordPress",
-       "Elementor",
-       "Claude Code",
-       "n8n",
-       "AI agents"
-      ]
-     },
-     {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-       {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Home",
-        "item": "https://shashwatyadav.com/"
-       },
-       {
-        "@type": "ListItem",
-        "position": 2,
-        "name": "About",
-        "item": "https://shashwatyadav.com/about"
-       }
-      ]
-     },
-     {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-       {
-        "@type": "Question",
-        "name": "Who is Shashwat Yadav?",
-        "acceptedAnswer": {
-         "@type": "Answer",
-         "text": "A performance marketer and SEO specialist in Raipur who leads a 15-person team."
-        }
-       },
-       {
-        "@type": "Question",
-        "name": "What does Shashwat Yadav do?",
-        "acceptedAnswer": {
-         "@type": "Answer",
-         "text": "Paid ads, tracking, SEO, WordPress sites and AI automation for lead generation."
-        }
-       },
-       {
-        "@type": "Question",
-        "name": "Where is Shashwat Yadav based?",
-        "acceptedAnswer": {
-         "@type": "Answer",
-         "text": "In Raipur, Chhattisgarh, India."
-        }
-       },
-       {
-        "@type": "Question",
-        "name": "What does Shashwat Yadav’s experience include?",
-        "acceptedAnswer": {
-         "@type": "Answer",
-         "text": "4+ years in performance marketing, a business founded in 2021, and a team lead role since March 2026."
-        }
-       },
-       {
-        "@type": "Question",
-        "name": "Does Shashwat Yadav teach?",
-        "acceptedAnswer": {
-         "@type": "Answer",
-         "text": "Yes. He teaches through The Digital School in Raipur and runs live classes."
-        }
-       },
-       {
-        "@type": "Question",
-        "name": "How can I work with Shashwat Yadav?",
-        "acceptedAnswer": {
-         "@type": "Answer",
-         "text": "Use the contact form on this page, message +91 70001 98366 on WhatsApp, or email shashwatyadav012345@gmail.com."
-        }
-       },
-       {
-        "@type": "Question",
-        "name": "Which industries does Shashwat Yadav work in?",
-        "acceptedAnswer": {
-         "@type": "Answer",
-         "text": "Healthcare, real estate, salons, education, retail, hospitality, food and beverage, and schools."
-        }
-       },
-       {
-        "@type": "Question",
-        "name": "Which platforms does Shashwat Yadav run ads on?",
-        "acceptedAnswer": {
-         "@type": "Answer",
-         "text": "Meta Ads, Google Ads and LinkedIn Ads, with lead generation as the main goal."
-        }
-       },
-       {
-        "@type": "Question",
-        "name": "How does Shashwat Yadav measure results?",
-        "acceptedAnswer": {
-         "@type": "Answer",
-         "text": "Through conversion tracking set up in Google Tag Manager, GA4 and Meta Pixel, with reporting across Search Console, Instagram and YouTube."
-        }
-       },
-       {
-        "@type": "Question",
-        "name": "What is GEO, and does Shashwat Yadav offer it?",
-        "acceptedAnswer": {
-         "@type": "Answer",
-         "text": "GEO is optimising content so AI tools such as ChatGPT and Gemini surface and cite a business. Yes, it is part of his SEO work."
-        }
-       },
-       {
-        "@type": "Question",
-        "name": "What did Shashwat Yadav build at Evento?",
-        "acceptedAnswer": {
-         "@type": "Answer",
-         "text": "Evento Balloon Decoration Pvt Ltd, a Raipur business founded in November 2021, incorporated in March 2023 and run until November 2025, with ₹30 lakh in annual revenue."
-        }
-       },
-       {
-        "@type": "Question",
-        "name": "Does Shashwat Yadav use AI in his work?",
-        "acceptedAnswer": {
-         "@type": "Answer",
-         "text": "Yes. He uses Claude Code for development, n8n and AI agents for automation, and AI creative tools for ads and video."
-        }
-       },
-       {
-        "@type": "Question",
-        "name": "What is Shashwat Yadav’s role at The Digital Agency?",
-        "acceptedAnswer": {
-         "@type": "Answer",
-         "text": "Ad Performance Marketing Head since March 2026, leading a 15-person team that serves 30+ clients."
-        }
-       },
-       {
-        "@type": "Question",
-        "name": "Does Shashwat Yadav work with Raipur businesses?",
-        "acceptedAnswer": {
-         "@type": "Answer",
-         "text": "Yes. Several published case studies are for Raipur businesses, including real estate developers and a hospital."
-        }
-       },
-       {
-        "@type": "Question",
-        "name": "What qualifications does Shashwat Yadav have?",
-        "acceptedAnswer": {
-         "@type": "Answer",
-         "text": "A B.Tech in Mechanical Engineering from Shankar Charya Technical Campus (CSVTU), 2016 to 2020, and seven Digital Scholar certifications."
-        }
-       },
-       {
-        "@type": "Question",
-        "name": "What has Shashwat Yadav built with AI and code?",
-        "acceptedAnswer": {
-         "@type": "Answer",
-         "text": "Websites, landing pages, workflow automations and tools using Claude Code and n8n, including the Insinfluencer website and creator platform, built from scratch."
-        }
-       }
-      ]
-     }
-    ],
+    "jsonLd": [],
     "scripts": [
      {
       "inline": "7da60269",
       "bytes": 358,
       "gtm": true
-     },
-     {
-      "src": "/assets/js/journey.js?v=20261017"
      },
      {
       "src": "/assets/js/theme.js?v=1"
@@ -417,7 +96,7 @@
       "src": "/assets/js/main.js?v=20261026"
      },
      {
-      "src": "/assets/js/about.js?v=20261022"
+      "src": "/assets/js/live-classes.js?v=20261023"
      }
     ],
     "noscriptGtm": true
@@ -427,213 +106,53 @@
     "CHATBOT-OFF-START (panel): the chat widget is switched off. To restore, delete this line and the CHATBOT-OFF-END line [ AI Chatbot panel (hidden until the bubble above is clicked) ] <div id=\"chatbot-panel\" class=\"hidden fixed z-[110] bg-white rounded-2xl shadow-2xl border border-border flex flex-col overflow-hidden\" style=\"bottom: 96px; right: 24px; width: min(380px, calc(100vw - 32px)); height: min(560px, calc(100vh - 140px));\"> <div class=\"bg-primary text-white px-4 py-3 flex items-center justify-between flex-shrink-0\"> <div class=\"flex items-center gap-2\"> <img src=\"/assets/images/logo.png\" alt=\"\" class=\"logo-on-dark h-6 w-auto\"> <span class=\"text-sm font-semibold\">Chat with Shashwat</span> </div> <button type=\"button\" id=\"chatbot-close-btn\" class=\"text-white/80 hover:text-white\" aria-label=\"Close chat\"> <svg class=\"w-5 h-5\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M6 18L18 6M6 6l12 12\"/></svg> </button> </div> <div id=\"chatbot-messages\" class=\"flex-1 overflow-y-auto px-4 py-4 space-y-3 bg-background\"></div> <div id=\"chatbot-quick-replies\" class=\"hidden px-4 pb-2 flex flex-wrap gap-2 bg-background\"></div> <form id=\"chatbot-form\" class=\"flex items-center gap-2 px-3 py-3 border-t border-border bg-white flex-shrink-0\"> <input type=\"text\" id=\"chatbot-input\" placeholder=\"Type a message&hellip;\" autocomplete=\"off\" class=\"flex-1 px-3 py-2 rounded-full bg-background border border-border text-sm text-text-body focus:outline-none focus:border-primary\"> <button type=\"submit\" id=\"chatbot-send-btn\" class=\"w-9 h-9 rounded-full bg-primary hover:bg-primary-dark flex items-center justify-center text-white flex-shrink-0 disabled:opacity-50 disabled:cursor-not-allowed\"> <svg class=\"w-4 h-4\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M14 5l7 7m0 0l-7 7m7-7H3\"/></svg> </button> </form> </div> CHATBOT-OFF-END",
     "CHATBOT-OFF-START (script): the chat widget is switched off. To restore, delete this line and the CHATBOT-OFF-END line <script src=\"/assets/js/chatbot-widget.js\"></script> CHATBOT-OFF-END"
    ],
-   "commentCount": 26,
+   "commentCount": 17,
    "text": {
     "header": "Skip to content Home About Services Portfolio Skills Certifications Blog Contact Log in Courses All courses Courses and upcoming live classes Master Classes 3-hour live deep dives Google Ads Search and Demand Gen lead campaigns Meta Ads Lead and engagement campaigns Claude and Claude Code Prompting, building and automation Let's Connect Courses",
-    "content": "About Shashwat Yadav Performance Marketer and SEO Specialist in Raipur Performance Marketer SEO Specialist AI Automation Builder Based in Raipur, Chhattisgarh, I treat ads, search and tracking as one system. After 4+ years in performance marketing, I joined The Digital Agency in March 2026 as Ad Performance Marketing Head and lead a 15-person team. Contact me WhatsApp me Browse courses Bio Industries Results Journey Skills Certifications FAQ Contact Who Is Shashwat Yadav? Shashwat Yadav is a performance marketer and SEO specialist from Raipur. Clients in real estate, healthcare and education work with him to turn ads and search into steady enquiries. Before agency work, I founded Evento Balloon Decoration and ranked it first organically for “balloon decoration Raipur” without ad spend. Selling, building and marketing a business myself shapes how I plan every campaign. My own path began with a Mechanical Engineering degree at Shankar Charya Technical Campus (CSVTU), from 2016 to 2020. Sales roles at Byju’s and Lido Learning came next, then Evento from November 2021. A short WordPress and SEO consulting project for MyFemily in early 2026 led into the agency role. Read more How Shashwat Yadav Approaches Marketing Most agencies hand the ad, the tracking and the landing page to three different people. I prefer to build the landing page, wire up the tracking and run the ads myself, so nothing gets lost between them. That habit comes from running a business. At Evento Balloon Decoration I did the selling, the building and the marketing at once, and the business ranked first organically for “balloon decoration Raipur” on Google Business Profile, ChatGPT, Gemini and Google AI Mode, with zero ad spend. Today the same thinking guides a 15-person team serving 30+ clients. Every campaign starts from the lead a business actually wants, with tracking wired up so results can be measured. Leading people is part of the job as well. The work includes managing the team, handling accounts for many clients at once, preparing proposals and pitch decks, and keeping every ad within Google and Meta policy. Read more Performance Marketing at a Glance Meta Ads, Google Ads and LinkedIn Ads, with lead generation as the focus. Alongside the ads I handle tracking and landing pages, and I manage accounts for 30+ clients across real estate, healthcare and education. ₹5.7L+ monthly ad spend managed 15 person team 30+ clients 9 industries served Industries I Work In Pick an industry to see what I do there and the published results. Industries without published results show the description only. Healthcare Commercial Real Estate Residential Real Estate Salon & Wellness Education Retail & Malls Hospitality Food & Beverage Schools Healthcare Hospital lead generation. Treatments covered include IVF, IUI, gynecology, cosmetic gynecology, LASIK, cataract surgery and painless (epidural) labour, each with its own campaign. 7,598 patient interactions in 5 months. Commercial Real Estate Campaigns for premium commercial developers, including a business park. Inventory spans showroom, office and retail space from 350 to 6,400 sq ft. 152 qualified leads in 5 months. Residential Real Estate Meta Ads lead generation for 2BHK and 3BHK developers, from affordable to luxury. Unit prices across these accounts run from ₹35L to ₹1.2Cr. 516 qualified leads and 128 site visits in 5 months. Salon & Wellness Marketing for premium unisex salons. 700+ admission leads in 4 months. Education Lead generation for education service providers. LIFE Educare is a school setup and consultancy account. 50 leads a month for LIFE Educare. Retail & Malls Marketing for shopping malls. Hospitality Marketing for hotels. Food & Beverage Marketing for premium restaurants. Schools Marketing for K-12 schools. Results from Client Work Figures are quoted as published in the portfolio, with the platform and time period shown wherever the case study gives one. Past results do not guarantee future ones. Residential Real Estate 516 qualified leads 128 site visits at a ₹291 average cost per qualified lead on Meta Ads, over 5 months (ongoing). Confidential client. Commercial Real Estate 152 qualified leads Meta and Google Ads at a ₹987 average cost per qualified lead, over 5 months (ongoing). Healthcare 7,598 patient interactions Form leads, click-to-WhatsApp conversions and answered calls on Meta and Google over 5 months. Advertising performance only. Chaitanya Greens 300+ qualified leads a month Meta Ads, ongoing. Vasarsha Reality 100+ qualified leads a month Meta Ads, ongoing. LIFE Educare 50 leads a month School setup consultancy, ongoing. Salon & Education 700+ admission leads Admission leads for a premium salon and academy in 4 months. Confidential client. Read the full case studies PHPCODE_DUMMY How the Campaigns Work Residential launch Lead forms asked about budget range, location preference and unit type, so serious buyers were filtered before a single call was made. A parallel brand-awareness campaign showed the project’s amenities. Lead quality was checked against the form answers to refine targeting and creative. The outcome was 516 qualified leads and 128 site visits over five months. Commercial property Showroom, office and retail space ran on Meta Ads and Google Ads at the same time, pairing Meta’s audience targeting with Google’s high-intent search. Forms captured preferred location and budget range to filter for serious intent. Cost per lead was tracked closely against a fixed budget. Hospital services Each treatment line, from IVF to cataract, painless labour, LASIK and OPD, had its own campaign, so messaging matched each patient’s concerns. Meta Ads used lead forms and click-to-WhatsApp ads, while Google Ads used call tracking to capture answered calls. This describes advertising performance only, not treatment outcomes. Read more Shashwat Yadav’s Journey So Far From a mechanical engineering degree, through sales, a business of my own and leading a team, to teaching. Show All Business & Sales Marketing & SEO Web / Tech & AI Teaching & Learning Expand all Collapse all Skills I carry Tap a skill to see the chapters where I used it. Meta Ads Google Ads Lead generation Google Tag Manager GA4 Meta Pixel Conversion tracking Local SEO Google Business Profile GEO and AI search optimisation WordPress Claude Code AI agents Team management Multi-client account management Cold calling and sales 2016 2016 – 2020 B.Tech, Mechanical Engineering Shankar Charya Technical Campus (CSVTU) Education A mechanical engineering degree, before any of the work below. Degree: B.Tech, Mechanical Engineering. Institution: Shankar Charya Technical Campus (CSVTU). Years: 2016 to 2020. What I took from it Engineering trained me to break a problem into parts and check each one. 2020 Nov 2020 · about 3 months · Remote Business Development Trainee Byju's Business & Sales My first job: cold calling, delivering sessions and selling courses. Cold calling. Session delivery. Course sales. Remote, for about three months. Skills used Cold calling and sales What I took from it Cold calls and live sessions taught me to listen first and explain simply. 2021 Jul – Sep 2021 · Noida Business Development Associate Lido Learning Business & Sales On-site visits, turning leads into ed-tech enrolments. On-site visits. Converting leads into ed-tech enrolments. Based in Noida. Skills used Cold calling and sales What I took from it Meeting people in person showed me what actually turns a lead into an enrolment. Nov 2021 – Nov 2025 · Raipur Founder Evento Balloon Decoration Pvt Ltd (formerly Eventoplanner) Business & Sales Marketing & SEO Founded a balloon decoration business and grew it to ₹30 lakh a year in revenue. Grew annual revenue to ₹30 lakh with a 4-member core team and 7 gig workers. Ranked first organically for “balloon decoration Raipur” on Google Business Profile, ChatGPT, Gemini and Google AI Mode, with zero ad spend. Built a payment-enabled WordPress e-commerce site with Razorpay. Milestones Nov 2021 Founded with two partners. Nov 2022 Ran it solo. Mar 2023 Incorporated as a private limited company. Skills used Google Business Profile Local SEO GEO and AI search optimisation WordPress Team management What I took from it Building demand from zero taught me the difference between vanity metrics and business outcomes. Nov 2025 – Apr 2026 Digital Marketing Program, First Class with Distinction Digital Scholar Teaching & Learning Studied the Digital Marketing Program from November to April and completed it with First Class with Distinction, with seven certifications in total. Seven certifications Digital Marketing Program, First Class with Distinction (issued 7 May 2026) Google Ads Performance Specialist Meta Ads Performance Specialist Social Media Content Expert AI Creative Production Expert AI Agent Specialist AI Search and LLM Optimisation Expert Skills learned SEO: On-page SEO, Technical SEO, Local SEO, Keyword strategy, Google Business Profile, Search Console WordPress: WordPress, Elementor, Landing pages Google: Google Ads, Search, Display, Video, Tag Manager, GA4 Meta: Meta Ads, Lead generation, Audiences, Creative testing, Meta Pixel, Conversion tracking Social media: Content creation, Content strategy, Content calendars AI: AI creative production, Kling AI, Hailuo, Runway, Nano Banana, Google Flow, GEO, AI search optimisation Automation with AI and Claude Code: Workflow automation, n8n, AI agents, Lead routing, Reporting pipelines, WhatsApp notifications, Content pipelines, Website building Skills used Meta Ads Google Ads Google Tag Manager GA4 Meta Pixel Conversion tracking Local SEO Google Business Profile WordPress AI agents Claude Code GEO and AI search optimisation What I took from it Structured learning gave names and frameworks to things I had learned by doing. 2026 Feb – Mar 2026 · Delhi, remote WordPress Designer and SEO Consultant MyFemily by Nutritionist Saloni Marketing & SEO Web WordPress design and on-page SEO for a nutrition consultancy. WordPress website design. On-page SEO. For a nutrition consultancy in Delhi, working remotely. Skills used WordPress What I took from it A short, focused project showed me how a site’s design and its SEO work best when planned together. Mar 2026 – Now · Raipur Ad Performance Marketing Head The Digital Agency Marketing & SEO Web Tech & AI Joined as Ad Performance Marketing Head; I lead a 15-person team serving 30+ clients. Leads a 15-person team: 4 social media managers, 4 video editors, 1 website designer and 2 graphic designers. Serves 30+ clients in real estate, healthcare and education. Meta Ads and Google Ads for lead generation. Conversion tracking with Google Tag Manager, GA4 and Meta Pixel. Workflow automation with n8n, AI agents and Claude Code. Vibe coding: building websites and tools with Claude Code. Built Insinfluencer (insinfluencer.com) from scratch: the website and creator platform of an influencer marketing agency, including its SEO. Skills used Meta Ads Google Ads Lead generation Google Tag Manager GA4 Meta Pixel Conversion tracking Claude Code AI agents Team management Multi-client account management What I took from it Leading a team means keeping the ad, the tracking and the landing page working as one system. Now Now Teaching live classes Claude Code, Meta Ads, Google Ads and SEO You are here Teaching & Learning Marketing & SEO Web Tech & AI Teaching live classes on Claude Code, Meta Ads, Google Ads and SEO, and building the platform behind them. Runs live classes. Teaches Claude Code, Meta Ads, Google Ads and SEO. Built the live classes platform (Laravel, MySQL) with AI-assisted development. Skills used Claude Code Meta Ads Google Ads SEO What I took from it Teaching is the best test of whether I really understand what I do. Work with me Learn with me What Shashwat Yadav Learned Building Evento Evento Balloon Decoration Pvt Ltd, formerly Eventoplanner, started in Raipur in November 2021 with two partners. From November 2022 I ran it on my own, and it was incorporated in March 2023. The business had a core team of four, seven gig workers and ₹30 lakh in annual revenue. Its visibility came from search rather than ads: first place organically for “balloon decoration Raipur” across Google Business Profile, ChatGPT, Gemini and Google AI Mode. Running Evento until November 2025 meant handling selling, building and marketing myself. That is why I judge every campaign by the leads and customers it brings in. Read more Shashwat Yadav’s Services in Detail Google Ads Search, Display and Video campaign setup, backed by keyword research and competitor analysis, conversion tracking through Google Tag Manager, and monthly performance reporting. Current accounts include commercial real estate and healthcare. Meta Ads Lead generation and conversion campaigns on Facebook and Instagram, with custom and lookalike audiences, ad copy and visual strategy, and A/B testing before scaling. The accounts span several sectors. SEO and local search Google search ranking work, AI search optimisation for ChatGPT and Gemini, Google Business Profile optimisation, and technical SEO with a content strategy behind it. Websites and automation WordPress and Elementor builds, custom HTML, CSS and JavaScript, and landing pages made for conversion. On the automation side come custom AI agents for lead handling and automated lead-routing and reporting pipelines. See every service . Read more Who Shashwat Yadav Works With The accounts are business owners and developers who want enquiries rather than impressions: residential and commercial property developers, hospitals, schools and education consultancies, salons, hotels, restaurants and shopping malls. Several of the published case studies are for Raipur businesses, so the local market, its buyers and its search habits are familiar ground. Each account starts with the goal, the budget and the lead the business actually wants, and the plan follows from those. Read more What Shashwat Yadav Does Performance Marketing AI and Automation SEO and GEO Performance Marketing Ads, tracking and landing pages as one system. I set up Google Ads, Meta Ads and LinkedIn Ads for lead generation, and wire conversion tracking through Google Tag Manager, GA4 and Meta Pixel so results can be measured. Reporting spans Search Console, Instagram and YouTube, and I resolve Google and Meta ad policy disapprovals. Google Ads Meta Ads LinkedIn Ads Google Tag Manager GA4 Meta Pixel and conversion tracking Landing page design Multi-channel reporting Ads policy compliance See the services AI and Automation Agents and workflows that remove repeat work. I build the systems behind marketing operations: content pipelines, lead routing and AI agents. With Claude Code I direct an AI coding agent to ship websites and landing pages. With n8n, the WhatsApp API and Google Sheets, a form submission can reach the CRM and trigger a WhatsApp notification with no manual steps. AI creative tools turn briefs into publish-ready ads and video. Claude Code n8n AI agent building AI-assisted development Vibe coding Websites and tools WhatsApp API Google Sheets Kling AI Hailuo Runway Nano Banana Google Flow See all skills SEO and GEO Visibility on Google and in AI answers, from Google’s SEO Starter Guide up. That covers technical, on-page and local SEO, and Google Business Profile work. GEO means structuring content with schema and E-E-A-T signals so AI Overviews, ChatGPT and Gemini can cite the business, not only so Google ranks it. Technical SEO On-page SEO Keyword strategy Local SEO Google Business Profile Google Search Console AI search and LLM optimisation Schema and E-E-A-T signals See the services Day to day I work in Meta Ads Manager, Google Search Console, Canva, WordPress and Elementor, alongside the tools above. How I Work Research Keyword research, competitor analysis and a clear view of the right audience. Build and track The landing page comes first, then Google Tag Manager, GA4 and Meta Pixel so every lead is counted. Launch and test Lead-generation campaigns go live, with A/B tests on creative and audiences before scaling what works. Report and improve Monthly reporting shows what the spend produced, and the next round of optimisation follows from it. Certifications and Learning Seven certifications from Digital Scholar cover paid ads, content, AI creative production, AI agents and AI search. They sit alongside hands-on work for real client accounts: Digital Marketing Program (First Class with Distinction) Google Ads Performance Specialist Meta Ads Performance Specialist Social Media Content Expert AI Creative Production Expert AI Agent Specialist AI Search and LLM Optimisation Expert Teaching Shashwat Yadav also teaches at The Digital School, a digital marketing training institute in Raipur, and runs live classes. The certifications above include a Digital Marketing Program completed with First Class with Distinction, issued on 7 May 2026, and cover the same areas he works in every day: paid ads, AI creative production, AI agents and AI search. Browse courses Built from Scratch: Insinfluencer Insinfluencer (insinfluencer.com) is an influencer marketing agency and creator platform for India. Brands launch campaigns and find creators, while creators join with a free profile and get access to brand opportunities. I built the website and creator platform from scratch and handle its SEO, on behalf of The Digital Agency. The site covers influencer campaigns, UGC content, creator sourcing, local and store marketing, social media strategy and performance reporting, with a creator directory and a Brief, Match, Create and Report process. Frequently Asked Questions Who is Shashwat Yadav? A performance marketer and SEO specialist in Raipur who leads a 15-person team. What does Shashwat Yadav do? Paid ads, tracking, SEO, WordPress sites and AI automation for lead generation. Where is Shashwat Yadav based? In Raipur, Chhattisgarh, India. What does Shashwat Yadav’s experience include? 4+ years in performance marketing, a business founded in 2021, and a team lead role since March 2026. Does Shashwat Yadav teach? Yes. He teaches through The Digital School in Raipur and runs live classes. How can I work with Shashwat Yadav? Use the contact form on this page, message +91 70001 98366 on WhatsApp, or email shashwatyadav012345@gmail.com. Which industries does Shashwat Yadav work in? Healthcare, real estate, salons, education, retail, hospitality, food and beverage, and schools. Which platforms does Shashwat Yadav run ads on? Meta Ads, Google Ads and LinkedIn Ads, with lead generation as the main goal. How does Shashwat Yadav measure results? Through conversion tracking set up in Google Tag Manager, GA4 and Meta Pixel, with reporting across Search Console, Instagram and YouTube. What is GEO, and does Shashwat Yadav offer it? GEO is optimising content so AI tools such as ChatGPT and Gemini surface and cite a business. Yes, it is part of his SEO work. What did Shashwat Yadav build at Evento? Evento Balloon Decoration Pvt Ltd, a Raipur business founded in November 2021, incorporated in March 2023 and run until November 2025, with ₹30 lakh in annual revenue. Does Shashwat Yadav use AI in his work? Yes. He uses Claude Code for development, n8n and AI agents for automation, and AI creative tools for ads and video. What is Shashwat Yadav’s role at The Digital Agency? Ad Performance Marketing Head since March 2026, leading a 15-person team that serves 30+ clients. Does Shashwat Yadav work with Raipur businesses? Yes. Several published case studies are for Raipur businesses, including real estate developers and a hospital. What qualifications does Shashwat Yadav have? A B.Tech in Mechanical Engineering from Shankar Charya Technical Campus (CSVTU), 2016 to 2020, and seven Digital Scholar certifications. What has Shashwat Yadav built with AI and code? Websites, landing pages, workflow automations and tools using Claude Code and n8n, including the Insinfluencer website and creator platform, built from scratch. Get in Touch Tell me about your business, what you need help with and, if you like, a budget range. Messages sent to Shashwat Yadav through this form get a reply within 24 hours, and WhatsApp is open for quicker questions. Phone · tap to call +91 70001 98366 WhatsApp · tap to chat Message on WhatsApp Email · tap to write shashwatyadav012345@gmail.com City Raipur, Chhattisgarh, India LinkedIn · open profile Shashwat Yadav on LinkedIn Instagram · open profile @shashwat.ai.seo Your Name Phone / WhatsApp India (+91) USA / Canada (+1) United Kingdom (+44) Australia (+61) New Zealand (+64) UAE (+971) Saudi Arabia (+966) Qatar (+974) Pakistan (+92) Bangladesh (+880) Nepal (+977) Sri Lanka (+94) Singapore (+65) Malaysia (+60) China (+86) Japan (+81) South Korea (+82) Germany (+49) France (+33) Italy (+39) Spain (+34) Russia (+7) South Africa (+27) Brazil (+55) Please enter a valid mobile number Email Address (optional) Please enter a valid email address What Do You Need Help With? Select one... Performance Marketing (Google/Meta Ads) SEO / GEO Website Development AI & Marketing Automation Something else Budget Range (optional) Prefer not to say Just exploring Under ₹50K/month ₹50K–2L/month ₹2L+/month Tell Me About Your Business Website Send Message Message Sent! Thanks for reaching out. I’ll get back to you within 24 hours. Send Another Message Something Went Wrong Your message didn’t go through. Please try again, or reach out directly on WhatsApp. Try Again WhatsApp Me Instead",
+    "content": "Live on Google Meet Courses and Live Classes Learn performance marketing and AI automation from someone who does this work every day. Taught under The Digital School . Join an upcoming live class on Google Meet, try a 3-hour master class, or browse every course and see exactly what it covers. Upcoming classes All courses Upcoming classes New or returning? One Google sign-in covers both. Log in All times in IST (India Standard Time) 1 Pick a class Browse upcoming sessions and see what each one covers. 2 Continue with Google One Google sign-in covers signing up and logging in. Add your mobile number once; after that, enrolling is one tap. 3 Attend on Google Meet The green Join class button on My Classes opens 15 minutes before the class starts. No upcoming classes right now New dates are announced regularly. Message on WhatsApp to be told when the next class is scheduled. Notify me on WhatsApp All courses Every course comes from what is actually running campaigns, tracking conversions and building sites right now. Google Ads Search and Demand Gen lead generation campaigns, tracking and reporting, in 18 live classes 18 Live Classes View Curriculum No class scheduled yet Ask about the next class Meta Ads (Facebook & Instagram) Lead and engagement campaigns, creative and tracking, in 14 live classes 14 Live Classes View Curriculum No class scheduled yet Ask about the next class Claude and Claude Code From first prompts to building websites, tools and automations with Claude Code, in 12 live classes 12 Live Classes View Curriculum No class scheduled yet Ask about the next class Master Classes 3-hour live deep dives: one skill from start to finish, hands-on, on Google Meet 3-hour sessions View Master Classes No class scheduled yet Ask about the next class Interested in learning performance marketing from real-world experience? Need a topic that isn't listed? Tell me what you want to learn and it may become a future class. Suggest a topic WhatsApp Me Call Now Almost there One last step: add your mobile number so I can reach you about this class. You only do this once. Not you? Mobile number * Add number & enrol",
     "footer": "Performance Marketing Expert & SEO Specialist driving measurable growth through data-driven strategy. Quick Links Home About Services Portfolio Skills Certifications Courses Blog Contact Connect LinkedIn Instagram Contact +91 70001 98366 WhatsApp shashwatyadav012345@gmail.com © 2026 Shashwat Yadav. All rights reserved. | Privacy Policy | Terms Courses",
     "floating": ""
    },
    "wordCount": {
     "header": 52,
-    "content": 3376,
+    "content": 365,
     "footer": 45,
     "floating": 0
    },
    "headings": [
     {
      "level": 1,
-     "text": "Shashwat Yadav Performance Marketer and SEO Specialist in Raipur",
+     "text": "Courses and Live Classes",
      "region": "content"
     },
     {
      "level": 2,
-     "text": "Who Is Shashwat Yadav?",
+     "text": "Upcoming classes",
+     "region": "content"
+    },
+    {
+     "level": 3,
+     "text": "Pick a class",
+     "region": "content"
+    },
+    {
+     "level": 3,
+     "text": "Continue with Google",
+     "region": "content"
+    },
+    {
+     "level": 3,
+     "text": "Attend on Google Meet",
+     "region": "content"
+    },
+    {
+     "level": 3,
+     "text": "No upcoming classes right now",
      "region": "content"
     },
     {
      "level": 2,
-     "text": "How Shashwat Yadav Approaches Marketing",
-     "region": "content"
-    },
-    {
-     "level": 2,
-     "text": "Performance Marketing at a Glance",
-     "region": "content"
-    },
-    {
-     "level": 2,
-     "text": "Industries I Work In",
-     "region": "content"
-    },
-    {
-     "level": 3,
-     "text": "Healthcare",
-     "region": "content"
-    },
-    {
-     "level": 3,
-     "text": "Commercial Real Estate",
-     "region": "content"
-    },
-    {
-     "level": 3,
-     "text": "Residential Real Estate",
-     "region": "content"
-    },
-    {
-     "level": 3,
-     "text": "Salon & Wellness",
-     "region": "content"
-    },
-    {
-     "level": 3,
-     "text": "Education",
-     "region": "content"
-    },
-    {
-     "level": 3,
-     "text": "Retail & Malls",
-     "region": "content"
-    },
-    {
-     "level": 3,
-     "text": "Hospitality",
-     "region": "content"
-    },
-    {
-     "level": 3,
-     "text": "Food & Beverage",
-     "region": "content"
-    },
-    {
-     "level": 3,
-     "text": "Schools",
-     "region": "content"
-    },
-    {
-     "level": 2,
-     "text": "Results from Client Work",
-     "region": "content"
-    },
-    {
-     "level": 2,
-     "text": "How the Campaigns Work",
-     "region": "content"
-    },
-    {
-     "level": 3,
-     "text": "Residential launch",
-     "region": "content"
-    },
-    {
-     "level": 3,
-     "text": "Commercial property",
-     "region": "content"
-    },
-    {
-     "level": 3,
-     "text": "Hospital services",
-     "region": "content"
-    },
-    {
-     "level": 2,
-     "text": "Shashwat Yadav’s Journey So Far",
-     "region": "content"
-    },
-    {
-     "level": 3,
-     "text": "Skills I carry",
-     "region": "content"
-    },
-    {
-     "level": 3,
-     "text": "2016 – 2020B.Tech, Mechanical EngineeringShankar Charya Technical Campus (CSVTU)",
-     "region": "content"
-    },
-    {
-     "level": 3,
-     "text": "Nov 2020 · about 3 months · RemoteBusiness Development TraineeByju's",
-     "region": "content"
-    },
-    {
-     "level": 4,
-     "text": "Skills used",
-     "region": "content"
-    },
-    {
-     "level": 3,
-     "text": "Jul – Sep 2021 · NoidaBusiness Development AssociateLido Learning",
-     "region": "content"
-    },
-    {
-     "level": 4,
-     "text": "Skills used",
-     "region": "content"
-    },
-    {
-     "level": 3,
-     "text": "Nov 2021 – Nov 2025 · RaipurFounderEvento Balloon Decoration Pvt Ltd (formerly Eventoplanner)",
-     "region": "content"
-    },
-    {
-     "level": 4,
-     "text": "Milestones",
-     "region": "content"
-    },
-    {
-     "level": 4,
-     "text": "Skills used",
-     "region": "content"
-    },
-    {
-     "level": 3,
-     "text": "Nov 2025 – Apr 2026Digital Marketing Program, First Class with DistinctionDigital Scholar",
-     "region": "content"
-    },
-    {
-     "level": 4,
-     "text": "Skills used",
-     "region": "content"
-    },
-    {
-     "level": 3,
-     "text": "Feb – Mar 2026 · Delhi, remoteWordPress Designer and SEO ConsultantMyFemily by Nutritionist Saloni",
-     "region": "content"
-    },
-    {
-     "level": 4,
-     "text": "Skills used",
-     "region": "content"
-    },
-    {
-     "level": 3,
-     "text": "Mar 2026 – Now · RaipurAd Performance Marketing HeadThe Digital Agency",
-     "region": "content"
-    },
-    {
-     "level": 4,
-     "text": "Skills used",
-     "region": "content"
-    },
-    {
-     "level": 3,
-     "text": "NowTeaching live classesClaude Code, Meta Ads, Google Ads and SEO",
-     "region": "content"
-    },
-    {
-     "level": 4,
-     "text": "Skills used",
-     "region": "content"
-    },
-    {
-     "level": 2,
-     "text": "What Shashwat Yadav Learned Building Evento",
-     "region": "content"
-    },
-    {
-     "level": 2,
-     "text": "Shashwat Yadav’s Services in Detail",
+     "text": "All courses",
      "region": "content"
     },
     {
@@ -643,2015 +162,22 @@
     },
     {
      "level": 3,
-     "text": "Meta Ads",
-     "region": "content"
-    },
-    {
-     "level": 3,
-     "text": "SEO and local search",
-     "region": "content"
-    },
-    {
-     "level": 3,
-     "text": "Websites and automation",
-     "region": "content"
-    },
-    {
-     "level": 2,
-     "text": "Who Shashwat Yadav Works With",
-     "region": "content"
-    },
-    {
-     "level": 2,
-     "text": "What Shashwat Yadav Does",
-     "region": "content"
-    },
-    {
-     "level": 3,
-     "text": "Performance Marketing",
-     "region": "content"
-    },
-    {
-     "level": 3,
-     "text": "AI and Automation",
-     "region": "content"
-    },
-    {
-     "level": 3,
-     "text": "SEO and GEO",
-     "region": "content"
-    },
-    {
-     "level": 2,
-     "text": "How I Work",
-     "region": "content"
-    },
-    {
-     "level": 2,
-     "text": "Certifications and Learning",
-     "region": "content"
-    },
-    {
-     "level": 3,
-     "text": "Teaching",
-     "region": "content"
-    },
-    {
-     "level": 2,
-     "text": "Built from Scratch: Insinfluencer",
-     "region": "content"
-    },
-    {
-     "level": 2,
-     "text": "Frequently Asked Questions",
-     "region": "content"
-    },
-    {
-     "level": 3,
-     "text": "Who is Shashwat Yadav?",
-     "region": "content"
-    },
-    {
-     "level": 3,
-     "text": "What does Shashwat Yadav do?",
-     "region": "content"
-    },
-    {
-     "level": 3,
-     "text": "Where is Shashwat Yadav based?",
-     "region": "content"
-    },
-    {
-     "level": 3,
-     "text": "What does Shashwat Yadav’s experience include?",
-     "region": "content"
-    },
-    {
-     "level": 3,
-     "text": "Does Shashwat Yadav teach?",
-     "region": "content"
-    },
-    {
-     "level": 3,
-     "text": "How can I work with Shashwat Yadav?",
-     "region": "content"
-    },
-    {
-     "level": 3,
-     "text": "Which industries does Shashwat Yadav work in?",
-     "region": "content"
-    },
-    {
-     "level": 3,
-     "text": "Which platforms does Shashwat Yadav run ads on?",
-     "region": "content"
-    },
-    {
-     "level": 3,
-     "text": "How does Shashwat Yadav measure results?",
-     "region": "content"
-    },
-    {
-     "level": 3,
-     "text": "What is GEO, and does Shashwat Yadav offer it?",
-     "region": "content"
-    },
-    {
-     "level": 3,
-     "text": "What did Shashwat Yadav build at Evento?",
-     "region": "content"
-    },
-    {
-     "level": 3,
-     "text": "Does Shashwat Yadav use AI in his work?",
-     "region": "content"
-    },
-    {
-     "level": 3,
-     "text": "What is Shashwat Yadav’s role at The Digital Agency?",
-     "region": "content"
-    },
-    {
-     "level": 3,
-     "text": "Does Shashwat Yadav work with Raipur businesses?",
-     "region": "content"
-    },
-    {
-     "level": 3,
-     "text": "What qualifications does Shashwat Yadav have?",
-     "region": "content"
-    },
-    {
-     "level": 3,
-     "text": "What has Shashwat Yadav built with AI and code?",
-     "region": "content"
-    },
-    {
-     "level": 2,
-     "text": "Get in Touch",
-     "region": "content"
-    },
-    {
-     "level": 3,
-     "text": "Message Sent!",
-     "region": "content"
-    },
-    {
-     "level": 3,
-     "text": "Something Went Wrong",
-     "region": "content"
-    },
-    {
-     "level": 4,
-     "text": "Quick Links",
-     "region": "footer"
-    },
-    {
-     "level": 4,
-     "text": "Connect",
-     "region": "footer"
-    },
-    {
-     "level": 4,
-     "text": "Contact",
-     "region": "footer"
-    }
-   ],
-   "links": [
-    {
-     "href": "#main",
-     "text": "Skip to content",
-     "label": null,
-     "target": null,
-     "rel": null,
-     "region": "header"
-    },
-    {
-     "href": "/",
-     "text": "img:Shashwat Yadav",
-     "label": null,
-     "target": null,
-     "rel": null,
-     "region": "header"
-    },
-    {
-     "href": "/",
-     "text": "Home",
-     "label": null,
-     "target": null,
-     "rel": null,
-     "region": "header"
-    },
-    {
-     "href": "/about",
-     "text": "About",
-     "label": null,
-     "target": null,
-     "rel": null,
-     "region": "header"
-    },
-    {
-     "href": "/services",
-     "text": "Services",
-     "label": null,
-     "target": null,
-     "rel": null,
-     "region": "header"
-    },
-    {
-     "href": "/portfolio",
-     "text": "Portfolio",
-     "label": null,
-     "target": null,
-     "rel": null,
-     "region": "header"
-    },
-    {
-     "href": "/skills",
-     "text": "Skills",
-     "label": null,
-     "target": null,
-     "rel": null,
-     "region": "header"
-    },
-    {
-     "href": "/certifications",
-     "text": "Certifications",
-     "label": null,
-     "target": null,
-     "rel": null,
-     "region": "header"
-    },
-    {
-     "href": "/blog/",
-     "text": "Blog",
-     "label": null,
-     "target": null,
-     "rel": null,
-     "region": "header"
-    },
-    {
-     "href": "/contact",
-     "text": "Contact",
-     "label": null,
-     "target": null,
-     "rel": null,
-     "region": "header"
-    },
-    {
-     "href": "http://127.0.0.1:8000/login",
-     "text": "Log in",
-     "label": null,
-     "target": null,
-     "rel": null,
-     "region": "header"
-    },
-    {
-     "href": "/courses/",
-     "text": "Courses",
-     "label": null,
-     "target": null,
-     "rel": null,
-     "region": "header"
-    },
-    {
-     "href": "/courses/",
-     "text": "All coursesCourses and upcoming live classes",
-     "label": null,
-     "target": null,
-     "rel": null,
-     "region": "header"
-    },
-    {
-     "href": "/courses/master-classes/",
-     "text": "Master Classes3-hour live deep dives",
-     "label": null,
-     "target": null,
-     "rel": null,
-     "region": "header"
-    },
-    {
-     "href": "/courses/google-ads/",
-     "text": "Google AdsSearch and Demand Gen lead campaigns",
-     "label": null,
-     "target": null,
-     "rel": null,
-     "region": "header"
-    },
-    {
-     "href": "/courses/meta-ads/",
-     "text": "Meta AdsLead and engagement campaigns",
-     "label": null,
-     "target": null,
-     "rel": null,
-     "region": "header"
-    },
-    {
-     "href": "/courses/claude-mastery/",
-     "text": "Claude and Claude CodePrompting, building and automation",
-     "label": null,
-     "target": null,
-     "rel": null,
-     "region": "header"
-    },
-    {
-     "href": "/contact",
-     "text": "Let's Connect",
-     "label": null,
-     "target": null,
-     "rel": null,
-     "region": "header"
-    },
-    {
-     "href": "/courses/",
-     "text": "Courses",
-     "label": null,
-     "target": null,
-     "rel": null,
-     "region": "header"
-    },
-    {
-     "href": "#contact",
-     "text": "Contact me",
-     "label": null,
-     "target": null,
-     "rel": null,
-     "region": "content"
-    },
-    {
-     "href": "https://wa.me/917000198366",
-     "text": "WhatsApp me",
-     "label": null,
-     "target": "_blank",
-     "rel": "noopener",
-     "region": "content"
-    },
-    {
-     "href": "/courses/",
-     "text": "Browse courses",
-     "label": null,
-     "target": null,
-     "rel": null,
-     "region": "content"
-    },
-    {
-     "href": "#who",
-     "text": "Bio",
-     "label": null,
-     "target": null,
-     "rel": null,
-     "region": "content"
-    },
-    {
-     "href": "#industries",
-     "text": "Industries",
-     "label": null,
-     "target": null,
-     "rel": null,
-     "region": "content"
-    },
-    {
-     "href": "#results",
-     "text": "Results",
-     "label": null,
-     "target": null,
-     "rel": null,
-     "region": "content"
-    },
-    {
-     "href": "#journey",
-     "text": "Journey",
-     "label": null,
-     "target": null,
-     "rel": null,
-     "region": "content"
-    },
-    {
-     "href": "#skills",
-     "text": "Skills",
-     "label": null,
-     "target": null,
-     "rel": null,
-     "region": "content"
-    },
-    {
-     "href": "#certifications",
-     "text": "Certifications",
-     "label": null,
-     "target": null,
-     "rel": null,
-     "region": "content"
-    },
-    {
-     "href": "#faq",
-     "text": "FAQ",
-     "label": null,
-     "target": null,
-     "rel": null,
-     "region": "content"
-    },
-    {
-     "href": "#contact",
-     "text": "Contact",
-     "label": null,
-     "target": null,
-     "rel": null,
-     "region": "content"
-    },
-    {
-     "href": "/portfolio",
-     "text": "Read the full case studies",
-     "label": null,
-     "target": null,
-     "rel": null,
-     "region": "content"
-    },
-    {
-     "href": "https://insinfluencer.com/",
-     "text": "Insinfluencer (insinfluencer.com)",
-     "label": null,
-     "target": "_blank",
-     "rel": "noopener",
-     "region": "content"
-    },
-    {
-     "href": "/contact",
-     "text": "Work with me",
-     "label": null,
-     "target": null,
-     "rel": null,
-     "region": "content"
-    },
-    {
-     "href": "/courses/",
-     "text": "Learn with me",
-     "label": null,
-     "target": null,
-     "rel": null,
-     "region": "content"
-    },
-    {
-     "href": "/services",
-     "text": "See every service",
-     "label": null,
-     "target": null,
-     "rel": null,
-     "region": "content"
-    },
-    {
-     "href": "/services",
-     "text": "See the services",
-     "label": null,
-     "target": null,
-     "rel": null,
-     "region": "content"
-    },
-    {
-     "href": "/skills",
-     "text": "See all skills",
-     "label": null,
-     "target": null,
-     "rel": null,
-     "region": "content"
-    },
-    {
-     "href": "https://developers.google.com/search/docs/fundamentals/seo-starter-guide",
-     "text": "SEO Starter Guide",
-     "label": null,
-     "target": "_blank",
-     "rel": "noopener",
-     "region": "content"
-    },
-    {
-     "href": "/services",
-     "text": "See the services",
-     "label": null,
-     "target": null,
-     "rel": null,
-     "region": "content"
-    },
-    {
-     "href": "/courses/",
-     "text": "Browse courses",
-     "label": null,
-     "target": null,
-     "rel": null,
-     "region": "content"
-    },
-    {
-     "href": "https://insinfluencer.com/",
-     "text": "Insinfluencer (insinfluencer.com)",
-     "label": null,
-     "target": "_blank",
-     "rel": "noopener",
-     "region": "content"
-    },
-    {
-     "href": "tel:+917000198366",
-     "text": "+91 70001 98366",
-     "label": null,
-     "target": null,
-     "rel": null,
-     "region": "content"
-    },
-    {
-     "href": "https://wa.me/917000198366",
-     "text": "Message on WhatsApp",
-     "label": null,
-     "target": "_blank",
-     "rel": "noopener",
-     "region": "content"
-    },
-    {
-     "href": "mailto:shashwatyadav012345@gmail.com",
-     "text": "shashwatyadav012345@gmail.com",
-     "label": null,
-     "target": null,
-     "rel": null,
-     "region": "content"
-    },
-    {
-     "href": "https://www.linkedin.com/in/shashwat-yadav-9258bb131",
-     "text": "Shashwat Yadav on LinkedIn",
-     "label": null,
-     "target": "_blank",
-     "rel": "noopener me",
-     "region": "content"
-    },
-    {
-     "href": "https://www.instagram.com/shashwat.ai.seo",
-     "text": "@shashwat.ai.seo",
-     "label": null,
-     "target": "_blank",
-     "rel": "noopener me",
-     "region": "content"
-    },
-    {
-     "href": "https://wa.me/917000198366?text=Hi%20Shashwat!%20I%20tried%20to%20submit%20the%20contact%20form%20but%20it%20didn%27t%20work%2C%20so%20I%27m%20reaching%20out%20here%20instead.",
-     "text": "WhatsApp Me Instead",
-     "label": null,
-     "target": "_blank",
-     "rel": "noopener",
-     "region": "content"
-    },
-    {
-     "href": "/",
-     "text": "img:Shashwat Yadav",
-     "label": null,
-     "target": null,
-     "rel": null,
-     "region": "footer"
-    },
-    {
-     "href": "/",
-     "text": "Home",
-     "label": null,
-     "target": null,
-     "rel": null,
-     "region": "footer"
-    },
-    {
-     "href": "/about",
-     "text": "About",
-     "label": null,
-     "target": null,
-     "rel": null,
-     "region": "footer"
-    },
-    {
-     "href": "/services",
-     "text": "Services",
-     "label": null,
-     "target": null,
-     "rel": null,
-     "region": "footer"
-    },
-    {
-     "href": "/portfolio",
-     "text": "Portfolio",
-     "label": null,
-     "target": null,
-     "rel": null,
-     "region": "footer"
-    },
-    {
-     "href": "/skills",
-     "text": "Skills",
-     "label": null,
-     "target": null,
-     "rel": null,
-     "region": "footer"
-    },
-    {
-     "href": "/certifications",
-     "text": "Certifications",
-     "label": null,
-     "target": null,
-     "rel": null,
-     "region": "footer"
-    },
-    {
-     "href": "/courses",
-     "text": "Courses",
-     "label": null,
-     "target": null,
-     "rel": null,
-     "region": "footer"
-    },
-    {
-     "href": "/blog/",
-     "text": "Blog",
-     "label": null,
-     "target": null,
-     "rel": null,
-     "region": "footer"
-    },
-    {
-     "href": "/contact",
-     "text": "Contact",
-     "label": null,
-     "target": null,
-     "rel": null,
-     "region": "footer"
-    },
-    {
-     "href": "https://www.linkedin.com/in/shashwat-yadav-9258bb131",
-     "text": "LinkedIn",
-     "label": null,
-     "target": "_blank",
-     "rel": null,
-     "region": "footer"
-    },
-    {
-     "href": "https://www.instagram.com/shashwat.ai.seo",
-     "text": "Instagram",
-     "label": null,
-     "target": "_blank",
-     "rel": "noopener noreferrer",
-     "region": "footer"
-    },
-    {
-     "href": "tel:+917000198366",
-     "text": "+91 70001 98366",
-     "label": null,
-     "target": null,
-     "rel": null,
-     "region": "footer"
-    },
-    {
-     "href": "https://wa.me/917000198366",
-     "text": "WhatsApp",
-     "label": null,
-     "target": "_blank",
-     "rel": null,
-     "region": "footer"
-    },
-    {
-     "href": "mailto:shashwatyadav012345@gmail.com",
-     "text": "shashwatyadav012345@gmail.com",
-     "label": null,
-     "target": null,
-     "rel": null,
-     "region": "footer"
-    },
-    {
-     "href": "/privacy-policy",
-     "text": "Privacy Policy",
-     "label": null,
-     "target": null,
-     "rel": null,
-     "region": "footer"
-    },
-    {
-     "href": "/terms",
-     "text": "Terms",
-     "label": null,
-     "target": null,
-     "rel": null,
-     "region": "footer"
-    },
-    {
-     "href": "/courses/",
-     "text": "Courses",
-     "label": null,
-     "target": null,
-     "rel": null,
-     "region": "footer"
-    },
-    {
-     "href": "https://wa.me/917000198366?text=Hi%20Shashwat!%20I%20visited%20your%20portfolio%20and%20would%20love%20to%20discuss%20performance%20marketing.",
-     "text": "",
-     "label": "Chat on WhatsApp",
-     "target": "_blank",
-     "rel": null,
-     "region": "floating"
-    },
-    {
-     "href": "tel:+917000198366",
-     "text": "",
-     "label": "Call Shashwat Yadav",
-     "target": null,
-     "rel": null,
-     "region": "floating"
-    }
-   ],
-   "images": [
-    {
-     "src": "/assets/images/logo.png",
-     "srcset": null,
-     "alt": "Shashwat Yadav",
-     "width": "150",
-     "height": "40",
-     "loading": null,
-     "region": "header"
-    },
-    {
-     "src": "/assets/images/shashwat-yadav-performance-marketing-expert.webp",
-     "srcset": null,
-     "alt": "Shashwat Yadav, performance marketer and SEO specialist in Raipur",
-     "width": "720",
-     "height": "539",
-     "loading": null,
-     "region": "content"
-    },
-    {
-     "src": "/assets/images/logo.png",
-     "srcset": null,
-     "alt": "Shashwat Yadav",
-     "width": "150",
-     "height": "40",
-     "loading": null,
-     "region": "footer"
-    }
-   ],
-   "pictureSources": [],
-   "media": [],
-   "bgImages": [],
-   "forms": [
-    {
-     "id": "contact-form",
-     "action": null,
-     "method": null,
-     "novalidate": false,
-     "region": "content",
-     "fields": [
-      {
-       "tag": "input",
-       "type": "text",
-       "name": null,
-       "id": "form-name",
-       "required": true,
-       "placeholder": "John Doe",
-       "value": null,
-       "label": "Your Name",
-       "options": null,
-       "autocomplete": "name",
-       "maxlength": null,
-       "pattern": null
-      },
-      {
-       "tag": "select",
-       "type": null,
-       "name": null,
-       "id": "form-country-code",
-       "required": false,
-       "placeholder": null,
-       "value": null,
-       "label": null,
-       "options": [
-        "India (+91)",
-        "USA / Canada (+1)",
-        "United Kingdom (+44)",
-        "Australia (+61)",
-        "New Zealand (+64)",
-        "UAE (+971)",
-        "Saudi Arabia (+966)",
-        "Qatar (+974)",
-        "Pakistan (+92)",
-        "Bangladesh (+880)",
-        "Nepal (+977)",
-        "Sri Lanka (+94)",
-        "Singapore (+65)",
-        "Malaysia (+60)",
-        "China (+86)",
-        "Japan (+81)",
-        "South Korea (+82)",
-        "Germany (+49)",
-        "France (+33)",
-        "Italy (+39)",
-        "Spain (+34)",
-        "Russia (+7)",
-        "South Africa (+27)",
-        "Brazil (+55)"
-       ],
-       "autocomplete": null,
-       "maxlength": null,
-       "pattern": null
-      },
-      {
-       "tag": "input",
-       "type": "tel",
-       "name": null,
-       "id": "form-phone",
-       "required": true,
-       "placeholder": "10-digit mobile number",
-       "value": null,
-       "label": "Phone / WhatsApp",
-       "options": null,
-       "autocomplete": "tel-national",
-       "maxlength": null,
-       "pattern": null
-      },
-      {
-       "tag": "input",
-       "type": "email",
-       "name": null,
-       "id": "form-email",
-       "required": false,
-       "placeholder": "john@company.com",
-       "value": null,
-       "label": "Email Address (optional)",
-       "options": null,
-       "autocomplete": "email",
-       "maxlength": null,
-       "pattern": null
-      },
-      {
-       "tag": "select",
-       "type": null,
-       "name": null,
-       "id": "form-service",
-       "required": true,
-       "placeholder": null,
-       "value": null,
-       "label": "What Do You Need Help With?",
-       "options": [
-        "Select one...",
-        "Performance Marketing (Google/Meta Ads)",
-        "SEO / GEO",
-        "Website Development",
-        "AI & Marketing Automation",
-        "Something else"
-       ],
-       "autocomplete": null,
-       "maxlength": null,
-       "pattern": null
-      },
-      {
-       "tag": "select",
-       "type": null,
-       "name": null,
-       "id": "form-budget",
-       "required": false,
-       "placeholder": null,
-       "value": null,
-       "label": "Budget Range (optional)",
-       "options": [
-        "Prefer not to say",
-        "Just exploring",
-        "Under ₹50K/month",
-        "₹50K–2L/month",
-        "₹2L+/month"
-       ],
-       "autocomplete": null,
-       "maxlength": null,
-       "pattern": null
-      },
-      {
-       "tag": "textarea",
-       "type": null,
-       "name": null,
-       "id": "form-message",
-       "required": true,
-       "placeholder": "2-3 sentences is perfect",
-       "value": null,
-       "label": "Tell Me About Your Business",
-       "options": null,
-       "autocomplete": null,
-       "maxlength": null,
-       "pattern": null
-      },
-      {
-       "tag": "input",
-       "type": "text",
-       "name": "website",
-       "id": "form-website",
-       "required": false,
-       "placeholder": null,
-       "value": null,
-       "label": "Website",
-       "options": null,
-       "autocomplete": "off",
-       "maxlength": null,
-       "pattern": null
-      },
-      {
-       "tag": "input",
-       "type": "hidden",
-       "name": null,
-       "id": "form-source-page",
-       "required": false,
-       "placeholder": null,
-       "value": "Shashwat Yadav: Complete Biography, Experience & Skills (/about)",
-       "label": null,
-       "options": null,
-       "autocomplete": null,
-       "maxlength": null,
-       "pattern": null
-      },
-      {
-       "tag": "button",
-       "type": "submit",
-       "name": null,
-       "id": "contact-submit-btn",
-       "required": false,
-       "placeholder": null,
-       "value": "Send Message",
-       "label": null,
-       "options": null,
-       "autocomplete": null,
-       "maxlength": null,
-       "pattern": null
-      }
-     ]
-    }
-   ],
-   "dataHooks": {
-    "data-lc-actions": 1,
-    "data-lc-guest": 1,
-    "data-lc-login": 1,
-    "data-lc-pill": 2,
-    "data-lc-cta": 1,
-    "data-lc-compact": 1
-   },
-   "ids": [
-    "navbar",
-    "site-nav",
-    "main",
-    "abt-title",
-    "who",
-    "abt-who",
-    "abt-bio-more-1",
-    "approach",
-    "abt-approach-h",
-    "abt-bio-more-2",
-    "glance",
-    "abt-glance-h",
-    "industries",
-    "abt-ind-h",
-    "results",
-    "abt-res-h",
-    "campaigns",
-    "abt-camp-h",
-    "abt-bio-more-3",
-    "journey",
-    "journey-title",
-    "journey-school",
-    "journey-school-panel",
-    "journey-byjus",
-    "journey-byjus-panel",
-    "journey-lido",
-    "journey-lido-panel",
-    "journey-evento",
-    "journey-evento-panel",
-    "journey-scholar",
-    "journey-scholar-panel",
-    "journey-myfemily",
-    "journey-myfemily-panel",
-    "journey-digital-agency",
-    "journey-digital-agency-panel",
-    "journey-now",
-    "journey-now-panel",
-    "evento",
-    "abt-evento-h",
-    "abt-bio-more-4",
-    "services",
-    "abt-serv-h",
-    "abt-bio-more-5",
-    "clients",
-    "abt-clients-h",
-    "abt-bio-more-6",
-    "skills",
-    "abt-skills-h",
-    "abt-tab-perf",
-    "abt-tab-ai",
-    "abt-tab-seo",
-    "abt-panel-perf",
-    "abt-panel-ai",
-    "abt-panel-seo",
-    "process",
-    "abt-how-h",
-    "certifications",
-    "abt-certs",
-    "built",
-    "abt-built-h",
-    "faq",
-    "abt-faq-h",
-    "abt-faq-1",
-    "abt-faq-2",
-    "abt-faq-3",
-    "abt-faq-4",
-    "abt-faq-5",
-    "abt-faq-6",
-    "abt-faq-7",
-    "abt-faq-8",
-    "abt-faq-9",
-    "abt-faq-10",
-    "abt-faq-11",
-    "abt-faq-12",
-    "abt-faq-13",
-    "abt-faq-14",
-    "abt-faq-15",
-    "abt-faq-16",
-    "contact",
-    "abt-contact-h",
-    "audit-form",
-    "contact-form",
-    "form-name",
-    "form-country-code",
-    "form-phone",
-    "phone-error",
-    "form-email",
-    "email-error",
-    "form-service",
-    "form-budget",
-    "form-message",
-    "form-website",
-    "form-source-page",
-    "contact-submit-btn",
-    "contact-submit-btn-text",
-    "form-success",
-    "form-error",
-    "whatsapp-widget"
-   ],
-   "htmlBytes": 84161,
-   "network": [
-    {
-     "method": "GET",
-     "url": "https://www.googletagmanager.com/gtm.js"
-    }
-   ],
-   "externalHosts": [
-    "www.googletagmanager.com"
-   ],
-   "desktopDocHeight": 12398,
-   "mobileOverflowX": false,
-   "mobileDocHeight": 17768
-  },
-  "/contact": {
-   "url": "/contact",
-   "head": {
-    "lang": "en",
-    "title": "Contact | Shashwat Yadav",
-    "meta": [
-     {
-      "name": null,
-      "property": null,
-      "httpEquiv": null,
-      "charset": "UTF-8",
-      "content": null
-     },
-     {
-      "name": "viewport",
-      "property": null,
-      "httpEquiv": null,
-      "charset": null,
-      "content": "width=device-width, initial-scale=1.0"
-     },
-     {
-      "name": "description",
-      "property": null,
-      "httpEquiv": null,
-      "charset": null,
-      "content": "Get in touch with Shashwat Yadav for performance marketing, SEO, or web development projects."
-     }
-    ],
-    "links": [
-     {
-      "rel": "canonical",
-      "href": "https://shashwatyadav.com/contact",
-      "type": null,
-      "sizes": null,
-      "as": null
-     },
-     {
-      "rel": "icon",
-      "href": "/assets/images/favicon.png",
-      "type": "image/png",
-      "sizes": null,
-      "as": null
-     },
-     {
-      "rel": "preload",
-      "href": "/assets/fonts/inter-latin-400.woff2",
-      "type": "font/woff2",
-      "sizes": null,
-      "as": "font"
-     },
-     {
-      "rel": "preload",
-      "href": "/assets/fonts/inter-latin-600.woff2",
-      "type": "font/woff2",
-      "sizes": null,
-      "as": "font"
-     },
-     {
-      "rel": "preload",
-      "href": "/assets/fonts/montserrat-latin-800.woff2",
-      "type": "font/woff2",
-      "sizes": null,
-      "as": "font"
-     },
-     {
-      "rel": "preload",
-      "href": "/assets/fonts/montserrat-latin-700.woff2",
-      "type": "font/woff2",
-      "sizes": null,
-      "as": "font"
-     },
-     {
-      "rel": "stylesheet",
-      "href": "/assets/css/theme.css?v=1",
-      "type": null,
-      "sizes": null,
-      "as": null
-     }
-    ],
-    "jsonLd": [],
-    "scripts": [
-     {
-      "inline": "7da60269",
-      "bytes": 358,
-      "gtm": true
-     },
-     {
-      "src": "/assets/js/theme.js?v=1"
-     },
-     {
-      "src": "/assets/js/main.js?v=20261026"
-     }
-    ],
-    "noscriptGtm": true
-   },
-   "chatbotBlocks": [
-    "CHATBOT-OFF-START (bubble): the chat widget is switched off. To restore, delete this line and the CHATBOT-OFF-END line <button type=\"button\" id=\"chatbot-toggle\" aria-expanded=\"false\" aria-controls=\"chatbot-panel\" class=\"relative w-14 h-14 rounded-full bg-yellow-400 hover:brightness-95 flex items-center justify-center text-gray-900 shadow-[0_8px_30px_rgba(250,204,21,0.4)] hover:scale-110 active:scale-95 transition-all\"> <svg id=\"chatbot-icon-chat\" class=\"w-7 h-7\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z\"/></svg> <svg id=\"chatbot-icon-close\" class=\"w-6 h-6 hidden\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M6 18L18 6M6 6l12 12\"/></svg> </button> CHATBOT-OFF-END",
-    "CHATBOT-OFF-START (panel): the chat widget is switched off. To restore, delete this line and the CHATBOT-OFF-END line [ AI Chatbot panel (hidden until the bubble above is clicked) ] <div id=\"chatbot-panel\" class=\"hidden fixed z-[110] bg-white rounded-2xl shadow-2xl border border-border flex flex-col overflow-hidden\" style=\"bottom: 96px; right: 24px; width: min(380px, calc(100vw - 32px)); height: min(560px, calc(100vh - 140px));\"> <div class=\"bg-primary text-white px-4 py-3 flex items-center justify-between flex-shrink-0\"> <div class=\"flex items-center gap-2\"> <img src=\"/assets/images/logo.png\" alt=\"\" class=\"logo-on-dark h-6 w-auto\"> <span class=\"text-sm font-semibold\">Chat with Shashwat</span> </div> <button type=\"button\" id=\"chatbot-close-btn\" class=\"text-white/80 hover:text-white\" aria-label=\"Close chat\"> <svg class=\"w-5 h-5\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M6 18L18 6M6 6l12 12\"/></svg> </button> </div> <div id=\"chatbot-messages\" class=\"flex-1 overflow-y-auto px-4 py-4 space-y-3 bg-background\"></div> <div id=\"chatbot-quick-replies\" class=\"hidden px-4 pb-2 flex flex-wrap gap-2 bg-background\"></div> <form id=\"chatbot-form\" class=\"flex items-center gap-2 px-3 py-3 border-t border-border bg-white flex-shrink-0\"> <input type=\"text\" id=\"chatbot-input\" placeholder=\"Type a message&hellip;\" autocomplete=\"off\" class=\"flex-1 px-3 py-2 rounded-full bg-background border border-border text-sm text-text-body focus:outline-none focus:border-primary\"> <button type=\"submit\" id=\"chatbot-send-btn\" class=\"w-9 h-9 rounded-full bg-primary hover:bg-primary-dark flex items-center justify-center text-white flex-shrink-0 disabled:opacity-50 disabled:cursor-not-allowed\"> <svg class=\"w-4 h-4\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M14 5l7 7m0 0l-7 7m7-7H3\"/></svg> </button> </form> </div> CHATBOT-OFF-END",
-    "CHATBOT-OFF-START (script): the chat widget is switched off. To restore, delete this line and the CHATBOT-OFF-END line <script src=\"/assets/js/chatbot-widget.js\"></script> CHATBOT-OFF-END"
-   ],
-   "commentCount": 15,
-   "text": {
-    "header": "Skip to content Home About Services Portfolio Skills Certifications Blog Contact Log in Courses All courses Courses and upcoming live classes Master Classes 3-hour live deep dives Google Ads Search and Demand Gen lead campaigns Meta Ads Lead and engagement campaigns Claude and Claude Code Prompting, building and automation Let's Connect Courses",
-    "content": "Let's Connect Ready to Drive Growth? Whether you need performance marketing expertise, want to learn through training, or looking for a full-stack digital marketing partner—let's talk. Your Name Phone / WhatsApp India (+91) USA / Canada (+1) United Kingdom (+44) Australia (+61) New Zealand (+64) UAE (+971) Saudi Arabia (+966) Qatar (+974) Pakistan (+92) Bangladesh (+880) Nepal (+977) Sri Lanka (+94) Singapore (+65) Malaysia (+60) China (+86) Japan (+81) South Korea (+82) Germany (+49) France (+33) Italy (+39) Spain (+34) Russia (+7) South Africa (+27) Brazil (+55) Please enter a valid mobile number Email Address (optional) Please enter a valid email address What Do You Need Help With? Select one... Performance Marketing (Google/Meta Ads) SEO / GEO Website Development AI & Marketing Automation Something else Budget Range (optional) Prefer not to say Just exploring Under ₹50K/month ₹50K–2L/month ₹2L+/month Tell Me About Your Business Website Send Message Message Sent! Thanks for reaching out. I'll get back to you within 24 hours. Send Another Message Something Went Wrong Your message didn't go through. Please try again, or reach out directly on WhatsApp — I respond quickly there. Try Again WhatsApp Me Instead Email shashwatyadav012345@gmail.com WhatsApp +91 70001 98366 Call +91 70001 98366 LinkedIn Connect with me [Map placeholder — location TBD]",
-    "footer": "Performance Marketing Expert & SEO Specialist driving measurable growth through data-driven strategy. Quick Links Home About Services Portfolio Skills Certifications Courses Blog Contact Connect LinkedIn Instagram Contact +91 70001 98366 WhatsApp shashwatyadav012345@gmail.com © 2026 Shashwat Yadav. All rights reserved. | Privacy Policy | Terms Courses",
-    "floating": ""
-   },
-   "wordCount": {
-    "header": 52,
-    "content": 209,
-    "footer": 45,
-    "floating": 0
-   },
-   "headings": [
-    {
-     "level": 1,
-     "text": "Ready to Drive Growth?",
-     "region": "content"
-    },
-    {
-     "level": 3,
-     "text": "Message Sent!",
-     "region": "content"
-    },
-    {
-     "level": 3,
-     "text": "Something Went Wrong",
-     "region": "content"
-    },
-    {
-     "level": 4,
-     "text": "Quick Links",
-     "region": "footer"
-    },
-    {
-     "level": 4,
-     "text": "Connect",
-     "region": "footer"
-    },
-    {
-     "level": 4,
-     "text": "Contact",
-     "region": "footer"
-    }
-   ],
-   "links": [
-    {
-     "href": "#main",
-     "text": "Skip to content",
-     "label": null,
-     "target": null,
-     "rel": null,
-     "region": "header"
-    },
-    {
-     "href": "/",
-     "text": "img:Shashwat Yadav",
-     "label": null,
-     "target": null,
-     "rel": null,
-     "region": "header"
-    },
-    {
-     "href": "/",
-     "text": "Home",
-     "label": null,
-     "target": null,
-     "rel": null,
-     "region": "header"
-    },
-    {
-     "href": "/about",
-     "text": "About",
-     "label": null,
-     "target": null,
-     "rel": null,
-     "region": "header"
-    },
-    {
-     "href": "/services",
-     "text": "Services",
-     "label": null,
-     "target": null,
-     "rel": null,
-     "region": "header"
-    },
-    {
-     "href": "/portfolio",
-     "text": "Portfolio",
-     "label": null,
-     "target": null,
-     "rel": null,
-     "region": "header"
-    },
-    {
-     "href": "/skills",
-     "text": "Skills",
-     "label": null,
-     "target": null,
-     "rel": null,
-     "region": "header"
-    },
-    {
-     "href": "/certifications",
-     "text": "Certifications",
-     "label": null,
-     "target": null,
-     "rel": null,
-     "region": "header"
-    },
-    {
-     "href": "/blog/",
-     "text": "Blog",
-     "label": null,
-     "target": null,
-     "rel": null,
-     "region": "header"
-    },
-    {
-     "href": "/contact",
-     "text": "Contact",
-     "label": null,
-     "target": null,
-     "rel": null,
-     "region": "header"
-    },
-    {
-     "href": "http://127.0.0.1:8000/login",
-     "text": "Log in",
-     "label": null,
-     "target": null,
-     "rel": null,
-     "region": "header"
-    },
-    {
-     "href": "/courses/",
-     "text": "Courses",
-     "label": null,
-     "target": null,
-     "rel": null,
-     "region": "header"
-    },
-    {
-     "href": "/courses/",
-     "text": "All coursesCourses and upcoming live classes",
-     "label": null,
-     "target": null,
-     "rel": null,
-     "region": "header"
-    },
-    {
-     "href": "/courses/master-classes/",
-     "text": "Master Classes3-hour live deep dives",
-     "label": null,
-     "target": null,
-     "rel": null,
-     "region": "header"
-    },
-    {
-     "href": "/courses/google-ads/",
-     "text": "Google AdsSearch and Demand Gen lead campaigns",
-     "label": null,
-     "target": null,
-     "rel": null,
-     "region": "header"
-    },
-    {
-     "href": "/courses/meta-ads/",
-     "text": "Meta AdsLead and engagement campaigns",
-     "label": null,
-     "target": null,
-     "rel": null,
-     "region": "header"
-    },
-    {
-     "href": "/courses/claude-mastery/",
-     "text": "Claude and Claude CodePrompting, building and automation",
-     "label": null,
-     "target": null,
-     "rel": null,
-     "region": "header"
-    },
-    {
-     "href": "/contact",
-     "text": "Let's Connect",
-     "label": null,
-     "target": null,
-     "rel": null,
-     "region": "header"
-    },
-    {
-     "href": "/courses/",
-     "text": "Courses",
-     "label": null,
-     "target": null,
-     "rel": null,
-     "region": "header"
-    },
-    {
-     "href": "https://wa.me/917000198366?text=Hi%20Shashwat!%20I%20tried%20to%20submit%20the%20contact%20form%20but%20it%20didn't%20work%2C%20so%20I'm%20reaching%20out%20here%20instead.",
-     "text": "WhatsApp Me Instead",
-     "label": null,
-     "target": "_blank",
-     "rel": null,
-     "region": "content"
-    },
-    {
-     "href": "mailto:shashwatyadav012345@gmail.com",
-     "text": "Email shashwatyadav012345@gmail.com",
-     "label": null,
-     "target": null,
-     "rel": null,
-     "region": "content"
-    },
-    {
-     "href": "https://wa.me/917000198366",
-     "text": "WhatsApp +91 70001 98366",
-     "label": null,
-     "target": "_blank",
-     "rel": null,
-     "region": "content"
-    },
-    {
-     "href": "tel:+917000198366",
-     "text": "Call +91 70001 98366",
-     "label": null,
-     "target": null,
-     "rel": null,
-     "region": "content"
-    },
-    {
-     "href": "https://www.linkedin.com/in/shashwat-yadav-9258bb131",
-     "text": "LinkedIn Connect with me",
-     "label": null,
-     "target": "_blank",
-     "rel": null,
-     "region": "content"
-    },
-    {
-     "href": "/",
-     "text": "img:Shashwat Yadav",
-     "label": null,
-     "target": null,
-     "rel": null,
-     "region": "footer"
-    },
-    {
-     "href": "/",
-     "text": "Home",
-     "label": null,
-     "target": null,
-     "rel": null,
-     "region": "footer"
-    },
-    {
-     "href": "/about",
-     "text": "About",
-     "label": null,
-     "target": null,
-     "rel": null,
-     "region": "footer"
-    },
-    {
-     "href": "/services",
-     "text": "Services",
-     "label": null,
-     "target": null,
-     "rel": null,
-     "region": "footer"
-    },
-    {
-     "href": "/portfolio",
-     "text": "Portfolio",
-     "label": null,
-     "target": null,
-     "rel": null,
-     "region": "footer"
-    },
-    {
-     "href": "/skills",
-     "text": "Skills",
-     "label": null,
-     "target": null,
-     "rel": null,
-     "region": "footer"
-    },
-    {
-     "href": "/certifications",
-     "text": "Certifications",
-     "label": null,
-     "target": null,
-     "rel": null,
-     "region": "footer"
-    },
-    {
-     "href": "/courses",
-     "text": "Courses",
-     "label": null,
-     "target": null,
-     "rel": null,
-     "region": "footer"
-    },
-    {
-     "href": "/blog/",
-     "text": "Blog",
-     "label": null,
-     "target": null,
-     "rel": null,
-     "region": "footer"
-    },
-    {
-     "href": "/contact",
-     "text": "Contact",
-     "label": null,
-     "target": null,
-     "rel": null,
-     "region": "footer"
-    },
-    {
-     "href": "https://www.linkedin.com/in/shashwat-yadav-9258bb131",
-     "text": "LinkedIn",
-     "label": null,
-     "target": "_blank",
-     "rel": null,
-     "region": "footer"
-    },
-    {
-     "href": "https://www.instagram.com/shashwat.ai.seo",
-     "text": "Instagram",
-     "label": null,
-     "target": "_blank",
-     "rel": "noopener noreferrer",
-     "region": "footer"
-    },
-    {
-     "href": "tel:+917000198366",
-     "text": "+91 70001 98366",
-     "label": null,
-     "target": null,
-     "rel": null,
-     "region": "footer"
-    },
-    {
-     "href": "https://wa.me/917000198366",
-     "text": "WhatsApp",
-     "label": null,
-     "target": "_blank",
-     "rel": null,
-     "region": "footer"
-    },
-    {
-     "href": "mailto:shashwatyadav012345@gmail.com",
-     "text": "shashwatyadav012345@gmail.com",
-     "label": null,
-     "target": null,
-     "rel": null,
-     "region": "footer"
-    },
-    {
-     "href": "/privacy-policy",
-     "text": "Privacy Policy",
-     "label": null,
-     "target": null,
-     "rel": null,
-     "region": "footer"
-    },
-    {
-     "href": "/terms",
-     "text": "Terms",
-     "label": null,
-     "target": null,
-     "rel": null,
-     "region": "footer"
-    },
-    {
-     "href": "/courses/",
-     "text": "Courses",
-     "label": null,
-     "target": null,
-     "rel": null,
-     "region": "footer"
-    },
-    {
-     "href": "https://wa.me/917000198366?text=Hi%20Shashwat!%20I%20visited%20your%20portfolio%20and%20would%20love%20to%20discuss%20performance%20marketing.",
-     "text": "",
-     "label": "Chat on WhatsApp",
-     "target": "_blank",
-     "rel": null,
-     "region": "floating"
-    },
-    {
-     "href": "tel:+917000198366",
-     "text": "",
-     "label": "Call Shashwat Yadav",
-     "target": null,
-     "rel": null,
-     "region": "floating"
-    }
-   ],
-   "images": [
-    {
-     "src": "/assets/images/logo.png",
-     "srcset": null,
-     "alt": "Shashwat Yadav",
-     "width": "150",
-     "height": "40",
-     "loading": null,
-     "region": "header"
-    },
-    {
-     "src": "/assets/images/logo.png",
-     "srcset": null,
-     "alt": "Shashwat Yadav",
-     "width": "150",
-     "height": "40",
-     "loading": null,
-     "region": "footer"
-    }
-   ],
-   "pictureSources": [],
-   "media": [],
-   "bgImages": [],
-   "forms": [
-    {
-     "id": "contact-form",
-     "action": null,
-     "method": null,
-     "novalidate": false,
-     "region": "content",
-     "fields": [
-      {
-       "tag": "input",
-       "type": "text",
-       "name": null,
-       "id": "form-name",
-       "required": true,
-       "placeholder": "John Doe",
-       "value": null,
-       "label": null,
-       "options": null,
-       "autocomplete": null,
-       "maxlength": null,
-       "pattern": null
-      },
-      {
-       "tag": "select",
-       "type": null,
-       "name": null,
-       "id": "form-country-code",
-       "required": false,
-       "placeholder": null,
-       "value": null,
-       "label": null,
-       "options": [
-        "India (+91)",
-        "USA / Canada (+1)",
-        "United Kingdom (+44)",
-        "Australia (+61)",
-        "New Zealand (+64)",
-        "UAE (+971)",
-        "Saudi Arabia (+966)",
-        "Qatar (+974)",
-        "Pakistan (+92)",
-        "Bangladesh (+880)",
-        "Nepal (+977)",
-        "Sri Lanka (+94)",
-        "Singapore (+65)",
-        "Malaysia (+60)",
-        "China (+86)",
-        "Japan (+81)",
-        "South Korea (+82)",
-        "Germany (+49)",
-        "France (+33)",
-        "Italy (+39)",
-        "Spain (+34)",
-        "Russia (+7)",
-        "South Africa (+27)",
-        "Brazil (+55)"
-       ],
-       "autocomplete": null,
-       "maxlength": null,
-       "pattern": null
-      },
-      {
-       "tag": "input",
-       "type": "tel",
-       "name": null,
-       "id": "form-phone",
-       "required": true,
-       "placeholder": "10-digit mobile number",
-       "value": null,
-       "label": null,
-       "options": null,
-       "autocomplete": null,
-       "maxlength": null,
-       "pattern": null
-      },
-      {
-       "tag": "input",
-       "type": "email",
-       "name": null,
-       "id": "form-email",
-       "required": false,
-       "placeholder": "john@company.com",
-       "value": null,
-       "label": null,
-       "options": null,
-       "autocomplete": null,
-       "maxlength": null,
-       "pattern": null
-      },
-      {
-       "tag": "select",
-       "type": null,
-       "name": null,
-       "id": "form-service",
-       "required": true,
-       "placeholder": null,
-       "value": null,
-       "label": null,
-       "options": [
-        "Select one...",
-        "Performance Marketing (Google/Meta Ads)",
-        "SEO / GEO",
-        "Website Development",
-        "AI & Marketing Automation",
-        "Something else"
-       ],
-       "autocomplete": null,
-       "maxlength": null,
-       "pattern": null
-      },
-      {
-       "tag": "select",
-       "type": null,
-       "name": null,
-       "id": "form-budget",
-       "required": false,
-       "placeholder": null,
-       "value": null,
-       "label": null,
-       "options": [
-        "Prefer not to say",
-        "Just exploring",
-        "Under ₹50K/month",
-        "₹50K–2L/month",
-        "₹2L+/month"
-       ],
-       "autocomplete": null,
-       "maxlength": null,
-       "pattern": null
-      },
-      {
-       "tag": "textarea",
-       "type": null,
-       "name": null,
-       "id": "form-message",
-       "required": true,
-       "placeholder": "2-3 sentences is perfect",
-       "value": null,
-       "label": null,
-       "options": null,
-       "autocomplete": null,
-       "maxlength": null,
-       "pattern": null
-      },
-      {
-       "tag": "input",
-       "type": "text",
-       "name": "website",
-       "id": "form-website",
-       "required": false,
-       "placeholder": null,
-       "value": null,
-       "label": "Website",
-       "options": null,
-       "autocomplete": "off",
-       "maxlength": null,
-       "pattern": null
-      },
-      {
-       "tag": "input",
-       "type": "hidden",
-       "name": null,
-       "id": "form-source-page",
-       "required": false,
-       "placeholder": null,
-       "value": "Contact | Shashwat Yadav (/contact)",
-       "label": null,
-       "options": null,
-       "autocomplete": null,
-       "maxlength": null,
-       "pattern": null
-      },
-      {
-       "tag": "button",
-       "type": "submit",
-       "name": null,
-       "id": "contact-submit-btn",
-       "required": false,
-       "placeholder": null,
-       "value": "Send Message",
-       "label": null,
-       "options": null,
-       "autocomplete": null,
-       "maxlength": null,
-       "pattern": null
-      }
-     ]
-    }
-   ],
-   "dataHooks": {
-    "data-lc-actions": 1,
-    "data-lc-guest": 1,
-    "data-lc-login": 1,
-    "data-lc-pill": 2,
-    "data-lc-cta": 1,
-    "data-lc-compact": 1
-   },
-   "ids": [
-    "navbar",
-    "site-nav",
-    "main",
-    "contact-cta",
-    "audit-form",
-    "contact-form",
-    "form-name",
-    "form-country-code",
-    "form-phone",
-    "phone-error",
-    "form-email",
-    "email-error",
-    "form-service",
-    "form-budget",
-    "form-message",
-    "form-website",
-    "form-source-page",
-    "contact-submit-btn",
-    "contact-submit-btn-text",
-    "form-success",
-    "form-error",
-    "whatsapp-widget"
-   ],
-   "htmlBytes": 21599,
-   "network": [
-    {
-     "method": "GET",
-     "url": "https://www.googletagmanager.com/gtm.js"
-    }
-   ],
-   "externalHosts": [
-    "www.googletagmanager.com"
-   ],
-   "desktopDocHeight": 1714,
-   "mobileOverflowX": false,
-   "mobileDocHeight": 2920
-  },
-  "/services": {
-   "url": "/services",
-   "head": {
-    "lang": "en",
-    "title": "Services | Shashwat Yadav",
-    "meta": [
-     {
-      "name": null,
-      "property": null,
-      "httpEquiv": null,
-      "charset": "UTF-8",
-      "content": null
-     },
-     {
-      "name": "viewport",
-      "property": null,
-      "httpEquiv": null,
-      "charset": null,
-      "content": "width=device-width, initial-scale=1.0"
-     },
-     {
-      "name": "description",
-      "property": null,
-      "httpEquiv": null,
-      "charset": null,
-      "content": "Google Ads, Meta Ads, SEO & Local Search Optimization, and Website Development services by Shashwat Yadav."
-     }
-    ],
-    "links": [
-     {
-      "rel": "canonical",
-      "href": "https://shashwatyadav.com/services",
-      "type": null,
-      "sizes": null,
-      "as": null
-     },
-     {
-      "rel": "icon",
-      "href": "/assets/images/favicon.png",
-      "type": "image/png",
-      "sizes": null,
-      "as": null
-     },
-     {
-      "rel": "preload",
-      "href": "/assets/fonts/inter-latin-400.woff2",
-      "type": "font/woff2",
-      "sizes": null,
-      "as": "font"
-     },
-     {
-      "rel": "preload",
-      "href": "/assets/fonts/inter-latin-600.woff2",
-      "type": "font/woff2",
-      "sizes": null,
-      "as": "font"
-     },
-     {
-      "rel": "preload",
-      "href": "/assets/fonts/montserrat-latin-800.woff2",
-      "type": "font/woff2",
-      "sizes": null,
-      "as": "font"
-     },
-     {
-      "rel": "preload",
-      "href": "/assets/fonts/montserrat-latin-700.woff2",
-      "type": "font/woff2",
-      "sizes": null,
-      "as": "font"
-     },
-     {
-      "rel": "stylesheet",
-      "href": "/assets/css/theme.css?v=1",
-      "type": null,
-      "sizes": null,
-      "as": null
-     }
-    ],
-    "jsonLd": [],
-    "scripts": [
-     {
-      "inline": "7da60269",
-      "bytes": 358,
-      "gtm": true
-     },
-     {
-      "src": "/assets/js/theme.js?v=1"
-     },
-     {
-      "src": "/assets/js/main.js?v=20261026"
-     }
-    ],
-    "noscriptGtm": true
-   },
-   "chatbotBlocks": [
-    "CHATBOT-OFF-START (bubble): the chat widget is switched off. To restore, delete this line and the CHATBOT-OFF-END line <button type=\"button\" id=\"chatbot-toggle\" aria-expanded=\"false\" aria-controls=\"chatbot-panel\" class=\"relative w-14 h-14 rounded-full bg-yellow-400 hover:brightness-95 flex items-center justify-center text-gray-900 shadow-[0_8px_30px_rgba(250,204,21,0.4)] hover:scale-110 active:scale-95 transition-all\"> <svg id=\"chatbot-icon-chat\" class=\"w-7 h-7\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z\"/></svg> <svg id=\"chatbot-icon-close\" class=\"w-6 h-6 hidden\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M6 18L18 6M6 6l12 12\"/></svg> </button> CHATBOT-OFF-END",
-    "CHATBOT-OFF-START (panel): the chat widget is switched off. To restore, delete this line and the CHATBOT-OFF-END line [ AI Chatbot panel (hidden until the bubble above is clicked) ] <div id=\"chatbot-panel\" class=\"hidden fixed z-[110] bg-white rounded-2xl shadow-2xl border border-border flex flex-col overflow-hidden\" style=\"bottom: 96px; right: 24px; width: min(380px, calc(100vw - 32px)); height: min(560px, calc(100vh - 140px));\"> <div class=\"bg-primary text-white px-4 py-3 flex items-center justify-between flex-shrink-0\"> <div class=\"flex items-center gap-2\"> <img src=\"/assets/images/logo.png\" alt=\"\" class=\"logo-on-dark h-6 w-auto\"> <span class=\"text-sm font-semibold\">Chat with Shashwat</span> </div> <button type=\"button\" id=\"chatbot-close-btn\" class=\"text-white/80 hover:text-white\" aria-label=\"Close chat\"> <svg class=\"w-5 h-5\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M6 18L18 6M6 6l12 12\"/></svg> </button> </div> <div id=\"chatbot-messages\" class=\"flex-1 overflow-y-auto px-4 py-4 space-y-3 bg-background\"></div> <div id=\"chatbot-quick-replies\" class=\"hidden px-4 pb-2 flex flex-wrap gap-2 bg-background\"></div> <form id=\"chatbot-form\" class=\"flex items-center gap-2 px-3 py-3 border-t border-border bg-white flex-shrink-0\"> <input type=\"text\" id=\"chatbot-input\" placeholder=\"Type a message&hellip;\" autocomplete=\"off\" class=\"flex-1 px-3 py-2 rounded-full bg-background border border-border text-sm text-text-body focus:outline-none focus:border-primary\"> <button type=\"submit\" id=\"chatbot-send-btn\" class=\"w-9 h-9 rounded-full bg-primary hover:bg-primary-dark flex items-center justify-center text-white flex-shrink-0 disabled:opacity-50 disabled:cursor-not-allowed\"> <svg class=\"w-4 h-4\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M14 5l7 7m0 0l-7 7m7-7H3\"/></svg> </button> </form> </div> CHATBOT-OFF-END",
-    "CHATBOT-OFF-START (script): the chat widget is switched off. To restore, delete this line and the CHATBOT-OFF-END line <script src=\"/assets/js/chatbot-widget.js\"></script> CHATBOT-OFF-END"
-   ],
-   "commentCount": 8,
-   "text": {
-    "header": "Skip to content Home About Services Portfolio Skills Certifications Blog Contact Log in Courses All courses Courses and upcoming live classes Master Classes 3-hour live deep dives Google Ads Search and Demand Gen lead campaigns Meta Ads Lead and engagement campaigns Claude and Claude Code Prompting, building and automation Let's Connect Courses",
-    "content": "Services I Offer How I Can Help Your Business Comprehensive digital marketing services focused on measurable results and sustainable growth. Google Ads Management Strategic campaign setup, optimization, and scaling for maximum ROI. Search, Display & Video campaign setup Advanced keyword research & competitor analysis Conversion tracking & GTM implementation Monthly performance reporting & optimization Currently Managing: Commercial Real Estate & Healthcare Meta Ads (Facebook & Instagram) High-converting campaigns with advanced audience targeting and creative testing. Lead generation & conversion campaigns Custom audience creation & lookalike targeting Creative ad copy & visual design strategy A/B testing & campaign scaling Currently Managing: Multi-sector Lead Generation SEO & Local Search Optimization Comprehensive SEO strategy including AI search optimization. Google Search ranking optimization AI search optimization (ChatGPT, Gemini) Google Business Profile optimization Technical SEO & content strategy Proven Results: Multi-platform Search Visibility Website Design & Development Professional websites optimized for conversions and performance. WordPress & Elementor development Custom HTML/CSS/JavaScript coding Landing pages & conversion optimization Mobile-responsive & fast-loading sites Built For: Performance & Conversion AI & Marketing Automation Setup Custom AI agents and automated workflows that take repetitive marketing work off your plate, built with Claude Code and n8n. AI-assisted website & landing page development Custom AI agent building for lead handling Automated lead-routing & reporting pipelines AI creative production workflows Built With: Claude Code, n8n Industries Served Healthcare Marketing for hospitals offering services like IVF, IUI, Gynecology, Cosmetic Gynecology, LASIK, Cataract Surgery, and Painless (Epidural) Labour. Commercial Real Estate Premium & luxury commercial property developers, including business park development. Residential Real Estate Residential flat developers across 2BHK & 3BHK — affordable through premium/luxury segments. Salon & Wellness Premium unisex salons. Education Education industry service providers. Retail & Malls Shopping malls. Hospitality Hotels. Food & Beverage Premium restaurants. Schools (K-12) K-12 schools. Ready to discuss which service fits your business? Call Now WhatsApp Me Send a Message",
-    "footer": "Performance Marketing Expert & SEO Specialist driving measurable growth through data-driven strategy. Quick Links Home About Services Portfolio Skills Certifications Courses Blog Contact Connect LinkedIn Instagram Contact +91 70001 98366 WhatsApp shashwatyadav012345@gmail.com © 2026 Shashwat Yadav. All rights reserved. | Privacy Policy | Terms Courses",
-    "floating": ""
-   },
-   "wordCount": {
-    "header": 52,
-    "content": 313,
-    "footer": 45,
-    "floating": 0
-   },
-   "headings": [
-    {
-     "level": 1,
-     "text": "How I Can Help Your Business",
-     "region": "content"
-    },
-    {
-     "level": 3,
-     "text": "Google Ads Management",
-     "region": "content"
-    },
-    {
-     "level": 3,
      "text": "Meta Ads (Facebook & Instagram)",
      "region": "content"
     },
     {
      "level": 3,
-     "text": "SEO & Local Search Optimization",
+     "text": "Claude and Claude Code",
      "region": "content"
     },
     {
      "level": 3,
-     "text": "Website Design & Development",
-     "region": "content"
-    },
-    {
-     "level": 3,
-     "text": "AI & Marketing Automation Setup",
+     "text": "Master Classes",
      "region": "content"
     },
     {
      "level": 2,
-     "text": "Industries Served",
-     "region": "content"
-    },
-    {
-     "level": 3,
-     "text": "Healthcare",
-     "region": "content"
-    },
-    {
-     "level": 3,
-     "text": "Commercial Real Estate",
-     "region": "content"
-    },
-    {
-     "level": 3,
-     "text": "Residential Real Estate",
-     "region": "content"
-    },
-    {
-     "level": 3,
-     "text": "Salon & Wellness",
-     "region": "content"
-    },
-    {
-     "level": 3,
-     "text": "Education",
-     "region": "content"
-    },
-    {
-     "level": 3,
-     "text": "Retail & Malls",
-     "region": "content"
-    },
-    {
-     "level": 3,
-     "text": "Hospitality",
-     "region": "content"
-    },
-    {
-     "level": 3,
-     "text": "Food & Beverage",
-     "region": "content"
-    },
-    {
-     "level": 3,
-     "text": "Schools (K-12)",
-     "region": "content"
-    },
-    {
-     "level": 2,
-     "text": "Ready to discuss which service fits your business?",
+     "text": "Interested in learning performance marketing from real-world experience?",
      "region": "content"
     },
     {
@@ -2668,6 +194,11 @@
      "level": 4,
      "text": "Contact",
      "region": "footer"
+    },
+    {
+     "level": 2,
+     "text": "Almost there",
+     "region": "content"
     }
    ],
    "links": [
@@ -2752,7 +283,7 @@
      "region": "header"
     },
     {
-     "href": "http://127.0.0.1:8000/login",
+     "href": "/classes/login",
      "text": "Log in",
      "label": null,
      "target": null,
@@ -2822,6 +353,150 @@
      "target": null,
      "rel": null,
      "region": "header"
+    },
+    {
+     "href": "#upcoming-classes",
+     "text": "Upcoming classes",
+     "label": null,
+     "target": null,
+     "rel": null,
+     "region": "content"
+    },
+    {
+     "href": "#all-courses",
+     "text": "All courses",
+     "label": null,
+     "target": null,
+     "rel": null,
+     "region": "content"
+    },
+    {
+     "href": "/classes/live-classes/google",
+     "text": "Log in",
+     "label": null,
+     "target": null,
+     "rel": null,
+     "region": "content"
+    },
+    {
+     "href": "https://wa.me/917000198366?text=Hi%20Shashwat!%20Please%20let%20me%20know%20when%20the%20next%20live%20class%20is.",
+     "text": "Notify me on WhatsApp",
+     "label": null,
+     "target": "_blank",
+     "rel": null,
+     "region": "content"
+    },
+    {
+     "href": "/courses/google-ads",
+     "text": "Google Ads Search and Demand Gen lead generation campaigns, tracking and reporting, in 18 live classes",
+     "label": null,
+     "target": null,
+     "rel": null,
+     "region": "content"
+    },
+    {
+     "href": "/courses/google-ads",
+     "text": "View Curriculum",
+     "label": null,
+     "target": null,
+     "rel": null,
+     "region": "content"
+    },
+    {
+     "href": "https://wa.me/917000198366?text=Hi%20Shashwat%21%20When%20is%20the%20next%20Google%20Ads%20class%3F",
+     "text": "Ask about the next class",
+     "label": null,
+     "target": "_blank",
+     "rel": "noopener",
+     "region": "content"
+    },
+    {
+     "href": "/courses/meta-ads",
+     "text": "Meta Ads (Facebook & Instagram) Lead and engagement campaigns, creative and tracking, in 14 live classes",
+     "label": null,
+     "target": null,
+     "rel": null,
+     "region": "content"
+    },
+    {
+     "href": "/courses/meta-ads",
+     "text": "View Curriculum",
+     "label": null,
+     "target": null,
+     "rel": null,
+     "region": "content"
+    },
+    {
+     "href": "https://wa.me/917000198366?text=Hi%20Shashwat%21%20When%20is%20the%20next%20Meta%20Ads%20%28Facebook%20%26%20Instagram%29%20class%3F",
+     "text": "Ask about the next class",
+     "label": null,
+     "target": "_blank",
+     "rel": "noopener",
+     "region": "content"
+    },
+    {
+     "href": "/courses/claude-mastery",
+     "text": "Claude and Claude Code From first prompts to building websites, tools and automations with Claude Code, in 12 live classes",
+     "label": null,
+     "target": null,
+     "rel": null,
+     "region": "content"
+    },
+    {
+     "href": "/courses/claude-mastery",
+     "text": "View Curriculum",
+     "label": null,
+     "target": null,
+     "rel": null,
+     "region": "content"
+    },
+    {
+     "href": "https://wa.me/917000198366?text=Hi%20Shashwat%21%20When%20is%20the%20next%20Claude%20and%20Claude%20Code%20class%3F",
+     "text": "Ask about the next class",
+     "label": null,
+     "target": "_blank",
+     "rel": "noopener",
+     "region": "content"
+    },
+    {
+     "href": "/courses/master-classes/",
+     "text": "Master Classes 3-hour live deep dives: one skill from start to finish, hands-on, on Google Meet",
+     "label": null,
+     "target": null,
+     "rel": null,
+     "region": "content"
+    },
+    {
+     "href": "/courses/master-classes/",
+     "text": "View Master Classes",
+     "label": null,
+     "target": null,
+     "rel": null,
+     "region": "content"
+    },
+    {
+     "href": "https://wa.me/917000198366?text=Hi%20Shashwat%21%20When%20is%20the%20next%20Master%20Class%3F",
+     "text": "Ask about the next class",
+     "label": null,
+     "target": "_blank",
+     "rel": "noopener",
+     "region": "content"
+    },
+    {
+     "href": "https://wa.me/917000198366?text=Hi%20Shashwat!%20I'd%20like%20a%20live%20class%20on...",
+     "text": "Suggest a topic",
+     "label": null,
+     "target": "_blank",
+     "rel": "noopener",
+     "region": "content"
+    },
+    {
+     "href": "https://wa.me/917000198366",
+     "text": "WhatsApp Me",
+     "label": null,
+     "target": "_blank",
+     "rel": "noopener",
+     "region": "content"
     },
     {
      "href": "tel:+917000198366",
@@ -2832,22 +507,6 @@
      "region": "content"
     },
     {
-     "href": "https://wa.me/917000198366",
-     "text": "WhatsApp Me",
-     "label": null,
-     "target": "_blank",
-     "rel": null,
-     "region": "content"
-    },
-    {
-     "href": "/contact",
-     "text": "Send a Message",
-     "label": null,
-     "target": null,
-     "rel": null,
-     "region": "content"
-    },
-    {
      "href": "/",
      "text": "img:Shashwat Yadav",
      "label": null,
@@ -3019,6 +678,33 @@
      "region": "header"
     },
     {
+     "src": "/assets/images/logo/google-ads-logo.webp",
+     "srcset": null,
+     "alt": "Google Ads",
+     "width": null,
+     "height": null,
+     "loading": null,
+     "region": "content"
+    },
+    {
+     "src": "/assets/images/logo/meta-logo.webp",
+     "srcset": null,
+     "alt": "Meta",
+     "width": null,
+     "height": null,
+     "loading": null,
+     "region": "content"
+    },
+    {
+     "src": "/assets/images/logo/claude-logo.webp",
+     "srcset": null,
+     "alt": "Claude",
+     "width": null,
+     "height": null,
+     "loading": null,
+     "region": "content"
+    },
+    {
      "src": "/assets/images/logo.png",
      "srcset": null,
      "alt": "Shashwat Yadav",
@@ -3031,35 +717,110 @@
    "pictureSources": [],
    "media": [],
    "bgImages": [],
-   "forms": [],
+   "forms": [
+    {
+     "id": null,
+     "action": null,
+     "method": null,
+     "novalidate": true,
+     "region": "content",
+     "fields": [
+      {
+       "tag": "select",
+       "type": null,
+       "name": null,
+       "id": null,
+       "required": false,
+       "placeholder": null,
+       "value": null,
+       "label": null,
+       "options": [],
+       "autocomplete": null,
+       "maxlength": null,
+       "pattern": null
+      },
+      {
+       "tag": "input",
+       "type": "tel",
+       "name": "mobile",
+       "id": "enroll-mobile",
+       "required": false,
+       "placeholder": "Mobile number",
+       "value": null,
+       "label": "Mobile number *",
+       "options": null,
+       "autocomplete": "tel-national",
+       "maxlength": "15",
+       "pattern": null
+      },
+      {
+       "tag": "button",
+       "type": "submit",
+       "name": null,
+       "id": null,
+       "required": false,
+       "placeholder": null,
+       "value": "Add number & enrol",
+       "label": null,
+       "options": null,
+       "autocomplete": null,
+       "maxlength": null,
+       "pattern": null
+      }
+     ]
+    }
+   ],
    "dataHooks": {
     "data-lc-actions": 1,
     "data-lc-guest": 1,
     "data-lc-login": 1,
     "data-lc-pill": 2,
     "data-lc-cta": 1,
-    "data-lc-compact": 1
+    "data-lc-compact": 1,
+    "data-course": 4,
+    "data-course-classes": 4,
+    "data-class-topic": 1,
+    "data-class-when": 1,
+    "data-form": 1
    },
    "ids": [
     "navbar",
     "site-nav",
     "main",
-    "services",
+    "upcoming-classes",
+    "lc-guest-line",
+    "classes-count",
+    "lc-account",
+    "lc-signup-link",
+    "lc-courses",
+    "lc-filters",
+    "lc-notice",
+    "classes-list",
+    "classes-empty",
+    "all-courses",
+    "courses-grid",
+    "enroll-modal",
+    "enroll-title",
+    "enroll-mobile",
     "whatsapp-widget"
    ],
-   "htmlBytes": 21996,
+   "htmlBytes": 23855,
    "network": [
     {
      "method": "GET",
      "url": "https://www.googletagmanager.com/gtm.js"
+    },
+    {
+     "method": "GET",
+     "url": "http://test.local:8090/classes/live-classes/api/sessions"
     }
    ],
    "externalHosts": [
     "www.googletagmanager.com"
    ],
-   "desktopDocHeight": 3765,
+   "desktopDocHeight": 3227,
    "mobileOverflowX": false,
-   "mobileDocHeight": 6791
+   "mobileDocHeight": 4896
   }
  },
  "integrations": {
@@ -3076,7 +837,7 @@
    "cookies": []
   },
   "assets/js/live-classes.js": {
-   "bytes": 42770,
+   "bytes": 38273,
    "absoluteUrls": [
     "https://wa.me/917000198366"
    ],

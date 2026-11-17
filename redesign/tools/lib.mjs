@@ -43,7 +43,10 @@ export function convertShell(orig, o) {
   const content = orig.slice(navEnd, footStart);
   const tail = orig.slice(footEnd, orig.indexOf('</body>'));
   // scripts after the footer: keep all except the (commented-out) chatbot block and the stray blank lines
-  const tailScripts = (tail.replace(/<!-- CHATBOT-OFF-START \(script\)[\s\S]*?CHATBOT-OFF-END -->/, '').match(/<script\b[\s\S]*?<\/script>/g) || []);
+  const tailClean = tail.replace(/<!-- CHATBOT-OFF-START \(script\)[\s\S]*?CHATBOT-OFF-END -->/, '');
+  const tailScripts = (tailClean.match(/<script\b[\s\S]*?<\/script>/g) || []);
+  // any other markup after the footer (the enrol dialog on the Courses page) is kept and can be restyled by the page builder
+  const tailMarkup = tailClean.replace(/<script\b[\s\S]*?<\/script>/g, '').trim();
 
   let header = part('header');
   if (o.active) {
@@ -55,6 +58,7 @@ export function convertShell(orig, o) {
   floating = floating.replace(/<\/div>$/, '  ' + chat('bubble').replace(/\n/g, '\n  ') + '\n</div>');
 
   const body = o.content({ content, orig, tail });
+  const afterFooter = tailMarkup ? (o.tail ? o.tail(tailMarkup) : tailMarkup) : '';
   return `${head}</head>
 <body>
 ${gtm}
@@ -64,7 +68,7 @@ ${header.trim()}
 ${body.trim()}
 
 ${part('footer').trim()}
-
+${afterFooter ? '\n' + afterFooter + '\n' : ''}
 ${floating}
 
 ${chat('panel')}
@@ -91,12 +95,15 @@ export function svgList(block) {
 export function write(file, html) { fs.writeFileSync(new URL(file, root), html); }
 
 /** Re-class markup with ordered [regex, newClass|null] rules (first match wins; null drops the class attribute). Returns {html, unknown}. */
+const TW_TOKEN = /^(-?(w|h|p|m|px|py|pt|pb|pl|pr|mx|my|mt|mb|ml|mr|text|bg|border|rounded|gap|space|font|z|top|left|right|bottom|shadow|blur|max|min|aspect|grid|col|row|order|leading|tracking|opacity|from|to|via|inset|translate|scale|cursor|transition|duration|ease|items|justify|self|place|content|overflow|object|ring|outline|list|decoration|underline|no|break|whitespace|truncate|line|sr|group|peer|animate|group-hover|md|sm|lg|xl|hover|focus|disabled|placeholder)[:/-]|(flex|grid|block|inline|inline-flex|inline-block|relative|absolute|fixed|sticky|container|truncate|capitalize|uppercase|lowercase|italic|underline|border|rounded|shadow|blur|transition|resize|resize-none|break-all|flex-1|flex-wrap|flex-col|flex-shrink-0|items-center|justify-center|text-center|mx-auto|w-full|h-full|w-fit)$)/;
+const OURS = new Set(['container', 'grid', 'grid-2', 'grid-3', 'grid-4', 'grid-stats', 'flex', 'hidden', 'overflow-hidden', 'text-center', 'sr-only']); // utilities the theme itself defines
+export const looksTailwind = (k) => k.split(' ').some((t) => !OURS.has(t) && TW_TOKEN.test(t));
 export function mapClasses(html, rules) {
   const unknown = new Set();
   const out = html.replace(/\bclass="([^"]*)"/g, (m, c) => {
     const k = c.replace(/\s+/g, ' ').trim();
     for (const [re, to] of rules) if (re.test(k)) return to === null ? '' : `class="${typeof to === 'function' ? to(k) : to}"`;
-    unknown.add(k);
+    if (looksTailwind(k)) unknown.add(k); // our own classes (cd-*, abt-*, btn, card...) pass through untouched
     return m;
   }).replace(/<(\w+) +>/g, '<$1>').replace(/ +>/g, '>');
   return { html: out, unknown: [...unknown] };
@@ -109,13 +116,14 @@ export function ctaBand(block) {
     const href = m[1].match(/href="([^"]*)"/)[1];
     const svg = (m[2].match(/<svg\b[\s\S]*?<\/svg>/) || [''])[0];
     const label = tag(m[2].replace(/<svg\b[\s\S]*?<\/svg>/g, '').replace(/<[^>]+>/g, ''));
-    return { href, blank: /target="_blank"/.test(m[1]), svg: svg ? svgList(svg)[0] : '', label };
+    const rel = (m[1].match(/\srel="([^"]*)"/) || [])[1];
+    return { href, blank: /target="_blank"/.test(m[1]), rel, svg: svg ? svgList(svg)[0] : '', label };
   });
   return `<section class="cta">
     <div class="container">
       <h2>${h2}</h2>
       <div class="btn-row">
-${links.map((l, i) => `        <a class="btn ${i === 0 ? 'btn-secondary' : 'btn-ghost-dark'}" href="${l.href}"${l.blank ? ' target="_blank"' : ''}>${l.svg}${l.svg ? '' : ''}${l.label}</a>`).join('\n')}
+${links.map((l, i) => `        <a class="btn ${i === 0 ? 'btn-secondary' : 'btn-ghost-dark'}" href="${l.href}"${l.blank ? ' target="_blank"' : ''}${l.rel ? ` rel="${l.rel}"` : ''}>${l.svg}${l.label}</a>`).join('\n')}
       </div>
     </div>
   </section>`;

@@ -116,7 +116,28 @@ function contact({ content }) {
 </main>`;
 }
 
+// pages whose own markup is kept, except for the closing Tailwind call-to-action banner (rebuilt as the gradient band) and a few stray utility classes
+const courseRules = [
+  [/^w-4 h-4 text-growth-accent flex-shrink-0 mt-0\.5$/, 'icon ck'],
+  [/^w-4 h-4 text-primary flex-shrink-0 mt-0\.5$/, 'icon ck'],
+];
+function keepWithCta({ content }) {
+  const re = /<section class="relative py-20 md:py-24 bg-background overflow-hidden">[\s\S]*?<\/section>/;
+  const m = content.match(re);
+  if (!m) throw new Error('closing banner not found');
+  const mapped = mapClasses(content.replace(re, '@@CTA@@'), courseRules);
+  unknownCheck('course page', mapped.unknown);
+  return mapped.html.replace('@@CTA@@', ctaBand(m[0]));
+}
+const keep = ({ content }) => content;
+import { coursesHub, hubModal } from './pages-hub.mjs';
 export const more = {
+  'courses-hub': { file: 'courses/index.html', active: null, content: coursesHub, tail: hubModal },
   services: { file: 'services.html', active: '/services', content: services },
   contact: { file: 'contact.html', active: '/contact', content: contact },
+  'courses-google-ads': { file: 'courses/google-ads/index.html', active: null, content: keepWithCta },
+  'courses-meta-ads': { file: 'courses/meta-ads/index.html', active: null, content: keepWithCta },
+  'courses-claude-mastery': { file: 'courses/claude-mastery/index.html', active: null, content: keepWithCta },
+  'courses-master-classes': { file: 'courses/master-classes/index.html', active: null, content: keepWithCta },
+  'master-class-landing': { file: 'meta-ads-lead-generation-master-class/index.html', active: null, content: keepWithCta },
 };

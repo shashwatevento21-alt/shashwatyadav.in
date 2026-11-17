@@ -41,7 +41,8 @@ function integrations() {
   return out;
 }
 
-const chrome = await launchChrome(9336);
+// HOST_MAP=test.local runs the pages under a hostname that is not "localhost" (the site's scripts treat localhost as local development)
+const chrome = await launchChrome(9336, process.env.HOST_MAP ? ['--host-resolver-rules=MAP ' + process.env.HOST_MAP + ' 127.0.0.1'] : []);
 const result = { base: BASE, when: new Date().toISOString(), pageCount: 0, pages: {}, integrations: integrations() };
 const errors = [];
 try {

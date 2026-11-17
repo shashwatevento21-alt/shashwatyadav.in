@@ -19,7 +19,16 @@ function resolve(urlPath) {
   return tryFiles.find((f) => fs.existsSync(f) && fs.statSync(f).isFile()) || null;
 }
 
-http.createServer((req, res) => {
+// The Live Classes app is not part of this repo: GET requests under /classes are forwarded to the live site (read-only), so the pages behave as in production.
+const APP_ORIGIN = process.env.APP_ORIGIN || 'https://shashwatyadav.com';
+http.createServer(async (req, res) => {
+  if (req.url.startsWith('/classes') && req.method === 'GET') {
+    try {
+      const r = await fetch(APP_ORIGIN + req.url, { redirect: 'manual', headers: { Accept: req.headers.accept || '*/*' } });
+      res.writeHead(r.status, { 'Content-Type': r.headers.get('content-type') || 'text/plain', 'Cache-Control': 'no-store' });
+      return res.end(Buffer.from(await r.arrayBuffer()));
+    } catch (e) { res.writeHead(502); return res.end('app unavailable'); }
+  }
   const f = resolve(req.url);
   if (!f) { res.writeHead(404, { 'Content-Type': 'text/plain' }); return res.end('Not found'); }
   res.writeHead(200, { 'Content-Type': types[path.extname(f).toLowerCase()] || 'application/octet-stream', 'Cache-Control': 'no-store' });

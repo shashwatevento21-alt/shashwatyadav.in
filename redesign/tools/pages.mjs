@@ -15,6 +15,6 @@ for (const slug of wanted.length ? wanted : Object.keys(pages)) {
   const p = pages[slug];
   if (!p) { console.log('unknown page', slug); continue; }
   const orig = read('redesign/originals/' + p.file);
-  write(p.file, convertShell(orig, { active: p.active, content: p.content, head: p.head, extraScripts: p.extraScripts }));
+  write(p.file, convertShell(orig, { active: p.active, content: p.content, head: p.head, tail: p.tail, extraScripts: p.extraScripts }));
   console.log('built', p.file);
 }
